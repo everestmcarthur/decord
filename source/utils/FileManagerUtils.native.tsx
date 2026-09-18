@@ -1,10 +1,10 @@
-// Module ID: 8353
-// Function ID: 8354
+// Module ID: 8435
+// Function ID: 8436
 // Name: FileManagerUtils
 // Dependencies: [5, 3, 1151, 1364, 2]
 // Exports: clearFolder, moveFile, readFile, removeFile, writeFile
 
-// Module 8353 (FileManagerUtils)
+// Module 8435 (FileManagerUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import NativeFileModuleDefault from "NativeFileModule" /* 1151 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -125,8 +125,8 @@ let closure_4 = new LoggerDefault("FileManagerUtils");
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/FileManagerUtils.native.tsx");
 
-export const writeFile = function writeFile(cache, arg1, arg2, utf8) {
-  return NativeFileModuleDefault.writeFile(cache, arg1, arg2, utf8).then((result) => {
+export const writeFile = function writeFile(cache, combined, arg2, utf8) {
+  return NativeFileModuleDefault.writeFile(cache, combined, arg2, utf8).then((result) => {
     let combined = result;
     if (obj.isAndroid()) {
       const _HermesInternal = HermesInternal;

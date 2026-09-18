@@ -1,14 +1,14 @@
-// Module ID: 17298
-// Function ID: 17299
+// Module ID: 17428
+// Function ID: 17429
 // Name: trackActivityThermalStateNoticeShown
-// Dependencies: [1958, 4663, 1957, 1074, 4268, 1241, 2]
+// Dependencies: [1958, 4745, 1957, 1074, 4351, 1241, 2]
 // Exports: trackActivityThermalStateNoticeShown
 
-// Module 17298 (trackActivityThermalStateNoticeShown)
+// Module 17428 (trackActivityThermalStateNoticeShown)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4268 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4351 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4663 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4745 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1957 */;
 
 require = fn;

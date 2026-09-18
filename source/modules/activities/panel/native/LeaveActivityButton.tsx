@@ -1,13 +1,13 @@
-// Module ID: 17281
-// Function ID: 17282
+// Module ID: 17411
+// Function ID: 17412
 // Name: LeaveActivityButton
-// Dependencies: [19, 9659, 21, 5062, 9228, 1115, 9669, 2]
+// Dependencies: [19, 9743, 21, 5144, 9312, 1115, 9753, 2]
 
-// Module 17281 (LeaveActivityButton)
+// Module 17411 (LeaveActivityButton)
 import util from "util" /* 1115 */;
-import components_Button_Button from "components/Button/Button" /* 5062 */;
-import _modDef9228 from "module_9228" /* 9228 */;
-import EmbeddedActivitiesNativeManagerDefault from "EmbeddedActivitiesNativeManager" /* 9669 */;
+import components_Button_Button from "components/Button/Button" /* 5144 */;
+import _modDef9312 from "module_9312" /* 9312 */;
+import EmbeddedActivitiesNativeManagerDefault from "EmbeddedActivitiesNativeManager" /* 9753 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,7 +21,7 @@ class BaseLeaveActivityButton {
     return jsx(closure_0(closure_2[3]).Button, obj);
   }
 }
-const ActivityPanelModes = fn(9659).ActivityPanelModes;
+const ActivityPanelModes = fn(9743).ActivityPanelModes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/panel/native/LeaveActivityButton.tsx");

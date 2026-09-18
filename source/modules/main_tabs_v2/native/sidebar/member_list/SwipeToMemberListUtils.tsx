@@ -1,12 +1,12 @@
-// Module ID: 11620
-// Function ID: 11621
+// Module ID: 11712
+// Function ID: 11713
 // Name: SwipeToMemberListUtils
-// Dependencies: [11621, 1186, 2]
+// Dependencies: [11713, 1186, 2]
 // Exports: isSwipeToMemberListEnabled, useIsSwipeToMemberListEnabled
 
-// Module 11620 (SwipeToMemberListUtils)
+// Module 11712 (SwipeToMemberListUtils)
 import preloaded_user_settings from "preloaded_user_settings" /* 1186 */;
-import ChatGestureSettings from "ChatGestureSettings" /* 11621 */;
+import ChatGestureSettings from "ChatGestureSettings" /* 11713 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/member_list/SwipeToMemberListUtils.tsx");

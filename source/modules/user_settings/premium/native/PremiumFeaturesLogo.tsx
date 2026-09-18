@@ -1,13 +1,13 @@
-// Module ID: 9536
-// Function ID: 9537
+// Module ID: 9620
+// Function ID: 9621
 // Name: PremiumFeaturesLogo
-// Dependencies: [19, 1374, 21, 9537, 7551, 5675, 4297, 2]
+// Dependencies: [19, 1374, 21, 9621, 7633, 5757, 4380, 2]
 // Exports: default
 
-// Module 9536 (PremiumFeaturesLogo)
-import PremiumUtils from "PremiumUtils" /* 4297 */;
-import _modDef7551 from "module_7551" /* 7551 */;
-import _modDef9537 from "module_9537" /* 9537 */;
+// Module 9620 (PremiumFeaturesLogo)
+import PremiumUtils from "PremiumUtils" /* 4380 */;
+import _modDef7633 from "module_7633" /* 7633 */;
+import _modDef9621 from "module_9621" /* 9621 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -19,14 +19,14 @@ const result = size.fileFinishedImporting("modules/user_settings/premium/native/
 export default function PremiumFeaturesLogo(premiumType) {
   premiumType = premiumType.premiumType;
   if (premiumType === PremiumTypes.TIER_0) {
-    let tmp3 = _modDef9537;
+    let tmp3 = _modDef9621;
     let tmp = importDefault;
   } else {
     tmp = importDefault;
-    tmp3 = _modDef7551;
+    tmp3 = _modDef7633;
   }
   const obj = { accessible: true, accessibilityLabel: null, accessibilityRole: "header", style: null, resizeMode: "contain", source: null };
-  const tmpResult = tmp(5675);
+  const tmpResult = tmp(5757);
   obj.accessibilityLabel = PremiumUtils.getPremiumTypeDisplayName(premiumType);
   obj.style = premiumType.style;
   obj.source = tmp3;

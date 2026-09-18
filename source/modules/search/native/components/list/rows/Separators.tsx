@@ -1,17 +1,17 @@
-// Module ID: 16892
-// Function ID: 16893
+// Module ID: 17032
+// Function ID: 17033
 // Name: Separators
-// Dependencies: [19, 17, 8000, 21, 4640, 2]
+// Dependencies: [19, 17, 8083, 21, 4722, 2]
 // Exports: CardVerticalSeparator, MediaVerticalSeparator, MessageVerticalSeparator
 
-// Module 16892 (Separators)
+// Module 17032 (Separators)
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
-const SearchConstants = fn(8000);
+const SearchConstants = fn(8083);
 ({ MEDIA_ITEM_GAP_WIDTH, FILES_OR_LINKS_GAP_WIDTH } = SearchConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let closure_2 = createStyles.createStyles({ filesOrLinksSeparator: { height: FILES_OR_LINKS_GAP_WIDTH }, mediaSeparator: { height: MEDIA_ITEM_GAP_WIDTH }, messageSeparator: { height: 4 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/list/rows/Separators.tsx");

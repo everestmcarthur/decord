@@ -1,13 +1,13 @@
-// Module ID: 7757
-// Function ID: 7758
+// Module ID: 7839
+// Function ID: 7840
 // Name: NUFStore
-// Dependencies: [1980, 4288, 504, 573, 2]
+// Dependencies: [1980, 4371, 504, 573, 2]
 
-// Module 7757 (NUFStore)
+// Module 7839 (NUFStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import RelationshipStore from "RelationshipStore" /* 4288 */;
+import RelationshipStore from "RelationshipStore" /* 4371 */;
 
 function handleCacheOrSocketLoaded() {
   let flag = false;

@@ -1,15 +1,15 @@
-// Module ID: 15898
-// Function ID: 15899
+// Module ID: 15993
+// Function ID: 15994
 // Name: UserSettingsDesignSystemLegacyButton
-// Dependencies: [19, 17, 21, 1177, 4636, 5062, 4640, 576, 5060, 8748, 2]
+// Dependencies: [19, 17, 21, 1177, 4718, 5144, 4722, 576, 5142, 8831, 2]
 // Exports: default
 
-// Module 15898 (UserSettingsDesignSystemLegacyButton)
+// Module 15993 (UserSettingsDesignSystemLegacyButton)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
-import Text_Text from "Text/Text" /* 4636 */;
-import Stack_Stack from "Stack/Stack" /* 5060 */;
-import Form from "Form" /* 8748 */;
+import Text_Text from "Text/Text" /* 4718 */;
+import Stack_Stack from "Stack/Stack" /* 5142 */;
+import Form from "Form" /* 8831 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -63,7 +63,7 @@ function ComparisonRow(entry) {
   const items4 = [React4(React3, obj4), ];
   if (null != redesignVariant) {
     const obj6 = { style: tmp.comparisonSide, children: null };
-    const items5 = [tmp9(tmp4(4636).Text, { variant: "text-xxs/medium", color: "text-muted", children: "mana" }), ];
+    const items5 = [tmp9(tmp4(4718).Text, { variant: "text-xxs/medium", color: "text-muted", children: "mana" }), ];
     const obj7 = {
       variant: redesignVariant,
       size: "md",
@@ -72,11 +72,11 @@ function ComparisonRow(entry) {
 
         }
     };
-    items5[1] = tmp9(tmp4(5062).Button, obj7);
+    items5[1] = tmp9(tmp4(5144).Button, obj7);
     obj6.children = items5;
     let tmp9Result = tmp7(tmp8, obj6);
   } else {
-    const obj8 = { style: tmp.comparisonSide, children: tmp9(tmp4(4636).Text, { variant: "text-xs/medium", color: "text-muted", children: "no mapping" }) };
+    const obj8 = { style: tmp.comparisonSide, children: tmp9(tmp4(4718).Text, { variant: "text-xs/medium", color: "text-muted", children: "no mapping" }) };
     tmp9Result = tmp9(tmp8, obj8);
   }
   items4[1] = tmp9Result;
@@ -213,7 +213,7 @@ const obj40 = { look: fn(1177).ButtonLooks.OUTLINED, color: fn(1177).ButtonColor
 items[40] = { look: fn(1177).ButtonLooks.OUTLINED, color: fn(1177).ButtonColors.WHITE, size: fn(1177).ButtonSizes.SMALL, shrink: false, count: 1 };
 let items1 = [fn(1177).ButtonColors.WHITE];
 let set = new Set(items1);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 const obj43 = { comboRow: null, darkText: null, darkBg: null, comparisonRow: null, comparisonButtons: null, comparisonSide: null, container: null, header: null };
 const obj41 = { look: fn(1177).ButtonLooks.OUTLINED, color: fn(1177).ButtonColors.WHITE, size: fn(1177).ButtonSizes.SMALL, shrink: false, count: 1 };
 obj43.comboRow = { gap: 4, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_4 };

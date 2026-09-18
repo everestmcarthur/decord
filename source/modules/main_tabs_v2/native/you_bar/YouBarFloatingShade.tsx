@@ -1,27 +1,27 @@
-// Module ID: 16555
-// Function ID: 16556
+// Module ID: 16652
+// Function ID: 16653
 // Name: YouBarFloatingShade
-// Dependencies: [19, 17, 4459, 15210, 16442, 21, 4640, 504, 4341, 576, 15212, 1478, 4500, 16179, 4458, 1092, 5074, 2]
+// Dependencies: [19, 17, 4541, 15304, 16539, 21, 4722, 504, 4423, 576, 15306, 1478, 4582, 16276, 4540, 1092, 5156, 2]
 
-// Module 16555 (YouBarFloatingShade)
+// Module 16652 (YouBarFloatingShade)
 import initialize from "initialize" /* 504 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1092 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1478 */;
-import useToken from "useToken" /* 4341 */;
-import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 4458 */;
-import useChatLayoutDefault from "useChatLayout" /* 4500 */;
-import LinearGradientDefault from "LinearGradient" /* 5074 */;
-import useYouBarTotalHeight from "useYouBarTotalHeight" /* 15212 */;
+import useToken from "useToken" /* 4423 */;
+import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 4540 */;
+import useChatLayoutDefault from "useChatLayout" /* 4582 */;
+import LinearGradientDefault from "LinearGradient" /* 5156 */;
+import useYouBarTotalHeight from "useYouBarTotalHeight" /* 15306 */;
 import noop from "module_19" /* 19 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4459 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4541 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(15210).YOU_BAR_GRADIENT_EXTRA_HEIGHT;
-const GUILD_LIST_WIDTH = fn(16442).GUILD_LIST_WIDTH;
+let closure_5 = fn(15304).YOU_BAR_GRADIENT_EXTRA_HEIGHT;
+const GUILD_LIST_WIDTH = fn(16539).GUILD_LIST_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let closure_10 = createStyles.createStyles({ container: { position: "absolute", bottom: 0, left: 0, right: 0 } });
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarFloatingShade.tsx");
@@ -34,7 +34,7 @@ export default noop.memo(function YouBarFloatingShade() {
   if (useChatLayoutDefault().isChatBesideChannelList) {
     width = tmp7 + GUILD_LIST_WIDTH;
   }
-  const gradientValue = client_themes_ClientThemesUtils.useGradientValue(tmp2(4458).GradientPercentage.END);
+  const gradientValue = client_themes_ClientThemesUtils.useGradientValue(tmp2(4540).GradientPercentage.END);
   const tmp2Result = client_themes_ClientThemesUtils;
   const token = useToken.useToken(tmp6(576).colors.BACKGROUND_BASE_LOWER);
   const tmp2Result6 = useToken;

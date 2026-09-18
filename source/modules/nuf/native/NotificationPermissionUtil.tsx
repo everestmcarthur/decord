@@ -1,17 +1,17 @@
-// Module ID: 12563
-// Function ID: 12564
+// Module ID: 12654
+// Function ID: 12655
 // Name: NotificationPermissionUtil
-// Dependencies: [32, 5, 19, 17, 12561, 12562, 1074, 4850, 9841, 1241, 12564, 12570, 12571, 504, 2]
+// Dependencies: [32, 5, 19, 17, 12652, 12653, 1074, 4932, 9935, 1241, 12655, 12661, 12662, 504, 2]
 // Exports: enableProvisionalPushNotification, requestPushNotificationPermission, useCanSeePushNotificationNudge, useShouldShowPushNotificationNudgeByPromptType, useShowReactivationPrompt
 
-// Module 12563 (NotificationPermissionUtil)
+// Module 12654 (NotificationPermissionUtil)
 import initialize from "initialize" /* 504 */;
-import PushNotificationActionCreators from "PushNotificationActionCreators" /* 12564 */;
-import RegionalTeenUtils from "RegionalTeenUtils" /* 12571 */;
+import PushNotificationActionCreators from "PushNotificationActionCreators" /* 12655 */;
+import RegionalTeenUtils from "RegionalTeenUtils" /* 12662 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 12561 */;
+import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 12652 */;
 
 require = fn;
 let closure_11 = async function _requestPushNotificationPermission(arg0, value) {
@@ -153,9 +153,9 @@ let closure_12 = async function _enableProvisionalPushNotification(arg0, value) 
   }
 };
 const NativeModules = fn(17).NativeModules;
-const EventActionType = fn(12562).EventActionType;
+const EventActionType = fn(12653).EventActionType;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-let closure_10 = fn(4850).NotificationAuthorizationStatus;
+let closure_10 = fn(4932).NotificationAuthorizationStatus;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/nuf/native/NotificationPermissionUtil.tsx");
 

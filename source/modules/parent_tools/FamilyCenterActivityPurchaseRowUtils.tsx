@@ -1,34 +1,34 @@
-// Module ID: 15026
-// Function ID: 15027
+// Module ID: 15120
+// Function ID: 15121
 // Name: FamilyCenterActivityPurchaseRowUtils
-// Dependencies: [7661, 7662, 1374, 1890, 1115, 2397, 1397, 2]
+// Dependencies: [7743, 7744, 1374, 1890, 1115, 2480, 1397, 2]
 // Exports: getAvatarDecorationPreviewUrl, getProfileEffectPreviewUrl, getPurchaseDisplayInfo, isGuildBoostSubscription
 
-// Module 15026 (FamilyCenterActivityPurchaseRowUtils)
+// Module 15120 (FamilyCenterActivityPurchaseRowUtils)
 import AvatarUtils from "AvatarUtils" /* 1397 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1890 */;
-import _modDef2397 from "module_2397" /* 2397 */;
-import AvatarDecorationRecord from "AvatarDecorationRecord" /* 7661 */;
-import ProfileEffectRecord from "ProfileEffectRecord" /* 7662 */;
+import _modDef2480 from "module_2480" /* 2480 */;
+import AvatarDecorationRecord from "AvatarDecorationRecord" /* 7743 */;
+import ProfileEffectRecord from "ProfileEffectRecord" /* 7744 */;
 import PremiumConstants from "PremiumConstants" /* 1374 */;
 import size from "module_2" /* 2 */;
 
 function getCollectibleTypeName(type) {
   if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === type) {
     const intl5 = tmp(1115).intl;
-    return intl5.string(_modDef2397.obi47v);
+    return intl5.string(_modDef2480.obi47v);
   } else if (tmp(1890).CollectiblesItemType.PROFILE_EFFECT === type) {
     const intl4 = tmp(1115).intl;
-    return intl4.string(_modDef2397.RX8BMR);
+    return intl4.string(_modDef2480.RX8BMR);
   } else if (tmp(1890).CollectiblesItemType.NAMEPLATE === type) {
     const intl3 = tmp(1115).intl;
-    return intl3.string(_modDef2397.nNGEHk);
+    return intl3.string(_modDef2480.nNGEHk);
   } else if (tmp(1890).CollectiblesItemType.BUNDLE === type) {
     const intl2 = tmp(1115).intl;
-    return intl2.string(_modDef2397.VS1fKo);
+    return intl2.string(_modDef2480.VS1fKo);
   } else if (tmp(1890).CollectiblesItemType.PROFILE_FRAME === type) {
     const intl = tmp(1115).intl;
-    return intl.string(_modDef2397.JiIY1l);
+    return intl.string(_modDef2480.JiIY1l);
   } else {
     return "";
   }

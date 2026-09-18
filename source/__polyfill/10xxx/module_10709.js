@@ -1,87 +1,51 @@
 // Module ID: 10709
 // Function ID: 10710
-// Dependencies: [41, 42, 93, 95, 98, 10710, 10584, 10588]
+// Dependencies: [41, 42, 10674]
 
 // Module 10709
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10588 */;
-import REGEX_PARTS from "REGEX_PARTS" /* 10710 */;
+import _mod10674 from "module_10674" /* 10674 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
 
-const RUTimeUnitWithinFormatParser = require;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
-  }
-}
-let closure_6 = "(?:(?:\u043E\u043A\u043E\u043B\u043E|\u043F\u0440\u0438\u043C\u0435\u0440\u043D\u043E)\\s*(?:~\\s*)?)?(" + REGEX_PARTS.TIME_UNITS_PATTERN + ")" + REGEX_PARTS.REGEX_PARTS.rightBoundary;
-class RUTimeUnitWithinFormatParser {
+const ENExtractYearSuffixRefiner = require;
+const regExp = new RegExp("^\\s*(" + _mod10674.YEAR_PATTERN + ")", "i");
+class ENExtractYearSuffixRefiner {
   constructor() {
-    self = this;
-    tmp = c2(this, RUTimeUnitWithinFormatParser);
-    tmp2 = closure_4;
-    obj = closure_4(RUTimeUnitWithinFormatParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
+    tmp = c2(this, ENExtractYearSuffixRefiner);
+    return;
   }
 }
-_inherits(RUTimeUnitWithinFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "patternLeftBoundary",
-  value: function patternLeftBoundary() {
-    return RUTimeUnitWithinFormatParser(10710).REGEX_PARTS.leftBoundary;
+  key: "refine",
+  value: function refine(arg0, arr) {
+    let text = arg0;
+    const item = arr.forEach((start) => {
+      text = start;
+      start = start.start;
+      if (start.isDateWithUnknownYear()) {
+        const match = regExp.exec(text.text.substring(start.index + start.text.length));
+        if (match) {
+          if (str2.trim().length > 3) {
+            obj.debug(() => {
+              console.log("Extracting year: '" + match[0] + "' into : " + closure_0);
+            });
+            const parseYearResult = ENExtractYearSuffixRefiner(10674).parseYear(match[1]);
+            if (null != start.end) {
+              const end = start.end;
+              end.assign("year", parseYearResult);
+            }
+            const start2 = start.start;
+            start2.assign("year", parseYearResult);
+            start.text = start.text + match[0];
+          }
+          str2 = match[0];
+        }
+        obj = text;
+      }
+    });
+    return arr;
   }
 };
-const items = [
-  entry,
-  {
-    key: "innerPattern",
-    value: function innerPattern(option) {
-      const _RegExp = RegExp;
-      if (option.option.forwardDate) {
-        let _RegExp1 = new _RegExp(tmp, RUTimeUnitWithinFormatParser(10710).REGEX_PARTS.flags);
-      } else {
-        const _HermesInternal = HermesInternal;
-        const combined = "(?:\u0432 \u0442\u0435\u0447\u0435\u043D\u0438\u0435|\u0432 \u0442\u0435\u0447\u0435\u043D\u0438\u0438)\\s*" + tmp;
-        _RegExp1 = new _RegExp(combined, RUTimeUnitWithinFormatParser(10710).REGEX_PARTS.flags);
-      }
-      return _RegExp1;
-    }
-  },
-  {
-    key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      const ParsingComponents = RUTimeUnitWithinFormatParser(10584).ParsingComponents;
-      return ParsingComponents.createRelativeFromReference(reference.reference, RUTimeUnitWithinFormatParser(10710).parseDuration(arg1[1]));
-    }
-  }
-];
+const items = [entry];
 
-export default _createClass(RUTimeUnitWithinFormatParser, items);
+export default _createClass(ENExtractYearSuffixRefiner, items);

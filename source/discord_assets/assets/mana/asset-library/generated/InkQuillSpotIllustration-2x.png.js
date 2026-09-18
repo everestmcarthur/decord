@@ -1,8 +1,8 @@
-// Module ID: 6320
-// Function ID: 6321
+// Module ID: 6402
+// Function ID: 6403
 // Dependencies: [2]
 
-// Module 6320
+// Module 6402
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/InkQuillSpotIllustration-2x.png.js");

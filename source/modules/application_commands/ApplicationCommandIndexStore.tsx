@@ -1,36 +1,36 @@
-// Module ID: 9444
-// Function ID: 9445
+// Module ID: 9528
+// Function ID: 9529
 // Name: ApplicationCommandIndexStore
-// Dependencies: [32, 5, 19, 9445, 2026, 502, 1958, 2022, 1980, 1372, 9446, 5086, 1074, 3, 9447, 9448, 7635, 7636, 5608, 38, 504, 9449, 1241, 1895, 9452, 573, 9453, 9454, 1941, 9559, 7637, 5605, 2]
+// Dependencies: [32, 5, 19, 9529, 2026, 502, 1958, 2022, 1980, 1372, 9530, 5168, 1074, 3, 9531, 9532, 7717, 7718, 5690, 38, 504, 9533, 1241, 1895, 9536, 573, 9537, 9538, 1941, 9643, 7719, 5687, 2]
 // Exports: appLauncherOnlyCompareNames, getOrFetchApplicationCommandIndexForTarget, getSection, isStale, useContextIndexState, useDiscoveryState, useGuildIndexState, useUserIndexState
 
-// Module 9444 (ApplicationCommandIndexStore)
+// Module 9528 (ApplicationCommandIndexStore)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import Server from "Server" /* 1895 */;
-import fuzzysearchDefault from "fuzzysearch" /* 5605 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5608 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7635 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7637 */;
-import ApplicationCommandIndexActionCreators from "ApplicationCommandIndexActionCreators" /* 9448 */;
-import CommandPermissionContext from "CommandPermissionContext" /* 9449 */;
-import ApplicationCommandQueryTypes from "ApplicationCommandQueryTypes" /* 9452 */;
-import ApplicationCommandBuiltIns from "ApplicationCommandBuiltIns" /* 9454 */;
-import CommandPermissionUtils from "CommandPermissionUtils" /* 9559 */;
+import fuzzysearchDefault from "fuzzysearch" /* 5687 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5690 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7717 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7719 */;
+import ApplicationCommandIndexActionCreators from "ApplicationCommandIndexActionCreators" /* 9532 */;
+import CommandPermissionContext from "CommandPermissionContext" /* 9533 */;
+import ApplicationCommandQueryTypes from "ApplicationCommandQueryTypes" /* 9536 */;
+import ApplicationCommandBuiltIns from "ApplicationCommandBuiltIns" /* 9538 */;
+import CommandPermissionUtils from "CommandPermissionUtils" /* 9643 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ApplicationFrecencyStore from "ApplicationFrecencyStore" /* 9445 */;
+import ApplicationFrecencyStore from "ApplicationFrecencyStore" /* 9529 */;
 import LocaleStore from "LocaleStore" /* 2026 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 import GuildMemberStore from "GuildMemberStore" /* 2022 */;
 import GuildStore from "GuildStore" /* 1980 */;
 import UserStore from "UserStore" /* 1372 */;
-import ApplicationCommandFrecencyStore from "ApplicationCommandFrecencyStore" /* 9446 */;
+import ApplicationCommandFrecencyStore from "ApplicationCommandFrecencyStore" /* 9530 */;
 
 const require = globalThis.__r;
 const CommandPermissionUtilsAll = CommandPermissionUtils;
@@ -290,11 +290,11 @@ function handleFetchSuccess(arg0, flag) {
           }
           let obj = {};
           let tmp19 = id;
-          let obj2 = id(7635);
+          let obj2 = id(7717);
           let merged = Object.assign(obj2.getApplicationCommandSection(toApplication(tmp6), false));
           let keyPermissionsResult;
           if (null != tmp6.permissions) {
-            let tmp19Result = tmp19(7636);
+            let tmp19Result = tmp19(7718);
             keyPermissionsResult = tmp19Result.keyPermissions(toServerPermissions(tmp6.permissions, id));
           }
           let obj7 = { descriptor: null, commands: null };
@@ -316,7 +316,7 @@ function handleFetchSuccess(arg0, flag) {
       const membersById = GuildActionCreatorsDefault.requestMembersById(target.guildId, items);
     }
     const application_commands = index.application_commands;
-    const applicationCommands = id(7635).buildApplicationCommands(application_commands.map((description_default) => {
+    const applicationCommands = id(7717).buildApplicationCommands(application_commands.map((description_default) => {
       const obj = {};
       const merged = Object.assign(description_default);
       let str = description_default.description_default;
@@ -665,7 +665,7 @@ function useQueryState(type, commandTypes, allowFetch) {
 function queryIndex(allowApplicationCommands) {
   ({ permissionContext, contextState, userState, applicationStates, text, builtIns } = allowApplicationCommands);
   if (builtIns === undefined) {
-    builtIns = NONE(9452).BuiltInCommandFilter.ALLOW;
+    builtIns = NONE(9536).BuiltInCommandFilter.ALLOW;
   }
   let flag = allowApplicationCommands.allowApplicationCommands;
   if (flag === undefined) {
@@ -677,7 +677,7 @@ function queryIndex(allowApplicationCommands) {
   }
   NONE = allowApplicationCommands.scoreMethod;
   if (NONE === undefined) {
-    NONE = NONE(9452).ScoreMethod.NONE;
+    NONE = NONE(9536).ScoreMethod.NONE;
   }
   let sortOptions = allowApplicationCommands.sortOptions;
   if (sortOptions === undefined) {
@@ -696,10 +696,10 @@ function queryIndex(allowApplicationCommands) {
   if (formatted != null) {
     parts = formatted.split(" ");
   }
-  if (builtIns !== NONE(9452).BuiltInCommandFilter.DENY) {
-    const tmp12 = builtIns === NONE(9452).BuiltInCommandFilter.ONLY_TEXT;
-    let builtInCommands = tmp9(9454).getBuiltInCommands(permissionContext.commandTypes, true, tmp12);
-    const tmp9Result = tmp9(9454);
+  if (builtIns !== NONE(9536).BuiltInCommandFilter.DENY) {
+    const tmp12 = builtIns === NONE(9536).BuiltInCommandFilter.ONLY_TEXT;
+    let builtInCommands = tmp9(9538).getBuiltInCommands(permissionContext.commandTypes, true, tmp12);
+    const tmp9Result = tmp9(9538);
   } else {
     builtInCommands = [];
   }
@@ -868,7 +868,7 @@ function queryIndex(allowApplicationCommands) {
     return collator.compare(section.section.name, section2.section.name);
   });
   if (builtInCommands.length > 0) {
-    const tmp87 = queryIndexSection(NONE(9454).BUILT_IN_SECTIONS[constants.BUILT_IN], builtInCommands, true, true, obj);
+    const tmp87 = queryIndexSection(NONE(9538).BUILT_IN_SECTIONS[constants.BUILT_IN], builtInCommands, true, true, obj);
     if (null != tmp87) {
       items.push(tmp87);
     }
@@ -882,7 +882,7 @@ function queryIndex(allowApplicationCommands) {
       return obj;
     });
   });
-  if (NONE === NONE(9452).ScoreMethod.COMMAND_ONLY) {
+  if (NONE === NONE(9536).ScoreMethod.COMMAND_ONLY) {
     const context = permissionContext.context;
     let guild_id;
     if (permissionContext != null) {
@@ -1054,7 +1054,7 @@ function queryIndexSection(descriptor, builtInCommands, isGuildInstalled, arg3, 
     }
     const obj5 = { section: descriptor, data: arr2 };
     let tmp36 = obj5;
-    tmp39 = scoreMethod !== ApplicationCommandQueryTypes.ScoreMethod.NONE && scoreMethod !== tmp27(9452).ScoreMethod.APPLICATION_ONLY;
+    tmp39 = scoreMethod !== ApplicationCommandQueryTypes.ScoreMethod.NONE && scoreMethod !== tmp27(9536).ScoreMethod.APPLICATION_ONLY;
   } else {
     tmp36 = null;
   }
@@ -1288,7 +1288,7 @@ function scoreCommand(untranslatedName, arg1, arg2, arg3) {
   }
   return constants4.COMMAND_NAME_STARTS_WITH;
 }
-const ApplicationCommandConstants = fn(5086);
+const ApplicationCommandConstants = fn(5168);
 ({ BuiltInSectionId: closure_15, DISCOVERY_COMMANDS_FRECENCY_LIMIT: closure_16 } = ApplicationCommandConstants);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_17, ChannelTypes: closure_18 } = Constants);
@@ -1516,9 +1516,9 @@ prototype["query"] = function query(withAffinitySuggestions, commandTypes, appli
           tmp36 = tmp37;
         }
         if (tmp36) {
-          const applicationCommandIndex = tmp8(9448).requestApplicationCommandIndex({ type: "user" });
+          const applicationCommandIndex = tmp8(9532).requestApplicationCommandIndex({ type: "user" });
           flag5 = true;
-          const tmp8Result = tmp8(9448);
+          const tmp8Result = tmp8(9532);
         }
         const result3 = applicationState.result;
         let version1;
@@ -1543,9 +1543,9 @@ prototype["query"] = function query(withAffinitySuggestions, commandTypes, appli
         }
         if (tmp42) {
           const obj4 = { type: "application", applicationId: applicationId.applicationId };
-          const applicationCommandIndex1 = tmp8(9448).requestApplicationCommandIndex(obj4);
+          const applicationCommandIndex1 = tmp8(9532).requestApplicationCommandIndex(obj4);
           flag5 = true;
-          const tmp8Result4 = tmp8(9448);
+          const tmp8Result4 = tmp8(9532);
         }
         flag3 = flag5;
       } else {
@@ -1578,17 +1578,17 @@ prototype["query"] = function query(withAffinitySuggestions, commandTypes, appli
         if (tmp29) {
           if (null == guild_id.guild_id) {
             const obj6 = { type: "channel", channelId: guild_id.id };
-            const applicationCommandIndex2 = tmp8(9448).requestApplicationCommandIndex(obj6);
+            const applicationCommandIndex2 = tmp8(9532).requestApplicationCommandIndex(obj6);
             flag6 = true;
-            const tmp8Result5 = tmp8(9448);
+            const tmp8Result5 = tmp8(9532);
           }
         }
         const obj7 = { type: "guild", guildId: null };
         guild_id = guild_id.guild_id;
         obj7.guildId = guild_id;
-        const applicationCommandIndex3 = tmp8(9448).requestApplicationCommandIndex(obj7);
+        const applicationCommandIndex3 = tmp8(9532).requestApplicationCommandIndex(obj7);
         flag6 = true;
-        const tmp8Result6 = tmp8(9448);
+        const tmp8Result6 = tmp8(9532);
       }
     }
     const obj8 = { permissionContext, text: commandTypes.text, allowApplicationCommands: false !== commandTypes.applicationCommands, builtIns: commandTypes.builtIns, scoreMethod: null, allowEmptySections: null, contextState: null, userState: null, applicationStates: null, sortOptions: null, singleApplicationId: null, installOnDemand: null };

@@ -1,9 +1,9 @@
-// Module ID: 8001
-// Function ID: 8002
+// Module ID: 8084
+// Function ID: 8085
 // Name: ChannelListLayoutTypes
 // Dependencies: [2]
 
-// Module 8001 (ChannelListLayoutTypes)
+// Module 8084 (ChannelListLayoutTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/main_tabs_v2/ChannelListLayoutTypes.tsx");

@@ -1,12 +1,12 @@
-// Module ID: 5057
-// Function ID: 5058
+// Module ID: 5139
+// Function ID: 5140
 // Name: useBackPressHandler
-// Dependencies: [19, 17, 5058, 1364, 2]
+// Dependencies: [19, 17, 5140, 1364, 2]
 // Exports: default, subscribeToBackPress
 
-// Module 5057 (useBackPressHandler)
+// Module 5139 (useBackPressHandler)
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import KeyCommands from "KeyCommands" /* 5058 */;
+import KeyCommands from "KeyCommands" /* 5140 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

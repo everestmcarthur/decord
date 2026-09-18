@@ -1,9 +1,0 @@
-// Module ID: 14857
-// Function ID: 14858
-// Dependencies: [1121]
-
-// Module 14857
-import registerAsset from "module_1121" /* 1121 */;
-
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcw==", scales: [1], hash: "1b5b3d15b950775b26b26b59da1f7e27", name: "it.messages.1b5b3d15b950775b26b26b59da1f7e27.compiled.messages", type: "jsona" });

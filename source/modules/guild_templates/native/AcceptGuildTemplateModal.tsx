@@ -1,16 +1,16 @@
-// Module ID: 11945
-// Function ID: 11946
+// Module ID: 12036
+// Function ID: 12037
 // Name: AcceptGuildTemplateModal
-// Dependencies: [5, 32, 19, 7571, 1074, 21, 4640, 5770, 504, 5607, 11946, 7237, 11947, 5225, 11957, 11944, 5712, 7114, 2]
+// Dependencies: [5, 32, 19, 7653, 1074, 21, 4722, 5852, 504, 5689, 12037, 7319, 12038, 5307, 12048, 12035, 5794, 7196, 2]
 // Exports: default
 
-// Module 11945 (AcceptGuildTemplateModal)
-import NavigatorHeader from "NavigatorHeader" /* 5712 */;
-import AcceptGuildTemplateActionCreatorsDefault from "AcceptGuildTemplateActionCreators" /* 11957 */;
+// Module 12036 (AcceptGuildTemplateModal)
+import NavigatorHeader from "NavigatorHeader" /* 5794 */;
+import AcceptGuildTemplateActionCreatorsDefault from "AcceptGuildTemplateActionCreators" /* 12048 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildTemplateStore from "GuildTemplateStore" /* 7571 */;
+import GuildTemplateStore from "GuildTemplateStore" /* 7653 */;
 
 require = fn;
 function ConnectedAcceptGuildTemplate(code) {
@@ -24,11 +24,11 @@ function ConnectedAcceptGuildTemplate(code) {
   const items = [GuildTemplateStore];
   const stateFromStores = code(504).useStateFromStores(items, () => GuildTemplateStore.getGuildTemplate(code));
   let obj = code(504);
-  [name, dependencyMap] = noop.useState(name(5607).getGuildNameSuggestion());
+  [name, dependencyMap] = noop.useState(name(5689).getGuildNameSuggestion());
   [first1, _slicedToArray] = noop.useState(null);
   const tmp7 = _slicedToArray(noop.useState(null), 2);
   noop = tmp7[1];
-  stateFromStores(11946)(stateFromStores);
+  stateFromStores(12037)(stateFromStores);
   let obj3 = { top: true, style: tmp.container, children: null };
   let obj4 = {
     code,
@@ -42,7 +42,7 @@ function ConnectedAcceptGuildTemplate(code) {
     chooseIcon: null,
     createServer: null
   };
-  const obj2 = name(5607);
+  const obj2 = name(5689);
   obj4.chooseIcon = first1(function*(arg0, value) {
     if (dependencyMap === 2) {
       dependencyMap = 3;
@@ -103,7 +103,7 @@ function ConnectedAcceptGuildTemplate(code) {
       const acceptGuildTemplateResult = AcceptGuildTemplateActionCreatorsDefault.acceptGuildTemplate(tmp.code, first, first1);
     }
   };
-  obj3.children = jsx(stateFromStores(11947), {
+  obj3.children = jsx(stateFromStores(12038), {
     code,
     guildTemplate: stateFromStores,
     name,
@@ -115,12 +115,12 @@ function ConnectedAcceptGuildTemplate(code) {
     chooseIcon: null,
     createServer: null
   });
-  return jsx(code(7237).SafeAreaPaddingView, { top: true, style: tmp.container, children: null });
+  return jsx(code(7319).SafeAreaPaddingView, { top: true, style: tmp.container, children: null });
 }
 const UPLOAD_MEDIUM_SIZE = fn(1074).UPLOAD_MEDIUM_SIZE;
 const jsx = fn(21).jsx;
-const createStyles = fn(4640);
-let obj2 = { container: { flex: 1, marginTop: fn(5770).NAV_BAR_HEIGHT } };
+const createStyles = fn(4722);
+let obj2 = { container: { flex: 1, marginTop: fn(5852).NAV_BAR_HEIGHT } };
 let closure_10 = createStyles.createStyles(obj2);
 const ACCEPT_GUILD_TEMPLATE = "ACCEPT_GUILD_TEMPLATE";
 const size = fn(2);
@@ -145,5 +145,5 @@ export default function AcceptGuildTemplateModal(code) {
     obj2[ACCEPT_GUILD_TEMPLATE] = obj3;
     return obj2;
   }, items);
-  return jsx(code(7114).Navigator, { initialRouteName: ACCEPT_GUILD_TEMPLATE, screens: memo });
+  return jsx(code(7196).Navigator, { initialRouteName: ACCEPT_GUILD_TEMPLATE, screens: memo });
 };

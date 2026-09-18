@@ -1,36 +1,15 @@
 // Module ID: 6841
 // Function ID: 6842
-// Dependencies: [19, 6840, 6810]
-// Exports: useGestureRelationsUpdater
+// Dependencies: []
+// Exports: enableLogging, print
 
 // Module 6841
-import traverseAndConfigureRelations from "traverseAndConfigureRelations" /* 6840 */;
-import noop from "module_19" /* 19 */;
+function print() {
 
-({ useEffect: c2, useMemo: c3 } = noop);
+}
+const frozen = Object.freeze(print);
 
-export const useGestureRelationsUpdater = function useGestureRelationsUpdater(gesture) {
-  closure_0 = gesture;
-  const items = [gesture];
-  const tmp = closure_3(() => {
-    let configureRelationsResult = null;
-    if (closure_0) {
-      configureRelationsResult = traverseAndConfigureRelations.configureRelations(tmp);
-    }
-    return configureRelationsResult;
-  }, items);
-  closure_1 = tmp;
-  const items1 = [tmp];
-  closure_2(() => {
-    if (closure_1) {
-      const _requestAnimationFrame = requestAnimationFrame;
-      closure_0 = requestAnimationFrame(() => {
-        const item = closure_1_1.forEach((item, index) => {
-          const NativeProxy = closure_1_0(closure_1_1[2]).NativeProxy;
-          NativeProxy.configureRelations(index, item);
-        });
-      });
-      return () => cancelAnimationFrame(closure_0);
-    }
-  }, items1);
+export { print };
+export const enableLogging = (arg0) => {
+  console.warn("[BottomSheet] could not enable logging on production!");
 };

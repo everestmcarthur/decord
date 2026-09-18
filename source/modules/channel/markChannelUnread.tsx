@@ -1,17 +1,17 @@
-// Module ID: 10393
-// Function ID: 10394
+// Module ID: 10487
+// Function ID: 10488
 // Name: markChannelUnread
-// Dependencies: [4655, 10394, 504, 2]
+// Dependencies: [4737, 10488, 504, 2]
 // Exports: default, useCanMarkChannelUnread
 
-// Module 10393 (markChannelUnread)
-import markUnreadDefault from "markUnread" /* 10394 */;
-import ReadStateStore from "ReadStateStore" /* 4655 */;
+// Module 10487 (markChannelUnread)
+import markUnreadDefault from "markUnread" /* 10488 */;
+import ReadStateStore from "ReadStateStore" /* 4737 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const ReadState = fn(4655).ReadState;
+const ReadState = fn(4737).ReadState;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/markChannelUnread.tsx");
 

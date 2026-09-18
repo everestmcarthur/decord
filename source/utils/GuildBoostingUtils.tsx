@@ -1,27 +1,27 @@
-// Module ID: 4533
-// Function ID: 4534
+// Module ID: 4615
+// Function ID: 4616
 // Name: GuildBoostingUtils
-// Dependencies: [1980, 1372, 4534, 4303, 1074, 1375, 1374, 4311, 4535, 1115, 1370, 4536, 2025, 12, 4231, 4537, 3077, 4297, 1231, 4548, 4564, 2]
+// Dependencies: [1980, 1372, 4616, 4386, 1074, 1375, 1374, 4394, 4617, 1115, 1370, 4618, 2025, 12, 4314, 4619, 3160, 4380, 1231, 4630, 4646, 2]
 // Exports: appliedGuildBoostsRequiredForPerks, boostedGuildTierToAnalyticsObjectType, generateBlockGuildSubscriptionPurchasesNode, getAppliedGuildBoostMonths, getAvailableGuildBoostSlots, getAvailableSoundboardSoundCount, getAvailableStickerSlotCount, getGracePeriodEndingDate, getGuildBoostingProgressBarFillFactor, getIncrementalSoundboardSoundCountForTier, getIncrementalStickerCountForTier, getMaxEmojiSlots, getMaxSoundboardSlots, getNextGuildTierFromGuild, getNextPremiumTierForSubscriberCount, getNextTier, getNumberOfAppliedBoostsNeededForTier, getShortenedTierName, getTheoreticalPremiumTierForSubscriberCount, getTierName, getTiers, getTotalSoundboardSoundCountForTier, getTotalStickerCountForTier, getUserLevel, isAppliedGuildBoostActive, isGuildBoostSlotCanceled, isGuildBoostedAtLeast, isInGracePeriod, isTierUnlocked
 
-// Module 4533 (GuildBoostingUtils)
+// Module 4615 (GuildBoostingUtils)
 import util from "util" /* 1115 */;
 import SentryUtilsDefault from "SentryUtils" /* 1231 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2025 */;
-import _modDef4231 from "module_4231" /* 4231 */;
-import PremiumUtilsAll from "PremiumUtils" /* 4297 */;
-import PremiumGuildOverrides from "PremiumGuildOverrides" /* 4535 */;
-import BoostingActionCreators from "BoostingActionCreators" /* 4537 */;
-import useGuildPowerupsBoostCount from "useGuildPowerupsBoostCount" /* 4548 */;
+import _modDef4314 from "module_4314" /* 4314 */;
+import PremiumUtilsAll from "PremiumUtils" /* 4380 */;
+import PremiumGuildOverrides from "PremiumGuildOverrides" /* 4617 */;
+import BoostingActionCreators from "BoostingActionCreators" /* 4619 */;
+import useGuildPowerupsBoostCount from "useGuildPowerupsBoostCount" /* 4630 */;
 import GuildStore from "GuildStore" /* 1980 */;
 import UserStore from "UserStore" /* 1372 */;
-import GuildBoostSlotStore from "GuildBoostSlotStore" /* 4534 */;
-import SubscriptionStore from "SubscriptionStore" /* 4303 */;
+import GuildBoostSlotStore from "GuildBoostSlotStore" /* 4616 */;
+import SubscriptionStore from "SubscriptionStore" /* 4386 */;
 import apply from "module_12" /* 12 */;
 
 const GlobalUtils = tmp2(1370);
-const _modDef3077 = tmp7(3077);
-const FileSizeUtils = tmp2(4536);
+const _modDef3160 = tmp7(3160);
+const FileSizeUtils = tmp2(4618);
 require = fn;
 function getGuildTierFromGuild(arg0) {
   const guild = GuildStore.getGuild(arg0);
@@ -42,7 +42,7 @@ const EmojiConstants = fn(1375);
 ({ DEFAULT_EMOJI_SLOTS: closure_16, EMOJI_MAX_SLOTS_MORE: closure_17 } = EmojiConstants);
 const PremiumConstants = fn(1374);
 ({ BoostedGuildFeatures: closure_18, DEFAULT_SOUND_SLOTS: closure_19, MORE_SOUNDBOARD_SOUNDS: closure_20, FractionalPremiumStates: closure_21, IncrementalStickerCountsByTier: closure_22, TotalSoundboardSoundCountsByTier: closure_23, TotalStickerCountsByTier: closure_24 } = PremiumConstants);
-let closure_25 = fn(4311).getPremiumGroupProductName;
+let closure_25 = fn(4394).getPremiumGroupProductName;
 let obj = { LEVEL_1: 1, [1]: "LEVEL_1", LEVEL_2: 2, [2]: "LEVEL_2", LEVEL_3: 3, [3]: "LEVEL_3", LEVEL_4: 4, [4]: "LEVEL_4", LEVEL_5: 5, [5]: "LEVEL_5", LEVEL_6: 6, [6]: "LEVEL_6", LEVEL_7: 7, [7]: "LEVEL_7", LEVEL_8: 8, [8]: "LEVEL_8", LEVEL_9: 9, [9]: "LEVEL_9" };
 let closure_26 = Object.freeze({ [obj.LEVEL_1]: 1, [obj.LEVEL_2]: 2, [obj.LEVEL_3]: 3, [obj.LEVEL_4]: 6, [obj.LEVEL_5]: 9, [obj.LEVEL_6]: 12, [obj.LEVEL_7]: 15, [obj.LEVEL_8]: 18, [obj.LEVEL_9]: 24 });
 let obj2 = { EMOJI: 1, [1]: "EMOJI", AUDIO: 2, [2]: "AUDIO", ANIMATED: 3, [3]: "ANIMATED", CUSTOMIZATION: 4, [4]: "CUSTOMIZATION", UPLOAD: 5, [5]: "UPLOAD", VANITY: 6, [6]: "VANITY", STREAM: 7, [7]: "STREAM", STICKER: 8, [8]: "STICKER", CUSTOM_ROLE_ICON: 11, [11]: "CUSTOM_ROLE_ICON", STAGE_VIDEO: 12, [12]: "STAGE_VIDEO", SOUNDBOARD: 13, [13]: "SOUNDBOARD" };
@@ -428,7 +428,7 @@ export const getNextGuildTierFromGuild = function getNextGuildTierFromGuild(id) 
   return BoostedGuildTiers.TIER_1;
 };
 export const getAppliedGuildBoostMonths = function getAppliedGuildBoostMonths(arg0) {
-  let num = _modDef4231().diff(_modDef4231(arg0), "months");
+  let num = _modDef4314().diff(_modDef4314(arg0), "months");
   if (num == null) {
     num = 1;
   }
@@ -436,7 +436,7 @@ export const getAppliedGuildBoostMonths = function getAppliedGuildBoostMonths(ar
 };
 export const getUserLevel = function getUserLevel(arg0) {
   let num = 1;
-  const obj = _modDef4231();
+  const obj = _modDef4314();
   const keys = Object.keys(closure_26);
   for (const item10021 of keys) {
     if (diffResult >= closure_26[item10021]) {
@@ -494,7 +494,7 @@ export const generateBlockGuildSubscriptionPurchasesNode = function generateBloc
   if (isPremiumGroupMemberResult) {
     const intl7 = util.intl;
     const obj = { premiumGroupProductName: closure_25() };
-    return intl7.formatToPlainString(_modDef3077["5xN/C1"], obj);
+    return intl7.formatToPlainString(_modDef3160["5xN/C1"], obj);
   } else {
     const _Object = Object;
     const values2 = Object.values(tmp2.boostSlots);
@@ -762,7 +762,7 @@ export const getNextPremiumTierForSubscriberCount = function getNextPremiumTierF
 };
 export const TierMarkerPositions = obj4;
 export const getGuildBoostingProgressBarFillFactor = function getGuildBoostingProgressBarFillFactor(guild) {
-  totalAvailableBoostsCount = totalAvailableBoostsCount(4564).getGuildPowerupBoostLevelProgress(guild.id);
+  totalAvailableBoostsCount = totalAvailableBoostsCount(4646).getGuildPowerupBoostLevelProgress(guild.id);
   let NONE = reversed.find((item) => totalAvailableBoostsCount >= AppliedGuildBoostsRequiredForBoostedGuildTier[item]);
   if (NONE == null) {
     NONE = BoostedGuildTiers.NONE;

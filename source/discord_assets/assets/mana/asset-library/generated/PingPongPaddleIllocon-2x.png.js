@@ -1,8 +1,8 @@
-// Module ID: 6456
-// Function ID: 6457
+// Module ID: 6538
+// Function ID: 6539
 // Dependencies: [2]
 
-// Module 6456
+// Module 6538
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/PingPongPaddleIllocon-2x.png.js");

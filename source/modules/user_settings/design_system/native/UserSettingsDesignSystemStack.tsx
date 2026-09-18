@@ -1,14 +1,14 @@
-// Module ID: 15928
-// Function ID: 15929
+// Module ID: 16023
+// Function ID: 16024
 // Name: UserSettingsDesignSystemStack
-// Dependencies: [19, 17, 21, 4640, 576, 5060, 5695, 4636, 2]
+// Dependencies: [19, 17, 21, 4722, 576, 5142, 5777, 4718, 2]
 // Exports: default
 
-// Module 15928 (UserSettingsDesignSystemStack)
+// Module 16023 (UserSettingsDesignSystemStack)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4636 */;
-import Stack_Stack from "Stack/Stack" /* 5060 */;
-import Card from "Card" /* 5695 */;
+import Text_Text from "Text/Text" /* 4718 */;
+import Stack_Stack from "Stack/Stack" /* 5142 */;
+import Card from "Card" /* 5777 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -19,7 +19,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c2, ScrollView: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = { container: { padding: 16, flex: 1, alignItems: "center" }, block: { borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, height: 80, flex: 1 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);

@@ -1,12 +1,12 @@
-// Module ID: 18100
-// Function ID: 18101
+// Module ID: 18194
+// Function ID: 18195
 // Name: WebAuthnSignalManager
-// Dependencies: [5, 502, 7232, 6708, 2]
+// Dependencies: [5, 502, 7314, 6790, 2]
 
-// Module 18100 (WebAuthnSignalManager)
+// Module 18194 (WebAuthnSignalManager)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7232 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7314 */;
 
 class WebAuthnSignalManager extends tmp2 {
   constructor() {

@@ -1,15 +1,15 @@
-// Module ID: 11270
-// Function ID: 11271
+// Module ID: 11363
+// Function ID: 11364
 // Name: UserProfilePreview
-// Dependencies: [32, 19, 17, 8308, 7322, 21, 4640, 576, 504, 8334, 8374, 8388, 11271, 8385, 8314, 8349, 8317, 8389, 8371, 4350, 8368, 8355, 8393, 8960, 8403, 11272, 11273, 11313, 11361, 8958, 2]
+// Dependencies: [32, 19, 17, 8390, 7404, 21, 4722, 576, 504, 8416, 8457, 8471, 9769, 8468, 8396, 8431, 8399, 8472, 8454, 4432, 8451, 8437, 8476, 9044, 8486, 11364, 11365, 11405, 11459, 9042, 2]
 // Exports: default
 
-// Module 11270 (UserProfilePreview)
+// Module 11363 (UserProfilePreview)
 import nativeDefault from "native" /* 576 */;
-import scaleProfileFrameDefault from "scaleProfileFrame" /* 8371 */;
+import scaleProfileFrameDefault from "scaleProfileFrame" /* 8454 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8308 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8390 */;
 
 const require = globalThis.__r;
 
@@ -18,11 +18,11 @@ function filterLayer(responsive) {
   return true !== responsive.responsive;
 }
 const View = fn(17).View;
-const Constants = fn(7322);
+const Constants = fn(7404);
 ({ PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING: closure_7, UserProfileThemeTypes: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let closure_12 = createStyles.createStyles((arg0, arg1, arg2) => {
   let num = arg2;
   if (arg2 == null) {

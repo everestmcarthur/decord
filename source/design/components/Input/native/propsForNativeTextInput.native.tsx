@@ -1,10 +1,10 @@
-// Module ID: 7049
-// Function ID: 7050
+// Module ID: 7131
+// Function ID: 7132
 // Name: propsForNativeTextInput
 // Dependencies: [109, 2]
 // Exports: propsForNativeTextInput
 
-// Module 7049 (propsForNativeTextInput)
+// Module 7131 (propsForNativeTextInput)
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 
 let closure_0 = ["disabled", "centered", "round", "clearable"];

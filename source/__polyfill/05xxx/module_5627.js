@@ -1,9 +1,10 @@
 // Module ID: 5627
 // Function ID: 5628
-// Dependencies: [1121]
+// Dependencies: []
 
 // Module 5627
-import registerAsset from "module_1121" /* 1121 */;
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "c067e39c354eb66a1a53a1812a241a73", name: "ClipboardListIcon", type: "png" });
+export default (arg0) => encodeURIComponent(arg0).replace(/[!'()*]/g, (str) => {
+  str = str.charCodeAt(0);
+  return "%" + str.charCodeAt(0).toString(16).toUpperCase();
+});

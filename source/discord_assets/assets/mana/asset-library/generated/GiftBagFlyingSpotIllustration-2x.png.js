@@ -1,8 +1,8 @@
-// Module ID: 6234
-// Function ID: 6235
+// Module ID: 6316
+// Function ID: 6317
 // Dependencies: [2]
 
-// Module 6234
+// Module 6316
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GiftBagFlyingSpotIllustration-2x.png.js");

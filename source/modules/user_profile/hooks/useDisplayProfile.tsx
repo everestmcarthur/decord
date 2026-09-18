@@ -1,15 +1,15 @@
-// Module ID: 8334
-// Function ID: 8335
+// Module ID: 8416
+// Function ID: 8417
 // Name: useDisplayProfile
-// Dependencies: [19, 1372, 7735, 504, 8335, 1934, 8337, 2]
+// Dependencies: [19, 1372, 7817, 504, 8417, 1934, 8419, 2]
 // Exports: default, getDisplayProfile, useDisplayProfileWithFetchEffect
 
-// Module 8334 (useDisplayProfile)
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8335 */;
-import DisplayProfileDefault from "DisplayProfile" /* 8337 */;
+// Module 8416 (useDisplayProfile)
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8417 */;
+import DisplayProfileDefault from "DisplayProfile" /* 8419 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
-import UserProfileStore from "UserProfileStore" /* 7735 */;
+import UserProfileStore from "UserProfileStore" /* 7817 */;
 
 const require = globalThis.__r;
 

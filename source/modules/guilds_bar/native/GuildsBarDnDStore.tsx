@@ -1,14 +1,14 @@
-// Module ID: 16445
-// Function ID: 16446
+// Module ID: 16542
+// Function ID: 16543
 // Name: GuildsBarDnDStore
-// Dependencies: [5526, 1243, 4376, 1248, 1231, 4262, 2]
+// Dependencies: [5608, 1243, 4458, 1248, 1231, 4345, 2]
 // Exports: useFolderBGHeightOffset, useItemDragState
 
-// Module 16445 (GuildsBarDnDStore)
+// Module 16542 (GuildsBarDnDStore)
 import SentryUtilsDefault from "SentryUtils" /* 1231 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1248 */;
-import _mod4262 from "module_4262" /* 4262 */;
-import SortedGuildStore from "SortedGuildStore" /* 5526 */;
+import _mod4345 from "module_4345" /* 4345 */;
+import SortedGuildStore from "SortedGuildStore" /* 5608 */;
 import identity from "module_1243" /* 1243 */;
 import size from "module_2" /* 2 */;
 
@@ -201,7 +201,7 @@ export const useItemDragState = function useItemDragState(arg0, arg1) {
     obj.itemSize = num;
     obj.dragDropInProgress = dragDropInProgress;
     return obj;
-  }, _mod4262.shallow);
+  }, _mod4345.shallow);
 };
 export const useFolderBGHeightOffset = function useFolderBGHeightOffset(arg0) {
   closure_0 = arg0;

@@ -1,11 +1,11 @@
-// Module ID: 17222
-// Function ID: 17223
+// Module ID: 17352
+// Function ID: 17353
 // Name: useSimpleGuildDefaultColors
-// Dependencies: [4640, 576, 2]
+// Dependencies: [4722, 576, 2]
 
-// Module 17222 (useSimpleGuildDefaultColors)
+// Module 17352 (useSimpleGuildDefaultColors)
 import nativeDefault from "native" /* 576 */;
-import createStyles from "createStyles" /* 4640 */;
+import createStyles from "createStyles" /* 4722 */;
 import size from "module_2" /* 2 */;
 
 const obj = { iconBackground: { color: nativeDefault.colors.BACKGROUND_MOD_STRONG }, iconBackgroundBrand: null, iconStroke: null };

@@ -1,9 +1,31 @@
 // Module ID: 18037
 // Function ID: 18038
-// Dependencies: [1121]
+// Dependencies: [626, 18038, 18039, 18042]
 
 // Module 18037
-import registerAsset from "module_1121" /* 1121 */;
+import _mod626 from "module_626" /* 626 */;
+import _mod18038 from "module_18038" /* 18038 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images", width: 24, height: 24, scales: [2, 3], hash: "1247f104e440c51e7ce468de478229f3", name: "ic_select_manually_24px", type: "png" });
+export default function createCaseFirst(arg0) {
+  closure_0 = arg0;
+  return (arg0) => {
+    const str = _mod626(arg0);
+    let tmp3;
+    if (_mod18038(str)) {
+      tmp3 = tmp(18039)(str);
+    }
+    if (tmp3) {
+      let first = tmp3[0];
+    } else {
+      first = str.charAt(0);
+    }
+    if (tmp3) {
+      let joined = tmp(18042)(tmp3, 1).join("");
+      const obj = tmp(18042)(tmp3, 1);
+    } else {
+      joined = str.slice(1);
+    }
+    return first[closure_0]() + joined;
+  };
+};

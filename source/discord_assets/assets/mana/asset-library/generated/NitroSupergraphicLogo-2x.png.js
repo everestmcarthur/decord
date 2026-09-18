@@ -1,8 +1,8 @@
-// Module ID: 6412
-// Function ID: 6413
+// Module ID: 6494
+// Function ID: 6495
 // Dependencies: [2]
 
-// Module 6412
+// Module 6494
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/NitroSupergraphicLogo-2x.png.js");

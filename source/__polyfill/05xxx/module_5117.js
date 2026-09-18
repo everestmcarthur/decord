@@ -1,9 +1,13 @@
 // Module ID: 5117
 // Function ID: 5118
-// Dependencies: [1121]
+// Dependencies: [17, 65]
 
 // Module 5117
-import registerAsset from "module_1121" /* 1121 */;
+import _mod17 from "module_17" /* 17 */;
+import module_65 from "module_65" /* 65 */;
 
+const codegenNativeComponent = _mod17.codegenNativeComponent;
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSScreenContentWrapper", validAttributes: {} };
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "f5152f59510615cd9a196a52f24801ee", name: "ThreadIcon", type: "png" });
+export default module_65.get("RNSScreenContentWrapper", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

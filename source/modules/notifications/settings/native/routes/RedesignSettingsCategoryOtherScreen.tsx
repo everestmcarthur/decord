@@ -1,12 +1,12 @@
-// Module ID: 16073
-// Function ID: 16074
+// Module ID: 16170
+// Function ID: 16171
 // Name: RedesignSettingsCategoryOtherScreen
-// Dependencies: [19, 21, 11622, 16065, 14810, 2]
+// Dependencies: [19, 21, 11714, 16162, 14904, 2]
 
-// Module 16073 (RedesignSettingsCategoryOtherScreen)
-import SettingBuilders from "SettingBuilders" /* 11622 */;
-import SettingLayoutDefault from "SettingLayout" /* 14810 */;
-import MobileNotifSettingsRouteBuilders from "MobileNotifSettingsRouteBuilders" /* 16065 */;
+// Module 16170 (RedesignSettingsCategoryOtherScreen)
+import SettingBuilders from "SettingBuilders" /* 11714 */;
+import SettingLayoutDefault from "SettingLayout" /* 14904 */;
+import MobileNotifSettingsRouteBuilders from "MobileNotifSettingsRouteBuilders" /* 16162 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

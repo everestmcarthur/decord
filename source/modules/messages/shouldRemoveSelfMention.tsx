@@ -1,10 +1,10 @@
-// Module ID: 7752
-// Function ID: 7753
+// Module ID: 7834
+// Function ID: 7835
 // Name: shouldRemoveSelfMention
 // Dependencies: [1074, 2]
 // Exports: default
 
-// Module 7752 (shouldRemoveSelfMention)
+// Module 7834 (shouldRemoveSelfMention)
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 

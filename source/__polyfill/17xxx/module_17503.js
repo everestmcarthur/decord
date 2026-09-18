@@ -1,12 +1,9 @@
 // Module ID: 17503
 // Function ID: 17504
-// Dependencies: []
+// Dependencies: [1121]
 
 // Module 17503
-globalThis.IntlMessageFormat.__addLocaleData({
-  locale: "ko",
-  pluralRuleFunction(arg0, arg1) {
-    return "other";
-  }
-});
-globalThis.IntlMessageFormat.__addLocaleData({ locale: "ko-KP", parentLocale: "ko" });
+import registerAsset from "module_1121" /* 1121 */;
+
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/voice_panel/native/images", width: 24, height: 24, scales: [1, 2, 3, 4], hash: "2e77386663ba77387d021543bdafafef", name: "airplay", type: "png" });

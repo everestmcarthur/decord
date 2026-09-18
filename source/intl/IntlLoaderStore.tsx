@@ -1,19 +1,20 @@
 // Module ID: 2027
 // Function ID: 2028
 // Name: IntlLoaderStore
-// Dependencies: [5, 1243, 2028, 1115, 2038, 1154, 3723, 4198, 4229, 4231, 1231, 2]
+// Dependencies: [5, 2028, 1243, 2111, 1115, 2121, 1154, 3806, 4281, 4312, 4314, 1231, 2]
 // Exports: setAppLocale, subscribeToIntlLoadingSuccess, useLocaleData
 
 // Module 2027 (IntlLoaderStore)
 import util from "util" /* 1115 */;
-import _modDef2028 from "module_2028" /* 2028 */;
-import bg from "bg" /* 3723 */;
-import formatjs from "formatjs" /* 4198 */;
-import moment from "moment" /* 4229 */;
+import _modDef2111 from "module_2111" /* 2111 */;
+import bg from "bg" /* 3806 */;
+import formatjs from "formatjs" /* 4281 */;
+import moment from "moment" /* 4312 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import module_2028 from "module_2028" /* 2028 */;
 
 require = fn;
-let closure_5 = async function _setAppLocale(arg0, value) {
+let closure_6 = async function _setAppLocale(arg0, value) {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -76,7 +77,7 @@ let closure_5 = async function _setAppLocale(arg0, value) {
                     closure_0 = tmp4;
                     c1 = 1;
                     dependencyMap = 1;
-                    const obj6 = { value: closure_0(2038).preloadAllIntlMessageFiles(), done: false };
+                    const obj6 = { value: closure_0(2121).preloadAllIntlMessageFiles(), done: false };
                     return obj6;
                   }
                 } else if (1 === tmp4) {
@@ -110,17 +111,9 @@ let closure_5 = async function _setAppLocale(arg0, value) {
               }
             }
           })());
+          locale.setLocale(closure_0);
+          items.push(locale.loadPromise);
           items.push((function loadDateFnsLocale() {
-            const self = this;
-            const apply = closure_1_6.apply;
-            if (typeof apply === "unknown") {
-              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-            } else {
-              applyArgumentsResult = apply(self, arguments);
-            }
-            return applyArgumentsResult;
-          })(closure_0));
-          items.push((function loadFormatJsLocale() {
             const self = this;
             const apply = closure_1_7.apply;
             if (typeof apply === "unknown") {
@@ -130,7 +123,7 @@ let closure_5 = async function _setAppLocale(arg0, value) {
             }
             return applyArgumentsResult;
           })(closure_0));
-          items.push((function setMomentLocale() {
+          items.push((function loadFormatJsLocale() {
             const self = this;
             const apply = closure_1_8.apply;
             if (typeof apply === "unknown") {
@@ -140,8 +133,18 @@ let closure_5 = async function _setAppLocale(arg0, value) {
             }
             return applyArgumentsResult;
           })(closure_0));
+          items.push((function setMomentLocale() {
+            const self = this;
+            const apply = closure_1_9.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          })(closure_0));
           items.push((function sentryLocale(locale) {
-            closure_1_0(closure_1_2[10]).default.setTags({ locale });
+            closure_1_0(closure_1_2[11]).default.setTags({ locale });
             return Promise.resolve();
           })(closure_0));
           c2 = 1;
@@ -167,7 +170,7 @@ let closure_5 = async function _setAppLocale(arg0, value) {
     }
   }
 };
-let closure_6 = async function _loadDateFnsLocale(arg0, value) {
+let closure_7 = async function _loadDateFnsLocale(arg0, value) {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -204,7 +207,7 @@ let closure_6 = async function _loadDateFnsLocale(arg0, value) {
             const obj4 = { value: tmp20(), done: false };
             return obj4;
           } else {
-            state.setLocaleData(require("module_2028"));
+            state.setLocaleData(require("module_2111"));
             c3 = 3;
           }
           tmp19 = dependencyMap;
@@ -225,7 +228,7 @@ let closure_6 = async function _loadDateFnsLocale(arg0, value) {
     }
   }
 };
-let closure_7 = async function _loadFormatJsLocale(arg0, value) {
+let closure_8 = async function _loadFormatJsLocale(arg0, value) {
   if (c1 === 2) {
     c1 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -274,7 +277,7 @@ let closure_7 = async function _loadFormatJsLocale(arg0, value) {
     }
   }
 };
-let closure_8 = async function _setMomentLocale(arg0, value) {
+let closure_9 = async function _setMomentLocale(arg0, value) {
   let length;
   if (c4 === 2) {
     c4 = 3;
@@ -335,7 +338,7 @@ let closure_8 = async function _setMomentLocale(arg0, value) {
         } while (length > 0);
       }
       closure_129_1.push("en-US");
-      closure_130_0(closure_130_2[9]).locale(closure_129_1);
+      closure_130_0(closure_130_2[10]).locale(closure_129_1);
       c4 = 3;
       return { value: "HermesInternal", done: null };
     } catch (tmp26) {
@@ -352,7 +355,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     isLoading: false,
     inProgressLocale: "Boolean",
     error: "accessible",
-    localeData: _modDef2028,
+    localeData: _modDef2111,
     setLoadingStarted(inProgressLocale) {
       return closure_0({ isLoading: true, inProgressLocale });
     },
@@ -387,7 +390,7 @@ export const subscribeToIntlLoadingSuccess = function subscribeToIntlLoadingSucc
 };
 export const setAppLocale = function setAppLocale() {
   const self = this;
-  const apply = closure_5.apply;
+  const apply = closure_6.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -398,7 +401,7 @@ export const setAppLocale = function setAppLocale() {
 export const useLocaleData = function useLocaleData() {
   let tmp = withEqualityFn((localeData) => localeData.localeData);
   if (tmp == null) {
-    tmp = _modDef2028;
+    tmp = _modDef2111;
   }
   return tmp;
 };

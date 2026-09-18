@@ -1,10 +1,10 @@
-// Module ID: 14739
-// Function ID: 14740
+// Module ID: 14833
+// Function ID: 14834
 // Name: GummyStripes
-// Dependencies: [19, 17, 21, 4640, 1092, 2]
+// Dependencies: [19, 17, 21, 4722, 1092, 2]
 // Exports: default
 
-// Module 14739 (GummyStripes)
+// Module 14833 (GummyStripes)
 import utils_ColorUtils from "utils/ColorUtils" /* 1092 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, Fragment: closure_4 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let closure_5 = createStyles.createStyles({ stripe: { flex: 1 }, stripeOverlap: { marginLeft: -1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/display_name_styles/native/effects/GummyStripes.tsx");

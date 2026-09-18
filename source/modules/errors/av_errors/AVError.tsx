@@ -1,9 +1,9 @@
-// Module ID: 9264
-// Function ID: 9265
+// Module ID: 9348
+// Function ID: 9349
 // Name: AVError
 // Dependencies: [109, 3, 573, 2]
 
-// Module 9264 (AVError)
+// Module 9348 (AVError)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;

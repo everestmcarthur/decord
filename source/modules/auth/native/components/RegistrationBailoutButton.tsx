@@ -1,17 +1,17 @@
-// Module ID: 16127
-// Function ID: 16128
+// Module ID: 16224
+// Function ID: 16225
 // Name: RegistrationBailoutButton
-// Dependencies: [19, 21, 4640, 1177, 1115, 2]
+// Dependencies: [19, 21, 4722, 1177, 1115, 2]
 // Exports: default
 
-// Module 16127 (RegistrationBailoutButton)
+// Module 16224 (RegistrationBailoutButton)
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let closure_3 = createStyles.createStyles({ bail: { marginBottom: 16, marginLeft: "auto", marginRight: "auto" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/RegistrationBailoutButton.tsx");

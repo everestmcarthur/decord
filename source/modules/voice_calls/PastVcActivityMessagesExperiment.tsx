@@ -1,12 +1,12 @@
-// Module ID: 17585
-// Function ID: 17586
+// Module ID: 17666
+// Function ID: 17667
 // Name: PastVcActivityMessagesExperiment
-// Dependencies: [4556, 4553, 2]
+// Dependencies: [4638, 4635, 2]
 // Exports: isPastVcActivityMessagesEnabled, useIsPastVcActivityMessagesEnabled
 
-// Module 17585 (PastVcActivityMessagesExperiment)
-import ExperimentConstants from "ExperimentConstants" /* 4556 */;
-import createExperiment from "module_4553" /* 4553 */;
+// Module 17666 (PastVcActivityMessagesExperiment)
+import ExperimentConstants from "ExperimentConstants" /* 4638 */;
+import createExperiment from "module_4635" /* 4635 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "guild", id: "2026-02_past_vc_activity_messages", label: "Past VC Activity Messages", commonTriggerPoint: ExperimentConstants.CommonTriggerPoints.VOICE_CALL, defaultConfig: { enabled: false }, treatments: null };

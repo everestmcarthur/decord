@@ -1,9 +1,9 @@
-// Module ID: 14230
-// Function ID: 14231
+// Module ID: 14325
+// Function ID: 14326
 // Name: AccessibilityFocusNativeComponent
 // Dependencies: [106, 65, 2]
 
-// Module 14230 (AccessibilityFocusNativeComponent)
+// Module 14325 (AccessibilityFocusNativeComponent)
 import weakSet from "weakSet" /* 106 */;
 import module_65 from "module_65" /* 65 */;
 import size from "module_2" /* 2 */;

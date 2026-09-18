@@ -1,11 +1,11 @@
-// Module ID: 15869
-// Function ID: 15870
+// Module ID: 15964
+// Function ID: 15965
 // Name: useFrameMonitor
-// Dependencies: [32, 19, 15867, 2]
+// Dependencies: [32, 19, 15962, 2]
 // Exports: default
 
-// Module 15869 (useFrameMonitor)
-import startFrameMonitor from "startFrameMonitor" /* 15867 */;
+// Module 15964 (useFrameMonitor)
+import startFrameMonitor from "startFrameMonitor" /* 15962 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

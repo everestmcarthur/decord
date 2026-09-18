@@ -1,8 +1,8 @@
-// Module ID: 6362
-// Function ID: 6363
+// Module ID: 6444
+// Function ID: 6445
 // Dependencies: [2]
 
-// Module 6362
+// Module 6444
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/MushroomSpotIllustration-2x.png.js");

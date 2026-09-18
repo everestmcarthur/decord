@@ -1,13 +1,13 @@
-// Module ID: 5983
-// Function ID: 5984
+// Module ID: 6065
+// Function ID: 6066
 // Name: ControllerSpotIllustration
-// Dependencies: [21, 5675, 5984, 2]
+// Dependencies: [21, 5757, 6066, 2]
 // Exports: ControllerSpotIllustration
 
-// Module 5983 (ControllerSpotIllustration)
+// Module 6065 (ControllerSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5675 */;
-import _modDef5984 from "module_5984" /* 5984 */;
+import FastImageDefault from "FastImage" /* 5757 */;
+import _modDef6066 from "module_6066" /* 6066 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const ControllerSpotIllustration = function ControllerSpotIllustration(wi
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5984 };
+  const obj2 = { uri: _modDef6066 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

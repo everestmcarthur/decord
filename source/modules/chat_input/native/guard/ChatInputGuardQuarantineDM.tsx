@@ -1,16 +1,16 @@
-// Module ID: 12603
-// Function ID: 12604
+// Module ID: 12694
+// Function ID: 12695
 // Name: ChatInputGuardQuarantineDM
-// Dependencies: [19, 12604, 21, 12600, 12605, 1115, 2]
+// Dependencies: [19, 12695, 21, 12691, 12696, 1115, 2]
 
-// Module 12603 (ChatInputGuardQuarantineDM)
+// Module 12694 (ChatInputGuardQuarantineDM)
 import util from "util" /* 1115 */;
-import ChatInputGuardDefault from "ChatInputGuard" /* 12600 */;
-import ChatWarningIcon from "ChatWarningIcon" /* 12605 */;
+import ChatInputGuardDefault from "ChatInputGuard" /* 12691 */;
+import ChatWarningIcon from "ChatWarningIcon" /* 12696 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const QUARANTINE_APPEAL_LINK = fn(12604).QUARANTINE_APPEAL_LINK;
+const QUARANTINE_APPEAL_LINK = fn(12695).QUARANTINE_APPEAL_LINK;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardQuarantineDM.tsx");

@@ -1,13 +1,13 @@
-// Module ID: 18004
-// Function ID: 18005
+// Module ID: 18098
+// Function ID: 18099
 // Name: RoleTierEditStore
-// Dependencies: [32, 5, 1248, 1243, 7370, 4262, 5079, 15327, 2]
+// Dependencies: [32, 5, 1248, 1243, 7452, 4345, 5161, 15421, 2]
 // Exports: resetImperatively, useCurrentTierEditScene, useGroupCoverState, useGroupDescriptionState, useGroupIsFullGateState, usePriceTiersAvailableInGuild, useResetTierEditState
 
-// Module 18004 (RoleTierEditStore)
+// Module 18098 (RoleTierEditStore)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1248 */;
-import _mod4262 from "module_4262" /* 4262 */;
-import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 15327 */;
+import _mod4345 from "module_4345" /* 4345 */;
+import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 15421 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -18,11 +18,11 @@ function usePriceTiers(guildId) {
     const items = [, , ];
     ({ priceTiers: arr[0], priceTierState: arr[1], loadPriceTiers: arr[2] } = arg0);
     return items;
-  }, require("module_4262").shallow), 3);
+  }, require("module_4345").shallow), 3);
   const tiers = tmp[0];
   closure_2 = tmp3;
   dependencyMap = tmp[2];
-  tiers(5079)(() => {
+  tiers(5161)(() => {
     let tmp2 = null == first;
     if (tmp2) {
       tmp2 = closure_2 !== obj.LOADING;
@@ -81,7 +81,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0) => {
     return (async () => {
       closure_1 = tmp3;
       priceTiers(1248).batchUpdates(() => priceTiers({ priceTierState: constants.LOADING }));
-      await closure_2_2(7370).getPriceTiers(priceTiers);
+      await closure_2_2(7452).getPriceTiers(priceTiers);
       if (1 === tmp7) {
         c2 = 0;
         priceTiers(1248).batchUpdates(() => priceTiers({ priceTierState: constants.ERROR }));
@@ -142,19 +142,19 @@ export const useGroupCoverState = function useGroupCoverState() {
     const items = [, ];
     ({ groupCover: arr[0], setGroupCover: arr[1] } = arg0);
     return items;
-  }, _mod4262.shallow);
+  }, _mod4345.shallow);
 };
 export const useGroupDescriptionState = function useGroupDescriptionState() {
   return withEqualityFn((arg0) => {
     const items = [, ];
     ({ groupDescription: arr[0], setGroupDescription: arr[1] } = arg0);
     return items;
-  }, _mod4262.shallow);
+  }, _mod4345.shallow);
 };
 export const useGroupIsFullGateState = function useGroupIsFullGateState() {
   return withEqualityFn((arg0) => {
     const items = [, ];
     ({ groupIsFullGate: arr[0], setGroupIsFullGate: arr[1] } = arg0);
     return items;
-  }, _mod4262.shallow);
+  }, _mod4345.shallow);
 };

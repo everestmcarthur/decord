@@ -1,8 +1,8 @@
-// Module ID: 6582
-// Function ID: 6583
+// Module ID: 6664
+// Function ID: 6665
 // Dependencies: [2]
 
-// Module 6582
+// Module 6664
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/SocialMediaSpotIllustration-2x.png.js");

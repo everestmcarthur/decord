@@ -1,12 +1,12 @@
-// Module ID: 8485
-// Function ID: 8486
+// Module ID: 8568
+// Function ID: 8569
 // Name: ContentInventoryStore
-// Dependencies: [504, 8486, 573, 2]
+// Dependencies: [504, 8569, 573, 2]
 
-// Module 8485 (ContentInventoryStore)
+// Module 8568 (ContentInventoryStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import matchUtils from "matchUtils" /* 8486 */;
+import matchUtils from "matchUtils" /* 8569 */;
 
 require = fn;
 let map = new Map();

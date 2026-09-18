@@ -1,14 +1,17 @@
 // Module ID: 6842
 // Function ID: 6843
-// Dependencies: [19, 6771]
-// Exports: useDetectorAttachmentGuard
+// Dependencies: []
+// Exports: noop, workletNoop
 
 // Module 6842
-import noop from "module_19" /* 19 */;
+const fn = function o() {
 
-({ useEffect, useRef } = noop);
-new Map();
+};
+fn.__closure = {};
+fn.__workletHash = 16791771801238;
+fn.__initData = { code: "function pnpm_noopTs1(){}" };
 
-export function useDetectorAttachmentGuard(tmp8Result5) {
+export () => {
 
 }
+export const workletNoop = fn;

@@ -1,52 +1,34 @@
 // Module ID: 4998
 // Function ID: 4999
-// Dependencies: [4999]
+// Dependencies: []
 
 // Module 4998
-import get_synchronousScreenUpdatesEnabled from "get synchronousScreenUpdatesEnabled" /* 4999 */;
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const RNSLog = {
-  log(arg0) {
-    const substr = [...arguments].slice();
-    if (get_synchronousScreenUpdatesEnabled.featureFlags.stable.debugLogging) {
-      const _console = console;
-      const items = [arg0];
-      HermesBuiltin.arraySpread(substr, 1);
-      const _console2 = console;
-      HermesBuiltin.apply(items, console);
+export default function isArguments(callee) {
+  const call = toString.call;
+  const tmp2 = typeof call === "unknown" ? toString() : call(callee);
+  let tmp3 = "[object Arguments]" === tmp2;
+  if (!tmp3) {
+    let tmp4 = "[object Array]" !== tmp2;
+    if (tmp4) {
+      tmp4 = null !== callee;
     }
-  },
-  warn(arg0) {
-    const substr = [...arguments].slice();
-    if (get_synchronousScreenUpdatesEnabled.featureFlags.stable.debugLogging) {
-      const _console = console;
-      const items = [arg0];
-      HermesBuiltin.arraySpread(substr, 1);
-      const _console2 = console;
-      HermesBuiltin.apply(items, console);
+    if (tmp4) {
+      tmp4 = typeof callee === "object";
     }
-  },
-  error(arg0) {
-    const substr = [...arguments].slice();
-    if (get_synchronousScreenUpdatesEnabled.featureFlags.stable.debugLogging) {
-      const _console = console;
-      const items = [arg0];
-      HermesBuiltin.arraySpread(substr, 1);
-      const _console2 = console;
-      HermesBuiltin.apply(items, console);
+    if (tmp4) {
+      tmp4 = typeof callee.length === "number";
     }
-  },
-  info(arg0) {
-    const substr = [...arguments].slice();
-    if (get_synchronousScreenUpdatesEnabled.featureFlags.stable.debugLogging) {
-      const _console = console;
-      const items = [arg0];
-      HermesBuiltin.arraySpread(substr, 1);
-      const _console2 = console;
-      HermesBuiltin.apply(items, console);
+    if (tmp4) {
+      tmp4 = callee.length >= 0;
+    }
+    if (!tmp4) {
+      tmp3 = tmp4;
+    } else {
+      const call2 = tmp.call;
+      const str2 = "[object Function]";
+      const tmp6 = typeof call2 === "unknown" ? tmp() : call2(str2);
     }
   }
+  return tmp3;
 };

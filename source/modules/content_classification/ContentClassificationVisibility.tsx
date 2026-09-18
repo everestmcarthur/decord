@@ -1,13 +1,13 @@
-// Module ID: 12092
-// Function ID: 12093
+// Module ID: 12183
+// Function ID: 12184
 // Name: ContentClassificationVisibility
-// Dependencies: [1372, 5200, 5202, 504, 2]
+// Dependencies: [1372, 5282, 5284, 504, 2]
 // Exports: getContentClassificationVisibility, useContentClassificationVisibility
 
-// Module 12092 (ContentClassificationVisibility)
+// Module 12183 (ContentClassificationVisibility)
 import initialize from "initialize" /* 504 */;
-import ContentClassificationToAgeRestriction from "ContentClassificationToAgeRestriction" /* 5200 */;
-import AgeRestrictionStatus from "AgeRestrictionStatus" /* 5202 */;
+import ContentClassificationToAgeRestriction from "ContentClassificationToAgeRestriction" /* 5282 */;
+import AgeRestrictionStatus from "AgeRestrictionStatus" /* 5284 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -41,9 +41,9 @@ export const useContentClassificationVisibility = function useContentClassificat
   initialize;
   [][0] = UserStore;
   if (null != data) {
-    const obj = { type: tmp(5200).ContentClassificationVariant.MINIMAL, data };
-    const result = tmp(5200).contentClassificationToAgeRestriction(obj);
-    if (result === tmp(5202).AgeRestrictionStatus.ADULT) {
+    const obj = { type: tmp(5282).ContentClassificationVariant.MINIMAL, data };
+    const result = tmp(5282).contentClassificationToAgeRestriction(obj);
+    if (result === tmp(5284).AgeRestrictionStatus.ADULT) {
       if (true !== tmp4) {
         let DISPLAY = obj.BLOCK_UNDERAGE;
       } else {

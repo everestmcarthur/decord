@@ -1,15 +1,15 @@
-// Module ID: 11448
-// Function ID: 11449
+// Module ID: 11546
+// Function ID: 11547
 // Name: FractionalPremiumUtils
-// Dependencies: [4297, 1115, 7822, 4321, 1091, 2]
+// Dependencies: [4380, 1115, 7904, 4404, 1091, 2]
 // Exports: getDurationStringOfFractionalPremium, getFractionalPremiumQuestRewardName, getFractionalPremiumQuestRewards
 
-// Module 11448 (FractionalPremiumUtils)
+// Module 11546 (FractionalPremiumUtils)
 import DurationsDefault from "Durations" /* 1091 */;
 import util from "util" /* 1115 */;
-import PremiumUtils from "PremiumUtils" /* 4297 */;
-import DateUtils from "DateUtils" /* 4321 */;
-import QuestRewardTypes from "QuestRewardTypes" /* 7822 */;
+import PremiumUtils from "PremiumUtils" /* 4380 */;
+import DateUtils from "DateUtils" /* 4404 */;
+import QuestRewardTypes from "QuestRewardTypes" /* 7904 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/quests/lib/FractionalPremiumUtils.tsx");

@@ -1,13 +1,13 @@
-// Module ID: 5107
-// Function ID: 5108
+// Module ID: 5189
+// Function ID: 5190
 // Name: getSoundFromMessage
-// Dependencies: [4861, 5102, 5108, 1097, 2]
+// Dependencies: [4943, 5184, 5190, 1097, 2]
 // Exports: default
 
-// Module 5107 (getSoundFromMessage)
+// Module 5189 (getSoundFromMessage)
 import MessageReferenceTypes from "MessageReferenceTypes" /* 1097 */;
-import SoundboardTypes from "SoundboardTypes" /* 5108 */;
-import MessageStore from "MessageStore" /* 4861 */;
+import SoundboardTypes from "SoundboardTypes" /* 5190 */;
+import MessageStore from "MessageStore" /* 4943 */;
 
 require = fn;
 function getSoundFromSounds(arr, arg1) {
@@ -18,7 +18,7 @@ function getSoundFromSounds(arr, arg1) {
   }
   return found;
 }
-const DEFAULT_SOUND_GUILD_ID = fn(5102).DEFAULT_SOUND_GUILD_ID;
+const DEFAULT_SOUND_GUILD_ID = fn(5184).DEFAULT_SOUND_GUILD_ID;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/sounds/soundmoji/utils/getSoundFromMessage.tsx");
 
@@ -85,7 +85,7 @@ export default function getSoundFromMessage(arg0, arg1, arg2, arr) {
         if (guild_id == null) {
           guild_id = DEFAULT_SOUND_GUILD_ID;
         }
-        return tmp3(5108).soundboardSoundFromAPI(found1, guild_id);
+        return tmp3(5190).soundboardSoundFromAPI(found1, guild_id);
       }
       tmp3 = require;
     }

@@ -1,20 +1,20 @@
-// Module ID: 8988
-// Function ID: 8989
+// Module ID: 9072
+// Function ID: 9073
 // Name: PremiumFeaturesBackground
-// Dependencies: [19, 7546, 1374, 21, 4640, 576, 672, 5074, 1094, 2]
+// Dependencies: [19, 7628, 1374, 21, 4722, 576, 672, 5156, 1094, 2]
 // Exports: default
 
-// Module 8988 (PremiumFeaturesBackground)
+// Module 9072 (PremiumFeaturesBackground)
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
-import LinearGradientDefault from "LinearGradient" /* 5074 */;
+import LinearGradientDefault from "LinearGradient" /* 5156 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const Gradients = fn(7546).Gradients;
+const Gradients = fn(7628).Gradients;
 const PremiumTypes = fn(1374).PremiumTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 const obj2 = { cardContainer: { display: "flex", borderRadius: nativeDefault.radii.lg, flexDirection: "column", justifyContent: "space-between", overflow: "hidden" } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);

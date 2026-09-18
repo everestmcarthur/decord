@@ -1,9 +1,9 @@
-// Module ID: 8551
-// Function ID: 8552
+// Module ID: 8634
+// Function ID: 8635
 // Name: ForumPlatformUtils
 // Dependencies: [1115, 2]
 
-// Module 8551 (ForumPlatformUtils)
+// Module 8634 (ForumPlatformUtils)
 import util from "util" /* 1115 */;
 import size from "module_2" /* 2 */;
 

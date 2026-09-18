@@ -1,28 +1,28 @@
-// Module ID: 10134
-// Function ID: 10135
+// Module ID: 10228
+// Function ID: 10229
 // Name: VoiceSensitivity
-// Dependencies: [5, 32, 19, 17, 1909, 5507, 1896, 1074, 4850, 21, 4640, 576, 4489, 1478, 504, 5226, 4695, 4351, 1115, 1177, 8748, 8427, 1364, 2]
+// Dependencies: [5, 32, 19, 17, 1909, 5589, 1896, 1074, 4932, 21, 4722, 576, 4571, 1478, 504, 5308, 4777, 4433, 1115, 1177, 8831, 8510, 1364, 2]
 // Exports: default
 
-// Module 10134 (VoiceSensitivity)
+// Module 10228 (VoiceSensitivity)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4351 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4695 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4433 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4777 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import MediaEngineStore from "MediaEngineStore" /* 1909 */;
-import SpeakingStore from "SpeakingStore" /* 5507 */;
+import SpeakingStore from "SpeakingStore" /* 5589 */;
 import AppStateStore from "AppStateStore" /* 1896 */;
 
 require = fn;
 const View = fn(17).View;
 const AppStates = fn(1074).AppStates;
-const NativePermissionTypes = fn(4850).NativePermissionTypes;
+const NativePermissionTypes = fn(4932).NativePermissionTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = { sensitivity: { position: "relative", height: 20 }, sensitivityBar: { position: "absolute", top: 7, left: 0, right: 0, bottom: 7, flexDirection: "row" }, sensitivityFill: null, sensitivityCommon: null, sensitivityMin: null, sensitivityMax: null, sensitivityDefault: null, sensitivitySpeaking: null, sensitivitySlider: null };
 const rect = { position: "absolute", backgroundColor: nativeDefault.unsafe_rawColors.WHITE, opacity: 0.5, top: 7, left: 0, right: 0, bottom: 7 };
 obj2.sensitivityFill = rect;
@@ -31,7 +31,7 @@ obj2.sensitivityMin = { backgroundColor: nativeDefault.unsafe_rawColors.YELLOW_3
 let obj3 = { backgroundColor: nativeDefault.unsafe_rawColors.YELLOW_300 };
 obj2.sensitivityMax = { backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360 };
 let obj5 = { flex: 1, backgroundColor: null };
-const ColorUtils = fn(4489);
+const ColorUtils = fn(4571);
 obj5.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_400, 0.6);
 obj2.sensitivityDefault = obj5;
 let obj4 = { backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360 };
@@ -121,7 +121,7 @@ export default function VoiceSensitivity(auto) {
               closure_0 = tmp4;
               c1 = 1;
               c2 = 1;
-              const obj4 = { value: onThresholdChange(5226).hasPermission(constants.AUDIO, { showAuthorizationError: false }), done: false };
+              const obj4 = { value: onThresholdChange(5308).hasPermission(constants.AUDIO, { showAuthorizationError: false }), done: false };
               return obj4;
             }
           } else if (arg0 === 1) {
@@ -138,7 +138,7 @@ export default function VoiceSensitivity(auto) {
             }
             if (tmp5) {
               mediaEngine = mediaEngine.getMediaEngine();
-              mediaEngine.on(auto(4695).MediaEngineEvent.VoiceActivity, callback);
+              mediaEngine.on(auto(4777).MediaEngineEvent.VoiceActivity, callback);
             }
             c2 = 3;
             return { value: "HermesInternal", done: null };

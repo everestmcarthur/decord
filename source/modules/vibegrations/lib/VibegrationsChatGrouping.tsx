@@ -1,10 +1,10 @@
-// Module ID: 16815
-// Function ID: 16816
+// Module ID: 16962
+// Function ID: 16963
 // Name: VibegrationsChatGrouping
 // Dependencies: [2]
 // Exports: groupChatRows
 
-// Module 16815 (VibegrationsChatGrouping)
+// Module 16962 (VibegrationsChatGrouping)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsChatGrouping.tsx");

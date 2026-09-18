@@ -1,8 +1,8 @@
-// Module ID: 6012
-// Function ID: 6013
+// Module ID: 6094
+// Function ID: 6095
 // Dependencies: [2]
 
-// Module 6012
+// Module 6094
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/DiamondIllocon-2x.png.js");

@@ -1,11 +1,11 @@
-// Module ID: 14683
-// Function ID: 14684
+// Module ID: 14778
+// Function ID: 14779
 // Name: getChannelDetailsFromRoute
-// Dependencies: [4497, 2]
+// Dependencies: [4579, 2]
 // Exports: default
 
-// Module 14683 (getChannelDetailsFromRoute)
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4497 */;
+// Module 14778 (getChannelDetailsFromRoute)
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4579 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/getChannelDetailsFromRoute.tsx");

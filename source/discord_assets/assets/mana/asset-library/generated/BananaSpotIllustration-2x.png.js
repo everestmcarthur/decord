@@ -1,8 +1,8 @@
-// Module ID: 5898
-// Function ID: 5899
+// Module ID: 5980
+// Function ID: 5981
 // Dependencies: [2]
 
-// Module 5898
+// Module 5980
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/BananaSpotIllustration-2x.png.js");

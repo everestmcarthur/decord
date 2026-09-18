@@ -1,8 +1,8 @@
-// Module ID: 6414
-// Function ID: 6415
+// Module ID: 6496
+// Function ID: 6497
 // Dependencies: [2]
 
-// Module 6414
+// Module 6496
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/NitroTicketSpotIllustration-2x.png.js");

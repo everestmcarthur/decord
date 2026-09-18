@@ -1,14 +1,9 @@
 // Module ID: 3733
 // Function ID: 3734
-// Dependencies: []
-// Exports: getDefaultOptions, setDefaultOptions
+// Dependencies: [1121]
 
 // Module 3733
-let global = {};
+import registerAsset from "module_1121" /* 1121 */;
 
-export function getDefaultOptions() {
-  return global;
-}
-export function setDefaultOptions(arg0) {
-  global = arg0;
-}
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9jb25uZWN0ZWRfZGV2aWNlcw==", scales: [1], hash: "4f308cc28b76203a112d4971ff54dfa3", name: "ru.messages.4f308cc28b76203a112d4971ff54dfa3.compiled.messages", type: "jsona" });

@@ -1,15 +1,15 @@
-// Module ID: 13529
-// Function ID: 13530
+// Module ID: 13626
+// Function ID: 13627
 // Name: usePromotionMarketingComponent
-// Dependencies: [32, 19, 7564, 10814, 13530, 504, 10846, 2]
+// Dependencies: [32, 19, 7646, 10908, 13627, 504, 10940, 2]
 // Exports: usePromotionMarketingComponent
 
-// Module 13529 (usePromotionMarketingComponent)
-import constants from "constants" /* 10846 */;
+// Module 13626 (usePromotionMarketingComponent)
+import constants from "constants" /* 10940 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserOfferStore from "UserOfferStore" /* 7564 */;
-import PromotionsStore from "PromotionsStore" /* 10814 */;
+import UserOfferStore from "UserOfferStore" /* 7646 */;
+import PromotionsStore from "PromotionsStore" /* 10908 */;
 
 const require = globalThis.__r;
 

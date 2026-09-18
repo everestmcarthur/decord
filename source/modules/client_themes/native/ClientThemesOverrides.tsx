@@ -1,16 +1,16 @@
-// Module ID: 7993
-// Function ID: 7994
+// Module ID: 8076
+// Function ID: 8077
 // Name: ClientThemesOverrides
-// Dependencies: [19, 4640, 4458, 7994, 2]
+// Dependencies: [19, 4722, 4540, 8077, 2]
 // Exports: useClientThemesOverride, useGradientBottom, useGradientMidpoint, useGradientTop
 
-// Module 7993 (ClientThemesOverrides)
-import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 4458 */;
-import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 7994 */;
+// Module 8076 (ClientThemesOverrides)
+import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 4540 */;
+import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 8077 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let closure_4 = createStyles.createStyles({ none: { backgroundColor: "transparent" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/client_themes/native/ClientThemesOverrides.tsx");

@@ -1,9 +1,9 @@
-// Module ID: 4772
-// Function ID: 4773
+// Module ID: 4854
+// Function ID: 4855
 // Name: RobloxSubgamePlatformUtils
-// Dependencies: [5, 4773, 4771, 2]
+// Dependencies: [5, 4855, 4853, 2]
 
-// Module 4772 (RobloxSubgamePlatformUtils)
+// Module 4854 (RobloxSubgamePlatformUtils)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -40,7 +40,7 @@ export default {
             } else {
               dependencyMap = 1;
               c2 = 1;
-              const obj5 = { value: tmp4(4773).canOpenUrlScheme("roblox"), done: false };
+              const obj5 = { value: tmp4(4855).canOpenUrlScheme("roblox"), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -51,7 +51,7 @@ export default {
             const obj6 = { value, done: true };
             return obj6;
           } else {
-            const obj = tmp4(4771);
+            const obj = tmp4(4853);
             if (value) {
               obj.ROBLOX_PROTOCOL_URL(closure_128_0);
             } else {

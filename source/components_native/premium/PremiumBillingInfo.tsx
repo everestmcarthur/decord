@@ -1,14 +1,14 @@
-// Module ID: 13501
-// Function ID: 13502
+// Module ID: 13598
+// Function ID: 13599
 // Name: PremiumBillingInfo
-// Dependencies: [32, 19, 17, 1074, 21, 4640, 576, 4310, 4636, 1115, 4297, 13498, 7276, 7296, 7518, 13502, 2]
+// Dependencies: [32, 19, 17, 1074, 21, 4722, 576, 4393, 4718, 1115, 4380, 13595, 7358, 7378, 7600, 13599, 2]
 // Exports: default
 
-// Module 13501 (PremiumBillingInfo)
+// Module 13598 (PremiumBillingInfo)
 import nativeDefault from "native" /* 576 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7276 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7296 */;
-import PremiumSubscriptionInvoice from "PremiumSubscriptionInvoice" /* 13498 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7358 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7378 */;
+import PremiumSubscriptionInvoice from "PremiumSubscriptionInvoice" /* 13595 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -45,7 +45,7 @@ const Constants = fn(1074);
 ({ SubscriptionStatusTypes: hasOwnProperty, USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = { title: { paddingHorizontal: USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING }, externalSubtext: { marginTop: 8, paddingHorizontal: USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING }, billingContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 16, marginTop: 8 }, billingRenewalInfo: { marginTop: 4 }, billingManageGoogle: { marginTop: 8 } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -60,24 +60,24 @@ export default function PremiumBillingInfo(subscription) {
   if (null == first) {
     return null;
   } else {
-    const externalManagementMessage = tmp2(7518).getExternalManagementMessage(subscription, { shouldAllowExternalManagement: true });
+    const externalManagementMessage = tmp2(7600).getExternalManagementMessage(subscription, { shouldAllowExternalManagement: true });
     const obj3 = { style: subscription.style, children: null };
     const obj4 = { style: tmp.title, accessibilityRole: "header", variant: "eyebrow", color: "text-default", children: null };
     const intl = tmp2(1115).intl;
     obj4.children = intl.string(tmp2(1115).t.Sb6wI1);
-    const items = [timestampProducer(tmp2(4636).Text, obj4), , ];
+    const items = [timestampProducer(tmp2(4718).Text, obj4), , ];
     const obj5 = { style: tmp.billingContainer, children: null };
     const obj6 = { variant: "text-md/semibold", children: null };
     const intl2 = tmp2(1115).intl;
     obj6.children = intl2.string(tmp2(1115).t.KXQjfc);
-    const items1 = [timestampProducer(tmp2(4636).Text, obj6), , ];
+    const items1 = [timestampProducer(tmp2(4718).Text, obj6), , ];
     const obj7 = { style: tmp.billingRenewalInfo, variant: "text-sm/medium", children: null };
     const tmp10 = View;
     const tmp11 = timestampProducer;
-    const tmp2Result = tmp2(7518);
+    const tmp2Result = tmp2(7600);
     const tmp9 = React5;
-    obj7.children = tmp2(13502).getBillingInformationStringNative(subscription, first, tmp6);
-    items1[1] = timestampProducer(tmp2(4636).Text, obj7);
+    obj7.children = tmp2(13599).getBillingInformationStringNative(subscription, first, tmp6);
+    items1[1] = timestampProducer(tmp2(4718).Text, obj7);
     const obj8 = { style: tmp.billingManageGoogle, subscription };
     items1[2] = timestampProducer(GoogleManagementLink, obj8);
     obj5.children = items1;
@@ -85,7 +85,7 @@ export default function PremiumBillingInfo(subscription) {
     let tmp11Result = null;
     if (null != externalManagementMessage) {
       const obj9 = { style: tmp.externalSubtext, variant: "text-sm/medium", children: externalManagementMessage };
-      tmp11Result = tmp11(tmp2(4636).Text, obj9);
+      tmp11Result = tmp11(tmp2(4718).Text, obj9);
     }
     items[2] = tmp11Result;
     obj3.children = items;

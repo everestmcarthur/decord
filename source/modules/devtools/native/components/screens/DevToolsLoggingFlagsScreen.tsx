@@ -1,19 +1,19 @@
-// Module ID: 15709
-// Function ID: 15710
+// Module ID: 15804
+// Function ID: 15805
 // Name: DevToolsLoggingFlagsScreen
-// Dependencies: [17, 1346, 21, 4640, 576, 504, 5775, 7314, 1347, 2]
+// Dependencies: [17, 1346, 21, 4722, 576, 504, 5857, 7396, 1347, 2]
 // Exports: default
 
-// Module 15709 (DevToolsLoggingFlagsScreen)
+// Module 15804 (DevToolsLoggingFlagsScreen)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import DeveloperOptionsActionCreators from "DeveloperOptionsActionCreators" /* 1347 */;
-import TableRowGroup from "TableRowGroup" /* 5775 */;
-import TableSwitchRow from "TableSwitchRow" /* 7314 */;
+import TableRowGroup from "TableRowGroup" /* 5857 */;
+import TableSwitchRow from "TableSwitchRow" /* 7396 */;
 import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1346 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4640 */;
+import createStyles from "createStyles" /* 4722 */;
 import size from "module_2" /* 2 */;
 
 const ScrollView = _mod17.ScrollView;

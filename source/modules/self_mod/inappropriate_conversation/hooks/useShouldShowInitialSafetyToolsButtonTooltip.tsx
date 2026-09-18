@@ -1,11 +1,11 @@
-// Module ID: 11550
-// Function ID: 11551
+// Module ID: 11648
+// Function ID: 11649
 // Name: useShouldShowInitialSafetyToolsButtonTooltip
-// Dependencies: [11072, 11549, 504, 2]
+// Dependencies: [11165, 11647, 504, 2]
 // Exports: useShouldShowInitialSafetyToolsButtonTooltip
 
-// Module 11550 (useShouldShowInitialSafetyToolsButtonTooltip)
-import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 11072 */;
+// Module 11648 (useShouldShowInitialSafetyToolsButtonTooltip)
+import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 11165 */;
 
 const require = globalThis.__r;
 

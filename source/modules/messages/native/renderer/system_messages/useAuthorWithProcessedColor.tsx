@@ -1,13 +1,13 @@
-// Module ID: 8096
-// Function ID: 8097
+// Module ID: 8179
+// Function ID: 8180
 // Name: useAuthorWithProcessedColor
-// Dependencies: [17, 4873, 8097, 2]
+// Dependencies: [17, 4955, 8180, 2]
 // Exports: getMessageAuthorWithProcessedColor, getUserAuthorWithProcessedColor
 
-// Module 8096 (useAuthorWithProcessedColor)
+// Module 8179 (useAuthorWithProcessedColor)
 import _mod17 from "module_17" /* 17 */;
-import useMessageAuthor from "useMessageAuthor" /* 4873 */;
-import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 8097 */;
+import useMessageAuthor from "useMessageAuthor" /* 4955 */;
+import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 8180 */;
 import size from "module_2" /* 2 */;
 
 const processColor = _mod17.processColor;

@@ -1,19 +1,19 @@
-// Module ID: 8800
-// Function ID: 8801
+// Module ID: 8883
+// Function ID: 8884
 // Name: useUserLinks
-// Dependencies: [19, 1372, 7651, 7652, 563, 8801, 8802, 7706, 2]
+// Dependencies: [19, 1372, 7733, 7734, 563, 8884, 8885, 7788, 2]
 // Exports: getActiveLinkUserIds, useAcceptedRequestsCount, useActiveLinkUserIds, useActiveLinkUsers, useActivityWindowTimeStamp, useHasActiveLinks, useHasActiveParentLinks, useHasMaxConnections, useLinkTimestampText, usePendingRequestCount, useRequiresParentalConsent, useUserIdsForLinkStatus, useUserQRLinkUrl, useUsersForLinkStatus
 
-// Module 8800 (useUserLinks)
+// Module 8883 (useUserLinks)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7651 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7733 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const FamilyCenterConstants = fn(7652);
+const FamilyCenterConstants = fn(7734);
 ({ ACCEPTED_LINK_REQUEST_TIMESTAMP_FORMATTER: metroRequire, FAMILY_CENTER_REQUEST_QR_CODE_URL: closure_7, MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS: closure_8, MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS: closure_9, PENDING_LINK_REQUEST_TIMESTAMP_FORMATTER: c10, UserLinkStatus: closure_11, UserLinkType: closure_12 } = FamilyCenterConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/parent_tools/hooks/useUserLinks.tsx");
@@ -197,7 +197,7 @@ export const useUserQRLinkUrl = function useUserQRLinkUrl() {
 export const useHasMaxConnections = function useHasMaxConnections() {
   const ACTIVE = constants.ACTIVE;
   let stateFromStores;
-  const tmp = stateFromStores(8801)();
+  const tmp = stateFromStores(8884)();
   const items = [FamilyCenterStore];
   stateFromStores = ACTIVE(563).useStateFromStores(items, () => linkedUsers.getLinkedUsers());
   const items1 = [stateFromStores, ACTIVE];
@@ -297,8 +297,8 @@ export const useActivityWindowTimeStamp = function useActivityWindowTimeStamp(ac
   if (null != stateFromStores) {
     const _Date = Date;
     const date = new Date(stateFromStores);
-    result = tmp(7706).formatUserActivityTimestamp(date.getTime(), () => closure_0, 7);
-    const tmpResult = tmp(7706);
+    result = tmp(7788).formatUserActivityTimestamp(date.getTime(), () => closure_0, 7);
+    const tmpResult = tmp(7788);
   }
   return result;
 };

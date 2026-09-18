@@ -1,13 +1,13 @@
-// Module ID: 5170
-// Function ID: 5171
+// Module ID: 5252
+// Function ID: 5253
 // Name: ForumSpoilerIcon
-// Dependencies: [19, 21, 576, 4340, 5138, 2]
+// Dependencies: [19, 21, 576, 4422, 5220, 2]
 // Exports: ForumSpoilerIcon
 
-// Module 5170 (ForumSpoilerIcon)
+// Module 5252 (ForumSpoilerIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4340 */;
-import _mod5138 from "module_5138" /* 5138 */;
+import BaseIconImage from "BaseIconImage" /* 4422 */;
+import _mod5220 from "module_5220" /* 5220 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const ForumSpoilerIcon = function ForumSpoilerIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod5138, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod5220, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

@@ -1,15 +1,15 @@
-// Module ID: 14963
-// Function ID: 14964
+// Module ID: 15057
+// Function ID: 15058
 // Name: useDerivedDMSpamFilterSetting
-// Dependencies: [1372, 1938, 1936, 504, 5511, 7413, 1186, 2]
+// Dependencies: [1372, 1938, 1936, 504, 5593, 7495, 1186, 2]
 // Exports: useDerivedDmSpamFilterSettingValue
 
-// Module 14963 (useDerivedDMSpamFilterSetting)
+// Module 15057 (useDerivedDMSpamFilterSetting)
 import initialize from "initialize" /* 504 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1186 */;
 import UserSettings from "UserSettings" /* 1936 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5511 */;
-import SettingsDefaultFeature from "SettingsDefaultFeature" /* 7413 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5593 */;
+import SettingsDefaultFeature from "SettingsDefaultFeature" /* 7495 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;

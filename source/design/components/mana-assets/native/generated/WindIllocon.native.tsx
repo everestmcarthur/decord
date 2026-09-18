@@ -1,13 +1,13 @@
-// Module ID: 6685
-// Function ID: 6686
+// Module ID: 6767
+// Function ID: 6768
 // Name: WindIllocon
-// Dependencies: [21, 5675, 6686, 2]
+// Dependencies: [21, 5757, 6768, 2]
 // Exports: WindIllocon
 
-// Module 6685 (WindIllocon)
+// Module 6767 (WindIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5675 */;
-import _modDef6686 from "module_6686" /* 6686 */;
+import FastImageDefault from "FastImage" /* 5757 */;
+import _modDef6768 from "module_6768" /* 6768 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -20,7 +20,7 @@ export const WindIllocon = function WindIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6686 };
+  const obj2 = { uri: _modDef6768 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

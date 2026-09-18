@@ -1,13 +1,13 @@
-// Module ID: 5873
-// Function ID: 5874
+// Module ID: 5955
+// Function ID: 5956
 // Name: AvatarLockeExample
-// Dependencies: [21, 5675, 5874, 2]
+// Dependencies: [21, 5757, 5956, 2]
 // Exports: AvatarLockeExample
 
-// Module 5873 (AvatarLockeExample)
+// Module 5955 (AvatarLockeExample)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5675 */;
-import _modDef5874 from "module_5874" /* 5874 */;
+import FastImageDefault from "FastImage" /* 5757 */;
+import _modDef5956 from "module_5956" /* 5956 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const AvatarLockeExample = function AvatarLockeExample(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5874 };
+  const obj2 = { uri: _modDef5956 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

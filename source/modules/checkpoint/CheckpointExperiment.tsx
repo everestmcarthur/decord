@@ -1,10 +1,10 @@
-// Module ID: 15806
-// Function ID: 15807
+// Module ID: 15901
+// Function ID: 15902
 // Name: CheckpointExperiment
 // Dependencies: [1434, 2]
 // Exports: useIsCheckpointEnabled
 
-// Module 15806 (CheckpointExperiment)
+// Module 15901 (CheckpointExperiment)
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

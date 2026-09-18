@@ -1,13 +1,13 @@
-// Module ID: 9733
-// Function ID: 9734
+// Module ID: 9827
+// Function ID: 9828
 // Name: ArrowSmallLeftIcon
-// Dependencies: [19, 21, 576, 4340, 9734, 2]
+// Dependencies: [19, 21, 576, 4422, 9828, 2]
 // Exports: ArrowSmallLeftIcon
 
-// Module 9733 (ArrowSmallLeftIcon)
+// Module 9827 (ArrowSmallLeftIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4340 */;
-import _mod9734 from "module_9734" /* 9734 */;
+import BaseIconImage from "BaseIconImage" /* 4422 */;
+import _mod9828 from "module_9828" /* 9828 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const ArrowSmallLeftIcon = function ArrowSmallLeftIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9734, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9828, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

@@ -1,13 +1,13 @@
-// Module ID: 7442
-// Function ID: 7443
+// Module ID: 7524
+// Function ID: 7525
 // Name: NavigationHistoryStore
-// Dependencies: [1958, 504, 573, 4498, 4497, 4500, 2]
+// Dependencies: [1958, 504, 573, 4580, 4579, 4582, 2]
 // Exports: getNavigationHistory, handleHistoryStoreNavigationChange
 
-// Module 7442 (NavigationHistoryStore)
+// Module 7524 (NavigationHistoryStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import RootNavigationRef from "RootNavigationRef" /* 4498 */;
+import RootNavigationRef from "RootNavigationRef" /* 4580 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 
 require = fn;
@@ -123,9 +123,9 @@ export const handleHistoryStoreNavigationChange = function handleHistoryStoreNav
     const currentRoute = rootNavigationRef.getCurrentRoute();
     if (null != currentRoute) {
       if (null != currentRoute.params) {
-        const coerceChannelRouteResult = tmp(4497).coerceChannelRoute(currentRoute);
+        const coerceChannelRouteResult = tmp(4579).coerceChannelRoute(currentRoute);
         if (null == coerceChannelRouteResult) {
-          const coerceGuildsRouteResult = tmp(4497).coerceGuildsRoute(currentRoute);
+          const coerceGuildsRouteResult = tmp(4579).coerceGuildsRoute(currentRoute);
           if (null != coerceGuildsRouteResult) {
             if (tmpResult4.getChatLayout().isChatLockedOpen) {
               const params = coerceGuildsRouteResult.params;
@@ -175,9 +175,9 @@ export const handleHistoryStoreNavigationChange = function handleHistoryStoreNav
               }
               navigationHistoryStore.emitChange();
             }
-            tmpResult4 = tmp(4500);
+            tmpResult4 = tmp(4582);
           }
-          const tmpResult3 = tmp(4497);
+          const tmpResult3 = tmp(4579);
         } else {
           const _HermesInternal2 = HermesInternal;
           combined2 = "" + c3 + coerceChannelRouteResult.params.channelId;
@@ -195,7 +195,7 @@ export const handleHistoryStoreNavigationChange = function handleHistoryStoreNav
           }
           navigationHistoryStore.emitChange();
         }
-        const tmpResult = tmp(4497);
+        const tmpResult = tmp(4579);
       }
     }
   }

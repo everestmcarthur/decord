@@ -1,13 +1,13 @@
-// Module ID: 6469
-// Function ID: 6470
+// Module ID: 6551
+// Function ID: 6552
 // Name: PrivacyShieldBannerSpotIllustration
-// Dependencies: [21, 5675, 6470, 2]
+// Dependencies: [21, 5757, 6552, 2]
 // Exports: PrivacyShieldBannerSpotIllustration
 
-// Module 6469 (PrivacyShieldBannerSpotIllustration)
+// Module 6551 (PrivacyShieldBannerSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5675 */;
-import _modDef6470 from "module_6470" /* 6470 */;
+import FastImageDefault from "FastImage" /* 5757 */;
+import _modDef6552 from "module_6552" /* 6552 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const PrivacyShieldBannerSpotIllustration = function PrivacyShieldBannerS
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6470 };
+  const obj2 = { uri: _modDef6552 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

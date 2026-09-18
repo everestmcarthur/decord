@@ -1,19 +1,19 @@
-// Module ID: 18173
-// Function ID: 18174
+// Module ID: 18267
+// Function ID: 18268
 // Name: LocalPushNotificationActionCreators
-// Dependencies: [13832, 1074, 1965, 7589, 573, 1231, 1241, 5608, 9690, 1897, 4651, 4570, 1101, 2]
+// Dependencies: [13925, 1074, 1965, 7671, 573, 1231, 1241, 5690, 9784, 1897, 4733, 4652, 1101, 2]
 // Exports: receiveLocalNotification
 
-// Module 18173 (LocalPushNotificationActionCreators)
+// Module 18267 (LocalPushNotificationActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import SentryUtilsDefault from "SentryUtils" /* 1231 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import ChannelConstants from "ChannelConstants" /* 1965 */;
-import Constants2 from "Constants" /* 13832 */;
+import Constants2 from "Constants" /* 13925 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 
-const GuildActionCreatorsDefault = tmp(5608);
+const GuildActionCreatorsDefault = tmp(5690);
 const LocalNotificationTypes = Constants2.LocalNotificationTypes;
 ({ AnalyticEvents: closure_4, Routes: hasOwnProperty } = Constants);
 const StaticChannelRoute = ChannelConstants.StaticChannelRoute;
@@ -21,7 +21,7 @@ let result = size.fileFinishedImporting("modules/local_push_notification/native/
 
 export const receiveLocalNotification = function receiveLocalNotification(getData) {
   if (null != getData.getData) {
-    data(7589).trackAppOpened("notification");
+    data(7671).trackAppOpened("notification");
     data = getData.getData();
     let type = data.type;
     function dispatch() {
@@ -41,14 +41,14 @@ export const receiveLocalNotification = function receiveLocalNotification(getDat
         const result = GuildActionCreatorsDefault.transitionToGuildSync(tmp4.guildId);
         const tmpResult = GuildActionCreatorsDefault;
       } else if (tmp8.CALL_RING === type) {
-        data(1897)(9690, tmp2.paths).then((result) => result.default(channelId.channelId));
-        const promise2 = data(1897)(9690, tmp2.paths);
+        data(1897)(9784, tmp2.paths).then((result) => result.default(channelId.channelId));
+        const promise2 = data(1897)(9784, tmp2.paths);
       } else if (tmp8.MESSAGE_SEND_FAILED === type) {
-        data(1897)(4651, tmp2.paths).then((transitionToMessage) => {
+        data(1897)(4733, tmp2.paths).then((transitionToMessage) => {
           ({ channelId, messageId } = closure_1_0);
-          return transitionToMessage.transitionToMessage(channelId, messageId, { jumpType: data(4570).JumpType.INSTANT });
+          return transitionToMessage.transitionToMessage(channelId, messageId, { jumpType: data(4652).JumpType.INSTANT });
         });
-        const promise = data(1897)(4651, tmp2.paths);
+        const promise = data(1897)(4733, tmp2.paths);
       } else if (tmp8.VIBEGRATIONS === type) {
         if (null != tmp4.guildId) {
           ({ guildId: data, projectId: closure_1 } = tmp4);
@@ -57,7 +57,7 @@ export const receiveLocalNotification = function receiveLocalNotification(getDat
         }
       }
     }
-    let obj2 = data(7589);
+    let obj2 = data(7671);
     if (obj.isDispatching()) {
       const _setImmediate = setImmediate;
       setImmediate(dispatch);

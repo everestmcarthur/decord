@@ -1,11 +1,11 @@
-// Module ID: 7673
-// Function ID: 7674
+// Module ID: 7755
+// Function ID: 7756
 // Name: CollectiblesCategoriesRecord
-// Dependencies: [7674, 7657, 2]
+// Dependencies: [7756, 7739, 2]
 
-// Module 7673 (CollectiblesCategoriesRecord)
-import StorefrontCollectionRecord from "StorefrontCollectionRecord" /* 7674 */;
-import CollectiblesCategoryRecord from "CollectiblesCategoryRecord" /* 7657 */;
+// Module 7755 (CollectiblesCategoriesRecord)
+import StorefrontCollectionRecord from "StorefrontCollectionRecord" /* 7756 */;
+import CollectiblesCategoryRecord from "CollectiblesCategoryRecord" /* 7739 */;
 
 const prototype = function CollectiblesCategoriesRecord(categories) {
   const obj = Object.create(new.target.prototype);

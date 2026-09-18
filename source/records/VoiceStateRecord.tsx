@@ -1,9 +1,9 @@
-// Module ID: 4660
-// Function ID: 4661
+// Module ID: 4742
+// Function ID: 4743
 // Name: VoiceStateRecord
 // Dependencies: [1387, 2]
 
-// Module 4660 (VoiceStateRecord)
+// Module 4742 (VoiceStateRecord)
 import Record from "Record" /* 1387 */;
 
 const size = fn(2);

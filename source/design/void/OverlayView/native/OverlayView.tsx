@@ -1,11 +1,11 @@
-// Module ID: 4991
-// Function ID: 4992
+// Module ID: 5073
+// Function ID: 5074
 // Name: OverlayView
-// Dependencies: [19, 17, 21, 1364, 4992, 5041, 2]
+// Dependencies: [19, 17, 21, 1364, 5074, 5123, 2]
 // Exports: TransitionGroupOverlayView
 
-// Module 4991 (OverlayView)
-import _modDef5041 from "module_5041" /* 5041 */;
+// Module 5073 (OverlayView)
+import _modDef5123 from "module_5123" /* 5123 */;
 import noop from "module_19" /* 19 */;
 
 get_ActivityIndicator = fn(17);
@@ -15,11 +15,11 @@ const jsx = fn(21).jsx;
 let PlatformUtils = fn(1364);
 let FullWindowOverlay = View;
 if (PlatformUtils.isIOS()) {
-  FullWindowOverlay = fn(4992).FullWindowOverlay;
+  FullWindowOverlay = fn(5074).FullWindowOverlay;
 }
 PlatformUtils = fn(1364);
 if (PlatformUtils.isIOS()) {
-  View = _modDef5041;
+  View = _modDef5123;
 }
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/OverlayView/native/OverlayView.tsx");

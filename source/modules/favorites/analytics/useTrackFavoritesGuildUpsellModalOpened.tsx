@@ -1,13 +1,13 @@
-// Module ID: 10376
-// Function ID: 10377
+// Module ID: 10470
+// Function ID: 10471
 // Name: useTrackFavoritesGuildUpsellModalOpened
-// Dependencies: [19, 1074, 7276, 7296, 1241, 2]
+// Dependencies: [19, 1074, 7358, 7378, 1241, 2]
 // Exports: default
 
-// Module 10376 (useTrackFavoritesGuildUpsellModalOpened)
+// Module 10470 (useTrackFavoritesGuildUpsellModalOpened)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7276 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7296 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7358 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7378 */;
 import noop from "module_19" /* 19 */;
 
 const AnalyticEvents = fn(1074).AnalyticEvents;

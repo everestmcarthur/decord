@@ -1,17 +1,17 @@
-// Module ID: 7610
-// Function ID: 7611
+// Module ID: 7692
+// Function ID: 7693
 // Name: GuildMemberSafetyMembers
-// Dependencies: [1372, 4274, 7611, 7612, 7614, 7615, 7621, 4759, 2]
+// Dependencies: [1372, 4357, 7693, 7694, 7696, 7697, 7703, 4841, 2]
 // Exports: hasUnusualDmActivity
 
-// Module 7610 (GuildMemberSafetyMembers)
-import SecondaryIndexMap from "SecondaryIndexMap" /* 4274 */;
-import _modDef4759 from "module_4759" /* 4759 */;
-import MemberSafetyElasticSearchQueryTypes from "MemberSafetyElasticSearchQueryTypes" /* 7611 */;
-import guild_mod_dash_member_safety_DateUtils from "guild_mod_dash_member_safety/DateUtils" /* 7612 */;
-import SortUtils from "SortUtils" /* 7614 */;
-import MemberSafetyStoreSupplemental from "MemberSafetyStoreSupplemental" /* 7615 */;
-import isSpam from "isSpam" /* 7621 */;
+// Module 7692 (GuildMemberSafetyMembers)
+import SecondaryIndexMap from "SecondaryIndexMap" /* 4357 */;
+import _modDef4841 from "module_4841" /* 4841 */;
+import MemberSafetyElasticSearchQueryTypes from "MemberSafetyElasticSearchQueryTypes" /* 7693 */;
+import guild_mod_dash_member_safety_DateUtils from "guild_mod_dash_member_safety/DateUtils" /* 7694 */;
+import SortUtils from "SortUtils" /* 7696 */;
+import MemberSafetyStoreSupplemental from "MemberSafetyStoreSupplemental" /* 7697 */;
+import isSpam from "isSpam" /* 7703 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -120,7 +120,7 @@ prototype["_computeMemberSupplementals"] = function _computeMemberSupplementals(
     const _Date = Date;
     const date = new Date(unusualDMActivityUntil);
     const time = date.getTime();
-    tmp9 = time >= closure_4 - tmp(7611).UNUSUAL_DM_COMPARISON_DELTA;
+    tmp9 = time >= closure_4 - tmp(7693).UNUSUAL_DM_COMPARISON_DELTA;
   }
   obj3.hasUnusualDmActivity = tmp9;
   obj3.hasUnusualAccountActivity = isSpam.isSpammer(userId);
@@ -177,7 +177,7 @@ prototype["updateMember"] = function updateMember(userId, arg1) {
       flag2 = flag;
       while (keys[tmp] !== undefined) {
         let tmp15 = obj2[tmp6];
-        if (_modDef4759(tmp15, obj[tmp6])) {
+        if (_modDef4841(tmp15, obj[tmp6])) {
           continue;
         } else {
           obj[tmp6] = tmp15;

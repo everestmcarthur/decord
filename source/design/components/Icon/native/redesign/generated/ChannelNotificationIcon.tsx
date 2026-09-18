@@ -1,13 +1,13 @@
-// Module ID: 11120
-// Function ID: 11121
+// Module ID: 11213
+// Function ID: 11214
 // Name: ChannelNotificationIcon
-// Dependencies: [19, 21, 576, 4340, 11121, 2]
+// Dependencies: [19, 21, 576, 4422, 11214, 2]
 // Exports: ChannelNotificationIcon
 
-// Module 11120 (ChannelNotificationIcon)
+// Module 11213 (ChannelNotificationIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4340 */;
-import _mod11121 from "module_11121" /* 11121 */;
+import BaseIconImage from "BaseIconImage" /* 4422 */;
+import _mod11214 from "module_11214" /* 11214 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const ChannelNotificationIcon = function ChannelNotificationIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11121, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11214, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

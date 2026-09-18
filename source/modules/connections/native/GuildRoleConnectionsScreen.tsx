@@ -1,21 +1,21 @@
-// Module ID: 11721
-// Function ID: 11722
+// Module ID: 11811
+// Function ID: 11812
 // Name: GuildRoleConnectionsScreen
-// Dependencies: [32, 19, 17, 1386, 502, 2022, 2016, 1074, 21, 4640, 576, 1177, 4574, 504, 1241, 4820, 5608, 4607, 11722, 1897, 11712, 11719, 5371, 1397, 4491, 4636, 1115, 2025, 11718, 7317, 10204, 2]
+// Dependencies: [32, 19, 17, 1386, 502, 2022, 2016, 1074, 21, 4722, 576, 1177, 4656, 504, 1241, 4902, 5690, 4689, 11812, 1897, 11802, 11809, 5453, 1397, 4573, 4718, 1115, 2025, 11808, 7399, 10298, 2]
 // Exports: default
 
-// Module 11721 (GuildRoleConnectionsScreen)
+// Module 11811 (GuildRoleConnectionsScreen)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
-import shared from "shared" /* 4491 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4607 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4820 */;
-import PlatformsDefault from "Platforms" /* 5371 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5608 */;
-import GuildRoleConnectionsModalActionCreators from "GuildRoleConnectionsModalActionCreators" /* 11719 */;
+import shared from "shared" /* 4573 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4689 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4902 */;
+import PlatformsDefault from "Platforms" /* 5453 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5690 */;
+import GuildRoleConnectionsModalActionCreators from "GuildRoleConnectionsModalActionCreators" /* 11809 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserRecord from "UserRecord" /* 1386 */;
@@ -30,7 +30,7 @@ const Constants = fn(1074);
 ({ AnalyticEvents: closure_12, HelpdeskArticles: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 }, content: { flexDirection: "column", alignItems: "center", padding: 16 }, infoText: { marginTop: 24 }, verifiedRoles: { marginTop: 24, flexDirection: "column", width: "100%" }, verifiedRole: null, verifiedRoleHasRole: null, verifiedRolePressed: null, verifiedRoleIcon: null, roleCheckmark: null, verifiedRoleName: null, platformIconContainer: null, cutout: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 };
 obj2.verifiedRole = { flexDirection: "row", borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 2, borderRadius: nativeDefault.radii.md, paddingHorizontal: 16, paddingVertical: 20, marginBottom: 16, width: "100%", alignItems: "center", position: "relative" };
@@ -56,7 +56,7 @@ export default function GuildRoleConnectionsScreen(guildId) {
   closure_7 = undefined;
   let tmp = closure_16();
   dependencyMap = tmp;
-  _slicedToArray = onCloseModal(4574)();
+  _slicedToArray = onCloseModal(4656)();
   let items = [GuildRoleStore];
   const stateFromStores = guildId(504).useStateFromStores(items, () => GuildRoleStore.getSortedRoles(guildId));
   let obj = guildId(504);
@@ -91,7 +91,7 @@ export default function GuildRoleConnectionsScreen(guildId) {
     const intl = tmp4(1115).intl;
     obj7 = { helpdeskArticleUrl: tmp2(2025).getArticleURL(constants2.CONNECTION_DETAILS) };
     obj6.children = intl.format(tmp4(1115).t["Y+TsEV"], obj7);
-    const items5 = [closure_14(tmp4(4636).Text, obj6), ];
+    const items5 = [closure_14(tmp4(4718).Text, obj6), ];
     const obj8 = {
       style: tmp.verifiedRoles,
       children: found.map((children) => {
@@ -189,11 +189,11 @@ export default function GuildRoleConnectionsScreen(guildId) {
                       const result = hasItem(closure_2_2[16]).unassignGuildRoleConnection(closure_1, id.id);
                     }
                 };
-                obj4.openLazy(asyncRequireImpl(11722, dependencyMap.paths), "LeaveConnectionRoleActionSheet-" + tmp.id, obj3);
-                const tmp20 = asyncRequireImpl(11722, dependencyMap.paths);
+                obj4.openLazy(asyncRequireImpl(11812, dependencyMap.paths), "LeaveConnectionRoleActionSheet-" + tmp.id, obj3);
+                const tmp20 = asyncRequireImpl(11812, dependencyMap.paths);
               } else {
                 let obj = ActionSheetActionCreatorsDefault;
-                const tmp9 = asyncRequireImpl(11712, dependencyMap.paths);
+                const tmp9 = asyncRequireImpl(11802, dependencyMap.paths);
                 const obj5 = { role: tmp, guildId: tmp2, onCloseModal };
                 obj.openLazy(tmp9, GuildRoleConnectionsModalActionCreators.makeGuildRoleConnectionsConnectAccountsActionSheetKey(tmp.id), obj5);
               }

@@ -1,9 +1,9 @@
-// Module ID: 8016
-// Function ID: 8017
+// Module ID: 8099
+// Function ID: 8100
 // Name: rules
 // Dependencies: [32, 1187, 1217, 2]
 
-// Module 8016 (rules)
+// Module 8099 (rules)
 import _mod1187 from "module_1187" /* 1187 */;
 import wrappers from "wrappers" /* 1217 */;
 import _slicedToArray from "module_32" /* 32 */;

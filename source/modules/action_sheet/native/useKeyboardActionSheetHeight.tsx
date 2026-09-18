@@ -1,14 +1,14 @@
-// Module ID: 11510
-// Function ID: 11511
+// Module ID: 11608
+// Function ID: 11609
 // Name: useKeyboardActionSheetHeight
-// Dependencies: [5770, 1612, 1478, 5667, 2]
+// Dependencies: [5852, 1612, 1478, 5749, 2]
 // Exports: default, getKeyboardActionSheetHeight
 
-// Module 11510 (useKeyboardActionSheetHeight)
+// Module 11608 (useKeyboardActionSheetHeight)
 import useWindowDimensions from "useWindowDimensions" /* 1478 */;
 import useSafeAreaInsets from "useSafeAreaInsets" /* 1612 */;
-import useCustomKeyboardHeight from "useCustomKeyboardHeight" /* 5667 */;
-import NavigatorConstants from "NavigatorConstants" /* 5770 */;
+import useCustomKeyboardHeight from "useCustomKeyboardHeight" /* 5749 */;
+import NavigatorConstants from "NavigatorConstants" /* 5852 */;
 import size from "module_2" /* 2 */;
 
 const useWindowDimensionsDefault = useWindowDimensions;

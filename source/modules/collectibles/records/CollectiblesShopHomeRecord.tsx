@@ -1,23 +1,23 @@
-// Module ID: 7684
-// Function ID: 7685
+// Module ID: 7766
+// Function ID: 7767
 // Name: CollectiblesShopHomeRecord
-// Dependencies: [7657, 7685, 7687, 7690, 7691, 7692, 7693, 7694, 7695, 7696, 7697, 7686, 2]
+// Dependencies: [7739, 7767, 7769, 7772, 7773, 7774, 7775, 7776, 7777, 7778, 7779, 7768, 2]
 
-// Module 7684 (CollectiblesShopHomeRecord)
-import ShopBlockType from "ShopBlockType" /* 7686 */;
-import CollectiblesCategoryRecord from "CollectiblesCategoryRecord" /* 7657 */;
+// Module 7766 (CollectiblesShopHomeRecord)
+import ShopBlockType from "ShopBlockType" /* 7768 */;
+import CollectiblesCategoryRecord from "CollectiblesCategoryRecord" /* 7739 */;
 
 require = fn;
-const CountdownTimerBlockRecord = fn(7685).CountdownTimerBlockRecord;
-const FeaturedBlockRecord = fn(7687).FeaturedBlockRecord;
-const FeedBlockRecord = fn(7690).FeedBlockRecord;
-let closure_6 = fn(7691).GameServerHostingBannerBlockRecord;
-const HeroBlockRecord = fn(7692).HeroBlockRecord;
-let closure_8 = fn(7693).ImmersiveBannerBlockRecord;
-const RewardHeroBlockRecord = fn(7694).RewardHeroBlockRecord;
-const ShelfBlockRecord = fn(7695).ShelfBlockRecord;
-let closure_11 = fn(7696).SocialLayerStorefrontPromotionalBannerBlockRecord;
-const WideBannerBlockRecord = fn(7697).WideBannerBlockRecord;
+const CountdownTimerBlockRecord = fn(7767).CountdownTimerBlockRecord;
+const FeaturedBlockRecord = fn(7769).FeaturedBlockRecord;
+const FeedBlockRecord = fn(7772).FeedBlockRecord;
+let closure_6 = fn(7773).GameServerHostingBannerBlockRecord;
+const HeroBlockRecord = fn(7774).HeroBlockRecord;
+let closure_8 = fn(7775).ImmersiveBannerBlockRecord;
+const RewardHeroBlockRecord = fn(7776).RewardHeroBlockRecord;
+const ShelfBlockRecord = fn(7777).ShelfBlockRecord;
+let closure_11 = fn(7778).SocialLayerStorefrontPromotionalBannerBlockRecord;
+const WideBannerBlockRecord = fn(7779).WideBannerBlockRecord;
 const prototype = function CollectiblesShopHomeRecord(shop_blocks) {
   const obj = Object.create(new.target.prototype);
   shop_blocks = shop_blocks.shop_blocks;

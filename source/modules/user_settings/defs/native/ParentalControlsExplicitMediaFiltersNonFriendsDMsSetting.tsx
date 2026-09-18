@@ -1,15 +1,15 @@
-// Module ID: 16046
-// Function ID: 16047
+// Module ID: 16143
+// Function ID: 16144
 // Name: ParentalControlsExplicitMediaFiltersNonFriendsDMsSetting
-// Dependencies: [7651, 8111, 14948, 7714, 14952, 1115, 14945, 1186, 11622, 2]
+// Dependencies: [7733, 8194, 15042, 7796, 15046, 1115, 15039, 1186, 11714, 2]
 // Exports: onObscuredContentNonFriendsDmOnPress, useObscuredContentNonFriendsDmSettingValue
 
-// Module 16046 (ParentalControlsExplicitMediaFiltersNonFriendsDMsSetting)
+// Module 16143 (ParentalControlsExplicitMediaFiltersNonFriendsDMsSetting)
 import util from "util" /* 1115 */;
-import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7714 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 14948 */;
-import FamilyCenterControlledSettingsUtils from "FamilyCenterControlledSettingsUtils" /* 14952 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7651 */;
+import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7796 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 15042 */;
+import FamilyCenterControlledSettingsUtils from "FamilyCenterControlledSettingsUtils" /* 15046 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7733 */;
 
 require = fn;
 function useObscuredContentNonFriendsDmSettingValue() {
@@ -29,7 +29,7 @@ function onObscuredContentNonFriendsDmOnPress() {
   const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
   if (null != selectedTeenId) {
     const intl = selectedTeenId(1115).intl;
-    const obj = selectedTeenId(14952);
+    const obj = selectedTeenId(15046);
     const stringResult = intl.string(selectedTeenId(1115).t.GYpoAq);
     const obj3 = { title: stringResult, subtitle: null, excluded: null, handlePress: null, currentValue: null };
     const intl2 = selectedTeenId(1115).intl;
@@ -40,17 +40,17 @@ function onObscuredContentNonFriendsDmOnPress() {
       const result = FamilyCenterControlledSettingsUtils.updateExplicitContentSetting(selectedTeenId, { explicitContentNonFriendDm });
     };
     obj3.currentValue = obj.getExplicitContentSettingOrDefault(selectedTeenId).explicitContentNonFriendDm;
-    let result = selectedTeenId(14945).handleSensitiveMediaFilterPress(obj3);
-    const obj2 = selectedTeenId(14945);
+    let result = selectedTeenId(15039).handleSensitiveMediaFilterPress(obj3);
+    const obj2 = selectedTeenId(15039);
   }
 }
-const SettingBuilders = fn(11622);
+const SettingBuilders = fn(11714);
 const pressable = SettingBuilders.createPressable({
   useTitle: function getTitle() {
     const intl = util.intl;
     return intl.string(util.t["Yh+HX1"]);
   },
-  parent: fn(8111).MobileUserSettings.PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
+  parent: fn(8194).MobileUserSettings.PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
   useTrailing: useObscuredContentNonFriendsDmSettingValue,
   onPress: onObscuredContentNonFriendsDmOnPress,
   unsearchable: true

@@ -1,12 +1,12 @@
-// Module ID: 17033
-// Function ID: 17034
+// Module ID: 17164
+// Function ID: 17165
 // Name: YouSettingsCoachmark
-// Dependencies: [17034, 11288, 2]
+// Dependencies: [17165, 11380, 2]
 // Exports: default, useYouSettingsCoachmark
 
-// Module 17033 (YouSettingsCoachmark)
-import useCoachmark from "useCoachmark" /* 11288 */;
-import useReferralProgramCoachmark from "useReferralProgramCoachmark" /* 17034 */;
+// Module 17164 (YouSettingsCoachmark)
+import useCoachmark from "useCoachmark" /* 11380 */;
+import useReferralProgramCoachmark from "useReferralProgramCoachmark" /* 17165 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouSettingsCoachmark.tsx");

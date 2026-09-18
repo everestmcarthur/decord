@@ -1,9 +1,9 @@
-// Module ID: 8591
-// Function ID: 8592
+// Module ID: 8674
+// Function ID: 8675
 // Name: NativeDigitalCredentialModule
 // Dependencies: [17, 2]
 
-// Module 8591 (NativeDigitalCredentialModule)
+// Module 8674 (NativeDigitalCredentialModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

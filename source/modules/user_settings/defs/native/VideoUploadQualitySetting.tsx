@@ -1,24 +1,24 @@
-// Module ID: 15581
-// Function ID: 15582
+// Module ID: 15676
+// Function ID: 15677
 // Name: VideoUploadQualitySetting
-// Dependencies: [1184, 8111, 504, 15580, 1936, 1115, 11622, 2]
+// Dependencies: [1184, 8194, 504, 15675, 1936, 1115, 11714, 2]
 
-// Module 15581 (VideoUploadQualitySetting)
+// Module 15676 (VideoUploadQualitySetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
 import UserSettings from "UserSettings" /* 1936 */;
-import UserSettingsText from "UserSettingsText" /* 15580 */;
+import UserSettingsText from "UserSettingsText" /* 15675 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1184 */;
 
 require = fn;
 const VideoQualitySettings = fn(1184).VideoQualitySettings;
-const SettingBuilders = fn(11622);
+const SettingBuilders = fn(11714);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.PXq9f1);
   },
-  parent: fn(8111).MobileUserSettings.CHAT,
+  parent: fn(8194).MobileUserSettings.CHAT,
   useValue: function useVideoUploadQualitySettingValue() {
     const items = [UnsyncedUserSettingsStore];
     return initialize.useStateFromStores(items, () => videoUploadQuality.videoUploadQuality);

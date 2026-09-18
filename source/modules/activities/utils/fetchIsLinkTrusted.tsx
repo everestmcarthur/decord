@@ -1,10 +1,10 @@
-// Module ID: 14608
-// Function ID: 14609
+// Module ID: 14703
+// Function ID: 14704
 // Name: fetchIsLinkTrusted
 // Dependencies: [5, 1074, 1271, 1366, 2]
 // Exports: fetchIsLinkTrusted
 
-// Module 14608 (fetchIsLinkTrusted)
+// Module 14703 (fetchIsLinkTrusted)
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import URLUtilsDefault from "URLUtils" /* 1366 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

@@ -1,13 +1,13 @@
-// Module ID: 11634
-// Function ID: 11635
+// Module ID: 11726
+// Function ID: 11727
 // Name: useLegacyExperiments
-// Dependencies: [32, 19, 4555, 4556, 8015, 4560, 8013, 504, 2]
+// Dependencies: [32, 19, 4637, 4638, 8098, 4642, 8096, 504, 2]
 // Exports: getLegacyExperiments, useLegacyExperiments
 
-// Module 11634 (useLegacyExperiments)
-import ExperimentManager from "ExperimentManager" /* 4560 */;
+// Module 11726 (useLegacyExperiments)
+import ExperimentManager from "ExperimentManager" /* 4642 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ExperimentStore from "ExperimentStore" /* 4555 */;
+import ExperimentStore from "ExperimentStore" /* 4637 */;
 
 require = fn;
 function parseRegisteredExperiments(stateFromStoresObject) {
@@ -26,17 +26,17 @@ function parseRegisteredExperiments(stateFromStoresObject) {
       if (typeof type.description === "object") {
         let experimentBucketName = tmp.description[index];
       } else {
-        experimentBucketName = closure_1(8013).getExperimentBucketName(item);
-        const obj3 = closure_1(8013);
+        experimentBucketName = closure_1(8096).getExperimentBucketName(item);
+        const obj3 = closure_1(8096);
       }
       obj.label = experimentBucketName;
-      obj.shortLabel = closure_1(8013).getExperimentBucketName(item);
+      obj.shortLabel = closure_1(8096).getExperimentBucketName(item);
       if (item === constants.CONTROL) {
-        let TREATMENT = obj(8015).Variation_Type.CONTROL;
+        let TREATMENT = obj(8098).Variation_Type.CONTROL;
       } else if (item === tmp4.NOT_ELIGIBLE) {
-        TREATMENT = obj(8015).Variation_Type.UNSPECIFIED;
+        TREATMENT = obj(8098).Variation_Type.UNSPECIFIED;
       } else {
-        TREATMENT = obj(8015).Variation_Type.TREATMENT;
+        TREATMENT = obj(8098).Variation_Type.TREATMENT;
       }
       obj.type = TREATMENT;
       return obj;
@@ -68,7 +68,7 @@ function getLegacyOverridesInfo(stateFromStoresObject1) {
   return obj;
 }
 const useMemo = fn(19).useMemo;
-const ExperimentConstants = fn(4556);
+const ExperimentConstants = fn(4638);
 ({ ExperimentBuckets: metroRequire, ExperimentTypes: closure_7 } = ExperimentConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/experiments/client_override_hooks/useLegacyExperiments.tsx");

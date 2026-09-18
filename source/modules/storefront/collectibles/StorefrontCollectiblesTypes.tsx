@@ -1,9 +1,9 @@
-// Module ID: 8945
-// Function ID: 8946
+// Module ID: 9029
+// Function ID: 9030
 // Name: StorefrontCollectiblesTypes
 // Dependencies: [2]
 
-// Module 8945 (StorefrontCollectiblesTypes)
+// Module 9029 (StorefrontCollectiblesTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/storefront/collectibles/StorefrontCollectiblesTypes.tsx");

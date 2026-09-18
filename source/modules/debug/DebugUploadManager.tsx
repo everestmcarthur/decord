@@ -1,10 +1,10 @@
-// Module ID: 10334
-// Function ID: 10335
+// Module ID: 10428
+// Function ID: 10429
 // Name: DebugUploadManager
-// Dependencies: [5, 1958, 3, 17, 4540, 9264, 10335, 10336, 7, 10337, 10338, 1350, 4504, 10339, 10340, 10341, 10342, 2]
+// Dependencies: [5, 1958, 3, 17, 4622, 9348, 10429, 10430, 7, 10431, 10432, 1350, 4586, 10433, 10434, 10435, 10436, 2]
 // Exports: uploadDebugLogFiles
 
-// Module 10334 (DebugUploadManager)
+// Module 10428 (DebugUploadManager)
 import LoggerDefault from "Logger" /* 3 */;
 import LogAggregatorAll from "LogAggregator" /* 7 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

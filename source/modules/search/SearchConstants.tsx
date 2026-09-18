@@ -1,10 +1,10 @@
-// Module ID: 8000
-// Function ID: 8001
+// Module ID: 8083
+// Function ID: 8084
 // Name: SearchConstants
-// Dependencies: [1074, 8001, 2]
+// Dependencies: [1074, 8084, 2]
 
-// Module 8000 (SearchConstants)
-import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 8001 */;
+// Module 8083 (SearchConstants)
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 8084 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 

@@ -1,10 +1,10 @@
-// Module ID: 7267
-// Function ID: 7268
+// Module ID: 7349
+// Function ID: 7350
 // Name: Sheet/BottomSheetHandle
 // Dependencies: [19, 2]
 // Exports: useBottomSheetImperativeHandle
 
-// Module 7267 (Sheet/BottomSheetHandle)
+// Module 7349 (Sheet/BottomSheetHandle)
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);

@@ -1,12 +1,12 @@
-// Module ID: 11748
-// Function ID: 11749
+// Module ID: 11838
+// Function ID: 11839
 // Name: useGroupDMNitroUpsellAction
-// Dependencies: [19, 1074, 11741, 1241, 7496, 11747, 2]
+// Dependencies: [19, 1074, 11831, 1241, 7578, 11837, 2]
 // Exports: default
 
-// Module 11748 (useGroupDMNitroUpsellAction)
+// Module 11838 (useGroupDMNitroUpsellAction)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 11741 */;
+import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 11831 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -30,12 +30,12 @@ export default function useGroupDMNitroUpsellAction(audience) {
       const obj3 = { location: _location };
       AnalyticsUtilsDefault.track(constants.PREMIUM_PROMOTION_OPENED, obj3);
       const obj4 = { screen: constants2.PREMIUM_MANAGE_PLAN };
-      tmp(7496).openUserSettings(obj4);
-    } else if (tmp(11741).GroupDMNitroUpsellRoute.MARKETING === groupDMNitroUpsellRoute) {
+      tmp(7578).openUserSettings(obj4);
+    } else if (tmp(11831).GroupDMNitroUpsellRoute.MARKETING === groupDMNitroUpsellRoute) {
       const obj6 = { location: _location };
       AnalyticsUtilsDefault.track(constants.PREMIUM_PROMOTION_OPENED, obj6);
-      const result = tmp(11747).navigateToPremiumHomePage();
-    } else if (tmp(11741).GroupDMNitroUpsellRoute.CHECKOUT === groupDMNitroUpsellRoute) {
+      const result = tmp(11837).navigateToPremiumHomePage();
+    } else if (tmp(11831).GroupDMNitroUpsellRoute.CHECKOUT === groupDMNitroUpsellRoute) {
       if (onCheckout != null) {
         onCheckout();
       }

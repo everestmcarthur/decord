@@ -1,14 +1,14 @@
-// Module ID: 13403
-// Function ID: 13404
+// Module ID: 13494
+// Function ID: 13495
 // Name: Separator
-// Dependencies: [8069, 4640, 576, 1370, 2]
+// Dependencies: [8152, 4722, 576, 1370, 2]
 // Exports: generateSeparatorRowData
 
-// Module 13403 (Separator)
+// Module 13494 (Separator)
 import nativeDefault from "native" /* 576 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
-import RowGeneratorConstants from "RowGeneratorConstants" /* 8069 */;
-import createStyles from "createStyles" /* 4640 */;
+import RowGeneratorConstants from "RowGeneratorConstants" /* 8152 */;
+import createStyles from "createStyles" /* 4722 */;
 import size from "module_2" /* 2 */;
 
 ({ RowType: c2, SeparatorType: c3 } = RowGeneratorConstants);

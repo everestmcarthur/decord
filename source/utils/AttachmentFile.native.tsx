@@ -1,14 +1,14 @@
-// Module ID: 5224
-// Function ID: 5225
+// Module ID: 5306
+// Function ID: 5307
 // Name: AttachmentFile
-// Dependencies: [5, 3, 38, 5215, 5225, 5216, 2]
+// Dependencies: [5, 3, 38, 5297, 5307, 5298, 2]
 // Exports: cancelGetAttachmentFile, fileIsInAppDir, getAttachmentFile
 
-// Module 5224 (AttachmentFile)
+// Module 5306 (AttachmentFile)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
-import Upload from "Upload" /* 5215 */;
-import utils_UploadUtils from "utils/UploadUtils" /* 5225 */;
+import Upload from "Upload" /* 5297 */;
+import utils_UploadUtils from "utils/UploadUtils" /* 5307 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

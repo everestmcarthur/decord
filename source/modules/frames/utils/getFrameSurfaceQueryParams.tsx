@@ -1,11 +1,11 @@
-// Module ID: 16859
-// Function ID: 16860
+// Module ID: 16898
+// Function ID: 16899
 // Name: getFrameSurfaceQueryParams
-// Dependencies: [9665, 2]
+// Dependencies: [9749, 2]
 // Exports: default
 
-// Module 16859 (getFrameSurfaceQueryParams)
-import FramesConstants from "FramesConstants" /* 9665 */;
+// Module 16898 (getFrameSurfaceQueryParams)
+import FramesConstants from "FramesConstants" /* 9749 */;
 import size from "module_2" /* 2 */;
 
 const EmbeddedSurfaceType = FramesConstants.EmbeddedSurfaceType;

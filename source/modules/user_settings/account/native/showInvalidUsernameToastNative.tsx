@@ -1,13 +1,13 @@
-// Module ID: 7105
-// Function ID: 7106
+// Module ID: 7187
+// Function ID: 7188
 // Name: showInvalidUsernameToastNative
-// Dependencies: [4338, 1115, 7106, 2]
+// Dependencies: [4420, 1115, 7188, 2]
 // Exports: showInvalidUsernameToast
 
-// Module 7105 (showInvalidUsernameToastNative)
+// Module 7187 (showInvalidUsernameToastNative)
 import util from "util" /* 1115 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4338 */;
-import _modDef7106 from "module_7106" /* 7106 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4420 */;
+import _modDef7188 from "module_7188" /* 7188 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_settings/account/native/showInvalidUsernameToastNative.tsx");
@@ -16,6 +16,6 @@ export const showInvalidUsernameToast = function showInvalidUsernameToast() {
   const obj2 = { key: "USER_SETTINGS_UPDATE_FAILURE", content: null, icon: null };
   const intl = util.intl;
   obj2.content = intl.string(util.t["TGg/2k"]);
-  obj2.icon = _modDef7106;
+  obj2.icon = _modDef7188;
   ToastActionCreatorsDefault.open(obj2);
 };

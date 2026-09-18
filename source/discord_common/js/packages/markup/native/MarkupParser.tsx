@@ -1,11 +1,11 @@
-// Module ID: 8124
-// Function ID: 8125
+// Module ID: 8207
+// Function ID: 8208
 // Name: markup/MarkupParser
-// Dependencies: [8125, 4336, 2]
+// Dependencies: [8208, 2075, 2]
 
-// Module 8124 (markup/MarkupParser)
-import _modDef4336 from "module_4336" /* 4336 */;
-import MarkupASTUtils from "MarkupASTUtils" /* 8125 */;
+// Module 8207 (markup/MarkupParser)
+import _modDef2075 from "module_2075" /* 2075 */;
+import MarkupASTUtils from "MarkupASTUtils" /* 8208 */;
 import size from "module_2" /* 2 */;
 
 function saferParse(fn, arg1, inline, arg3, arg4) {
@@ -40,7 +40,7 @@ let result = size.fileFinishedImporting("../discord_common/js/packages/markup/na
 
 export default {
   astParserFor(importDefaultResultResult) {
-    closure_0 = _modDef4336.parserFor(importDefaultResultResult);
+    closure_0 = _modDef2075.parserFor(importDefaultResultResult);
     return (arg0, inline) => {
       let str = arg0;
       if (arg0 === undefined) {
@@ -68,9 +68,9 @@ export default {
     };
   },
   reactParserFor(importDefaultResultResult) {
-    closure_0 = _modDef4336.parserFor(importDefaultResultResult);
-    let obj2 = _modDef4336;
-    importDefault = obj2.reactFor(_modDef4336.ruleOutput(importDefaultResultResult, "react"));
+    closure_0 = _modDef2075.parserFor(importDefaultResultResult);
+    let obj2 = _modDef2075;
+    importDefault = obj2.reactFor(_modDef2075.ruleOutput(importDefaultResultResult, "react"));
     return () => {
       let str = arg0;
       if (arg0 === undefined) {

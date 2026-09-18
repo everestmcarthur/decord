@@ -1,13 +1,13 @@
-// Module ID: 6399
-// Function ID: 6400
+// Module ID: 6481
+// Function ID: 6482
 // Name: NitroRubyBadgeLargeBadge
-// Dependencies: [21, 5675, 6400, 2]
+// Dependencies: [21, 5757, 6482, 2]
 // Exports: NitroRubyBadgeLargeBadge
 
-// Module 6399 (NitroRubyBadgeLargeBadge)
+// Module 6481 (NitroRubyBadgeLargeBadge)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5675 */;
-import _modDef6400 from "module_6400" /* 6400 */;
+import FastImageDefault from "FastImage" /* 5757 */;
+import _modDef6482 from "module_6482" /* 6482 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const NitroRubyBadgeLargeBadge = function NitroRubyBadgeLargeBadge(width)
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6400 };
+  const obj2 = { uri: _modDef6482 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

@@ -1,13 +1,13 @@
-// Module ID: 16695
-// Function ID: 16696
+// Module ID: 16792
+// Function ID: 16793
 // Name: useComponentRenderSpan
-// Dependencies: [19, 3, 16696, 16697, 16698, 2]
+// Dependencies: [19, 3, 16793, 16794, 16795, 2]
 // Exports: useComponentRenderSpan
 
-// Module 16695 (useComponentRenderSpan)
+// Module 16792 (useComponentRenderSpan)
 import LoggerDefault from "Logger" /* 3 */;
-import NavigationSpanTypes from "NavigationSpanTypes" /* 16696 */;
-import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 16697 */;
+import NavigationSpanTypes from "NavigationSpanTypes" /* 16793 */;
+import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 16794 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -145,9 +145,9 @@ export const useComponentRenderSpan = function useComponentRenderSpan(name) {
             current = logger.current;
             if (null != current) {
               if (current.navigationKey === CACHED_PREVIOUS_DESTINATION) {
-                CACHED_PREVIOUS_DESTINATION = spanComponent(16696).ComponentMeasurementSource.CACHED_SAME_DESTINATION;
+                CACHED_PREVIOUS_DESTINATION = spanComponent(16793).ComponentMeasurementSource.CACHED_SAME_DESTINATION;
               } else {
-                CACHED_PREVIOUS_DESTINATION = spanComponent(16696).ComponentMeasurementSource.CACHED_PREVIOUS_DESTINATION;
+                CACHED_PREVIOUS_DESTINATION = spanComponent(16793).ComponentMeasurementSource.CACHED_PREVIOUS_DESTINATION;
               }
               const _requestAnimationFrame = requestAnimationFrame;
               closure_2 = requestAnimationFrame(() => {
@@ -158,7 +158,7 @@ export const useComponentRenderSpan = function useComponentRenderSpan(name) {
           } else {
             const _performance = performance;
             ({ width, height } = current3);
-            closure_10(tmp, performance.now(), width, height, spanComponent(16696).ComponentMeasurementSource.ON_LAYOUT);
+            closure_10(tmp, performance.now(), width, height, spanComponent(16793).ComponentMeasurementSource.ON_LAYOUT);
             const nowResult = performance.now();
           }
         }

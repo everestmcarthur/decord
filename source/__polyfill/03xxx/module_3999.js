@@ -1,11 +1,11 @@
 // Module ID: 3999
 // Function ID: 4000
-// Dependencies: [3728, 3729]
+// Dependencies: [3811, 3812]
 // Exports: default
 
 // Module 3999
-import _typeof_mod from "module_3728" /* 3728 */;
-import requiredArgs_mod from "requiredArgs" /* 3729 */;
+import _typeof_mod from "module_3811" /* 3811 */;
+import requiredArgs_mod from "requiredArgs" /* 3812 */;
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -24,12 +24,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function getISODay(arg0) {
+export default function getQuarter(arg0) {
   requiredArgs.default(1, arguments);
-  let num = _typeof.default(arg0).getDay();
-  if (0 === num) {
-    num = 7;
-  }
-  return num;
+  return Math.floor(_typeof.default(arg0).getMonth() / 3) + 1;
 };
 export default exports.default;

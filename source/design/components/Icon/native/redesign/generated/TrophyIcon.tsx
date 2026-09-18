@@ -1,13 +1,13 @@
-// Module ID: 8867
-// Function ID: 8868
+// Module ID: 8951
+// Function ID: 8952
 // Name: TrophyIcon
-// Dependencies: [19, 21, 576, 4340, 8285, 2]
+// Dependencies: [19, 21, 576, 4422, 8367, 2]
 // Exports: TrophyIcon
 
-// Module 8867 (TrophyIcon)
+// Module 8951 (TrophyIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4340 */;
-import _mod8285 from "module_8285" /* 8285 */;
+import BaseIconImage from "BaseIconImage" /* 4422 */;
+import _mod8367 from "module_8367" /* 8367 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const TrophyIcon = function TrophyIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8285, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8367, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

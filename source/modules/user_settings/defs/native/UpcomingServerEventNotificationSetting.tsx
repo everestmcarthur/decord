@@ -1,15 +1,15 @@
-// Module ID: 15630
-// Function ID: 15631
+// Module ID: 15725
+// Function ID: 15726
 // Name: UpcomingServerEventNotificationSetting
-// Dependencies: [8111, 15631, 11622, 1115, 1936, 15632, 2]
+// Dependencies: [8194, 15726, 11714, 1115, 1936, 15727, 2]
 
-// Module 15630 (UpcomingServerEventNotificationSetting)
+// Module 15725 (UpcomingServerEventNotificationSetting)
 import util from "util" /* 1115 */;
 import UserSettings from "UserSettings" /* 1936 */;
-import SettingsConstants from "SettingsConstants" /* 8111 */;
-import UpcomingServerEventExperiment from "UpcomingServerEventExperiment" /* 15631 */;
-import UpcomingServerEventNotificationUtils from "UpcomingServerEventNotificationUtils" /* 15632 */;
-import SettingBuilders from "SettingBuilders" /* 11622 */;
+import SettingsConstants from "SettingsConstants" /* 8194 */;
+import UpcomingServerEventExperiment from "UpcomingServerEventExperiment" /* 15726 */;
+import UpcomingServerEventNotificationUtils from "UpcomingServerEventNotificationUtils" /* 15727 */;
+import SettingBuilders from "SettingBuilders" /* 11714 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({

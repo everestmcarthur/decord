@@ -1,13 +1,13 @@
-// Module ID: 10261
-// Function ID: 10262
+// Module ID: 10355
+// Function ID: 10356
 // Name: AttachmentIcon
-// Dependencies: [19, 21, 576, 4340, 10262, 2]
+// Dependencies: [19, 21, 576, 4422, 10356, 2]
 // Exports: AttachmentIcon
 
-// Module 10261 (AttachmentIcon)
+// Module 10355 (AttachmentIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4340 */;
-import _mod10262 from "module_10262" /* 10262 */;
+import BaseIconImage from "BaseIconImage" /* 4422 */;
+import _mod10356 from "module_10356" /* 10356 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const AttachmentIcon = function AttachmentIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10262, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10356, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

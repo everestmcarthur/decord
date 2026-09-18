@@ -1,17 +1,17 @@
-// Module ID: 9412
-// Function ID: 9413
+// Module ID: 9496
+// Function ID: 9497
 // Name: PlayStationLinkPreConnect
-// Dependencies: [19, 9409, 21, 4640, 1484, 9413, 9384, 1115, 2]
+// Dependencies: [19, 9493, 21, 4722, 1484, 9497, 9468, 1115, 2]
 // Exports: PlayStationLinkPreConnect
 
-// Module 9412 (PlayStationLinkPreConnect)
-import _modDef9413 from "module_9413" /* 9413 */;
+// Module 9496 (PlayStationLinkPreConnect)
+import _modDef9497 from "module_9497" /* 9497 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-let closure_4 = fn(9409).PlayStationLinkModalScenes;
+let closure_4 = fn(9493).PlayStationLinkModalScenes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let closure_6 = createStyles.createStyles({ image: { width: 231, height: 160 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkPreConnect.tsx");
@@ -28,11 +28,11 @@ export const PlayStationLinkPreConnect = function PlayStationLinkPreConnect(plat
   const callback1 = noop.useCallback(() => {
     navigation.push(constants.ERROR, {});
   }, items1);
-  const memo = noop.useMemo(() => ({ uri: _modDef9413 }), []);
+  const memo = noop.useMemo(() => ({ uri: _modDef9497 }), []);
   const obj2 = { platformType: platformType.platformType, onError: callback1, onNext: callback, img: memo, imgStyle: tmp.image, title: null, body: null };
   const intl = navigation(1115).intl;
   obj2.title = intl.string(navigation(1115).t["6n+UPR"]);
   const intl2 = navigation(1115).intl;
   obj2.body = intl2.string(navigation(1115).t.JaaqIf);
-  return jsx(navigation(9384).TwoWayLinkPreConnect, { platformType: platformType.platformType, onError: callback1, onNext: callback, img: memo, imgStyle: tmp.image, title: null, body: null });
+  return jsx(navigation(9468).TwoWayLinkPreConnect, { platformType: platformType.platformType, onError: callback1, onNext: callback, img: memo, imgStyle: tmp.image, title: null, body: null });
 };

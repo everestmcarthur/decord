@@ -1,16 +1,16 @@
-// Module ID: 14781
-// Function ID: 14782
+// Module ID: 14875
+// Function ID: 14876
 // Name: UserSettingsWebAuthn
-// Dependencies: [19, 14779, 21, 14782, 7114, 2]
+// Dependencies: [19, 14873, 21, 14876, 7196, 2]
 // Exports: default
 
-// Module 14781 (UserSettingsWebAuthn)
-import Navigator from "Navigator" /* 7114 */;
-import WebAuthnScreens2 from "WebAuthnScreens" /* 14782 */;
+// Module 14875 (UserSettingsWebAuthn)
+import Navigator from "Navigator" /* 7196 */;
+import WebAuthnScreens2 from "WebAuthnScreens" /* 14876 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const WebAuthnScreens = fn(14779).WebAuthnScreens;
+const WebAuthnScreens = fn(14873).WebAuthnScreens;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/webauthn/native/UserSettingsWebAuthn.tsx");

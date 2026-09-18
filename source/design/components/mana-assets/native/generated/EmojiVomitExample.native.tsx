@@ -1,13 +1,13 @@
-// Module ID: 6065
-// Function ID: 6066
+// Module ID: 6147
+// Function ID: 6148
 // Name: EmojiVomitExample
-// Dependencies: [21, 5675, 6066, 2]
+// Dependencies: [21, 5757, 6148, 2]
 // Exports: EmojiVomitExample
 
-// Module 6065 (EmojiVomitExample)
+// Module 6147 (EmojiVomitExample)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5675 */;
-import _modDef6066 from "module_6066" /* 6066 */;
+import FastImageDefault from "FastImage" /* 5757 */;
+import _modDef6148 from "module_6148" /* 6148 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const EmojiVomitExample = function EmojiVomitExample(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6066 };
+  const obj2 = { uri: _modDef6148 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

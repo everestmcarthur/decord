@@ -1,16 +1,16 @@
-// Module ID: 11657
-// Function ID: 11658
+// Module ID: 11749
+// Function ID: 11750
 // Name: AppStoreOverlayStatsCarousel
-// Dependencies: [19, 17, 21, 4640, 576, 11658, 1115, 11659, 4636, 1364, 6766, 2]
+// Dependencies: [19, 17, 21, 4722, 576, 11750, 1115, 11751, 4718, 1364, 6848, 2]
 // Exports: default
 
-// Module 11657 (AppStoreOverlayStatsCarousel)
+// Module 11749 (AppStoreOverlayStatsCarousel)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4636 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6766 */;
-import AppStoreOverlayStatCardUtils from "AppStoreOverlayStatCardUtils" /* 11658 */;
-import AppStoreOverlayStarRatingDefault from "AppStoreOverlayStarRating" /* 11659 */;
+import Text_Text from "Text/Text" /* 4718 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6848 */;
+import AppStoreOverlayStatCardUtils from "AppStoreOverlayStatCardUtils" /* 11750 */;
+import AppStoreOverlayStarRatingDefault from "AppStoreOverlayStarRating" /* 11751 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -30,8 +30,8 @@ function AppStoreOverlayStatCardItem(onRatingPress) {
     const result = AppStoreOverlayStatCardUtils.formatAppStoreRatingValue(stat.rating, util.intl.currentLocale);
     let result1;
     if (null != stat.ratingCount) {
-      result1 = tmp9(11658).formatAppStoreRatingCount(stat.ratingCount, tmp9(1115).intl.currentLocale);
-      const tmp9Result = tmp9(11658);
+      result1 = tmp9(11750).formatAppStoreRatingCount(stat.ratingCount, tmp9(1115).intl.currentLocale);
+      const tmp9Result = tmp9(11750);
     }
     const appStoreStarFillAmounts = AppStoreOverlayStatCardUtils.getAppStoreStarFillAmounts(stat.rating, num);
     const intl = tmp9(1115).intl;
@@ -90,7 +90,7 @@ function AppStoreOverlayStatCardItem(onRatingPress) {
     const obj8 = { style: tmp.secondaryRow, children: null };
     if (null == secondaryContent) {
       const obj9 = { variant: "text-xs/medium", color: "text-subtle", lineClamp: 1, children: secondaryText };
-      secondaryContent = tmp23(tmp20(4636).Text, obj9);
+      secondaryContent = tmp23(tmp20(4718).Text, obj9);
     }
     obj8.children = secondaryContent;
     tmp23Result = tmp23(hasOwnProperty, obj8);
@@ -118,7 +118,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: c3, ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 const obj2 = { carousel: { marginHorizontal: -nativeDefault.space.PX_16 }, carouselContent: null, statCard: null, statCardExpanded: null, expandedCarouselContent: null, secondaryRow: null };
 let obj3 = { marginHorizontal: -nativeDefault.space.PX_16 };
 obj2.carouselContent = { gap: nativeDefault.space.PX_16, paddingLeft: nativeDefault.space.PX_16, paddingRight: nativeDefault.space.PX_16 };

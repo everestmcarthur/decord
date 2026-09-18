@@ -1,27 +1,27 @@
-// Module ID: 9793
-// Function ID: 9794
+// Module ID: 9887
+// Function ID: 9888
 // Name: EmbeddedActivityWebView
-// Dependencies: [5, 32, 19, 17, 9010, 1921, 1074, 4544, 21, 4640, 3, 1364, 9794, 1255, 8447, 9795, 9796, 1363, 9798, 9799, 1241, 1110, 563, 4984, 1115, 1271, 9800, 1366, 9671, 9704, 8421, 4841, 9669, 2]
+// Dependencies: [5, 32, 19, 17, 9094, 1921, 1074, 4626, 21, 4722, 3, 1364, 9888, 1255, 8530, 9889, 9890, 1363, 9892, 9893, 1241, 1110, 563, 5066, 1115, 9750, 1271, 9894, 1366, 9755, 9798, 8504, 4923, 9753, 2]
 // Exports: default, useHasInvalidUrlErrorState
 
-// Module 9793 (EmbeddedActivityWebView)
+// Module 9887 (EmbeddedActivityWebView)
 import LoggerDefault from "Logger" /* 3 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1110 */;
 import util from "util" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import v1 from "v1" /* 1255 */;
 import URLUtilsDefault from "URLUtils" /* 1366 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4841 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4984 */;
-import usePreviousDefault from "usePrevious" /* 8421 */;
-import WebView from "WebView" /* 8447 */;
-import EmbeddedActivitiesNativeManagerDefault from "EmbeddedActivitiesNativeManager" /* 9669 */;
-import getPostMessageJavaScriptDefault from "getPostMessageJavaScript" /* 9671 */;
-import WebViewPostMessageTransportDefault from "WebViewPostMessageTransport" /* 9704 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4923 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5066 */;
+import usePreviousDefault from "usePrevious" /* 8504 */;
+import WebView from "WebView" /* 8530 */;
+import EmbeddedActivitiesNativeManagerDefault from "EmbeddedActivitiesNativeManager" /* 9753 */;
+import getPostMessageJavaScriptDefault from "getPostMessageJavaScript" /* 9755 */;
+import WebViewPostMessageTransportDefault from "WebViewPostMessageTransport" /* 9798 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 9010 */;
+import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 9094 */;
 
 require = fn;
 function getSafeArea(arg0, arg1) {
@@ -377,69 +377,74 @@ class BaseActivityWebView {
             }
           }
           closure_2 = async function _fetchAndParseCSP(arg0, value) {
-            if (c4 === 2) {
-              c4 = 3;
+            if (c5 === 2) {
+              c5 = 3;
               throw new TypeError("Generator functions may not be called on executing generators");
             } else if (tmp5 === 3) {
               if (arg0 === 1) {
                 throw value;
               } else if (arg0 === 2) {
-                const obj2 = { value, done: true };
-                return obj2;
+                const obj3 = { value, done: true };
+                return obj3;
               } else {
                 return { value: "HermesInternal", done: null };
               }
             } else {
               try {
-                c4 = 2;
-                if (0 === c3) {
+                c5 = 2;
+                if (0 === c4) {
                   if (arg0 === 1) {
-                    c4 = 3;
+                    c5 = 3;
                     throw value;
                   } else if (arg0 === 2) {
-                    c4 = 3;
-                    const obj3 = { value, done: true };
-                    return obj3;
+                    c5 = 3;
+                    const obj4 = { value, done: true };
+                    return obj4;
                   } else {
+                    closure_3 = tmp2;
                     closure_2 = tmp3;
-                    closure_1 = tmp2;
-                    closure_129_0 = undefined;
-                    closure_129_1 = undefined;
-                    closure_129_2 = undefined;
-                    const _HermesInternal = HermesInternal;
-                    combined = "https://" + applicationId + ".discordsays.com";
-                    closure_129_0 = combined;
-                    const HTTP = require("HTTPUtils").HTTP;
-                    const obj4 = { url: null, rejectWithError: false };
-                    const _HermesInternal2 = HermesInternal;
-                    obj4.url = "" + combined + "/.discord/csp";
-                    c3 = 1;
-                    c4 = 1;
-                    const obj5 = { value: HTTP.get(obj4), done: false };
-                    return obj5;
+                    closure_130_0 = undefined;
+                    closure_130_1 = undefined;
+                    closure_130_2 = undefined;
+                    if (null != applicationId) {
+                      const nonTestModeUrlForApplication = require("getURLForApplication").getNonTestModeUrlForApplication(tmp33);
+                      closure_0 = nonTestModeUrlForApplication;
+                      if (nonTestModeUrlForApplication == null) {
+                        const _HermesInternal = HermesInternal;
+                        closure_0 = "https://" + tmp33 + ".discordsays.com";
+                      }
+                      closure_130_0 = closure_0;
+                      const HTTP = require("HTTPUtils").HTTP;
+                      const obj5 = { url: null, rejectWithError: false };
+                      const _HermesInternal2 = HermesInternal;
+                      obj5.url = "" + closure_0 + "/.discord/csp";
+                      c4 = 1;
+                      c5 = 1;
+                      const obj6 = { value: HTTP.get(obj5), done: false };
+                      return obj6;
+                    } else {
+                      c5 = 3;
+                    }
                   }
                 } else if (arg0 === 1) {
-                  c4 = 3;
+                  c5 = 3;
                   throw value;
-                } else if (arg0 === 2) {
-                  c4 = 3;
-                  const obj = { value, done: true };
-                  return obj;
-                } else {
-                  closure_129_1 = value.headers["content-security-policy"];
-                  const items = ["about:blank", "file://*", closure_129_0];
-                  closure_0 = 3;
-                  closure_0 = HermesBuiltin.arraySpread(closure_130_1(/frame-src (.*?);/, closure_129_1), closure_0);
-                  closure_0 = HermesBuiltin.arraySpread(closure_130_1(/child-src (.*?);/, closure_129_1), closure_0);
-                  closure_129_2 = items;
-                  closure_1_30(closure_129_2.map((item) => "^" + closure_1_1(closure_1_3[26])(item).replace(/\\\*/g, ".*")));
+                } else if (arg0 !== 2) {
+                  closure_130_1 = value.headers["content-security-policy"];
+                  const items = ["about:blank", "file://*", closure_130_0];
+                  closure_1 = 3;
+                  closure_1 = HermesBuiltin.arraySpread(closure_131_1(/frame-src (.*?);/, closure_130_1), closure_1);
+                  closure_1 = HermesBuiltin.arraySpread(closure_131_1(/child-src (.*?);/, closure_130_1), closure_1);
+                  closure_130_2 = items;
+                  closure_1_30(closure_130_2.map((item) => "^" + closure_1_1(closure_1_3[27])(item).replace(/\\\*/g, ".*")));
                   closure_1_28(true);
-                  c4 = 3;
-                  return { value: "HermesInternal", done: null };
                 }
-              } catch (tmp7) {
-                c4 = tmp;
-                throw tmp7;
+                c5 = 3;
+                const obj = { value, done: true };
+                return obj;
+              } catch (tmp13) {
+                c5 = tmp;
+                throw tmp13;
               }
             }
           };
@@ -903,9 +908,9 @@ let Constants = fn(1921);
 ({ ActivityPlatform: closure_9, DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY: c10 } = Constants);
 Constants = fn(1074);
 ({ ComponentActions: closure_11, AnalyticEvents: closure_12 } = Constants);
-const TransportTypes = fn(4544).TransportTypes;
+const TransportTypes = fn(4626).TransportTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let closure_15 = createStyles.createStyles({ webView: { backgroundColor: "transparent" } });
 let closure_16 = new LoggerDefault("EmbeddedActivityWebView");
 const PlatformUtils = fn(1364);
@@ -920,7 +925,7 @@ export default function EmbeddedActivityWebView(channelId) {
   const merged = Object.assign(channelId, Object.assign({ channelId: 0, currentEmbeddedActivity: 0, applicationId: 0 }));
   const tmp2 = _slicedToArray(noop.useState(false), 2);
   const hasInvalidUrlError = tmp2[0];
-  const tmp4 = currentEmbeddedActivity(hasInvalidUrlError[30])(hasInvalidUrlError);
+  const tmp4 = currentEmbeddedActivity(hasInvalidUrlError[31])(hasInvalidUrlError);
   closure_4 = tmp4;
   let obj2 = {};
   if (null != currentEmbeddedActivity) {
@@ -951,11 +956,11 @@ export default function EmbeddedActivityWebView(channelId) {
   }, items);
   const merged1 = Object.assign(merged);
   return <BaseActivityWebView hasIframeId={function hasIframeId() {
-    return currentEmbeddedActivity(first[32]).hasIframeId();
+    return currentEmbeddedActivity(first[33]).hasIframeId();
   }} getOrCreateIframeId={function getOrCreateIframeId() {
-    return currentEmbeddedActivity(first[32]).getOrCreateIframeId();
+    return currentEmbeddedActivity(first[33]).getOrCreateIframeId();
   }} releaseIframeId={function releaseIframeId() {
-    return currentEmbeddedActivity(first[32]).releaseIframeId();
+    return currentEmbeddedActivity(first[33]).releaseIframeId();
   }} hasInvalidUrlError={hasInvalidUrlError} setHasInvalidUrlError={tmp2[1]} hadInvalidUrlError={tmp4} deepLinkQueryParams={obj2} applicationId={applicationId} channelId={channelId} />;
 };
 export { BaseActivityWebView };

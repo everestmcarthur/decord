@@ -1,16 +1,16 @@
-// Module ID: 10311
-// Function ID: 10312
+// Module ID: 10405
+// Function ID: 10406
 // Name: StaticChannelIndicator
-// Dependencies: [17, 4822, 21, 4640, 576, 4341, 2]
+// Dependencies: [17, 4904, 21, 4722, 576, 4423, 2]
 // Exports: default
 
-// Module 10311 (StaticChannelIndicator)
+// Module 10405 (StaticChannelIndicator)
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 576 */;
-import useToken from "useToken" /* 4341 */;
-import ReadStateConstants from "ReadStateConstants" /* 4822 */;
+import useToken from "useToken" /* 4423 */;
+import ReadStateConstants from "ReadStateConstants" /* 4904 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
-import createStyles from "createStyles" /* 4640 */;
+import createStyles from "createStyles" /* 4722 */;
 import size_mod from "module_2" /* 2 */;
 
 ({ View: c3, StyleSheet } = get_ActivityIndicator);

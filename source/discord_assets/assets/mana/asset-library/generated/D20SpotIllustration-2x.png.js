@@ -1,8 +1,8 @@
-// Module ID: 5994
-// Function ID: 5995
+// Module ID: 6076
+// Function ID: 6077
 // Dependencies: [2]
 
-// Module 5994
+// Module 6076
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/D20SpotIllustration-2x.png.js");

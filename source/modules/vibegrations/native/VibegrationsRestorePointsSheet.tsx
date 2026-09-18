@@ -1,16 +1,16 @@
-// Module ID: 16790
-// Function ID: 16791
+// Module ID: 16913
+// Function ID: 16914
 // Name: VibegrationsRestorePointsSheet
-// Dependencies: [32, 19, 17, 16752, 21, 4640, 576, 4321, 4231, 1612, 16791, 4990, 1115, 3593, 7309, 4607, 9868, 1897, 4636, 5775, 7755, 5693, 7311, 7263, 6738, 6717, 5062, 2]
+// Dependencies: [32, 19, 17, 16849, 21, 4722, 576, 4404, 4314, 1612, 16914, 5072, 1115, 3676, 7391, 4689, 9962, 1897, 4718, 5857, 7837, 5775, 7393, 7345, 6820, 6799, 5144, 2]
 // Exports: default
 
-// Module 16790 (VibegrationsRestorePointsSheet)
+// Module 16913 (VibegrationsRestorePointsSheet)
 import nativeDefault from "native" /* 576 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
-import _modDef4231 from "module_4231" /* 4231 */;
-import DateUtils from "DateUtils" /* 4321 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4607 */;
-import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 7309 */;
+import _modDef4314 from "module_4314" /* 4314 */;
+import DateUtils from "DateUtils" /* 4404 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4689 */;
+import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 7391 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,11 +19,11 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const VibegrationsConnectionStore = fn(16752);
+const VibegrationsConnectionStore = fn(16849);
 ({ createDatabaseRestorePoint: closure_7, fetchDatabaseRestorePoints: closure_8, fetchDatabaseRestoreWindow: closure_9, restoreDatabaseToPoint: c10, restoreDatabaseToTimestamp: closure_11 } = VibegrationsConnectionStore);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = { content: { gap: nativeDefault.space.PX_16 }, section: null, state: null, notice: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj2.section = { gap: nativeDefault.space.PX_8 };
@@ -150,24 +150,24 @@ export default function VibegrationsRestorePointsSheet(projectId) {
       closure_0().then((ok) => {
         if (ok.ok) {
           const intl4 = closure_0(1115).intl;
-          closure_1_15(dependencyMap, "positive", intl4.string(_undefined(3593).kIWqXR));
+          closure_1_15(dependencyMap, "positive", intl4.string(_undefined(3676).kIWqXR));
           closure_1_12();
         } else if ("expired" === ok.code) {
           const intl3 = closure_0(1115).intl;
-          const obj = { days: closure_0(16791).RESTORE_WINDOW_DAYS };
-          closure_1_15(dependencyMap, "danger", intl3.formatToPlainString(_undefined(3593).PeVYaC, obj));
+          const obj = { days: closure_0(16914).RESTORE_WINDOW_DAYS };
+          closure_1_15(dependencyMap, "danger", intl3.formatToPlainString(_undefined(3676).PeVYaC, obj));
           closure_1_12();
         } else if ("unconfirmed" === ok.code) {
           const intl2 = closure_0(1115).intl;
-          closure_1_15(dependencyMap, "danger", intl2.string(_undefined(3593)["2xSPXh"]));
+          closure_1_15(dependencyMap, "danger", intl2.string(_undefined(3676)["2xSPXh"]));
           closure_1_12();
         } else {
           const intl = closure_0(1115).intl;
-          closure_1_15(dependencyMap, "danger", intl.string(_undefined(3593).kXofol));
+          closure_1_15(dependencyMap, "danger", intl.string(_undefined(3676).kXofol));
         }
       }).catch(() => {
         const intl = closure_0(1115).intl;
-        closure_1_15(dependencyMap, "danger", intl.string(_undefined(3593).kXofol));
+        closure_1_15(dependencyMap, "danger", intl.string(_undefined(3676).kXofol));
       });
     };
     projectId(first[11]).showConfirmModal(obj2);
@@ -188,7 +188,7 @@ export default function VibegrationsRestorePointsSheet(projectId) {
     });
   }, items2);
   let intl = tmp4(tmp3[12]).intl;
-  let stringResult = intl.string(require("module_3593").CNvRyJ);
+  let stringResult = intl.string(require("module_3676").CNvRyJ);
   c17 = stringResult;
   const items3 = [stringResult, result];
   const callback3 = obj2.useCallback(() => {
@@ -219,21 +219,21 @@ export default function VibegrationsRestorePointsSheet(projectId) {
     if ("date" === mode) {
       str = "VibegrationsRestoreDate";
     }
-    obj.openLazy(asyncRequireImpl(9868, dependencyMap.paths), str, { mode, title: stringResult1, startDate, minimumDate: minimumDate[0], maximumDate: minimumDate[1], onSubmit }, "stack");
+    obj.openLazy(asyncRequireImpl(9962, dependencyMap.paths), str, { mode, title: stringResult1, startDate, minimumDate: minimumDate[0], maximumDate: minimumDate[1], onSubmit }, "stack");
   }, items4);
   const items5 = [prop, num, callback4, first2];
   const callback5 = obj2.useCallback(() => {
-    const obj = _modDef4231(prop);
-    let items = [_modDef4231(prop).startOf("day").toDate(), ];
-    const startOfResult = _modDef4231(prop).startOf("day");
+    const obj = _modDef4314(prop);
+    let items = [_modDef4314(prop).startOf("day").toDate(), ];
+    const startOfResult = _modDef4314(prop).startOf("day");
     const tmp = num;
-    const obj3 = _modDef4231(num);
-    items[1] = _modDef4231(num).endOf("day").toDate();
+    const obj3 = _modDef4314(num);
+    items[1] = _modDef4314(num).endOf("day").toDate();
     let tmp3 = first2;
     if (first2 == null) {
       tmp3 = tmp;
     }
-    const endOfResult = _modDef4231(num).endOf("day");
+    const endOfResult = _modDef4314(num).endOf("day");
     const tmp2 = callback4;
     tmp2("date", new Date(tmp3), items, (arg0) => {
       closure_0 = arg0;
@@ -303,7 +303,7 @@ export default function VibegrationsRestorePointsSheet(projectId) {
       obj2.disabled = expired;
       obj2.onPress = function onPress() {
         if (null != parsed) {
-          let createdAt = DateUtils.dateFormat(_modDef4231(tmp3), "LLL");
+          let createdAt = DateUtils.dateFormat(_modDef4314(tmp3), "LLL");
         } else {
           createdAt = tmp2.createdAt;
         }
@@ -316,7 +316,7 @@ export default function VibegrationsRestorePointsSheet(projectId) {
   const obj11 = { scrollable: true, keyboardShouldPersistTaps: "handled", header: null, children: null };
   const obj12 = { title: null };
   const intl5 = tmp4(tmp3[12]).intl;
-  obj12.title = intl5.string(require("module_3593").FRjicO);
+  obj12.title = intl5.string(require("module_3676").FRjicO);
   obj11.header = tmp31(projectId(environment[23]).BottomSheetTitleHeader, obj12);
   const obj13 = { contentContainerStyle: { paddingBottom: require("useSafeAreaInsets")().bottom }, children: null };
   const obj14 = { style: tmp.content, children: null };
@@ -334,7 +334,7 @@ export default function VibegrationsRestorePointsSheet(projectId) {
   const items6 = [tmp31Result, , , , , ];
   const intl6 = tmp4(tmp3[12]).intl;
   const tmp4Result = projectId(environment[10]);
-  const items7 = [intl6.formatToPlainString(require("module_3593").l07ism, { days: projectId(environment[10]).RESTORE_WINDOW_DAYS }), ];
+  const items7 = [intl6.formatToPlainString(require("module_3676").l07ism, { days: projectId(environment[10]).RESTORE_WINDOW_DAYS }), ];
   let str3 = "";
   if (null != _window) {
     const _HermesInternal2 = HermesInternal;
@@ -374,13 +374,13 @@ export default function VibegrationsRestorePointsSheet(projectId) {
   const obj23 = { style: tmp.section, children: null };
   const obj24 = { label: null, value: null, onChange: null, maxLength: 200, disabled: null };
   const intl8 = tmp4(tmp3[12]).intl;
-  obj24.label = intl8.string(require("module_3593").hJb78b);
+  obj24.label = intl8.string(require("module_3676").hJb78b);
   obj24.value = first1;
   obj24.disabled = tmp15;
   const items9 = [tmp31(projectId(environment[25]).TextInput, obj24), ];
   const obj25 = { variant: "secondary", text: null, loading: null, disabled: null, onPress: null };
   const intl9 = tmp4(tmp3[12]).intl;
-  obj25.text = intl9.string(require("module_3593")["14UarN"]);
+  obj25.text = intl9.string(require("module_3676")["14UarN"]);
   let tmp46 = "busy" === tmp14.phase;
   if (tmp46) {
     tmp46 = "create" === tmp14.kind;
@@ -409,7 +409,7 @@ export default function VibegrationsRestorePointsSheet(projectId) {
   const items10 = [tmp31(projectId(environment[19]).TableRowGroup, { hasIcons: false, children: tmp31(projectId(environment[21]).TableRow, obj27) }), ];
   const obj29 = { variant: "critical-primary", text: null, disabled: null, onPress: null };
   const intl10 = tmp4(tmp3[12]).intl;
-  obj29.text = intl10.string(require("module_3593")["3D/vYN"]);
+  obj29.text = intl10.string(require("module_3676")["3D/vYN"]);
   if (!tmp15) {
     tmp15 = !(null != first2 && first2 >= prop && first2 <= num);
     const tmp49 = null != first2 && first2 >= prop && first2 <= num;
@@ -417,7 +417,7 @@ export default function VibegrationsRestorePointsSheet(projectId) {
   obj29.disabled = tmp15;
   obj29.onPress = function onPress() {
     if (null != first2) {
-      closure_16(DateUtils.dateFormat(_modDef4231(tmp), "LLL"), () => c11(projectId, environment, first2));
+      closure_16(DateUtils.dateFormat(_modDef4314(tmp), "LLL"), () => c11(projectId, environment, first2));
     }
   };
   items10[1] = tmp31(projectId(environment[26]).Button, obj29);

@@ -1,11 +1,11 @@
-// Module ID: 16865
-// Function ID: 16866
+// Module ID: 17005
+// Function ID: 17006
 // Name: NavTTISurfaceProvider
-// Dependencies: [19, 17, 21, 16690, 16697, 16698, 2]
+// Dependencies: [19, 17, 21, 16787, 16794, 16795, 2]
 // Exports: NavTTISurfaceProvider
 
-// Module 16865 (NavTTISurfaceProvider)
-import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 16697 */;
+// Module 17005 (NavTTISurfaceProvider)
+import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 16794 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;

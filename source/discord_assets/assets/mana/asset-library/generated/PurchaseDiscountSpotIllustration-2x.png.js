@@ -1,8 +1,8 @@
-// Module ID: 6482
-// Function ID: 6483
+// Module ID: 6564
+// Function ID: 6565
 // Dependencies: [2]
 
-// Module 6482
+// Module 6564
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/PurchaseDiscountSpotIllustration-2x.png.js");

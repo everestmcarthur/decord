@@ -1,9 +1,9 @@
-// Module ID: 13812
-// Function ID: 13813
+// Module ID: 13904
+// Function ID: 13905
 // Name: NativeInstallTimeModule
 // Dependencies: [17, 2]
 
-// Module 13812 (NativeInstallTimeModule)
+// Module 13904 (NativeInstallTimeModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

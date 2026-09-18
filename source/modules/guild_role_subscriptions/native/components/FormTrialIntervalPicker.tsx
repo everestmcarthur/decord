@@ -1,14 +1,14 @@
-// Module ID: 18022
-// Function ID: 18023
+// Module ID: 18116
+// Function ID: 18117
 // Name: FormTrialIntervalPicker
-// Dependencies: [19, 21, 14010, 1115, 15346, 4607, 9580, 1897, 2]
+// Dependencies: [19, 21, 14104, 1115, 15440, 4689, 9664, 1897, 2]
 // Exports: default
 
-// Module 18022 (FormTrialIntervalPicker)
+// Module 18116 (FormTrialIntervalPicker)
 import util from "util" /* 1115 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4607 */;
-import FormDropdownDefault from "FormDropdown" /* 14010 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4689 */;
+import FormDropdownDefault from "FormDropdown" /* 14104 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -26,8 +26,8 @@ export default function FormTrialIntervalPicker(disabled) {
     let intl = interval(1115).intl;
     let stringResult = intl.string(interval(1115).t.WZG1BU);
   } else {
-    stringResult = interval(15346).formatPlanIntervalDuration(interval);
-    let obj = interval(15346);
+    stringResult = interval(15440).formatPlanIntervalDuration(interval);
+    let obj = interval(15440);
   }
   return jsx(FormDropdownDefault, {
     label: stringResult,
@@ -48,7 +48,7 @@ export default function FormTrialIntervalPicker(disabled) {
         tmp3 = null;
       }
       obj2.selectedItem = tmp3;
-      obj.openLazy(asyncRequireImpl(9580, dependencyMap.paths), GuildRoleSubscriptionTrialIntervalSelect, obj2);
+      obj.openLazy(asyncRequireImpl(9664, dependencyMap.paths), GuildRoleSubscriptionTrialIntervalSelect, obj2);
     },
     disabled: disabled.disabled
   });

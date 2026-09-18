@@ -1,12 +1,12 @@
-// Module ID: 16199
-// Function ID: 16200
+// Module ID: 16296
+// Function ID: 16297
 // Name: MessagesItemChannelWave
-// Dependencies: [19, 21, 5062, 1115, 4636, 2]
+// Dependencies: [19, 21, 5144, 1115, 4718, 2]
 
-// Module 16199 (MessagesItemChannelWave)
+// Module 16296 (MessagesItemChannelWave)
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4636 */;
-import components_Button_Button from "components/Button/Button" /* 5062 */;
+import Text_Text from "Text/Text" /* 4718 */;
+import components_Button_Button from "components/Button/Button" /* 5144 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,17 +1,17 @@
-// Module ID: 8887
-// Function ID: 8888
+// Module ID: 8971
+// Function ID: 8972
 // Name: GameProfileLinkAccount
-// Dependencies: [19, 17, 4868, 1372, 21, 4640, 576, 7057, 8888, 8889, 7279, 504, 8833, 1115, 5675, 1177, 4636, 5062, 8891, 2]
+// Dependencies: [19, 17, 4950, 1372, 21, 4722, 576, 7139, 8972, 8973, 7361, 504, 8917, 1115, 5757, 1177, 4718, 5144, 8975, 2]
 // Exports: default
 
-// Module 8887 (GameProfileLinkAccount)
+// Module 8971 (GameProfileLinkAccount)
 import nativeDefault from "native" /* 576 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 7057 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8833 */;
-import GameProfileSection from "GameProfileSection" /* 8888 */;
-import GameProfileSkeleton from "GameProfileSkeleton" /* 8889 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 7139 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8917 */;
+import GameProfileSection from "GameProfileSection" /* 8972 */;
+import GameProfileSkeleton from "GameProfileSkeleton" /* 8973 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 4868 */;
+import ApplicationStore from "ApplicationStore" /* 4950 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const GameProfileSkeletonDefault = GameProfileSkeleton;
@@ -21,7 +21,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let c9 = 48;
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj = { card: { borderRadius: nativeDefault.radii.lg, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 }, cardImagesContainer: null, ellipseGroup: null, ellipse: null, cardImageApplication: null, userAvatar: null, cardContent: null, cardText: null, skeletonCardImage: null, skeletonUserAvatar: null, skeletonEllipse: null, skeletonCardContent: null, skeletonAnimationRoot: null, skeletonCardImagesContainerSmall: null, skeletonCardContentHeading: null, skeletonCardContentBody: null, skeletonCardContentBodySecondary: null };
 let obj3 = { borderRadius: nativeDefault.radii.lg, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 };
 obj.cardImagesContainer = { flexDirection: "row", gap: nativeDefault.space.PX_8, alignItems: "center", alignSelf: "center" };
@@ -80,7 +80,7 @@ let closure_11 = noop.memo(() => {
   let tmp5Result = !tmp4;
   if (!tmp4) {
     const obj13 = { style: tmp.skeletonCardContentBodySecondary };
-    tmp5Result = tmp5(tmp2(8889), obj13);
+    tmp5Result = tmp5(tmp2(8973), obj13);
   }
   const obj14 = { showViewAllSkeleton: false, skeletonTitleWidth: 90, children: null };
   items4[2] = tmp5Result;

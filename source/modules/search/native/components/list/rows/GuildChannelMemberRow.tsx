@@ -1,11 +1,11 @@
-// Module ID: 16926
-// Function ID: 16927
+// Module ID: 17066
+// Function ID: 17067
 // Name: GuildChannelMemberRow
-// Dependencies: [19, 21, 11022, 2]
+// Dependencies: [19, 21, 11116, 2]
 // Exports: default
 
-// Module 16926 (GuildChannelMemberRow)
-import UserRowDefault from "UserRow" /* 11022 */;
+// Module 17066 (GuildChannelMemberRow)
+import UserRowDefault from "UserRow" /* 11116 */;
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;

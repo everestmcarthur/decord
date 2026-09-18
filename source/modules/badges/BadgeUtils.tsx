@@ -1,13 +1,13 @@
-// Module ID: 11353
-// Function ID: 11354
+// Module ID: 11450
+// Function ID: 11451
 // Name: BadgeUtils
-// Dependencies: [8331, 8332, 1115, 8341, 2]
-// Exports: getAlwaysVisibleCopy, getLegacyIconUrlByBadgeId, getUnhideableBadgeIds, groupCustomizableBadges
+// Dependencies: [8413, 8414, 1115, 8423, 2]
+// Exports: getAlwaysVisibleCopy, getDirectoryBadges, getLegacyIconUrlByBadgeId, getUnhideableBadgeIds, groupCustomizableBadges
 
-// Module 11353 (BadgeUtils)
-import Constants from "Constants" /* 8331 */;
-import BadgeId from "BadgeId" /* 8332 */;
-import BadgeIdResolution from "BadgeIdResolution" /* 8341 */;
+// Module 11450 (BadgeUtils)
+import Constants from "Constants" /* 8413 */;
+import BadgeId from "BadgeId" /* 8414 */;
+import BadgeIdResolution from "BadgeIdResolution" /* 8423 */;
 import size from "module_2" /* 2 */;
 
 function isPinnedBadge(badge_id) {
@@ -32,6 +32,22 @@ export const getAlwaysVisibleCopy = function getAlwaysVisibleCopy(badge_id) {
     nPQVxb = tmp(1115).t.nPQVxb;
   }
   return nPQVxb;
+};
+export const getDirectoryBadges = function getDirectoryBadges(stateFromStoresArray) {
+  const earnable = [];
+  const owned = [];
+  const iter = stateFromStoresArray[Symbol.iterator]();
+  const nextResult = iter.next();
+  while (iter !== undefined) {
+    let tmp2 = nextResult;
+    if (nextResult.owned) {
+      let arr = owned.push(tmp2);
+    } else if (tmp2.is_earnable) {
+      let arr2 = earnable.push(tmp2);
+    }
+    continue;
+  }
+  return { earnable, owned };
 };
 export const getUnhideableBadgeIds = function getUnhideableBadgeIds(tenureBadgeHideable) {
   const _Set = Set;

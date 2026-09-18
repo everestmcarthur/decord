@@ -1,9 +1,9 @@
-// Module ID: 11426
-// Function ID: 11427
+// Module ID: 11524
+// Function ID: 11525
 // Name: ChatNativeComponent
 // Dependencies: [26, 106, 65, 114, 2]
 
-// Module 11426 (ChatNativeComponent)
+// Module 11524 (ChatNativeComponent)
 import _mod26 from "module_26" /* 26 */;
 import renderElement from "renderElement" /* 114 */;
 import weakSet from "weakSet" /* 106 */;

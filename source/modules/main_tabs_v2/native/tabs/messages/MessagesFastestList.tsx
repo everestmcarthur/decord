@@ -1,20 +1,20 @@
-// Module ID: 16262
-// Function ID: 16263
+// Module ID: 16359
+// Function ID: 16360
 // Name: MessagesFastestList
-// Dependencies: [19, 21, 4640, 576, 16205, 16190, 16256, 16202, 16200, 16257, 16217, 16255, 16258, 7178, 7176, 7169, 2]
+// Dependencies: [19, 21, 4722, 576, 16302, 16287, 16353, 16299, 16297, 16354, 16314, 16352, 16355, 7260, 7258, 7251, 2]
 
-// Module 16262 (MessagesFastestList)
+// Module 16359 (MessagesFastestList)
 import nativeDefault from "native" /* 576 */;
-import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 7176 */;
-import FastestListItemTypeDefault from "FastestListItemType" /* 7178 */;
-import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 16200 */;
-import useMessagesData from "useMessagesData" /* 16205 */;
-import MessagesItemSeparatorDefault from "MessagesItemSeparator" /* 16256 */;
+import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 7258 */;
+import FastestListItemTypeDefault from "FastestListItemType" /* 7260 */;
+import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 16297 */;
+import useMessagesData from "useMessagesData" /* 16302 */;
+import MessagesItemSeparatorDefault from "MessagesItemSeparator" /* 16353 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let closure_5 = createStyles.createStyles(() => {
   const obj = { placeholder: { backgroundColor: nativeDefault.colors.BORDER_SUBTLE } };
   return obj;
@@ -58,18 +58,18 @@ export default noop.memo(noop.forwardRef(function MessagesFastestList(listItemSi
   const callback = listLeft.useCallback((arg0, row) => {
     if (useMessagesData.MessagesDataSections.FavoriteChannels === arg0) {
       const obj2 = { channelId: channelFavorites[row].channelId, placeholderHeight: listItemHeight, row };
-      return jsx(tmp(16190).MessagesItemChannelFast, { channelId: channelFavorites[row].channelId, placeholderHeight: listItemHeight, row });
-    } else if (tmp(16205).MessagesDataSections.Channels === arg0) {
+      return jsx(tmp(16287).MessagesItemChannelFast, { channelId: channelFavorites[row].channelId, placeholderHeight: listItemHeight, row });
+    } else if (tmp(16302).MessagesDataSections.Channels === arg0) {
       const obj3 = { channelId: channels[row].channelId, placeholderHeight: listItemHeight, row };
-      return jsx(tmp(16190).MessagesItemChannelFast, { channelId: channels[row].channelId, placeholderHeight: listItemHeight, row });
-    } else if (tmp(16205).MessagesDataSections.Separator === arg0) {
+      return jsx(tmp(16287).MessagesItemChannelFast, { channelId: channels[row].channelId, placeholderHeight: listItemHeight, row });
+    } else if (tmp(16302).MessagesDataSections.Separator === arg0) {
       return jsx(MessagesItemSeparatorDefault, {});
-    } else if (tmp(16205).MessagesDataSections.SuggestedFriends === arg0) {
+    } else if (tmp(16302).MessagesDataSections.SuggestedFriends === arg0) {
       const obj4 = { suggestedFriend: friendSuggestions[row], onAddFriendSuggestions: setAddedFriendSuggestions };
       const obj5 = { height: listItemSuggestedFriendHeight };
       const merged = Object.assign(obj4);
-      return jsx(tmp(16202).MessagesItemSuggestedFriendFast, { height: listItemSuggestedFriendHeight });
-    } else if (tmp(16205).MessagesDataSections.Placeholders === arg0) {
+      return jsx(tmp(16299).MessagesItemSuggestedFriendFast, { height: listItemSuggestedFriendHeight });
+    } else if (tmp(16302).MessagesDataSections.Placeholders === arg0) {
       const obj = { row, height: listItemHeight };
       return jsx(MessagesItemPlaceholderDefault, { row, height: listItemHeight });
     } else {
@@ -142,12 +142,12 @@ export default noop.memo(noop.forwardRef(function MessagesFastestList(listItemSi
   const items5 = [channels, channelFavorites];
   const callback1 = listLeft.useCallback((arg0) => {
     if (useMessagesData.MessagesDataSections.FavoriteChannels !== arg0) {
-      if (tmp(16205).MessagesDataSections.Channels !== arg0) {
-        if (tmp(16205).MessagesDataSections.Placeholders !== arg0) {
-          if (tmp(16205).MessagesDataSections.SuggestedFriends === arg0) {
+      if (tmp(16302).MessagesDataSections.Channels !== arg0) {
+        if (tmp(16302).MessagesDataSections.Placeholders !== arg0) {
+          if (tmp(16302).MessagesDataSections.SuggestedFriends === arg0) {
             return listItemSuggestedFriendHeight;
-          } else if (tmp(16205).MessagesDataSections.Separator === arg0) {
-            return tmp(16256).MESSAGES_ITEM_SEPERATOR_HEIGHT;
+          } else if (tmp(16302).MessagesDataSections.Separator === arg0) {
+            return tmp(16353).MESSAGES_ITEM_SEPERATOR_HEIGHT;
           } else {
             const _Error = Error;
             const _HermesInternal = HermesInternal;
@@ -162,11 +162,11 @@ export default noop.memo(noop.forwardRef(function MessagesFastestList(listItemSi
   const items6 = [tmp, listItemSizes];
   const callback2 = listLeft.useCallback((arg0, arg1, arg2) => {
     if (FastestListItemTypeDefault.SECTION_HEADER !== arg0) {
-      if (tmp(7178).SECTION_FOOTER !== arg0) {
-        if (tmp(7178).ITEM === arg0) {
+      if (tmp(7260).SECTION_FOOTER !== arg0) {
+        if (tmp(7260).ITEM === arg0) {
           if (useMessagesData.MessagesDataSections.FavoriteChannels === arg1) {
             return channelFavorites[arg2].channelId;
-          } else if (tmp5(16205).MessagesDataSections.Channels === arg1) {
+          } else if (tmp5(16302).MessagesDataSections.Channels === arg1) {
             return channels[arg2].channelId;
           }
           tmp5 = require;

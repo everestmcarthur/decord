@@ -1,12 +1,12 @@
-// Module ID: 12014
-// Function ID: 12015
+// Module ID: 12106
+// Function ID: 12107
 // Name: Constants
-// Dependencies: [12015, 2, 12016, 12017]
+// Dependencies: [12107, 2, 12108, 12109]
 
-// Module 12014 (Constants)
-import AutomodTriggerType from "AutomodTriggerType" /* 12015 */;
-import AutomodEventType from "AutomodEventType" /* 12016 */;
-import AutomodActionType from "AutomodActionType" /* 12017 */;
+// Module 12106 (Constants)
+import AutomodTriggerType from "AutomodTriggerType" /* 12107 */;
+import AutomodEventType from "AutomodEventType" /* 12108 */;
+import AutomodActionType from "AutomodActionType" /* 12109 */;
 import size from "module_2" /* 2 */;
 
 const items = [AutomodTriggerType.AutomodTriggerType.USER_PROFILE, AutomodTriggerType.AutomodTriggerType.SERVER_POLICY, AutomodTriggerType.AutomodTriggerType.MENTION_SPAM, AutomodTriggerType.AutomodTriggerType.ML_SPAM, AutomodTriggerType.AutomodTriggerType.DEFAULT_KEYWORD_LIST, AutomodTriggerType.AutomodTriggerType.KEYWORD];
@@ -31,5 +31,6 @@ export const MIN_MENTION_SPAM_LIMIT = 1;
 export const MAX_MENTION_SPAM_LIMIT = 50;
 export const MENTION_SPAM_LIMIT_DEFAULT = 20;
 export const MAX_BLOCK_ACTION_CUSTOM_MESSAGE_LENGTH = 300;
+export const KEYWORDS_REGEX_PLACEHOLDER = "^b(a|@)d$\nw(o|0)rd(s|$)";
 export const SUBMIT_FEEDBACK_MODAL_KEY = "automod-submit-feedback";
 export const QUARANTINE_USER_ALERT_KEY = "automod-profile-quarantine-alert";

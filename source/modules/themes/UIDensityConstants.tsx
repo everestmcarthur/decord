@@ -1,10 +1,10 @@
-// Module ID: 9789
-// Function ID: 9790
+// Module ID: 9883
+// Function ID: 9884
 // Name: UIDensityConstants
 // Dependencies: [1186, 2]
 // Exports: resolveUIDensity
 
-// Module 9789 (UIDensityConstants)
+// Module 9883 (UIDensityConstants)
 import preloaded_user_settings from "preloaded_user_settings" /* 1186 */;
 import size from "module_2" /* 2 */;
 

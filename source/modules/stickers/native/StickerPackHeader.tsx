@@ -1,27 +1,27 @@
-// Module ID: 10544
-// Function ID: 10545
+// Module ID: 10638
+// Function ID: 10639
 // Name: StickerPackHeader
-// Dependencies: [19, 17, 10420, 21, 4640, 576, 4636, 4979, 1177, 10545, 10546, 1115, 10547, 5210, 2]
+// Dependencies: [19, 17, 10514, 21, 4722, 576, 4718, 5061, 1177, 10639, 10640, 1115, 10641, 5292, 2]
 
-// Module 10544 (StickerPackHeader)
+// Module 10638 (StickerPackHeader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import Text_Text from "Text/Text" /* 4636 */;
-import StickersUtils from "StickersUtils" /* 4979 */;
-import _modDef10545 from "module_10545" /* 10545 */;
-import _modDef10546 from "module_10546" /* 10546 */;
-import StickerPackBannerDefault from "StickerPackBanner" /* 10547 */;
+import Text_Text from "Text/Text" /* 4718 */;
+import StickersUtils from "StickersUtils" /* 5061 */;
+import _modDef10639 from "module_10639" /* 10639 */;
+import _modDef10640 from "module_10640" /* 10640 */;
+import StickerPackBannerDefault from "StickerPackBanner" /* 10641 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const StickerPickerConstants = fn(10420);
+const StickerPickerConstants = fn(10514);
 ({ PADDING_VERTICAL, PADDING_HORIZONTAL } = StickerPickerConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: metroRequire } = jsxProd);
 let result = 2 * PADDING_VERTICAL;
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj = { section: { paddingTop: PADDING_VERTICAL, paddingHorizontal: PADDING_HORIZONTAL, height: 36 + result, justifyContent: "center", overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, label: { flex: -1 }, header: { flexDirection: "row", alignItems: "center", justifyContent: "space-between" }, bannerContainer: { aspectRatio: 3.824074074074074, marginVertical: -8, width: "100%" }, banner: { height: "100%" }, headline: { height: 20, flex: 1, flexDirection: "row", alignItems: "center" }, iconContainer: null, icon: null, animatedIcon: null, premiumIcon: null };
 let size = { marginLeft: 8, height: 16, width: 16, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, alignItems: "center", justifyContent: "center" };
 obj.iconContainer = size;
@@ -50,14 +50,14 @@ export default noop.memo((withDescription) => {
   let result = StickersUtils.isStickerPackAnimated(stickerPack);
   if (result) {
     const obj5 = { style: tmp.iconContainer, children: null };
-    const obj6 = { source: _modDef10545, style: tmp.animatedIcon, size: tmp6(1177).Icon.Sizes.EXTRA_SMALL, color: tmp.icon.color };
+    const obj6 = { source: _modDef10639, style: tmp.animatedIcon, size: tmp6(1177).Icon.Sizes.EXTRA_SMALL, color: tmp.icon.color };
     obj5.children = tmp4(tmp6(1177).Icon, obj6);
     result = tmp4(tmp5, obj5);
   }
   items[1] = result;
   const obj7 = { style: tmp.iconContainer, children: null };
   const obj3 = { style: tmp.label, lineClamp: 1, variant: "text-md/bold", color: "mobile-text-heading-primary", children: stickerPack.name };
-  obj7.children = React4(native.Icon, { source: _modDef10546, style: tmp.premiumIcon, size: native.Icon.Sizes.EXTRA_SMALL, color: tmp.icon.color });
+  obj7.children = React4(native.Icon, { source: _modDef10640, style: tmp.premiumIcon, size: native.Icon.Sizes.EXTRA_SMALL, color: tmp.icon.color });
   items[2] = React4(View, obj7);
   obj2.children = items;
   obj.children = hasOwnProperty(View, obj2);
@@ -67,7 +67,7 @@ export default noop.memo((withDescription) => {
   }
   if (flag) {
     const obj9 = { variant: "text-sm/medium", children: stickerPack.description };
-    flag = tmp4(tmp6(4636).Text, obj9);
+    flag = tmp4(tmp6(4718).Text, obj9);
   }
   const obj10 = { children: null };
   items1[1] = flag;
@@ -89,7 +89,7 @@ export default noop.memo((withDescription) => {
     obj15.style = items3;
     obj15.onPress = onPress;
     obj15.children = tmp2Result;
-    let tmp4Result = tmp4(tmp6(5210).PressableOpacity, obj15);
+    let tmp4Result = tmp4(tmp6(5292).PressableOpacity, obj15);
   } else {
     const obj28 = { style: null, children: null };
     const items4 = [tmp.section, style];

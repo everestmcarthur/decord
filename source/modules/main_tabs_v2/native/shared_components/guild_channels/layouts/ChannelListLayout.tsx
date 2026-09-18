@@ -1,12 +1,12 @@
-// Module ID: 10270
-// Function ID: 10271
+// Module ID: 10364
+// Function ID: 10365
 // Name: ChannelListLayout
-// Dependencies: [8001, 10271, 10273, 10274, 1936, 2]
+// Dependencies: [8084, 10365, 10367, 10368, 1936, 2]
 // Exports: getScaledChannelRowHeight, isLayoutCompact, isLayoutCozy, makeSizeStyle, useMessagesTabLayout
 
-// Module 10270 (ChannelListLayout)
+// Module 10364 (ChannelListLayout)
 import UserSettings from "UserSettings" /* 1936 */;
-import ChannelListLayoutTypes2 from "ChannelListLayoutTypes" /* 8001 */;
+import ChannelListLayoutTypes2 from "ChannelListLayoutTypes" /* 8084 */;
 import size from "module_2" /* 2 */;
 
 function getLayoutStyles(layout, launchpad) {
@@ -15,17 +15,17 @@ function getLayoutStyles(layout, launchpad) {
     flag = false;
   }
   if (ChannelListLayoutTypes2.ChannelListLayoutTypes.COZY_DRAWER === layout) {
-    return tmp(10271).CHANNEL_LIST_STYLES_COZY_DRAWER;
-  } else if (tmp(8001).ChannelListLayoutTypes.COZY_DRAWER_SMOL === layout) {
-    return tmp(10271).CHANNEL_LIST_STYLES_COZY_DRAWER_SMOL;
-  } else if (tmp(8001).ChannelListLayoutTypes.COMPACT === layout) {
-    const tmpResult = tmp(10273);
+    return tmp(10365).CHANNEL_LIST_STYLES_COZY_DRAWER;
+  } else if (tmp(8084).ChannelListLayoutTypes.COZY_DRAWER_SMOL === layout) {
+    return tmp(10365).CHANNEL_LIST_STYLES_COZY_DRAWER_SMOL;
+  } else if (tmp(8084).ChannelListLayoutTypes.COMPACT === layout) {
+    const tmpResult = tmp(10367);
     return flag ? tmpResult.CHANNEL_LIST_STYLES_COMPACT_LAUNCHPAD : tmpResult.CHANNEL_LIST_STYLES_COMPACT;
   } else {
-    if (tmp(8001).ChannelListLayoutTypes.MINIMAL !== layout) {
-      const COZY = tmp(8001).ChannelListLayoutTypes.COZY;
+    if (tmp(8084).ChannelListLayoutTypes.MINIMAL !== layout) {
+      const COZY = tmp(8084).ChannelListLayoutTypes.COZY;
     }
-    const tmpResult2 = tmp(10274);
+    const tmpResult2 = tmp(10368);
     return flag ? tmpResult2.CHANNEL_LIST_STYLES_COZY_LAUNCHPAD : tmpResult2.CHANNEL_LIST_STYLES_COZY;
   }
 }
@@ -49,9 +49,9 @@ export const useMessagesTabLayout = function useMessagesTabLayout(panelVariant) 
   if (panelVariant) {
     let COZY = ChannelListLayoutTypes.COZY_DRAWER_SMOL;
   } else if (setting === ChannelListLayoutTypes.COMPACT) {
-    COZY = tmp(8001).ChannelListLayoutTypes.COMPACT;
+    COZY = tmp(8084).ChannelListLayoutTypes.COMPACT;
   } else {
-    COZY = tmp(8001).ChannelListLayoutTypes.COZY;
+    COZY = tmp(8084).ChannelListLayoutTypes.COZY;
   }
   return COZY;
 };

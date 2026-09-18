@@ -1,9 +1,9 @@
-// Module ID: 7497
-// Function ID: 7498
+// Module ID: 7579
+// Function ID: 7580
 // Name: UserSettingsAccountStore
 // Dependencies: [1372, 1074, 504, 573, 2]
 
-// Module 7497 (UserSettingsAccountStore)
+// Module 7579 (UserSettingsAccountStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import UserStore from "UserStore" /* 1372 */;

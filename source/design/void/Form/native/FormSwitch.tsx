@@ -1,18 +1,18 @@
-// Module ID: 8760
-// Function ID: 8761
+// Module ID: 8843
+// Function ID: 8844
 // Name: Form/FormSwitch
-// Dependencies: [19, 17, 21, 4640, 576, 4574, 4491, 2]
+// Dependencies: [19, 17, 21, 4722, 576, 4656, 4573, 2]
 // Exports: default
 
-// Module 8760 (Form/FormSwitch)
+// Module 8843 (Form/FormSwitch)
 import nativeDefault from "native" /* 576 */;
-import shared from "shared" /* 4491 */;
+import shared from "shared" /* 4573 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Switch = fn(17).Switch;
 const jsx = fn(21).jsx;
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = { switch: { marginVertical: -5 }, track: { color: nativeDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED } };
 let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);

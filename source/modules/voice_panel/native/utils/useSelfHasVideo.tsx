@@ -1,12 +1,12 @@
-// Module ID: 17332
-// Function ID: 17333
+// Module ID: 17462
+// Function ID: 17463
 // Name: useSelfHasVideo
-// Dependencies: [4656, 502, 1909, 504, 9773, 2]
+// Dependencies: [4738, 502, 1909, 504, 9867, 2]
 // Exports: default
 
-// Module 17332 (useSelfHasVideo)
-import participantHasVideo from "participantHasVideo" /* 9773 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4656 */;
+// Module 17462 (useSelfHasVideo)
+import participantHasVideo from "participantHasVideo" /* 9867 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4738 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 1909 */;
 

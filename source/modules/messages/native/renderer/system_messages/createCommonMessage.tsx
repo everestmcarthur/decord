@@ -1,22 +1,22 @@
-// Module ID: 8100
-// Function ID: 8101
+// Module ID: 8183
+// Function ID: 8184
 // Name: createCommonMessage
-// Dependencies: [1958, 4640, 4491, 4489, 576, 4321, 8082, 8101, 8102, 8103, 2]
+// Dependencies: [1958, 4722, 4573, 4571, 576, 4404, 8165, 8184, 8185, 8186, 2]
 // Exports: default
 
-// Module 8100 (createCommonMessage)
+// Module 8183 (createCommonMessage)
 import nativeDefault from "native" /* 576 */;
-import DateUtils from "DateUtils" /* 4321 */;
-import ColorUtils from "ColorUtils" /* 4489 */;
-import shared from "shared" /* 4491 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8082 */;
-import _modDef8101 from "module_8101" /* 8101 */;
-import _modDef8102 from "module_8102" /* 8102 */;
-import MessageAccessibilityActions from "MessageAccessibilityActions" /* 8103 */;
+import DateUtils from "DateUtils" /* 4404 */;
+import ColorUtils from "ColorUtils" /* 4571 */;
+import shared from "shared" /* 4573 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8165 */;
+import _modDef8184 from "module_8184" /* 8184 */;
+import _modDef8185 from "module_8185" /* 8185 */;
+import MessageAccessibilityActions from "MessageAccessibilityActions" /* 8186 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 
 require = fn;
-let createStyles = fn(4640);
+let createStyles = fn(4722);
 const result = createStyles.experimental_createToken((theme) => {
   let str = "rgba(201,210,240,0.6)";
   if (obj.isThemeDark(theme.theme)) {
@@ -25,7 +25,7 @@ const result = createStyles.experimental_createToken((theme) => {
   }
   return str;
 });
-createStyles = fn(4640);
+createStyles = fn(4722);
 let closure_4 = createStyles.createNativeStyleProperties({ timestampColor: nativeDefault.colors.TEXT_MUTED, highlightColor: result });
 const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/createCommonMessage.tsx");
@@ -40,8 +40,8 @@ export default function createCommonMessage(reactions) {
   obj.dark = shared.isThemeDark(theme);
   obj.highlightColor = tmp.highlightColor;
   obj.reactions = reactions.reactions;
-  obj.swipeToReplyIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8101);
-  obj.swipeToEditIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8102);
+  obj.swipeToReplyIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8184);
+  obj.swipeToEditIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8185);
   obj.accessibilityActions = MessageAccessibilityActions.createMessageAccessibilityActions(message, channel);
   return obj;
 };

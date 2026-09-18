@@ -1,12 +1,12 @@
-// Module ID: 4767
-// Function ID: 4768
+// Module ID: 4849
+// Function ID: 4850
 // Name: MediaEngineDummy
-// Dependencies: [4665, 4698, 4695, 2]
+// Dependencies: [4747, 4780, 4777, 2]
 
-// Module 4767 (MediaEngineDummy)
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4695 */;
-import Constants from "Constants" /* 4665 */;
-import TypedEventEmitter from "TypedEventEmitter" /* 4698 */;
+// Module 4849 (MediaEngineDummy)
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4777 */;
+import Constants from "Constants" /* 4747 */;
+import TypedEventEmitter from "TypedEventEmitter" /* 4780 */;
 import size from "module_2" /* 2 */;
 
 function Video() {

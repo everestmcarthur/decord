@@ -1,14 +1,14 @@
-// Module ID: 17207
-// Function ID: 17208
+// Module ID: 17337
+// Function ID: 17338
 // Name: Toast
-// Dependencies: [32, 19, 17, 21, 4640, 576, 4341, 1177, 4636, 2]
+// Dependencies: [32, 19, 17, 21, 4722, 576, 4423, 1177, 4718, 2]
 // Exports: default
 
-// Module 17207 (Toast)
+// Module 17337 (Toast)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
-import useToken from "useToken" /* 4341 */;
-import Text_Text from "Text/Text" /* 4636 */;
+import useToken from "useToken" /* 4423 */;
+import Text_Text from "Text/Text" /* 4718 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -56,7 +56,7 @@ function ToastContent(content) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = { container: null, multilineContainer: null, contentContainer: null };
 let merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
 obj2.container = { flexDirection: "row", alignItems: "center", borderRadius: nativeDefault.radii.xxl, padding: nativeDefault.space.PX_8, paddingRight: nativeDefault.space.PX_12, backgroundColor: nativeDefault.colors.MOBILE_TOAST_BACKGROUND_DEFAULT, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1 };

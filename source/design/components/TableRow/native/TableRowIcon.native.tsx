@@ -1,12 +1,12 @@
-// Module ID: 5699
-// Function ID: 5700
+// Module ID: 5781
+// Function ID: 5782
 // Name: TableRowIcon
-// Dependencies: [109, 19, 17, 21, 4640, 576, 5064, 2]
+// Dependencies: [109, 19, 17, 21, 4722, 576, 5146, 2]
 // Exports: TableRowIcon
 
-// Module 5699 (TableRowIcon)
+// Module 5781 (TableRowIcon)
 import nativeDefault from "native" /* 576 */;
-import Icon from "Icon" /* 5064 */;
+import Icon from "Icon" /* 5146 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,7 +16,7 @@ require = fn;
 let closure_3 = ["color"];
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = { container: null, default: null, statusOnline: null, statusIdle: null, statusDND: null, statusOffline: null, xbox: null, playstation: null, danger: null, secondary: null, translucent: null };
 let size = { width: nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE, height: nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE, justifyContent: "center", alignItems: "center", borderRadius: nativeDefault.radii.lg };
 obj2.container = size;

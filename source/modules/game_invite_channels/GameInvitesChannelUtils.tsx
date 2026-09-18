@@ -1,15 +1,15 @@
-// Module ID: 7386
-// Function ID: 7387
+// Module ID: 7468
+// Function ID: 7469
 // Name: GameInvitesChannelUtils
-// Dependencies: [109, 19, 1958, 1074, 7387, 7388, 504, 7389, 7418, 38, 7423, 7277, 7425, 7427, 5596, 2]
+// Dependencies: [109, 19, 1958, 1074, 1965, 7469, 7470, 504, 7471, 7500, 38, 7505, 7359, 7507, 7509, 5678, 2]
 // Exports: canInviteToActivity, deriveThreadName, maxedAppliedForumPostTags, useFirstMessage, useGameInviteVoiceChatState, useGameInvitesActiveAndArchivedThreads, useGameInvitesChannelOfficialApplication, useIsGameInvitePostVoiceEnabled, useIsGameInvitesPost, useSubscribeToGameInvitePostAuthors
 
-// Module 7386 (GameInvitesChannelUtils)
+// Module 7468 (GameInvitesChannelUtils)
 import _modDef38 from "module_38" /* 38 */;
-import getThreadAutoArchiveTimeOnceDefault from "getThreadAutoArchiveTimeOnce" /* 5596 */;
-import sanitizeThreadNameDefault from "sanitizeThreadName" /* 7388 */;
-import ForumPostDataLoader from "ForumPostDataLoader" /* 7418 */;
-import hasFlagDefault from "hasFlag" /* 7427 */;
+import getThreadAutoArchiveTimeOnceDefault from "getThreadAutoArchiveTimeOnce" /* 5678 */;
+import sanitizeThreadNameDefault from "sanitizeThreadName" /* 7470 */;
+import ForumPostDataLoader from "ForumPostDataLoader" /* 7500 */;
+import hasFlagDefault from "hasFlag" /* 7509 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 
@@ -20,8 +20,9 @@ let closure_3 = ["data"];
 const useMemo = fn(19).useMemo;
 const Constants = fn(1074);
 ({ ActivityFlags: closure_7, ActivityTypes: closure_8, MAX_CHANNEL_NAME_LENGTH: closure_9 } = Constants);
-const MAX_FORUM_POST_TAGS = fn(7387).MAX_FORUM_POST_TAGS;
-let c11 = "No Mic";
+const ChannelFlags = fn(1965).ChannelFlags;
+const MAX_FORUM_POST_TAGS = fn(7469).MAX_FORUM_POST_TAGS;
+let c12 = "No Mic";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_invite_channels/GameInvitesChannelUtils.tsx");
 
@@ -92,7 +93,7 @@ export const useIsGameInvitePostVoiceEnabled = function useIsGameInvitePostVoice
       tmp = tmp4;
     }
     return tmp;
-  }) && !appliedTags.some((name) => name.name === closure_1_11);
+  }) && !appliedTags.some((name) => name.name === closure_1_12);
 };
 export const useFirstMessage = function useFirstMessage(stateFromStores, enabled) {
   return ForumPostDataLoader.useFirstForumPostMessage(stateFromStores, { enabled, allowArchived: true });
@@ -188,7 +189,7 @@ export const useGameInviteVoiceChatState = function useGameInviteVoiceChatState(
   const tmp = useMemo(() => {
     let found;
     if (availableTags != null) {
-      found = availableTags.find((name) => name.name === closure_1_11);
+      found = availableTags.find((name) => name.name === closure_1_12);
     }
     return found;
   }, items);
@@ -218,19 +219,22 @@ export const useGameInvitesActiveAndArchivedThreads = function useGameInvitesAct
       while (iter !== undefined) {
         let tmp11 = nextResult;
         let channel = ChannelStore.getChannel(nextResult);
+        let obj2 = channel;
         if (null != channel) {
-          if (getThreadAutoArchiveTimeOnceDefault(tmp14) <= timestamp) {
-            let arr = items1.push(tmp11);
+          if (!obj2.hasFlag(ChannelFlags.PINNED)) {
+            if (getThreadAutoArchiveTimeOnceDefault(obj2) <= timestamp) {
+              let arr = items1.push(tmp11);
+            }
             continue;
           }
         }
         let arr2 = items.push(tmp11);
       }
-      const obj2 = { activeThreadIds: items, archivedThreadIds: null };
+      const obj3 = { activeThreadIds: items, archivedThreadIds: null };
       const items2 = [];
       HermesBuiltin.arraySpread(archivedThreadIds, HermesBuiltin.arraySpread(items1, 0));
-      obj2.archivedThreadIds = items2;
-      return obj2;
+      obj3.archivedThreadIds = items2;
+      return obj3;
     } else {
       const obj = { activeThreadIds, archivedThreadIds };
       return obj;

@@ -1,15 +1,15 @@
-// Module ID: 18046
-// Function ID: 18047
+// Module ID: 18140
+// Function ID: 18141
 // Name: components/StepsIndicator
-// Dependencies: [19, 17, 4632, 21, 4640, 576, 4376, 4641, 4636, 504, 2]
+// Dependencies: [19, 17, 4714, 21, 4722, 576, 4458, 4723, 4718, 504, 2]
 // Exports: default
 
-// Module 18046 (components/StepsIndicator)
+// Module 18140 (components/StepsIndicator)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
-import timing from "timing" /* 4641 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4458 */;
+import timing from "timing" /* 4723 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4632 */;
+import AccessibilityStore from "AccessibilityStore" /* 4714 */;
 
 require = fn;
 function StepNode(isCurrent) {
@@ -75,7 +75,7 @@ function StepNode(isCurrent) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = { container: { flexDirection: "row", alignItems: "center", justifyContent: "center" }, node: { width: 20, height: 20, borderRadius: 10, marginHorizontal: -2 }, filledNode: { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, alignItems: "center", justifyContent: "center" }, emptyNode: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, alignItems: "center", justifyContent: "center" };
 obj2.emptyNode = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };

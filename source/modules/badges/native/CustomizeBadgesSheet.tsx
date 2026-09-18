@@ -1,37 +1,37 @@
-// Module ID: 14742
-// Function ID: 14743
+// Module ID: 14836
+// Function ID: 14837
 // Name: CustomizeBadgesSheet
-// Dependencies: [19, 17, 8308, 1372, 8340, 1074, 7265, 1374, 21, 4640, 576, 4608, 8054, 14743, 8052, 1115, 7080, 4594, 5695, 11351, 8057, 11353, 7076, 4376, 4641, 4644, 13228, 8053, 6766, 4351, 11352, 1612, 504, 4297, 7276, 7296, 7266, 9546, 9516, 8339, 1241, 8345, 4338, 1478, 11152, 14744, 4636, 5665, 7264, 7263, 6738, 2]
+// Dependencies: [19, 17, 8390, 1372, 8422, 1074, 7347, 1374, 21, 4722, 576, 4690, 8137, 14837, 8135, 1115, 7162, 4676, 5777, 11443, 8140, 11450, 7158, 4458, 4723, 4726, 13319, 8136, 6848, 4433, 11444, 1612, 504, 4380, 7358, 7378, 7348, 9630, 9600, 8421, 1241, 8427, 4420, 1478, 11245, 14838, 4718, 5747, 7346, 7345, 6820, 2]
 // Exports: default
 
-// Module 14742 (CustomizeBadgesSheet)
+// Module 14836 (CustomizeBadgesSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4338 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4351 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 4594 */;
-import HapticUtils from "HapticUtils" /* 4608 */;
-import timing from "timing" /* 4641 */;
-import timingPresets from "timingPresets" /* 4644 */;
-import Card from "Card" /* 5695 */;
-import EyeSlashIcon from "EyeSlashIcon" /* 7080 */;
-import ContextMenu from "ContextMenu" /* 8052 */;
-import ContextMenuConstants from "ContextMenuConstants" /* 8054 */;
-import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8339 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8345 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9516 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9546 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11152 */;
-import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 11351 */;
-import BadgeUtils from "BadgeUtils" /* 11353 */;
-import PendingBadgeSettings from "PendingBadgeSettings" /* 13228 */;
-import BadgeGrid from "BadgeGrid" /* 14743 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4420 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4433 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4458 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 4676 */;
+import HapticUtils from "HapticUtils" /* 4690 */;
+import timing from "timing" /* 4723 */;
+import timingPresets from "timingPresets" /* 4726 */;
+import Card from "Card" /* 5777 */;
+import EyeSlashIcon from "EyeSlashIcon" /* 7162 */;
+import ContextMenu from "ContextMenu" /* 8135 */;
+import ContextMenuConstants from "ContextMenuConstants" /* 8137 */;
+import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8421 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8427 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9600 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9630 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11245 */;
+import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 11443 */;
+import BadgeUtils from "BadgeUtils" /* 11450 */;
+import PendingBadgeSettings from "PendingBadgeSettings" /* 13319 */;
+import BadgeGrid from "BadgeGrid" /* 14837 */;
 import noop from "module_19" /* 19 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8308 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8390 */;
 import UserStore from "UserStore" /* 1372 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8340 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8422 */;
 
 require = fn;
 function HideBadgeMenu(arg0) {
@@ -86,7 +86,7 @@ function BadgeTileContent(arg0) {
         const obj4 = { style: tmp.indicatorButton, children: null };
         const obj5 = { size: "sm", variant: "secondary-overlay", icon: null, accessibilityLabel: null, accessibilityHint: null, onPress: null };
         const obj6 = { size: "sm", color: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT };
-        obj5.icon = tmp10(tmp8(7080).EyeSlashIcon, obj6);
+        obj5.icon = tmp10(tmp8(7162).EyeSlashIcon, obj6);
         if (showAccessibilityLabel == null) {
           showAccessibilityLabel = badge.name;
         }
@@ -94,7 +94,7 @@ function BadgeTileContent(arg0) {
         const intl = tmp8(1115).intl;
         obj5.accessibilityHint = intl.string(tmp8(1115).t.hHHpvU);
         obj5.onPress = onShowPress;
-        obj4.children = tmp10(tmp8(8057).IconButton, obj5);
+        obj4.children = tmp10(tmp8(8140).IconButton, obj5);
         let tmp10Result = tmp10(hasOwnProperty, obj4);
       }
       items[1] = tmp10Result;
@@ -113,13 +113,13 @@ get_ActivityIndicator = fn(17);
 ({ Platform, Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_9, AnalyticsObjects: c10, AnalyticsPages: closure_11, AnalyticsSections: closure_12 } = Constants);
-let closure_13 = fn(7265).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
+let closure_13 = fn(7347).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
 const PremiumUpsellTypes = fn(1374).PremiumUpsellTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 let c17 = 80;
 let c18 = 16.666666666666668;
-let createStyles = fn(4640);
+let createStyles = fn(4722);
 let obj = { gridInset: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 }, grid: null, upsell: null, upsellCard: null, upsellContent: null, upsellCta: null, upsellText: null, message: null, messageText: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
 obj.grid = { position: "relative", width: "100%", marginTop: nativeDefault.space.PX_8 };
@@ -136,7 +136,7 @@ let obj8 = { marginTop: nativeDefault.space.PX_12, borderRadius: nativeDefault.r
 obj.message = { alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_32 };
 obj.messageText = { textAlign: "center" };
 let closure_19 = createStyles.createStyles(obj);
-createStyles = fn(4640);
+createStyles = fn(4722);
 let obj10 = { position: { position: "absolute" }, fill: { flex: 1 }, card: { flex: 1, alignItems: "center", justifyContent: "center", padding: 0 }, indicator: null, indicatorButton: null, iconHidden: null };
 let size = { position: "absolute", top: nativeDefault.space.PX_8, end: nativeDefault.space.PX_8, width: 32, height: 32, alignItems: "flex-end", justifyContent: "flex-start" };
 obj10.indicator = size;
@@ -152,7 +152,7 @@ function getSlotOffset(arg0, arg1) {
   return point;
 }
 let obj9 = { alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_32 };
-getSlotOffset.__closure = { BADGE_GRID_COLUMNS: fn(14743).BADGE_GRID_COLUMNS, BADGE_GRID_GAP: fn(14743).BADGE_GRID_GAP };
+getSlotOffset.__closure = { BADGE_GRID_COLUMNS: fn(14837).BADGE_GRID_COLUMNS, BADGE_GRID_GAP: fn(14837).BADGE_GRID_GAP };
 getSlotOffset.__workletHash = 8647997879684;
 getSlotOffset.__initData = { code: "function getSlotOffset_CustomizeBadgesSheetTsx1(index,tileSize){const{BADGE_GRID_COLUMNS,BADGE_GRID_GAP}=this.__closure;const column=index%BADGE_GRID_COLUMNS;return{x:column*(tileSize+BADGE_GRID_GAP),y:Math.floor(index/BADGE_GRID_COLUMNS)*(tileSize+BADGE_GRID_GAP)};}" };
 let closure_24 = noop.memo((badge) => {
@@ -200,8 +200,8 @@ let closure_24 = noop.memo((badge) => {
         let stringResult;
         if (alwaysVisible) {
           const intl2 = tmp6(1115).intl;
-          stringResult = intl2.string(tmp6(11353).getAlwaysVisibleCopy(tmp9));
-          const tmp6Result = tmp6(11353);
+          stringResult = intl2.string(tmp6(11450).getAlwaysVisibleCopy(tmp9));
+          const tmp6Result = tmp6(11450);
         }
         const merged = Object.assign({ accessibilityRole: "button", accessibilityHint: stringResult });
         let accessibilityActions;
@@ -386,9 +386,9 @@ let closure_37 = noop.memo((badge) => {
       const result = PendingBadgeSettings.moveBadgeInDisplayOrder(value, value.indexOf(badge_id), clampResult1);
       if (result !== value) {
         const result1 = obj.set(result);
-        const tmpResult = tmp(4376);
-        tmp(4376).runOnJS(tmp(4608).triggerHapticFeedback)(tmp(4608).HapticFeedbackTypes.DRAG_AND_DROP_MOVE);
-        const runOnJSResult = tmp(4376).runOnJS(tmp(4608).triggerHapticFeedback);
+        const tmpResult = tmp(4458);
+        tmp(4458).runOnJS(tmp(4690).triggerHapticFeedback)(tmp(4690).HapticFeedbackTypes.DRAG_AND_DROP_MOVE);
+        const runOnJSResult = tmp(4458).runOnJS(tmp(4690).triggerHapticFeedback);
       }
     };
     let obj5 = { orderShared, tileSize, BADGE_GRID_GAP: tmp2(tmp[13]).BADGE_GRID_GAP, clamp: tmp2(tmp[23]).clamp, positionX: sharedValue2, BADGE_GRID_COLUMNS: tmp2(tmp[13]).BADGE_GRID_COLUMNS, positionY: sharedValue3, slotOffset, moveBadgeInDisplayOrder: tmp2(tmp[26]).moveBadgeInDisplayOrder, badgeId: badge_id, runOnJS: tmp2(tmp[23]).runOnJS, triggerHapticFeedback: tmp2(tmp[11]).triggerHapticFeedback, HapticFeedbackTypes: tmp2(tmp[11]).HapticFeedbackTypes };
@@ -600,7 +600,7 @@ let closure_37 = noop.memo((badge) => {
         if (result !== value) {
           const result1 = obj.set(result);
           onCommitOrder(result);
-          const AccessibilityAnnouncer = tmp4(4351).AccessibilityAnnouncer;
+          const AccessibilityAnnouncer = tmp4(4433).AccessibilityAnnouncer;
           const intl = tmp4(1115).intl;
           const obj3 = { from: index + slotOffset + 1, to: clampResult + slotOffset + 1 };
           AccessibilityAnnouncer.announce(intl.formatToPlainString(tmp4(1115).t.qPHr0x, obj3));

@@ -1,15 +1,15 @@
-// Module ID: 6017
-// Function ID: 6018
+// Module ID: 6099
+// Function ID: 6100
 // Name: DiscordQuestsLockupLogo
-// Dependencies: [17, 21, 576, 4341, 6018, 2]
+// Dependencies: [17, 21, 576, 4423, 6100, 2]
 // Exports: DiscordQuestsLockupLogo
 
-// Module 6017 (DiscordQuestsLockupLogo)
+// Module 6099 (DiscordQuestsLockupLogo)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 576 */;
-import useToken from "useToken" /* 4341 */;
-import _modDef6018 from "module_6018" /* 6018 */;
+import useToken from "useToken" /* 4423 */;
+import _modDef6100 from "module_6100" /* 6100 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -46,7 +46,7 @@ export const DiscordQuestsLockupLogo = function DiscordQuestsLockupLogo(color) {
     tmp5 = null != ICON_STRONG && typeof ICON_STRONG === "string";
   }
   const obj4 = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj4.source = { uri: _modDef6018 };
+  obj4.source = { uri: _modDef6100 };
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size, tmp6];
   obj4.style = items;

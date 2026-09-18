@@ -1,13 +1,13 @@
-// Module ID: 6057
-// Function ID: 6058
+// Module ID: 6139
+// Function ID: 6140
 // Name: EmojiEzExample
-// Dependencies: [21, 5675, 6058, 2]
+// Dependencies: [21, 5757, 6140, 2]
 // Exports: EmojiEzExample
 
-// Module 6057 (EmojiEzExample)
+// Module 6139 (EmojiEzExample)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5675 */;
-import _modDef6058 from "module_6058" /* 6058 */;
+import FastImageDefault from "FastImage" /* 5757 */;
+import _modDef6140 from "module_6140" /* 6140 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const EmojiEzExample = function EmojiEzExample(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6058 };
+  const obj2 = { uri: _modDef6140 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

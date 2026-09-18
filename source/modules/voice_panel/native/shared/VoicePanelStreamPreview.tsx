@@ -1,17 +1,17 @@
-// Module ID: 13193
-// Function ID: 13194
+// Module ID: 13284
+// Function ID: 13285
 // Name: VoicePanelStreamPreview
-// Dependencies: [19, 17, 4662, 502, 21, 4376, 5062, 4640, 576, 10212, 504, 4692, 4641, 7187, 4636, 1115, 2]
+// Dependencies: [19, 17, 4744, 502, 21, 4458, 5144, 4722, 576, 10306, 504, 4774, 4723, 7269, 4718, 1115, 2]
 // Exports: VoicePanelStreamPreview
 
-// Module 13193 (VoicePanelStreamPreview)
+// Module 13284 (VoicePanelStreamPreview)
 import nativeDefault from "native" /* 576 */;
-import timing from "timing" /* 4641 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 4692 */;
+import timing from "timing" /* 4723 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 4774 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4662 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4744 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ReanimatedRexport_mod from "ReanimatedRexport" /* 4376 */;
+import ReanimatedRexport_mod from "ReanimatedRexport" /* 4458 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -21,9 +21,9 @@ const jsxProd = fn(21);
 let ReanimatedRexport = ReanimatedRexport_mod;
 let closure_8 = ReanimatedRexport.createAnimatedComponent(Pressable);
 let ReanimatedRexport = ReanimatedRexport_mod;
-let closure_9 = ReanimatedRexport.createAnimatedComponent(fn(5062).Button);
+let closure_9 = ReanimatedRexport.createAnimatedComponent(fn(5144).Button);
 const OPACITY_TIMING = { duration: 200 };
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj = { roundedCard: null, streamPreviewImage: null, ownStreamTextContainer: null, ownStreamText: null };
 let size = { position: "absolute", alignItems: "center", justifyContent: "center", width: "100%", height: "100%", backgroundColor: nativeDefault.colors.VOICE_VIDEO_VIDEO_TILE_BACKGROUND };
 obj.roundedCard = size;
@@ -53,8 +53,8 @@ export const VoicePanelStreamPreview = function VoicePanelStreamPreview(mode) {
   if (stream != null) {
     ownerId = stream.ownerId;
   }
-  const previewUrl = stream(10212)(guildId, channelId, ownerId).previewUrl;
-  const tmp4 = stream(10212);
+  const previewUrl = stream(10306)(guildId, channelId, ownerId).previewUrl;
+  const tmp4 = stream(10306);
   const items = [ApplicationStreamingStore, AuthenticationStore];
   const items1 = [stream];
   const stateFromStores = mode(504).useStateFromStores(items, () => {
@@ -89,8 +89,8 @@ export const VoicePanelStreamPreview = function VoicePanelStreamPreview(mode) {
       return obj1;
     }
   }
-  let obj2 = mode(4376);
-  T.__closure = { mode, withTiming: mode(4641).withTiming, OPACITY_TIMING };
+  let obj2 = mode(4458);
+  T.__closure = { mode, withTiming: mode(4723).withTiming, OPACITY_TIMING };
   T.__workletHash = 15496474861955;
   T.__initData = __initData;
   const obj4 = { layout, onPress, style: tmp.roundedCard, disabled: null, accessible: false, children: null };
@@ -106,11 +106,11 @@ export const VoicePanelStreamPreview = function VoicePanelStreamPreview(mode) {
     const obj6 = { uri: previewUrl };
     obj5.source = obj6;
     obj5.style = tmp.streamPreviewImage;
-    tmp14 = closure_6(tmp2(4376).Image, obj5);
+    tmp14 = closure_6(tmp2(4458).Image, obj5);
   }
   const items2 = [tmp14, ];
   const obj7 = { style: animatedStyle, layout, children: null };
-  let obj3 = { mode, withTiming: mode(4641).withTiming, OPACITY_TIMING };
+  let obj3 = { mode, withTiming: mode(4723).withTiming, OPACITY_TIMING };
   const tmp11 = closure_7;
   const tmp12 = closure_8;
   if (stateFromStores) {
@@ -118,7 +118,7 @@ export const VoicePanelStreamPreview = function VoicePanelStreamPreview(mode) {
     const obj9 = { variant: "text-sm/semibold", color: "text-overlay-light", style: tmp.ownStreamText, children: null };
     const intl2 = tmp8(1115).intl;
     obj9.children = intl2.string(tmp8(1115).t["ro/HN8"]);
-    obj8.children = tmp16(tmp8(4636).Text, obj9);
+    obj8.children = tmp16(tmp8(4718).Text, obj9);
     let tmp16Result = tmp16(closure_3, obj8);
   } else {
     const obj10 = { layout, disabled, text: null, size: "sm", variant: "primary-overlay", onPress: null };
@@ -128,7 +128,7 @@ export const VoicePanelStreamPreview = function VoicePanelStreamPreview(mode) {
     tmp16Result = tmp16(closure_9, obj10);
   }
   obj7.children = tmp16Result;
-  items2[1] = closure_6(stream(7187), obj7);
+  items2[1] = closure_6(stream(7269), obj7);
   obj4.children = items2;
   return tmp11(tmp12, obj4);
 };

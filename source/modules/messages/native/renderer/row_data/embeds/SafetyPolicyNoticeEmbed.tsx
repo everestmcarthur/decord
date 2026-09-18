@@ -1,17 +1,17 @@
-// Module ID: 13400
-// Function ID: 13401
+// Module ID: 13491
+// Function ID: 13492
 // Name: SafetyPolicyNoticeEmbed
-// Dependencies: [17, 1074, 8569, 4231, 1115, 8082, 8744, 2]
+// Dependencies: [17, 1074, 8652, 4314, 1115, 8165, 8827, 2]
 // Exports: createSafetyPolicyNoticeEmbed
 
-// Module 13400 (SafetyPolicyNoticeEmbed)
+// Module 13491 (SafetyPolicyNoticeEmbed)
 import _mod17 from "module_17" /* 17 */;
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1115 */;
-import _modDef4231 from "module_4231" /* 4231 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8082 */;
-import SafetyHubConstants from "SafetyHubConstants" /* 8569 */;
-import _modDef8744 from "module_8744" /* 8744 */;
+import _modDef4314 from "module_4314" /* 4314 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8165 */;
+import SafetyHubConstants from "SafetyHubConstants" /* 8652 */;
+import _modDef8827 from "module_8827" /* 8827 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -59,11 +59,11 @@ export const createSafetyPolicyNoticeEmbed = function createSafetyPolicyNoticeEm
             const obj = { titleText: null, titleIcon: null, subtitleText: null, descriptionText: null, ctaText: null, classificationId: null };
             const intl = util.intl;
             obj.titleText = intl.string(util.t["4CxGXi"]);
-            obj.titleIcon = renderer_EmbedUtils.getAssetUriForEmbed(Image.resolveAssetSource(_modDef8744));
+            obj.titleIcon = renderer_EmbedUtils.getAssetUriForEmbed(Image.resolveAssetSource(_modDef8827));
             const intl2 = util.intl;
             const obj3 = { daysAgo: null };
-            const obj4 = _modDef4231();
-            obj3.daysAgo = obj4.diff(_modDef4231.unix(parsed), "days");
+            const obj4 = _modDef4314();
+            obj3.daysAgo = obj4.diff(_modDef4314.unix(parsed), "days");
             obj.subtitleText = intl2.formatToPlainString(util.t.eevFb6, obj3);
             const intl3 = util.intl;
             obj.descriptionText = intl3.string(util.t["5CLb0A"]);

@@ -1,30 +1,30 @@
-// Module ID: 10902
-// Function ID: 10903
+// Module ID: 10996
+// Function ID: 10997
 // Name: PremiumGiftFeaturesCard
-// Dependencies: [19, 17, 10814, 1374, 1085, 21, 576, 4640, 5612, 504, 10891, 9524, 10903, 10904, 8988, 9538, 9536, 4636, 1115, 9545, 5062, 10905, 10906, 4350, 5074, 10907, 10909, 4602, 1926, 2461, 2]
+// Dependencies: [19, 17, 10908, 1374, 1085, 21, 576, 4722, 5694, 504, 10985, 9608, 10997, 10998, 9072, 9622, 9620, 4718, 1115, 9629, 5144, 10999, 11000, 4432, 5156, 11001, 11003, 4684, 1926, 2544, 2]
 
-// Module 10902 (PremiumGiftFeaturesCard)
+// Module 10996 (PremiumGiftFeaturesCard)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import StringUtils from "StringUtils" /* 1926 */;
-import native from "native" /* 4350 */;
-import Text_Text from "Text/Text" /* 4636 */;
-import components_Button_Button from "components/Button/Button" /* 5062 */;
-import LinearGradientDefault from "LinearGradient" /* 5074 */;
-import TextStylesDefault from "TextStyles" /* 5612 */;
-import usePremiumFeaturesDefault from "usePremiumFeatures" /* 9524 */;
-import PremiumFeaturesLogoDefault from "PremiumFeaturesLogo" /* 9536 */;
-import PremiumFeaturesWumpusDefault from "PremiumFeaturesWumpus" /* 9538 */;
-import PremiumFeatureListDefault from "PremiumFeatureList" /* 9545 */;
-import MarketingComponentType from "MarketingComponentType" /* 10891 */;
-import usePremiumProductPricingStringDefault from "usePremiumProductPricingString" /* 10903 */;
-import useShouldShowGiftingPromotionDecoDefault from "useShouldShowGiftingPromotionDeco" /* 10904 */;
-import MarketingComponentHooks from "MarketingComponentHooks" /* 10905 */;
-import SlayerStorefrontTimeUtils from "SlayerStorefrontTimeUtils" /* 10906 */;
-import PremiumGiftPromotionDetailsDefault from "PremiumGiftPromotionDetails" /* 10907 */;
+import native from "native" /* 4432 */;
+import Text_Text from "Text/Text" /* 4718 */;
+import components_Button_Button from "components/Button/Button" /* 5144 */;
+import LinearGradientDefault from "LinearGradient" /* 5156 */;
+import TextStylesDefault from "TextStyles" /* 5694 */;
+import usePremiumFeaturesDefault from "usePremiumFeatures" /* 9608 */;
+import PremiumFeaturesLogoDefault from "PremiumFeaturesLogo" /* 9620 */;
+import PremiumFeaturesWumpusDefault from "PremiumFeaturesWumpus" /* 9622 */;
+import PremiumFeatureListDefault from "PremiumFeatureList" /* 9629 */;
+import MarketingComponentType from "MarketingComponentType" /* 10985 */;
+import usePremiumProductPricingStringDefault from "usePremiumProductPricingString" /* 10997 */;
+import useShouldShowGiftingPromotionDecoDefault from "useShouldShowGiftingPromotionDeco" /* 10998 */;
+import MarketingComponentHooks from "MarketingComponentHooks" /* 10999 */;
+import SlayerStorefrontTimeUtils from "SlayerStorefrontTimeUtils" /* 11000 */;
+import PremiumGiftPromotionDetailsDefault from "PremiumGiftPromotionDetails" /* 11001 */;
 import noop from "module_19" /* 19 */;
-import PromotionsStore from "PromotionsStore" /* 10814 */;
+import PromotionsStore from "PromotionsStore" /* 10908 */;
 
 require = fn;
 function PremiumGiftPlanSelectPromotionDetails(config) {
@@ -48,10 +48,10 @@ function PremiumGiftPlanSelectPromotionDetails(config) {
   if (tmp8Result) {
     const obj7 = { text: tickingFormattedLimitedOfferTimeLeft, icon: null, style: null };
     obj8 = { size: "xxs", color: tmp10(576).colors.ICON_OVERLAY_LIGHT };
-    obj7.icon = tmp8(tmp2(4602).ClockIcon, obj8);
+    obj7.icon = tmp8(tmp2(4684).ClockIcon, obj8);
     obj7.style = tmp.countdownBadge;
-    tmp8Result = tmp8(tmp10(10909), obj7);
-    const tmp10Result = tmp10(10909);
+    tmp8Result = tmp8(tmp10(11003), obj7);
+    const tmp10Result = tmp10(11003);
   }
   obj6.topContent = tmp8Result;
   const tmp12 = PremiumGiftPromotionDetailsDefault;
@@ -65,7 +65,7 @@ function PremiumGiftPlanSelectPromotionDetails(config) {
   tmp2Result = StringUtils;
   if (tmp2Result2.isNullOrEmpty(config.mobileBody)) {
     const intl2 = tmp2(1115).intl;
-    let mobileBody = intl2.string(tmp10(2461).zVGHbw);
+    let mobileBody = intl2.string(tmp10(2544).zVGHbw);
   } else {
     mobileBody = config.mobileBody;
   }
@@ -113,7 +113,7 @@ const obj13 = { marginTop: nativeDefault.space.PX_24 };
 obj12.compact = { marginTop: nativeDefault.space.PX_12 };
 const obj14 = { marginTop: nativeDefault.space.PX_12 };
 obj12.smallCompact = { marginTop: nativeDefault.space.PX_8 };
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let closure_15 = createStyles.createStyles(() => {
   obj = { card: null, logo: null, pricing: null, featureTitle: null, features: null, button: null, featureIcon: null, featureText: null, promotionDetailsContainer: null, countdownBadge: null };
   const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);

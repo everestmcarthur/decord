@@ -1,14 +1,14 @@
-// Module ID: 14920
-// Function ID: 14921
+// Module ID: 15014
+// Function ID: 15015
 // Name: UserSettingsInputAlert
-// Dependencies: [19, 21, 1271, 5060, 4636, 6717, 5081, 5666, 2]
+// Dependencies: [19, 21, 1271, 5142, 4718, 6799, 5163, 5748, 2]
 
-// Module 14920 (UserSettingsInputAlert)
+// Module 15014 (UserSettingsInputAlert)
 import HTTPUtils from "HTTPUtils" /* 1271 */;
-import Stack_Stack from "Stack/Stack" /* 5060 */;
-import common_AlertDefault from "common/Alert" /* 5081 */;
-import KeyboardAwareViewDefault from "KeyboardAwareView" /* 5666 */;
-import TextInput from "TextInput" /* 6717 */;
+import Stack_Stack from "Stack/Stack" /* 5142 */;
+import common_AlertDefault from "common/Alert" /* 5163 */;
+import KeyboardAwareViewDefault from "KeyboardAwareView" /* 5748 */;
+import TextInput from "TextInput" /* 6799 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -79,7 +79,7 @@ prototype["renderContent"] = function renderContent() {
     let tmp7 = null != helpText;
     if (tmp7) {
       const obj = { variant: "text-md/normal", children: helpText };
-      tmp7 = React3(tmp5(4636).Text, obj);
+      tmp7 = React3(tmp5(4718).Text, obj);
     }
     const items = [tmp7, ];
     const obj2 = { label: tmp3, placeholder: tmp, secureTextEntry: tmp2, returnKeyType: "done", autoFocus: true, status: null, errorMessage: null, onSubmitEditing: null, onChange: null };

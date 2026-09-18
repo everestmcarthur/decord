@@ -1,13 +1,13 @@
-// Module ID: 10491
-// Function ID: 10492
+// Module ID: 10585
+// Function ID: 10586
 // Name: EmojiGrid
-// Dependencies: [19, 17, 21, 4640, 576, 4296, 1397, 7244, 10479, 10492, 10494, 2]
+// Dependencies: [19, 17, 21, 4722, 576, 4379, 1397, 7326, 10573, 10586, 10588, 2]
 // Exports: EmojiGrid
 
-// Module 10491 (EmojiGrid)
+// Module 10585 (EmojiGrid)
 import nativeDefault from "native" /* 576 */;
-import EmojiDefault from "Emoji" /* 7244 */;
-import LayoutUtils from "LayoutUtils" /* 10494 */;
+import EmojiDefault from "Emoji" /* 7326 */;
+import LayoutUtils from "LayoutUtils" /* 10588 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,8 +15,8 @@ function Emoji(guildEmoji) {
   guildEmoji = guildEmoji.guildEmoji;
   const tmp = closure_5();
   if (null == guildEmoji.id) {
-    let uRL = tmp3(4296).getURL(guildEmoji.name);
-    const tmp3Result = tmp3(4296);
+    let uRL = tmp3(4379).getURL(guildEmoji.name);
+    const tmp3Result = tmp3(4379);
   } else {
     ({ id: obj2.id, animated: obj2.animated } = guildEmoji);
     uRL = tmp3(1397).getEmojiURL({ id: null, animated: null, size: 48 });
@@ -27,7 +27,7 @@ function Emoji(guildEmoji) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = { gridEmojiFastImage: null, gridEmojiText: null, emojiGridRowContainer: null, emojiGridContainer: null };
 let size = { height: 40, width: 40, borderRadius: nativeDefault.radii.sm };
 obj2.gridEmojiFastImage = size;
@@ -52,7 +52,7 @@ export const EmojiGrid = function EmojiGrid(numberToShow) {
     num2 = 5;
   }
   let obj = {};
-  const merged = Object.assign(doNotDisplayEmojiIds(10479).useSharedMessageEmojiStyles());
+  const merged = Object.assign(doNotDisplayEmojiIds(10573).useSharedMessageEmojiStyles());
   const merged1 = Object.assign(closure_5());
   let emojis;
   if (expressionSourceGuild != null) {
@@ -64,13 +64,13 @@ export const EmojiGrid = function EmojiGrid(numberToShow) {
   const substr = emojis.slice(0, num + 1);
   const found = substr.filter((id) => !doNotDisplayEmojiIds.includes(id.id));
   const substr1 = found.slice(0, num);
-  const obj2 = doNotDisplayEmojiIds(10479);
+  const obj2 = doNotDisplayEmojiIds(10573);
   const tmp = doNotDisplayEmojiIds;
   const obj3 = { style: obj.emojiGridContainer, children: null };
-  const arr4 = obj(10492)(substr1, num2);
-  obj3.children = jsx(tmp(10494).GappedList, {
+  const arr4 = obj(10586)(substr1, num2);
+  obj3.children = jsx(tmp(10588).GappedList, {
     gap: 8,
-    children: obj(10492)(substr1, num2).map((arr, index) => {
+    children: obj(10586)(substr1, num2).map((arr, index) => {
       obj = { style: obj.emojiGridRowContainer, children: jsx(LayoutUtils.GappedList, { gap: 32, children: arr.map((guildEmoji) => closure_1_4(closure_1_6, { guildEmoji }, guildEmoji.id)) }) };
       return <View key={arg1} style={obj.emojiGridRowContainer}>{jsx(LayoutUtils.GappedList, { gap: 32, children: arg0.map((guildEmoji) => closure_1_4(closure_1_6, { guildEmoji }, guildEmoji.id)) })}</View>;
     })

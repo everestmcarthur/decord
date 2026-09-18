@@ -1,8 +1,8 @@
-// Module ID: 6322
-// Function ID: 6323
+// Module ID: 6404
+// Function ID: 6405
 // Dependencies: [2]
 
-// Module 6322
+// Module 6404
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/KeyRingSpotIllustration-2x.png.js");

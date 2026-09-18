@@ -1,13 +1,13 @@
-// Module ID: 10532
-// Function ID: 10533
+// Module ID: 10626
+// Function ID: 10627
 // Name: AnalyticsIcon
-// Dependencies: [19, 21, 576, 4340, 10533, 2]
+// Dependencies: [19, 21, 576, 4422, 10627, 2]
 // Exports: AnalyticsIcon
 
-// Module 10532 (AnalyticsIcon)
+// Module 10626 (AnalyticsIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4340 */;
-import _mod10533 from "module_10533" /* 10533 */;
+import BaseIconImage from "BaseIconImage" /* 4422 */;
+import _mod10627 from "module_10627" /* 10627 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const AnalyticsIcon = function AnalyticsIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10533, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10627, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

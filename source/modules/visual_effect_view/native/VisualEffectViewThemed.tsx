@@ -1,14 +1,14 @@
-// Module ID: 8392
-// Function ID: 8393
+// Module ID: 8475
+// Function ID: 8476
 // Name: VisualEffectViewThemed
-// Dependencies: [19, 21, 4574, 4491, 5050, 2]
+// Dependencies: [19, 21, 4656, 4573, 5132, 2]
 
-// Module 8392 (VisualEffectViewThemed)
-import shared from "shared" /* 4491 */;
-import useThemeDefault from "useTheme" /* 4574 */;
+// Module 8475 (VisualEffectViewThemed)
+import shared from "shared" /* 4573 */;
+import useThemeDefault from "useTheme" /* 4656 */;
 import noop from "module_19" /* 19 */;
 
-const VisualEffectViewDefault = tmp(5050);
+const VisualEffectViewDefault = tmp(5132);
 require = fn;
 const jsx = fn(21).jsx;
 const size = fn(2);

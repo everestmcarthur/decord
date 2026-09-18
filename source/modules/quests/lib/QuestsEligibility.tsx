@@ -1,10 +1,10 @@
-// Module ID: 11638
-// Function ID: 11639
+// Module ID: 11730
+// Function ID: 11731
 // Name: QuestsEligibility
 // Dependencies: [1609, 2]
 // Exports: getIsEligibleForQuests
 
-// Module 11638 (QuestsEligibility)
+// Module 11730 (QuestsEligibility)
 import MetaQuestUtils from "MetaQuestUtils" /* 1609 */;
 import size from "module_2" /* 2 */;
 

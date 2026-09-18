@@ -1,15 +1,15 @@
-// Module ID: 4506
-// Function ID: 4507
+// Module ID: 4588
+// Function ID: 4589
 // Name: ChatInputUtils
-// Dependencies: [4507, 1875, 4508, 1610, 1482, 4509, 2]
+// Dependencies: [4589, 1875, 4590, 1610, 1482, 4591, 2]
 // Exports: createInputRefTracker, dismissKeyboard, getBestActiveInputForChannelId, getChatInputRef, getHighestActiveScreenIndex
 
-// Module 4506 (ChatInputUtils)
+// Module 4588 (ChatInputUtils)
 import KeyboardTypes from "KeyboardTypes" /* 1610 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1875 */;
-import ScreenIndexFrozen from "ScreenIndexFrozen" /* 4507 */;
-import useKeyboardType from "useKeyboardType" /* 4508 */;
-import PortalKeyboardUIStore from "PortalKeyboardUIStore" /* 4509 */;
+import ScreenIndexFrozen from "ScreenIndexFrozen" /* 4589 */;
+import useKeyboardType from "useKeyboardType" /* 4590 */;
+import PortalKeyboardUIStore from "PortalKeyboardUIStore" /* 4591 */;
 import size from "module_2" /* 2 */;
 
 function getBestActiveInput() {
@@ -21,22 +21,25 @@ function getBestActiveInput() {
       if (!obj.has("message-request")) {
         str = "new-message";
         if (!obj.has("new-message")) {
-          const _Array = Array;
-          const found = Array.from(obj.keys()).filter((item) => {
-            let tmp = typeof item === "number";
-            if (typeof item === "number") {
-              tmp = !ScreenIndexFrozen.isScreenIndexFrozen(item);
+          str = "vibegrations-preview";
+          if (!obj.has("vibegrations-preview")) {
+            const _Array = Array;
+            const found = Array.from(obj.keys()).filter((item) => {
+              let tmp = typeof item === "number";
+              if (typeof item === "number") {
+                tmp = !ScreenIndexFrozen.isScreenIndexFrozen(item);
+              }
+              return tmp;
+            });
+            if (0 !== found.length) {
+              const _Math = Math;
+              const items = [];
+              HermesBuiltin.arraySpread(found, 0);
+              const _Math2 = Math;
+              str = HermesBuiltin.apply(items, Math);
             }
-            return tmp;
-          });
-          if (0 !== found.length) {
-            const _Math = Math;
-            const items = [];
-            HermesBuiltin.arraySpread(found, 0);
-            const _Math2 = Math;
-            str = HermesBuiltin.apply(items, Math);
+            const arr = Array.from(obj.keys());
           }
-          const arr = Array.from(obj.keys());
         }
       }
     }
@@ -145,6 +148,8 @@ export const getHighestActiveScreenIndex = function getHighestActiveScreenIndex(
       return "message-request";
     } else if (obj.has("new-message")) {
       return "new-message";
+    } else if (obj.has("vibegrations-preview")) {
+      return "vibegrations-preview";
     } else {
       const _Array = Array;
       const found = Array.from(obj.keys()).filter((item) => {
@@ -194,22 +199,25 @@ export const getBestActiveInputForChannelId = function getBestActiveInputForChan
           if (!obj2.has("message-request")) {
             str = "new-message";
             if (!obj2.has("new-message")) {
-              const _Array = Array;
-              const found = Array.from(obj2.keys()).filter((item) => {
-                let tmp = typeof item === "number";
-                if (typeof item === "number") {
-                  tmp = !ScreenIndexFrozen.isScreenIndexFrozen(item);
+              str = "vibegrations-preview";
+              if (!obj2.has("vibegrations-preview")) {
+                const _Array = Array;
+                const found = Array.from(obj2.keys()).filter((item) => {
+                  let tmp = typeof item === "number";
+                  if (typeof item === "number") {
+                    tmp = !ScreenIndexFrozen.isScreenIndexFrozen(item);
+                  }
+                  return tmp;
+                });
+                if (0 !== found.length) {
+                  const _Math = Math;
+                  const items = [];
+                  HermesBuiltin.arraySpread(found, 0);
+                  const _Math2 = Math;
+                  str = HermesBuiltin.apply(items, Math);
                 }
-                return tmp;
-              });
-              if (0 !== found.length) {
-                const _Math = Math;
-                const items = [];
-                HermesBuiltin.arraySpread(found, 0);
-                const _Math2 = Math;
-                str = HermesBuiltin.apply(items, Math);
+                const arr = Array.from(obj2.keys());
               }
-              const arr = Array.from(obj2.keys());
             }
           }
         }

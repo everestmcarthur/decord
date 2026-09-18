@@ -1,10 +1,10 @@
-// Module ID: 4685
-// Function ID: 4686
+// Module ID: 4767
+// Function ID: 4768
 // Name: SystemAnalyticsStore
 // Dependencies: [2]
 // Exports: getSystemAnalyticsInfo
 
-// Module 4685 (SystemAnalyticsStore)
+// Module 4767 (SystemAnalyticsStore)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/system_analytics/SystemAnalyticsStore.native.tsx");

@@ -1,14 +1,14 @@
-// Module ID: 16021
-// Function ID: 16022
+// Module ID: 16118
+// Function ID: 16119
 // Name: SafetyTermsOfServiceSetting
-// Dependencies: [8111, 1074, 4334, 11622, 1115, 2]
+// Dependencies: [8194, 1074, 4417, 11714, 1115, 2]
 
-// Module 16021 (SafetyTermsOfServiceSetting)
+// Module 16118 (SafetyTermsOfServiceSetting)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1115 */;
-import LinkingDefault from "Linking" /* 4334 */;
-import SettingsConstants from "SettingsConstants" /* 8111 */;
-import SettingBuilders from "SettingBuilders" /* 11622 */;
+import LinkingDefault from "Linking" /* 4417 */;
+import SettingsConstants from "SettingsConstants" /* 8194 */;
+import SettingBuilders from "SettingBuilders" /* 11714 */;
 import size from "module_2" /* 2 */;
 
 const MarketingURLs = Constants.MarketingURLs;

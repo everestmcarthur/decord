@@ -1,18 +1,7 @@
 // Module ID: 5012
 // Function ID: 5013
-// Dependencies: [19]
-// Exports: usePrevious
+// Dependencies: []
 
 // Module 5012
-import noop from "module_19" /* 19 */;
 
-({ useEffect: closure_0, useRef: closure_1 } = noop);
-
-export const usePrevious = function usePrevious(current) {
-  const tmp = framebus(undefined);
-  closure_1 = tmp;
-  React(() => {
-    closure_1.current = current;
-  });
-  return tmp.current;
-};
+export default 4294967295;

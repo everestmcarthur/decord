@@ -1,16 +1,16 @@
-// Module ID: 13939
-// Function ID: 13940
+// Module ID: 14033
+// Function ID: 14034
 // Name: VoiceStateAnalytics
-// Dependencies: [1909, 4659, 4664, 4665, 12, 2]
+// Dependencies: [1909, 4741, 4746, 4747, 12, 2]
 
-// Module 13939 (VoiceStateAnalytics)
+// Module 14033 (VoiceStateAnalytics)
 import _mod12 from "module_12" /* 12 */;
 import MediaEngineStore from "MediaEngineStore" /* 1909 */;
-import VoiceStateStore from "VoiceStateStore" /* 4659 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4664 */;
+import VoiceStateStore from "VoiceStateStore" /* 4741 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4746 */;
 
 require = fn;
-const SpeakingFlags = fn(4665).SpeakingFlags;
+const SpeakingFlags = fn(4747).SpeakingFlags;
 const size = fn(2);
 const result = size.fileFinishedImporting("lib/VoiceStateAnalytics.tsx");
 class VoiceStateAnalytics {

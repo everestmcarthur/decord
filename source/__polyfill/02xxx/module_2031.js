@@ -1,26 +1,12 @@
 // Module ID: 2031
 // Function ID: 2032
-// Dependencies: []
-// Exports: default
+// Dependencies: [1317, 2032]
 
 // Module 2031
+import MessageFormat from "MessageFormat" /* 2032 */;
+import module_1317 from "module_1317" /* 1317 */;
 
-export default function buildFormatLongFn(arg0) {
-  closure_0 = arg0;
-  return () => {
-    if (arguments.length > 0) {
-      if (undefined !== arguments[0]) {
-        let first = arguments[0];
-      }
-      if (first.width) {
-        const _String = String;
-        let defaultWidth = String(first.width);
-      } else {
-        defaultWidth = closure_0.defaultWidth;
-      }
-      return closure_0.formats[defaultWidth] || closure_0.formats[closure_0.defaultWidth];
-    }
-    first = {};
-  };
-};
-export default exports.default;
+const _default = MessageFormat.default;
+_default.default = _default;
+
+export default _default;

@@ -1,13 +1,13 @@
-// Module ID: 12487
-// Function ID: 12488
+// Module ID: 12578
+// Function ID: 12579
 // Name: GuildDirectoryRow
-// Dependencies: [5, 32, 19, 17, 1958, 1980, 1074, 21, 4640, 576, 504, 7456, 5608, 9981, 1186, 1397, 1115, 5695, 5672, 1972, 4636, 12465, 5062, 2]
+// Dependencies: [5, 32, 19, 17, 1958, 1980, 1074, 21, 4722, 576, 504, 7538, 5690, 10075, 1186, 1397, 1115, 5777, 5754, 1972, 4718, 12556, 5144, 2]
 
-// Module 12487 (GuildDirectoryRow)
+// Module 12578 (GuildDirectoryRow)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
-import GuildIconDefault from "GuildIcon" /* 5672 */;
-import GuildDirectoryMoreMenuDefault from "GuildDirectoryMoreMenu" /* 12465 */;
+import GuildIconDefault from "GuildIcon" /* 5754 */;
+import GuildDirectoryMoreMenuDefault from "GuildDirectoryMoreMenu" /* 12556 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -19,7 +19,7 @@ const View = fn(17).View;
 const JoinGuildSources = fn(1074).JoinGuildSources;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj = { container: { flexDirection: "row", padding: 16, marginVertical: 6, marginHorizontal: 8 }, guildInfoContainer: { flexDirection: "column", flex: 1 }, guildIcon: { borderRadius: nativeDefault.radii.sm, marginRight: 16 }, guildWrapper: { flex: 1 }, guildDescription: { flexShrink: 1, marginBottom: 8 }, memberInfo: { flexDirection: "row", alignItems: "center", marginBottom: 8 }, dotOnline: null, dotOffline: null, headerContainer: null, titleContainer: null, flex: null };
 let size = { width: 8, height: 8, borderRadius: nativeDefault.radii.sm, marginRight: 4, backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360 };
 obj.dotOnline = size;
@@ -150,7 +150,7 @@ export default noop.memo(function GuildDirectoryRow(entry) {
   obj8.guild = result;
   const items1 = [closure_10(GuildIconDefault, obj8), ];
   const obj9 = { style: tmp.guildInfoContainer, children: null };
-  const items2 = [closure_10(entry(4636).Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: entry.name }), ];
+  const items2 = [closure_10(entry(4718).Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: entry.name }), ];
   const obj10 = { style: tmp.memberInfo, children: null };
   let tmp10Result = null;
   if (null != approximatePresenceCount) {
@@ -161,7 +161,7 @@ export default noop.memo(function GuildDirectoryRow(entry) {
     const intl3 = tmp2(1115).intl;
     const obj14 = { membersOnline: approximatePresenceCount };
     obj13.children = intl3.format(tmp2(1115).t["LC+S+m"], obj14);
-    items3[1] = tmp9(tmp2(4636).Text, obj13);
+    items3[1] = tmp9(tmp2(4718).Text, obj13);
     obj11.children = items3;
     tmp10Result = tmp10(closure_11, obj11);
   }
@@ -175,7 +175,7 @@ export default noop.memo(function GuildDirectoryRow(entry) {
     const intl4 = tmp2(1115).intl;
     const obj18 = { count: approximateMemberCount };
     obj17.children = intl4.format(tmp2(1115).t.zRl6XR, obj18);
-    items5[1] = tmp9(tmp2(4636).Text, obj17);
+    items5[1] = tmp9(tmp2(4718).Text, obj17);
     obj15.children = items5;
     tmp10Result2 = tmp10(closure_11, obj15);
   }
@@ -196,7 +196,7 @@ export default noop.memo(function GuildDirectoryRow(entry) {
   }
   if (tmp9Result) {
     const obj20 = { lineClamp: 3, style: tmp.guildDescription, variant: "text-sm/medium", color: "text-default", children: description };
-    tmp9Result = tmp9(tmp2(4636).Text, obj20);
+    tmp9Result = tmp9(tmp2(4718).Text, obj20);
   }
   items7[1] = tmp9Result;
   items7[2] = closure_10(View, { style: tmp.flex });
@@ -221,8 +221,8 @@ export default noop.memo(function GuildDirectoryRow(entry) {
   }
   obj22.variant = str2;
   obj22.text = stringResult;
-  items7[3] = closure_10(entry(5062).Button, obj22);
+  items7[3] = closure_10(entry(5144).Button, obj22);
   obj5.children = items7;
   obj4.children = closure_12(View, obj5);
-  return closure_10(entry(5695).Card, obj4);
+  return closure_10(entry(5777).Card, obj4);
 });

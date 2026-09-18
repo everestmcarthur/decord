@@ -1,11 +1,11 @@
-// Module ID: 8898
-// Function ID: 8899
+// Module ID: 8982
+// Function ID: 8983
 // Name: BadgeCategory
-// Dependencies: [8899, 2]
+// Dependencies: [8983, 2]
 // Exports: getBadgeCategory
 
-// Module 8898 (BadgeCategory)
-import GuildTraits from "GuildTraits" /* 8899 */;
+// Module 8982 (BadgeCategory)
+import GuildTraits from "GuildTraits" /* 8983 */;
 import size from "module_2" /* 2 */;
 
 const BadgeCategory = { PARTNERED: 0, [0]: "PARTNERED", VERIFIED: 1, [1]: "VERIFIED", VERIFIED_AND_PARTNERED: 2, [2]: "VERIFIED_AND_PARTNERED", COMMUNITY: 3, [3]: "COMMUNITY", DISCOVERABLE: 4, [4]: "DISCOVERABLE", STAFF: 5, [5]: "STAFF", NONE: 6, [6]: "NONE" };

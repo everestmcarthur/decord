@@ -1,21 +1,21 @@
-// Module ID: 15639
-// Function ID: 15640
+// Module ID: 15734
+// Function ID: 15735
 // Name: UserSettingsCommunityNotifications
-// Dependencies: [19, 10230, 21, 4640, 504, 11, 8748, 5060, 5775, 7314, 1115, 1941, 2]
+// Dependencies: [19, 10324, 21, 4722, 504, 11, 8831, 5142, 5857, 7396, 1115, 1941, 2]
 // Exports: default
 
-// Module 15639 (UserSettingsCommunityNotifications)
+// Module 15734 (UserSettingsCommunityNotifications)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1115 */;
-import TableRowGroup from "TableRowGroup" /* 5775 */;
-import TableSwitchRow from "TableSwitchRow" /* 7314 */;
+import TableRowGroup from "TableRowGroup" /* 5857 */;
+import TableSwitchRow from "TableSwitchRow" /* 7396 */;
 import noop from "module_19" /* 19 */;
-import GuildIncidentsStore from "GuildIncidentsStore" /* 10230 */;
+import GuildIncidentsStore from "GuildIncidentsStore" /* 10324 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let closure_6 = createStyles.createStyles({ container: { paddingHorizontal: 16 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/notifications/native/UserSettingsCommunityNotifications.tsx");
@@ -59,8 +59,8 @@ export default function UserSettingsCommunityNotifications() {
           return hasOwnProperty(TableRowGroup.TableRowGroup, obj, item);
         })
     };
-    obj3.children = closure_4(tmp2(5060).Stack, obj4);
-    tmp5 = closure_4(tmp2(8748).Form, obj3);
+    obj3.children = closure_4(tmp2(5142).Stack, obj4);
+    tmp5 = closure_4(tmp2(8831).Form, obj3);
   }
   return tmp5;
 };

@@ -1,15 +1,15 @@
-// Module ID: 14837
-// Function ID: 14838
+// Module ID: 14931
+// Function ID: 14932
 // Name: useAgeGroupPresentation
-// Dependencies: [1074, 4853, 8560, 2025, 8562, 1115, 2]
+// Dependencies: [1074, 4935, 8643, 2025, 8645, 1115, 2]
 // Exports: handleOpenAgeGatedContentArticle, handleShowAgeVerification, useAgeGroupState, useAgeGroupValueLabel
 
-// Module 14837 (useAgeGroupPresentation)
+// Module 14931 (useAgeGroupPresentation)
 import Constants from "Constants" /* 1074 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2025 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 4853 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8560 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8562 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 4935 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8643 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8645 */;
 import size from "module_2" /* 2 */;
 
 const HelpdeskArticles = Constants.HelpdeskArticles;

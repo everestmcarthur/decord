@@ -1,13 +1,13 @@
-// Module ID: 6205
-// Function ID: 6206
+// Module ID: 6287
+// Function ID: 6288
 // Name: GemHero3dIllustration
-// Dependencies: [21, 5675, 6206, 2]
+// Dependencies: [21, 5757, 6288, 2]
 // Exports: GemHero3dIllustration
 
-// Module 6205 (GemHero3dIllustration)
+// Module 6287 (GemHero3dIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5675 */;
-import _modDef6206 from "module_6206" /* 6206 */;
+import FastImageDefault from "FastImage" /* 5757 */;
+import _modDef6288 from "module_6288" /* 6288 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const GemHero3dIllustration = function GemHero3dIllustration(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6206 };
+  const obj2 = { uri: _modDef6288 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

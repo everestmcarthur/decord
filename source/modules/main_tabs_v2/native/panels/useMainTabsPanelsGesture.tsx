@@ -1,22 +1,22 @@
-// Module ID: 16158
-// Function ID: 16159
+// Module ID: 16255
+// Function ID: 16256
 // Name: useMainTabsPanelsGesture
-// Dependencies: [19, 11618, 1364, 16159, 11619, 1612, 1478, 4376, 4641, 4644, 5061, 16160, 6766, 2]
+// Dependencies: [19, 11710, 1364, 16256, 11711, 1612, 1478, 4458, 4723, 4726, 5143, 16257, 6848, 2]
 // Exports: default
 
-// Module 16158 (useMainTabsPanelsGesture)
+// Module 16255 (useMainTabsPanelsGesture)
 import PlatformUtils2 from "PlatformUtils" /* 1364 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
-import timing from "timing" /* 4641 */;
-import timingPresets from "timingPresets" /* 4644 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6766 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4458 */;
+import timing from "timing" /* 4723 */;
+import timingPresets from "timingPresets" /* 4726 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6848 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const LaunchPadTypes = fn(11618).LaunchPadTypes;
+const LaunchPadTypes = fn(11710).LaunchPadTypes;
 let PlatformUtils = fn(1364);
 PlatformUtils = PlatformUtils.isAndroid();
-const PanelsConfig = fn(16159);
+const PanelsConfig = fn(16256);
 let panelsConfig = PlatformUtils ? PanelsConfig.ANDROID_PANELS_ANIMATION_CONFIG : PanelsConfig.DEFAULT_PANELS_ANIMATION_CONFIG;
 let closure_7 = { code: "function useMainTabsPanelsGestureTsx1(width){const{isDragging,translateX,IS_ANDROID,withTiming,timingInstant}=this.__closure;if(isDragging.get())return;if(translateX.get()===0)return;translateX.set(IS_ANDROID?withTiming(width,timingInstant,'animate-always'):width);}" };
 let closure_8 = { code: "function useMainTabsPanelsGestureTsx2(show,isFling,velocity,force){const{translateX,width,onVisibilityChange,runOnJS,onPreMovement,panelsConfig,isTimingConfig,withTiming,withSpring}=this.__closure;if(!force&&translateX.get()!==0&&translateX.get()!==width){return false;}const targetTranslationX=show?0:width;if(translateX.get()===targetTranslationX){if(onVisibilityChange!=null){runOnJS(onVisibilityChange)(show);}return false;}if(onPreMovement!=null){runOnJS(onPreMovement)(show);}const animationConfig=show?isFling?panelsConfig.swipeSidePanelOpen:panelsConfig.nonSwipeSidePanelOpen:isFling?panelsConfig.swipeSidePanelClose:panelsConfig.nonSwipeSidePanelClose;function handleAnimationFinish(finished){'worklet';if(!finished)return;if(onVisibilityChange!=null){runOnJS(onVisibilityChange)(show);}}translateX.set(isTimingConfig(animationConfig)?withTiming(targetTranslationX,animationConfig,'respect-motion-settings',handleAnimationFinish):withSpring(targetTranslationX,{...animationConfig,velocity:velocity},'respect-motion-settings',handleAnimationFinish));return true;}" };

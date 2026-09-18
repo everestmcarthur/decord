@@ -1,16 +1,16 @@
-// Module ID: 7262
-// Function ID: 7263
+// Module ID: 7344
+// Function ID: 7345
 // Name: FormIcon
-// Dependencies: [19, 21, 4640, 1177, 2]
+// Dependencies: [19, 21, 4722, 1177, 2]
 // Exports: default
 
-// Module 7262 (FormIcon)
+// Module 7344 (FormIcon)
 import native from "native" /* 1177 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let closure_3 = createStyles.createStyles({ icon: { opacity: 0.6 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Form/native/FormIcon.tsx");

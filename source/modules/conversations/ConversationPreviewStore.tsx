@@ -1,19 +1,19 @@
-// Module ID: 7708
-// Function ID: 7709
+// Module ID: 7790
+// Function ID: 7791
 // Name: ConversationPreviewStore
-// Dependencies: [32, 502, 1958, 4288, 1372, 7709, 1438, 7710, 7711, 4863, 504, 573, 2]
+// Dependencies: [32, 502, 1958, 4371, 1372, 7791, 1438, 7792, 7793, 4945, 504, 573, 2]
 
-// Module 7708 (ConversationPreviewStore)
+// Module 7790 (ConversationPreviewStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import privDefault from "priv" /* 1438 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 4863 */;
-import ConversationsUtils from "ConversationsUtils" /* 7710 */;
-import ConversationMessageCacheUtils from "ConversationMessageCacheUtils" /* 7711 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 4945 */;
+import ConversationsUtils from "ConversationsUtils" /* 7792 */;
+import ConversationMessageCacheUtils from "ConversationMessageCacheUtils" /* 7793 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
-import RelationshipStore from "RelationshipStore" /* 4288 */;
+import RelationshipStore from "RelationshipStore" /* 4371 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -44,9 +44,9 @@ function handleReaction(messageId) {
         if (flag2) {
           const messageByMessageId2 = peekResult.messageByMessageId;
           const result = messageByMessageId2.set(messageId, applyReactionResult);
-          const result1 = tmp5(7711).replaceHydratedMessage(peekResult, messageId, applyReactionResult);
+          const result1 = tmp5(7793).replaceHydratedMessage(peekResult, messageId, applyReactionResult);
           flag2 = true;
-          const tmp5Result = tmp5(7711);
+          const tmp5Result = tmp5(7793);
         }
         flag = flag2;
         tmp5 = require;
@@ -114,8 +114,8 @@ function evictWhere(fn) {
   }
   return flag;
 }
-let obj = { max: fn(7709).MAX_PREVIEW_CONVERSATIONS, dispose: clearMessageIndex };
-const navigation = new privDefault({ max: fn(7709).MAX_PREVIEW_CONVERSATIONS, dispose: clearMessageIndex });
+let obj = { max: fn(7791).MAX_PREVIEW_CONVERSATIONS, dispose: clearMessageIndex };
+const navigation = new privDefault({ max: fn(7791).MAX_PREVIEW_CONVERSATIONS, dispose: clearMessageIndex });
 let map = new Map();
 const map1 = new Map();
 const Store = initializeDefault.Store;
@@ -336,9 +336,9 @@ const conversationPreviewStore = new ConversationPreviewStore(DispatcherDefault,
             if (flag2) {
               const messageByMessageId2 = peekResult.messageByMessageId;
               const result = messageByMessageId2.set(id, updateMessageRecordResult);
-              const result1 = tmp7(7711).replaceHydratedMessage(peekResult, id, updateMessageRecordResult);
+              const result1 = tmp7(7793).replaceHydratedMessage(peekResult, id, updateMessageRecordResult);
               flag2 = true;
-              const tmp7Result = tmp7(7711);
+              const tmp7Result = tmp7(7793);
             }
             flag = flag2;
             tmp7 = require;

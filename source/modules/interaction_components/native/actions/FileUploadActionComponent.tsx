@@ -1,21 +1,21 @@
-// Module ID: 17646
-// Function ID: 17647
+// Module ID: 17710
+// Function ID: 17711
 // Name: FileUploadActionComponent
-// Dependencies: [5, 19, 17, 1958, 4981, 1074, 21, 4640, 4536, 5693, 15659, 1115, 4865, 4599, 10343, 8057, 5768, 8260, 38, 504, 12309, 5267, 5221, 17647, 1895, 4984, 5225, 12148, 9461, 10785, 1875, 10784, 5223, 5060, 576, 5775, 2]
+// Dependencies: [5, 19, 17, 1958, 5063, 1074, 21, 4722, 4618, 5775, 15754, 1115, 4947, 4681, 10437, 8140, 5850, 8342, 38, 504, 12400, 5349, 5303, 17711, 1895, 5066, 5307, 12239, 9545, 10879, 1875, 10878, 5305, 5142, 576, 5857, 2]
 // Exports: default
 
-// Module 17646 (FileUploadActionComponent)
+// Module 17710 (FileUploadActionComponent)
 import util from "util" /* 1115 */;
-import FileSizeUtils from "FileSizeUtils" /* 4536 */;
-import CircleCheckIcon from "CircleCheckIcon" /* 4599 */;
-import InteractionComponentUtils from "InteractionComponentUtils" /* 4865 */;
-import TableRow from "TableRow" /* 5693 */;
-import XSmallIcon from "XSmallIcon" /* 5768 */;
-import IconButton from "IconButton" /* 8057 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9461 */;
-import AttachmentPreview from "AttachmentPreview" /* 10343 */;
-import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10784 */;
-import FileUpIcon from "FileUpIcon" /* 15659 */;
+import FileSizeUtils from "FileSizeUtils" /* 4618 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 4681 */;
+import InteractionComponentUtils from "InteractionComponentUtils" /* 4947 */;
+import TableRow from "TableRow" /* 5775 */;
+import XSmallIcon from "XSmallIcon" /* 5850 */;
+import IconButton from "IconButton" /* 8140 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9545 */;
+import AttachmentPreview from "AttachmentPreview" /* 10437 */;
+import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10878 */;
+import FileUpIcon from "FileUpIcon" /* 15754 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
@@ -75,11 +75,11 @@ function File(upload) {
   return React7(TableRow.TableRow, obj);
 }
 const View = fn(17).View;
-const DraftType = fn(4981).DraftType;
+const DraftType = fn(5063).DraftType;
 const NOOP = fn(1074).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let closure_11 = createStyles.createStyles({ defaultAttachmentIconWrapper: { width: 32, alignItems: "center" } });
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/interaction_components/native/actions/FileUploadActionComponent.tsx");
@@ -266,7 +266,7 @@ export default function FileUploadActionComponent(maxValues) {
       extensions: allowedExtensions,
       uploadLimit: InteractionModal,
       onDismissKeyboard() {
-        return InteractionModal(10785).hideMediaKeyboardActionSheet();
+        return InteractionModal(10879).hideMediaKeyboardActionSheet();
       },
       onRestoreKeyboard: effectiveKestrelLimit,
       onSelectFiles(arg0) {
@@ -298,7 +298,7 @@ export default function FileUploadActionComponent(maxValues) {
             item = item.item;
             const result = InteractionModal(customId[29]).hideMediaKeyboardActionSheet();
             if (item.isIncluded) {
-              const found = currentUploads.find((item) => InteractionModal(5223).doesImageMatchUpload(item.node.image, item));
+              const found = currentUploads.find((item) => InteractionModal(5305).doesImageMatchUpload(item.node.image, item));
               if (null != found) {
                 callback1(found.id);
               }
@@ -317,8 +317,8 @@ export default function FileUploadActionComponent(maxValues) {
             obj.handleViewAllDialog(obj2);
           },
         onManageLimited() {
-            obj = InteractionModal(10784);
-            const result = obj.handleLimitedPickerDialog({ onDismissKeyboard: InteractionModal(10785).hideMediaKeyboardActionSheet, onRestoreKeyboard });
+            obj = InteractionModal(10878);
+            const result = obj.handleLimitedPickerDialog({ onDismissKeyboard: InteractionModal(10879).hideMediaKeyboardActionSheet, onRestoreKeyboard });
           },
         onClose: tmp4(tmp5[29]).hideMediaKeyboardActionSheet,
         onBack: tmp4(tmp5[29]).hideMediaKeyboardActionSheet

@@ -1,18 +1,18 @@
-// Module ID: 15580
-// Function ID: 15581
+// Module ID: 15675
+// Function ID: 15676
 // Name: UserSettingsText
-// Dependencies: [19, 17, 1372, 4303, 1183, 1184, 1074, 21, 4640, 576, 1241, 1936, 9512, 4341, 504, 4297, 1484, 7104, 1177, 10546, 4636, 1115, 8748, 5060, 5775, 7314, 5773, 5776, 2]
+// Dependencies: [19, 17, 1372, 4386, 1183, 1184, 1074, 21, 4722, 576, 1241, 1936, 9596, 4423, 504, 4380, 1484, 7186, 1177, 10640, 4718, 1115, 8831, 5142, 5857, 7396, 5855, 5858, 2]
 // Exports: default, setDataSavingMode, setImageDescriptions, setLowQualityImageMode, setStickerAutocomplete, setVideoUploadQuality
 
-// Module 15580 (UserSettingsText)
+// Module 15675 (UserSettingsText)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import UserSettings from "UserSettings" /* 1936 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7104 */;
-import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 9512 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7186 */;
+import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 9596 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
-import SubscriptionStore from "SubscriptionStore" /* 4303 */;
+import SubscriptionStore from "SubscriptionStore" /* 4386 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1183 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1184 */;
 
@@ -25,7 +25,7 @@ const Constants = fn(1074);
 ({ AnalyticEvents: closure_9, AnalyticsSections: c10, UserSettingsSections: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = { flex: { flex: 1 }, nitroUpsell: { flexDirection: "row", alignItems: "center" }, nitroIcon: null };
 let size = { width: 16, height: 16, tintColor: nativeDefault.unsafe_rawColors.PRIMARY_400 };
 obj2.nitroIcon = size;

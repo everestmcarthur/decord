@@ -1,9 +1,40 @@
 // Module ID: 2120
 // Function ID: 2121
-// Dependencies: [1121]
+// Dependencies: []
+// Exports: default
 
 // Module 2120
-import registerAsset from "module_1121" /* 1121 */;
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy92aXJ0dWFsX2N1cnJlbmN5L3dlYi9vcmJfd2FsbGV0L21lc3NhZ2Vz", scales: [1], hash: "5d4b72297578b9a9d3b1b27a3235a108", name: "lt.messages.5d4b72297578b9a9d3b1b27a3235a108.compiled.messages", type: "jsona" });
+export default function buildMatchPatternFn(arg0) {
+  const matchPattern = arg0;
+  return (str) => {
+    if (arguments.length > 1) {
+      if (undefined !== arguments[1]) {
+        let obj = arguments[1];
+      }
+      const match = str.match(matchPattern.matchPattern);
+      if (match) {
+        const match1 = str.match(obj2.parsePattern);
+        if (match1) {
+          if (obj2.valueCallback) {
+            let first = obj2.valueCallback(match1[0]);
+          } else {
+            first = match1[0];
+          }
+          let valueCallbackResult2 = first;
+          if (obj.valueCallback) {
+            valueCallbackResult2 = obj.valueCallback(first);
+          }
+          const obj3 = { value: valueCallbackResult2, rest: str.slice(match[0].length) };
+          return obj3;
+        } else {
+          return null;
+        }
+      } else {
+        return null;
+      }
+    }
+    obj = {};
+  };
+};
+export default exports.default;

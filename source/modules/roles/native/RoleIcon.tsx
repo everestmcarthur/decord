@@ -1,11 +1,11 @@
-// Module ID: 7319
-// Function ID: 7320
+// Module ID: 7401
+// Function ID: 7402
 // Name: RoleIcon
-// Dependencies: [19, 17, 21, 1364, 4636, 2]
+// Dependencies: [19, 17, 21, 1364, 4718, 2]
 // Exports: default
 
-// Module 7319 (RoleIcon)
-import Text_Text from "Text/Text" /* 4636 */;
+// Module 7401 (RoleIcon)
+import Text_Text from "Text/Text" /* 4718 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,6 +21,7 @@ export default function RoleIcon(arg0) {
     size = 20;
   }
   const size1 = { height: size, width: size };
+  const obj = { fontFamily: "System", fontSize: size * num, lineHeight: "call", textAlign: "Component", width: size, marginBottom: "isArrayBufferToString" };
   if (null != src) {
     const obj2 = { resizeMode: "contain", source: null, style: null };
     const obj3 = { uri: src };

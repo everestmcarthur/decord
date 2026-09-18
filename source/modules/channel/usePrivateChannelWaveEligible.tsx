@@ -1,12 +1,12 @@
-// Module ID: 16198
-// Function ID: 16199
+// Module ID: 16295
+// Function ID: 16296
 // Name: usePrivateChannelWaveEligible
-// Dependencies: [4861, 4288, 1965, 1074, 504, 11, 4321, 4231, 11518, 2]
+// Dependencies: [4943, 4371, 1965, 1074, 504, 11, 4404, 4314, 11616, 2]
 // Exports: usePrivateChannelWaveEligible
 
-// Module 16198 (usePrivateChannelWaveEligible)
-import MessageStore from "MessageStore" /* 4861 */;
-import RelationshipStore from "RelationshipStore" /* 4288 */;
+// Module 16295 (usePrivateChannelWaveEligible)
+import MessageStore from "MessageStore" /* 4943 */;
+import RelationshipStore from "RelationshipStore" /* 4371 */;
 
 const require = globalThis.__r;
 
@@ -67,8 +67,8 @@ export const usePrivateChannelWaveEligible = function usePrivateChannelWaveEligi
   const obj5 = recipientId(11);
   const extractTimestampResult = recipientId(11).extractTimestamp(isDM.id);
   const obj6 = require("DateUtils");
-  const tmp9 = recipientId(4231)();
-  const isWithinIntervalResult = obj6.isWithinInterval(recipientId(4231)(), recipientId(4231)(extractTimestampResult), 1814400000);
+  const tmp9 = recipientId(4314)();
+  const isWithinIntervalResult = obj6.isWithinInterval(recipientId(4314)(), recipientId(4314)(extractTimestampResult), 1814400000);
   const strangerDangerWarning = require("useStrangerDangerWarning").useStrangerDangerWarning(isDM.id);
   if (tmp) {
     tmp = stateFromStores;

@@ -1,16 +1,16 @@
-// Module ID: 15033
-// Function ID: 15034
+// Module ID: 15127
+// Function ID: 15128
 // Name: SpendingLimitDisplay
-// Dependencies: [1220, 7651, 1374, 504, 14951, 7348, 7349, 1115, 2397, 2]
+// Dependencies: [1220, 7733, 1374, 504, 15045, 7430, 7431, 1115, 2480, 2]
 // Exports: useSpendingLimitDisplayState, useSpendingLimitFromUserSettings
 
-// Module 15033 (SpendingLimitDisplay)
+// Module 15127 (SpendingLimitDisplay)
 import initialize from "initialize" /* 504 */;
-import _modDef2397 from "module_2397" /* 2397 */;
-import PriceUtils from "PriceUtils" /* 7348 */;
-import SpendingLimitUtils from "SpendingLimitUtils" /* 14951 */;
+import _modDef2480 from "module_2480" /* 2480 */;
+import PriceUtils from "PriceUtils" /* 7430 */;
+import SpendingLimitUtils from "SpendingLimitUtils" /* 15045 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7651 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7733 */;
 
 require = fn;
 function getSpendingLimitDisplayState(amount, arg1) {
@@ -26,7 +26,7 @@ function getSpendingLimitDisplayState(amount, arg1) {
       const obj2 = { kind: "spent", monthlyText: formatRateResult };
       return obj2;
     } else {
-      let num = tmp5(7349).CurrencyExponents[amount.currency];
+      let num = tmp5(7431).CurrencyExponents[amount.currency];
       if (num == null) {
         num = 2;
       }
@@ -34,10 +34,10 @@ function getSpendingLimitDisplayState(amount, arg1) {
       if (diff <= 10 * 10 ** num) {
         const obj3 = { kind: "close-to-limit", monthlyText: formatRateResult, remainingText: null };
         const intl = tmp5(1115).intl;
-        const obj4 = { amount: tmp5(7348).formatPrice(diff, currency) };
-        obj3.remainingText = intl.formatToPlainString(_modDef2397["+Q+bU1"], obj4);
+        const obj4 = { amount: tmp5(7430).formatPrice(diff, currency) };
+        obj3.remainingText = intl.formatToPlainString(_modDef2480["+Q+bU1"], obj4);
         let obj = obj3;
-        const tmp5Result = tmp5(7348);
+        const tmp5Result = tmp5(7430);
       } else {
         obj = { kind: "on", monthlyText: formatRateResult };
       }

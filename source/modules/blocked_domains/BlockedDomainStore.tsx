@@ -1,9 +1,9 @@
-// Module ID: 8520
-// Function ID: 8521
+// Module ID: 8603
+// Function ID: 8604
 // Name: BlockedDomainStore
 // Dependencies: [1074, 1350, 1241, 2]
 
-// Module 8520 (BlockedDomainStore)
+// Module 8603 (BlockedDomainStore)
 import Constants from "Constants" /* 1074 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import js_shim_shim from "js_shim/shim" /* 1350 */;

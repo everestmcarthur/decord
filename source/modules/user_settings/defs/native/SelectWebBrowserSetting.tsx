@@ -1,14 +1,14 @@
-// Module ID: 15595
-// Function ID: 15596
+// Module ID: 15690
+// Function ID: 15691
 // Name: SelectWebBrowserSetting
-// Dependencies: [8111, 4604, 1115, 1094, 1364, 11622, 2]
+// Dependencies: [8194, 4686, 1115, 1094, 1364, 11714, 2]
 // Exports: useWebBrowserSettingOptions
 
-// Module 15595 (SelectWebBrowserSetting)
+// Module 15690 (SelectWebBrowserSetting)
 import util from "util" /* 1115 */;
-import BrowserManager from "BrowserManager" /* 4604 */;
-import SettingsConstants from "SettingsConstants" /* 8111 */;
-import SettingBuilders from "SettingBuilders" /* 11622 */;
+import BrowserManager from "BrowserManager" /* 4686 */;
+import SettingsConstants from "SettingsConstants" /* 8194 */;
+import SettingBuilders from "SettingBuilders" /* 11714 */;
 import size from "module_2" /* 2 */;
 
 function useWebBrowserSettingOptions() {

@@ -1,33 +1,33 @@
-// Module ID: 11494
-// Function ID: 11495
+// Module ID: 11592
+// Function ID: 11593
 // Name: ChatView
-// Dependencies: [19, 17, 5365, 1962, 1958, 4861, 1074, 21, 4640, 576, 4506, 504, 1115, 4851, 7443, 5686, 11495, 11496, 7589, 7428, 11498, 7224, 11503, 11516, 11578, 12109, 12620, 1364, 12788, 12789, 12418, 12793, 12796, 11683, 12799, 5212, 9, 10441, 12814, 1177, 12816, 12818, 12819, 12911, 2]
+// Dependencies: [19, 17, 5447, 1962, 1958, 4943, 1074, 21, 4722, 576, 4588, 504, 1115, 4933, 7525, 5768, 11593, 11594, 7671, 7510, 11596, 7306, 11601, 11614, 11676, 12200, 12711, 1364, 12879, 12880, 12509, 12884, 12887, 11773, 12890, 5294, 9, 10535, 12905, 1177, 12907, 12909, 12910, 13002, 2]
 
-// Module 11494 (ChatView)
+// Module 11592 (ChatView)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import ChatInputUtils from "ChatInputUtils" /* 4506 */;
-import LazyLoadedThreadManagerDefault from "LazyLoadedThreadManager" /* 7428 */;
-import SummaryActionCreators from "SummaryActionCreators" /* 11498 */;
-import ChatViewWrapperDefault from "ChatViewWrapper" /* 11503 */;
-import ChatViewStickyHeaderDefault from "ChatViewStickyHeader" /* 11516 */;
-import MessagesDefault from "Messages" /* 11578 */;
-import ChatInputDefault from "ChatInput" /* 12109 */;
-import ChatBeginningRowDefault from "ChatBeginningRow" /* 12620 */;
-import ChannelSafeAreaBottomDefault from "ChannelSafeAreaBottom" /* 12793 */;
-import VoiceMessageOverlayDefault from "VoiceMessageOverlay" /* 12796 */;
+import ChatInputUtils from "ChatInputUtils" /* 4588 */;
+import LazyLoadedThreadManagerDefault from "LazyLoadedThreadManager" /* 7510 */;
+import SummaryActionCreators from "SummaryActionCreators" /* 11596 */;
+import ChatViewWrapperDefault from "ChatViewWrapper" /* 11601 */;
+import ChatViewStickyHeaderDefault from "ChatViewStickyHeader" /* 11614 */;
+import MessagesDefault from "Messages" /* 11676 */;
+import ChatInputDefault from "ChatInput" /* 12200 */;
+import ChatBeginningRowDefault from "ChatBeginningRow" /* 12711 */;
+import ChannelSafeAreaBottomDefault from "ChannelSafeAreaBottom" /* 12884 */;
+import VoiceMessageOverlayDefault from "VoiceMessageOverlay" /* 12887 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5365 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5447 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
-import MessageStore from "MessageStore" /* 4861 */;
+import MessageStore from "MessageStore" /* 4943 */;
 
 require = fn;
 const createChannelRecord = fn(1962).createChannelRecord;
 const ChannelTypes = fn(1074).ChannelTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj = { empty: { flex: 1, borderTopWidth: fn(17).StyleSheet.hairlineWidth, borderTopColor: nativeDefault.colors.BORDER_SUBTLE }, messages: { flex: 1, overflow: "hidden" }, chat: null };
 let obj3 = { flex: 1, borderTopWidth: fn(17).StyleSheet.hairlineWidth, borderTopColor: nativeDefault.colors.BORDER_SUBTLE };
 obj.chat = { backgroundColor: nativeDefault.colors.CHANNEL_BACKGROUND_DEFAULT, justifyContent: "flex-start", overflow: "hidden", flex: 1 };
@@ -189,20 +189,20 @@ export default noop.memo(function ChatView(alwaysRespectKeyboard) {
       let tmp7Result = null;
       if (!obj6.isAndroid()) {
         const obj7 = { channelId: tmp8.id, messagesRef: tmp11 };
-        tmp7Result = tmp7(tmp3(12788), obj7);
+        tmp7Result = tmp7(tmp3(12879), obj7);
       }
       items1[1] = tmp7Result;
       let tmp7Result3 = null;
       if (c15) {
         const obj8 = { screenIndex: tmp10 };
-        tmp7Result3 = tmp7(tmp3(12789), obj8);
+        tmp7Result3 = tmp7(tmp3(12880), obj8);
       }
       items1[2] = tmp7Result3;
       obj6 = PlatformUtils;
       let tmp7Result4 = null;
       if (tmp14Result.isAndroid()) {
         const obj9 = { channelId: tmp6, screenIndex: tmp10, onJumpToPresent: tmp12 };
-        tmp7Result4 = tmp7(tmp3(12418), obj9);
+        tmp7Result4 = tmp7(tmp3(12509), obj9);
       }
       const obj10 = { children: null };
       items1[3] = tmp7Result4;

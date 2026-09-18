@@ -1,8 +1,8 @@
-// Module ID: 5980
-// Function ID: 5981
+// Module ID: 6062
+// Function ID: 6063
 // Dependencies: [2]
 
-// Module 5980
+// Module 6062
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ConnectionCablesSpotIllustration-2x.png.js");

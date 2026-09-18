@@ -1,10 +1,10 @@
-// Module ID: 5146
-// Function ID: 5147
+// Module ID: 5228
+// Function ID: 5229
 // Name: MemberVerificationConstants
-// Dependencies: [4464, 2]
+// Dependencies: [4546, 2]
 
-// Module 5146 (MemberVerificationConstants)
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4464 */;
+// Module 5228 (MemberVerificationConstants)
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4546 */;
 import size from "module_2" /* 2 */;
 
 const items = [{ field_type: MemberVerificationTypes.VerificationFormFieldTypes.VERIFICATION }];

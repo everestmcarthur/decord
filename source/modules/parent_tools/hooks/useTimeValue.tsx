@@ -1,10 +1,10 @@
-// Module ID: 15059
-// Function ID: 15060
+// Module ID: 15153
+// Function ID: 15154
 // Name: useTimeValue
-// Dependencies: [19, 2, 10233]
+// Dependencies: [19, 2, 10327]
 // Exports: default
 
-// Module 15059 (useTimeValue)
+// Module 15153 (useTimeValue)
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);
@@ -23,4 +23,4 @@ export default function useTimeValue(arg0) {
     return tmp2;
   });
 };
-export const timeToMinutes = fn(10233).timeToMinutes;
+export const timeToMinutes = fn(10327).timeToMinutes;

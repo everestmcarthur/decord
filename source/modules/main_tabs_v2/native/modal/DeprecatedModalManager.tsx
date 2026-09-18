@@ -1,20 +1,20 @@
-// Module ID: 17755
-// Function ID: 17756
+// Module ID: 17818
+// Function ID: 17819
 // Name: DeprecatedModalManager
-// Dependencies: [9218, 502, 9972, 17756, 1952, 1074, 4498, 4497, 4845, 6702, 17757, 17758, 17766, 7232, 17767, 18066, 18068, 2]
+// Dependencies: [9302, 502, 10066, 17819, 1952, 1074, 4580, 4579, 4927, 6784, 17820, 17821, 17829, 7314, 17830, 18160, 18162, 2]
 
-// Module 17755 (DeprecatedModalManager)
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4497 */;
-import RootNavigationRef from "RootNavigationRef" /* 4498 */;
-import getDeprecatedModalDataDefault from "getDeprecatedModalData" /* 4845 */;
-import VerificationUtilsDefault from "VerificationUtils" /* 6702 */;
-import SafetyFlowsExperiment from "SafetyFlowsExperiment" /* 17757 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9218 */;
+// Module 17818 (DeprecatedModalManager)
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4579 */;
+import RootNavigationRef from "RootNavigationRef" /* 4580 */;
+import getDeprecatedModalDataDefault from "getDeprecatedModalData" /* 4927 */;
+import VerificationUtilsDefault from "VerificationUtils" /* 6784 */;
+import SafetyFlowsExperiment from "SafetyFlowsExperiment" /* 17820 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9302 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import CreateInviteModalStore from "CreateInviteModalStore" /* 9972 */;
-import NotificationSettingsModalStore from "NotificationSettingsModalStore" /* 17756 */;
+import CreateInviteModalStore from "CreateInviteModalStore" /* 10066 */;
+import NotificationSettingsModalStore from "NotificationSettingsModalStore" /* 17819 */;
 import UserRequiredActionStore from "UserRequiredActionStore" /* 1952 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7232 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7314 */;
 
 require = fn;
 function handlePushedModal(modal) {
@@ -113,14 +113,14 @@ const prototype = function DeprecatedModalManager() {
     USER_REQUIRED_ACTION_UPDATE(requiredAction) {
       if (null == requiredAction.requiredAction) {
         if (obj.isModalOpen(USER_REQUIRED_ACTION_UPDATE)) {
-          tmp5(4497).popModal(tmp7);
-          const tmp5Result = tmp5(4497);
+          tmp5(4579).popModal(tmp7);
+          const tmp5Result = tmp5(4579);
         }
         obj = NavigationRouteUtils;
         tmp7 = USER_REQUIRED_ACTION_UPDATE;
         if (tmp5Result3.isModalOpen(EMAIL_VERIFICATION_MODAL_OPEN)) {
-          tmp5(4497).popModal(tmp9);
-          const tmp5Result4 = tmp5(4497);
+          tmp5(4579).popModal(tmp9);
+          const tmp5Result4 = tmp5(4579);
         }
         tmp5Result3 = NavigationRouteUtils;
         tmp9 = EMAIL_VERIFICATION_MODAL_OPEN;

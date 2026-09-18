@@ -1,19 +1,19 @@
-// Module ID: 15256
-// Function ID: 15257
+// Module ID: 15350
+// Function ID: 15351
 // Name: VideoQuestCaptions
-// Dependencies: [19, 17, 21, 4640, 576, 672, 15257, 15259, 5050, 4636, 2]
+// Dependencies: [19, 17, 21, 4722, 576, 672, 15351, 15353, 5132, 4718, 2]
 // Exports: VideoQuestCaptions
 
-// Module 15256 (VideoQuestCaptions)
+// Module 15350 (VideoQuestCaptions)
 import nativeDefault from "native" /* 576 */;
-import VideoQuestCaptionsUtils from "VideoQuestCaptionsUtils" /* 15259 */;
+import VideoQuestCaptionsUtils from "VideoQuestCaptionsUtils" /* 15353 */;
 import noop from "module_19" /* 19 */;
 import n from "module_672" /* 672 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = { container: null, captionBox: null, captionText: null };
 const rect = { position: "absolute", bottom: nativeDefault.space.PX_32, left: nativeDefault.space.PX_16, right: nativeDefault.space.PX_16, alignItems: "center", justifyContent: "flex-end" };
 obj2.container = rect;

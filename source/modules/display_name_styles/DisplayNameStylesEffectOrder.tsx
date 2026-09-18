@@ -1,10 +1,10 @@
-// Module ID: 15455
-// Function ID: 15456
+// Module ID: 15549
+// Function ID: 15550
 // Name: DisplayNameStylesEffectOrder
-// Dependencies: [19, 1390, 9331, 2]
+// Dependencies: [19, 1390, 9415, 2]
 // Exports: useVisibleEffectOrder
 
-// Module 15455 (DisplayNameStylesEffectOrder)
+// Module 15549 (DisplayNameStylesEffectOrder)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -15,7 +15,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/display_name_styles/DisplayNameStylesEffectOrder.tsx");
 
 export const useVisibleEffectOrder = function useVisibleEffectOrder() {
-  isDisplayNameStylesFlywheelSettersEnabled = isDisplayNameStylesFlywheelSettersEnabled(9331).useIsDisplayNameStylesFlywheelSettersEnabled("effect-order");
+  isDisplayNameStylesFlywheelSettersEnabled = isDisplayNameStylesFlywheelSettersEnabled(9415).useIsDisplayNameStylesFlywheelSettersEnabled("effect-order");
   items = [isDisplayNameStylesFlywheelSettersEnabled];
   return noop.useMemo(() => isDisplayNameStylesFlywheelSettersEnabled ? items : EFFECT_ORDER, items);
 };

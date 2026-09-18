@@ -1,30 +1,30 @@
-// Module ID: 16385
-// Function ID: 16386
+// Module ID: 16482
+// Function ID: 16483
 // Name: TextChannel
-// Dependencies: [19, 17, 1957, 2014, 1958, 4278, 4655, 4821, 10267, 21, 4640, 576, 16277, 5162, 5115, 12531, 504, 5095, 4653, 4651, 1113, 11070, 16276, 9700, 4793, 4636, 5677, 10311, 9060, 9921, 16386, 16387, 16394, 2]
+// Dependencies: [19, 17, 1957, 2014, 1958, 4361, 4737, 4903, 10361, 21, 4722, 576, 16374, 5244, 5197, 12622, 504, 5177, 4735, 4733, 1113, 11163, 16373, 9794, 4875, 4718, 5759, 10405, 9144, 10015, 16483, 16484, 16491, 2]
 
-// Module 16385 (TextChannel)
+// Module 16482 (TextChannel)
 import nativeDefault from "native" /* 576 */;
 import RoutingSourcesDefault from "RoutingSources" /* 1113 */;
-import transitionToChannel from "transitionToChannel" /* 4651 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4653 */;
-import useChannelRoleSubscriptionStatus from "useChannelRoleSubscriptionStatus" /* 5095 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11070 */;
+import transitionToChannel from "transitionToChannel" /* 4733 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4735 */;
+import useChannelRoleSubscriptionStatus from "useChannelRoleSubscriptionStatus" /* 5177 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11163 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1957 */;
 import GatedChannelStore from "GatedChannelStore" /* 2014 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
-import PermissionStore from "PermissionStore" /* 4278 */;
-import ReadStateStore from "ReadStateStore" /* 4655 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4821 */;
+import PermissionStore from "PermissionStore" /* 4361 */;
+import ReadStateStore from "ReadStateStore" /* 4737 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4903 */;
 
 require = fn;
 const View = fn(17).View;
-const RedesignChannelListConstants = fn(10267);
+const RedesignChannelListConstants = fn(10361);
 ({ CHANNEL_MARGIN_VERTICAL: closure_11, CHANNEL_TITLE_LINE_HEIGHT: closure_12 } = RedesignChannelListConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let closure_15 = createStyles.createStyles((arg0, arg1) => {
   const obj = { container: { position: "relative", marginVertical, marginHorizontal: 8, borderRadius: nativeDefault.modules.mobile.CHANNEL_ITEM_RADIUS, flexGrow: 1 }, selected: null, selectedBorder: null, row: null, rowWithSubtitle: null, channelLabel: null, channelLabelText: null };
   const obj2 = { position: "relative", marginVertical, marginHorizontal: 8, borderRadius: nativeDefault.modules.mobile.CHANNEL_ITEM_RADIUS, flexGrow: 1 };

@@ -1,19 +1,19 @@
-// Module ID: 15837
-// Function ID: 15838
+// Module ID: 15932
+// Function ID: 15933
 // Name: DevToolsGuildPowerupsModal
-// Dependencies: [19, 21, 8035, 7114, 7984, 11082, 15838, 2]
+// Dependencies: [19, 21, 8118, 7196, 8067, 11175, 15933, 2]
 
-// Module 15837 (DevToolsGuildPowerupsModal)
-import HeaderShared from "HeaderShared" /* 7984 */;
-import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 11082 */;
-import DevToolsGuildPowerupsScreenDefault from "DevToolsGuildPowerupsScreen" /* 15838 */;
+// Module 15932 (DevToolsGuildPowerupsModal)
+import HeaderShared from "HeaderShared" /* 8067 */;
+import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 11175 */;
+import DevToolsGuildPowerupsScreenDefault from "DevToolsGuildPowerupsScreen" /* 15933 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const jsx = fn(21).jsx;
-const NativeStackNavigator = fn(8035);
+const NativeStackNavigator = fn(8118);
 let closure_4 = NativeStackNavigator.createNativeStackNavigator();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/devtools/native/components/screens/DevToolsGuildPowerupsModal.tsx");

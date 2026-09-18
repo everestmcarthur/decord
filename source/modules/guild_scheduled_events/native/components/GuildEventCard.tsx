@@ -1,14 +1,14 @@
-// Module ID: 9959
-// Function ID: 9960
+// Module ID: 10053
+// Function ID: 10054
 // Name: GuildEventCard
-// Dependencies: [19, 17, 4663, 7640, 1964, 21, 4640, 576, 9923, 5521, 504, 9855, 5695, 8559, 9947, 2]
+// Dependencies: [19, 17, 4745, 7722, 1964, 21, 4722, 576, 10017, 5603, 504, 9949, 5777, 8642, 10041, 2]
 
-// Module 9959 (GuildEventCard)
+// Module 10053 (GuildEventCard)
 import nativeDefault from "native" /* 576 */;
-import ButtonGroup from "ButtonGroup" /* 5521 */;
-import GuildEventCardComponents from "GuildEventCardComponents" /* 9923 */;
+import ButtonGroup from "ButtonGroup" /* 5603 */;
+import GuildEventCardComponents from "GuildEventCardComponents" /* 10017 */;
 import noop from "module_19" /* 19 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4663 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4745 */;
 
 const require = globalThis.__r;
 
@@ -22,7 +22,7 @@ function GuildEventCardControls(onCloseAction) {
   let tmp6Result = primaryActionButtonType === GuildEventCardComponents.PrimaryActionType.START;
   if (tmp6Result) {
     const obj3 = { event };
-    tmp6Result = tmp6(tmp2(9923).GuildEventCardRSVPAction, obj3);
+    tmp6Result = tmp6(tmp2(10017).GuildEventCardRSVPAction, obj3);
   }
   items[1] = tmp6Result;
   items[2] = React5(GuildEventCardComponents.GuildEventShareAction, { event });
@@ -30,11 +30,11 @@ function GuildEventCardControls(onCloseAction) {
   return React6(ButtonGroup.ButtonGroup, obj2);
 }
 const View = fn(17).View;
-let closure_5 = fn(7640).isGuildScheduledEventActive;
+let closure_5 = fn(7722).isGuildScheduledEventActive;
 fn(1964).AGE_VERIFICATION_STAGE_CHANNEL_TYPES;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj = { actionContainer: { paddingTop: nativeDefault.space.PX_16, paddingBottom: 0 } };
 const styles = createStyles.createStyles(obj);
 let obj3 = { paddingTop: nativeDefault.space.PX_16, paddingBottom: 0 };

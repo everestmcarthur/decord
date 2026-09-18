@@ -1,12 +1,12 @@
-// Module ID: 16479
-// Function ID: 16480
+// Module ID: 16576
+// Function ID: 16577
 // Name: isHomeDrawerChannelInChannelList
-// Dependencies: [4821, 504, 7649, 2]
+// Dependencies: [4903, 504, 7731, 2]
 // Exports: useIsHomeDrawerChannelInChannelList
 
-// Module 16479 (isHomeDrawerChannelInChannelList)
+// Module 16576 (isHomeDrawerChannelInChannelList)
 import initialize from "initialize" /* 504 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4821 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4903 */;
 
 require = fn;
 const size = fn(2);

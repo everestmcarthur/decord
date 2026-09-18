@@ -1,11 +1,11 @@
-// Module ID: 7300
-// Function ID: 7301
+// Module ID: 7382
+// Function ID: 7383
 // Name: useRoleIconProps
-// Dependencies: [19, 2016, 1980, 504, 7301, 2]
+// Dependencies: [19, 2016, 1980, 504, 7383, 2]
 // Exports: computeRoleIconRole, getRoleIconProps, useRoleIconProps, useRoleIconPropsForPreview
 
-// Module 7300 (useRoleIconProps)
-import RoleIconUtils from "RoleIconUtils" /* 7301 */;
+// Module 7382 (useRoleIconProps)
+import RoleIconUtils from "RoleIconUtils" /* 7383 */;
 import noop from "module_19" /* 19 */;
 import GuildRoleStore from "GuildRoleStore" /* 2016 */;
 import GuildStore from "GuildStore" /* 1980 */;
@@ -124,7 +124,7 @@ export const useRoleIconPropsForPreview = function useRoleIconPropsForPreview(gu
     if (null != stateFromStores) {
       const roleIconData = RoleIconUtils.getRoleIconData(tmp, undefined);
       if (null != roleIconData) {
-        const obj3 = { src: roleIconData.customIconSrc, name: null, roleId: null, size: "Array", unicodeEmoji: "png" };
+        const obj3 = { src: roleIconData.customIconSrc, name: null, roleId: null, size: "Array", unicodeEmoji: 0 };
         ({ name: obj2.name, id: obj2.roleId } = tmp);
         obj3.unicodeEmoji = roleIconData.unicodeEmoji;
         tmp2 = obj3;

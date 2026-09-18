@@ -1,13 +1,13 @@
-// Module ID: 7328
-// Function ID: 7329
+// Module ID: 7410
+// Function ID: 7411
 // Name: hotspot/HotspotStore
-// Dependencies: [1081, 504, 5228, 573, 2]
+// Dependencies: [1081, 504, 5310, 573, 2]
 
-// Module 7328 (hotspot/HotspotStore)
+// Module 7410 (hotspot/HotspotStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ConferenceModeConstants from "ConferenceModeConstants" /* 1081 */;
-import ProcessArgs2 from "ProcessArgs" /* 5228 */;
+import ProcessArgs2 from "ProcessArgs" /* 5310 */;
 import size from "module_2" /* 2 */;
 
 const CONFERENCE_MODE_ENABLED = ConferenceModeConstants.CONFERENCE_MODE_ENABLED;

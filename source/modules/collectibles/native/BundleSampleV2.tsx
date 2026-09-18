@@ -1,18 +1,18 @@
-// Module ID: 8954
-// Function ID: 8955
+// Module ID: 9038
+// Function ID: 9039
 // Name: BundleSampleV2
-// Dependencies: [19, 17, 8955, 21, 5675, 4640, 576, 38, 1890, 1887, 8956, 8967, 8974, 1177, 2]
+// Dependencies: [19, 17, 9039, 21, 5757, 4722, 576, 38, 1890, 1887, 9040, 9051, 9058, 1177, 2]
 // Exports: default
 
-// Module 8954 (BundleSampleV2)
+// Module 9038 (BundleSampleV2)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 576 */;
 import utils from "utils" /* 1887 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1890 */;
-import FastImageDefault from "FastImage" /* 5675 */;
-import ProfileEffectSampleV2Default from "ProfileEffectSampleV2" /* 8956 */;
-import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 8967 */;
-import NameplateDummyUserPreview from "NameplateDummyUserPreview" /* 8974 */;
+import FastImageDefault from "FastImage" /* 5757 */;
+import ProfileEffectSampleV2Default from "ProfileEffectSampleV2" /* 9040 */;
+import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 9051 */;
+import NameplateDummyUserPreview from "NameplateDummyUserPreview" /* 9058 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -146,7 +146,7 @@ function BundleSampleV2Composed(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ PixelRatio: c3, StyleSheet, View: closure_4 } = get_ActivityIndicator);
-const BUNDLE_PREVIEW_CONFIG = fn(8955).BUNDLE_PREVIEW_CONFIG;
+const BUNDLE_PREVIEW_CONFIG = fn(9039).BUNDLE_PREVIEW_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let obj = { container: null, bgBleedClip: null, bgMutedWrap: null, bgImage: null, fgClip: null, fgImage: null };
@@ -174,7 +174,7 @@ obj.fgClip = obj5;
 const merged4 = Object.assign(StyleSheet.absoluteFillObject);
 obj.fgImage = {};
 const styles = StyleSheet.create(obj);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let closure_10 = createStyles.createStyles((arg0) => {
   const obj = { bundle: null, pfx: null, avatar: null, avatarWithNameplate: null, nameplate: null };
   const size = { width: tmp.bundleWidth, height: tmp.bundleHeight, borderRadius: nativeDefault.radii.xs };

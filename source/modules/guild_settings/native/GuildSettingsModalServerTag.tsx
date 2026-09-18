@@ -1,30 +1,30 @@
-// Module ID: 17835
-// Function ID: 17836
+// Module ID: 17929
+// Function ID: 17930
 // Name: GuildSettingsModalServerTag
-// Dependencies: [5, 32, 19, 17, 9219, 1980, 9218, 1074, 8080, 21, 4640, 576, 1484, 9221, 504, 9341, 8313, 9342, 9217, 4337, 1115, 12631, 4532, 5712, 7491, 1485, 4985, 1177, 7153, 9357, 4636, 5775, 7314, 5693, 5060, 14029, 8748, 14027, 17836, 2]
+// Dependencies: [5, 32, 19, 17, 9303, 1980, 9302, 1074, 8163, 21, 4722, 576, 1484, 9305, 504, 9425, 8395, 9426, 9301, 4419, 1115, 12722, 4614, 5794, 7573, 1485, 5067, 1177, 7235, 9441, 4718, 5857, 7396, 5775, 5142, 14124, 8831, 14122, 17930, 2]
 // Exports: default
 
-// Module 17835 (GuildSettingsModalServerTag)
+// Module 17929 (GuildSettingsModalServerTag)
 import nativeDefault from "native" /* 576 */;
-import Powerups from "Powerups" /* 4532 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9217 */;
-import GuildProfileActionCreators from "GuildProfileActionCreators" /* 9342 */;
-import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 12631 */;
+import Powerups from "Powerups" /* 4614 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9301 */;
+import GuildProfileActionCreators from "GuildProfileActionCreators" /* 9426 */;
+import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 12722 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9218 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9302 */;
 
 require = fn;
 const AppState = fn(17).AppState;
-let GuildProfileFetchStatus = fn(9219).GuildProfileFetchStatus;
+let GuildProfileFetchStatus = fn(9303).GuildProfileFetchStatus;
 const GuildSettingsSections = fn(1074).GuildSettingsSections;
-const GuildTagConstants = fn(8080);
+const GuildTagConstants = fn(8163);
 ({ BADGES: closure_11, GuildTagBadgeSize: closure_12 } = GuildTagConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = { container: { flex: 1 }, containerContent: { paddingTop: 16, paddingHorizontal: nativeDefault.space.PX_16 }, description: null };
 let obj3 = { paddingTop: 16, paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.description = { paddingHorizontal: nativeDefault.space.PX_4 };
@@ -45,16 +45,16 @@ export default function GuildSettingsModalServerTag(guildId) {
   const tmp = closure_15();
   const navigation = guildId(1484).useNavigation();
   let obj = guildId(1484);
-  const result = guildId(9221).canUseMobileServerTagSettings(guildId);
+  const result = guildId(9305).canUseMobileServerTagSettings(guildId);
   dependencyMap = result;
-  let obj2 = guildId(9221);
+  let obj2 = guildId(9305);
   const items = [result1];
   const items1 = [guildId];
   const stateFromStores = guildId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId), items1);
   const obj3 = guildId(504);
-  const guildProfile1 = guildId(9341).useGuildProfile(guildId);
+  const guildProfile1 = guildId(9425).useGuildProfile(guildId);
   ({ guildProfile, fetchStatus } = guildProfile1);
-  const obj4 = guildId(9341);
+  const obj4 = guildId(9425);
   const items2 = [closure_9];
   const stateFromStores1 = guildId(504).useStateFromStores(items2, () => closure_9.getGuildProfile());
   let obj5 = guildId(504);
@@ -65,8 +65,8 @@ export default function GuildSettingsModalServerTag(guildId) {
   closure_6 = tmp10[1];
   let guildSupportsTagsResult = null != stateFromStores;
   if (guildSupportsTagsResult) {
-    guildSupportsTagsResult = tmp2(8313).guildSupportsTags(stateFromStores);
-    const tmp2Result = tmp2(8313);
+    guildSupportsTagsResult = tmp2(8395).guildSupportsTags(stateFromStores);
+    const tmp2Result = tmp2(8395);
   }
   GuildProfileFetchStatus = guildSupportsTagsResult;
   let tag;
@@ -74,7 +74,7 @@ export default function GuildSettingsModalServerTag(guildId) {
     tag = stateFromStores1.tag;
   }
   const obj6 = guildId(504);
-  result1 = guildId(9221).isServerTagDraftDirty(stateFromStores1, stateFromStores2);
+  result1 = guildId(9305).isServerTagDraftDirty(stateFromStores1, stateFromStores2);
   let tmp16 = null != stateFromStores1;
   if (tmp16) {
     let tmp17 = null == stateFromStores1.tag;
@@ -184,7 +184,7 @@ export default function GuildSettingsModalServerTag(guildId) {
                     ({ tag: obj4.tag, badge: obj4.badge, badgeColorPrimary: obj4.badgeColorPrimary, badgeColorSecondary: obj4.badgeColorSecondary } = tmp42);
                     dependencyMap = 1;
                     c3 = 1;
-                    const obj7 = { value: tmp2(9342).saveGuildProfile(guildId, { tag: null, badge: null, badgeColorPrimary: null, badgeColorSecondary: null }), done: false };
+                    const obj7 = { value: tmp2(9426).saveGuildProfile(guildId, { tag: null, badge: null, badgeColorPrimary: null, badgeColorSecondary: null }), done: false };
                     return obj7;
                   }
                 }
@@ -214,8 +214,8 @@ export default function GuildSettingsModalServerTag(guildId) {
             }
           }
           const intl = tmp2(1115).intl;
-          tmp2(4337).presentError(intl.string(tmp2(1115).t.RTSuVn));
-          const obj = tmp2(4337);
+          tmp2(4419).presentError(intl.string(tmp2(1115).t.RTSuVn));
+          const obj = tmp2(4419);
         }
         c3 = 3;
       } catch (tmp27) {
@@ -236,13 +236,13 @@ export default function GuildSettingsModalServerTag(guildId) {
       if (closure_12) {
         if (c7) {
           let obj = {
-            headerRight: first ? (() => closure_1_13(guildId(5712).HeaderSubmittingIndicator, {})) : (() => {
+            headerRight: first ? (() => closure_1_13(guildId(5794).HeaderSubmittingIndicator, {})) : (() => {
                     const obj = { text: null, onPress: null, disabled: null };
                     const intl = guildId(1115).intl;
                     obj.text = intl.string(guildId(1115).t["R3BPH+"]);
                     obj.onPress = onPress;
                     obj.disabled = !closure_1_9;
-                    return closure_13(guildId(7491).HeaderActionButton, obj);
+                    return closure_13(guildId(7573).HeaderActionButton, obj);
                   })
           };
           navigation.setOptions(obj);
@@ -287,7 +287,7 @@ export default function GuildSettingsModalServerTag(guildId) {
     obj2.badgeColorSecondary = badgeColorSecondary;
     GuildSettingsActionCreatorsDefault.updateGuildProfile(guildId, obj2);
   }, items10);
-  const tmp2Result3 = guildId(9221);
+  const tmp2Result3 = guildId(9305);
   let tmp26 = result1;
   if (result1) {
     tmp26 = !first;
@@ -320,16 +320,16 @@ export default function GuildSettingsModalServerTag(guildId) {
                   return GuildProfileActionCreators.getGuildProfile(guildId, true);
                 }
         };
-        return closure_13(navigation(9357), obj8);
+        return closure_13(navigation(9441), obj8);
       } else if (null == stateFromStores1) {
-        return closure_13(tmp2(7153).SceneLoadingIndicator, {});
+        return closure_13(tmp2(7235).SceneLoadingIndicator, {});
       } else {
         let tmp29;
         if (tmp14) {
           if (null != stateFromStores1.tag) {
             if ("" !== stateFromStores1.tag) {
               const obj9 = { variant: "text-md/normal", color: "text-muted", children: stateFromStores1.tag };
-              tmp29 = closure_13(tmp2(4636).Text, obj9);
+              tmp29 = closure_13(tmp2(4718).Text, obj9);
             }
           }
         }
@@ -342,7 +342,7 @@ export default function GuildSettingsModalServerTag(guildId) {
         obj11.value = tmp14;
         obj11.onValueChange = callback;
         obj11.disabled = !guildSupportsTagsResult;
-        const items11 = [closure_13(tmp2(7314).TableSwitchRow, obj11), ];
+        const items11 = [closure_13(tmp2(7396).TableSwitchRow, obj11), ];
         let obj12 = { label: null, arrow: true, disabled: null, onPress: null, trailing: null };
         let intl3 = tmp2(1115).intl;
         obj12.label = intl3.string(tmp2(1115).t.oPzTHw);
@@ -365,16 +365,16 @@ export default function GuildSettingsModalServerTag(guildId) {
             let badgeColorSecondary = stateFromStores1.badgeColorSecondary;
             size.secondaryTintColor = badgeColorSecondary;
             ({ SIZE_16: obj16.width, SIZE_16: obj16.height } = closure_12);
-            tmp32Result = tmp32(tmp2(14029).GuildBadge, size);
+            tmp32Result = tmp32(tmp2(14124).GuildBadge, size);
           }
           const items12 = [tmp32Result, tmp29];
           obj13.children = items12;
-          tmp31Result = tmp31(tmp2(5060).Stack, obj13);
+          tmp31Result = tmp31(tmp2(5142).Stack, obj13);
         }
         obj12.trailing = tmp31Result;
-        items11[1] = closure_13(tmp2(5693).TableRow, obj12);
+        items11[1] = closure_13(tmp2(5775).TableRow, obj12);
         obj10.children = items11;
-        const tmp31Result2 = closure_14(tmp2(5775).TableRowGroup, obj10);
+        const tmp31Result2 = closure_14(tmp2(5857).TableRowGroup, obj10);
         const obj14 = { style: tmp.container, contentContainerStyle: null, children: null };
         const items13 = [tmp.containerContent, guildId.contentContainerStyle];
         obj14.contentContainerStyle = items13;
@@ -383,28 +383,28 @@ export default function GuildSettingsModalServerTag(guildId) {
           const obj17 = { variant: "text-sm/medium", color: "text-subtle", style: tmp.description, children: null };
           let intl4 = tmp2(1115).intl;
           obj17.children = intl4.string(tmp2(1115).t["qVCnq+"]);
-          const items14 = [tmp32(tmp2(4636).Text, obj17), tmp31Result2, , ];
+          const items14 = [tmp32(tmp2(4718).Text, obj17), tmp31Result2, , ];
           const obj18 = { variant: "eyebrow", color: "text-muted", style: tmp.description, accessibilityRole: "header", children: null };
           const intl5 = tmp2(1115).intl;
           obj18.children = intl5.string(tmp2(1115).t.SKNnqq);
-          items14[2] = tmp32(tmp2(4636).Text, obj18);
+          items14[2] = tmp32(tmp2(4718).Text, obj18);
           const obj19 = { guildId, tag: null, badge: null, primaryColor: null, secondaryColor: null, isDirty: null };
           ({ tag: obj22.tag, badge: obj22.badge, badgeColorPrimary: obj22.primaryColor, badgeColorSecondary: obj22.secondaryColor } = stateFromStores1);
           obj19.isDirty = result1;
-          items14[3] = tmp32(tmp39(14027), obj19);
+          items14[3] = tmp32(tmp39(14122), obj19);
           obj15.children = items14;
           let tmp40 = obj15;
         } else {
           const obj20 = { guildId, onUnlockPress: callback2 };
-          const items15 = [tmp32(tmp39(17836), obj20), tmp31Result2];
+          const items15 = [tmp32(tmp39(17930), obj20), tmp31Result2];
           obj15.children = items15;
           tmp40 = obj15;
         }
-        obj14.children = closure_14(tmp2(5060).Stack, tmp40);
-        return closure_13(tmp2(8748).Form, obj14);
+        obj14.children = closure_14(tmp2(5142).Stack, tmp40);
+        return closure_13(tmp2(8831).Form, obj14);
       }
     } else {
-      return closure_13(tmp2(7153).SceneLoadingIndicator, {});
+      return closure_13(tmp2(7235).SceneLoadingIndicator, {});
     }
   } else {
     return null;

@@ -1,12 +1,12 @@
-// Module ID: 12090
-// Function ID: 12091
+// Module ID: 12181
+// Function ID: 12182
 // Name: onTapCheckpointCard
-// Dependencies: [1958, 1074, 1241, 4820, 2]
+// Dependencies: [1958, 1074, 1241, 4902, 2]
 // Exports: onTapCheckpointCard
 
-// Module 12090 (onTapCheckpointCard)
+// Module 12181 (onTapCheckpointCard)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4820 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4902 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 
 require = fn;

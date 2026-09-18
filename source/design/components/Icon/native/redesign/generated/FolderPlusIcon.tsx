@@ -1,13 +1,13 @@
-// Module ID: 16314
-// Function ID: 16315
+// Module ID: 16411
+// Function ID: 16412
 // Name: FolderPlusIcon
-// Dependencies: [19, 21, 576, 4340, 15895, 2]
+// Dependencies: [19, 21, 576, 4422, 15990, 2]
 // Exports: FolderPlusIcon
 
-// Module 16314 (FolderPlusIcon)
+// Module 16411 (FolderPlusIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4340 */;
-import _mod15895 from "module_15895" /* 15895 */;
+import BaseIconImage from "BaseIconImage" /* 4422 */;
+import _mod15990 from "module_15990" /* 15990 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const FolderPlusIcon = function FolderPlusIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15895, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15990, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

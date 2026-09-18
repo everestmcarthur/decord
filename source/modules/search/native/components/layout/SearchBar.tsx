@@ -1,32 +1,32 @@
-// Module ID: 16871
-// Function ID: 16872
+// Module ID: 17011
+// Function ID: 17012
 // Name: layout/SearchBar
-// Dependencies: [19, 17, 1958, 1980, 4288, 1372, 12491, 8000, 7999, 1074, 21, 4640, 1115, 4793, 504, 5069, 12490, 12513, 4351, 12510, 12493, 9906, 16872, 2]
+// Dependencies: [19, 17, 1958, 1980, 4371, 1372, 12582, 8083, 8082, 1074, 21, 4722, 1115, 4875, 504, 5151, 12581, 12604, 4433, 12601, 12584, 10000, 17012, 2]
 
-// Module 16871 (layout/SearchBar)
+// Module 17011 (layout/SearchBar)
 import util from "util" /* 1115 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4351 */;
-import useChannelName from "useChannelName" /* 4793 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 12490 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12510 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12513 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4433 */;
+import useChannelName from "useChannelName" /* 4875 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 12581 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12601 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12604 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import RelationshipStore from "RelationshipStore" /* 4288 */;
+import RelationshipStore from "RelationshipStore" /* 4371 */;
 import UserStore from "UserStore" /* 1372 */;
-import SearchQueryStore from "SearchQueryStore" /* 12491 */;
+import SearchQueryStore from "SearchQueryStore" /* 12582 */;
 
 const SearchPlatformUtilsDefault = SearchPlatformUtils;
 
 require = fn;
 const View = fn(17).View;
-const SearchConstants = fn(8000);
+const SearchConstants = fn(8083);
 ({ SEARCH_BAR_HEIGHT: c10, SearchQueryTagTypes: closure_11 } = SearchConstants);
-const SearchFilterAddLocations = fn(7999).SearchFilterAddLocations;
+const SearchFilterAddLocations = fn(8082).SearchFilterAddLocations;
 const SearchTypes = fn(1074).SearchTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let closure_15 = createStyles.createStyles((minHeight) => {
   const obj = { searchBar: { minHeight: minHeight + 2 }, icon: { width: 32, minHeight, justifyContent: "center", zIndex: 10 } };
   return obj;
@@ -204,7 +204,7 @@ export default noop.memo(noop.forwardRef((searchContext, ref) => {
       const tmp2 = importDefault;
       const result = SearchPlatformUtilsDefault.syncAutocompleteDebounced(tmp);
       if (!obj.isAutocompleteVisible(tmp)) {
-        const tmp2Result = tmp2(12490);
+        const tmp2Result = tmp2(12581);
         if (isInitialSearchQueryResult) {
           const initialMessages = tmp2Result.fetchInitialMessages(tmp);
         } else {
@@ -238,7 +238,7 @@ export default noop.memo(noop.forwardRef((searchContext, ref) => {
       const result1 = SearchPlatformUtilsDefault.syncAutocompleteDebounced(tmp);
       const queryString = obj.getQueryString(tmp);
       if (queryString !== searchResultsQuery) {
-        const tmp6Result = tmp6(12490);
+        const tmp6Result = tmp6(12581);
         if (tmp11) {
           const initialMessages = tmp6Result.fetchInitialMessages(tmp);
         } else {

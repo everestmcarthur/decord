@@ -1,15 +1,9 @@
 // Module ID: 15664
 // Function ID: 15665
-// Dependencies: [8428, 15665, 15668, 15669]
+// Dependencies: [1121]
 
 // Module 15664
-import _mod15669 from "module_15669" /* 15669 */;
-import module_8428 from "module_8428" /* 8428 */;
-
-const require = globalThis.__r;
+import registerAsset from "module_1121" /* 1121 */;
 
 
-export const getYoutubeMeta = require("module_15665").getYoutubeMeta;
-export const PLAYER_STATES = require("PLAY_MODE").PLAYER_STATES_NAMES;
-export const PLAYER_ERRORS = require("PLAY_MODE").PLAYER_ERROR_NAMES;
-export default module_8428(_mod15669).default;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/../discord_common/js/shared/images/flags", width: 70, height: 47, scales: [1], hash: "d52ce383ca6d8eb53588bcc042574cae", name: "uk", type: "png" });

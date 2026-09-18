@@ -1,18 +1,18 @@
-// Module ID: 16681
-// Function ID: 16682
+// Module ID: 16778
+// Function ID: 16779
 // Name: NewContentPill
-// Dependencies: [32, 19, 17, 1980, 8484, 21, 4640, 576, 8970, 5672, 504, 4574, 8497, 8499, 4376, 5061, 1487, 5210, 15882, 4636, 1115, 4491, 2]
+// Dependencies: [32, 19, 17, 1980, 8567, 21, 4722, 576, 9054, 5754, 504, 4656, 8580, 8582, 4458, 5143, 1487, 5292, 15977, 4718, 1115, 4573, 2]
 // Exports: default
 
-// Module 16681 (NewContentPill)
+// Module 16778 (NewContentPill)
 import nativeDefault from "native" /* 576 */;
-import spring from "spring" /* 5061 */;
-import GuildIcon from "GuildIcon" /* 5672 */;
-import ClipView from "ClipView" /* 8970 */;
+import spring from "spring" /* 5143 */;
+import GuildIcon from "GuildIcon" /* 5754 */;
+import ClipView from "ClipView" /* 9054 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import ICYMIStore from "ICYMIStore" /* 8484 */;
+import ICYMIStore from "ICYMIStore" /* 8567 */;
 
 const GuildIconDefault = GuildIcon;
 const ClipViewDefault = ClipView;
@@ -39,7 +39,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = { container: { alignSelf: "center", alignItems: "center", flexDirection: "row", paddingRight: 12, paddingLeft: 8, paddingVertical: 6, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND }, guildIconBG: null, refreshMorePillContainer: null };
 let obj3 = { alignSelf: "center", alignItems: "center", flexDirection: "row", paddingRight: 12, paddingLeft: 8, paddingVertical: 6, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
 obj2.guildIconBG = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };

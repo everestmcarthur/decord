@@ -1,10 +1,10 @@
-// Module ID: 16802
-// Function ID: 16803
+// Module ID: 16946
+// Function ID: 16947
 // Name: VibegrationsMarkdownBlocks
 // Dependencies: [2]
 // Exports: splitMarkdownBlocks
 
-// Module 16802 (VibegrationsMarkdownBlocks)
+// Module 16946 (VibegrationsMarkdownBlocks)
 import size from "module_2" /* 2 */;
 
 const re0 = /^( *)([-*]|\d+\.) +(.*)$/;

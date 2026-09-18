@@ -1,12 +1,12 @@
-// Module ID: 11787
-// Function ID: 11788
+// Module ID: 11877
+// Function ID: 11878
 // Name: FeedbackModalNeutralDesaturated
-// Dependencies: [19, 17, 21, 8380, 11788, 11789, 11790, 4491, 2]
+// Dependencies: [19, 17, 21, 8463, 11878, 11879, 11880, 4573, 2]
 // Exports: FeedbackModalNeutralDesaturated, getFeedbackModalNeutralDesaturatedSource, useFeedbackModalNeutralDesaturatedSource
 
-// Module 11787 (FeedbackModalNeutralDesaturated)
-import shared from "shared" /* 4491 */;
-import _mod8380 from "module_8380" /* 8380 */;
+// Module 11877 (FeedbackModalNeutralDesaturated)
+import shared from "shared" /* 4573 */;
+import _mod8463 from "module_8463" /* 8463 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -18,44 +18,44 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Illustration/native/redesign/generated/FeedbackModalNeutralDesaturated.tsx");
 
 export const getFeedbackModalNeutralDesaturatedSource = function getFeedbackModalNeutralDesaturatedSource(theme) {
-  return _mod8380.getIllustrationSource(theme, {
+  return _mod8463.getIllustrationSource(theme, {
     dark() {
-      return require("module_11788");
+      return require("module_11878");
     },
     darker() {
-      return require("module_11789");
+      return require("module_11879");
     },
     light() {
-      return require("module_11790");
+      return require("module_11880");
     }
   });
 };
 export const useFeedbackModalNeutralDesaturatedSource = function useFeedbackModalNeutralDesaturatedSource() {
   const obj = shared;
-  return _mod8380.getIllustrationSource(obj.useThemeContext().theme, {
+  return _mod8463.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_11788");
+      return require("module_11878");
     },
     darker() {
-      return require("module_11789");
+      return require("module_11879");
     },
     light() {
-      return require("module_11790");
+      return require("module_11880");
     }
   });
 };
 export const FeedbackModalNeutralDesaturated = function FeedbackModalNeutralDesaturated(arg0) {
   const obj = shared;
   const obj4 = {};
-  const illustrationSource = _mod8380.getIllustrationSource(obj.useThemeContext().theme, {
+  const illustrationSource = _mod8463.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_11788");
+      return require("module_11878");
     },
     darker() {
-      return require("module_11789");
+      return require("module_11879");
     },
     light() {
-      return require("module_11790");
+      return require("module_11880");
     }
   });
   const merged = Object.assign(arg0);

@@ -1,23 +1,23 @@
-// Module ID: 17640
-// Function ID: 17641
+// Module ID: 17704
+// Function ID: 17705
 // Name: InteractionModal
-// Dependencies: [19, 17, 14521, 21, 4640, 576, 4843, 17641, 7095, 1177, 1397, 4636, 5210, 1115, 5768, 8260, 17642, 5062, 2]
+// Dependencies: [19, 17, 14616, 21, 4722, 576, 4925, 17705, 7177, 1177, 1397, 4718, 5292, 1115, 5850, 8342, 17706, 5144, 2]
 // Exports: openInteractionModal
 
-// Module 17640 (InteractionModal)
+// Module 17704 (InteractionModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
-import Text_Text from "Text/Text" /* 4636 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4843 */;
-import components_Button_Button from "components/Button/Button" /* 5062 */;
-import Pressables from "Pressables" /* 5210 */;
-import XSmallIcon from "XSmallIcon" /* 5768 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7095 */;
-import ComponentStateContext from "ComponentStateContext" /* 8260 */;
-import InteractionModalUtils from "InteractionModalUtils" /* 17641 */;
-import renderComponents from "renderComponents" /* 17642 */;
+import Text_Text from "Text/Text" /* 4718 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4925 */;
+import components_Button_Button from "components/Button/Button" /* 5144 */;
+import Pressables from "Pressables" /* 5292 */;
+import XSmallIcon from "XSmallIcon" /* 5850 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7177 */;
+import ComponentStateContext from "ComponentStateContext" /* 8342 */;
+import InteractionModalUtils from "InteractionModalUtils" /* 17705 */;
+import renderComponents from "renderComponents" /* 17706 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -108,11 +108,11 @@ class InteractionModal {
 }
 get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
-const InteractionModalState = fn(14521).InteractionModalState;
+const InteractionModalState = fn(14616).InteractionModalState;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const interaction_modal = "interaction_modal";
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = { modal: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, scroll: { flex: 1 }, modalContent: null, header: null, titleView: null, icon: null, footer: null, closeButton: null, closeIcon: null, error: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj2.modalContent = { flexGrow: 1, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 };

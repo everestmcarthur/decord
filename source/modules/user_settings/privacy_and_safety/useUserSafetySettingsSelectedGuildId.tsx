@@ -1,14 +1,14 @@
-// Module ID: 16019
-// Function ID: 16020
+// Module ID: 16116
+// Function ID: 16117
 // Name: useUserSafetySettingsSelectedGuildId
-// Dependencies: [1980, 16017, 1074, 504, 2]
+// Dependencies: [1980, 16112, 1074, 504, 2]
 // Exports: useAllServersOptionSelected, useIsSelectedGuildAHub, useUserSafetySettingsSelectedGuildId
 
-// Module 16019 (useUserSafetySettingsSelectedGuildId)
+// Module 16116 (useUserSafetySettingsSelectedGuildId)
 import GuildStore from "GuildStore" /* 1980 */;
 
 const require = fn;
-const UserSettingsSafetySelectedGuildStore = fn(16017);
+const UserSettingsSafetySelectedGuildStore = fn(16112);
 ({ GUILD_SELECT_ALL_SERVERS_OPTION_ID: c3, useUserSafetySettingsSelectedGuildStore: closure_4 } = UserSettingsSafetySelectedGuildStore);
 const GuildFeatures = fn(1074).GuildFeatures;
 const size = fn(2);

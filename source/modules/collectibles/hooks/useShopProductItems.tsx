@@ -1,10 +1,10 @@
-// Module ID: 8319
-// Function ID: 8320
+// Module ID: 8401
+// Function ID: 8402
 // Name: useShopProductItems
 // Dependencies: [19, 1890, 1115, 2]
 // Exports: getBundleItemNames, getProductItems, getPurchasedItem, useShopProductItems
 
-// Module 8319 (useShopProductItems)
+// Module 8401 (useShopProductItems)
 import util from "util" /* 1115 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,10 +1,10 @@
-// Module ID: 14838
-// Function ID: 14839
+// Module ID: 14932
+// Function ID: 14933
 // Name: TinyBroncoLazy
 // Dependencies: [2]
 // Exports: useIsTinyBroncoEligible, useShouldShowAgeNotice, useShowTinyBroncoPromoSheet
 
-// Module 14838 (TinyBroncoLazy)
+// Module 14932 (TinyBroncoLazy)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/tiny_bronco/native/TinyBroncoLazy.tsx");

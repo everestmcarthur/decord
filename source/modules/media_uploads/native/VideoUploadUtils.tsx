@@ -1,10 +1,10 @@
-// Module ID: 5248
-// Function ID: 5249
+// Module ID: 5330
+// Function ID: 5331
 // Name: VideoUploadUtils
 // Dependencies: [1184, 3, 2]
 // Exports: calculateOptimalBitrate, calculateTargetDimensions, canSkipVideoTranscode, logEncoderSettings, logSourceMetadata
 
-// Module 5248 (VideoUploadUtils)
+// Module 5330 (VideoUploadUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1184 */;
 import size from "module_2" /* 2 */;

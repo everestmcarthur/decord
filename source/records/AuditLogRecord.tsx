@@ -1,12 +1,12 @@
-// Module ID: 17787
-// Function ID: 17788
+// Module ID: 17886
+// Function ID: 17887
 // Name: AuditLogRecord
-// Dependencies: [1387, 1074, 1231, 4231, 11, 2]
+// Dependencies: [1387, 1074, 1231, 4314, 11, 2]
 
-// Module 17787 (AuditLogRecord)
+// Module 17886 (AuditLogRecord)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import SentryUtilsDefault from "SentryUtils" /* 1231 */;
-import _modDef4231 from "module_4231" /* 4231 */;
+import _modDef4314 from "module_4314" /* 4314 */;
 import Record from "Record" /* 1387 */;
 
 function getTargetType(action) {
@@ -269,7 +269,7 @@ const prototype = function AuditLogRecord(timestampEnd) {
   tmp5.actionType = getActionType(tmp5.action);
   ({ targetId: tmp5.targetId, timestampStart } = timestampEnd);
   if (timestampStart == null) {
-    const tmp8 = _modDef4231;
+    const tmp8 = _modDef4314;
     timestampStart = tmp8(SnowflakeUtilsDefault.extractTimestamp(tmp5.id));
   }
   tmp5.timestampStart = timestampStart;

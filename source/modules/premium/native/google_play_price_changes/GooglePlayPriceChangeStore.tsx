@@ -1,12 +1,12 @@
-// Module ID: 17181
-// Function ID: 17182
+// Module ID: 17311
+// Function ID: 17312
 // Name: GooglePlayPriceChangeStore
-// Dependencies: [4303, 1074, 1364, 504, 573, 2]
+// Dependencies: [4386, 1074, 1364, 504, 573, 2]
 
-// Module 17181 (GooglePlayPriceChangeStore)
+// Module 17311 (GooglePlayPriceChangeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import SubscriptionStore from "SubscriptionStore" /* 4303 */;
+import SubscriptionStore from "SubscriptionStore" /* 4386 */;
 
 const require = fn;
 function onInitializeSync() {

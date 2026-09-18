@@ -1,15 +1,15 @@
-// Module ID: 11823
-// Function ID: 11824
+// Module ID: 11913
+// Function ID: 11914
 // Name: LongPressMessageChatItemPreview
-// Dependencies: [21, 4640, 576, 8068, 8807, 2]
+// Dependencies: [21, 4722, 576, 8151, 8890, 2]
 // Exports: default
 
-// Module 11823 (LongPressMessageChatItemPreview)
+// Module 11913 (LongPressMessageChatItemPreview)
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 576 */;
-import RowGeneratorDefault from "RowGenerator" /* 8068 */;
-import ChatItemDefault from "ChatItem" /* 8807 */;
-import createStyles from "createStyles" /* 4640 */;
+import RowGeneratorDefault from "RowGenerator" /* 8151 */;
+import ChatItemDefault from "ChatItem" /* 8890 */;
+import createStyles from "createStyles" /* 4722 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;

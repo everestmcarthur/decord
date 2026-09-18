@@ -1,10 +1,10 @@
-// Module ID: 5502
-// Function ID: 5503
+// Module ID: 5584
+// Function ID: 5585
 // Name: StageChannelsConstants
 // Dependencies: [1074, 1115, 2025, 2]
 // Exports: getStagePublicInfoText
 
-// Module 5502 (StageChannelsConstants)
+// Module 5584 (StageChannelsConstants)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1115 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2025 */;

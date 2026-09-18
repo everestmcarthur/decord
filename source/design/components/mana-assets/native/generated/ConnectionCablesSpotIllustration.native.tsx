@@ -1,13 +1,13 @@
-// Module ID: 5979
-// Function ID: 5980
+// Module ID: 6061
+// Function ID: 6062
 // Name: ConnectionCablesSpotIllustration
-// Dependencies: [21, 5675, 5980, 2]
+// Dependencies: [21, 5757, 6062, 2]
 // Exports: ConnectionCablesSpotIllustration
 
-// Module 5979 (ConnectionCablesSpotIllustration)
+// Module 6061 (ConnectionCablesSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5675 */;
-import _modDef5980 from "module_5980" /* 5980 */;
+import FastImageDefault from "FastImage" /* 5757 */;
+import _modDef6062 from "module_6062" /* 6062 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const ConnectionCablesSpotIllustration = function ConnectionCablesSpotIll
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5980 };
+  const obj2 = { uri: _modDef6062 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

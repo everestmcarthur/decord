@@ -1,8 +1,8 @@
-// Module ID: 6680
-// Function ID: 6681
+// Module ID: 6762
+// Function ID: 6763
 // Dependencies: [2]
 
-// Module 6680
+// Module 6762
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/WaypostSpotIllustration-2x.png.js");

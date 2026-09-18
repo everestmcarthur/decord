@@ -1,11 +1,11 @@
-// Module ID: 13440
-// Function ID: 13441
+// Module ID: 13531
+// Function ID: 13532
 // Name: useRefreshSavedMessages
-// Dependencies: [19, 11856, 2]
+// Dependencies: [19, 11947, 2]
 // Exports: default
 
-// Module 13440 (useRefreshSavedMessages)
-import SavedMessagesActions from "SavedMessagesActions" /* 11856 */;
+// Module 13531 (useRefreshSavedMessages)
+import SavedMessagesActions from "SavedMessagesActions" /* 11947 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

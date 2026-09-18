@@ -1,23 +1,23 @@
-// Module ID: 14945
-// Function ID: 14946
+// Module ID: 15039
+// Function ID: 15040
 // Name: ExplicitMediaRedactionNativeUtils
-// Dependencies: [1372, 7715, 8000, 1186, 1115, 7714, 8560, 8562, 4607, 14946, 1897, 7406, 7411, 2]
+// Dependencies: [1372, 7797, 8083, 1186, 1115, 7796, 8643, 8645, 4689, 15040, 1897, 7488, 7493, 2]
 // Exports: handleSensitiveMediaFilterPress, shouldAgeVerifyForSearchMedia
 
-// Module 14945 (ExplicitMediaRedactionNativeUtils)
+// Module 15039 (ExplicitMediaRedactionNativeUtils)
 import util from "util" /* 1115 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1186 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4607 */;
-import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7406 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8560 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4689 */;
+import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7488 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8643 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_4 = fn(7715).EXPLICIT_MEDIA_SETTINGS_ACTION_SHEET_KEY;
-const SearchMediaTypes = fn(8000).SearchMediaTypes;
+let closure_4 = fn(7797).EXPLICIT_MEDIA_SETTINGS_ACTION_SHEET_KEY;
+const SearchMediaTypes = fn(8083).SearchMediaTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/explicit_media_redaction/native/ExplicitMediaRedactionNativeUtils.tsx");
 
@@ -43,7 +43,7 @@ export const handleSensitiveMediaFilterPress = function handleSensitiveMediaFilt
     obj.label = intl.string(util.t["5k5OFp"]);
     obj.onPress = function onPress() {
       if (obj.shouldAgeVerifyForExplicitMedia()) {
-        const obj3 = { entryPoint: tmp(8562).AgeVerificationModalEntryPoint.OBSCURED_MEDIA };
+        const obj3 = { entryPoint: tmp(8645).AgeVerificationModalEntryPoint.OBSCURED_MEDIA };
         const result = AgeVerificationActionCreatorsDefault.showAgeVerificationGetStartedModal(obj3);
       } else {
         require(tmp(1186).ExplicitContentRedaction.SHOW);
@@ -77,7 +77,7 @@ export const handleSensitiveMediaFilterPress = function handleSensitiveMediaFilt
     };
     items.push(obj3);
   }
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14946, dependencyMap.paths), closure_4, { title, subtitle, options: items, currentValue });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15040, dependencyMap.paths), closure_4, { title, subtitle, options: items, currentValue });
 };
 export const shouldAgeVerifyForSearchMedia = function shouldAgeVerifyForSearchMedia(media, found) {
   if (null == found) {
@@ -88,27 +88,27 @@ export const shouldAgeVerifyForSearchMedia = function shouldAgeVerifyForSearchMe
       return false;
     } else {
       if (media.type === SearchMediaTypes.ATTACHMENT) {
-        const obj2 = { type: tmp4(7411).ObscuredMediaTypes.Attachment, media: media.attachment };
+        const obj2 = { type: tmp4(7493).ObscuredMediaTypes.Attachment, media: media.attachment };
         let tmp = obj2;
       } else if (media.type === tmp8.EMBED) {
-        const obj = { type: tmp4(7411).ObscuredMediaTypes.Embed, media: media.embed };
+        const obj = { type: tmp4(7493).ObscuredMediaTypes.Embed, media: media.embed };
         tmp = obj;
       } else {
         tmp = null;
         if (media.type === tmp8.COMPONENT) {
-          const obj3 = { type: tmp4(7411).ObscuredMediaTypes.GenericMedia, media: media.unfurledMediaItem };
+          const obj3 = { type: tmp4(7493).ObscuredMediaTypes.GenericMedia, media: media.unfurledMediaItem };
           tmp = obj3;
         }
       }
       let tmp2 = null != tmp;
       if (tmp2) {
-        let result = tmp4(7406).isMediaObscuredForHarmTypes(tmp, enabledHarmTypesForMessage);
+        let result = tmp4(7488).isMediaObscuredForHarmTypes(tmp, enabledHarmTypesForMessage);
         if (result) {
-          result = tmp4(7714).shouldAgeVerifyForExplicitMedia();
-          const tmp4Result2 = tmp4(7714);
+          result = tmp4(7796).shouldAgeVerifyForExplicitMedia();
+          const tmp4Result2 = tmp4(7796);
         }
         tmp2 = result;
-        const tmp4Result = tmp4(7406);
+        const tmp4Result = tmp4(7488);
       }
       return tmp2;
     }

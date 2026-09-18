@@ -1,12 +1,12 @@
-// Module ID: 12358
-// Function ID: 12359
+// Module ID: 12449
+// Function ID: 12450
 // Name: useTrackPollEvents
-// Dependencies: [19, 1074, 4820, 11871, 2]
+// Dependencies: [19, 1074, 4902, 11962, 2]
 // Exports: useTrackPollCreationEvents
 
-// Module 12358 (useTrackPollEvents)
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4820 */;
-import PollLayoutTypes from "PollLayoutTypes" /* 11871 */;
+// Module 12449 (useTrackPollEvents)
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4902 */;
+import PollLayoutTypes from "PollLayoutTypes" /* 11962 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

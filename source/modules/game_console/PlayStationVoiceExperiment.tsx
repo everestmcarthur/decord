@@ -1,9 +1,9 @@
-// Module ID: 7620
-// Function ID: 7621
+// Module ID: 7702
+// Function ID: 7703
 // Name: PlayStationVoiceExperiment
 // Dependencies: [1435, 2]
 
-// Module 7620 (PlayStationVoiceExperiment)
+// Module 7702 (PlayStationVoiceExperiment)
 import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1435 */;
 
 const obj = { kind: "user", name: "2026-03-churro", defaultConfig: { allowPlayStationStaging: false }, variations: null };

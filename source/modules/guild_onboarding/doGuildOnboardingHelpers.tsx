@@ -1,16 +1,16 @@
-// Module ID: 7218
-// Function ID: 7219
+// Module ID: 7300
+// Function ID: 7301
 // Name: doGuildOnboardingHelpers
-// Dependencies: [2022, 4265, 1385, 7219, 2]
+// Dependencies: [2022, 4348, 1385, 7301, 2]
 // Exports: waitForOnboardingCompletion
 
-// Module 7218 (doGuildOnboardingHelpers)
+// Module 7300 (doGuildOnboardingHelpers)
 import FlagUtils from "FlagUtils" /* 1385 */;
-import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators" /* 7219 */;
+import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators" /* 7301 */;
 import GuildMemberStore from "GuildMemberStore" /* 2022 */;
 
 require = fn;
-const GuildMemberFlags = fn(4265).GuildMemberFlags;
+const GuildMemberFlags = fn(4348).GuildMemberFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_onboarding/doGuildOnboardingHelpers.tsx");
 

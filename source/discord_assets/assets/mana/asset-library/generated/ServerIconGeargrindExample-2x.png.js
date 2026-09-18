@@ -1,8 +1,8 @@
-// Module ID: 6540
-// Function ID: 6541
+// Module ID: 6622
+// Function ID: 6623
 // Dependencies: [2]
 
-// Module 6540
+// Module 6622
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ServerIconGeargrindExample-2x.png.js");

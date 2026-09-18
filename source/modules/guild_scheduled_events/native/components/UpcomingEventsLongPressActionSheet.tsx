@@ -1,24 +1,24 @@
-// Module ID: 12527
-// Function ID: 12528
+// Module ID: 12618
+// Function ID: 12619
 // Name: UpcomingEventsLongPressActionSheet
-// Dependencies: [19, 17, 1980, 4821, 4822, 21, 4640, 504, 7311, 7263, 5672, 1115, 8748, 1177, 12528, 7224, 4607, 12529, 12530, 7233, 7228, 2]
+// Dependencies: [19, 17, 1980, 4903, 4904, 21, 4722, 504, 7393, 7345, 5754, 1115, 8831, 1177, 12619, 7306, 4689, 12620, 12621, 7315, 7310, 2]
 // Exports: default
 
-// Module 12527 (UpcomingEventsLongPressActionSheet)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4607 */;
-import ReadStateActionCreators from "ReadStateActionCreators" /* 7224 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7228 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7233 */;
+// Module 12618 (UpcomingEventsLongPressActionSheet)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4689 */;
+import ReadStateActionCreators from "ReadStateActionCreators" /* 7306 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7310 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7315 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4821 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4903 */;
 
 require = fn;
 const View = fn(17).View;
-const ReadStateTypes = fn(4822).ReadStateTypes;
+const ReadStateTypes = fn(4904).ReadStateTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let closure_9 = createStyles.createStyles({ headerIcon: { marginRight: 16 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/UpcomingEventsLongPressActionSheet.tsx");
@@ -37,27 +37,27 @@ export default function UpcomingEventsLongPressActionSheet(guildId) {
   const obj2 = guildId(504);
   const tmp6 = closure_8;
   const tmp8 = stateFromStores1;
-  obj5.size = guildId(5672).GuildIconSizes.LARGE;
-  obj4.children = closure_7(stateFromStores1(5672), obj5);
+  obj5.size = guildId(5754).GuildIconSizes.LARGE;
+  obj4.children = closure_7(stateFromStores1(5754), obj5);
   obj3.leading = closure_7(View, obj4);
   const intl = guildId(1115).intl;
   obj3.title = intl.string(guildId(1115).t.tlopTM);
-  const items2 = [closure_7(guildId(7263).BottomSheetTitleHeader, obj3), , ];
+  const items2 = [closure_7(guildId(7345).BottomSheetTitleHeader, obj3), , ];
   const obj6 = { leading: null, label: null, onPress: null };
-  const tmp9 = stateFromStores1(5672);
-  obj6.leading = closure_7(guildId(1177).Icon, { source: stateFromStores1(12528) });
+  const tmp9 = stateFromStores1(5754);
+  obj6.leading = closure_7(guildId(1177).Icon, { source: stateFromStores1(12619) });
   const obj8 = { text: null };
   const intl2 = guildId(1115).intl;
   obj8.text = intl2.string(guildId(1115).t.e6RscS);
-  obj6.label = closure_7(guildId(8748).FormLabel, obj8);
+  obj6.label = closure_7(guildId(8831).FormLabel, obj8);
   obj6.onPress = function onPress() {
     ReadStateActionCreators.ackGuildFeature(guildId, ReadStateTypes.GUILD_EVENT);
     ActionSheetActionCreatorsDefault.hideActionSheet();
   };
-  items2[1] = closure_7(guildId(8748).FormRow, obj6);
+  items2[1] = closure_7(guildId(8831).FormRow, obj6);
   const obj9 = { leading: null, label: null, onPress: null };
-  const obj7 = { source: stateFromStores1(12528) };
-  obj9.leading = closure_7(guildId(1177).Icon, { source: tmp8(stateFromStores1 ? 12529 : 12530) });
+  const obj7 = { source: stateFromStores1(12619) };
+  obj9.leading = closure_7(guildId(1177).Icon, { source: tmp8(stateFromStores1 ? 12620 : 12621) });
   const intl3 = tmp2(1115).intl;
   const string = intl3.string;
   const t = tmp2(1115).t;
@@ -67,12 +67,12 @@ export default function UpcomingEventsLongPressActionSheet(guildId) {
     stringResult = string(t.ONG3Yz);
   }
   const obj11 = { children: null };
-  obj9.label = closure_7(guildId(8748).FormLabel, { text: stringResult });
+  obj9.label = closure_7(guildId(8831).FormLabel, { text: stringResult });
   obj9.onPress = function onPress() {
     const NotificationLabel = NotificationSettingsUtils.NotificationLabel;
     const result = NotificationSettingsModalActionCreatorsDefault.updateGuildNotificationSettings(guildId, { mute_scheduled_events: !stateFromStores1 }, NotificationLabel.mutedEvents(!stateFromStores1));
   };
-  items2[2] = closure_7(guildId(8748).FormRow, obj9);
+  items2[2] = closure_7(guildId(8831).FormRow, obj9);
   obj11.children = items2;
-  return tmp6(guildId(7311).ActionSheet, obj11);
+  return tmp6(guildId(7393).ActionSheet, obj11);
 };

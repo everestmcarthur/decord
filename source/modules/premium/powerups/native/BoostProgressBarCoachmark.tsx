@@ -1,20 +1,20 @@
-// Module ID: 16328
-// Function ID: 16329
+// Module ID: 16425
+// Function ID: 16426
 // Name: BoostProgressBarCoachmark
-// Dependencies: [19, 17, 1955, 21, 4640, 9217, 1115, 2429, 4350, 11288, 2]
+// Dependencies: [19, 17, 1955, 21, 4722, 9301, 1115, 2512, 4432, 11380, 2]
 // Exports: default
 
-// Module 16328 (BoostProgressBarCoachmark)
+// Module 16425 (BoostProgressBarCoachmark)
 import util from "util" /* 1115 */;
-import _modDef2429 from "module_2429" /* 2429 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9217 */;
+import _modDef2512 from "module_2512" /* 2512 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9301 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const ContentDismissActionType = fn(1955).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let closure_7 = createStyles.createStyles({ riveContainer: { width: 120, height: 80, alignSelf: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/native/BoostProgressBarCoachmark.tsx");
@@ -38,9 +38,9 @@ export default function BoostProgressBarCoachmark(guild) {
   const memo = onDismiss.useMemo(() => {
     const obj = { title: null, description: null, visible: true, position: "bottom", offsetY: 8, onDismiss: null, renderImgComponent: null, buttonLabel: null, buttonVariant: "primary", onButtonPress: null };
     const intl = util.intl;
-    obj.title = intl.string(_modDef2429.uwV2dH);
+    obj.title = intl.string(_modDef2512.uwV2dH);
     const intl2 = util.intl;
-    obj.description = intl2.string(_modDef2429.MIwlcR);
+    obj.description = intl2.string(_modDef2512.MIwlcR);
     obj.onDismiss = onDismiss;
     obj.renderImgComponent = function renderImgComponent() {
       return <callback1 style={riveContainer.riveContainer}>{jsx(guild(riveContainer[8]).BoostThisServerRive, { stateMachine: "State Machine 1" })}</callback1>;
@@ -50,6 +50,6 @@ export default function BoostProgressBarCoachmark(guild) {
     obj.onButtonPress = callback1;
     return obj;
   }, items2);
-  const coachmark = guild(11288).useCoachmark(guild.targetRef, memo);
+  const coachmark = guild(11380).useCoachmark(guild.targetRef, memo);
   return null;
 };

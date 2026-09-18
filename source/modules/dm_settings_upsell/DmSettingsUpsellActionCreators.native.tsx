@@ -1,13 +1,13 @@
-// Module ID: 17591
-// Function ID: 17592
+// Module ID: 17672
+// Function ID: 17673
 // Name: DmSettingsUpsellActionCreators
-// Dependencies: [17592, 510, 4607, 17593, 1897, 17594, 2]
+// Dependencies: [17673, 510, 4689, 17674, 1897, 17675, 2]
 
-// Module 17591 (DmSettingsUpsellActionCreators)
+// Module 17672 (DmSettingsUpsellActionCreators)
 import Storage3 from "Storage" /* 510 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4607 */;
-import DmSettingsUpsellConstants from "DmSettingsUpsellConstants" /* 17592 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4689 */;
+import DmSettingsUpsellConstants from "DmSettingsUpsellConstants" /* 17673 */;
 import size from "module_2" /* 2 */;
 
 ({ DM_SETTINGS_UPSELL_LAST_SHOWN_KEY: c3, DM_SETTINGS_UPSELL_LAST_SHOWN_MAX_TIME_MS: closure_4 } = DmSettingsUpsellConstants);
@@ -20,11 +20,11 @@ export default {
     const timestamp = Date.now();
     if (null != value) {
       if (timestamp - value <= React4) {
-        tmp(17594).trackEvent(tmp(17594).DmUpsellActionTypes.SUPPRESSED_BY_COOLDOWN, guildId);
-        const tmpResult = tmp(17594);
+        tmp(17675).trackEvent(tmp(17675).DmUpsellActionTypes.SUPPRESSED_BY_COOLDOWN, guildId);
+        const tmpResult = tmp(17675);
       }
     }
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17593, dependencyMap.paths), "dm_settings_upsell_modal", { guildId });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17674, dependencyMap.paths), "dm_settings_upsell_modal", { guildId });
     const Storage2 = tmp(510).Storage;
     const result = Storage2.set(React3, timestamp);
   }

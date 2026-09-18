@@ -1,8 +1,8 @@
-// Module ID: 5946
-// Function ID: 5947
+// Module ID: 6028
+// Function ID: 6029
 // Dependencies: [2]
 
-// Module 5946
+// Module 6028
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ChatEmojisSpotIllustration-2x.png.js");

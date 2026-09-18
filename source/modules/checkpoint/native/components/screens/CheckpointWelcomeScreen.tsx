@@ -1,17 +1,17 @@
-// Module ID: 15811
-// Function ID: 15812
+// Module ID: 15906
+// Function ID: 15907
 // Name: CheckpointWelcomeScreen
-// Dependencies: [17, 1372, 1074, 21, 4640, 576, 1478, 504, 4484, 4334, 2025, 15812, 15814, 1115, 2915, 2947, 15815, 15816, 8423, 2]
+// Dependencies: [17, 1372, 1074, 21, 4722, 576, 1478, 504, 4566, 4417, 2025, 15907, 15909, 1115, 2998, 3030, 15910, 15911, 8506, 2]
 // Exports: default
 
-// Module 15811 (CheckpointWelcomeScreen)
+// Module 15906 (CheckpointWelcomeScreen)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
 import Constants from "Constants" /* 1074 */;
-import CheckpointTextDefault from "CheckpointText" /* 15814 */;
+import CheckpointTextDefault from "CheckpointText" /* 15909 */;
 import UserStore from "UserStore" /* 1372 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4640 */;
+import createStyles from "createStyles" /* 4722 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -30,7 +30,7 @@ const result = size.fileFinishedImporting("modules/checkpoint/native/components/
 
 export default function CheckpointWelcomeScreen() {
   function handleLearnMore() {
-    const obj = handleLearnMore(4334);
+    const obj = handleLearnMore(4417);
     obj.openURL(handleLearnMore(2025).getArticleURL(constants.CHECKPOINT));
   }
   const tmp = closure_8();
@@ -52,41 +52,41 @@ export default function CheckpointWelcomeScreen() {
   obj6.style = items1;
   const obj2 = require("UserUtils");
   const obj8 = { style: tmp.titleText, variant: "display-lg", children: null };
-  const tmp5 = handleLearnMore(15812);
+  const tmp5 = handleLearnMore(15907);
   const intl = require("util").intl;
-  obj8.children = intl.string(handleLearnMore(2915)["CdU/PF"]);
-  obj6.children = closure_6(handleLearnMore(15814), obj8);
+  obj8.children = intl.string(handleLearnMore(2998)["CdU/PF"]);
+  obj6.children = closure_6(handleLearnMore(15909), obj8);
   const items3 = [closure_6(View, obj6), , ];
   const obj9 = { style: tmp.subtitle, children: null };
   const obj10 = { variant: "heading-xl/medium", children: null };
-  const tmp6 = handleLearnMore(15814);
+  const tmp6 = handleLearnMore(15909);
   const intl2 = require("util").intl;
-  obj10.children = intl2.format(handleLearnMore(2947).xhZ23b, { username: name });
-  obj9.children = closure_6(handleLearnMore(15814), obj10);
+  obj10.children = intl2.format(handleLearnMore(3030).xhZ23b, { username: name });
+  obj9.children = closure_6(handleLearnMore(15909), obj10);
   items3[1] = closure_6(View, obj9);
-  items3[2] = closure_6(handleLearnMore(15815), { style: tmp.knickKnacks });
+  items3[2] = closure_6(handleLearnMore(15910), { style: tmp.knickKnacks });
   obj5.children = items3;
   const items4 = [closure_7(View, obj5), ];
   const obj12 = { style: tmp.footer, children: null };
   const obj13 = { Icon: null, label: null, onPress: null };
   const obj11 = { style: tmp.knickKnacks };
-  const tmp7 = handleLearnMore(15814);
+  const tmp7 = handleLearnMore(15909);
   obj13.Icon = require("PlayIcon").PlayIcon;
   const intl3 = require("util").intl;
   obj13.label = intl3.string(require("util").t.I0v0Qv);
   obj13.onPress = function onPress() {
 
   };
-  const items5 = [closure_6(handleLearnMore(15816), obj13), ];
+  const items5 = [closure_6(handleLearnMore(15911), obj13), ];
   const obj14 = { variant: "text-sm/medium", children: null };
-  const tmp8 = handleLearnMore(15816);
+  const tmp8 = handleLearnMore(15911);
   const intl4 = require("util").intl;
-  obj14.children = intl4.format(handleLearnMore(2947).hcNhyq, {
+  obj14.children = intl4.format(handleLearnMore(3030).hcNhyq, {
     learnMoreHook(children, arg1) {
       return timestampProducer(CheckpointTextDefault, { variant: "text-sm/medium", style: link.link, onPress: handleLearnMore, accessibilityRole: "link", children }, arg1);
     }
   });
-  items5[1] = closure_6(handleLearnMore(15814), obj14);
+  items5[1] = closure_6(handleLearnMore(15909), obj14);
   obj12.children = items5;
   items4[1] = closure_7(View, obj12);
   obj4.children = items4;

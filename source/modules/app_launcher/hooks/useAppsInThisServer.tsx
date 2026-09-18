@@ -1,10 +1,10 @@
-// Module ID: 12273
-// Function ID: 12274
+// Module ID: 12364
+// Function ID: 12365
 // Name: useAppsInThisServer
-// Dependencies: [19, 9444, 1372, 5086, 504, 9570, 1895, 9454, 12272, 12, 9560, 2]
+// Dependencies: [19, 9528, 1372, 5168, 504, 9654, 1895, 9538, 12363, 12, 9644, 2]
 // Exports: default
 
-// Module 12273 (useAppsInThisServer)
+// Module 12364 (useAppsInThisServer)
 import _modDef12 from "module_12" /* 12 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
@@ -12,8 +12,8 @@ import UserStore from "UserStore" /* 1372 */;
 const require = globalThis.__r;
 
 const require = fn;
-const useGuildIndexState = fn(9444).useGuildIndexState;
-const limit = fn(5086).DISCOVERY_COMMANDS_QUERY_LIMIT;
+const useGuildIndexState = fn(9528).useGuildIndexState;
+const limit = fn(5168).DISCOVERY_COMMANDS_QUERY_LIMIT;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/hooks/useAppsInThisServer.tsx");
 

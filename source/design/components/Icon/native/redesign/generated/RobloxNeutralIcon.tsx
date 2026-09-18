@@ -1,13 +1,13 @@
-// Module ID: 8845
-// Function ID: 8846
+// Module ID: 8929
+// Function ID: 8930
 // Name: RobloxNeutralIcon
-// Dependencies: [19, 21, 576, 4340, 8846, 2]
+// Dependencies: [19, 21, 576, 4422, 8930, 2]
 // Exports: RobloxNeutralIcon
 
-// Module 8845 (RobloxNeutralIcon)
+// Module 8929 (RobloxNeutralIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4340 */;
-import _mod8846 from "module_8846" /* 8846 */;
+import BaseIconImage from "BaseIconImage" /* 4422 */;
+import _mod8930 from "module_8930" /* 8930 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const RobloxNeutralIcon = function RobloxNeutralIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8846, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8930, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

@@ -1,14 +1,14 @@
-// Module ID: 7286
-// Function ID: 7287
+// Module ID: 7368
+// Function ID: 7369
 // Name: GameIcon
-// Dependencies: [19, 17, 1374, 21, 4640, 576, 7287, 7288, 7289, 7290, 2]
+// Dependencies: [19, 17, 1374, 21, 4722, 576, 7369, 7370, 7371, 7372, 2]
 
-// Module 7286 (GameIcon)
+// Module 7368 (GameIcon)
 import nativeDefault from "native" /* 576 */;
-import _modDef7287 from "module_7287" /* 7287 */;
-import _modDef7288 from "module_7288" /* 7288 */;
-import _modDef7289 from "module_7289" /* 7289 */;
-import _modDef7290 from "module_7290" /* 7290 */;
+import _modDef7369 from "module_7369" /* 7369 */;
+import _modDef7370 from "module_7370" /* 7370 */;
+import _modDef7371 from "module_7371" /* 7371 */;
+import _modDef7372 from "module_7372" /* 7372 */;
 import noop from "module_19" /* 19 */;
 
 class GameIcon {
@@ -85,7 +85,7 @@ const PremiumSubscriptionSKUs = fn(1374).PremiumSubscriptionSKUs;
 const jsx = fn(21).jsx;
 const GameIconSizes = { SIZE_24: "size_24", SMALL: "small", NORMAL: "normal", LARGE: "large" };
 let obj2 = { [GameIconSizes.SIZE_24]: 24, [GameIconSizes.SMALL]: 32, [GameIconSizes.NORMAL]: 48, [GameIconSizes.LARGE]: 80 };
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj4 = { gameIcon: { justifyContent: "center", alignItems: "center" }, size24: null, small: null, normal: null, large: null, placeholder: null, entityWrapper: null };
 let size = { width: obj2.size_24, height: obj2.size_24, borderRadius: nativeDefault.radii.sm };
 obj4.size24 = size;

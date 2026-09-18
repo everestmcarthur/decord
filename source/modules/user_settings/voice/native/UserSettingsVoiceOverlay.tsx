@@ -1,17 +1,17 @@
-// Module ID: 10140
-// Function ID: 10141
+// Module ID: 10234
+// Function ID: 10235
 // Name: UserSettingsVoiceOverlay
-// Dependencies: [19, 10130, 21, 563, 10129, 1115, 7314, 10141, 2]
+// Dependencies: [19, 10224, 21, 563, 10223, 1115, 7396, 10235, 2]
 // Exports: default
 
-// Module 10140 (UserSettingsVoiceOverlay)
+// Module 10234 (UserSettingsVoiceOverlay)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import util from "util" /* 1115 */;
-import TableSwitchRow from "TableSwitchRow" /* 7314 */;
-import UserSettingsVoice from "UserSettingsVoice" /* 10129 */;
-import MobileVoiceOverlayActionCreatorsDefault from "MobileVoiceOverlayActionCreators" /* 10141 */;
+import TableSwitchRow from "TableSwitchRow" /* 7396 */;
+import UserSettingsVoice from "UserSettingsVoice" /* 10223 */;
+import MobileVoiceOverlayActionCreatorsDefault from "MobileVoiceOverlayActionCreators" /* 10235 */;
 import noop from "module_19" /* 19 */;
-import MobileVoiceOverlayStore from "MobileVoiceOverlayStore" /* 10130 */;
+import MobileVoiceOverlayStore from "MobileVoiceOverlayStore" /* 10224 */;
 
 require = fn;
 const jsx = fn(21).jsx;

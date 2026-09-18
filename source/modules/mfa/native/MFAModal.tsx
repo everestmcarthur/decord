@@ -1,16 +1,16 @@
-// Module ID: 15792
-// Function ID: 15793
+// Module ID: 15887
+// Function ID: 15888
 // Name: MFAModal
-// Dependencies: [5, 19, 17, 21, 7063, 4843, 1115, 15793, 7491, 7106, 5712, 15794, 15795, 15800, 15803, 15804, 15805, 7114, 4985, 2]
+// Dependencies: [5, 19, 17, 21, 7145, 4925, 1115, 15888, 7573, 7188, 5794, 15889, 15890, 15895, 15898, 15899, 15900, 7196, 5067, 2]
 // Exports: openMFAModal
 
-// Module 15792 (MFAModal)
+// Module 15887 (MFAModal)
 import util from "util" /* 1115 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4843 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4985 */;
-import NavigatorHeader from "NavigatorHeader" /* 5712 */;
-import MFAUtils from "MFAUtils" /* 7063 */;
-import MfaStepsTypes from "MfaStepsTypes" /* 15793 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4925 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5067 */;
+import NavigatorHeader from "NavigatorHeader" /* 5794 */;
+import MFAUtils from "MFAUtils" /* 7145 */;
+import MfaStepsTypes from "MfaStepsTypes" /* 15888 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -125,7 +125,7 @@ class MFAModal {
       obj3.headerRight = headerRight;
       obj3.render = function render(arg0) {
         const merged = Object.assign(arg0);
-        return closure_1_6(closure_1_1(15794), {});
+        return closure_1_6(closure_1_1(15889), {});
       };
       obj2[MfaStepsTypes.MfaScreens.SELECT] = obj3;
       const obj5 = {};
@@ -136,11 +136,11 @@ class MFAModal {
         type = first.type;
       }
       if ("webauthn" === type) {
-        let headerCloseButton = tmp(5712).getHeaderCloseButton(callback1);
-        const tmpResult = tmp(5712);
+        let headerCloseButton = tmp(5794).getHeaderCloseButton(callback1);
+        const tmpResult = tmp(5794);
       } else {
-        headerCloseButton = tmp(5712).getHeaderBackButton();
-        const tmpResult10 = tmp(5712);
+        headerCloseButton = tmp(5794).getHeaderBackButton();
+        const tmpResult10 = tmp(5794);
       }
       obj5.headerLeft = headerCloseButton;
       const first1 = tmp5.methods[0];
@@ -155,7 +155,7 @@ class MFAModal {
       obj5.headerRight = tmp12;
       obj5.render = function render(arg0) {
         const merged = Object.assign(arg0);
-        return closure_1_6(closure_1_1(15795), {});
+        return closure_1_6(closure_1_1(15890), {});
       };
       obj2[MfaStepsTypes.MfaScreens.WEBAUTHN] = obj5;
       const obj6 = {};
@@ -166,11 +166,11 @@ class MFAModal {
         type2 = first2.type;
       }
       if ("totp" === type2) {
-        let headerCloseButton1 = tmp(5712).getHeaderCloseButton(callback1);
-        const tmpResult11 = tmp(5712);
+        let headerCloseButton1 = tmp(5794).getHeaderCloseButton(callback1);
+        const tmpResult11 = tmp(5794);
       } else {
-        headerCloseButton1 = tmp(5712).getHeaderBackButton();
-        const tmpResult12 = tmp(5712);
+        headerCloseButton1 = tmp(5794).getHeaderBackButton();
+        const tmpResult12 = tmp(5794);
       }
       obj6.headerLeft = headerCloseButton1;
       const first3 = tmp5.methods[0];
@@ -185,7 +185,7 @@ class MFAModal {
       obj6.headerRight = tmp20;
       obj6.render = function render(arg0) {
         const merged = Object.assign(arg0);
-        return closure_1_6(closure_1_1(15800), {});
+        return closure_1_6(closure_1_1(15895), {});
       };
       obj2[MfaStepsTypes.MfaScreens.TOTP] = obj6;
       const obj7 = {};
@@ -196,11 +196,11 @@ class MFAModal {
         type4 = first4.type;
       }
       if ("backup" === type4) {
-        let headerCloseButton2 = tmp(5712).getHeaderCloseButton(callback1);
-        const tmpResult13 = tmp(5712);
+        let headerCloseButton2 = tmp(5794).getHeaderCloseButton(callback1);
+        const tmpResult13 = tmp(5794);
       } else {
-        headerCloseButton2 = tmp(5712).getHeaderBackButton();
-        const tmpResult14 = tmp(5712);
+        headerCloseButton2 = tmp(5794).getHeaderBackButton();
+        const tmpResult14 = tmp(5794);
       }
       obj7.headerLeft = headerCloseButton2;
       const first5 = tmp5.methods[0];
@@ -215,7 +215,7 @@ class MFAModal {
       obj7.headerRight = tmp28;
       obj7.render = function render(arg0) {
         const merged = Object.assign(arg0);
-        return closure_1_6(closure_1_1(15803), {});
+        return closure_1_6(closure_1_1(15898), {});
       };
       obj2[MfaStepsTypes.MfaScreens.BACKUP] = obj7;
       const obj8 = {};
@@ -226,11 +226,11 @@ class MFAModal {
         type6 = first6.type;
       }
       if ("sms" === type6) {
-        let headerCloseButton3 = tmp(5712).getHeaderCloseButton(callback1);
-        const tmpResult15 = tmp(5712);
+        let headerCloseButton3 = tmp(5794).getHeaderCloseButton(callback1);
+        const tmpResult15 = tmp(5794);
       } else {
-        headerCloseButton3 = tmp(5712).getHeaderBackButton();
-        const tmpResult16 = tmp(5712);
+        headerCloseButton3 = tmp(5794).getHeaderBackButton();
+        const tmpResult16 = tmp(5794);
       }
       obj8.headerLeft = headerCloseButton3;
       const first7 = tmp5.methods[0];
@@ -245,7 +245,7 @@ class MFAModal {
       obj8.headerRight = tmp36;
       obj8.render = function render(arg0) {
         const merged = Object.assign(arg0);
-        return closure_1_6(closure_1_1(15804), {});
+        return closure_1_6(closure_1_1(15899), {});
       };
       obj2[MfaStepsTypes.MfaScreens.SMS] = obj8;
       const obj9 = {};
@@ -256,11 +256,11 @@ class MFAModal {
         type8 = first8.type;
       }
       if ("password" === type8) {
-        let headerCloseButton4 = tmp(5712).getHeaderCloseButton(callback1);
-        const tmpResult17 = tmp(5712);
+        let headerCloseButton4 = tmp(5794).getHeaderCloseButton(callback1);
+        const tmpResult17 = tmp(5794);
       } else {
-        headerCloseButton4 = tmp(5712).getHeaderBackButton();
-        const tmpResult18 = tmp(5712);
+        headerCloseButton4 = tmp(5794).getHeaderBackButton();
+        const tmpResult18 = tmp(5794);
       }
       obj9.headerLeft = headerCloseButton4;
       const first9 = tmp5.methods[0];
@@ -275,7 +275,7 @@ class MFAModal {
       obj9.headerRight = tmp44;
       obj9.render = function render(arg0) {
         const merged = Object.assign(arg0);
-        return closure_1_6(closure_1_1(15805), {});
+        return closure_1_6(closure_1_1(15900), {});
       };
       obj2[MfaStepsTypes.MfaScreens.PASSWORD] = obj9;
       return obj2;

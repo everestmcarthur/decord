@@ -1,16 +1,16 @@
-// Module ID: 4623
-// Function ID: 4624
+// Module ID: 4705
+// Function ID: 4706
 // Name: findCodedLinks
-// Dependencies: [4624, 1074, 1076, 4627, 1368, 4628, 4629, 1361, 8012, 4625, 7855, 9391, 8488, 7805, 5544, 2]
+// Dependencies: [4706, 1074, 1076, 4709, 1368, 4710, 4711, 1361, 8095, 4707, 7937, 9475, 8571, 7887, 5626, 2]
 // Exports: default, findCodedLink, isSuspiciousCodedLink, parseGameServerShareCode, parseQuestsEmbedCode, parseUserProfileEmbedCode, remainingPathFromDiscordHostMatch
 
-// Module 4623 (findCodedLinks)
+// Module 4705 (findCodedLinks)
 import BuildOverrideUtils from "BuildOverrideUtils" /* 1361 */;
 import Url from "Url" /* 1368 */;
-import CodedLink from "CodedLink" /* 4628 */;
-import findCodedLinkUrlsDefault from "findCodedLinkUrls" /* 4629 */;
-import InviteStore from "InviteStore" /* 4624 */;
-import RegexUtils_mod from "RegexUtils" /* 4627 */;
+import CodedLink from "CodedLink" /* 4710 */;
+import findCodedLinkUrlsDefault from "findCodedLinkUrls" /* 4711 */;
+import InviteStore from "InviteStore" /* 4706 */;
+import RegexUtils_mod from "RegexUtils" /* 4709 */;
 
 require = fn;
 function getPathsFromURL(target) {

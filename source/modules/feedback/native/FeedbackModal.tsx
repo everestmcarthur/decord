@@ -1,11 +1,11 @@
-// Module ID: 11798
-// Function ID: 11799
+// Module ID: 11888
+// Function ID: 11889
 // Name: FeedbackModal
-// Dependencies: [32, 19, 17, 21, 4640, 8748, 1115, 4636, 2025, 5062, 4843, 7114, 5712, 2]
+// Dependencies: [32, 19, 17, 21, 4722, 8831, 1115, 4718, 2025, 5144, 4925, 7196, 5794, 2]
 // Exports: default
 
-// Module 11798 (FeedbackModal)
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4843 */;
+// Module 11888 (FeedbackModal)
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4925 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -79,7 +79,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let closure_9 = createStyles.createStyles({ helpDeskLabel: { lineHeight: 16, marginTop: 8 }, bottomContainer: { paddingHorizontal: 16 }, submitButton: { marginTop: 24, marginBottom: 24 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/feedback/native/FeedbackModal.tsx");

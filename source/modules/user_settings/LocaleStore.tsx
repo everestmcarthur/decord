@@ -1,12 +1,12 @@
 // Module ID: 2026
 // Function ID: 2027
 // Name: LocaleStore
-// Dependencies: [5, 2027, 1220, 4260, 1115, 504, 573, 2]
+// Dependencies: [5, 2027, 1220, 4343, 1115, 504, 573, 2]
 
 // Module 2026 (LocaleStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import DiscordNativeDefault from "DiscordNative" /* 4260 */;
+import DiscordNativeDefault from "DiscordNative" /* 4343 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
 
@@ -48,7 +48,7 @@ let closure_6 = async function _getSystemLocale(arg0, value) {
             }
           }
           if (null != prop) {
-            const app2 = tmp22(4260).app;
+            const app2 = tmp22(4343).app;
             const preferredSystemLanguages = app2.getPreferredSystemLanguages();
             c2 = 1;
             c3 = 1;

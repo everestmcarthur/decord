@@ -1,13 +1,13 @@
-// Module ID: 11291
-// Function ID: 11292
+// Module ID: 11383
+// Function ID: 11384
 // Name: Tooltip
-// Dependencies: [32, 19, 17, 21, 4640, 576, 4376, 4341, 11292, 5061, 4636, 2]
+// Dependencies: [32, 19, 17, 21, 4722, 576, 4458, 4423, 11384, 5143, 4718, 2]
 // Exports: Tooltip
 
-// Module 11291 (Tooltip)
+// Module 11383 (Tooltip)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
-import spring from "spring" /* 5061 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4458 */;
+import spring from "spring" /* 5143 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,7 +16,7 @@ const Pressable = fn(17).Pressable;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const ON_PRESS_SPRING = { mass: 1, overshootClamping: true, damping: 27, stiffness: 300 };
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = { container: { position: "absolute", alignItems: "center" }, textContainer: { paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.sm, maxWidth: 150, alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BRAND }, text: { textAlign: "center" }, arrow: null, bottomArrow: null, topArrow: null };
 let size = { width: 0, height: 0, borderStyle: "solid", borderLeftColor: "transparent", borderRightColor: "transparent", borderTopColor: nativeDefault.colors.BACKGROUND_BRAND, borderBottomColor: nativeDefault.colors.BACKGROUND_BRAND };
 obj2.arrow = size;

@@ -1,16 +1,16 @@
-// Module ID: 16672
-// Function ID: 16673
+// Module ID: 16769
+// Function ID: 16770
 // Name: SeparatorDot
-// Dependencies: [19, 17, 21, 4640, 576, 2]
+// Dependencies: [19, 17, 21, 4722, 576, 2]
 // Exports: default
 
-// Module 16672 (SeparatorDot)
+// Module 16769 (SeparatorDot)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 const obj2 = { separatorDot: null };
 let size = { width: 4, height: 4, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
 obj2.separatorDot = size;

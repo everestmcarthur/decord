@@ -1,11 +1,11 @@
-// Module ID: 13300
-// Function ID: 13301
+// Module ID: 13391
+// Function ID: 13392
 // Name: NitroIcon
-// Dependencies: [19, 21, 8606, 2]
+// Dependencies: [19, 21, 8689, 2]
 // Exports: default
 
-// Module 13300 (NitroIcon)
-import inlineStyles from "inlineStyles" /* 8606 */;
+// Module 13391 (NitroIcon)
+import inlineStyles from "inlineStyles" /* 8689 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;

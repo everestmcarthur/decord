@@ -1,9 +1,0 @@
-// Module ID: 12609
-// Function ID: 12610
-// Dependencies: [1121]
-
-// Module 12609
-import registerAsset from "module_1121" /* 1121 */;
-
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/community", width: 56, height: 65, scales: [1, 2, 3], hash: "260617da8a2932d3af6bc2abf2ba2716", name: "rejected-alert", type: "png" });

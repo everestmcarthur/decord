@@ -1,20 +1,20 @@
-// Module ID: 11029
-// Function ID: 11030
+// Module ID: 11123
+// Function ID: 11124
 // Name: AcceptRequestConfirmationModal
-// Dependencies: [19, 17, 21, 4640, 576, 5081, 1115, 4984, 4636, 2]
+// Dependencies: [19, 17, 21, 4722, 576, 5163, 1115, 5066, 4718, 2]
 // Exports: default
 
-// Module 11029 (AcceptRequestConfirmationModal)
+// Module 11123 (AcceptRequestConfirmationModal)
 import nativeDefault from "native" /* 576 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4984 */;
-import common_AlertDefault from "common/Alert" /* 5081 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5066 */;
+import common_AlertDefault from "common/Alert" /* 5163 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = { bodyText: { textAlign: "center", alignItems: "center", gap: nativeDefault.space.PX_8 }, text: { textAlign: "center" } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -37,11 +37,11 @@ export default function AcceptRequestConfirmationModal(onConfirm) {
   const obj3 = { variant: "heading-lg/bold", color: "text-strong", style: tmp.text, children: null };
   const intl3 = onConfirm(1115).intl;
   obj3.children = intl3.string(onConfirm(1115).t.eJzSDT);
-  const items = [closure_4(onConfirm(4636).Text, obj3), ];
+  const items = [closure_4(onConfirm(4718).Text, obj3), ];
   const obj4 = { variant: "text-md/medium", color: "text-subtle", style: tmp.text, children: null };
   const intl4 = onConfirm(1115).intl;
   obj4.children = intl4.string(onConfirm(1115).t.GB4jUw);
-  items[1] = closure_4(onConfirm(4636).Text, obj4);
+  items[1] = closure_4(onConfirm(4718).Text, obj4);
   obj2.children = items;
   obj.children = closure_5(View, obj2);
   return closure_4(common_AlertDefault, obj);

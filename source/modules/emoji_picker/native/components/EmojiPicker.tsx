@@ -1,9 +1,9 @@
-// Module ID: 10431
-// Function ID: 10432
+// Module ID: 10525
+// Function ID: 10526
 // Name: EmojiPicker
-// Dependencies: [19, 17, 1074, 1375, 21, 4640, 576, 1241, 4376, 10432, 7276, 7296, 10435, 10430, 7164, 1115, 10436, 10476, 5074, 4489, 10495, 2]
+// Dependencies: [19, 17, 1074, 1375, 21, 4722, 576, 1241, 4458, 10526, 7358, 7378, 10529, 10524, 7246, 1115, 10530, 10570, 5156, 4571, 10589, 2]
 
-// Module 10431 (EmojiPicker)
+// Module 10525 (EmojiPicker)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import noop from "module_19" /* 19 */;
@@ -16,7 +16,7 @@ const Constants = fn(1074);
 const EmojiIntention = fn(1375).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj = { container: { flex: 1 }, list: { overflow: "hidden", flex: 1 }, header: { flexDirection: "row", paddingTop: nativeDefault.space.PX_8, paddingBottom: 1, gap: nativeDefault.space.PX_12 }, headerGradientColor: null, headerGradient: null };
 let obj3 = { flexDirection: "row", paddingTop: nativeDefault.space.PX_8, paddingBottom: 1, gap: nativeDefault.space.PX_12 };
 obj.headerGradientColor = { color: nativeDefault.colors.MOBILE_EXPRESSION_PICKER_BACKGROUND_DEFAULT };

@@ -1,13 +1,13 @@
-// Module ID: 5973
-// Function ID: 5974
+// Module ID: 6055
+// Function ID: 6056
 // Name: CoinSlotSpotIllustration
-// Dependencies: [21, 5675, 5974, 2]
+// Dependencies: [21, 5757, 6056, 2]
 // Exports: CoinSlotSpotIllustration
 
-// Module 5973 (CoinSlotSpotIllustration)
+// Module 6055 (CoinSlotSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5675 */;
-import _modDef5974 from "module_5974" /* 5974 */;
+import FastImageDefault from "FastImage" /* 5757 */;
+import _modDef6056 from "module_6056" /* 6056 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const CoinSlotSpotIllustration = function CoinSlotSpotIllustration(width)
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5974 };
+  const obj2 = { uri: _modDef6056 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

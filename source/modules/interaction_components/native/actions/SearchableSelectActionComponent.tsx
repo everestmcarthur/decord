@@ -1,13 +1,13 @@
-// Module ID: 15851
-// Function ID: 15852
+// Module ID: 15946
+// Function ID: 15947
 // Name: SearchableSelectActionComponent
-// Dependencies: [19, 1958, 21, 4865, 8260, 38, 8268, 1895, 15849, 8270, 4607, 11979, 1897, 11975, 2]
+// Dependencies: [19, 1958, 21, 4947, 8342, 38, 8350, 1895, 15944, 8352, 4689, 12070, 1897, 12066, 2]
 // Exports: default
 
-// Module 15851 (SearchableSelectActionComponent)
+// Module 15946 (SearchableSelectActionComponent)
 import Server from "Server" /* 1895 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4607 */;
-import SearchableSelectActionComponentUtils from "SearchableSelectActionComponentUtils" /* 8268 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4689 */;
+import SearchableSelectActionComponentUtils from "SearchableSelectActionComponentUtils" /* 8350 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 
@@ -110,16 +110,16 @@ export default function SearchableSelectActionComponent(defaultValues) {
           const obj2 = { selectionActionComponent: tmp };
           const combined = "ChannelSelectComponentActionSheet:" + customId;
           const merged = Object.assign(obj4);
-          obj3.openLazy(tmp2(1897)(11979, tmp3.paths), combined, obj2);
-          const tmp14 = tmp2(1897)(11979, tmp3.paths);
+          obj3.openLazy(tmp2(1897)(12070, tmp3.paths), combined, obj2);
+          const tmp14 = tmp2(1897)(12070, tmp3.paths);
         } else {
           const _HermesInternal = HermesInternal;
           const obj = ActionSheetActionCreatorsDefault;
           obj4 = { selectionActionComponent: tmp };
           const combined1 = "MentionableSelectComponentActionSheet:" + customId;
           const merged1 = Object.assign(obj4);
-          obj.openLazy(tmp2(1897)(11975, tmp3.paths), combined1, obj4);
-          const tmp5 = tmp2(1897)(11975, tmp3.paths);
+          obj.openLazy(tmp2(1897)(12066, tmp3.paths), combined1, obj4);
+          const tmp5 = tmp2(1897)(12066, tmp3.paths);
         }
       };
       return <tmp4Result2 model={null} onTap={null} />;

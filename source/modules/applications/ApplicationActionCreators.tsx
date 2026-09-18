@@ -1,14 +1,14 @@
-// Module ID: 7277
-// Function ID: 7278
+// Module ID: 7359
+// Function ID: 7360
 // Name: ApplicationActionCreators
-// Dependencies: [5, 7278, 1919, 4868, 1074, 573, 1271, 504, 2]
+// Dependencies: [5, 7360, 1919, 4950, 1074, 573, 1271, 504, 2]
 // Exports: useApplicationWithLoggedOutContext
 
-// Module 7277 (ApplicationActionCreators)
+// Module 7359 (ApplicationActionCreators)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationDirectoryApplicationsStore from "ApplicationDirectoryApplicationsStore" /* 7278 */;
+import ApplicationDirectoryApplicationsStore from "ApplicationDirectoryApplicationsStore" /* 7360 */;
 import ApplicationRecord from "ApplicationRecord" /* 1919 */;
-import ApplicationStore from "ApplicationStore" /* 4868 */;
+import ApplicationStore from "ApplicationStore" /* 4950 */;
 
 const require = globalThis.__r;
 
@@ -127,15 +127,15 @@ const Constants = fn(1074);
 const initialize = fn(504);
 const fetchStore = initialize.createFetchStore(ApplicationStore, {
   getQueryId: Constants.QueryIds.APPLICATIONS,
-  get(item) {
+  get(applicationId) {
     let flag = arg1;
     if (arg1 === undefined) {
       flag = false;
     }
     let tmp = null;
-    if (null != item) {
+    if (null != applicationId) {
       if (flag) {
-        let application = ApplicationStore.getApplication(item);
+        let application = ApplicationStore.getApplication(applicationId);
         if (application == null) {
           application = null;
         }

@@ -1,13 +1,13 @@
-// Module ID: 7716
-// Function ID: 7717
+// Module ID: 7798
+// Function ID: 7799
 // Name: MonitoringAgent
-// Dependencies: [1074, 1364, 7717, 7718, 17, 7719, 7720, 1271, 2]
+// Dependencies: [1074, 1364, 7799, 7800, 17, 7801, 7802, 1271, 2]
 
-// Module 7716 (MonitoringAgent)
+// Module 7798 (MonitoringAgent)
 import Constants from "Constants" /* 1074 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
-import NativeMetricMonitorModule from "NativeMetricMonitorModule" /* 7719 */;
-import MonitoringAgentUtils from "MonitoringAgentUtils" /* 7720 */;
+import NativeMetricMonitorModule from "NativeMetricMonitorModule" /* 7801 */;
+import MonitoringAgentUtils from "MonitoringAgentUtils" /* 7802 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import size from "module_2" /* 2 */;
@@ -65,10 +65,10 @@ prototype["_getMetricWithDefaults"] = function _getMetricWithDefaults(name, COUN
     const _HermesInternal = HermesInternal;
     tags1.push("platform:" + str);
   }
-  const CurrentReleaseChannel = tmp(7717).CurrentReleaseChannel;
+  const CurrentReleaseChannel = tmp(7799).CurrentReleaseChannel;
   let tmp9 = null;
   if (null != CurrentReleaseChannel) {
-    const ALL = tmp(7718).ReleaseChannelsSets.ALL;
+    const ALL = tmp(7800).ReleaseChannelsSets.ALL;
     tmp9 = null;
     if (ALL.has(CurrentReleaseChannel)) {
       tmp9 = CurrentReleaseChannel;
@@ -121,7 +121,7 @@ prototype["_flush"] = function _flush() {
     HermesBuiltin.arraySpread(self._metrics, 0);
     const HTTP = HTTPUtils.HTTP;
     const request = { url: Endpoints.METRICS_V2, body: null, retries: 1, rejectWithError: true };
-    const body = { metrics: items, client_info: { built_at: "1789622340129", build_number: "6445" } };
+    const body = { metrics: items, client_info: { built_at: "1789708769064", build_number: "6453" } };
     request.body = body;
     HTTP.post(request).catch(() => {
       if (self._metrics.length + items.length < 100) {

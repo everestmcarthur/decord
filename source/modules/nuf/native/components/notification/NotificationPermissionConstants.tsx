@@ -1,9 +1,9 @@
-// Module ID: 12562
-// Function ID: 12563
+// Module ID: 12653
+// Function ID: 12654
 // Name: NotificationPermissionConstants
 // Dependencies: [2]
 
-// Module 12562 (NotificationPermissionConstants)
+// Module 12653 (NotificationPermissionConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/nuf/native/components/notification/NotificationPermissionConstants.tsx");

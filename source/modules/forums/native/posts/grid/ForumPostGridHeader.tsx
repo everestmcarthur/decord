@@ -1,23 +1,23 @@
-// Module ID: 12153
-// Function ID: 12154
+// Module ID: 12244
+// Function ID: 12245
 // Name: ForumPostGridHeader
-// Dependencies: [19, 17, 7387, 1965, 21, 4640, 12154, 12156, 12165, 12166, 12167, 2]
+// Dependencies: [19, 17, 7469, 1965, 21, 4722, 12245, 12247, 12256, 12257, 12258, 2]
 // Exports: default
 
-// Module 12153 (ForumPostGridHeader)
-import ForumPostPinIconDefault from "ForumPostPinIcon" /* 12154 */;
-import ForumPostUsername from "ForumPostUsername" /* 12156 */;
-import ForumPostTimestampDefault from "ForumPostTimestamp" /* 12165 */;
-import ForumPostTitleDefault from "ForumPostTitle" /* 12167 */;
+// Module 12244 (ForumPostGridHeader)
+import ForumPostPinIconDefault from "ForumPostPinIcon" /* 12245 */;
+import ForumPostUsername from "ForumPostUsername" /* 12247 */;
+import ForumPostTimestampDefault from "ForumPostTimestamp" /* 12256 */;
+import ForumPostTitleDefault from "ForumPostTitle" /* 12258 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const ForumTimestampFormats = fn(7387).ForumTimestampFormats;
+const ForumTimestampFormats = fn(7469).ForumTimestampFormats;
 const ChannelFlags = fn(1965).ChannelFlags;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let closure_8 = createStyles.createStyles({ pinIcon: { marginEnd: 8 }, container: { display: "flex", flexDirection: "column", marginBottom: 4 }, details: { flexDirection: "row", alignItems: "center", marginBottom: 4 }, timestampText: { flex: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/posts/grid/ForumPostGridHeader.tsx");
@@ -34,7 +34,7 @@ export default function ForumPostGridHeader(arg0) {
   }
   const items = [hasFlagResult, timestampProducer(ForumPostUsername.ForumPostAuthor, { thread, hasUnreads }), timestampProducer(ForumPostTimestampDefault, { thread, hasUnreads, format: ForumTimestampFormats.POSTED_DURATION_AGO, textStyle: tmp.timestampText }), ];
   if (isNew) {
-    isNew = tmp8(tmp10(12166), {});
+    isNew = tmp8(tmp10(12257), {});
   }
   items[3] = isNew;
   obj2.children = items;

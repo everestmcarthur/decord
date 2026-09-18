@@ -1,15 +1,15 @@
-// Module ID: 9324
-// Function ID: 9325
+// Module ID: 9408
+// Function ID: 9409
 // Name: useIsSecureFramesUIEnabled
-// Dependencies: [1958, 4663, 9306, 504, 2]
+// Dependencies: [1958, 4745, 9390, 504, 2]
 // Exports: useIsSecureFramesUIEnabled
 
-// Module 9324 (useIsSecureFramesUIEnabled)
+// Module 9408 (useIsSecureFramesUIEnabled)
 import ChannelStore from "ChannelStore" /* 1958 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4663 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4745 */;
 
 const require = fn;
-let closure_4 = fn(9306).END_TO_END_ENCRYPTION_DISABLED;
+let closure_4 = fn(9390).END_TO_END_ENCRYPTION_DISABLED;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rtc/hooks/useIsSecureFramesUIEnabled.tsx");
 

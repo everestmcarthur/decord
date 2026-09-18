@@ -1,14 +1,14 @@
-// Module ID: 11773
-// Function ID: 11774
+// Module ID: 11863
+// Function ID: 11864
 // Name: GuildHighlightsNotificationsActionCreators
-// Dependencies: [11774, 1074, 4607, 11775, 1897, 1115, 1241, 2]
+// Dependencies: [11864, 1074, 4689, 11865, 1897, 1115, 1241, 2]
 // Exports: openGuildHighlightNotificationForPush
 
-// Module 11773 (GuildHighlightsNotificationsActionCreators)
+// Module 11863 (GuildHighlightsNotificationsActionCreators)
 import Constants from "Constants" /* 1074 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4607 */;
-import Constants2 from "Constants" /* 11774 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4689 */;
+import Constants2 from "Constants" /* 11864 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -64,5 +64,5 @@ export const openGuildHighlightNotificationForPush = function openGuildHighlight
     AnalyticsUtilsDefault.track(AnalyticEvents.FEEDBACK_FORM_SUBMITTED, obj3);
   };
   obj2.feedbackSettings = obj3;
-  obj.openLazy(require("asyncRequireImpl")(11775, dependencyMap.paths), "GuildHighlightsNotifications", obj2);
+  obj.openLazy(require("asyncRequireImpl")(11865, dependencyMap.paths), "GuildHighlightsNotifications", obj2);
 };

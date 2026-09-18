@@ -1,18 +1,18 @@
-// Module ID: 10907
-// Function ID: 10908
+// Module ID: 11001
+// Function ID: 11002
 // Name: PremiumGiftPromotionDetails
-// Dependencies: [32, 19, 17, 4632, 21, 576, 4640, 4636, 504, 8965, 1365, 10908, 5675, 1890, 8928, 2]
+// Dependencies: [32, 19, 17, 4714, 21, 576, 4722, 4718, 504, 9049, 1365, 11002, 5757, 1890, 9012, 2]
 // Exports: PremiumGiftPromotionCollectibleRewardDetails, default
 
-// Module 10907 (PremiumGiftPromotionDetails)
+// Module 11001 (PremiumGiftPromotionDetails)
 import nativeDefault from "native" /* 576 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1365 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1890 */;
-import Text_Text from "Text/Text" /* 4636 */;
-import SKUPreview from "SKUPreview" /* 8928 */;
+import Text_Text from "Text/Text" /* 4718 */;
+import SKUPreview from "SKUPreview" /* 9012 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4632 */;
+import AccessibilityStore from "AccessibilityStore" /* 4714 */;
 
 require = fn;
 function PremiumGiftPromotionDetailsBase(arg0) {
@@ -107,7 +107,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const PX_40 = nativeDefault.space.PX_40;
-let createStyles = fn(4640);
+let createStyles = fn(4722);
 let closure_10 = createStyles.createStyles(() => {
   const obj = { container: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 }, image: null, textContainer: null };
   const size = { width: PX_40, height: PX_40, borderRadius: nativeDefault.radii.xs };
@@ -115,7 +115,7 @@ let closure_10 = createStyles.createStyles(() => {
   obj.textContainer = { flex: 1 };
   return obj;
 });
-createStyles = fn(4640);
+createStyles = fn(4722);
 let obj3 = { preview: null };
 let size = { width: PX_40, height: PX_40, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, border: { borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1 }, overflow: "hidden" };
 obj3.preview = size;

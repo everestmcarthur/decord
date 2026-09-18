@@ -1,14 +1,14 @@
-// Module ID: 12196
-// Function ID: 12197
+// Module ID: 12287
+// Function ID: 12288
 // Name: AppLauncherOnboardingStore
-// Dependencies: [1372, 11, 12194, 7637, 504, 573, 2]
+// Dependencies: [1372, 11, 12285, 7719, 504, 573, 2]
 
-// Module 12196 (AppLauncherOnboardingStore)
+// Module 12287 (AppLauncherOnboardingStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7637 */;
-import useCanShowAppLauncherOnboarding from "useCanShowAppLauncherOnboarding" /* 12194 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7719 */;
+import useCanShowAppLauncherOnboarding from "useCanShowAppLauncherOnboarding" /* 12285 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;

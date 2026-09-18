@@ -1,19 +1,19 @@
-// Module ID: 10485
-// Function ID: 10486
+// Module ID: 10579
+// Function ID: 10580
 // Name: useEmojiAndSource
-// Dependencies: [5, 32, 19, 1980, 5547, 5673, 1074, 4295, 563, 2]
+// Dependencies: [5, 32, 19, 1980, 5629, 5755, 1074, 4378, 563, 2]
 // Exports: useEmojiAndSource
 
-// Module 10485 (useEmojiAndSource)
-import EmojiTypes from "EmojiTypes" /* 4295 */;
+// Module 10579 (useEmojiAndSource)
+import EmojiTypes from "EmojiTypes" /* 4378 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import EmojiStore from "EmojiStore" /* 5547 */;
+import EmojiStore from "EmojiStore" /* 5629 */;
 
 require = fn;
-const ExpressionSourceRecord = fn(5673);
+const ExpressionSourceRecord = fn(5755);
 ({ ExpressionSourceGuildRecord: closure_7, EmojiSourceDataTypes: closure_8, getEmojiSourceData: closure_9 } = ExpressionSourceRecord);
 const GuildFeatures = fn(1074).GuildFeatures;
 const size = fn(2);

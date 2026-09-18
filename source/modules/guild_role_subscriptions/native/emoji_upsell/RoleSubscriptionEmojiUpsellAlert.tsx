@@ -1,14 +1,14 @@
-// Module ID: 10446
-// Function ID: 10447
+// Module ID: 10540
+// Function ID: 10541
 // Name: RoleSubscriptionEmojiUpsellAlert
-// Dependencies: [19, 1980, 1965, 21, 9468, 1115, 1478, 504, 5608, 5081, 10447, 9476, 2]
+// Dependencies: [19, 1980, 1965, 21, 9552, 1115, 1478, 504, 5690, 5163, 10541, 9560, 2]
 // Exports: default
 
-// Module 10446 (RoleSubscriptionEmojiUpsellAlert)
+// Module 10540 (RoleSubscriptionEmojiUpsellAlert)
 import util from "util" /* 1115 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5608 */;
-import _modDef9468 from "module_9468" /* 9468 */;
-import CreatorRevenueButton from "CreatorRevenueButton" /* 10447 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5690 */;
+import _modDef9552 from "module_9552" /* 9552 */;
+import CreatorRevenueButton from "CreatorRevenueButton" /* 10541 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1980 */;
 
@@ -49,7 +49,7 @@ export default function RoleSubscriptionEmojiUpsellAlert(arg0) {
     if (stateFromStores != null) {
       name = stateFromStores.name;
     }
-    const obj = { image: _modDef9468, title: null, description: null };
+    const obj = { image: _modDef9552, title: null, description: null };
     const intl = util.intl;
     obj.title = intl.string(util.t.cBjkcx);
     const intl2 = util.intl;

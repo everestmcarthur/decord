@@ -1,14 +1,14 @@
-// Module ID: 11362
-// Function ID: 11363
+// Module ID: 11460
+// Function ID: 11461
 // Name: BioText
-// Dependencies: [19, 17, 1074, 2011, 21, 4640, 4334, 1241, 4636, 9573, 1364, 2010, 1115, 2]
+// Dependencies: [19, 17, 1074, 2011, 21, 4722, 4417, 1241, 4718, 9657, 1364, 2010, 1115, 2]
 // Exports: default
 
-// Module 11362 (BioText)
+// Module 11460 (BioText)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import LinkingDefault from "Linking" /* 4334 */;
-import Text_Text from "Text/Text" /* 4636 */;
-import BioMarkupUtils from "BioMarkupUtils" /* 9573 */;
+import LinkingDefault from "Linking" /* 4417 */;
+import Text_Text from "Text/Text" /* 4718 */;
+import BioMarkupUtils from "BioMarkupUtils" /* 9657 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -34,7 +34,7 @@ const AnalyticEvents = fn(1074).AnalyticEvents;
 const CHANGELOG_URL = fn(2011).CHANGELOG_URL;
 const jsxProd = fn(21);
 ({ jsxs: closure_7, jsx: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let closure_10 = createStyles.createStyles({ text: { alignSelf: "stretch", textAlignVertical: "top", width: "100%", flexGrow: 1, paddingTop: 2, lineHeight: 24 }, span: { alignSelf: "stretch", textAlignVertical: "bottom", width: "100%", flexGrow: 1, display: "flex", paddingBottom: 2 }, link: { alignSelf: "stretch", textAlignVertical: "bottom", width: "100%", flexGrow: 1, bottom: -4, position: "relative" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/profile_customization/native/BioText.tsx");

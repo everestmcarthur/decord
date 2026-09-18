@@ -1,13 +1,13 @@
-// Module ID: 9398
-// Function ID: 9399
+// Module ID: 9482
+// Function ID: 9483
 // Name: oauth2/actions
-// Dependencies: [5, 1958, 2012, 1074, 1271, 6703, 1083, 2]
+// Dependencies: [5, 1958, 2012, 1074, 1271, 6785, 1083, 2]
 // Exports: acceptWhitelist, authorize, fetchAuthorization, fetchChannels, finishUserCode, finishUserCodeTwoWayLinkError, logoutWithRedirect, startSamsungAuthorization, verifyUserCode
 
-// Module 9398 (oauth2/actions)
+// Module 9482 (oauth2/actions)
 import utils_PathUtils from "utils/PathUtils" /* 1083 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6703 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6785 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;

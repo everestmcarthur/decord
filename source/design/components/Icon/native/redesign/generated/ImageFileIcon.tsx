@@ -1,13 +1,13 @@
-// Module ID: 11391
-// Function ID: 11392
+// Module ID: 11489
+// Function ID: 11490
 // Name: ImageFileIcon
-// Dependencies: [19, 21, 576, 4340, 11392, 2]
+// Dependencies: [19, 21, 576, 4422, 11490, 2]
 // Exports: ImageFileIcon
 
-// Module 11391 (ImageFileIcon)
+// Module 11489 (ImageFileIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4340 */;
-import _mod11392 from "module_11392" /* 11392 */;
+import BaseIconImage from "BaseIconImage" /* 4422 */;
+import _mod11490 from "module_11490" /* 11490 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const ImageFileIcon = function ImageFileIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11392, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11490, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

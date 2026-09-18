@@ -1,13 +1,13 @@
-// Module ID: 5180
-// Function ID: 5181
+// Module ID: 5262
+// Function ID: 5263
 // Name: AnnouncementsLockIcon
-// Dependencies: [19, 21, 576, 4340, 5154, 2]
+// Dependencies: [19, 21, 576, 4422, 5236, 2]
 // Exports: AnnouncementsLockIcon
 
-// Module 5180 (AnnouncementsLockIcon)
+// Module 5262 (AnnouncementsLockIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4340 */;
-import _mod5154 from "module_5154" /* 5154 */;
+import BaseIconImage from "BaseIconImage" /* 4422 */;
+import _mod5236 from "module_5236" /* 5236 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const AnnouncementsLockIcon = function AnnouncementsLockIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod5154, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod5236, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

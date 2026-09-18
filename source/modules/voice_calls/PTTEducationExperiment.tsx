@@ -1,9 +1,9 @@
-// Module ID: 14116
-// Function ID: 14117
+// Module ID: 14211
+// Function ID: 14212
 // Name: PTTEducationExperiment
 // Dependencies: [1434, 2]
 
-// Module 14116 (PTTEducationExperiment)
+// Module 14211 (PTTEducationExperiment)
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

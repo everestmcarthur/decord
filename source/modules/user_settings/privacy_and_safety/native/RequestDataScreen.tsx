@@ -1,17 +1,17 @@
-// Module ID: 14985
-// Function ID: 14986
+// Module ID: 15079
+// Function ID: 15080
 // Name: RequestDataScreen
-// Dependencies: [19, 17, 21, 4640, 576, 14986, 2]
+// Dependencies: [19, 17, 21, 4722, 576, 15080, 2]
 
-// Module 14985 (RequestDataScreen)
+// Module 15079 (RequestDataScreen)
 import nativeDefault from "native" /* 576 */;
-import RequestDataContentDefault from "RequestDataContent" /* 14986 */;
+import RequestDataContentDefault from "RequestDataContent" /* 15080 */;
 import noop from "module_19" /* 19 */;
 
 get_ActivityIndicator = fn(17);
 ({ View: c2, StyleSheet } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 const obj = { container: null };
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj.container = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };

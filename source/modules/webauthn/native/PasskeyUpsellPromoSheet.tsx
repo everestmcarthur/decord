@@ -1,12 +1,12 @@
-// Module ID: 14787
-// Function ID: 14788
+// Module ID: 14881
+// Function ID: 14882
 // Name: PasskeyUpsellPromoSheet
-// Dependencies: [32, 19, 17, 1955, 21, 14788, 14785, 10377, 1115, 1364, 14784, 5521, 5062, 7061, 2]
+// Dependencies: [32, 19, 17, 1955, 21, 14882, 14879, 10471, 1115, 1364, 14878, 5603, 5144, 7143, 2]
 // Exports: default
 
-// Module 14787 (PasskeyUpsellPromoSheet)
-import NativeCeremoniesDefault from "NativeCeremonies" /* 7061 */;
-import PasskeyUpsellManagerDefault from "PasskeyUpsellManager" /* 14784 */;
+// Module 14881 (PasskeyUpsellPromoSheet)
+import NativeCeremoniesDefault from "NativeCeremonies" /* 7143 */;
+import PasskeyUpsellManagerDefault from "PasskeyUpsellManager" /* 14878 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -26,8 +26,8 @@ export default function PasswordlessUpsellPromoSheet() {
     const obj = setRegistering(onRegisterSuccess[6]);
     const result1 = setRegistering(onRegisterSuccess[6]).openPasskeyUpsellPromoModal(merged);
   }
-  let obj = { source: require("module_14788"), style: { height: 190, width: 220, resizeMode: "contain" } };
-  const tmp4 = closure_7(Image, { source: require("module_14788"), style: { height: 190, width: 220, resizeMode: "contain" } });
+  let obj = { source: require("module_14882"), style: { height: 190, width: 220, resizeMode: "contain" } };
+  const tmp4 = closure_7(Image, { source: require("module_14882"), style: { height: 190, width: 220, resizeMode: "contain" } });
   [r10018, require] = noop.useState("");
   const tmp5 = _slicedToArray(noop.useState(""), 2);
   [tmp7, importDefault] = noop.useState(false);

@@ -1,20 +1,20 @@
-// Module ID: 7503
-// Function ID: 7504
+// Module ID: 7585
+// Function ID: 7586
 // Name: useGetDismissibleContent
-// Dependencies: [32, 19, 1220, 4461, 1948, 1950, 1074, 1084, 1241, 1944, 7504, 1946, 504, 4482, 1943, 4460, 11, 2]
+// Dependencies: [32, 19, 1220, 4543, 1948, 1950, 1074, 1084, 1241, 1944, 7586, 1946, 504, 4564, 1943, 4542, 11, 2]
 // Exports: useDangerouslyPeekDismissibleContents, useGetDismissibleContent, useGetSingleUseGuildDismissibleContent_UNSAFE, useGetSnowflakeBoundDismissibleContent, useGetSnowflakeBoundGuildDismissibleContent_UNSAFE, useGetTimeRecurringDismissibleContent, useGetTimeRecurringGuildDismissibleContent_UNSAFE, useGetTimeRecurringSnowflakeBoundDismissibleContent, useGetVersionedDismissibleContent
 
-// Module 7503 (useGetDismissibleContent)
+// Module 7585 (useGetDismissibleContent)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import Uint8ArrayUtils from "Uint8ArrayUtils" /* 1943 */;
 import dismissible_content from "dismissible_content" /* 1944 */;
 import DismissibleContentUtils from "DismissibleContentUtils" /* 1946 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4460 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4542 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4461 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4543 */;
 import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 1948 */;
 import DismissibleContentShownStateStore from "DismissibleContentShownStateStore" /* 1950 */;
 
@@ -312,7 +312,7 @@ export const useGetTimeRecurringDismissibleContent = function useGetTimeRecurrin
     }
     dependencyMap = tmp10;
     tmp5 = tmp10;
-    tmpResult = tmp(4482);
+    tmpResult = tmp(4564);
   }
   const items2 = [useGetVisibleContent(tmp5, stateFromStores1, groupName), ];
   const items3 = [tmp5, groupName, stateFromStores1];

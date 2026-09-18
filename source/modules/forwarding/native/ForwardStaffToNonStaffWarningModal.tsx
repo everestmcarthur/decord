@@ -1,12 +1,12 @@
-// Module ID: 11837
-// Function ID: 11838
+// Module ID: 11928
+// Function ID: 11929
 // Name: ForwardStaffToNonStaffWarningModal
-// Dependencies: [21, 4990, 1115, 2]
+// Dependencies: [21, 5072, 1115, 2]
 // Exports: default
 
-// Module 11837 (ForwardStaffToNonStaffWarningModal)
+// Module 11928 (ForwardStaffToNonStaffWarningModal)
 import util from "util" /* 1115 */;
-import AlertModal from "AlertModal" /* 4990 */;
+import AlertModal from "AlertModal" /* 5072 */;
 import jsxProd from "jsxProd" /* 21 */;
 import size from "module_2" /* 2 */;
 

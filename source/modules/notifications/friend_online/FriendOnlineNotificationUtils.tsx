@@ -1,14 +1,14 @@
-// Module ID: 15623
-// Function ID: 15624
+// Module ID: 15718
+// Function ID: 15719
 // Name: FriendOnlineNotificationUtils
-// Dependencies: [4291, 1074, 1936, 1241, 2]
+// Dependencies: [4374, 1074, 1936, 1241, 2]
 // Exports: onFriendOnlineNotificationSettingsChanged, onNotifyFriendsOnComeOnlineSettingsChanged
 
-// Module 15623 (FriendOnlineNotificationUtils)
+// Module 15718 (FriendOnlineNotificationUtils)
 import Constants from "Constants" /* 1074 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import UserSettings from "UserSettings" /* 1936 */;
-import NotificationConstants from "NotificationConstants" /* 4291 */;
+import NotificationConstants from "NotificationConstants" /* 4374 */;
 import size from "module_2" /* 2 */;
 
 const constants = NotificationConstants.NotificationSettingsUpdateType;

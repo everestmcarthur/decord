@@ -1,10 +1,10 @@
-// Module ID: 8364
-// Function ID: 8365
+// Module ID: 8446
+// Function ID: 8447
 // Name: useAvatarDecoration
 // Dependencies: [32, 2022, 563, 2]
 // Exports: getAvatarDecoration, useAvatarDecoration
 
-// Module 8364 (useAvatarDecoration)
+// Module 8446 (useAvatarDecoration)
 import _slicedToArray from "module_32" /* 32 */;
 import GuildMemberStore from "GuildMemberStore" /* 2022 */;
 

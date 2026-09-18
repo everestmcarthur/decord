@@ -1,13 +1,13 @@
-// Module ID: 16394
-// Function ID: 16395
+// Module ID: 16491
+// Function ID: 16492
 // Name: FavoritesGuildCoachmarkMenuItem
-// Dependencies: [19, 1961, 1074, 1955, 21, 10387, 7270, 504, 1115, 3239, 11288, 2]
+// Dependencies: [19, 1961, 1074, 1955, 21, 10481, 7352, 504, 1115, 3322, 11380, 2]
 // Exports: default
 
-// Module 16394 (FavoritesGuildCoachmarkMenuItem)
+// Module 16491 (FavoritesGuildCoachmarkMenuItem)
 import util from "util" /* 1115 */;
-import _modDef3239 from "module_3239" /* 3239 */;
-import LayerScope from "LayerScope" /* 7270 */;
+import _modDef3322 from "module_3322" /* 3322 */;
+import LayerScope from "LayerScope" /* 7352 */;
 import noop from "module_19" /* 19 */;
 import FavoriteStore from "FavoriteStore" /* 1961 */;
 
@@ -34,9 +34,9 @@ function FavoritesGuildCoachmarkMenuItemContent(arg0) {
   }, items2);
   const items3 = [shouldShowPopover, stateFromStores, onDismiss, callback1];
   const memo = onDismiss.useMemo(() => {
-    const obj = { visible: shouldShowPopover, position: "bottom", title: null, description: null, onDismiss: null, renderImgComponent: "r", buttonLabel: "M13 7h-1v1h1V7Z", onButtonPress: null };
+    const obj = { visible: shouldShowPopover, position: "bottom", title: null, description: null, onDismiss: null, renderImgComponent: "r", buttonLabel: "M7 14v1h2v-1H7ZM7 12H6v1h1v-1ZM6 11H5v1h1v-1Z", onButtonPress: null };
     const intl = util.intl;
-    const tmp4 = _modDef3239;
+    const tmp4 = _modDef3322;
     if (stateFromStores) {
       let TWuDTt = tmp4.TWuDTt;
       let tmp6 = tmp3;
@@ -46,10 +46,10 @@ function FavoritesGuildCoachmarkMenuItemContent(arg0) {
     }
     obj.title = intl.string(TWuDTt);
     const intl2 = tmp(1115).intl;
-    obj.description = intl2.string(tmp6(3239).Ztl9ht);
+    obj.description = intl2.string(tmp6(3322).Ztl9ht);
     obj.onDismiss = onDismiss;
     const intl3 = tmp(1115).intl;
-    obj.buttonLabel = intl3.string(tmp6(3239)["+h9aza"]);
+    obj.buttonLabel = intl3.string(tmp6(3322)["+h9aza"]);
     obj.onButtonPress = callback1;
     return obj;
   }, items3);

@@ -1,9 +1,9 @@
-// Module ID: 7329
-// Function ID: 7330
+// Module ID: 7411
+// Function ID: 7412
 // Name: Constants
 // Dependencies: [2]
 
-// Module 7329 (Constants)
+// Module 7411 (Constants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/hotspot/Constants.tsx");

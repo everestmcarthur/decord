@@ -1,17 +1,17 @@
-// Module ID: 14784
-// Function ID: 14785
+// Module ID: 14878
+// Function ID: 14879
 // Name: PasskeyUpsellManager
-// Dependencies: [502, 1372, 14778, 1074, 7232, 7063, 4460, 1944, 4497, 6707, 14785, 2]
+// Dependencies: [502, 1372, 14872, 1074, 7314, 7145, 4542, 1944, 4579, 6789, 14879, 2]
 
-// Module 14784 (PasskeyUpsellManager)
+// Module 14878 (PasskeyUpsellManager)
 import dismissible_content from "dismissible_content" /* 1944 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4460 */;
-import MFAUtils from "MFAUtils" /* 7063 */;
-import PasskeyUpsellActionCreatorsDefault from "PasskeyUpsellActionCreators" /* 14785 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4542 */;
+import MFAUtils from "MFAUtils" /* 7145 */;
+import PasskeyUpsellActionCreatorsDefault from "PasskeyUpsellActionCreators" /* 14879 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import UserStore from "UserStore" /* 1372 */;
-import WebAuthnStore from "WebAuthnStore" /* 14778 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7232 */;
+import WebAuthnStore from "WebAuthnStore" /* 14872 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7314 */;
 
 require = fn;
 const LoginStates = fn(1074).LoginStates;
@@ -43,16 +43,16 @@ prototype["handlePasskeyUpsellShow"] = function handlePasskeyUpsellShow() {
                     PasskeyUpsellActionCreatorsDefault.openPasskeyUpsell();
                   } else if (!c7) {
                     c7 = true;
-                    const webAuthnCredentials = tmp(6707).fetchWebAuthnCredentials();
-                    const tmpResult4 = tmp(6707);
+                    const webAuthnCredentials = tmp(6789).fetchWebAuthnCredentials();
+                    const tmpResult4 = tmp(6789);
                   }
                 }
                 tmp6 = undefined !== currentUser && currentUser.verified;
               }
-              tmpResult3 = tmp(4497);
+              tmpResult3 = tmp(4579);
             }
           }
-          tmpResult = tmp(4460);
+          tmpResult = tmp(4542);
         }
       }
       obj = AuthenticationStore;

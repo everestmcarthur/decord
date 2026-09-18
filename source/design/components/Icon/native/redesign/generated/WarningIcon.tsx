@@ -1,13 +1,13 @@
-// Module ID: 8743
-// Function ID: 8744
+// Module ID: 8826
+// Function ID: 8827
 // Name: WarningIcon
-// Dependencies: [19, 21, 576, 4340, 8744, 2]
+// Dependencies: [19, 21, 576, 4422, 8827, 2]
 // Exports: WarningIcon
 
-// Module 8743 (WarningIcon)
+// Module 8826 (WarningIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4340 */;
-import _mod8744 from "module_8744" /* 8744 */;
+import BaseIconImage from "BaseIconImage" /* 4422 */;
+import _mod8827 from "module_8827" /* 8827 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const WarningIcon = function WarningIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8744, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8827, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

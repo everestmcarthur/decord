@@ -1,8 +1,8 @@
-// Module ID: 6062
-// Function ID: 6063
+// Module ID: 6144
+// Function ID: 6145
 // Dependencies: [2]
 
-// Module 6062
+// Module 6144
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/EmojiSlotsAbstractUI-2x.png.js");

@@ -1,9 +1,9 @@
-// Module ID: 4868
-// Function ID: 4869
+// Module ID: 4950
+// Function ID: 4951
 // Name: ApplicationStore
 // Dependencies: [32, 1919, 504, 573, 2]
 
-// Module 4868 (ApplicationStore)
+// Module 4950 (ApplicationStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -215,8 +215,8 @@ prototype["getApplicationLastUpdated"] = function getApplicationLastUpdated(arg0
 prototype["isFetchingApplication"] = function isFetchingApplication(appId) {
   return true === map5.get(appId);
 };
-prototype["isHydrated"] = function isHydrated(item) {
-  return set.has(item);
+prototype["isHydrated"] = function isHydrated(applicationId) {
+  return set.has(applicationId);
 };
 prototype["didFetchingApplicationFail"] = function didFetchingApplicationFail(applicationId) {
   return false === map5.get(applicationId);

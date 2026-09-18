@@ -1,10 +1,10 @@
-// Module ID: 4266
-// Function ID: 4267
+// Module ID: 4349
+// Function ID: 4350
 // Name: CommunicationDisabledUtils
 // Dependencies: [2]
 // Exports: isCommunicationDisabled, isMemberCommunicationDisabled
 
-// Module 4266 (CommunicationDisabledUtils)
+// Module 4349 (CommunicationDisabledUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_communication_disabled/CommunicationDisabledUtils.tsx");

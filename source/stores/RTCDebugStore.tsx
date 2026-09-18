@@ -1,13 +1,13 @@
-// Module ID: 10188
-// Function ID: 10189
+// Module ID: 10282
+// Function ID: 10283
 // Name: RTCDebugStore
-// Dependencies: [32, 1909, 1372, 1074, 4665, 10189, 4695, 573, 504, 2]
+// Dependencies: [32, 1909, 1372, 1074, 4747, 10283, 4777, 573, 504, 2]
 // Exports: getLastGraphValue, keySection, parseSection
 
-// Module 10188 (RTCDebugStore)
+// Module 10282 (RTCDebugStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import RTCDebugActionCreatorsAll from "RTCDebugActionCreators" /* 10189 */;
+import RTCDebugActionCreatorsAll from "RTCDebugActionCreators" /* 10283 */;
 import _slicedToArray from "module_32" /* 32 */;
 import MediaEngineStore from "MediaEngineStore" /* 1909 */;
 import UserStore from "UserStore" /* 1372 */;
@@ -82,7 +82,7 @@ function updateStats(arr, arg1, timestamp) {
   }
   return obj2;
 }
-const Constants = fn(4665);
+const Constants = fn(4747);
 const MediaEngineContextTypes = Constants.MediaEngineContextTypes;
 ({ Features: closure_8, SimulcastOverrideQuality: closure_9 } = Constants);
 let combined = "" + MediaEngineContextTypes.DEFAULT + ":" + fn(1074).RTCDebugSections.TRANSPORT + ":" + 0;
@@ -182,7 +182,7 @@ prototype2["getInboundStats"] = function getInboundStats(arg0, context) {
   if (found != null) {
     name = found.codec.name;
   }
-  obj = { codec: name, resolution: null, bitrateEstimate: "Array", fps: true };
+  obj = { codec: name, resolution: null, bitrateEstimate: "Array", fps: 70 };
   let resolution;
   if (found != null) {
     resolution = found.resolution;
@@ -317,7 +317,7 @@ const rTCDebugStore = new RTCDebugStore(DispatcherDefault, {
       if (0 !== path.length) {
         replayConnection = mediaEngine.createReplayConnection(MediaEngineContextTypes.DEFAULT, path);
         if (null != replayConnection) {
-          replayConnection.on(replayConnection(4695).BaseConnectionEvent.Video, (userId, arg1, arg2, arg3) => {
+          replayConnection.on(replayConnection(4777).BaseConnectionEvent.Video, (userId, arg1, arg2, arg3) => {
             let num = arg3;
             const obj2 = { type: "RTC_DEBUG_MODAL_UPDATE_VIDEO_OUTPUT", mediaEngineConnectionId: replayConnection.mediaEngineConnectionId, userId, videoSsrc: null, streamId: null };
             if (arg3 == null) {

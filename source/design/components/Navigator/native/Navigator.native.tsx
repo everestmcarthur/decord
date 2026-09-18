@@ -1,18 +1,18 @@
-// Module ID: 7114
-// Function ID: 7115
+// Module ID: 7196
+// Function ID: 7197
 // Name: Navigator
-// Dependencies: [32, 19, 17, 21, 4640, 576, 7115, 5712, 4341, 7116, 1612, 1115, 12, 7149, 1485, 4574, 7155, 5719, 1232, 2]
+// Dependencies: [32, 19, 17, 21, 4722, 576, 7197, 5794, 4423, 7198, 1612, 1115, 12, 7231, 1485, 4656, 7237, 5801, 1232, 2]
 // Exports: Navigator, useAccessibilityNativeStackOptions, useNavigatorScreens
 
-// Module 7114 (Navigator)
+// Module 7196 (Navigator)
 import nativeDefault from "native" /* 576 */;
 import SentryInitUtils from "SentryInitUtils" /* 1232 */;
 import Link from "Link" /* 1485 */;
-import NavigatorHeader from "NavigatorHeader" /* 5712 */;
-import _mod5719 from "module_5719" /* 5719 */;
-import useNavigatorShouldCrossfade from "useNavigatorShouldCrossfade" /* 7115 */;
-import NavigatorScreen from "NavigatorScreen" /* 7149 */;
-import useNavigationTheme from "useNavigationTheme" /* 7155 */;
+import NavigatorHeader from "NavigatorHeader" /* 5794 */;
+import _mod5801 from "module_5801" /* 5801 */;
+import useNavigatorShouldCrossfade from "useNavigatorShouldCrossfade" /* 7197 */;
+import NavigatorScreen from "NavigatorScreen" /* 7231 */;
+import useNavigationTheme from "useNavigationTheme" /* 7237 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -150,13 +150,13 @@ function NavigationStack(screens) {
           return obj;
         };
       } else {
-        fn2 = tmp3(7116).CardStyleInterpolators.forHorizontalIOS;
+        fn2 = tmp3(7198).CardStyleInterpolators.forHorizontalIOS;
       }
       obj.cardStyleInterpolator = fn2;
       if (disableHeaderAnimation) {
-        let fn3 = tmp3(7116).HeaderStyleInterpolators.forNoAnimation;
+        let fn3 = tmp3(7198).HeaderStyleInterpolators.forNoAnimation;
       } else if (tmp2) {
-        fn3 = tmp3(7116).HeaderStyleInterpolators.forFade;
+        fn3 = tmp3(7198).HeaderStyleInterpolators.forFade;
       } else {
         fn3 = (arg0) => {
           ({ current, next, layouts, direction } = arg0);
@@ -220,7 +220,7 @@ function WrappedNavigationStack(arg0) {
     }
     return tmp2;
   }), 1)[0];
-  const tmp4 = navigationContainerRef(4574)();
+  const tmp4 = navigationContainerRef(4656)();
   let navigationTheme1 = useNavigationTheme.useNavigationTheme(tmp4);
   const obj3 = { ref: navigationContainerRef, theme: null, initialState: null, onReady: null, onStateChange: null, children: null };
   if (null != navigationTheme) {
@@ -245,13 +245,13 @@ function WrappedNavigationStack(arg0) {
   const merged1 = Object.assign(merged);
   obj3.children = <NavigationStack initialRouteName={initialRouteName} />;
   obj5.children = jsx(Link.NavigationContainer, { ref: navigationContainerRef, theme: null, initialState: null, onReady: null, onStateChange: null, children: null });
-  obj4.children = jsx(_mod5719.HeaderBackContext.Provider, { value: "Array", children: 0 });
+  obj4.children = jsx(_mod5801.HeaderBackContext.Provider, { value: "Array", children: 0 });
   return jsx(Link.NavigationIndependentTree, { children: null });
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: hasOwnProperty } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = { container: null, navbar: null, headerLeftContainerStyle: null, headerRightContainerStyle: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);

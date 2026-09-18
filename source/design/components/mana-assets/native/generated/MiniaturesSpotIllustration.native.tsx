@@ -1,13 +1,13 @@
-// Module ID: 6351
-// Function ID: 6352
+// Module ID: 6433
+// Function ID: 6434
 // Name: MiniaturesSpotIllustration
-// Dependencies: [21, 5675, 6352, 2]
+// Dependencies: [21, 5757, 6434, 2]
 // Exports: MiniaturesSpotIllustration
 
-// Module 6351 (MiniaturesSpotIllustration)
+// Module 6433 (MiniaturesSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5675 */;
-import _modDef6352 from "module_6352" /* 6352 */;
+import FastImageDefault from "FastImage" /* 5757 */;
+import _modDef6434 from "module_6434" /* 6434 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const MiniaturesSpotIllustration = function MiniaturesSpotIllustration(wi
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6352 };
+  const obj2 = { uri: _modDef6434 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

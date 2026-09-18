@@ -1,9 +1,9 @@
-// Module ID: 11445
-// Function ID: 11446
+// Module ID: 11543
+// Function ID: 11544
 // Name: QuestRewardExpirationMode
 // Dependencies: [2]
 
-// Module 11445 (QuestRewardExpirationMode)
+// Module 11543 (QuestRewardExpirationMode)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/QuestRewardExpirationMode.tsx");

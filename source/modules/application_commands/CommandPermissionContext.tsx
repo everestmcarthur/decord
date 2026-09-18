@@ -1,20 +1,20 @@
-// Module ID: 9449
-// Function ID: 9450
+// Module ID: 9533
+// Function ID: 9534
 // Name: CommandPermissionContext
-// Dependencies: [19, 2015, 1962, 1976, 502, 1958, 2022, 1980, 4278, 1372, 1074, 9450, 504, 1086, 1895, 2]
+// Dependencies: [19, 2015, 1962, 1976, 502, 1958, 2022, 1980, 4361, 1372, 1074, 9534, 504, 1086, 1895, 2]
 // Exports: buildPermissionContext, computeCommandContextType, getContextGuildId, usePermissionContext
 
-// Module 9449 (CommandPermissionContext)
+// Module 9533 (CommandPermissionContext)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
 import Server from "Server" /* 1895 */;
-import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 9450 */;
+import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 9534 */;
 import noop from "module_19" /* 19 */;
 import ImpersonateStore from "ImpersonateStore" /* 2015 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 import GuildMemberStore from "GuildMemberStore" /* 2022 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import PermissionStore from "PermissionStore" /* 4278 */;
+import PermissionStore from "PermissionStore" /* 4361 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const require = globalThis.__r;

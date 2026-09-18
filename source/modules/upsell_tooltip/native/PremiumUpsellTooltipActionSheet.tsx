@@ -1,17 +1,17 @@
-// Module ID: 11306
-// Function ID: 11307
+// Module ID: 11398
+// Function ID: 11399
 // Name: PremiumUpsellTooltipActionSheet
-// Dependencies: [19, 17, 1955, 21, 4640, 576, 4460, 7264, 1177, 4636, 5062, 4607, 2]
+// Dependencies: [19, 17, 1955, 21, 4722, 576, 4542, 7346, 1177, 4718, 5144, 4689, 2]
 // Exports: default
 
-// Module 11306 (PremiumUpsellTooltipActionSheet)
+// Module 11398 (PremiumUpsellTooltipActionSheet)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4460 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4607 */;
-import Text_Text from "Text/Text" /* 4636 */;
-import components_Button_Button from "components/Button/Button" /* 5062 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7264 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4542 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4689 */;
+import Text_Text from "Text/Text" /* 4718 */;
+import components_Button_Button from "components/Button/Button" /* 5144 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7346 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,7 +20,7 @@ get_ActivityIndicator = fn(17);
 const ContentDismissActionType = fn(1955).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = { container: { justifyContent: "center", paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 }, img: null, header: null, title: null, description: null, nitroWheel: null, buttonContainer: null };
 let size = { alignSelf: "center", width: 231, height: 231, borderRadius: nativeDefault.radii.sm, marginBottom: 16 };
 obj2.img = size;
@@ -118,7 +118,7 @@ export default function PremiumUpsellTooltipActionSheet(arg0) {
         },
       size: "lg"
     };
-    tmp2Result2 = tmp2(tmp3(5062).Button, obj10);
+    tmp2Result2 = tmp2(tmp3(5144).Button, obj10);
   }
   items4[1] = tmp2Result2;
   obj8.children = items4;

@@ -1,23 +1,23 @@
-// Module ID: 8928
-// Function ID: 8929
+// Module ID: 9012
+// Function ID: 9013
 // Name: SKUPreview
-// Dependencies: [19, 17, 7660, 1074, 21, 4640, 8929, 576, 8319, 8954, 1890, 8967, 8956, 8979, 8981, 8982, 4341, 4350, 1370, 2]
+// Dependencies: [19, 17, 7742, 1074, 21, 4722, 9013, 576, 8401, 9038, 1890, 9051, 9040, 9063, 9065, 9066, 4423, 4432, 1370, 2]
 // Exports: default
 
-// Module 8928 (SKUPreview)
+// Module 9012 (SKUPreview)
 import nativeDefault from "native" /* 576 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1890 */;
-import useToken from "useToken" /* 4341 */;
-import native from "native" /* 4350 */;
-import useShopProductItems from "useShopProductItems" /* 8319 */;
-import WishlistItemCardBase from "WishlistItemCardBase" /* 8929 */;
-import BundleSampleV2Default from "BundleSampleV2" /* 8954 */;
-import ProfileEffectSampleV2Default from "ProfileEffectSampleV2" /* 8956 */;
-import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 8967 */;
-import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 8979 */;
-import NameplateCardPreviewDefault from "NameplateCardPreview" /* 8981 */;
-import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 8982 */;
+import useToken from "useToken" /* 4423 */;
+import native from "native" /* 4432 */;
+import useShopProductItems from "useShopProductItems" /* 8401 */;
+import WishlistItemCardBase from "WishlistItemCardBase" /* 9013 */;
+import BundleSampleV2Default from "BundleSampleV2" /* 9038 */;
+import ProfileEffectSampleV2Default from "ProfileEffectSampleV2" /* 9040 */;
+import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 9051 */;
+import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 9063 */;
+import NameplateCardPreviewDefault from "NameplateCardPreview" /* 9065 */;
+import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 9066 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -133,7 +133,7 @@ function CollectiblesSKUPreview(sku) {
   sku = sku.sku;
   let DEFAULT_ITEM_SIZE = sku.size;
   if (DEFAULT_ITEM_SIZE === undefined) {
-    DEFAULT_ITEM_SIZE = sku(8929).DEFAULT_ITEM_SIZE;
+    DEFAULT_ITEM_SIZE = sku(9013).DEFAULT_ITEM_SIZE;
   }
   const items = [sku];
   const memo = noop.useMemo(() => closure_5(sku), items);
@@ -189,10 +189,10 @@ class PremiumSKUPreview {
   }
 }
 const View = fn(17).View;
-let closure_5 = fn(7660).transformSKUToCollectiblesItem;
+let closure_5 = fn(7742).transformSKUToCollectiblesItem;
 const SKUProductLines = fn(1074).SKUProductLines;
 const jsx = fn(21).jsx;
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 const React6 = createStyles.createStyles((width, height) => {
   const obj = { container: { width: "100%", height: "100%", display: "flex", justifyContent: "center", alignItems: "center" }, scaler: null, bundleContainer: null, socialLayerStorefrontContainer: null, profileFrameContainer: null, premiumRiveContainer: null };
   size = { width: WishlistItemCardBase.DEFAULT_ITEM_SIZE, height: WishlistItemCardBase.DEFAULT_ITEM_SIZE, justifyContent: "center", alignItems: "center", transform: null };
@@ -208,7 +208,7 @@ const React6 = createStyles.createStyles((width, height) => {
   obj.premiumRiveContainer = { width, height };
   return obj;
 });
-let size = { width: fn(8929).DEFAULT_ITEM_SIZE, height: fn(8929).DEFAULT_ITEM_SIZE };
+let size = { width: fn(9013).DEFAULT_ITEM_SIZE, height: fn(9013).DEFAULT_ITEM_SIZE };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/skus/native/SKUPreview.tsx");
 

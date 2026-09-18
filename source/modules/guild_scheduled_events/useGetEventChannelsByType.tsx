@@ -1,14 +1,14 @@
-// Module ID: 9877
-// Function ID: 9878
+// Module ID: 9971
+// Function ID: 9972
 // Name: useGetEventChannelsByType
-// Dependencies: [1963, 2013, 4278, 9823, 504, 9822, 2]
+// Dependencies: [1963, 2013, 4361, 9917, 504, 9916, 2]
 // Exports: useCanCreateEventInStageChannel, useCanCreateEventInVoiceChannel, useGetEventChannelsByType
 
-// Module 9877 (useGetEventChannelsByType)
-import useManageResourcePermissions from "useManageResourcePermissions" /* 9822 */;
+// Module 9971 (useGetEventChannelsByType)
+import useManageResourcePermissions from "useManageResourcePermissions" /* 9916 */;
 import StageInstanceStore from "StageInstanceStore" /* 1963 */;
 import GuildChannelStore from "GuildChannelStore" /* 2013 */;
-import PermissionStore from "PermissionStore" /* 4278 */;
+import PermissionStore from "PermissionStore" /* 4361 */;
 
 const require = globalThis.__r;
 
@@ -56,7 +56,7 @@ function getEventChannelsByType(id, channelTypeFromEntity, items) {
   }
 }
 const GUILD_VOCAL_CHANNELS_KEY = fn(2013).GUILD_VOCAL_CHANNELS_KEY;
-const PermissionsConstants = fn(9823);
+const PermissionsConstants = fn(9917);
 ({ CREATE_GUILD_EVENT_VOICE_CHANNEL_PERMISSIONS: metroRequire, CREATE_GUILD_EVENT_STAGE_CHANNEL_PERMISSIONS: closure_7 } = PermissionsConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/useGetEventChannelsByType.tsx");

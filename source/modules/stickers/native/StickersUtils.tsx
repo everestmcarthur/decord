@@ -1,10 +1,10 @@
-// Module ID: 10537
-// Function ID: 10538
+// Module ID: 10631
+// Function ID: 10632
 // Name: stickers/StickersUtils
-// Dependencies: [19, 17, 1980, 1372, 10538, 1074, 1218, 5356, 7451, 10535, 504, 9475, 10539, 10540, 1610, 2]
+// Dependencies: [19, 17, 1980, 1372, 10632, 1074, 1218, 5438, 7533, 10629, 504, 9559, 10633, 10634, 1610, 2]
 // Exports: dropPreloadedSticker, openStickerPickerToPackId, preloadSticker, useStickerCategories
 
-// Module 10537 (stickers/StickersUtils)
+// Module 10631 (stickers/StickersUtils)
 import KeyboardTypes from "KeyboardTypes" /* 1610 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1980 */;
@@ -14,7 +14,7 @@ const require = globalThis.__r;
 
 require = fn;
 const NativeModules = fn(17).NativeModules;
-const useStickerPickerStore = fn(10538).useStickerPickerStore;
+const useStickerPickerStore = fn(10632).useStickerPickerStore;
 const GuildNSFWContentLevel = fn(1074).GuildNSFWContentLevel;
 const ExpressionPickerViewType = fn(1218).ExpressionPickerViewType;
 const size = fn(2);

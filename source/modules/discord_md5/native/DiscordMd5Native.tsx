@@ -1,11 +1,11 @@
-// Module ID: 5243
-// Function ID: 5244
+// Module ID: 5325
+// Function ID: 5326
 // Name: DiscordMd5Native
-// Dependencies: [5244, 1151, 2]
+// Dependencies: [5326, 1151, 2]
 
-// Module 5243 (DiscordMd5Native)
+// Module 5325 (DiscordMd5Native)
 import NativeFileModuleDefault from "NativeFileModule" /* 1151 */;
-import DiscordMd5 from "DiscordMd5" /* 5244 */;
+import DiscordMd5 from "DiscordMd5" /* 5326 */;
 
 const prototype = function DiscordMd5Native() {
   return HermesBuiltin.applyArguments(new.target, new.target);

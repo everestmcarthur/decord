@@ -1,9 +1,9 @@
-// Module ID: 5508
-// Function ID: 5509
+// Module ID: 5590
+// Function ID: 5591
 // Name: ProportionalVadIndicatorExperiment
 // Dependencies: [1435, 2]
 
-// Module 5508 (ProportionalVadIndicatorExperiment)
+// Module 5590 (ProportionalVadIndicatorExperiment)
 import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1435 */;
 
 const obj = { kind: "user", name: "2025-12-proportional-vad-indicator", defaultConfig: { enabled: false }, variations: null };

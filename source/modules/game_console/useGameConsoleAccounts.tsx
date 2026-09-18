@@ -1,13 +1,13 @@
-// Module ID: 9368
-// Function ID: 9369
+// Module ID: 9452
+// Function ID: 9453
 // Name: useGameConsoleAccounts
-// Dependencies: [5369, 1074, 504, 1370, 2]
+// Dependencies: [5451, 1074, 504, 1370, 2]
 // Exports: default
 
-// Module 9368 (useGameConsoleAccounts)
+// Module 9452 (useGameConsoleAccounts)
 import initialize from "initialize" /* 504 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5369 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5451 */;
 
 require = fn;
 const PlatformTypes = fn(1074).PlatformTypes;

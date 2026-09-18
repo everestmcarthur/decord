@@ -1,13 +1,13 @@
-// Module ID: 4288
-// Function ID: 4289
+// Module ID: 4371
+// Function ID: 4372
 // Name: RelationshipStore
-// Dependencies: [32, 4289, 1372, 1074, 573, 504, 2]
+// Dependencies: [32, 4372, 1372, 1074, 573, 504, 2]
 
-// Module 4288 (RelationshipStore)
+// Module 4371 (RelationshipStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import _slicedToArray from "module_32" /* 32 */;
-import MessageRecord from "MessageRecord" /* 4289 */;
+import MessageRecord from "MessageRecord" /* 4372 */;
 import UserStore from "UserStore" /* 1372 */;
 
 function markAllUserIdListsStale() {

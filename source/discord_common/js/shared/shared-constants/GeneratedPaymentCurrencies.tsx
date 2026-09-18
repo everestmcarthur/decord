@@ -1,9 +1,9 @@
-// Module ID: 11229
-// Function ID: 11230
+// Module ID: 11322
+// Function ID: 11323
 // Name: GeneratedPaymentCurrencies
 // Dependencies: [2]
 
-// Module 11229 (GeneratedPaymentCurrencies)
+// Module 11322 (GeneratedPaymentCurrencies)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/GeneratedPaymentCurrencies.tsx");

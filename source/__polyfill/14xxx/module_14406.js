@@ -1,7 +1,9 @@
 // Module ID: 14406
 // Function ID: 14407
-// Dependencies: []
+// Dependencies: [1121]
 
 // Module 14406
+import registerAsset from "module_1121" /* 1121 */;
 
-export const collations = ["big5han", "compat", "dict", "direct", "ducet", "emoji", "eor", "gb2312", "phonebk", "phonetic", "pinyin", "reformed", "search", "searchjl", "standard", "stroke", "trad", "unihan", "zhuyin"];
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/intl/messages", scales: [1], hash: "1423f8b5a8dd93562c540fb8771f0f9e", name: "untranslated.compiled.messages", type: "jsona" });

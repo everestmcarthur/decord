@@ -1,8 +1,8 @@
-// Module ID: 5796
-// Function ID: 5797
+// Module ID: 5878
+// Function ID: 5879
 // Dependencies: [2]
 
-// Module 5796
+// Module 5878
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/AccountAgeTier3SmallBadge-2x.png.js");

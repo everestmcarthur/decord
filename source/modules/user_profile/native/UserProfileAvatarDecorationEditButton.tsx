@@ -1,22 +1,22 @@
-// Module ID: 14747
-// Function ID: 14748
+// Module ID: 14841
+// Function ID: 14842
 // Name: UserProfileAvatarDecorationEditButton
-// Dependencies: [19, 17, 2022, 7322, 1085, 21, 4640, 576, 504, 8405, 8314, 11203, 8305, 1115, 14740, 8969, 1177, 13327, 2]
+// Dependencies: [19, 17, 2022, 7404, 1085, 21, 4722, 576, 504, 8488, 8396, 11296, 8387, 1115, 14834, 9053, 1177, 13418, 2]
 // Exports: default
 
-// Module 14747 (UserProfileAvatarDecorationEditButton)
+// Module 14841 (UserProfileAvatarDecorationEditButton)
 import nativeDefault from "native" /* 576 */;
-import avatar_decorations_AvatarDecorationUtils from "avatar_decorations/AvatarDecorationUtils" /* 8305 */;
+import avatar_decorations_AvatarDecorationUtils from "avatar_decorations/AvatarDecorationUtils" /* 8387 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2022 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const COLLECTIBLES_PREVIEW_SIZE = fn(7322).COLLECTIBLES_PREVIEW_SIZE;
+const COLLECTIBLES_PREVIEW_SIZE = fn(7404).COLLECTIBLES_PREVIEW_SIZE;
 const NOOP = fn(1085).NOOP;
 const jsx = fn(21).jsx;
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = { previewContainer: null, noneIcon: null };
 let size = { position: "relative", height: COLLECTIBLES_PREVIEW_SIZE, width: COLLECTIBLES_PREVIEW_SIZE, justifyContent: "center", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: nativeDefault.radii.xs, overflow: "hidden" };
 obj2.previewContainer = size;

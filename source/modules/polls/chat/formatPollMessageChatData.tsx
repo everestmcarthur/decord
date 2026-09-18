@@ -1,23 +1,23 @@
-// Module ID: 11868
-// Function ID: 11869
+// Module ID: 11959
+// Function ID: 11960
 // Name: formatPollMessageChatData
-// Dependencies: [4632, 5547, 1958, 2022, 4861, 1372, 11581, 1074, 1085, 4825, 4292, 4296, 1397, 8910, 4284, 4266, 11869, 1115, 7881, 11871, 1364, 11872, 11873, 2]
+// Dependencies: [4714, 5629, 1958, 2022, 4943, 1372, 11679, 1074, 1085, 4907, 4375, 4379, 1397, 8994, 4367, 4349, 11960, 1115, 7963, 11962, 1364, 11963, 11964, 2]
 // Exports: default, isPollMessageDirectlyInteractive
 
-// Module 11868 (formatPollMessageChatData)
+// Module 11959 (formatPollMessageChatData)
 import util from "util" /* 1115 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
-import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4266 */;
-import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4284 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4292 */;
-import EmojiUtilsDefault from "EmojiUtils" /* 4296 */;
-import _mod4825 from "module_4825" /* 4825 */;
-import useFormattedExpirationLabel from "useFormattedExpirationLabel" /* 8910 */;
-import AccessibilityStore from "AccessibilityStore" /* 4632 */;
-import EmojiStore from "EmojiStore" /* 5547 */;
+import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4349 */;
+import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4367 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4375 */;
+import EmojiUtilsDefault from "EmojiUtils" /* 4379 */;
+import _mod4907 from "module_4907" /* 4907 */;
+import useFormattedExpirationLabel from "useFormattedExpirationLabel" /* 8994 */;
+import AccessibilityStore from "AccessibilityStore" /* 4714 */;
+import EmojiStore from "EmojiStore" /* 5629 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 import GuildMemberStore from "GuildMemberStore" /* 2022 */;
-import MessageStore from "MessageStore" /* 4861 */;
+import MessageStore from "MessageStore" /* 4943 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -168,7 +168,7 @@ function computeBasicPollChatData(message, arg1) {
     return obj6;
   }
 }
-const getPollState = fn(11581).getPollState;
+const getPollState = fn(11679).getPollState;
 const Constants = fn(1074);
 ({ MessageStates: c10, EMPTY_STRING_SNOWFLAKE_ID } = Constants);
 const ThemeTypes = fn(1085).ThemeTypes;
@@ -285,7 +285,7 @@ export default function formatPollMessageChatData(poll, arg1) {
             tmp6 = flag;
           }
           let tmp7 = isExpired;
-          const match = _mod4825.match({ didSelfVote: tmp6, hasVoted, isExpired, isSelected: hasItem, isLeader: num >= closure_14 && 0 !== num, showResults });
+          const match = _mod4907.match({ didSelfVote: tmp6, hasVoted, isExpired, isSelected: hasItem, isLeader: num >= closure_14 && 0 !== num, showResults });
           obj = { didSelfVote: tmp6, hasVoted, isExpired, isSelected: hasItem, isLeader: num >= closure_14 && 0 !== num, showResults };
           const withResult = match.with({ isExpired: true, isLeader: true, didSelfVote: true }, () => "victorSelected");
           const withResult1 = match.with({ isExpired: true, isLeader: true, didSelfVote: true }, () => "victorSelected").with({ isExpired: true, isLeader: true, didSelfVote: false }, () => "victorNotSelected");
@@ -326,9 +326,9 @@ export default function formatPollMessageChatData(poll, arg1) {
             obj2.shouldAnimateTransition = tmp20;
             const _Math = Math;
             obj2.votesPercentage = Math.round(100 * num2);
-            const match1 = tmp8(4825).match(layout_type);
-            const str2 = tmp8(4825);
-            obj2.votes = match1.with(tmp8(11871).PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => "(" + num.toLocaleString() + ")").otherwise(() => {
+            const match1 = tmp8(4907).match(layout_type);
+            const str2 = tmp8(4907);
+            obj2.votes = match1.with(tmp8(11962).PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => "(" + num.toLocaleString() + ")").otherwise(() => {
               const intl = flag(layout_type[17]).intl;
               return intl.formatToPlainString(flag(layout_type[17]).t.XRkuof, { count: num });
             });

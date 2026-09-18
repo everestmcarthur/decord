@@ -1,19 +1,19 @@
-// Module ID: 14946
-// Function ID: 14947
+// Module ID: 15040
+// Function ID: 15041
 // Name: ExplicitMediaSettingsActionSheet
-// Dependencies: [19, 17, 21, 4640, 576, 4607, 7264, 7263, 5773, 1186, 5776, 2]
+// Dependencies: [19, 17, 21, 4722, 576, 4689, 7346, 7345, 5855, 1186, 5858, 2]
 // Exports: default
 
-// Module 14946 (ExplicitMediaSettingsActionSheet)
+// Module 15040 (ExplicitMediaSettingsActionSheet)
 import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4607 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4689 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = { content: { marginTop: nativeDefault.space.PX_24, paddingHorizontal: nativeDefault.space.PX_16 } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -32,7 +32,7 @@ export default function ExplicitMediaSettingsActionSheet(options) {
       ActionSheetActionCreatorsDefault.hideActionSheet();
     }
   }, items);
-  const items1 = [closure_5(options(7263).BottomSheetTitleHeader, { title, subtitle }), ];
+  const items1 = [closure_5(options(7345).BottomSheetTitleHeader, { title, subtitle }), ];
   const obj = { style: closure_7().content, children: null };
   if (SHOW == null) {
     SHOW = tmp4(1186).ExplicitContentRedaction.SHOW;
@@ -42,8 +42,8 @@ export default function ExplicitMediaSettingsActionSheet(options) {
   const tmp3 = closure_6;
   tmp4 = options;
   const tmp7 = View;
-  obj.children = closure_5(options(5773).TableRadioGroup, { defaultValue: SHOW, onChange: callback, hasIcons: false, children: options.map((label) => closure_1_5(options(dependencyMap[10]).TableRadioRow, { label: label.label, value: label.value }, label.value)) });
+  obj.children = closure_5(options(5855).TableRadioGroup, { defaultValue: SHOW, onChange: callback, hasIcons: false, children: options.map((label) => closure_1_5(options(dependencyMap[10]).TableRadioRow, { label: label.label, value: label.value }, label.value)) });
   items1[1] = closure_5(tmp7, obj);
   obj2.children = items1;
-  return tmp3(options(7264).BottomSheet, obj2);
+  return tmp3(options(7346).BottomSheet, obj2);
 };

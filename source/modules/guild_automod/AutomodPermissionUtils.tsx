@@ -1,16 +1,16 @@
-// Module ID: 4284
-// Function ID: 4285
+// Module ID: 4367
+// Function ID: 4368
 // Name: AutomodPermissionUtils
-// Dependencies: [2022, 4265, 1385, 504, 2]
+// Dependencies: [2022, 4348, 1385, 504, 2]
 // Exports: getAutomodQuarantinedGuildMemberFlags, getAutomodQuarantinedProfileFlags, getAutomodReason, hasAutomodQuarantinedProfile, useCurrentUserAutomodQuaratinedProfile
 
-// Module 4284 (AutomodPermissionUtils)
+// Module 4367 (AutomodPermissionUtils)
 import GuildMemberStore from "GuildMemberStore" /* 2022 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const GuildMemberFlags = fn(4265).GuildMemberFlags;
+const GuildMemberFlags = fn(4348).GuildMemberFlags;
 let items = [, , ];
 ({ AUTOMOD_QUARANTINED_BIO: arr[0], AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME: arr[1], AUTOMOD_QUARANTINED_SERVER_TAG: arr[2] } = GuildMemberFlags);
 const size = fn(2);

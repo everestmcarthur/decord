@@ -1,21 +1,21 @@
-// Module ID: 15029
-// Function ID: 15030
+// Module ID: 15123
+// Function ID: 15124
 // Name: FamilyCenterActivityGiftRow
-// Dependencies: [19, 17, 21, 4640, 576, 8321, 15017, 15026, 15028, 4484, 15027, 4636, 2]
+// Dependencies: [19, 17, 21, 4722, 576, 8403, 15111, 15120, 15122, 4566, 15121, 4718, 2]
 // Exports: default
 
-// Module 15029 (FamilyCenterActivityGiftRow)
+// Module 15123 (FamilyCenterActivityGiftRow)
 import nativeDefault from "native" /* 576 */;
-import useCollectiblesDataDefault from "useCollectiblesData" /* 8321 */;
-import useSelectedTeenUser from "useSelectedTeenUser" /* 15017 */;
-import FamilyCenterActivityPurchaseRowUtils from "FamilyCenterActivityPurchaseRowUtils" /* 15026 */;
+import useCollectiblesDataDefault from "useCollectiblesData" /* 8403 */;
+import useSelectedTeenUser from "useSelectedTeenUser" /* 15111 */;
+import FamilyCenterActivityPurchaseRowUtils from "FamilyCenterActivityPurchaseRowUtils" /* 15120 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = { container: { display: "flex", flexDirection: "row", alignItems: "center", borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1, paddingVertical: 12 }, textContainer: { display: "flex", flexDirection: "column", flexShrink: 1 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -46,28 +46,28 @@ export default function FamilyCenterActivityGiftRow(arg0) {
     const obj3 = { claimed, price, gifterName: null, offeredAt: null, claimedAt: null };
     let name = null;
     if (null != teenUserForId) {
-      name = tmp2(4484).getName(teenUserForId);
-      const tmp2Result = tmp2(4484);
+      name = tmp2(4566).getName(teenUserForId);
+      const tmp2Result = tmp2(4566);
     }
     obj3.gifterName = name;
     obj3.offeredAt = offeredAt;
     obj3.claimedAt = claimedAt;
     const obj4 = { style: tmp.container, children: null };
-    const giftSubtext = tmp5(15028).getGiftSubtext(obj3);
+    const giftSubtext = tmp5(15122).getGiftSubtext(obj3);
     const obj5 = { displayName, product: null, isSubscription: null, subscriptionPlanId: null };
-    const tmp5Result = tmp5(15028);
+    const tmp5Result = tmp5(15122);
     if (product == null) {
       product = null;
     }
     obj5.product = product;
     obj5.isSubscription = isSubscription;
     obj5.subscriptionPlanId = subscriptionPlanId;
-    const items = [React4(tmp2(15027), obj5), ];
+    const items = [React4(tmp2(15121), obj5), ];
     const obj6 = { style: tmp.textContainer, children: null };
     const obj7 = { variant: "text-md/semibold", color: "interactive-text-active", ellipsizeMode: "tail", lineClamp: 1, children: displayName };
-    const items1 = [React4(tmp5(4636).Text, obj7), ];
+    const items1 = [React4(tmp5(4718).Text, obj7), ];
     const obj8 = { variant: "text-xs/medium", color: "text-muted", children: giftSubtext };
-    items1[1] = React4(tmp5(4636).Text, obj8);
+    items1[1] = React4(tmp5(4718).Text, obj8);
     obj6.children = items1;
     items[1] = hasOwnProperty(View, obj6);
     obj4.children = items;

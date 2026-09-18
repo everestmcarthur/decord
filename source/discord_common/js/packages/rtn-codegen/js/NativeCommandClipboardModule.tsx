@@ -1,9 +1,9 @@
-// Module ID: 11772
-// Function ID: 11773
+// Module ID: 11862
+// Function ID: 11863
 // Name: NativeCommandClipboardModule
 // Dependencies: [17, 2]
 
-// Module 11772 (NativeCommandClipboardModule)
+// Module 11862 (NativeCommandClipboardModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

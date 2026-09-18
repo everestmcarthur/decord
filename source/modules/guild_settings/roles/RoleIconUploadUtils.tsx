@@ -1,10 +1,10 @@
-// Module ID: 17878
-// Function ID: 17879
+// Module ID: 17971
+// Function ID: 17972
 // Name: RoleIconUploadUtils
 // Dependencies: [5, 1074, 1375, 1397, 1475, 2]
 // Exports: fetchCustomEmojiAsPngDataUri
 
-// Module 17878 (RoleIconUploadUtils)
+// Module 17971 (RoleIconUploadUtils)
 import AvatarUtils from "AvatarUtils" /* 1397 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

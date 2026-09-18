@@ -1,12 +1,12 @@
-// Module ID: 17286
-// Function ID: 17287
+// Module ID: 17416
+// Function ID: 17417
 // Name: FramePanelStateContext
-// Dependencies: [19, 17260, 2]
+// Dependencies: [19, 17390, 2]
 
-// Module 17286 (FramePanelStateContext)
+// Module 17416 (FramePanelStateContext)
 import noop from "module_19" /* 19 */;
 
-const context = noop.createContext(fn(17260).activityPanelStateContextDefault);
+const context = noop.createContext(fn(17390).activityPanelStateContextDefault);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/panel/native/FramePanelStateContext.tsx");
 

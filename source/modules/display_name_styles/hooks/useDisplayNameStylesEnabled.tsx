@@ -1,14 +1,14 @@
-// Module ID: 4875
-// Function ID: 4876
+// Module ID: 4957
+// Function ID: 4958
 // Name: useDisplayNameStylesEnabled
-// Dependencies: [19, 4632, 504, 4876, 2]
+// Dependencies: [19, 4714, 504, 4958, 2]
 // Exports: useDisplayNameStylesEnabled
 
-// Module 4875 (useDisplayNameStylesEnabled)
+// Module 4957 (useDisplayNameStylesEnabled)
 import _mod19 from "module_19" /* 19 */;
 import initialize from "initialize" /* 504 */;
-import DisplayNameStylesContext from "DisplayNameStylesContext" /* 4876 */;
-import AccessibilityStore from "AccessibilityStore" /* 4632 */;
+import DisplayNameStylesContext from "DisplayNameStylesContext" /* 4958 */;
+import AccessibilityStore from "AccessibilityStore" /* 4714 */;
 import size from "module_2" /* 2 */;
 
 const useContext = _mod19.useContext;

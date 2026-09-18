@@ -1,21 +1,21 @@
-// Module ID: 11899
-// Function ID: 11900
+// Module ID: 11990
+// Function ID: 11991
 // Name: UserActivitySpotify
-// Dependencies: [19, 17, 8489, 21, 1363, 1271, 4334, 11900, 5062, 8290, 1115, 1177, 2]
+// Dependencies: [19, 17, 8572, 21, 1363, 1271, 4417, 11991, 5144, 8372, 1115, 1177, 2]
 // Exports: SpotifyPlayButton, attributeInstall, canOpenSpotifyUrl, openAlbum, openArtist, openTrack, openUrl
 
-// Module 11899 (UserActivitySpotify)
+// Module 11990 (UserActivitySpotify)
 import native from "native" /* 1177 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import ClientInfoUtilsAll from "ClientInfoUtils" /* 1363 */;
-import LinkingDefault from "Linking" /* 4334 */;
-import _modDef8290 from "module_8290" /* 8290 */;
+import LinkingDefault from "Linking" /* 4417 */;
+import _modDef8372 from "module_8372" /* 8372 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Linking: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const SpotifyConstants = fn(8489);
+const SpotifyConstants = fn(8572);
 ({ SPOTIFY_APP_PROTOCOL: metroRequire, SpotifyEndpoints: closure_7, SpotifyResourceTypes: closure_8 } = SpotifyConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
@@ -248,7 +248,7 @@ export const openAlbum = function openAlbum(activity, id) {
 export const SpotifyPlayButton = function SpotifyPlayButton(activity) {
   activity = activity.activity;
   let obj = { style: activity.style, children: null };
-  let obj2 = { icon: closure_9(activity(5062).Button.Icon, { source: _modDef8290 }), text: null, size: "sm", onPress: null, grow: true };
+  let obj2 = { icon: closure_9(activity(5144).Button.Icon, { source: _modDef8372 }), text: null, size: "sm", onPress: null, grow: true };
   const intl = activity(1115).intl;
   obj2.text = intl.formatToPlainString(activity(1115).t.LEgD7t, { platform: activity.name });
   obj2.onPress = function onPress() {
@@ -271,7 +271,7 @@ export const SpotifyPlayButton = function SpotifyPlayButton(activity) {
 
     });
   };
-  obj.children = closure_9(activity(5062).Button, obj2);
+  obj.children = closure_9(activity(5144).Button, obj2);
   return closure_9(closure_5, obj);
 };
 export { SpotifyTrack };

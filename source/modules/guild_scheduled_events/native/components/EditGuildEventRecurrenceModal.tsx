@@ -1,21 +1,21 @@
-// Module ID: 9851
-// Function ID: 9852
+// Module ID: 9945
+// Function ID: 9946
 // Name: EditGuildEventRecurrenceModal
-// Dependencies: [5, 32, 19, 17, 21, 4640, 576, 1612, 9820, 9816, 9852, 1875, 9853, 5062, 1115, 9858, 9855, 9859, 9860, 4636, 7114, 2]
+// Dependencies: [5, 32, 19, 17, 21, 4722, 576, 1612, 9914, 9910, 9946, 1875, 9947, 5144, 1115, 9952, 9949, 9953, 9954, 4718, 7196, 2]
 // Exports: default
 
-// Module 9851 (EditGuildEventRecurrenceModal)
+// Module 9945 (EditGuildEventRecurrenceModal)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1875 */;
-import Text_Text from "Text/Text" /* 4636 */;
-import useEventExceptionDefault from "useEventException" /* 9820 */;
-import LazyAPIPromiseDefault from "LazyAPIPromise" /* 9852 */;
-import saveGuildEventRecurrenceDefault from "saveGuildEventRecurrence" /* 9853 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 9855 */;
-import EditGuildEventModalNavbarDefault from "EditGuildEventModalNavbar" /* 9858 */;
-import EditGuildEventStepContainerDefault from "EditGuildEventStepContainer" /* 9859 */;
-import GuildEventScheduleDefault from "GuildEventSchedule" /* 9860 */;
+import Text_Text from "Text/Text" /* 4718 */;
+import useEventExceptionDefault from "useEventException" /* 9914 */;
+import LazyAPIPromiseDefault from "LazyAPIPromise" /* 9946 */;
+import saveGuildEventRecurrenceDefault from "saveGuildEventRecurrence" /* 9947 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 9949 */;
+import EditGuildEventModalNavbarDefault from "EditGuildEventModalNavbar" /* 9952 */;
+import EditGuildEventStepContainerDefault from "EditGuildEventStepContainer" /* 9953 */;
+import GuildEventScheduleDefault from "GuildEventSchedule" /* 9954 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -24,7 +24,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, cardStyle: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.cardStyle = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
@@ -110,10 +110,10 @@ export default function EditGuildEventRecurrenceModal(guildEvent) {
   const tmp3 = useEventExceptionDefault(recurrenceId, guildEvent.id);
   dependencyMap = tmp3;
   const tmp2 = useSafeAreaInsetsDefault();
-  const baseScheduleForRecurrence = guildEvent(9816).getBaseScheduleForRecurrence(recurrenceId, guildEvent);
-  let obj = guildEvent(9816);
-  const scheduleForRecurrenceWithException = guildEvent(9816).getScheduleForRecurrenceWithException(baseScheduleForRecurrence, tmp3);
-  let obj2 = guildEvent(9816);
+  const baseScheduleForRecurrence = guildEvent(9910).getBaseScheduleForRecurrence(recurrenceId, guildEvent);
+  let obj = guildEvent(9910);
+  const scheduleForRecurrenceWithException = guildEvent(9910).getScheduleForRecurrenceWithException(baseScheduleForRecurrence, tmp3);
+  let obj2 = guildEvent(9910);
   [c5, c6] = noop.useState(scheduleForRecurrenceWithException);
   [first, closure_8] = noop.useState(null);
   const tmp9 = _slicedToArray(LazyAPIPromiseDefault(() => {
@@ -147,10 +147,10 @@ export default function EditGuildEventRecurrenceModal(guildEvent) {
     return applyArgumentsResult;
   };
   obj3.disabled = null != first;
-  const action = closure_8(guildEvent(5062).Button, obj3);
+  const action = closure_8(guildEvent(5144).Button, obj3);
   let obj5 = {
     style: null,
-    children: closure_8(guildEvent(7114).Navigator, {
+    children: closure_8(guildEvent(7196).Navigator, {
       screens: {
         [closure_11.TIME]: {
           title: "",

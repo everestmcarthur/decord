@@ -1,9 +1,9 @@
-// Module ID: 13749
-// Function ID: 13750
+// Module ID: 13841
+// Function ID: 13842
 // Name: NativeFastConnectModule
 // Dependencies: [17, 2]
 
-// Module 13749 (NativeFastConnectModule)
+// Module 13841 (NativeFastConnectModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

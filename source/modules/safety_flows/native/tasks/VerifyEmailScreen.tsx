@@ -1,10 +1,10 @@
-// Module ID: 18148
-// Function ID: 18149
+// Module ID: 18242
+// Function ID: 18243
 // Name: VerifyEmailScreen
-// Dependencies: [5, 32, 19, 21, 18143, 18144, 18138, 4338, 1115, 2691, 18147, 5060, 576, 4636, 6717, 18149, 2]
+// Dependencies: [5, 32, 19, 21, 18237, 18238, 18232, 4420, 1115, 2774, 18241, 5142, 576, 4718, 6799, 18243, 2]
 // Exports: default
 
-// Module 18148 (VerifyEmailScreen)
+// Module 18242 (VerifyEmailScreen)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -114,20 +114,20 @@ export default function _default() {
   let obj3 = { title: null, action: null, onAction: null, submitting: null, children: null };
   let obj2 = onTaskComplete(value[5]);
   let intl = onTaskComplete(value[8]).intl;
-  obj3.title = intl.string(require("module_2691")["Qm6K/s"]);
+  obj3.title = intl.string(require("module_2774")["Qm6K/s"]);
   const intl2 = onTaskComplete(value[8]).intl;
-  obj3.action = intl2.string(require("module_2691").wq2RDq);
+  obj3.action = intl2.string(require("module_2774").wq2RDq);
   obj3.onAction = onAction;
   obj3.submitting = tmp4[0];
   let obj4 = { spacing: require("native").space.PX_16, children: null };
   let obj5 = { variant: "text-sm/medium", color: "text-subtle", children: null };
   const intl3 = onTaskComplete(value[8]).intl;
-  obj5.children = intl3.string(require("module_2691").aveKoG);
+  obj5.children = intl3.string(require("module_2774").aveKoG);
   const items3 = [onAction(onTaskComplete(value[13]).Text, obj5), ];
   let obj6 = { spacing: require("native").space.PX_8, children: null };
   let obj7 = { placeholder: null, maxLength: 6, returnKeyType: "done", value: null, onChange: null };
   const intl4 = onTaskComplete(value[8]).intl;
-  obj7.placeholder = intl4.string(require("module_2691").d9Ykjr);
+  obj7.placeholder = intl4.string(require("module_2774").d9Ykjr);
   obj7.value = value;
   obj7.onChange = tmp2[1];
   const items4 = [onAction(onTaskComplete(value[14]).TextInput, obj7), ];

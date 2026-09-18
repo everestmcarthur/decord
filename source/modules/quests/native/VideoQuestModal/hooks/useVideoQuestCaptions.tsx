@@ -1,10 +1,10 @@
-// Module ID: 15257
-// Function ID: 15258
+// Module ID: 15351
+// Function ID: 15352
 // Name: useVideoQuestCaptions
-// Dependencies: [32, 19, 11439, 1271, 15258, 2]
+// Dependencies: [32, 19, 11537, 1271, 15352, 2]
 // Exports: useVideoQuestCaptions
 
-// Module 15257 (useVideoQuestCaptions)
+// Module 15351 (useVideoQuestCaptions)
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -15,12 +15,12 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/VideoQuestModal/hooks/useVideoQuestCaptions.tsx");
 
 export const useVideoQuestCaptions = (quest) => {
-  const questAsset = url(11439).getQuestAsset(quest, url(11439).QuestAssetType.VIDEO_PLAYER_CAPTION, undefined, true);
+  const questAsset = url(11537).getQuestAsset(quest, url(11537).QuestAssetType.VIDEO_PLAYER_CAPTION, undefined, true);
   url = undefined;
   if (questAsset != null) {
     url = questAsset.url;
   }
-  let obj = url(11439);
+  let obj = url(11537);
   [tmp4, dependencyMap] = noop.useState(constants.NONE);
   const captions = _slicedToArray(noop.useState(null), 2);
   _slicedToArray = captions[1];
@@ -32,7 +32,7 @@ export const useVideoQuestCaptions = (quest) => {
       value = HTTP.get(obj);
       value.then((text) => {
         try {
-          closure_1_2(url(15258).parseVtt(text.text).cues);
+          closure_1_2(url(15352).parseVtt(text.text).cues);
           dependencyMap(constants.SUCCESS);
         } catch (err) {
           dependencyMap(constants.ERROR);
@@ -42,7 +42,7 @@ export const useVideoQuestCaptions = (quest) => {
       });
       const nextPromise = value.then((text) => {
         try {
-          closure_1_2(url(15258).parseVtt(text.text).cues);
+          closure_1_2(url(15352).parseVtt(text.text).cues);
           dependencyMap(constants.SUCCESS);
         } catch (err) {
           dependencyMap(constants.ERROR);

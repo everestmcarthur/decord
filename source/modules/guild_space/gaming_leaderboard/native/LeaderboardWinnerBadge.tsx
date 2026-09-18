@@ -1,17 +1,17 @@
-// Module ID: 11062
-// Function ID: 11063
+// Module ID: 11155
+// Function ID: 11156
 // Name: LeaderboardWinnerBadge
-// Dependencies: [19, 17, 2022, 21, 4640, 504, 11063, 8867, 576, 2]
+// Dependencies: [19, 17, 2022, 21, 4722, 504, 11156, 8951, 576, 2]
 // Exports: default
 
-// Module 11062 (LeaderboardWinnerBadge)
+// Module 11155 (LeaderboardWinnerBadge)
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2022 */;
 
 const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let closure_6 = createStyles.createStyles({ container: { marginLeft: 4 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_space/gaming_leaderboard/native/LeaderboardWinnerBadge.tsx");
@@ -32,11 +32,11 @@ export default function LeaderboardWinnerBadge(guildId) {
   }, items1);
   let tmp5 = null;
   if (null != stateFromStores) {
-    const obj2 = { style: tmp.container, accessible: true, accessibilityLabel: tmp2(11063).getLeaderboardWinnerBadgeText(stateFromStores), children: null };
+    const obj2 = { style: tmp.container, accessible: true, accessibilityLabel: tmp2(11156).getLeaderboardWinnerBadgeText(stateFromStores), children: null };
     const obj3 = { size: "xs", color: userId(576).colors.TEXT_FEEDBACK_WARNING };
-    obj2.children = jsx(tmp2(8867).TrophyIcon, { size: "xs", color: userId(576).colors.TEXT_FEEDBACK_WARNING });
-    tmp5 = <View style={tmp.container} accessible accessibilityLabel={tmp2(11063).getLeaderboardWinnerBadgeText(stateFromStores)}>{null}</View>;
-    const tmp2Result = tmp2(11063);
+    obj2.children = jsx(tmp2(8951).TrophyIcon, { size: "xs", color: userId(576).colors.TEXT_FEEDBACK_WARNING });
+    tmp5 = <View style={tmp.container} accessible accessibilityLabel={tmp2(11156).getLeaderboardWinnerBadgeText(stateFromStores)}>{null}</View>;
+    const tmp2Result = tmp2(11156);
   }
   return tmp5;
 };

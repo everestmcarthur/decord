@@ -1,21 +1,21 @@
-// Module ID: 17387
-// Function ID: 17388
+// Module ID: 17517
+// Function ID: 17518
 // Name: UserVideoFailed
-// Dependencies: [17, 1074, 21, 4640, 576, 9264, 13130, 4636, 1115, 5062, 9763, 4695, 9243, 2]
+// Dependencies: [17, 1074, 21, 4722, 576, 9348, 13221, 4718, 1115, 5144, 9857, 4777, 9327, 2]
 // Exports: default
 
-// Module 17387 (UserVideoFailed)
+// Module 17517 (UserVideoFailed)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4636 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4695 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 9243 */;
-import AVError from "AVError" /* 9264 */;
-import VideoStreamReadyActionCreators from "VideoStreamReadyActionCreators" /* 9763 */;
+import Text_Text from "Text/Text" /* 4718 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4777 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 9327 */;
+import AVError from "AVError" /* 9348 */;
+import VideoStreamReadyActionCreators from "VideoStreamReadyActionCreators" /* 9857 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4640 */;
+import createStyles from "createStyles" /* 4722 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;
@@ -37,7 +37,7 @@ export default function UserVideoFailed(arg0) {
   let tmp9 = !removeSplashImage;
   if (!removeSplashImage) {
     const obj3 = { style: tmp2.placeholderImage };
-    tmp9 = closure_5(tmp3(13130).StreamFailed, obj3);
+    tmp9 = closure_5(tmp3(13221).StreamFailed, obj3);
   }
   const obj4 = { children: null };
   const items1 = [tmp9, ];
@@ -64,7 +64,7 @@ export default function UserVideoFailed(arg0) {
         AudioActionCreatorsDefault.setDisableLocalVideo(closure_1_0, constants.MANUAL_ENABLED, BaseConnectionEvent.MediaEngineContextTypes.DEFAULT, false);
       }, 1000);
     };
-    tmp11Result = tmp11(tmp3(5062).Button, obj8);
+    tmp11Result = tmp11(tmp3(5144).Button, obj8);
   }
   obj7.children = tmp11Result;
   items2[2] = closure_5(View, obj7);

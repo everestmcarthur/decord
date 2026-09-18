@@ -1,14 +1,14 @@
-// Module ID: 9999
-// Function ID: 10000
+// Module ID: 10093
+// Function ID: 10094
 // Name: UserAffinitiesActionCreators
-// Dependencies: [6705, 7773, 1074, 573, 1271, 2]
+// Dependencies: [6787, 7855, 1074, 573, 1271, 2]
 // Exports: fetchUserAffinitiesV2
 
-// Module 9999 (UserAffinitiesActionCreators)
+// Module 10093 (UserAffinitiesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
-import ConsentStore from "ConsentStore" /* 6705 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7773 */;
+import ConsentStore from "ConsentStore" /* 6787 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7855 */;
 
 require = fn;
 const Constants = fn(1074);

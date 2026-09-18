@@ -1,16 +1,16 @@
-// Module ID: 13539
-// Function ID: 13540
+// Module ID: 13636
+// Function ID: 13637
 // Name: PromotionStringUtils
-// Dependencies: [4302, 1374, 504, 4297, 7348, 1115, 2025, 2]
+// Dependencies: [4385, 1374, 504, 4380, 7430, 1115, 2025, 2]
 // Exports: getHelpArticleLinkProps, useFormatStringWithCommonPremiumParams
 
-// Module 13539 (PromotionStringUtils)
+// Module 13636 (PromotionStringUtils)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2025 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4297 */;
-import PriceUtils from "PriceUtils" /* 7348 */;
-import SubscriptionPlanStore from "SubscriptionPlanStore" /* 4302 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4380 */;
+import PriceUtils from "PriceUtils" /* 7430 */;
+import SubscriptionPlanStore from "SubscriptionPlanStore" /* 4385 */;
 
 require = fn;
 const PremiumConstants = fn(1374);

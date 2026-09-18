@@ -1,15 +1,15 @@
-// Module ID: 15615
-// Function ID: 15616
+// Module ID: 15710
+// Function ID: 15711
 // Name: AndroidNotificationSoundsSetting
-// Dependencies: [15600, 8111, 1364, 15602, 1115, 11622, 14574, 15606, 2]
+// Dependencies: [15695, 8194, 1364, 15697, 1115, 11714, 14669, 15701, 2]
 
-// Module 15615 (AndroidNotificationSoundsSetting)
+// Module 15710 (AndroidNotificationSoundsSetting)
 import util from "util" /* 1115 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import SettingsConstants from "SettingsConstants" /* 8111 */;
-import MobileNotifSettings from "MobileNotifSettings" /* 15606 */;
-import AndroidNotificationSettingsStore from "AndroidNotificationSettingsStore" /* 15600 */;
-import SettingBuilders_mod from "SettingBuilders" /* 11622 */;
+import SettingsConstants from "SettingsConstants" /* 8194 */;
+import MobileNotifSettings from "MobileNotifSettings" /* 15701 */;
+import AndroidNotificationSettingsStore from "AndroidNotificationSettingsStore" /* 15695 */;
+import SettingBuilders_mod from "SettingBuilders" /* 11714 */;
 import size from "module_2" /* 2 */;
 
 ({ useAndroidNotificationSoundsEnabled: c2, setAndroidNotificationSoundsEnabled } = AndroidNotificationSettingsStore);
@@ -36,8 +36,8 @@ obj2.usePredicate = function usePredicate() {
   const isIOSResult = PlatformUtils.isIOS();
   let tmp5 = !isIOSResult;
   if (!isIOSResult) {
-    tmp5 = !tmp2(15602).hasAndroidNotificationChannels();
-    const tmp2Result = tmp2(15602);
+    tmp5 = !tmp2(15697).hasAndroidNotificationChannels();
+    const tmp2Result = tmp2(15697);
   }
   if (tmp5) {
     tmp5 = null != tmp;
@@ -57,8 +57,8 @@ obj3.usePredicate = function usePredicate() {
   const isIOSResult = PlatformUtils.isIOS();
   let isDeclarativeSettingsUIAvailable = !isIOSResult;
   if (!isIOSResult) {
-    isDeclarativeSettingsUIAvailable = !tmp2(15602).hasAndroidNotificationChannels();
-    const tmp2Result = tmp2(15602);
+    isDeclarativeSettingsUIAvailable = !tmp2(15697).hasAndroidNotificationChannels();
+    const tmp2Result = tmp2(15697);
   }
   if (isDeclarativeSettingsUIAvailable) {
     isDeclarativeSettingsUIAvailable = null != tmp;

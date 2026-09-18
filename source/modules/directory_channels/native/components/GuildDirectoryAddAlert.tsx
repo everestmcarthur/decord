@@ -1,15 +1,15 @@
-// Module ID: 12474
-// Function ID: 12475
+// Module ID: 12565
+// Function ID: 12566
 // Name: GuildDirectoryAddAlert
-// Dependencies: [19, 17, 21, 4640, 576, 5081, 1115, 5672, 4636, 2]
+// Dependencies: [19, 17, 21, 4722, 576, 5163, 1115, 5754, 4718, 2]
 // Exports: default
 
-// Module 12474 (GuildDirectoryAddAlert)
+// Module 12565 (GuildDirectoryAddAlert)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4636 */;
-import common_AlertDefault from "common/Alert" /* 5081 */;
-import GuildIcon from "GuildIcon" /* 5672 */;
+import Text_Text from "Text/Text" /* 4718 */;
+import common_AlertDefault from "common/Alert" /* 5163 */;
+import GuildIcon from "GuildIcon" /* 5754 */;
 import noop from "module_19" /* 19 */;
 
 const GuildIconDefault = GuildIcon;
@@ -18,7 +18,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = { guildIcon: { marginBottom: 16, borderRadius: nativeDefault.radii.sm }, title: { marginBottom: 8, textAlign: "center" }, description: { textAlign: "center" }, container: { alignItems: "center", justifyContent: "center" } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);

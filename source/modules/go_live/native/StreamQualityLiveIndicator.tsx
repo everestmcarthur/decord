@@ -1,16 +1,16 @@
-// Module ID: 9769
-// Function ID: 9770
+// Module ID: 9863
+// Function ID: 9864
 // Name: StreamQualityLiveIndicator
-// Dependencies: [19, 17, 1074, 1374, 4665, 21, 4640, 576, 9628, 9770, 7276, 4376, 4641, 1177, 9263, 9771, 1241, 9546, 9516, 4297, 5210, 5675, 9514, 2]
+// Dependencies: [19, 17, 1074, 1374, 4747, 21, 4722, 576, 9712, 9864, 7358, 4458, 4723, 1177, 9347, 9865, 1241, 9630, 9600, 4380, 5292, 5757, 9598, 2]
 // Exports: default
 
-// Module 9769 (StreamQualityLiveIndicator)
+// Module 9863 (StreamQualityLiveIndicator)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import timing from "timing" /* 4641 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9516 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9546 */;
+import timing from "timing" /* 4723 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9600 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9630 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -20,10 +20,10 @@ const View = fn(17).View;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const PremiumConstants = fn(1374);
 ({ PremiumTypes: metroRequire, PremiumUpsellTypes: closure_7 } = PremiumConstants);
-const ResolutionTypes = fn(4665).ResolutionTypes;
+const ResolutionTypes = fn(4747).ResolutionTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = { liveIndicator: { flexDirection: "row", alignItems: "center", height: 18 }, liveTag: { borderBottomLeftRadius: nativeDefault.radii.none, borderTopLeftRadius: nativeDefault.radii.none, height: 18, textAlign: "center" }, qualityTag: null, qualityTagText: null, reducedQualityTagText: null, nitroWheel: null };
 let obj3 = { borderBottomLeftRadius: nativeDefault.radii.none, borderTopLeftRadius: nativeDefault.radii.none, height: 18, textAlign: "center" };
 obj2.qualityTag = { borderBottomLeftRadius: nativeDefault.radii.sm, borderTopLeftRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_800, opacity: 0.8, paddingLeft: 8, paddingRight: 4, flexDirection: "row", alignItems: "center", height: 18 };

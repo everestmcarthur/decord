@@ -1,10 +1,10 @@
-// Module ID: 7695
-// Function ID: 7696
+// Module ID: 7777
+// Function ID: 7778
 // Name: ShelfBlockRecord
-// Dependencies: [7686, 2]
+// Dependencies: [7768, 2]
 
-// Module 7695 (ShelfBlockRecord)
-import ShopBlockType from "ShopBlockType" /* 7686 */;
+// Module 7777 (ShelfBlockRecord)
+import ShopBlockType from "ShopBlockType" /* 7768 */;
 import size from "module_2" /* 2 */;
 
 const prototype = function ShelfBlockRecord(show_button) {

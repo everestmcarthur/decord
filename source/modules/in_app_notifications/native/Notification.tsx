@@ -1,25 +1,25 @@
-// Module ID: 10316
-// Function ID: 10317
+// Module ID: 10410
+// Function ID: 10411
 // Name: Notification
-// Dependencies: [19, 10245, 1074, 21, 4640, 576, 10244, 10287, 4376, 5061, 4641, 4820, 5210, 10317, 10319, 2]
+// Dependencies: [19, 10339, 1074, 21, 4722, 576, 10338, 10381, 4458, 5143, 4723, 4902, 5292, 10411, 10413, 2]
 // Exports: NotificationPressable
 
-// Module 10316 (Notification)
+// Module 10410 (Notification)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
-import timing from "timing" /* 4641 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4820 */;
-import spring from "spring" /* 5061 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 10244 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4458 */;
+import timing from "timing" /* 4723 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4902 */;
+import spring from "spring" /* 5143 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 10338 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const InAppNotificationConstants = fn(10245);
+const InAppNotificationConstants = fn(10339);
 ({ MIN_SWIPE_VELOCITY: closure_4, STARTED_SWIPE_THRESHOLD: hasOwnProperty, NOTIFICATION_MAX_WIDTH } = InAppNotificationConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = { shadow: null, container: null };
 let obj3 = {};
 let merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);

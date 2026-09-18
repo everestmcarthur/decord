@@ -1,16 +1,16 @@
-// Module ID: 7348
-// Function ID: 7349
+// Module ID: 7430
+// Function ID: 7431
 // Name: PriceUtils
-// Dependencies: [2026, 4299, 1374, 1085, 1364, 7349, 7351, 7353, 1115, 4297, 2]
+// Dependencies: [2026, 4382, 1374, 1085, 1364, 7431, 7433, 7435, 1115, 4380, 2]
 // Exports: formatDualPriceForBG, formatPercent, formatSubscriptionPlanRate, maybeShortenPrice, shortenAndFormatPrice
 
-// Module 7348 (PriceUtils)
+// Module 7430 (PriceUtils)
 import util from "util" /* 1115 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import PremiumUtils from "PremiumUtils" /* 4297 */;
-import utils_PriceUtils from "utils/PriceUtils" /* 7349 */;
+import PremiumUtils from "PremiumUtils" /* 4380 */;
+import utils_PriceUtils from "utils/PriceUtils" /* 7431 */;
 import LocaleStore from "LocaleStore" /* 2026 */;
-import BillingInfoStore from "BillingInfoStore" /* 4299 */;
+import BillingInfoStore from "BillingInfoStore" /* 4382 */;
 
 require = fn;
 function formatSingleCurrencyPrice(result, BGN, localeOverride) {
@@ -55,16 +55,16 @@ function formatPrice(amount, currency, localeOverride) {
   if (timestamp < date.getTime()) {
     const platformName = PlatformUtils.getPlatformName();
     if ("android" === platformName) {
-      let ipCountryCode = tmp2(7351).default.getUserCountry();
-      const _default2 = tmp2(7351).default;
+      let ipCountryCode = tmp2(7433).default.getUserCountry();
+      const _default2 = tmp2(7433).default;
     } else if ("ios" === platformName) {
-      const storeFront = tmp2(7353).default.getStoreFront();
+      const storeFront = tmp2(7435).default.getStoreFront();
       let country;
       if (storeFront != null) {
         country = storeFront.country;
       }
       ipCountryCode = country;
-      const _default = tmp2(7353).default;
+      const _default = tmp2(7435).default;
     } else {
       ipCountryCode = BillingInfoStore.ipCountryCode;
     }

@@ -1,8 +1,8 @@
-// Module ID: 6106
-// Function ID: 6107
+// Module ID: 6188
+// Function ID: 6189
 // Dependencies: [2]
 
-// Module 6106
+// Module 6188
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/FireIllocon-2x.png.js");

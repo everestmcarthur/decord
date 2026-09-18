@@ -1,38 +1,38 @@
-// Module ID: 7642
-// Function ID: 7643
+// Module ID: 7724
+// Function ID: 7725
 // Name: ChannelListState
-// Dependencies: [1957, 4868, 7643, 2014, 7640, 2015, 7644, 7645, 7646, 5594, 4280, 1962, 7231, 1958, 7641, 1980, 4278, 4655, 2012, 4821, 4659, 4664, 7647, 7648, 1074, 1965, 1085, 12, 7649, 7336, 7404, 7380, 7650, 38, 1370, 11, 4786, 2]
+// Dependencies: [1957, 4950, 7725, 2014, 7722, 2015, 7726, 7727, 7728, 5676, 4363, 1962, 7313, 1958, 7723, 1980, 4361, 4737, 2012, 4903, 4741, 4746, 7729, 7730, 1074, 1965, 1085, 12, 7731, 7418, 7486, 7462, 7732, 38, 1370, 11, 4868, 2]
 
-// Module 7642 (ChannelListState)
+// Module 7724 (ChannelListState)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
-import ChannelListUtils from "ChannelListUtils" /* 4786 */;
-import getGuildModeratorReportingEnabledDefault from "getGuildModeratorReportingEnabled" /* 7380 */;
-import getGuildModeratorReportChannelIdDefault from "getGuildModeratorReportChannelId" /* 7404 */;
+import ChannelListUtils from "ChannelListUtils" /* 4868 */;
+import getGuildModeratorReportingEnabledDefault from "getGuildModeratorReportingEnabled" /* 7462 */;
+import getGuildModeratorReportChannelIdDefault from "getGuildModeratorReportChannelId" /* 7486 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1957 */;
-import ApplicationStore from "ApplicationStore" /* 4868 */;
-import ChannelStatusStore from "ChannelStatusStore" /* 7643 */;
+import ApplicationStore from "ApplicationStore" /* 4950 */;
+import ChannelStatusStore from "ChannelStatusStore" /* 7725 */;
 import GatedChannelStore from "GatedChannelStore" /* 2014 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7640 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7722 */;
 import ImpersonateStore from "ImpersonateStore" /* 2015 */;
-import FavoritesSuggestionStore from "FavoritesSuggestionStore" /* 7644 */;
-import RecentlyActiveCollapseStore from "RecentlyActiveCollapseStore" /* 7645 */;
-import NewChannelsStore from "NewChannelsStore" /* 7646 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5594 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4280 */;
-import CategoryCollapseStore from "CategoryCollapseStore" /* 7231 */;
+import FavoritesSuggestionStore from "FavoritesSuggestionStore" /* 7726 */;
+import RecentlyActiveCollapseStore from "RecentlyActiveCollapseStore" /* 7727 */;
+import NewChannelsStore from "NewChannelsStore" /* 7728 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5676 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4363 */;
+import CategoryCollapseStore from "CategoryCollapseStore" /* 7313 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
-import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 7641 */;
+import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 7723 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import PermissionStore from "PermissionStore" /* 4278 */;
-import ReadStateStore from "ReadStateStore" /* 4655 */;
+import PermissionStore from "PermissionStore" /* 4361 */;
+import ReadStateStore from "ReadStateStore" /* 4737 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4821 */;
-import VoiceStateStore from "VoiceStateStore" /* 4659 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4664 */;
-import ChannelListVoiceCategoryStore from "ChannelListVoiceCategoryStore" /* 7647 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4903 */;
+import VoiceStateStore from "VoiceStateStore" /* 4741 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4746 */;
+import ChannelListVoiceCategoryStore from "ChannelListVoiceCategoryStore" /* 7729 */;
 
 require = fn;
 function computeSubtitle(type, arg1, arg2) {
@@ -228,7 +228,7 @@ function shouldShowInRecents(guild, record, initializationData) {
 }
 const ChannelRecord = fn(1962);
 ({ ChannelRecordBase: closure_14, isGuildReadableType: closure_15, isThread: closure_16, THREADED_CHANNEL_TYPES: closure_17 } = ChannelRecord);
-const ChannelListGuildActionRow = fn(7648).ChannelListGuildActionRow;
+const ChannelListGuildActionRow = fn(7730).ChannelListGuildActionRow;
 const Constants = fn(1074);
 ({ ChannelTypes: closure_30, GuildFeatures: items } = Constants);
 const ChannelFlags = fn(1965).ChannelFlags;
@@ -313,51 +313,58 @@ class ChannelListImpl {
         continue;
       } else {
         type = tmp41.type;
-        if (type !== arr13.GUILD_DIRECTORY) {
-          GUILD_CATEGORY = shouldShowInRecents;
-          if (shouldShowInRecents(merged, tmp41, initializationData)) {
-            arr1 = items1.push(tmp41);
-          } else {
-            GUILD_CATEGORY = arr13.GUILD_VOICE;
-            tmp13 = tmp41.type !== GUILD_CATEGORY;
-            if (!tmp13) {
-            } else {
-              tmp13 = tmp41.type !== arr13.GUILD_STAGE_VOICE;
-            }
-            if (tmp13) {
-            } else {
-              tmp14 = null != tmp41.parent_id;
-              if (!tmp14) {
-              } else {
-                tmp14 = null != obj1[tmp41.parent_id];
-              }
-              if (!tmp14) {
-              } else {
-                arr11 = items2.push(obj1[tmp41.parent_id]);
-              }
-              arr12 = items2.push(tmp41);
-            }
-          }
-          if (null == tmp41.parent_id) {
-          } else if (tmp41.parent_id in obj9) {
-            GUILD_CATEGORY = obj9[tmp41.parent_id];
-            arr13 = GUILD_CATEGORY.push(tmp41);
-            continue;
-          }
-          arr13 = items.push(tmp41);
+        GUILD_CATEGORY = arr13.GUILD_SPACE;
+        if (type === GUILD_CATEGORY) {
           continue;
         } else {
-          GUILD_CATEGORY = null == guild;
-          if (GUILD_CATEGORY) {
-          } else {
-            features = guild.features;
-            tmp12 = GuildFeatures;
-            GUILD_CATEGORY = features.has(GuildFeatures.HUB);
-          }
-          if (GUILD_CATEGORY) {
+          type = tmp41.type;
+          if (type !== arr13.GUILD_DIRECTORY) {
+            GUILD_CATEGORY = shouldShowInRecents;
+            if (shouldShowInRecents(merged, tmp41, initializationData)) {
+              arr1 = items1.push(tmp41);
+            } else {
+              GUILD_CATEGORY = arr13.GUILD_VOICE;
+              tmp13 = tmp41.type !== GUILD_CATEGORY;
+              if (!tmp13) {
+              } else {
+                tmp13 = tmp41.type !== arr13.GUILD_STAGE_VOICE;
+              }
+              if (tmp13) {
+              } else {
+                tmp14 = null != tmp41.parent_id;
+                if (!tmp14) {
+                } else {
+                  tmp14 = null != obj1[tmp41.parent_id];
+                }
+                if (!tmp14) {
+                } else {
+                  arr11 = items2.push(obj1[tmp41.parent_id]);
+                }
+                arr12 = items2.push(tmp41);
+              }
+            }
+            if (null == tmp41.parent_id) {
+            } else if (tmp41.parent_id in obj9) {
+              GUILD_CATEGORY = obj9[tmp41.parent_id];
+              arr13 = GUILD_CATEGORY.push(tmp41);
+              continue;
+            }
+            arr13 = items.push(tmp41);
             continue;
           } else {
-            GUILD_CATEGORY = items3.push(tmp41);
+            GUILD_CATEGORY = null == guild;
+            if (GUILD_CATEGORY) {
+            } else {
+              features = guild.features;
+              tmp12 = GuildFeatures;
+              GUILD_CATEGORY = features.has(GuildFeatures.HUB);
+            }
+            if (GUILD_CATEGORY) {
+              continue;
+            } else {
+              GUILD_CATEGORY = items3.push(tmp41);
+              continue;
+            }
             continue;
           }
           continue;

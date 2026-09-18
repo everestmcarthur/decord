@@ -1,12 +1,12 @@
-// Module ID: 18029
-// Function ID: 18030
+// Module ID: 18123
+// Function ID: 18124
 // Name: FormChannelPicker
-// Dependencies: [19, 1958, 21, 4640, 14012, 504, 4793, 9204, 4607, 18030, 1897, 5115, 5167, 4636, 1115, 1177, 10090, 2]
+// Dependencies: [19, 1958, 21, 4722, 14106, 504, 4875, 9288, 4689, 18124, 1897, 5197, 5249, 4718, 1115, 1177, 10184, 2]
 // Exports: default
 
-// Module 18029 (FormChannelPicker)
+// Module 18123 (FormChannelPicker)
 import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4607 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4689 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 
@@ -15,7 +15,7 @@ const require = globalThis.__r;
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let closure_6 = createStyles.createStyles({ container: { alignItems: "center", flexDirection: "row" }, content: { marginStart: 8, flexGrow: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/FormChannelPicker.tsx");
@@ -48,7 +48,7 @@ export default function FormChannelPicker(channelId) {
       }
       obj2.selectedChannelId = id;
       obj2.onChannelSelected = onChange;
-      obj.openLazy(asyncRequireImpl(18030, dependencyMap.paths), "ChannelSelectorActionSheet", obj2);
+      obj.openLazy(asyncRequireImpl(18124, dependencyMap.paths), "ChannelSelectorActionSheet", obj2);
     },
     children: null
   };
@@ -79,7 +79,7 @@ export default function FormChannelPicker(channelId) {
   obj3.children = stringResult;
   items3[1] = closure_4(channelId(stateFromStores[13]).Text, obj3);
   const tmpResult = require("TouchableHitBox");
-  items3[2] = closure_4(channelId(stateFromStores[15]).Icon, { size: channelId(stateFromStores[15]).Icon.Sizes.MEDIUM, source: require("module_10090") });
+  items3[2] = closure_4(channelId(stateFromStores[15]).Icon, { size: channelId(stateFromStores[15]).Icon.Sizes.MEDIUM, source: require("module_10184") });
   obj2.children = items3;
   return tmp8(tmpResult, obj2);
 };

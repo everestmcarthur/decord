@@ -1,10 +1,10 @@
-// Module ID: 7436
-// Function ID: 7437
+// Module ID: 7518
+// Function ID: 7519
 // Name: BulkBanPubSubExperiment
 // Dependencies: [1434, 2]
 // Exports: useBulkBanPubSubExperimentConfig
 
-// Module 7436 (BulkBanPubSubExperiment)
+// Module 7518 (BulkBanPubSubExperiment)
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

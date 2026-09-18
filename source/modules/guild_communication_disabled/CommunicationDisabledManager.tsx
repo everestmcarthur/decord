@@ -1,14 +1,14 @@
-// Module ID: 12615
-// Function ID: 12616
+// Module ID: 12706
+// Function ID: 12707
 // Name: CommunicationDisabledManager
-// Dependencies: [2022, 1372, 4266, 573, 7232, 2]
+// Dependencies: [2022, 1372, 4349, 573, 7314, 2]
 
-// Module 12615 (CommunicationDisabledManager)
+// Module 12706 (CommunicationDisabledManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4266 */;
+import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4349 */;
 import GuildMemberStore_mod from "GuildMemberStore" /* 2022 */;
 import UserStore from "UserStore" /* 1372 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7232 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7314 */;
 import size from "module_2" /* 2 */;
 
 function clearGuildMemberTimeout(guildId, arg1) {

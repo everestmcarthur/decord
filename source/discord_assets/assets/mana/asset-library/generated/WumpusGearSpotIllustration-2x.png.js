@@ -1,8 +1,8 @@
-// Module ID: 6696
-// Function ID: 6697
+// Module ID: 6778
+// Function ID: 6779
 // Dependencies: [2]
 
-// Module 6696
+// Module 6778
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/WumpusGearSpotIllustration-2x.png.js");

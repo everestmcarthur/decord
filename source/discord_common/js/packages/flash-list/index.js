@@ -1,12 +1,12 @@
-// Module ID: 8873
-// Function ID: 8874
-// Dependencies: [19, 17, 21, 1364, 6963, 4376, 6962, 6738, 2]
+// Module ID: 8957
+// Function ID: 8958
+// Dependencies: [19, 17, 21, 1364, 7045, 4458, 7044, 6820, 2]
 
-// Module 8873
+// Module 8957
 import PlatformUtils2 from "PlatformUtils" /* 1364 */;
-import _mod6963 from "module_6963" /* 6963 */;
+import _mod7045 from "module_7045" /* 7045 */;
 import noop_mod from "module_19" /* 19 */;
-import ReanimatedRexport_mod from "ReanimatedRexport" /* 4376 */;
+import ReanimatedRexport_mod from "ReanimatedRexport" /* 4458 */;
 
 require = fn;
 let noop = noop_mod;
@@ -21,11 +21,11 @@ noop = function noop() {
 
 };
 let ReanimatedRexport = ReanimatedRexport_mod;
-let closure_8 = ReanimatedRexport.createAnimatedComponent(fn(6963).FlashList);
+let closure_8 = ReanimatedRexport.createAnimatedComponent(fn(7045).FlashList);
 const forwardRefResult = noop.forwardRef((arg0, ref) => {
   maintainVisibleContentPosition = { maintainVisibleContentPosition, ref };
   const merged = Object.assign(arg0);
-  return jsx(_mod6963.FlashList, { maintainVisibleContentPosition, ref });
+  return jsx(_mod7045.FlashList, { maintainVisibleContentPosition, ref });
 });
 const forwardRefResult1 = noop.forwardRef((arg0, ref) => {
   maintainVisibleContentPosition = { maintainVisibleContentPosition, ref };
@@ -33,12 +33,12 @@ const forwardRefResult1 = noop.forwardRef((arg0, ref) => {
   return <closure_8 maintainVisibleContentPosition={maintainVisibleContentPosition} ref={arg1} />;
 });
 let ReanimatedRexport = ReanimatedRexport_mod;
-let closure_9 = ReanimatedRexport.createAnimatedComponent(fn(6963).FlashList);
+let closure_9 = ReanimatedRexport.createAnimatedComponent(fn(7045).FlashList);
 const forwardRefResult2 = noop.forwardRef((arg0, ref) => {
   const merged = Object.assign(arg0, Object.assign({ preventNativeModalDismiss: 0 }));
   maintainVisibleContentPosition = { ref, maintainVisibleContentPosition, masonry: true };
   const merged1 = Object.assign(merged);
-  return jsx(_mod6963.FlashList, { ref, maintainVisibleContentPosition, masonry: true });
+  return jsx(_mod7045.FlashList, { ref, maintainVisibleContentPosition, masonry: true });
 });
 const forwardRefResult3 = noop.forwardRef((arg0, ref) => {
   ({ preventNativeModalDismiss, refreshControl } = arg0);
@@ -62,12 +62,12 @@ const forwardRefResult3 = noop.forwardRef((arg0, ref) => {
   maintainVisibleContentPosition = { ref, maintainVisibleContentPosition };
   const merged1 = Object.assign(merged);
   maintainVisibleContentPosition.refreshControl = memo;
-  return jsx(refreshControl(6962), { ref, maintainVisibleContentPosition });
+  return jsx(refreshControl(7044), { ref, maintainVisibleContentPosition });
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("../discord_common/js/packages/flash-list/index.js");
-for (const key10063 in require("module_6963")) {
-  arg5[key10063] = require("module_6963")[key10063];
+for (const key10063 in require("module_7045")) {
+  arg5[key10063] = require("module_7045")[key10063];
   continue;
 }
 
@@ -96,7 +96,7 @@ export const BottomSheetMasonryFlashList = noop.forwardRef((arg0, ref) => {
     }
     return tmp2;
   }, items);
-  maintainVisibleContentPosition.renderScrollComponent = preventNativeModalDismiss(6738).BottomSheetScrollView;
+  maintainVisibleContentPosition.renderScrollComponent = preventNativeModalDismiss(6820).BottomSheetScrollView;
   const merged1 = Object.assign(merged);
   maintainVisibleContentPosition.refreshControl = memo;
   return <closure_9 ref={arg1} maintainVisibleContentPosition={maintainVisibleContentPosition} masonry renderScrollComponent={null} />;

@@ -1,18 +1,18 @@
-// Module ID: 10150
-// Function ID: 10151
+// Module ID: 10244
+// Function ID: 10245
 // Name: VoiceChatHeaderIcon
-// Dependencies: [19, 17, 4655, 1074, 21, 4640, 576, 5770, 504, 10075, 12, 4350, 5210, 1177, 2]
+// Dependencies: [19, 17, 4737, 1074, 21, 4722, 576, 5852, 504, 10169, 12, 4432, 5292, 1177, 2]
 // Exports: VoiceChatCallScreenHeaderIcon, default, useVoiceChatMentions
 
-// Module 10150 (VoiceChatHeaderIcon)
+// Module 10244 (VoiceChatHeaderIcon)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
-import native2 from "native" /* 4350 */;
-import Pressables from "Pressables" /* 5210 */;
-import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 10075 */;
+import native2 from "native" /* 4432 */;
+import Pressables from "Pressables" /* 5292 */;
+import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 10169 */;
 import noop from "module_19" /* 19 */;
-import ReadStateStore from "ReadStateStore" /* 4655 */;
+import ReadStateStore from "ReadStateStore" /* 4737 */;
 
 const require = globalThis.__r;
 
@@ -35,14 +35,14 @@ const View = fn(17).View;
 const ThemeTypes = fn(1074).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = { headerButton: null, disabledOpacity: null, chatIconContainer: null, chatIcon: null, badge: null };
 let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.lg, alignSelf: "center", padding: 6, backgroundColor: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND };
 obj2.headerButton = size;
 obj2.disabledOpacity = { opacity: 0.6 };
-obj2.chatIconContainer = { marginRight: 12, height: fn(5770).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center" };
+obj2.chatIconContainer = { marginRight: 12, height: fn(5852).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center" };
 obj2.chatIcon = { marginHorizontal: 0, width: 32, height: 32 };
-const obj3 = { marginRight: 12, height: fn(5770).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center" };
+const obj3 = { marginRight: 12, height: fn(5852).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center" };
 obj2.badge = { backgroundColor: nativeDefault.colors.ICON_STRONG };
 let closure_8 = createStyles.createStyles(obj2);
 size = fn(2);

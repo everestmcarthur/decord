@@ -1,9 +1,9 @@
-// Module ID: 7997
-// Function ID: 7998
+// Module ID: 8080
+// Function ID: 8081
 // Name: VibegrationsAppChannelsStore
 // Dependencies: [504, 573, 2]
 
-// Module 7997 (VibegrationsAppChannelsStore)
+// Module 8080 (VibegrationsAppChannelsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 

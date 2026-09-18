@@ -1,13 +1,13 @@
-// Module ID: 5626
-// Function ID: 5627
+// Module ID: 5708
+// Function ID: 5709
 // Name: ClipboardListIcon
-// Dependencies: [19, 21, 576, 4340, 5627, 2]
+// Dependencies: [19, 21, 576, 4422, 5709, 2]
 // Exports: ClipboardListIcon
 
-// Module 5626 (ClipboardListIcon)
+// Module 5708 (ClipboardListIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4340 */;
-import _mod5627 from "module_5627" /* 5627 */;
+import BaseIconImage from "BaseIconImage" /* 4422 */;
+import _mod5709 from "module_5709" /* 5709 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const ClipboardListIcon = function ClipboardListIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod5627, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod5709, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

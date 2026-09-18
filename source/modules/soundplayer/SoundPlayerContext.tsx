@@ -1,9 +1,9 @@
-// Module ID: 17317
-// Function ID: 17318
+// Module ID: 17447
+// Function ID: 17448
 // Name: SoundPlayerContext
 // Dependencies: [19, 2]
 
-// Module 17317 (SoundPlayerContext)
+// Module 17447 (SoundPlayerContext)
 import noop from "module_19" /* 19 */;
 
 const context = noop.createContext({ audioRef: noop.createRef() });

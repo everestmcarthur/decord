@@ -1,12 +1,12 @@
-// Module ID: 15941
-// Function ID: 15942
+// Module ID: 16036
+// Function ID: 16037
 // Name: DesignSystemAILoaderSetting
-// Dependencies: [8111, 1074, 11622, 15942, 2]
+// Dependencies: [8194, 1074, 11714, 16037, 2]
 
-// Module 15941 (DesignSystemAILoaderSetting)
+// Module 16036 (DesignSystemAILoaderSetting)
 import Constants from "Constants" /* 1074 */;
-import SettingsConstants from "SettingsConstants" /* 8111 */;
-import SettingBuilders from "SettingBuilders" /* 11622 */;
+import SettingsConstants from "SettingsConstants" /* 8194 */;
+import SettingBuilders from "SettingBuilders" /* 11714 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

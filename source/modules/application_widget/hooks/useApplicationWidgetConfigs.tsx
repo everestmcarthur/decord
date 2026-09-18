@@ -1,19 +1,19 @@
-// Module ID: 9179
-// Function ID: 9180
+// Module ID: 9263
+// Function ID: 9264
 // Name: useApplicationWidgetConfigs
-// Dependencies: [19, 9180, 1936, 504, 1370, 9181, 2]
+// Dependencies: [19, 9264, 1936, 504, 1370, 9265, 2]
 // Exports: default
 
-// Module 9179 (useApplicationWidgetConfigs)
+// Module 9263 (useApplicationWidgetConfigs)
 import GlobalUtils from "GlobalUtils" /* 1370 */;
-import ApplicationWidgetConfigActions from "ApplicationWidgetConfigActions" /* 9181 */;
+import ApplicationWidgetConfigActions from "ApplicationWidgetConfigActions" /* 9265 */;
 import noop from "module_19" /* 19 */;
-import ApplicationWidgetConfigStore from "ApplicationWidgetConfigStore" /* 9180 */;
+import ApplicationWidgetConfigStore from "ApplicationWidgetConfigStore" /* 9264 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const FetchState = fn(9180).FetchState;
+const FetchState = fn(9264).FetchState;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_widget/hooks/useApplicationWidgetConfigs.tsx");
 

@@ -1,10 +1,10 @@
-// Module ID: 14176
-// Function ID: 14177
+// Module ID: 14271
+// Function ID: 14272
 // Name: WindowsMediaFoundationCpuEncodeIntel
 // Dependencies: [1434, 2]
 // Exports: getWmfCpuEncodeIntel
 
-// Module 14176 (WindowsMediaFoundationCpuEncodeIntel)
+// Module 14271 (WindowsMediaFoundationCpuEncodeIntel)
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

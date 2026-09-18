@@ -1,10 +1,10 @@
-// Module ID: 17773
-// Function ID: 17774
+// Module ID: 17836
+// Function ID: 17837
 // Name: GuildSettingsVanityURLUtils
 // Dependencies: [1074, 1115, 2]
 // Exports: canSeeVanityUrlSettings, getErrorMessageFromErrorCode
 
-// Module 17773 (GuildSettingsVanityURLUtils)
+// Module 17836 (GuildSettingsVanityURLUtils)
 import util from "util" /* 1115 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;

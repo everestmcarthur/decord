@@ -1,20 +1,20 @@
-// Module ID: 18056
-// Function ID: 18057
+// Module ID: 18150
+// Function ID: 18151
 // Name: SelectEmojiRolesActionSheet
-// Dependencies: [32, 19, 17, 1181, 1085, 21, 4640, 576, 5612, 15327, 5210, 1177, 1115, 7263, 7311, 7186, 8748, 4636, 2]
+// Dependencies: [32, 19, 17, 1181, 1085, 21, 4722, 576, 5694, 15421, 5292, 1177, 1115, 7345, 7393, 7268, 8831, 4718, 2]
 // Exports: default
 
-// Module 18056 (SelectEmojiRolesActionSheet)
+// Module 18150 (SelectEmojiRolesActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import Pressables from "Pressables" /* 5210 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7263 */;
-import ActionSheet from "ActionSheet" /* 7311 */;
-import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 15327 */;
+import Pressables from "Pressables" /* 5292 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7345 */;
+import ActionSheet from "ActionSheet" /* 7393 */;
+import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 15421 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import TextStyles_mod from "TextStyles" /* 5612 */;
+import TextStyles_mod from "TextStyles" /* 5694 */;
 
 const require = globalThis.__r;
 
@@ -24,7 +24,7 @@ const Fonts = fn(1085).Fonts;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
 const itemSize = fn(1181).FORM_ROW_VERTICAL_PADDING + 22;
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = { list: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, label: { flex: 1, flexDirection: "row", alignItems: "center" }, roleName: null, archivedBadge: null, archivedBadgeText: null, divider: null, saveButton: null, saveButtonDisabled: null };
 let TextStyles = TextStyles_mod;
 const merged = Object.assign(TextStyles(Fonts.PRIMARY_MEDIUM, nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, 16));
@@ -148,6 +148,6 @@ export default function SelectEmojiRolesActionSheet(arg0) {
   };
   const items1 = [subscriptionListingsForGuild.length];
   obj6.sections = items1;
-  obj5.children = closure_6(emoji(7186), obj6);
+  obj5.children = closure_6(emoji(7268), obj6);
   return closure_6(ActionSheet.ActionSheet, obj5);
 };

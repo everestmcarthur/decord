@@ -1,13 +1,13 @@
-// Module ID: 10168
-// Function ID: 10169
+// Module ID: 10262
+// Function ID: 10263
 // Name: useDeafStates
-// Dependencies: [502, 1909, 4659, 504, 2]
+// Dependencies: [502, 1909, 4741, 504, 2]
 // Exports: default, getDeafStates
 
-// Module 10168 (useDeafStates)
+// Module 10262 (useDeafStates)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 1909 */;
-import VoiceStateStore from "VoiceStateStore" /* 4659 */;
+import VoiceStateStore from "VoiceStateStore" /* 4741 */;
 
 const require = globalThis.__r;
 

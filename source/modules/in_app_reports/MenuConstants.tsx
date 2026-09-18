@@ -1,9 +1,9 @@
-// Module ID: 8792
-// Function ID: 8793
+// Module ID: 8875
+// Function ID: 8876
 // Name: MenuConstants
 // Dependencies: [2]
 
-// Module 8792 (MenuConstants)
+// Module 8875 (MenuConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/in_app_reports/MenuConstants.tsx");

@@ -1,9 +1,9 @@
-// Module ID: 4848
-// Function ID: 4849
+// Module ID: 4930
+// Function ID: 4931
 // Name: VoicePanelStore
-// Dependencies: [1958, 1243, 4849, 1248, 2]
+// Dependencies: [1958, 1243, 4931, 1248, 2]
 
-// Module 4848 (VoicePanelStore)
+// Module 4930 (VoicePanelStore)
 import ChannelStore from "ChannelStore" /* 1958 */;
 
 const require = fn;
@@ -40,7 +40,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   obj.voicePanelsPIP = new Set();
   obj.openChannel = function openChannel(arg0) {
     closure_0 = arg0;
-    let result = closure_0(4849).isStageVoicePanelEnabled("voice_panel_store");
+    let result = closure_0(4931).isStageVoicePanelEnabled("voice_panel_store");
     if (!result) {
       channel = channel.getChannel(arg0);
       let isGuildStageVoiceResult;

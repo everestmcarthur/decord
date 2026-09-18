@@ -1,14 +1,14 @@
-// Module ID: 13813
-// Function ID: 13814
+// Module ID: 13905
+// Function ID: 13906
 // Name: FriendGroupsStore
-// Dependencies: [7773, 6705, 4288, 1372, 504, 573, 2]
+// Dependencies: [7855, 6787, 4371, 1372, 504, 573, 2]
 
-// Module 13813 (FriendGroupsStore)
+// Module 13905 (FriendGroupsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7773 */;
-import ConsentStore from "ConsentStore" /* 6705 */;
-import RelationshipStore from "RelationshipStore" /* 4288 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7855 */;
+import ConsentStore from "ConsentStore" /* 6787 */;
+import RelationshipStore from "RelationshipStore" /* 4371 */;
 import UserStore from "UserStore" /* 1372 */;
 
 let items = [];

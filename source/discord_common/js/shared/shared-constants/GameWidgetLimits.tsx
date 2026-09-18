@@ -1,9 +1,9 @@
-// Module ID: 5197
-// Function ID: 5198
+// Module ID: 5279
+// Function ID: 5280
 // Name: GameWidgetLimits
 // Dependencies: [2]
 
-// Module 5197 (GameWidgetLimits)
+// Module 5279 (GameWidgetLimits)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/GameWidgetLimits.tsx");

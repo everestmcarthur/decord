@@ -1,10 +1,10 @@
-// Module ID: 8589
-// Function ID: 8590
+// Module ID: 8672
+// Function ID: 8673
 // Name: AppStoreAgeSignalSupport
-// Dependencies: [1609, 4619, 1364, 2]
+// Dependencies: [1609, 4701, 1364, 2]
 // Exports: isAppStoreAgeSignalSupported
 
-// Module 8589 (AppStoreAgeSignalSupport)
+// Module 8672 (AppStoreAgeSignalSupport)
 import MetaQuestUtils from "MetaQuestUtils" /* 1609 */;
 import size from "module_2" /* 2 */;
 
@@ -21,8 +21,8 @@ export const isAppStoreAgeSignalSupported = function isAppStoreAgeSignalSupporte
     if (tmpResult.getIsRunningOnSimulator()) {
       return false;
     } else {
-      const tmpResult3 = tmp(4619);
-      const parts = tmp(4619).getSystemVersion().split(".");
+      const tmpResult3 = tmp(4701);
+      const parts = tmp(4701).getSystemVersion().split(".");
       const _parseInt = parseInt;
       const parsed = parseInt(parts[0], 10);
       let str3 = parts[1];
@@ -30,7 +30,7 @@ export const isAppStoreAgeSignalSupported = function isAppStoreAgeSignalSupporte
         str3 = "0";
       }
       const parsed1 = parseInt(str3, 10);
-      const str = tmp(4619).getSystemVersion();
+      const str = tmp(4701).getSystemVersion();
       if (tmpResult4.isIOS()) {
         let tmp9 = parsed > c2;
         if (!tmp9) {
@@ -46,7 +46,7 @@ export const isAppStoreAgeSignalSupported = function isAppStoreAgeSignalSupporte
       }
       return tmp8;
     }
-    tmpResult = tmp(4619);
+    tmpResult = tmp(4701);
   }
   obj = MetaQuestUtils;
 };

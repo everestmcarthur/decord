@@ -1,8 +1,8 @@
-// Module ID: 13555
-// Function ID: 13556
+// Module ID: 13652
+// Function ID: 13653
 // Dependencies: [2]
 
-// Module 13555
+// Module 13652
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/premium/referral_trial/referral_program_sad_cactus.png.js");

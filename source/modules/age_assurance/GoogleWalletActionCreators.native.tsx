@@ -1,13 +1,13 @@
-// Module ID: 8590
-// Function ID: 8591
+// Module ID: 8673
+// Function ID: 8674
 // Name: GoogleWalletActionCreators
-// Dependencies: [5, 502, 1074, 8568, 1271, 8591, 2]
+// Dependencies: [5, 502, 1074, 8651, 1271, 8674, 2]
 // Exports: checkGoogleWalletAvailable, getGoogleWalletCredential, requestGoogleWalletVerification, verifyGoogleWalletCredential
 
-// Module 8590 (GoogleWalletActionCreators)
+// Module 8673 (GoogleWalletActionCreators)
 import HTTPUtils from "HTTPUtils" /* 1271 */;
-import SafetyHubUtils from "SafetyHubUtils" /* 8568 */;
-import NativeDigitalCredentialModuleDefault from "NativeDigitalCredentialModule" /* 8591 */;
+import SafetyHubUtils from "SafetyHubUtils" /* 8651 */;
+import NativeDigitalCredentialModuleDefault from "NativeDigitalCredentialModule" /* 8674 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 

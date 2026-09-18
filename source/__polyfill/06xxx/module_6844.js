@@ -1,16 +1,9 @@
 // Module ID: 6844
 // Function ID: 6845
-// Dependencies: [19]
-// Exports: useInterceptingDetectorContext
+// Dependencies: [17]
 
 // Module 6844
-import noop from "module_19" /* 19 */;
+import _mod17 from "module_17" /* 17 */;
 
-const use = noop.use;
-const context = noop.createContext(null);
 
-export const InterceptingDetectorMode = { DEFAULT: 0, [0]: "DEFAULT", ANIMATED: 1, [1]: "ANIMATED", REANIMATED: 2, [2]: "REANIMATED" };
-export const InterceptingDetectorContext = context;
-export const useInterceptingDetectorContext = function useInterceptingDetectorContext() {
-  return use(context);
-};
+export const findNodeHandle = _mod17.findNodeHandle;

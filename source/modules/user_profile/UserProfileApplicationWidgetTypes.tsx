@@ -1,11 +1,11 @@
-// Module ID: 7747
-// Function ID: 7748
+// Module ID: 7829
+// Function ID: 7830
 // Name: UserProfileApplicationWidgetTypes
-// Dependencies: [7736, 2]
+// Dependencies: [7818, 2]
 // Exports: isApplicationWidgetWithId
 
-// Module 7747 (UserProfileApplicationWidgetTypes)
-import WidgetType from "WidgetType" /* 7736 */;
+// Module 7829 (UserProfileApplicationWidgetTypes)
+import WidgetType from "WidgetType" /* 7818 */;
 import size from "module_2" /* 2 */;
 
 let ApplicationWidget;

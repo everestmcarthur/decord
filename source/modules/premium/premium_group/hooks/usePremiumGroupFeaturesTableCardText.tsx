@@ -1,17 +1,17 @@
-// Module ID: 13598
-// Function ID: 13599
+// Module ID: 13689
+// Function ID: 13690
 // Name: usePremiumGroupFeaturesTableCardText
-// Dependencies: [4303, 4311, 1115, 3077, 1380, 8186, 13599, 504, 2]
+// Dependencies: [4386, 4394, 1115, 3160, 1380, 8269, 13690, 504, 2]
 // Exports: default
 
-// Module 13598 (usePremiumGroupFeaturesTableCardText)
+// Module 13689 (usePremiumGroupFeaturesTableCardText)
 import initialize from "initialize" /* 504 */;
 import user from "user" /* 1380 */;
-import usePremiumGroupPrimaryNameDefault from "usePremiumGroupPrimaryName" /* 13599 */;
-import SubscriptionStore from "SubscriptionStore" /* 4303 */;
+import usePremiumGroupPrimaryNameDefault from "usePremiumGroupPrimaryName" /* 13690 */;
+import SubscriptionStore from "SubscriptionStore" /* 4386 */;
 
 require = fn;
-const PremiumGroupConstants = fn(4311);
+const PremiumGroupConstants = fn(4394);
 ({ getPremiumGroupProductName: closure_4, HELP_CENTER_LINK: hasOwnProperty } = PremiumGroupConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/premium_group/hooks/usePremiumGroupFeaturesTableCardText.tsx");
@@ -25,14 +25,14 @@ export default function usePremiumGroupFeaturesTableCardText(arg0, arg1) {
     return null;
   } else {
     if (arg0 === tmp(1380).PremiumSubscriptionGroupRole.PRIMARY) {
-      let priceString = tmp(8186).getPriceString(stateFromStores, { withIntervals: true });
-      const tmpResult = tmp(8186);
+      let priceString = tmp(8269).getPriceString(stateFromStores, { withIntervals: true });
+      const tmpResult = tmp(8269);
     } else {
       priceString = null;
       if (null != tmp4) {
         const intl = tmp(1115).intl;
         const obj3 = { primaryName: tmp4, premiumGroupProductName: React4() };
-        priceString = intl.format(tmp3(3077).Nu9LNm, obj3);
+        priceString = intl.format(tmp3(3160).Nu9LNm, obj3);
       }
     }
     let str = "...";
@@ -42,10 +42,10 @@ export default function usePremiumGroupFeaturesTableCardText(arg0, arg1) {
     if (arg0 === tmp(1380).PremiumSubscriptionGroupRole.PRIMARY) {
       const intl3 = tmp(1115).intl;
       const obj4 = { helpCenterLink, premiumGroupProductName: React4() };
-      let formatResult = intl3.format(tmp3(3077)["+R/K74"], obj4);
+      let formatResult = intl3.format(tmp3(3160)["+R/K74"], obj4);
     } else {
       const intl2 = tmp(1115).intl;
-      const tmp3Result = tmp3(3077);
+      const tmp3Result = tmp3(3160);
       const obj5 = { helpCenterLink };
       formatResult = intl2.format(arg1 ? tmp3Result["xF+upx"] : tmp3Result.qqfnOm, obj5);
     }

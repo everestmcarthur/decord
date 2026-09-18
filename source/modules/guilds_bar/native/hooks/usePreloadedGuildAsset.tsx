@@ -1,12 +1,12 @@
-// Module ID: 16498
-// Function ID: 16499
+// Module ID: 16595
+// Function ID: 16596
 // Name: usePreloadedGuildAsset
-// Dependencies: [32, 19, 5674, 5675, 2]
+// Dependencies: [32, 19, 5756, 5757, 2]
 // Exports: default
 
-// Module 16498 (usePreloadedGuildAsset)
-import useRefValueDefault from "useRefValue" /* 5674 */;
-import FastImageDefault from "FastImage" /* 5675 */;
+// Module 16595 (usePreloadedGuildAsset)
+import useRefValueDefault from "useRefValue" /* 5756 */;
+import FastImageDefault from "FastImage" /* 5757 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,17 +1,17 @@
-// Module ID: 16718
-// Function ID: 16719
+// Module ID: 16815
+// Function ID: 16816
 // Name: GuildFeedBanner
-// Dependencies: [19, 17, 14082, 1980, 16719, 1074, 21, 4640, 576, 4376, 1478, 4574, 14083, 1364, 1397, 5678, 4641, 4644, 504, 7057, 11678, 4491, 16720, 16721, 5672, 4636, 1177, 5210, 4338, 1115, 16722, 2]
+// Dependencies: [19, 17, 14177, 1980, 16816, 1074, 21, 4722, 576, 4458, 1478, 4656, 14178, 1364, 1397, 5760, 4723, 4726, 504, 7139, 11768, 4573, 16817, 16818, 5754, 4718, 1177, 5292, 4420, 1115, 16819, 2]
 
-// Module 16718 (GuildFeedBanner)
+// Module 16815 (GuildFeedBanner)
 import nativeDefault from "native" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
-import timing from "timing" /* 4641 */;
-import timingPresets from "timingPresets" /* 4644 */;
-import GuildPopoutActionCreators from "GuildPopoutActionCreators" /* 14083 */;
+import timing from "timing" /* 4723 */;
+import timingPresets from "timingPresets" /* 4726 */;
+import GuildPopoutActionCreators from "GuildPopoutActionCreators" /* 14178 */;
 import noop from "module_19" /* 19 */;
-import GuildPopoutStore from "GuildPopoutStore" /* 14082 */;
+import GuildPopoutStore from "GuildPopoutStore" /* 14177 */;
 import GuildStore from "GuildStore" /* 1980 */;
 
 require = fn;
@@ -24,8 +24,8 @@ function GuildFeedBanner(guild) {
   let drawerWidth;
   ({ hideDescription, hideMemberCount } = guild);
   let tmp = closure_13();
-  const sharedValue = guild(4376).useSharedValue(0);
-  let obj = guild(4376);
+  const sharedValue = guild(4458).useSharedValue(0);
+  let obj = guild(4458);
   class G {
     constructor() {
       obj = { opacity: closure_1.get() };
@@ -35,10 +35,10 @@ function GuildFeedBanner(guild) {
   G.__closure = { opacity: sharedValue };
   G.__workletHash = 10872399645496;
   G.__initData = __initData;
-  const animatedStyle = guild(4376).useAnimatedStyle(G);
+  const animatedStyle = guild(4458).useAnimatedStyle(G);
   let bound = Math.max(0.22 * sharedValue(1478)().height, closure_9);
   const items = [guild];
-  let obj2 = guild(4376);
+  let obj2 = guild(4458);
   const effect = width.useEffect(() => {
     const guildForPopout = GuildPopoutActionCreators.fetchGuildForPopout(guild.id);
   }, items);
@@ -72,19 +72,19 @@ function GuildFeedBanner(guild) {
   function handleLoad() {
     const result = sharedValue.set(timing.withTiming(1, timingPresets.timingSlow));
   }
-  const tmp8 = sharedValue(4574)();
-  const guildBadgeSource = guild(5678).getGuildBadgeSource(guild);
-  const tmp2Result = guild(5678);
+  const tmp8 = sharedValue(4656)();
+  const guildBadgeSource = guild(5760).getGuildBadgeSource(guild);
+  const tmp2Result = guild(5760);
   const items2 = [GuildPopoutStore];
   const items3 = [guild];
   const discoverableGuild = guild(504).useStateFromStoresObject(items2, () => ({ discoverableGuild: GuildPopoutStore.getGuild(guild.id) }), items3).discoverableGuild;
-  const tmp12 = sharedValue(7057)();
+  const tmp12 = sharedValue(7139)();
   dependencyMap = tmp12;
   const size = tmp6(1478)();
   width = size.width;
   height = size.height;
   const tmp2Result4 = guild(504);
-  drawerWidth = guild(11678).useDrawerWidth();
+  drawerWidth = guild(11768).useDrawerWidth();
   const items4 = [width, height, tmp12, drawerWidth];
   let obj4 = { style: tmp.container, children: null };
   const memo1 = obj3.useMemo(() => {
@@ -113,13 +113,13 @@ function GuildFeedBanner(guild) {
     const items6 = [size2, animatedStyle];
     obj6.style = items6;
     if (tmp2Result6.isThemeDark(tmp8)) {
-      let tmp6Result = tmp6(16720);
+      let tmp6Result = tmp6(16817);
     } else {
-      tmp6Result = tmp6(16721);
+      tmp6Result = tmp6(16818);
     }
     obj6.source = tmp6Result;
     obj6.onLoad = handleLoad;
-    tmp2Result6 = tmp2(4491);
+    tmp2Result6 = tmp2(4573);
   }
   const items7 = [closure_11(drawerWidth, obj6), ];
   let obj7 = { style: null, children: null };
@@ -131,12 +131,12 @@ function GuildFeedBanner(guild) {
   obj8.style = items9;
   const obj9 = { style: tmp.guildIconContainer, children: null };
   const obj10 = { style: tmp.avatar, guild, size: null, animate: true };
-  const tmp2Result5 = guild(11678);
-  obj10.size = guild(5672).GuildIconSizes.XLARGE;
-  obj9.children = closure_11(sharedValue(5672), obj10);
+  const tmp2Result5 = guild(11768);
+  obj10.size = guild(5754).GuildIconSizes.XLARGE;
+  obj9.children = closure_11(sharedValue(5754), obj10);
   const items10 = [closure_11(height, obj9), , , ];
   const obj11 = { style: tmp.textContainer, children: null };
-  const items11 = [closure_11(guild(4636).Text, { lineClamp: 1, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: tmp.title, children: guild.name }), ];
+  const items11 = [closure_11(guild(4718).Text, { lineClamp: 1, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: tmp.title, children: guild.name }), ];
   let tmp17Result = null;
   if (null != guildBadgeSource) {
     const obj13 = { style: tmp.icon, source: guildBadgeSource, disableColor: true };
@@ -148,7 +148,7 @@ function GuildFeedBanner(guild) {
   let tmp17Result2 = null;
   if (null != description) {
     const obj14 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: description };
-    tmp17Result2 = tmp17(tmp2(4636).Text, obj14);
+    tmp17Result2 = tmp17(tmp2(4718).Text, obj14);
   }
   items10[2] = tmp17Result2;
   let tmp15Result4 = null != discoverableGuild && !hideMemberCount;
@@ -164,18 +164,18 @@ function GuildFeedBanner(guild) {
               const obj2 = { key: "DISCOVERABLE_GUILD_HEADER_PUBLIC_INFO", content: null };
               const intl = guild(1115).intl;
               obj2.content = intl.string(guild(1115).t.O8lDI2);
-              sharedValue(4338).open(obj2);
+              sharedValue(4420).open(obj2);
             },
         children: null
       };
-      const obj17 = { style: tmp.publicIcon, source: tmp6(16722) };
+      const obj17 = { style: tmp.publicIcon, source: tmp6(16819) };
       const items12 = [tmp17(tmp2(1177).Icon, obj17), ];
       const obj18 = { variant: "text-xs/medium", color: "text-default", children: null };
       let intl = tmp2(1115).intl;
       obj18.children = intl.string(tmp2(1115).t["B/vjCu"]);
-      items12[1] = tmp17(tmp2(4636).Text, obj18);
+      items12[1] = tmp17(tmp2(4718).Text, obj18);
       obj16.children = items12;
-      tmp15Result = tmp15(tmp2(5210).PressableOpacity, obj16);
+      tmp15Result = tmp15(tmp2(5292).PressableOpacity, obj16);
     }
     const items13 = [tmp15Result, ];
     let tmp15Result3 = null;
@@ -189,7 +189,7 @@ function GuildFeedBanner(guild) {
         const intl2 = tmp2(1115).intl;
         ({ presenceCount: obj28.online, memberCount: obj28.offline } = discoverableGuild);
         obj21.children = intl2.format(tmp2(1115).t.QCNv6P, { online: null, offline: null });
-        items14[1] = tmp17(tmp2(4636).Text, obj21);
+        items14[1] = tmp17(tmp2(4718).Text, obj21);
         obj19.children = items14;
         tmp15Result3 = tmp15(obj3.Fragment, obj19);
         const obj22 = { online: null, offline: null };
@@ -208,13 +208,13 @@ function GuildFeedBanner(guild) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
-const GuildFeedConstants = fn(16719);
+const GuildFeedConstants = fn(16816);
 const GUILD_FEED_CARD_MARGIN_HORIZONTAL = GuildFeedConstants.GUILD_FEED_CARD_MARGIN_HORIZONTAL;
 let closure_9 = GuildFeedConstants.GUILD_FEED_MIN_BANNER_HEIGHT;
 const GuildFeatures = fn(1074).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj = { avatar: null, container: null, description: null, textContainer: null, content: null, icon: null, headerContainer: null, headerBorder: null, guildIconContainer: null, dotOnline: null, publicInfo: null, publicIcon: null, memberInfo: null, title: null };
 let size = { borderRadius: nativeDefault.radii.lg, height: 64, width: 64 };
 obj.avatar = size;

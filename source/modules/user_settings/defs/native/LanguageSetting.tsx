@@ -1,21 +1,21 @@
-// Module ID: 15537
-// Function ID: 15538
+// Module ID: 15632
+// Function ID: 15633
 // Name: LanguageSetting
-// Dependencies: [2026, 1074, 504, 1115, 11622, 15538, 15540, 2]
+// Dependencies: [2026, 1074, 504, 1115, 11714, 15633, 15635, 2]
 
-// Module 15537 (LanguageSetting)
+// Module 15632 (LanguageSetting)
 import util from "util" /* 1115 */;
 import LocaleStore from "LocaleStore" /* 2026 */;
 
 require = fn;
-const SettingBuilders = fn(11622);
+const SettingBuilders = fn(11714);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.IHMsPn);
   },
   parent: null,
-  IconComponent: fn(15538).LanguageIcon,
+  IconComponent: fn(15633).LanguageIcon,
   useTrailing: function useLanguageSettingTrailing() {
     const items = [LocaleStore];
     _require = require("initialize").useStateFromStores(items, () => locale.locale);

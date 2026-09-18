@@ -1,12 +1,12 @@
-// Module ID: 7816
-// Function ID: 7817
+// Module ID: 7898
+// Function ID: 7899
 // Name: BountyStore
-// Dependencies: [5539, 504, 573, 2]
+// Dependencies: [5621, 504, 573, 2]
 
-// Module 7816 (BountyStore)
+// Module 7898 (BountyStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import AdCreativeType from "AdCreativeType" /* 5539 */;
+import AdCreativeType from "AdCreativeType" /* 5621 */;
 
 require = fn;
 function resetStateForDeliveredBounties(items) {

@@ -1,19 +1,19 @@
-// Module ID: 7054
-// Function ID: 7055
+// Module ID: 7136
+// Function ID: 7137
 // Name: Login
-// Dependencies: [5, 32, 19, 17, 7055, 502, 1074, 21, 4640, 5210, 4636, 4985, 1115, 1364, 5235, 7056, 1484, 504, 1487, 6703, 7058, 4986, 7059, 7060, 7061, 4540, 7062, 7066, 7067, 7069, 7063, 5062, 7070, 1609, 7072, 7074, 6717, 7080, 7082, 7084, 5060, 7091, 7053, 2]
+// Dependencies: [5, 32, 19, 17, 7137, 502, 1074, 21, 4722, 5292, 4718, 5067, 1115, 1364, 5317, 7138, 1484, 504, 1487, 6785, 7140, 5068, 7141, 7142, 7143, 4622, 7144, 7148, 7149, 7151, 7145, 5144, 7152, 1609, 7154, 7156, 6799, 7162, 7164, 7166, 5142, 7173, 7135, 2]
 // Exports: default
 
-// Module 7054 (Login)
+// Module 7136 (Login)
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4636 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4985 */;
-import Pressables from "Pressables" /* 5210 */;
-import NativeDeviceSettingsModuleDefault from "NativeDeviceSettingsModule" /* 5235 */;
+import Text_Text from "Text/Text" /* 4718 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5067 */;
+import Pressables from "Pressables" /* 5292 */;
+import NativeDeviceSettingsModuleDefault from "NativeDeviceSettingsModule" /* 5317 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PhoneStore from "PhoneStore" /* 7055 */;
+import PhoneStore from "PhoneStore" /* 7137 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 const require = globalThis.__r;
@@ -58,7 +58,7 @@ const View = fn(17).View;
 const AuthStates = fn(1074).AuthStates;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let closure_12 = createStyles.createStyles((arg0) => {
   const obj = { password: { marginTop: 24 }, button: { width: "100%", marginTop: 16 }, hint: { marginTop: 4 }, link: { alignSelf: "flex-start", paddingVertical: 4 }, separator: { paddingHorizontal: 16, paddingVertical: 4 }, content: null };
   let num = 0;

@@ -1,12 +1,12 @@
-// Module ID: 16918
-// Function ID: 16919
+// Module ID: 17058
+// Function ID: 17059
 // Name: useSearchMessageTimestamp
-// Dependencies: [19, 11, 7755, 2]
+// Dependencies: [19, 11, 7837, 2]
 // Exports: useSearchMessageTimestamp
 
-// Module 16918 (useSearchMessageTimestamp)
+// Module 17058 (useSearchMessageTimestamp)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import NotificationCenterUtils from "NotificationCenterUtils" /* 7755 */;
+import NotificationCenterUtils from "NotificationCenterUtils" /* 7837 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

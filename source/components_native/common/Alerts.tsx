@@ -1,21 +1,21 @@
-// Module ID: 17165
-// Function ID: 17166
+// Module ID: 17296
+// Function ID: 17297
 // Name: Alerts
-// Dependencies: [19, 17, 4632, 13867, 14520, 4831, 11695, 21, 17166, 17167, 17171, 17172, 4640, 576, 4350, 4985, 5043, 5666, 504, 558, 5057, 12575, 1177, 2]
+// Dependencies: [19, 17, 4714, 13960, 14615, 4913, 11785, 21, 17297, 17298, 17302, 17303, 4722, 576, 4432, 5067, 5125, 5748, 504, 558, 5139, 12666, 1177, 2]
 
-// Module 17165 (Alerts)
+// Module 17296 (Alerts)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import nativeDefault from "native" /* 576 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4985 */;
-import Dialog from "Dialog" /* 5043 */;
-import KeyboardAwareViewDefault from "KeyboardAwareView" /* 5666 */;
-import ModalRegistryDefault from "ModalRegistry" /* 17166 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5067 */;
+import Dialog from "Dialog" /* 5125 */;
+import KeyboardAwareViewDefault from "KeyboardAwareView" /* 5748 */;
+import ModalRegistryDefault from "ModalRegistry" /* 17297 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4632 */;
-import PermissionSpeakStore from "PermissionSpeakStore" /* 13867 */;
-import PermissionVADStore from "PermissionVADStore" /* 14520 */;
-import SurveyStore from "SurveyStore" /* 4831 */;
-import AlertStore from "AlertStore" /* 11695 */;
+import AccessibilityStore from "AccessibilityStore" /* 4714 */;
+import PermissionSpeakStore from "PermissionSpeakStore" /* 13960 */;
+import PermissionVADStore from "PermissionVADStore" /* 14615 */;
+import SurveyStore from "SurveyStore" /* 4913 */;
+import AlertStore from "AlertStore" /* 11785 */;
 
 const require = globalThis.__r;
 
@@ -65,7 +65,7 @@ let items3 = [SurveyStore];
 obj3.stores = items3;
 items1[2] = obj3;
 const stores = new ModalRegistryDefault(items1);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj4 = { alertWrapper: null, alertContentWrapper: null };
 let obj6 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -150,8 +150,8 @@ AlertWrapper.prototype["render"] = function render() {
   obj2.children = closure_1_14(KeyboardAwareViewDefault, obj3);
   return map1(Dialog.Dialog, obj2);
 };
-AlertWrapper.contextType = fn(4350).ThemeContext;
-let closure_18 = Object.freeze({ renderAlert: "Array", renderKey: "call", props: "default" });
+AlertWrapper.contextType = fn(4432).ThemeContext;
+let closure_18 = Object.freeze({ renderAlert: "isArray", renderKey: "accessible", props: "ty" });
 const tmp7 = new ModalRegistryDefault(items1);
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/Alerts.tsx");
@@ -183,7 +183,7 @@ export default noop.memo(function Alerts() {
           return <openModal.component />;
         };
       } else {
-        return { renderAlert: "Array", renderKey: "call", props: "default" };
+        return { renderAlert: "isArray", renderKey: "accessible", props: "ty" };
       }
     }
   });

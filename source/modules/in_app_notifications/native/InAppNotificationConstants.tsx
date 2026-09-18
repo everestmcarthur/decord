@@ -1,11 +1,11 @@
-// Module ID: 10245
-// Function ID: 10246
+// Module ID: 10339
+// Function ID: 10340
 // Name: InAppNotificationConstants
-// Dependencies: [576, 4376, 2]
+// Dependencies: [576, 4458, 2]
 
-// Module 10245 (InAppNotificationConstants)
+// Module 10339 (InAppNotificationConstants)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4458 */;
 import size from "module_2" /* 2 */;
 
 const obj = { duration: 220, easing: null };

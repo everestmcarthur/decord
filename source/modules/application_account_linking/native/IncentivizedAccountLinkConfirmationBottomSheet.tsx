@@ -1,21 +1,21 @@
-// Module ID: 17192
-// Function ID: 17193
+// Module ID: 17322
+// Function ID: 17323
 // Name: IncentivizedAccountLinkConfirmationBottomSheet
-// Dependencies: [19, 17, 4632, 1074, 21, 504, 15980, 1364, 8966, 15981, 5675, 5062, 1115, 13108, 576, 4607, 4334, 2025, 10377, 3141, 2]
+// Dependencies: [19, 17, 4714, 1074, 21, 504, 16075, 1364, 9050, 16076, 5757, 5144, 1115, 13199, 576, 4689, 4417, 2025, 10471, 3224, 2]
 // Exports: default
 
-// Module 17192 (IncentivizedAccountLinkConfirmationBottomSheet)
+// Module 17322 (IncentivizedAccountLinkConfirmationBottomSheet)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2025 */;
-import LinkingDefault from "Linking" /* 4334 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4607 */;
-import components_Button_Button from "components/Button/Button" /* 5062 */;
-import PromoSheet from "PromoSheet" /* 10377 */;
-import WindowLaunchIcon from "WindowLaunchIcon" /* 13108 */;
-import _modDef15980 from "module_15980" /* 15980 */;
+import LinkingDefault from "Linking" /* 4417 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4689 */;
+import components_Button_Button from "components/Button/Button" /* 5144 */;
+import PromoSheet from "PromoSheet" /* 10471 */;
+import WindowLaunchIcon from "WindowLaunchIcon" /* 13199 */;
+import _modDef16075 from "module_16075" /* 16075 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4632 */;
+import AccessibilityStore from "AccessibilityStore" /* 4714 */;
 
 require = fn;
 const Image = fn(17).Image;
@@ -29,7 +29,7 @@ export default function IncentivizedAccountLinkConfirmationBottomSheet() {
   const items = [AccessibilityStore];
   if (obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion)) {
     let obj2 = { source: null, style: null };
-    const obj3 = { uri: _modDef15980 };
+    const obj3 = { uri: _modDef16075 };
     obj2.source = obj3;
     const size = { width: v150, height: v150 };
     obj2.style = size;
@@ -38,23 +38,23 @@ export default function IncentivizedAccountLinkConfirmationBottomSheet() {
     let tmp9 = jsx;
   } else {
     if (tmpResult.isAndroid()) {
-      const obj4 = { url: tmp4(15981), style: null };
+      const obj4 = { url: tmp4(16076), style: null };
       const size1 = { width: v150, height: v150 };
       obj4.style = size1;
-      tmp3Result = tmp3(tmp4(8966), obj4);
+      tmp3Result = tmp3(tmp4(9050), obj4);
       tmp8 = tmp4;
       tmp9 = tmp3;
-      const tmp4Result = tmp4(8966);
+      const tmp4Result = tmp4(9050);
     } else {
       const obj5 = { source: null, resizeMode: "contain", style: null };
-      const obj6 = { uri: tmp4(15981) };
+      const obj6 = { uri: tmp4(16076) };
       obj5.source = obj6;
       const size2 = { width: v150, height: v150 };
       obj5.style = size2;
-      tmp3Result = tmp3(tmp4(5675), obj5);
+      tmp3Result = tmp3(tmp4(5757), obj5);
       tmp8 = tmp4;
       tmp9 = tmp3;
-      const tmp4Result2 = tmp4(5675);
+      const tmp4Result2 = tmp4(5757);
     }
     tmpResult = tmp(1364);
   }
@@ -71,9 +71,9 @@ export default function IncentivizedAccountLinkConfirmationBottomSheet() {
   const obj8 = { size: "sm", color: tmp8(576).colors.WHITE };
   const obj9 = { title: null, description: null, actions: null, illustration: null, onDismiss: null };
   const intl2 = tmp(1115).intl;
-  obj9.title = intl2.string(tmp8(3141).ublzTG);
+  obj9.title = intl2.string(tmp8(3224).ublzTG);
   const intl3 = tmp(1115).intl;
-  obj9.description = intl3.string(tmp8(3141).JgM2xu);
+  obj9.description = intl3.string(tmp8(3224).JgM2xu);
   obj9.actions = tmp9(components_Button_Button.Button, obj7);
   obj9.illustration = tmp3Result;
   obj9.onDismiss = function onDismiss() {

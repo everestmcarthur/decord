@@ -1,20 +1,20 @@
-// Module ID: 10478
-// Function ID: 10479
+// Module ID: 10572
+// Function ID: 10573
 // Name: StandardEmojiContent
-// Dependencies: [19, 17, 4461, 21, 4640, 576, 10479, 4296, 5675, 4636, 10480, 4292, 10432, 10482, 1115, 8748, 5062, 10484, 2]
+// Dependencies: [19, 17, 4543, 21, 4722, 576, 10573, 4379, 5757, 4718, 10574, 4375, 10526, 10576, 1115, 8831, 5144, 10578, 2]
 // Exports: default
 
-// Module 10478 (StandardEmojiContent)
+// Module 10572 (StandardEmojiContent)
 import nativeDefault from "native" /* 576 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4292 */;
-import EmojiUtilsDefault from "EmojiUtils" /* 4296 */;
-import useSharedMessageEmojiStyles from "useSharedMessageEmojiStyles" /* 10479 */;
-import EmojiActionCreators from "EmojiActionCreators" /* 10484 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4375 */;
+import EmojiUtilsDefault from "EmojiUtils" /* 4379 */;
+import useSharedMessageEmojiStyles from "useSharedMessageEmojiStyles" /* 10573 */;
+import EmojiActionCreators from "EmojiActionCreators" /* 10578 */;
 import noop from "module_19" /* 19 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4461 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4543 */;
 
-const Text_Text = tmp2(4636);
-const FastImageDefault = tmp5(5675);
+const Text_Text = tmp2(4718);
+const FastImageDefault = tmp5(5757);
 require = fn;
 function Emoji(surrogate) {
   surrogate = surrogate.surrogate;
@@ -38,7 +38,7 @@ function Emoji(surrogate) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = { emojiSurrogate: { lineHeight: 48, fontSize: 40, margin: 8 }, ctaContainer: { paddingTop: nativeDefault.space.PX_4 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);

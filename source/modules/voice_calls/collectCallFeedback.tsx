@@ -1,19 +1,19 @@
-// Module ID: 13738
-// Function ID: 13739
+// Module ID: 13830
+// Function ID: 13831
 // Name: collectCallFeedback
-// Dependencies: [9250, 1958, 1909, 4663, 2012, 1372, 9237, 4820, 9254, 9251, 573, 2]
+// Dependencies: [9334, 1958, 1909, 4745, 2012, 1372, 9321, 4902, 9338, 9335, 573, 2]
 // Exports: default
 
-// Module 13738 (collectCallFeedback)
+// Module 13830 (collectCallFeedback)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4820 */;
-import VideoBackgroundStore from "VideoBackgroundStore" /* 9250 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4902 */;
+import VideoBackgroundStore from "VideoBackgroundStore" /* 9334 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 import MediaEngineStore from "MediaEngineStore" /* 1909 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4663 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4745 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
 import UserStore from "UserStore" /* 1372 */;
-import AudioRouteStore from "AudioRouteStore" /* 9237 */;
+import AudioRouteStore from "AudioRouteStore" /* 9321 */;
 
 require = fn;
 const size = fn(2);
@@ -51,7 +51,7 @@ export default function collectCallFeedback(fn, arg1, arg2, videoEnabled) {
         if (VideoBackgroundStore.hasUsedBackgroundInCall) {
           const obj3 = {};
           const merged1 = Object.assign(obj);
-          const lastUsedVideoBackgroundOption = tmp5(9254).getLastUsedVideoBackgroundOption(UserStore.getCurrentUser());
+          const lastUsedVideoBackgroundOption = tmp5(9338).getLastUsedVideoBackgroundOption(UserStore.getCurrentUser());
           const videoDevices = MediaEngineStore.getVideoDevices();
           const tmp22 = videoDevices[MediaEngineStore.getVideoDeviceId(MediaEngineStore)];
           let name;
@@ -59,12 +59,12 @@ export default function collectCallFeedback(fn, arg1, arg2, videoEnabled) {
             name = tmp22.name;
           }
           const obj7 = { video_device_name: name, video_hardware_scaling_enabled: MediaEngineStore.getHardwareEncoding(), video_effect_type: null, video_effect_detail: null };
-          const tmp5Result = tmp5(9254);
-          obj7.video_effect_type = tmp5(9251).getEffectAnalyticsType(lastUsedVideoBackgroundOption);
-          const tmp5Result3 = tmp5(9251);
-          obj7.video_effect_detail = tmp5(9251).getEffectDetailAnalyticsName(lastUsedVideoBackgroundOption);
+          const tmp5Result = tmp5(9338);
+          obj7.video_effect_type = tmp5(9335).getEffectAnalyticsType(lastUsedVideoBackgroundOption);
+          const tmp5Result3 = tmp5(9335);
+          obj7.video_effect_detail = tmp5(9335).getEffectDetailAnalyticsName(lastUsedVideoBackgroundOption);
           const merged2 = Object.assign(obj7);
-          const tmp5Result4 = tmp5(9251);
+          const tmp5Result4 = tmp5(9335);
           const obj8 = { type: "VIDEO_BACKGROUND_SHOW_FEEDBACK", analyticsData: obj3 };
           DispatcherDefault.dispatch(obj8);
         } else {

@@ -1,8 +1,8 @@
-// Module ID: 6360
-// Function ID: 6361
+// Module ID: 6442
+// Function ID: 6443
 // Dependencies: [2]
 
-// Module 6360
+// Module 6442
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/MushroomIllocon-2x.png.js");

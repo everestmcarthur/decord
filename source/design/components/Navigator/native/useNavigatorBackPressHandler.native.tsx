@@ -1,11 +1,11 @@
-// Module ID: 5718
-// Function ID: 5719
+// Module ID: 5800
+// Function ID: 5801
 // Name: useNavigatorBackPressHandler
-// Dependencies: [19, 1485, 5057, 2]
+// Dependencies: [19, 1485, 5139, 2]
 // Exports: useNavigatorBackPressHandler
 
-// Module 5718 (useNavigatorBackPressHandler)
-import useBackPressHandler from "useBackPressHandler" /* 5057 */;
+// Module 5800 (useNavigatorBackPressHandler)
+import useBackPressHandler from "useBackPressHandler" /* 5139 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

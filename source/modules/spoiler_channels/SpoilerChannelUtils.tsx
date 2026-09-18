@@ -1,12 +1,12 @@
-// Module ID: 7443
-// Function ID: 7444
+// Module ID: 7525
+// Function ID: 7526
 // Name: SpoilerChannelUtils
-// Dependencies: [1958, 7444, 504, 2]
+// Dependencies: [1958, 7526, 504, 2]
 // Exports: shouldShowSpoilerGateForChannelId, useGetSpoilerGatingChannelId, useIsChannelSpoilerGated, useShouldShowSpoilerGateForChannelId
 
-// Module 7443 (SpoilerChannelUtils)
+// Module 7525 (SpoilerChannelUtils)
 import ChannelStore from "ChannelStore" /* 1958 */;
-import ChannelSpoilerAgreeStore from "ChannelSpoilerAgreeStore" /* 7444 */;
+import ChannelSpoilerAgreeStore from "ChannelSpoilerAgreeStore" /* 7526 */;
 
 const require = globalThis.__r;
 

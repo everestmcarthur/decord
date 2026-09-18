@@ -1,21 +1,21 @@
-// Module ID: 15676
-// Function ID: 15677
+// Module ID: 15771
+// Function ID: 15772
 // Name: LogoutSetting
-// Dependencies: [21, 510, 1094, 5499, 9838, 7104, 6703, 4986, 4990, 1115, 11622, 9227, 2]
+// Dependencies: [21, 510, 1094, 5581, 9932, 7186, 6785, 5068, 5072, 1115, 11714, 9311, 2]
 
-// Module 15676 (LogoutSetting)
+// Module 15771 (LogoutSetting)
 import Storage2 from "Storage" /* 510 */;
 import ConstantsIOS from "ConstantsIOS" /* 1094 */;
 import util from "util" /* 1115 */;
-import useAlertStore from "useAlertStore" /* 4986 */;
-import AlertModal from "AlertModal" /* 4990 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5499 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6703 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7104 */;
-import DoorExitIcon from "DoorExitIcon" /* 9227 */;
-import PushNotificationDefault from "PushNotification" /* 9838 */;
+import useAlertStore from "useAlertStore" /* 5068 */;
+import AlertModal from "AlertModal" /* 5072 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5581 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6785 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7186 */;
+import DoorExitIcon from "DoorExitIcon" /* 9311 */;
+import PushNotificationDefault from "PushNotification" /* 9932 */;
 import jsxProd from "jsxProd" /* 21 */;
-import SettingBuilders from "SettingBuilders" /* 11622 */;
+import SettingBuilders from "SettingBuilders" /* 11714 */;
 import size from "module_2" /* 2 */;
 
 function handleLogout() {

@@ -1,16 +1,16 @@
-// Module ID: 9386
-// Function ID: 9387
+// Module ID: 9470
+// Function ID: 9471
 // Name: XboxLinkDiscordConsent
-// Dependencies: [19, 9373, 1074, 9387, 21, 1484, 9388, 9415, 2]
+// Dependencies: [19, 9457, 1074, 9471, 21, 1484, 9472, 9499, 2]
 // Exports: default
 
-// Module 9386 (XboxLinkDiscordConsent)
+// Module 9470 (XboxLinkDiscordConsent)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const XboxLinkModalScenes = fn(9373).XboxLinkModalScenes;
+const XboxLinkModalScenes = fn(9457).XboxLinkModalScenes;
 const PlatformTypes = fn(1074).PlatformTypes;
-const XBOX_CLIENT_SCOPES = fn(9387).XBOX_CLIENT_SCOPES;
+const XBOX_CLIENT_SCOPES = fn(9471).XBOX_CLIENT_SCOPES;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/xbox/XboxLinkDiscordConsent.tsx");
@@ -28,5 +28,5 @@ export default function XboxLinkDiscordConsent(arg0) {
     navigation.push(XboxLinkModalScenes.ERROR);
   }, items1);
   const obj = navigation(1484);
-  return jsx(navigation(9388).TwoWayLinkDiscordConsent, { platformType: PlatformTypes.XBOX, callbackCode, callbackState, clientId: navigation(9415).ConsoleOAuthApplications.XBOX_APPLICATION_ID, scopes: XBOX_CLIENT_SCOPES, onNext: callback, onError: callback1 });
+  return jsx(navigation(9472).TwoWayLinkDiscordConsent, { platformType: PlatformTypes.XBOX, callbackCode, callbackState, clientId: navigation(9499).ConsoleOAuthApplications.XBOX_APPLICATION_ID, scopes: XBOX_CLIENT_SCOPES, onNext: callback, onError: callback1 });
 };

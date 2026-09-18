@@ -1,13 +1,13 @@
-// Module ID: 6031
-// Function ID: 6032
+// Module ID: 6113
+// Function ID: 6114
 // Name: DisplayNameLockeAbstractUI
-// Dependencies: [21, 5675, 6032, 2]
+// Dependencies: [21, 5757, 6114, 2]
 // Exports: DisplayNameLockeAbstractUI
 
-// Module 6031 (DisplayNameLockeAbstractUI)
+// Module 6113 (DisplayNameLockeAbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5675 */;
-import _modDef6032 from "module_6032" /* 6032 */;
+import FastImageDefault from "FastImage" /* 5757 */;
+import _modDef6114 from "module_6114" /* 6114 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const DisplayNameLockeAbstractUI = function DisplayNameLockeAbstractUI(wi
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6032 };
+  const obj2 = { uri: _modDef6114 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

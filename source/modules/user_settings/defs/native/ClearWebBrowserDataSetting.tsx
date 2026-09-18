@@ -1,23 +1,23 @@
-// Module ID: 15597
-// Function ID: 15598
+// Module ID: 15692
+// Function ID: 15693
 // Name: ClearWebBrowserDataSetting
-// Dependencies: [5, 8111, 4990, 1115, 4604, 4338, 11622, 1364, 1094, 2]
+// Dependencies: [5, 8194, 5072, 1115, 4686, 4420, 11714, 1364, 1094, 2]
 
-// Module 15597 (ClearWebBrowserDataSetting)
+// Module 15692 (ClearWebBrowserDataSetting)
 import util from "util" /* 1115 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import BrowserManager from "BrowserManager" /* 4604 */;
+import BrowserManager from "BrowserManager" /* 4686 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const ConstantsIOS = tmp(1094);
 require = fn;
-const SettingBuilders = fn(11622);
+const SettingBuilders = fn(11714);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.HNqvOh);
   },
-  parent: fn(8111).MobileUserSettings.WEB_BROWSER,
+  parent: fn(8194).MobileUserSettings.WEB_BROWSER,
   variant: "danger",
   onPress: function showClearWebBrowserDataAlert() {
     const obj2 = { key: "clear-web-browser-data", title: null, content: null, confirmText: null, onConfirm: null };
@@ -54,7 +54,7 @@ const pressable = SettingBuilders.createPressable({
             } else {
               v1 = 1;
               dependencyMap = 1;
-              const obj5 = { value: tmp4(4604).browserManagerClearWebsiteData(), done: false };
+              const obj5 = { value: tmp4(4686).browserManagerClearWebsiteData(), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -68,7 +68,7 @@ const pressable = SettingBuilders.createPressable({
             const obj7 = { key: "web-browser-data-cleared", content: null };
             const intl = tmp4(1115).intl;
             obj7.content = intl.string(tmp4(1115).t["zaEQz+"]);
-            v1(4338).open(obj7);
+            v1(4420).open(obj7);
             dependencyMap = 3;
             return { value: "HermesInternal", done: null };
           }

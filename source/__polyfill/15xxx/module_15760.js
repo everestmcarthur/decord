@@ -1,9 +1,33 @@
 // Module ID: 15760
 // Function ID: 15761
-// Dependencies: [1121]
+// Dependencies: [8511, 15761]
+// Exports: getYoutubeMeta
 
 // Module 15760
-import registerAsset from "module_1121" /* 1121 */;
+import _regeneratorRuntime2 from "_regeneratorRuntime" /* 15761 */;
+import module_8511 from "module_8511" /* 8511 */;
 
+let _regeneratorRuntime = module_8511(_regeneratorRuntime2);
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9pbnRs", scales: [1], hash: "895275c6d10d8df54595628c903e365d", name: "hu.messages.895275c6d10d8df54595628c903e365d.compiled.messages", type: "jsona" });
+export const getYoutubeMeta = function getYoutubeMeta(arg0) {
+  _regeneratorRuntime = arg0;
+  return _regeneratorRuntime.default.async(async function getYoutubeMeta$(next) {
+    next = next.next;
+    next.prev = next;
+    while (0 !== next) {
+      if (2 === next) {
+        sent = next.sent;
+        next.next = 5;
+        let _default = _regeneratorRuntime.default;
+        return _default.awrap(sent.json());
+      } else if (5 === next) {
+        let str = "return";
+        return next.abrupt("return", next.sent);
+      } else {
+        return next.stop();
+      }
+    }
+    next.next = 2;
+    return _regeneratorRuntime.default.awrap(fetch("https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=" + closure_0 + "&format=json"));
+  }, null, null, null, Promise);
+};

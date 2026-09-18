@@ -1,13 +1,13 @@
-// Module ID: 6355
-// Function ID: 6356
+// Module ID: 6437
+// Function ID: 6438
 // Name: MoneyBagIllocon
-// Dependencies: [21, 5675, 6356, 2]
+// Dependencies: [21, 5757, 6438, 2]
 // Exports: MoneyBagIllocon
 
-// Module 6355 (MoneyBagIllocon)
+// Module 6437 (MoneyBagIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5675 */;
-import _modDef6356 from "module_6356" /* 6356 */;
+import FastImageDefault from "FastImage" /* 5757 */;
+import _modDef6438 from "module_6438" /* 6438 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -20,7 +20,7 @@ export const MoneyBagIllocon = function MoneyBagIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6356 };
+  const obj2 = { uri: _modDef6438 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

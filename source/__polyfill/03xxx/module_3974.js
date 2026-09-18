@@ -1,16 +1,19 @@
 // Module ID: 3974
 // Function ID: 3975
-// Dependencies: [2028]
+// Dependencies: []
+// Exports: default
 
 // Module 3974
-import code from "module_2028" /* 2028 */;
 
-if (!code) {
-  const obj = { default: code };
-  let tmp3 = obj;
-} else {
-  tmp3 = code;
-}
-
-export default tmp3.default;
+export default function getTimezoneOffsetInMilliseconds(getFullYear) {
+  const fullYear = getFullYear.getFullYear();
+  const month = getFullYear.getMonth();
+  const hours = getFullYear.getHours();
+  const minutes = getFullYear.getMinutes();
+  const seconds = getFullYear.getSeconds();
+  const date1 = new Date(Date.UTC(fullYear, month, getFullYear.getDate(), hours, minutes, seconds, getFullYear.getMilliseconds()));
+  date1.setUTCFullYear(getFullYear.getFullYear());
+  const time = getFullYear.getTime();
+  return time - date1.getTime();
+};
 export default exports.default;

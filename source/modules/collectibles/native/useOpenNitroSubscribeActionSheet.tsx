@@ -1,11 +1,11 @@
-// Module ID: 13305
-// Function ID: 13306
+// Module ID: 13396
+// Function ID: 13397
 // Name: useOpenNitroSubscribeActionSheet
-// Dependencies: [19, 1074, 1374, 7276, 7536, 2]
+// Dependencies: [19, 1074, 1374, 7358, 7618, 2]
 // Exports: default
 
-// Module 13305 (useOpenNitroSubscribeActionSheet)
-import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7536 */;
+// Module 13396 (useOpenNitroSubscribeActionSheet)
+import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7618 */;
 import noop from "module_19" /* 19 */;
 
 const Constants = fn(1074);

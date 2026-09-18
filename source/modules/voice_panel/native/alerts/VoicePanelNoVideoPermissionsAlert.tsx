@@ -1,12 +1,12 @@
-// Module ID: 17443
-// Function ID: 17444
+// Module ID: 17573
+// Function ID: 17574
 // Name: VoicePanelNoVideoPermissionsAlert
-// Dependencies: [19, 21, 4990, 4990, 1115, 2]
+// Dependencies: [19, 21, 5072, 5072, 1115, 2]
 // Exports: default
 
-// Module 17443 (VoicePanelNoVideoPermissionsAlert)
+// Module 17573 (VoicePanelNoVideoPermissionsAlert)
 import util from "util" /* 1115 */;
-import AlertModal from "AlertModal" /* 4990 */;
+import AlertModal from "AlertModal" /* 5072 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

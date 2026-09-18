@@ -1,9 +1,5 @@
 // Module ID: 4472
 // Function ID: 4473
-// Dependencies: [4473]
+// Dependencies: []
 
 // Module 4472
-import _mod4473 from "module_4473" /* 4473 */;
-
-
-export default _mod4473;

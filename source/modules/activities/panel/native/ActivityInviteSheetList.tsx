@@ -1,20 +1,20 @@
-// Module ID: 17273
-// Function ID: 17274
+// Module ID: 17403
+// Function ID: 17404
 // Name: ActivityInviteSheetList
-// Dependencies: [19, 1074, 21, 4640, 5612, 576, 1177, 1115, 5210, 4607, 4498, 4636, 17274, 7095, 6738, 2]
+// Dependencies: [19, 1074, 21, 4722, 5694, 576, 1177, 1115, 5292, 4689, 4580, 4718, 17404, 7177, 6820, 2]
 // Exports: default
 
-// Module 17273 (ActivityInviteSheetList)
+// Module 17403 (ActivityInviteSheetList)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import RootNavigationRef from "RootNavigationRef" /* 4498 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4607 */;
-import Text_Text from "Text/Text" /* 4636 */;
-import Pressables from "Pressables" /* 5210 */;
-import ActivityInviteSheetRowDefault from "ActivityInviteSheetRow" /* 17274 */;
+import RootNavigationRef from "RootNavigationRef" /* 4580 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4689 */;
+import Text_Text from "Text/Text" /* 4718 */;
+import Pressables from "Pressables" /* 5292 */;
+import ActivityInviteSheetRowDefault from "ActivityInviteSheetRow" /* 17404 */;
 import noop from "module_19" /* 19 */;
-import TextStyles_mod from "TextStyles" /* 5612 */;
+import TextStyles_mod from "TextStyles" /* 5694 */;
 
 require = fn;
 function keyExtractor(item) {
@@ -60,7 +60,7 @@ function FriendsEmptyComponent() {
 const Fonts = fn(1074).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 const obj2 = { emptyTitle: null, emptyBody: null, goToFriendsLink: null };
 let obj3 = {};
 let TextStyles = TextStyles_mod;

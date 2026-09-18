@@ -1,9 +1,9 @@
-// Module ID: 10132
-// Function ID: 10133
+// Module ID: 10226
+// Function ID: 10227
 // Name: MobileAudioOutputExperiment
 // Dependencies: [1434, 2]
 
-// Module 10132 (MobileAudioOutputExperiment)
+// Module 10226 (MobileAudioOutputExperiment)
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

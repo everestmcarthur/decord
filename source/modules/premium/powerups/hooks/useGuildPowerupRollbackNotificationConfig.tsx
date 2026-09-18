@@ -1,13 +1,13 @@
-// Module ID: 12649
-// Function ID: 12650
+// Module ID: 12740
+// Function ID: 12741
 // Name: useGuildPowerupRollbackNotificationConfig
-// Dependencies: [4528, 504, 4532, 12650, 1944, 1115, 2429, 12652, 2]
+// Dependencies: [4610, 504, 4614, 12741, 1944, 1115, 2512, 12743, 2]
 // Exports: default
 
-// Module 12649 (useGuildPowerupRollbackNotificationConfig)
-import _modDef2429 from "module_2429" /* 2429 */;
-import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 12652 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 4528 */;
+// Module 12740 (useGuildPowerupRollbackNotificationConfig)
+import _modDef2512 from "module_2512" /* 2512 */;
+import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 12743 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 4610 */;
 
 const require = globalThis.__r;
 
@@ -21,7 +21,7 @@ export default function useGuildPowerupRollbackNotificationConfig(guildId, locat
   const stateFromStores = require("initialize").useStateFromStores(items, () => GuildPowerupsStore.getStateForGuild(closure_0));
   let tmp4;
   if (stateFromStores != null) {
-    tmp4 = stateFromStores.allPowerups[tmp(undefined, 4532).GUILD_POWERUP_MAX_FILE_SIZE_250_MB_SKU_ID];
+    tmp4 = stateFromStores.allPowerups[tmp(undefined, 4614).GUILD_POWERUP_MAX_FILE_SIZE_250_MB_SKU_ID];
   }
   if (tmp4 != null) {
     const storeRemovalDate = tmp4.storeRemovalDate;
@@ -46,7 +46,7 @@ export default function useGuildPowerupRollbackNotificationConfig(guildId, locat
           const obj2 = { dismissibleContent: tmp(1944).DismissibleContent.FILE_UPLOAD_POWERUP_ROLLBACK_NOTIFICATION, title: null, description: null };
           const intl = tmp(1115).intl;
           const obj3 = { dateString: getGuildPowerupFormattedDateStringDefault(storeRemovalDate) };
-          obj2.title = intl.formatToPlainString(_modDef2429["6e2ry1"], obj3);
+          obj2.title = intl.formatToPlainString(_modDef2512["6e2ry1"], obj3);
           const intl2 = tmp(1115).intl;
           const obj4 = { startDate: getGuildPowerupFormattedDateStringDefault(storeRemovalDate), endDate: getGuildPowerupFormattedDateStringDefault(storeRemovalDate), perkName: null, boostCount: null };
           let title1;
@@ -59,7 +59,7 @@ export default function useGuildPowerupRollbackNotificationConfig(guildId, locat
             cost1 = tmp4.cost;
           }
           obj4.boostCount = cost1;
-          obj2.description = intl2.formatToPlainString(_modDef2429.jd8fki, obj4);
+          obj2.description = intl2.formatToPlainString(_modDef2512.jd8fki, obj4);
           tmp5 = obj2;
         }
       }

@@ -1,30 +1,9 @@
 // Module ID: 14545
 // Function ID: 14546
-// Dependencies: []
-// Exports: default
+// Dependencies: [14523]
 
 // Module 14545
+import _mod14523 from "module_14523" /* 14523 */;
 
-export default () => (arg0) => {
-  closure_0 = arg0;
-  return {
-    features: {
-      apiResponse(request, response, tmp4Result) {
-        let status = response;
-        if (response) {
-          status = response.status;
-        }
-        if (status) {
-          status = typeof response.status === "number";
-        }
-        if (status) {
-          status = response.status >= 200;
-        }
-        if (status) {
-          status = response.status <= 299;
-        }
-        closure_0.send("api.response", { request, response, duration: tmp4Result }, !status);
-      }
-    }
-  };
-};
+
+export default _mod14523({}.isPrototypeOf);

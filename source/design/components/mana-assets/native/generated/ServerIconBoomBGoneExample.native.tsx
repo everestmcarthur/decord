@@ -1,13 +1,13 @@
-// Module ID: 6531
-// Function ID: 6532
+// Module ID: 6613
+// Function ID: 6614
 // Name: ServerIconBoomBGoneExample
-// Dependencies: [21, 5675, 6532, 2]
+// Dependencies: [21, 5757, 6614, 2]
 // Exports: ServerIconBoomBGoneExample
 
-// Module 6531 (ServerIconBoomBGoneExample)
+// Module 6613 (ServerIconBoomBGoneExample)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5675 */;
-import _modDef6532 from "module_6532" /* 6532 */;
+import FastImageDefault from "FastImage" /* 5757 */;
+import _modDef6614 from "module_6614" /* 6614 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const ServerIconBoomBGoneExample = function ServerIconBoomBGoneExample(wi
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6532 };
+  const obj2 = { uri: _modDef6614 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

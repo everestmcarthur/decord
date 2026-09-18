@@ -1,9 +1,9 @@
-// Module ID: 7764
-// Function ID: 7765
+// Module ID: 7846
+// Function ID: 7847
 // Name: Guilds
 // Dependencies: [5, 1976, 502, 2022, 2016, 1980, 3, 1987, 2020, 2018, 1972, 2]
 
-// Module 7764 (Guilds)
+// Module 7846 (Guilds)
 import LoggerDefault from "Logger" /* 3 */;
 import GuildRecordUtilsAll from "GuildRecordUtils" /* 1972 */;
 import DatabaseDaosDefault from "DatabaseDaos" /* 1987 */;

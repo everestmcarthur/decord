@@ -1,22 +1,22 @@
-// Module ID: 15044
-// Function ID: 15045
+// Module ID: 15138
+// Function ID: 15139
 // Name: FamilyCenterRequestorDetails
-// Dependencies: [19, 17, 21, 4640, 1177, 576, 8800, 15016, 4636, 2]
+// Dependencies: [19, 17, 21, 4722, 1177, 576, 8883, 15110, 4718, 2]
 // Exports: default
 
-// Module 15044 (FamilyCenterRequestorDetails)
+// Module 15138 (FamilyCenterRequestorDetails)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
-import Text_Text from "Text/Text" /* 4636 */;
-import useUserLinks from "useUserLinks" /* 8800 */;
-import FamilyCenterUsernameHeaderDefault from "FamilyCenterUsernameHeader" /* 15016 */;
+import Text_Text from "Text/Text" /* 4718 */;
+import useUserLinks from "useUserLinks" /* 8883 */;
+import FamilyCenterUsernameHeaderDefault from "FamilyCenterUsernameHeader" /* 15110 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = { container: { display: "flex", flexDirection: "row", flexGrow: 1, flexShrink: 1 }, avatar: { borderRadius: fn(1177).AVATAR_SIZE_MAP[fn(undefined, 1177).AvatarSizes.NORMAL] / 2, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, detailsContainer: null };
 let obj3 = { borderRadius: fn(1177).AVATAR_SIZE_MAP[fn(undefined, 1177).AvatarSizes.NORMAL] / 2, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj2.detailsContainer = { paddingLeft: nativeDefault.space.PX_12, paddingRight: nativeDefault.space.PX_4, flexGrow: 1, flexShrink: 1 };

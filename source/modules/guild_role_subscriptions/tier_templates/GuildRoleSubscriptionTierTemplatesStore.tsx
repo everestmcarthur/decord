@@ -1,9 +1,9 @@
-// Module ID: 15349
-// Function ID: 15350
+// Module ID: 15443
+// Function ID: 15444
 // Name: GuildRoleSubscriptionTierTemplatesStore
 // Dependencies: [1962, 1958, 504, 573, 2]
 
-// Module 15349 (GuildRoleSubscriptionTierTemplatesStore)
+// Module 15443 (GuildRoleSubscriptionTierTemplatesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ChannelRecord from "ChannelRecord" /* 1962 */;

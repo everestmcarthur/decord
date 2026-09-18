@@ -1,12 +1,12 @@
-// Module ID: 14743
-// Function ID: 14744
+// Module ID: 14837
+// Function ID: 14838
 // Name: BadgeGrid
-// Dependencies: [7265, 576, 2]
+// Dependencies: [7347, 576, 2]
 // Exports: getBadgeTileSize
 
-// Module 14743 (BadgeGrid)
+// Module 14837 (BadgeGrid)
 import nativeDefault from "native" /* 576 */;
-import ActionSheetConstants from "ActionSheetConstants" /* 7265 */;
+import ActionSheetConstants from "ActionSheetConstants" /* 7347 */;
 import size from "module_2" /* 2 */;
 
 const ACTION_SHEET_MAX_WIDTH = ActionSheetConstants.ACTION_SHEET_MAX_WIDTH;

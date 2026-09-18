@@ -1,8 +1,8 @@
-// Module ID: 5962
-// Function ID: 5963
+// Module ID: 6044
+// Function ID: 6045
 // Dependencies: [2]
 
-// Module 5962
+// Module 6044
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ClydeAnnouncementSpotIllustration-2x.png.js");

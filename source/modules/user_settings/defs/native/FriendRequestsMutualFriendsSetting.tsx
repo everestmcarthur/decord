@@ -1,25 +1,25 @@
-// Module ID: 15101
-// Function ID: 15102
+// Module ID: 15195
+// Function ID: 15196
 // Name: FriendRequestsMutualFriendsSetting
-// Dependencies: [19, 8111, 1074, 14948, 1936, 7109, 1385, 11622, 1115, 2]
+// Dependencies: [19, 8194, 1074, 15042, 1936, 7191, 1385, 11714, 1115, 2]
 
-// Module 15101 (FriendRequestsMutualFriendsSetting)
+// Module 15195 (FriendRequestsMutualFriendsSetting)
 import util from "util" /* 1115 */;
 import FlagUtilsAll from "FlagUtils" /* 1385 */;
 import UserSettings from "UserSettings" /* 1936 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7109 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 14948 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7191 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 15042 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const FriendSourceFlags = fn(1074).FriendSourceFlags;
-const SettingBuilders = fn(11622);
+const SettingBuilders = fn(11714);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.IqlCSq);
   },
-  parent: fn(8111).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8194).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: function useFriendRequestsMutualFriendsSettingValue() {
     const FriendSourceFlagsSetting = setting(1936).FriendSourceFlagsSetting;
     setting = FriendSourceFlagsSetting.useSetting();

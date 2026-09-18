@@ -1,10 +1,10 @@
-// Module ID: 8555
-// Function ID: 8556
+// Module ID: 8638
+// Function ID: 8639
 // Name: StageInstanceActionCreators
 // Dependencies: [5, 1074, 1271, 2]
 // Exports: endStageInstance, startStageInstance, updateStageInstance
 
-// Module 8555 (StageInstanceActionCreators)
+// Module 8638 (StageInstanceActionCreators)
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

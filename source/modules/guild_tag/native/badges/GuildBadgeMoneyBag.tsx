@@ -1,12 +1,12 @@
-// Module ID: 14061
-// Function ID: 14062
+// Module ID: 14156
+// Function ID: 14157
 // Name: GuildBadgeMoneyBag
-// Dependencies: [19, 21, 14031, 8606, 2]
+// Dependencies: [19, 21, 14126, 8689, 2]
 // Exports: GuildBadgeMoneyBag
 
-// Module 14061 (GuildBadgeMoneyBag)
-import inlineStyles from "inlineStyles" /* 8606 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 14031 */;
+// Module 14156 (GuildBadgeMoneyBag)
+import inlineStyles from "inlineStyles" /* 8689 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 14126 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

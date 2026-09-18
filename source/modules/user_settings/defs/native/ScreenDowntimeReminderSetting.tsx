@@ -1,17 +1,17 @@
-// Module ID: 15635
-// Function ID: 15636
+// Module ID: 15730
+// Function ID: 15731
 // Name: ScreenDowntimeReminderSetting
-// Dependencies: [10231, 8111, 15035, 8800, 11622, 1115, 504, 15636, 2]
+// Dependencies: [10325, 8194, 15129, 8883, 11714, 1115, 504, 15731, 2]
 
-// Module 15635 (ScreenDowntimeReminderSetting)
+// Module 15730 (ScreenDowntimeReminderSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
-import useUserIsTeenAgeGroupDefault from "useUserIsTeenAgeGroup" /* 15035 */;
-import NotificationActionCreatorsDefault from "NotificationActionCreators" /* 15636 */;
-import NotificationSettingsStore from "NotificationSettingsStore" /* 10231 */;
+import useUserIsTeenAgeGroupDefault from "useUserIsTeenAgeGroup" /* 15129 */;
+import NotificationActionCreatorsDefault from "NotificationActionCreators" /* 15731 */;
+import NotificationSettingsStore from "NotificationSettingsStore" /* 10325 */;
 
 require = fn;
-const SettingBuilders = fn(11622);
+const SettingBuilders = fn(11714);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
@@ -21,7 +21,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.TummoQ);
   },
-  parent: fn(8111).MobileUserSettings.NOTIFICATIONS,
+  parent: fn(8194).MobileUserSettings.NOTIFICATIONS,
   useValue() {
     const items = [NotificationSettingsStore];
     return initialize.useStateFromStores(items, () => NotificationSettingsStore.screenDowntimeReminder);

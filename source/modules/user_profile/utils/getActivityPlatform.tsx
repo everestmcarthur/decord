@@ -1,12 +1,12 @@
-// Module ID: 13171
-// Function ID: 13172
+// Module ID: 13262
+// Function ID: 13263
 // Name: getActivityPlatform
-// Dependencies: [1074, 13170, 11045, 5371, 8493, 13157, 13158, 13172, 13173, 2]
+// Dependencies: [1074, 13261, 11139, 5453, 8576, 13248, 13249, 13263, 13264, 2]
 // Exports: default
 
-// Module 13171 (getActivityPlatform)
+// Module 13262 (getActivityPlatform)
 import Constants from "Constants" /* 1074 */;
-import parseProviderRouteHeadlessSessionIdDefault from "parseProviderRouteHeadlessSessionId" /* 13170 */;
+import parseProviderRouteHeadlessSessionIdDefault from "parseProviderRouteHeadlessSessionId" /* 13261 */;
 import size from "module_2" /* 2 */;
 
 const PlatformTypes = Constants.PlatformTypes;
@@ -19,18 +19,18 @@ export default function getActivityPlatform(session_id) {
   const tmp3 = parseProviderRouteHeadlessSessionIdDefault(session_id.session_id);
   if (null != tmp3) {
     return tmp3;
-  } else if (tmp(11045)(session_id)) {
-    return tmp(5371).get(PlatformTypes.SPOTIFY);
-  } else if (tmp(8493)(session_id)) {
-    return tmp(5371).get(PlatformTypes.CRUNCHYROLL);
-  } else if (tmp(13157)(session_id)) {
-    return tmp(5371).get(PlatformTypes.XBOX);
-  } else if (tmp(13158)(session_id)) {
-    return tmp(5371).get(PlatformTypes.PLAYSTATION);
+  } else if (tmp(11139)(session_id)) {
+    return tmp(5453).get(PlatformTypes.SPOTIFY);
+  } else if (tmp(8576)(session_id)) {
+    return tmp(5453).get(PlatformTypes.CRUNCHYROLL);
+  } else if (tmp(13248)(session_id)) {
+    return tmp(5453).get(PlatformTypes.XBOX);
+  } else if (tmp(13249)(session_id)) {
+    return tmp(5453).get(PlatformTypes.PLAYSTATION);
   } else {
-    if (!tmp(13172)(session_id)) {
-      if (!tmp(13173)(session_id)) {
-        const found = tmp(5371).find((name) => name.name === session_id.name);
+    if (!tmp(13263)(session_id)) {
+      if (!tmp(13264)(session_id)) {
+        const found = tmp(5453).find((name) => name.name === session_id.name);
         let tmp5 = null;
         if (null != found) {
           tmp5 = null;
@@ -41,6 +41,6 @@ export default function getActivityPlatform(session_id) {
         return tmp5;
       }
     }
-    return tmp(5371).get(PlatformTypes.META_QUEST_OR_HORIZON);
+    return tmp(5453).get(PlatformTypes.META_QUEST_OR_HORIZON);
   }
 };

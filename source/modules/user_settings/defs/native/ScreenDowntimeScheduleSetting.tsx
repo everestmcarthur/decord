@@ -1,14 +1,14 @@
-// Module ID: 15637
-// Function ID: 15638
+// Module ID: 15732
+// Function ID: 15733
 // Name: ScreenDowntimeScheduleSetting
-// Dependencies: [8111, 15035, 8800, 11622, 1115, 1936, 2]
+// Dependencies: [8194, 15129, 8883, 11714, 1115, 1936, 2]
 
-// Module 15637 (ScreenDowntimeScheduleSetting)
+// Module 15732 (ScreenDowntimeScheduleSetting)
 import util from "util" /* 1115 */;
 import UserSettings from "UserSettings" /* 1936 */;
-import SettingsConstants from "SettingsConstants" /* 8111 */;
-import useUserIsTeenAgeGroupDefault from "useUserIsTeenAgeGroup" /* 15035 */;
-import SettingBuilders from "SettingBuilders" /* 11622 */;
+import SettingsConstants from "SettingsConstants" /* 8194 */;
+import useUserIsTeenAgeGroupDefault from "useUserIsTeenAgeGroup" /* 15129 */;
+import SettingBuilders from "SettingBuilders" /* 11714 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({

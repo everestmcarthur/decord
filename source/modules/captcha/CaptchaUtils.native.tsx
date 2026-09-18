@@ -1,18 +1,18 @@
-// Module ID: 17535
-// Function ID: 17536
+// Module ID: 17616
+// Function ID: 17617
 // Name: captcha/CaptchaUtils
-// Dependencies: [4330, 11433, 504, 4607, 17536, 1897, 11431, 2]
+// Dependencies: [4413, 11531, 504, 4689, 17617, 1897, 11529, 2]
 
-// Module 17535 (captcha/CaptchaUtils)
+// Module 17616 (captcha/CaptchaUtils)
 import initialize from "initialize" /* 504 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4607 */;
-import SharedCaptchaUtils from "SharedCaptchaUtils" /* 11431 */;
-import ActionSheetStore from "ActionSheetStore" /* 4330 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4689 */;
+import SharedCaptchaUtils from "SharedCaptchaUtils" /* 11529 */;
+import ActionSheetStore from "ActionSheetStore" /* 4413 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const CAPTCHA_MODAL_KEY = fn(11433).CAPTCHA_MODAL_KEY;
+const CAPTCHA_MODAL_KEY = fn(11531).CAPTCHA_MODAL_KEY;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/captcha/CaptchaUtils.native.tsx");
 
@@ -37,7 +37,7 @@ export default {
     };
     const merged = Object.assign(obj);
     const merged1 = Object.assign(options.options);
-    obj2.openLazy(require("asyncRequireImpl")(17536, dependencyMap.paths), CAPTCHA_MODAL_KEY, obj3);
+    obj2.openLazy(require("asyncRequireImpl")(17617, dependencyMap.paths), CAPTCHA_MODAL_KEY, obj3);
   },
   showCaptchaAsync(nextResult1) {
     if (arg1 === undefined) {

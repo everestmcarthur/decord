@@ -1,55 +1,55 @@
-// Module ID: 14029
-// Function ID: 14030
+// Module ID: 14124
+// Function ID: 14125
 // Name: badges/GuildBadge
-// Dependencies: [19, 8080, 21, 14030, 14033, 14034, 14035, 14036, 14037, 14038, 14039, 14040, 14041, 14042, 14043, 14044, 14045, 14046, 14047, 14048, 14049, 14050, 14051, 14052, 14053, 14054, 14055, 14056, 14057, 14058, 14059, 14060, 14061, 14062, 14063, 14064, 14065, 14066, 14067, 14068, 14069, 14070, 14071, 14072, 2]
+// Dependencies: [19, 8163, 21, 14125, 14128, 14129, 14130, 14131, 14132, 14133, 14134, 14135, 14136, 14137, 14138, 14139, 14140, 14141, 14142, 14143, 14144, 14145, 14146, 14147, 14148, 14149, 14150, 14151, 14152, 14153, 14154, 14155, 14156, 14157, 14158, 14159, 14160, 14161, 14162, 14163, 14164, 14165, 14166, 14167, 2]
 // Exports: GuildBadge
 
-// Module 14029 (badges/GuildBadge)
-import GuildBadgeSword from "GuildBadgeSword" /* 14030 */;
-import GuildBadgeWaterDrop from "GuildBadgeWaterDrop" /* 14033 */;
-import GuildBadgeSkull from "GuildBadgeSkull" /* 14034 */;
-import GuildBadgeToadstool from "GuildBadgeToadstool" /* 14035 */;
-import GuildBadgeMoon from "GuildBadgeMoon" /* 14036 */;
-import GuildBadgeLightning from "GuildBadgeLightning" /* 14037 */;
-import GuildBadgeLeaf from "GuildBadgeLeaf" /* 14038 */;
-import GuildBadgeHeart from "GuildBadgeHeart" /* 14039 */;
-import GuildBadgeFire from "GuildBadgeFire" /* 14040 */;
-import GuildBadgeCompass from "GuildBadgeCompass" /* 14041 */;
-import GuildBadgeCrosshairs from "GuildBadgeCrosshairs" /* 14042 */;
-import GuildBadgeFlower from "GuildBadgeFlower" /* 14043 */;
-import GuildBadgeForce from "GuildBadgeForce" /* 14044 */;
-import GuildBadgeGem from "GuildBadgeGem" /* 14045 */;
-import GuildBadgeLava from "GuildBadgeLava" /* 14046 */;
-import GuildBadgePsychic from "GuildBadgePsychic" /* 14047 */;
-import GuildBadgeSmoke from "GuildBadgeSmoke" /* 14048 */;
-import GuildBadgeSnow from "GuildBadgeSnow" /* 14049 */;
-import GuildBadgeSound from "GuildBadgeSound" /* 14050 */;
-import GuildBadgeSun from "GuildBadgeSun" /* 14051 */;
-import GuildBadgeWind from "GuildBadgeWind" /* 14052 */;
-import GuildBadgeBunny from "GuildBadgeBunny" /* 14053 */;
-import GuildBadgeDog from "GuildBadgeDog" /* 14054 */;
-import GuildBadgeFrog from "GuildBadgeFrog" /* 14055 */;
-import GuildBadgeGoat from "GuildBadgeGoat" /* 14056 */;
-import GuildBadgeCat from "GuildBadgeCat" /* 14057 */;
-import GuildBadgeDiamond from "GuildBadgeDiamond" /* 14058 */;
-import GuildBadgeCrown from "GuildBadgeCrown" /* 14059 */;
-import GuildBadgeTrophy from "GuildBadgeTrophy" /* 14060 */;
-import GuildBadgeMoneyBag from "GuildBadgeMoneyBag" /* 14061 */;
-import GuildBadgeDollarSign from "GuildBadgeDollarSign" /* 14062 */;
-import GuildBadgeClover from "GuildBadgeClover" /* 14063 */;
-import GuildBadgeBlossom from "GuildBadgeBlossom" /* 14064 */;
-import GuildBadgePottedPlant from "GuildBadgePottedPlant" /* 14065 */;
-import GuildBadgeMaple from "GuildBadgeMaple" /* 14066 */;
-import GuildBadgeWiltedFlower from "GuildBadgeWiltedFlower" /* 14067 */;
-import GuildBadgeButterfly from "GuildBadgeButterfly" /* 14068 */;
-import GuildBadgeSnail from "GuildBadgeSnail" /* 14069 */;
-import GuildBadgeCaterpillar from "GuildBadgeCaterpillar" /* 14070 */;
-import GuildBadgeSpider from "GuildBadgeSpider" /* 14071 */;
-import GuildBadgeBee from "GuildBadgeBee" /* 14072 */;
+// Module 14124 (badges/GuildBadge)
+import GuildBadgeSword from "GuildBadgeSword" /* 14125 */;
+import GuildBadgeWaterDrop from "GuildBadgeWaterDrop" /* 14128 */;
+import GuildBadgeSkull from "GuildBadgeSkull" /* 14129 */;
+import GuildBadgeToadstool from "GuildBadgeToadstool" /* 14130 */;
+import GuildBadgeMoon from "GuildBadgeMoon" /* 14131 */;
+import GuildBadgeLightning from "GuildBadgeLightning" /* 14132 */;
+import GuildBadgeLeaf from "GuildBadgeLeaf" /* 14133 */;
+import GuildBadgeHeart from "GuildBadgeHeart" /* 14134 */;
+import GuildBadgeFire from "GuildBadgeFire" /* 14135 */;
+import GuildBadgeCompass from "GuildBadgeCompass" /* 14136 */;
+import GuildBadgeCrosshairs from "GuildBadgeCrosshairs" /* 14137 */;
+import GuildBadgeFlower from "GuildBadgeFlower" /* 14138 */;
+import GuildBadgeForce from "GuildBadgeForce" /* 14139 */;
+import GuildBadgeGem from "GuildBadgeGem" /* 14140 */;
+import GuildBadgeLava from "GuildBadgeLava" /* 14141 */;
+import GuildBadgePsychic from "GuildBadgePsychic" /* 14142 */;
+import GuildBadgeSmoke from "GuildBadgeSmoke" /* 14143 */;
+import GuildBadgeSnow from "GuildBadgeSnow" /* 14144 */;
+import GuildBadgeSound from "GuildBadgeSound" /* 14145 */;
+import GuildBadgeSun from "GuildBadgeSun" /* 14146 */;
+import GuildBadgeWind from "GuildBadgeWind" /* 14147 */;
+import GuildBadgeBunny from "GuildBadgeBunny" /* 14148 */;
+import GuildBadgeDog from "GuildBadgeDog" /* 14149 */;
+import GuildBadgeFrog from "GuildBadgeFrog" /* 14150 */;
+import GuildBadgeGoat from "GuildBadgeGoat" /* 14151 */;
+import GuildBadgeCat from "GuildBadgeCat" /* 14152 */;
+import GuildBadgeDiamond from "GuildBadgeDiamond" /* 14153 */;
+import GuildBadgeCrown from "GuildBadgeCrown" /* 14154 */;
+import GuildBadgeTrophy from "GuildBadgeTrophy" /* 14155 */;
+import GuildBadgeMoneyBag from "GuildBadgeMoneyBag" /* 14156 */;
+import GuildBadgeDollarSign from "GuildBadgeDollarSign" /* 14157 */;
+import GuildBadgeClover from "GuildBadgeClover" /* 14158 */;
+import GuildBadgeBlossom from "GuildBadgeBlossom" /* 14159 */;
+import GuildBadgePottedPlant from "GuildBadgePottedPlant" /* 14160 */;
+import GuildBadgeMaple from "GuildBadgeMaple" /* 14161 */;
+import GuildBadgeWiltedFlower from "GuildBadgeWiltedFlower" /* 14162 */;
+import GuildBadgeButterfly from "GuildBadgeButterfly" /* 14163 */;
+import GuildBadgeSnail from "GuildBadgeSnail" /* 14164 */;
+import GuildBadgeCaterpillar from "GuildBadgeCaterpillar" /* 14165 */;
+import GuildBadgeSpider from "GuildBadgeSpider" /* 14166 */;
+import GuildBadgeBee from "GuildBadgeBee" /* 14167 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const GuildTagBadgeKind = fn(8080).GuildTagBadgeKind;
+const GuildTagBadgeKind = fn(8163).GuildTagBadgeKind;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_tag/native/badges/GuildBadge.tsx");

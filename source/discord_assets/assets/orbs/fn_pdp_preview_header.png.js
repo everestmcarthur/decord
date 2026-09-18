@@ -1,8 +1,8 @@
-// Module ID: 13299
-// Function ID: 13300
+// Module ID: 13390
+// Function ID: 13391
 // Dependencies: [2]
 
-// Module 13299
+// Module 13390
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/orbs/fn_pdp_preview_header.png.js");

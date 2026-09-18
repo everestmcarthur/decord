@@ -1,30 +1,30 @@
-// Module ID: 17227
-// Function ID: 17228
+// Module ID: 17357
+// Function ID: 17358
 // Name: LaunchPadSearchResults
-// Dependencies: [19, 17, 2026, 7750, 1980, 4822, 21, 4640, 576, 16906, 7456, 504, 5069, 17228, 5210, 16907, 17229, 5672, 16909, 17230, 9986, 17231, 17236, 17237, 17239, 16266, 4636, 1115, 1478, 16908, 7186, 2]
+// Dependencies: [19, 17, 2026, 7832, 1980, 4904, 21, 4722, 576, 17046, 7538, 504, 5151, 17358, 5292, 17047, 17359, 5754, 17049, 17360, 10080, 17361, 17366, 17367, 17369, 16363, 4718, 1115, 1478, 17048, 7268, 2]
 
-// Module 17227 (LaunchPadSearchResults)
+// Module 17357 (LaunchPadSearchResults)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4636 */;
-import GuildIconDefault from "GuildIcon" /* 5672 */;
-import transitionToGuild from "transitionToGuild" /* 7456 */;
-import sortByMatchScore from "sortByMatchScore" /* 9986 */;
-import RedesignCategory from "RedesignCategory" /* 16266 */;
-import getLayoutStylesDefault from "getLayoutStyles" /* 16906 */;
-import renderChannelWrapperDefault from "renderChannelWrapper" /* 16907 */;
-import getScaledChannelRowHeightDefault from "getScaledChannelRowHeight" /* 16908 */;
-import renderChannelContentDefault from "renderChannelContent" /* 16909 */;
-import renderChannelPressableWrapperDefault from "renderChannelPressableWrapper" /* 17228 */;
-import UnreadBadgeDefault from "UnreadBadge" /* 17229 */;
-import shared_renderChannelBadgeDefault from "shared/renderChannelBadge" /* 17230 */;
-import shared_TextChannelDefault from "shared/TextChannel" /* 17231 */;
-import shared_DMChannelDefault from "shared/DMChannel" /* 17236 */;
-import VoiceOrStageChannelDefault from "VoiceOrStageChannel" /* 17237 */;
-import LaunchPadSearchResultUserDefault from "LaunchPadSearchResultUser" /* 17239 */;
+import Text_Text from "Text/Text" /* 4718 */;
+import GuildIconDefault from "GuildIcon" /* 5754 */;
+import transitionToGuild from "transitionToGuild" /* 7538 */;
+import sortByMatchScore from "sortByMatchScore" /* 10080 */;
+import RedesignCategory from "RedesignCategory" /* 16363 */;
+import getLayoutStylesDefault from "getLayoutStyles" /* 17046 */;
+import renderChannelWrapperDefault from "renderChannelWrapper" /* 17047 */;
+import getScaledChannelRowHeightDefault from "getScaledChannelRowHeight" /* 17048 */;
+import renderChannelContentDefault from "renderChannelContent" /* 17049 */;
+import renderChannelPressableWrapperDefault from "renderChannelPressableWrapper" /* 17358 */;
+import UnreadBadgeDefault from "UnreadBadge" /* 17359 */;
+import shared_renderChannelBadgeDefault from "shared/renderChannelBadge" /* 17360 */;
+import shared_TextChannelDefault from "shared/TextChannel" /* 17361 */;
+import shared_DMChannelDefault from "shared/DMChannel" /* 17366 */;
+import VoiceOrStageChannelDefault from "VoiceOrStageChannel" /* 17367 */;
+import LaunchPadSearchResultUserDefault from "LaunchPadSearchResultUser" /* 17369 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2026 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 7750 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 7832 */;
 import GuildStore from "GuildStore" /* 1980 */;
 
 require = fn;
@@ -37,24 +37,24 @@ function renderItemJSX(result) {
     if (sortByMatchScore.AutocompleterResultTypes.GUILD === type) {
       const obj2 = { guild: result.record };
       return React7(closure_14, obj2);
-    } else if (tmp13(9986).AutocompleterResultTypes.TEXT_CHANNEL === type) {
+    } else if (tmp13(10080).AutocompleterResultTypes.TEXT_CHANNEL === type) {
       const obj3 = { channel: result.record, navigationReplace: true, showGuildBadgeIcon: true };
       return React7(shared_TextChannelDefault, obj3);
-    } else if (tmp13(9986).AutocompleterResultTypes.GROUP_DM === type) {
+    } else if (tmp13(10080).AutocompleterResultTypes.GROUP_DM === type) {
       const obj5 = { channel: result.record, navigationReplace: true };
       return React7(shared_DMChannelDefault, obj5);
-    } else if (tmp13(9986).AutocompleterResultTypes.VOICE_CHANNEL === type) {
+    } else if (tmp13(10080).AutocompleterResultTypes.VOICE_CHANNEL === type) {
       const obj6 = { channel: result.record };
       return React7(VoiceOrStageChannelDefault, obj6);
-    } else if (tmp13(9986).AutocompleterResultTypes.USER === type) {
+    } else if (tmp13(10080).AutocompleterResultTypes.USER === type) {
       ({ record: obj4.user, comparator: obj4.comparator } = result);
       return React7(LaunchPadSearchResultUserDefault, { user: null, comparator: null });
-    } else if (tmp13(9986).AutocompleterResultTypes.HEADER === type) {
+    } else if (tmp13(10080).AutocompleterResultTypes.HEADER === type) {
       const obj8 = { name: result.record.text, styles: tmp };
-      return tmp13(16266).renderCategoryItem(obj8);
+      return tmp13(16363).renderCategoryItem(obj8);
     } else {
       const obj = { variant: "text-sm/semibold", children: result.type };
-      return React7(tmp13(4636).Text, obj);
+      return React7(tmp13(4718).Text, obj);
     }
   }
 }
@@ -65,11 +65,11 @@ function renderSearchResultsSection() {
   return React7(closure_16, obj);
 }
 const View = fn(17).View;
-const UnreadSetting = fn(4822).UnreadSetting;
+const UnreadSetting = fn(4904).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
 const scrollIndicatorInsets = { bottom: 24 };
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj = { listContainer: { minHeight: 16 }, list: { flex: -1, marginTop: 8 }, guildIcon: { borderRadius: nativeDefault.radii.sm }, categoryWrapper: null, pressable: null, pressableUnderlayColor: null };
 let obj3 = { borderRadius: nativeDefault.radii.sm };
 obj.categoryWrapper = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
@@ -89,8 +89,8 @@ let closure_14 = noop.memo((guild) => {
   const stateFromStoresObject = guild(504).useStateFromStoresObject(items1, () => ({ unread: GuildReadStateStore.hasUnread(guild.id), mentionCount: GuildReadStateStore.getMentionCount(guild.id), isMentionLowImportance: GuildReadStateStore.getIsMentionLowImportance(guild.id) }));
   ({ unread, mentionCount, isMentionLowImportance } = stateFromStoresObject);
   const obj = guild(504);
-  const fontScale = guild(5069).useFontScale();
-  const obj2 = guild(5069);
+  const fontScale = guild(5151).useFontScale();
+  const obj2 = guild(5151);
   const items2 = [LocaleStore];
   const stateFromStores = guild(504).useStateFromStores(items2, () => locale.locale);
   const obj3 = guild(504);
@@ -111,7 +111,7 @@ let closure_14 = noop.memo((guild) => {
   items4[2] = renderChannelContentDefault(obj8);
   obj5.children = items4;
   obj4.children = tmp8(closure_11(closure_10, obj5), { fontScale });
-  return tmp7(closure_9(guild(5210).PressableHighlight, obj4));
+  return tmp7(closure_9(guild(5292).PressableHighlight, obj4));
 });
 let closure_16 = noop.memo((arg0) => {
   ({ name, onPress, note } = arg0);

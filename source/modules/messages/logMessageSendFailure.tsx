@@ -1,12 +1,12 @@
-// Module ID: 7963
-// Function ID: 7964
+// Module ID: 8046
+// Function ID: 8047
 // Name: logMessageSendFailure
-// Dependencies: [1074, 4820, 2]
+// Dependencies: [1074, 4902, 2]
 // Exports: getAttachmentMimeTypes, logMessageSendFailure
 
-// Module 7963 (logMessageSendFailure)
+// Module 8046 (logMessageSendFailure)
 import Constants from "Constants" /* 1074 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4820 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4902 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;

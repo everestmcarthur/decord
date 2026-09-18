@@ -1,18 +1,18 @@
-// Module ID: 12692
-// Function ID: 12693
+// Module ID: 12783
+// Function ID: 12784
 // Name: GuildPowerupsDeactivateAlert
-// Dependencies: [17, 21, 4640, 576, 12693, 12694, 12695, 4990, 6721, 1115, 2429, 4990, 4636, 2]
+// Dependencies: [17, 21, 4722, 576, 12784, 12785, 12786, 5072, 6803, 1115, 2512, 5072, 4718, 2]
 // Exports: default
 
-// Module 12692 (GuildPowerupsDeactivateAlert)
+// Module 12783 (GuildPowerupsDeactivateAlert)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
-import _modDef2429 from "module_2429" /* 2429 */;
-import Text_Text from "Text/Text" /* 4636 */;
-import useGuildPowerupOnDeactivateDefault from "useGuildPowerupOnDeactivate" /* 12693 */;
-import useDeactivateWarningTextDefault from "useDeactivateWarningText" /* 12694 */;
+import _modDef2512 from "module_2512" /* 2512 */;
+import Text_Text from "Text/Text" /* 4718 */;
+import useGuildPowerupOnDeactivateDefault from "useGuildPowerupOnDeactivate" /* 12784 */;
+import useDeactivateWarningTextDefault from "useDeactivateWarningText" /* 12785 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4640 */;
+import createStyles from "createStyles" /* 4722 */;
 import size_mod from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -44,13 +44,13 @@ export default function GuildPowerupsDeactivateAlert(arg0) {
   obj3.children = closure_4(require("CircleErrorIcon").CircleErrorIcon, { color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT, size: "custom", style: { width: 40, height: 40 } });
   obj2.header = closure_4(View, obj3);
   const intl = require("util").intl;
-  obj2.title = intl.formatToPlainString(_modDef2429.iEBw1M, { perk: powerup.title });
+  obj2.title = intl.formatToPlainString(_modDef2512.iEBw1M, { perk: powerup.title });
   const intl2 = require("util").intl;
-  obj2.content = intl2.formatToPlainString(_modDef2429["7o0K+2"], { perk: powerup.title });
+  obj2.content = intl2.formatToPlainString(_modDef2512["7o0K+2"], { perk: powerup.title });
   let tmp7Result = null != error;
   if (tmp7Result) {
     const obj7 = { style: tmp.warningText, variant: "text-xs/semibold", color: "text-feedback-critical", children: error };
-    tmp7Result = tmp7(tmp5(4636).Text, obj7);
+    tmp7Result = tmp7(tmp5(4718).Text, obj7);
   }
   const obj8 = { children: null };
   const items = [tmp7Result, , ];
@@ -63,7 +63,7 @@ export default function GuildPowerupsDeactivateAlert(arg0) {
     text: null
   };
   const intl3 = tmp5(1115).intl;
-  obj9.text = intl3.string(_modDef2429.PYPdl4);
+  obj9.text = intl3.string(_modDef2512.PYPdl4);
   items[1] = closure_4(require("AlertModal").AlertActionButton, obj9, "deactivate");
   const obj10 = {
     onPress() {

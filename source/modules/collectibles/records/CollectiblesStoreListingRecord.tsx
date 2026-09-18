@@ -1,11 +1,11 @@
-// Module ID: 7665
-// Function ID: 7666
+// Module ID: 7747
+// Function ID: 7748
 // Name: CollectiblesStoreListingRecord
-// Dependencies: [1387, 7666, 1092, 2]
+// Dependencies: [1387, 7748, 1092, 2]
 
-// Module 7665 (CollectiblesStoreListingRecord)
+// Module 7747 (CollectiblesStoreListingRecord)
 import utils_ColorUtils from "utils/ColorUtils" /* 1092 */;
-import tinycolorDefault from "tinycolor" /* 7666 */;
+import tinycolorDefault from "tinycolor" /* 7748 */;
 import Record from "Record" /* 1387 */;
 
 require = fn;

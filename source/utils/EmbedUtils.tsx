@@ -1,15 +1,15 @@
-// Module ID: 4977
-// Function ID: 4978
+// Module ID: 5059
+// Function ID: 5060
 // Name: EmbedUtils
-// Dependencies: [1074, 4978, 11, 1385, 12, 4231, 1092, 4865, 2]
+// Dependencies: [1074, 5060, 11, 1385, 12, 4314, 1092, 4947, 2]
 // Exports: canEmbedLinks, getMaxEmbedMediaSize, isCollectiblesShopArticleEmbed, isEmbedInline, isGameProfileArticleEmbed, isServerShopArticleEmbed, isSocialLayerStorefrontArticleEmbed, isUserProfileArticleEmbed, mergeEmbedsOnURL, sanitizeEmbed, shouldStripEmbeds
 
-// Module 4977 (EmbedUtils)
+// Module 5059 (EmbedUtils)
 import _modDef12 from "module_12" /* 12 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1092 */;
 import FlagUtils from "FlagUtils" /* 1385 */;
-import InteractionComponentUtils from "InteractionComponentUtils" /* 4865 */;
-import EmbedConstants from "EmbedConstants" /* 4978 */;
+import InteractionComponentUtils from "InteractionComponentUtils" /* 4947 */;
+import EmbedConstants from "EmbedConstants" /* 5060 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 
@@ -67,8 +67,8 @@ export const sanitizeEmbed = function sanitizeEmbed(channel_id, id, footer) {
   if (null != footer.timestamp) {
     const _Date = Date;
     const date = new Date(footer.timestamp);
-    obj.timestamp = tmp(4231)(date);
-    const tmpResult = tmp(4231);
+    obj.timestamp = tmp(4314)(date);
+    const tmpResult = tmp(4314);
   }
   if (null != footer.color) {
     obj.color = utils_ColorUtils.int2hsl(footer.color, false);

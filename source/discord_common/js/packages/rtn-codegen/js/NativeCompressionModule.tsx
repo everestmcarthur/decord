@@ -1,9 +1,9 @@
-// Module ID: 13761
-// Function ID: 13762
+// Module ID: 13853
+// Function ID: 13854
 // Name: NativeCompressionModule
 // Dependencies: [17, 2]
 
-// Module 13761 (NativeCompressionModule)
+// Module 13853 (NativeCompressionModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 
