@@ -68,9 +68,9 @@ async function downloadApks(channel: ChannelContext) {
 									throw new Error(`truncated download: expected ${expected} bytes, got ${data.byteLength}`);
 								await Bun.write(dest, data);
 
-								const out = await Bun.$`unzip -o ${dest} ${{ raw: pattern }} -d ${channel.apksFolder}`
-									.quiet()
-									.nothrow();
+const out = await Bun.$`unzip -o ${dest} ${{ raw: pattern }} -d ${join(channel.apksFolder, apk)}`
+								.quiet()
+								.nothrow();
 								if (out.exitCode !== 0 && out.exitCode !== 11)
 									throw new Error(out.stderr.toString().trim() || `unzip failed (exit code ${out.exitCode})`);
 								return;
