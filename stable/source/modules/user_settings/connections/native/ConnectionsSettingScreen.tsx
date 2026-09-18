@@ -1,0 +1,42 @@
+// Module ID: 14959
+// Function ID: 14960
+// Name: ConnectionsSettingScreen
+// Dependencies: [19, 21, 4527, 14960, 1896, 1483, 6994, 7864, 1114, 14961, 2]
+
+// Module 14959 (ConnectionsSettingScreen)
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+function onPress() {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14960, dependencyMap.paths), "AddConnection");
+}
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/connections/native/ConnectionsSettingScreen.tsx");
+
+export default noop.memo(function ConnectionsSettingScreen() {
+  stackNavigation = stackNavigation(1483).useStackNavigation();
+  let obj = stackNavigation(1483);
+  const tmp = stackNavigation;
+  const params = stackNavigation(6994).useSettingNavigationRoute().params;
+  let selectedPlatformType;
+  if (params != null) {
+    selectedPlatformType = params.selectedPlatformType;
+  }
+  const items = [stackNavigation];
+  const layoutEffect = noop.useLayoutEffect(() => {
+    stackNavigation.setOptions({
+      headerRight(arg0) {
+        const obj = {};
+        const merged = Object.assign(arg0);
+        obj.onPress = onPress;
+        const intl = stackNavigation(1114).intl;
+        obj.label = intl.string(stackNavigation(1114).t.OYkgVk);
+        return closure_1_4(stackNavigation(7864).HeaderTextButton, obj);
+      }
+    });
+  }, items);
+  return jsx(tmp(14961).UserSettingsConnections, { selectedPlatformType });
+});

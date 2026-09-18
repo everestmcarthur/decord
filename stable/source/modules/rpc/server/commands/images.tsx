@@ -1,0 +1,82 @@
+// Module ID: 14477
+// Function ID: 14478
+// Name: images
+// Dependencies: [1371, 4465, 1074, 9563, 1396, 9560, 1474, 2]
+
+// Module 14477 (images)
+import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
+import ImageUtils from "ImageUtils" /* 1474 */;
+import RPCErrorDefault from "RPCError" /* 9560 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9563 */;
+import UserStore from "UserStore" /* 1371 */;
+
+require = fn;
+const Constants = fn(1074);
+const RPCErrors = Constants.RPCErrors;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/rpc/server/commands/images.tsx");
+
+export default {
+  [Constants.RPCCommands.GET_IMAGE]: {
+    scope: fn(4465).RPC_LOCAL_SCOPE,
+    validation(string) {
+      const obj = createRpcJoiSchemaObjectDefault(string);
+      const obj2 = { type: null, id: null, format: null, size: null };
+      const requiredResult = createRpcJoiSchemaObjectDefault(string).required();
+      const stringResult = string.string();
+      obj2.type = string.string().required().valid(["user"]);
+      const requiredResult1 = string.string().required();
+      obj2.id = string.string().required();
+      const stringResult1 = string.string();
+      const stringResult2 = string.string();
+      obj2.format = string.string().required().valid(["png", "webp", "jpg"]);
+      const requiredResult2 = string.string().required();
+      const numberResult = string.number();
+      obj2.size = string.number().required().valid([16, 32, 64, 128, 256, 512, 1024]);
+      return requiredResult.keys(obj2);
+    },
+    handler(args) {
+      args = args.args;
+      ({ id, format } = args);
+      if (format === undefined) {
+        format = "png";
+      }
+      let num = args.size;
+      if (num === undefined) {
+        num = 128;
+      }
+      let text;
+      if ("user" === args.type) {
+        const user = UserStore.getUser(id);
+        if (null == user) {
+          const obj2 = { errorCode: RPCErrors.INVALID_USER };
+          const _HermesInternal = HermesInternal;
+          const tmp142 = new RPCErrorDefault(obj2, "Invalid user id: " + id);
+          throw tmp142;
+        } else {
+          const obj3 = AvatarUtilsDefault;
+          const userAvatarURL = obj3.getUserAvatarURL(user, false, num, format);
+          const _window = window;
+          let tmp2 = null != CDN_HOST;
+          if (tmp2) {
+            tmp2 = -1 !== userAvatarURL.indexOf(CDN_HOST);
+          }
+          text = userAvatarURL;
+          if (tmp2) {
+            text = `${arr}&_=`;
+          }
+        }
+      }
+      if (null == text) {
+        const obj = { errorCode: RPCErrors.INVALID_COMMAND };
+        const tmp10 = new RPCErrorDefault(obj, "No valid type.");
+        throw tmp10;
+      } else {
+        const _fetch = fetch;
+        const response = fetch(text);
+        const nextPromise = response.then((blob) => blob.blob());
+        return response.then((blob) => blob.blob()).then((result) => ImageUtils.readFileAsBase64(result)).then((data_url) => ({ data_url }));
+      }
+    }
+  }
+};

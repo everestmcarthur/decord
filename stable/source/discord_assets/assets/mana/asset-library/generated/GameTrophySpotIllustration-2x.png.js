@@ -1,0 +1,11 @@
+// Module ID: 6094
+// Function ID: 6095
+// Dependencies: [2]
+
+// Module 6094
+import size from "module_2" /* 2 */;
+
+const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GameTrophySpotIllustration-2x.png.js");
+
+export default "https://cdn.discordapp.com/assets/content/ebab7e4f6dc69283af52a6a01b9d6a53998f9ae19ab8371d0e2e0df18dddfb32.png";
+export const metadata = { fileBytes: 43343 };

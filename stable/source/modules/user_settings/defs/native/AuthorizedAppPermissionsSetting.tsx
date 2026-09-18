@@ -1,0 +1,31 @@
+// Module ID: 14945
+// Function ID: 14946
+// Name: AuthorizedAppPermissionsSetting
+// Dependencies: [7976, 1074, 11473, 1114, 14946, 2]
+
+// Module 14945 (AuthorizedAppPermissionsSetting)
+import Constants from "Constants" /* 1074 */;
+import util from "util" /* 1114 */;
+import SettingsConstants from "SettingsConstants" /* 7976 */;
+import SettingBuilders from "SettingBuilders" /* 11473 */;
+import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
+
+const route = SettingBuilders.createRoute({
+  useTitle() {
+    const intl = util.intl;
+    return intl.string(util.t.xrmhRX);
+  },
+  parent: SettingsConstants.MobileUserSettings.AUTHORIZED_APP,
+  unsearchable: true,
+  screen: {
+    route: Constants.UserSettingsSections.AUTHORIZED_APP_PERMISSIONS,
+    getComponent() {
+      return require("AuthorizedAppPermissionsScreen").default;
+    }
+  }
+});
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/AuthorizedAppPermissionsSetting.tsx");
+
+export default route;

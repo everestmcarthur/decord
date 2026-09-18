@@ -1,0 +1,46 @@
+// Module ID: 8615
+// Function ID: 8616
+// Name: FormRadioGroup
+// Dependencies: [19, 17, 21, 5686, 5685, 8608, 2]
+// Exports: default
+
+// Module 8615 (FormRadioGroup)
+import TableRadioGroup from "TableRadioGroup" /* 5685 */;
+import RedesignCompat from "RedesignCompat" /* 5686 */;
+import FormSectionDefault from "FormSection" /* 8608 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/void/Form/native/FormRadioGroup.tsx");
+
+export default function FormRadioGroup(arg0) {
+  ({ title, children, hint } = arg0);
+  ({ hasIcons, accessibilityLabel, value, icon } = arg0);
+  const merged = Object.assign(arg0, Object.assign({ title: 0, hasIcons: 0, accessibilityLabel: 0, children: 0, value: 0, hint: 0, icon: 0 }));
+  if (noop.useContext(RedesignCompat.RedesignCompatContext)) {
+    const obj2 = { style: { marginBottom: 24, marginHorizontal: 12 }, children: null };
+    const obj3 = { children: null };
+    const obj4 = { defaultValue: value, hasIcons, title, accessibilityLabel, children };
+    obj3.children = hasOwnProperty(TableRadioGroup.TableRadioGroup, obj4);
+    const items = [hasOwnProperty(View, obj3), ];
+    let tmp13Result = null;
+    if (null != hint) {
+      const obj5 = { style: { marginTop: 8 }, children: hint };
+      tmp13Result = tmp13(tmp12, obj5);
+    }
+    items[1] = tmp13Result;
+    obj2.children = items;
+    let tmp11Result = timestampProducer(tmp12, obj2);
+    tmp13 = hasOwnProperty;
+  } else {
+    const obj = { title, accessibilityRole: "radiogroup", accessibilityLabel: title, hint, icon };
+    const merged1 = Object.assign(merged);
+    obj.children = children;
+    tmp11Result = hasOwnProperty(FormSectionDefault, obj);
+  }
+  return tmp11Result;
+};

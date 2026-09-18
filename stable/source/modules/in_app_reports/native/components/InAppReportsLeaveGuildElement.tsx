@@ -1,0 +1,73 @@
+// Module ID: 9068
+// Function ID: 9069
+// Name: InAppReportsLeaveGuildElement
+// Dependencies: [32, 19, 1074, 21, 9069, 4740, 9057, 1114, 4905, 4994, 9079, 2]
+// Exports: default
+
+// Module 9068 (InAppReportsLeaveGuildElement)
+import util from "util" /* 1114 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4740 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4905 */;
+import common_AlertDefault from "common/Alert" /* 4994 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsLeaveGuildElement.tsx");
+
+export default function LeaveGuildElement(guild) {
+  guild = guild.guild;
+  const addCallback = guild.addCallback;
+  const reportId = guild.reportId;
+  _slicedToArray = undefined;
+  noop = undefined;
+  [obj.disabled, _slicedToArray] = noop.useState(false);
+  noop = tmp2;
+  const items = [null != guild];
+  const effect = noop.useEffect(() => {
+    closure_3(!closure_4);
+  }, items);
+  const items1 = [addCallback, reportId, guild];
+  const onConfirm = noop.useCallback(() => {
+    if (null != guild) {
+      addCallback(() => addCallback(reportId[4]).leaveGuild(id.id));
+      const obj2 = { guild_id: tmp.id, report_id: reportId };
+      AppAnalyticsUtilsDefault.trackWithMetadata(AnalyticEvents.IAR_LEAVE_GUILD_BUTTON_CLICKED, obj2);
+      closure_3(true);
+    }
+  }, items1);
+  let obj = { title: null, disabledTitle: null, description: null, disabled: null, variant: "danger", onPress: null, icon: null };
+  let intl = guild(reportId[7]).intl;
+  obj.title = intl.string(guild(reportId[7]).t.cU96ip);
+  let intl2 = guild(reportId[7]).intl;
+  obj.disabledTitle = intl2.string(guild(reportId[7]).t.rJGMXU);
+  let intl3 = guild(reportId[7]).intl;
+  let name;
+  if (guild != null) {
+    name = guild.name;
+  }
+  obj.description = intl3.formatToPlainString(guild(reportId[7]).t["26mR6/"], { guildName: name });
+  obj.onPress = function onPress() {
+    const obj2 = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null, confirmColor: null };
+    const intl = util.intl;
+    obj2.title = intl.string(util.t.J2TBi3);
+    const intl2 = util.intl;
+    let name;
+    if (guild != null) {
+      name = guild.name;
+    }
+    obj2.body = intl2.formatToPlainString(util.t.TB1og8, { name });
+    const intl3 = tmp3(1114).intl;
+    obj2.confirmText = intl3.string(util.t.p89ACt);
+    const intl4 = tmp3(1114).intl;
+    obj2.cancelText = intl4.string(util.t.gm1Vej);
+    obj2.onConfirm = onConfirm;
+    obj2.confirmColor = common_AlertDefault.Colors.RED;
+    actions_AlertActionCreatorsDefault.show(obj2);
+  };
+  obj.icon = jsx(guild(reportId[10]).DoorExitIcon, { color: "text-feedback-critical" });
+  return jsx(addCallback(reportId[6]), { title: null, disabledTitle: null, description: null, disabled: null, variant: "danger", onPress: null, icon: null });
+};

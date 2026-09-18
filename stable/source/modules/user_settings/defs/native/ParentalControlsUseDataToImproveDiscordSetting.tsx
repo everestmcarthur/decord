@@ -1,0 +1,46 @@
+// Module ID: 15904
+// Function ID: 15905
+// Name: ParentalControlsUseDataToImproveDiscordSetting
+// Dependencies: [7537, 7976, 1074, 7539, 14827, 11473, 1114, 2]
+
+// Module 15904 (ParentalControlsUseDataToImproveDiscordSetting)
+import util from "util" /* 1114 */;
+import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7539 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 14827 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7537 */;
+
+require = fn;
+const Consents = fn(1074).Consents;
+const SettingBuilders = fn(11473);
+const toggle = SettingBuilders.createToggle({
+  useTitle() {
+    const intl = util.intl;
+    return intl.string(util.t.XuADY2);
+  },
+  parent: fn(7976).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  useValue: function useDataToImproveDiscordSettingValue() {
+    return useParentalControlSettings.useParentalControlledConsent(Consents.USAGE_STATISTICS).hasConsented;
+  },
+  onValueChange: function handleUsageStatisticsChange(arg0) {
+    const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
+    if (null != selectedTeenId) {
+      if (arg0) {
+        const items = [Consents.USAGE_STATISTICS];
+        let items1 = items;
+      } else {
+        items1 = [];
+      }
+      if (arg0) {
+        let items2 = [];
+      } else {
+        items2 = [Consents.USAGE_STATISTICS];
+      }
+      FamilyCenterActionCreatorsDefault.updateTeenConsents(selectedTeenId, items1, items2);
+    }
+  },
+  unsearchable: true
+});
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsUseDataToImproveDiscordSetting.tsx");
+
+export default toggle;

@@ -1,0 +1,43 @@
+// Module ID: 4972
+// Function ID: 4973
+// Name: useBackPressHandler
+// Dependencies: [19, 17, 1115, 2]
+// Exports: default
+
+// Module 4972 (useBackPressHandler)
+import noop from "module_19" /* 19 */;
+
+const require = fn;
+get_ActivityIndicator = fn(17);
+({ BackHandler: c3, NativeModules: closure_4 } = get_ActivityIndicator);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/routing/native/useBackPressHandler.tsx");
+
+export default function useBackPressHandler(set) {
+  let current = set;
+  let flag = arg1;
+  if (arg1 === undefined) {
+    flag = true;
+  }
+  noop = undefined;
+  noop = noop.useRef(set);
+  const layoutEffect = noop.useLayoutEffect(() => {
+    closure_2.current = current;
+  });
+  const items = [flag];
+  const effect = noop.useEffect(() => {
+    if (!obj.isIOS()) {
+      if (flag) {
+        current = closure_1_3.addEventListener("hardwareBackPress", () => ref.current());
+        return () => closure_0.remove();
+      }
+    }
+  }, items);
+};
+export const BackPressHandler = {
+  minimize() {
+    MinimizeApp = MinimizeApp.MinimizeApp;
+    MinimizeApp.minimizeApp();
+    return true;
+  }
+};

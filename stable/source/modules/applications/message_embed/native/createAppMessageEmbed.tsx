@@ -1,0 +1,277 @@
+// Module ID: 11944
+// Function ID: 11945
+// Name: createAppMessageEmbed
+// Dependencies: [32, 1371, 8141, 4788, 1482, 9517, 11314, 7163, 11945, 7946, 1114, 11946, 9295, 8140, 9512, 11947, 11948, 1396, 1365, 11949, 7182, 11524, 7523, 9513, 4425, 1609, 9579, 7190, 4258, 1369, 2]
+// Exports: createAppMessageEmbed, getAppLinkGateResult, handleTapAppMessageEmbed
+
+// Module 11944 (createAppMessageEmbed)
+import URLUtilsDefault from "URLUtils" /* 1365 */;
+import GlobalUtils from "GlobalUtils" /* 1369 */;
+import ToastUtils from "ToastUtils" /* 4258 */;
+import ChatInputUtils from "ChatInputUtils" /* 4425 */;
+import ApplicationActionCreators from "ApplicationActionCreators" /* 7163 */;
+import ClipboardUtils from "ClipboardUtils" /* 7190 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7523 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7946 */;
+import AppLauncherUtils from "AppLauncherUtils" /* 9295 */;
+import ApplicationUtils from "ApplicationUtils" /* 9579 */;
+import AppLauncherPlayUtils from "AppLauncherPlayUtils" /* 11524 */;
+import ContentClassificationVisibility from "ContentClassificationVisibility" /* 11945 */;
+import joinOrStartActivityInChannel from "joinOrStartActivityInChannel" /* 11949 */;
+import _slicedToArray from "module_32" /* 32 */;
+import UserStore from "UserStore" /* 1371 */;
+import ApplicationAssetsStore from "ApplicationAssetsStore" /* 8141 */;
+import ApplicationStore from "ApplicationStore" /* 4788 */;
+
+require = fn;
+const FetchState = fn(8141).FetchState;
+const AppLauncherRouteName = fn(1482).AppLauncherRouteName;
+const MAIN_SURFACE = fn(9517).MAIN_SURFACE;
+const CodedLinkExtendedType = fn(11314).CodedLinkExtendedType;
+let closure_11 = ["embedded_cover"];
+let c12 = 512;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/applications/message_embed/native/createAppMessageEmbed.tsx");
+
+export const getAppLinkGateResult = function getAppLinkGateResult(arg0) {
+  ({ appId, message } = arg0);
+  ({ channel, theme } = arg0);
+  const application = ApplicationStore.getApplication(appId);
+  if (null == application) {
+    if (false === ApplicationStore.isFetchingApplication(appId)) {
+      const application1 = ApplicationActionCreators.fetchApplication(appId);
+    }
+    return { state: "unavailable" };
+  } else {
+    const currentUser = UserStore.getCurrentUser();
+    let nsfwAllowed;
+    if (currentUser != null) {
+      nsfwAllowed = currentUser.nsfwAllowed;
+    }
+    let messageResult = dependencyMap;
+    const contentClassificationVisibility = ContentClassificationVisibility.getContentClassificationVisibility(application.contentClassification, channel, nsfwAllowed);
+    if (contentClassificationVisibility !== ContentClassificationVisibility.ContentClassificationVisibility.DISPLAY) {
+      let intl = getEmbedThemeColorsDefault(theme).baseColors;
+      if (contentClassificationVisibility === tmp3(11945).ContentClassificationVisibility.BLOCK_UNDERAGE) {
+        const intl3 = tmp3(1114).intl;
+        let stringResult = intl3.string(tmp3(1114).t.LPOzxB);
+      } else {
+        const intl2 = tmp3(1114).intl;
+        stringResult = intl2.string(tmp3(1114).t.NIZyKq);
+      }
+      const obj3 = { state: "blocked", model: null };
+      const obj4 = {};
+      const merged = Object.assign(intl);
+      obj4.displayType = tmp3(11946).AppMessageEmbedDisplayType.BLOCKED;
+      obj4.appId = "";
+      obj4.messageId = message.id;
+      obj4.title = null;
+      intl = tmp3(1114).intl;
+      message = intl.string;
+      messageResult = message(tmp3(1114).t.bZBN64);
+      obj4.header = messageResult;
+      obj4.info = stringResult;
+      obj4.tagline = null;
+      obj4.iconSrc = null;
+      obj4.staticBannerSrc = null;
+      obj4.bannerRatio = "bot";
+      obj4.actions = [];
+      obj4.embedUrl = null;
+      obj4.extendedType = CodedLinkExtendedType.APP_MESSAGE_EMBED;
+      obj4.gradientColors = [];
+      obj4.type = null;
+      obj4.headerText = null;
+      obj3.model = obj4;
+    } else {
+      const obj5 = { state: "display", app: application };
+      return obj5;
+    }
+  }
+};
+export const createAppMessageEmbed = function createAppMessageEmbed(arg0) {
+  ({ message, app } = arg0);
+  ({ theme, embedUrl } = arg0);
+  const baseColors = getEmbedThemeColorsDefault(theme).baseColors;
+  ({ id, tags, maxParticipants, icon } = app);
+  ({ name, bot } = app);
+  const isEmbeddedAppResult = AppLauncherUtils.isEmbeddedApp(app);
+  if (isEmbeddedAppResult) {
+    const applicationAssetFetchState = ApplicationAssetsStore.getApplicationAssetFetchState(id);
+    if (applicationAssetFetchState === FetchState.NOT_FETCHED) {
+      const assetIds = tmp2(8140).fetchAssetIds(id, closure_11);
+      return null;
+    } else if (applicationAssetFetchState === tmp6.FETCHING) {
+      return null;
+    }
+  }
+  if (null != maxParticipants) {
+    if (maxParticipants > 0) {
+      const intl2 = tmp2(1114).intl;
+      const obj2 = { count: maxParticipants };
+      let formatToPlainStringResult = intl2.formatToPlainString(tmp2(1114).t.z8EAJW, obj2);
+    }
+    const items = [];
+    if (isEmbeddedAppResult) {
+      if (tmp2Result9.canLaunchFrame(app)) {
+        const obj3 = { id: "play_frame", label: null };
+        const intl6 = tmp2(1114).intl;
+        obj3.label = intl6.string(tmp2(1114).t.RscU7I);
+        items.push(obj3);
+      } else {
+        const playInContext = tmp2(11947).getPlayInContext(id, message.channel_id);
+        const isCurrentlyInInstance = playInContext.isCurrentlyInInstance;
+        if (playInContext.canLaunchInChannel) {
+          const string = tmp2(1114).intl.string;
+          if (isCurrentlyInInstance) {
+            const intl5 = tmp2(1114).intl;
+            let stringResult = intl5.string(tmp2(1114).t.DPfdsq);
+          } else {
+            stringResult = tmp11;
+            if (null != tmp9) {
+              const intl4 = tmp2(1114).intl;
+              stringResult = intl4.string(tmp2(1114).t.VJlc0S);
+            }
+          }
+          const obj4 = { id: "play_in_channel", label: stringResult, disabled: isCurrentlyInInstance };
+          items.push(obj4);
+        } else {
+          const obj5 = { id: "play_in_dm", label: null };
+          const intl3 = tmp2(1114).intl;
+          obj5.label = intl3.string(tmp2(1114).t.JeK1Wg);
+          items.push(obj5);
+        }
+        const tmp2Result10 = tmp2(11947);
+      }
+      tmp2Result9 = tmp2(9512);
+    }
+    ({ id: id2, bot: bot2 } = app);
+    const joined = tags.join(" \u2219 ");
+    if (tmp2Result11.isEmbeddedApp(app)) {
+      let assetIds1 = tmp2(8140).getAssetIds(id2, closure_11);
+      if (assetIds1 == null) {
+        assetIds1 = [];
+      }
+      const first = _slicedToArray(assetIds1, 1)[0];
+      let assetImage = null;
+      if (null != first) {
+        assetImage = tmp2(8140).getAssetImage(id2, first, c12);
+        const tmp2Result13 = tmp2(8140);
+      }
+      if (null != assetImage) {
+        const obj6 = { bannerRatio: "activity", staticBannerSrc: assetImage };
+        let obj10 = obj6;
+      }
+      let appIconSrc = null;
+      if (null != icon) {
+        appIconSrc = tmp2(11948).getAppIconSrc(id, icon, bot);
+        const tmp2Result14 = tmp2(11948);
+      }
+      let staticBannerSrc = appIconSrc;
+      if (appIconSrc == null) {
+        staticBannerSrc = obj10.staticBannerSrc;
+      }
+      const tmp2Result12 = tmp2(8140);
+      const obj7 = {};
+      const appGradientColors = tmp2(11948).getAppGradientColors(staticBannerSrc);
+      const merged = Object.assign(baseColors);
+      const merged1 = Object.assign(obj10);
+      obj7.displayType = tmp2(11946).AppMessageEmbedDisplayType.DISPLAY;
+      obj7.appId = app.id;
+      obj7.messageId = message.id;
+      obj7.title = null;
+      obj7.header = name;
+      obj7.info = joined;
+      obj7.tagline = formatToPlainStringResult;
+      obj7.iconSrc = appIconSrc;
+      obj7.actions = items;
+      obj7.embedUrl = embedUrl;
+      obj7.extendedType = CodedLinkExtendedType.APP_MESSAGE_EMBED;
+      obj7.gradientColors = appGradientColors;
+      obj7.type = null;
+      obj7.headerText = null;
+      return obj7;
+    }
+    if (null != bot2) {
+      ({ id: obj12.id, banner: obj12.banner } = bot2);
+      const userBannerURL = tmp2(1396).getUserBannerURL({ id: null, banner: null, size: 512, canAnimate: false });
+      if (null != userBannerURL) {
+        const obj9 = { bannerRatio: "bot", staticBannerSrc: userBannerURL };
+        obj10 = obj9;
+      }
+      const obj8 = { id: null, banner: null, size: 512, canAnimate: false };
+      const tmp2Result16 = tmp2(1396);
+    }
+    obj10 = { bannerRatio: "bot", staticBannerSrc: null };
+    tmp2Result11 = tmp2(9295);
+  }
+  const intl = tmp2(1114).intl;
+  formatToPlainStringResult = intl.string(tmp2(1114).t.RjceQU);
+};
+export const handleTapAppMessageEmbed = function handleTapAppMessageEmbed(appId) {
+  const application = ApplicationStore.getApplication(appId.appId);
+  const toURLSafeResult = URLUtilsDefault.toURLSafe(appId.embedUrl);
+  let id;
+  if (toURLSafeResult != null) {
+    const searchParams = toURLSafeResult.searchParams;
+    id = searchParams.get("referrer_id");
+  }
+  if (id == null) {
+    id = appId.message.author.id;
+  }
+  value2 = undefined;
+  if (toURLSafeResult != null) {
+    const searchParams2 = toURLSafeResult.searchParams;
+    value2 = searchParams2.get("custom_id");
+  }
+  const actionId = appId.actionId;
+  if ("play_in_channel" === actionId) {
+    const obj8 = { appId: appId.appId, channelId: appId.message.channel_id, analyticsLocations: null, referrerId: null, customId: null };
+    const items = [tmp2(7182).APP_MESSAGE_EMBED];
+    obj8.analyticsLocations = items;
+    obj8.referrerId = id;
+    obj8.customId = value2;
+    const result = joinOrStartActivityInChannel.joinOrStartActivityInChannel(obj8);
+  } else if ("play_in_dm" === actionId) {
+    let bot;
+    if (application != null) {
+      bot = application.bot;
+    }
+    if (null != bot) {
+      const obj9 = { appId: appId.appId, botId: application.bot.id, analyticsLocations: null, commandOrigin: null, referrerId: null, customId: null };
+      const items1 = [tmp2(7182).APP_MESSAGE_EMBED];
+      obj9.analyticsLocations = items1;
+      obj9.commandOrigin = ApplicationCommandTypes.CommandOrigin.APP_MESSAGE_EMBED;
+      obj9.referrerId = id;
+      obj9.customId = value2;
+      const result1 = AppLauncherPlayUtils.launchActivityInBotDM(obj9);
+    }
+  } else if ("play_frame" === actionId) {
+    const obj10 = { applicationId: appId.appId, surface: MAIN_SURFACE, analyticsContext: null };
+    const obj11 = { isStart: true, analyticsLocations: null };
+    const items2 = [tmp2(7182).APP_MESSAGE_EMBED];
+    obj11.analyticsLocations = items2;
+    obj10.analyticsContext = obj11;
+    tmp2(9513).launchFrame(obj10);
+    const tmp2Result = tmp2(9513);
+  } else if ("view_in_app_launcher" === actionId) {
+    const bestActiveInput = ChatInputUtils.getBestActiveInput();
+    if (bestActiveInput != null) {
+      const obj13 = { type: tmp14(1609).KeyboardTypes.APP_LAUNCHER, context: null };
+      const obj14 = { initialRouteName: AppLauncherRouteName.APPLICATION_VIEW, initiallyExpanded: true, applicationId: appId.appId, referrerId: id, customId: value2 };
+      obj13.context = obj14;
+      bestActiveInput.openCustomKeyboard(obj13);
+    }
+    tmp14 = require;
+  } else if ("add_app" === actionId) {
+    if (null != application) {
+      ({ id: obj6.applicationId, customInstallUrl: obj6.customInstallUrl, installParams: obj6.installParams, integrationTypesConfig: obj6.integrationTypesConfig } = application);
+      ApplicationUtils.installApplication({ applicationId: null, customInstallUrl: null, installParams: null, integrationTypesConfig: null, source: "app_message_embed" });
+      const obj15 = { applicationId: null, customInstallUrl: null, installParams: null, integrationTypesConfig: null, source: "app_message_embed" };
+    }
+  } else if ("link_copied" === actionId) {
+    ClipboardUtils.copy(appId.embedUrl);
+    ToastUtils.presentLinkCopied();
+  } else {
+    GlobalUtils.assertNever(appId.actionId);
+  }
+};

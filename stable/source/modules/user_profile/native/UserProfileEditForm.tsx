@@ -1,0 +1,469 @@
+// Module ID: 14591
+// Function ID: 14592
+// Name: UserProfileEditForm
+// Dependencies: [19, 17, 8193, 9214, 7208, 1074, 1084, 14592, 21, 6989, 14593, 4218, 7162, 7182, 14594, 4527, 14595, 1896, 8168, 8165, 8167, 1114, 8242, 14606, 8163, 6625, 6981, 576, 11151, 14607, 10739, 11876, 8187, 11115, 11971, 8170, 8243, 13071, 11203, 504, 8198, 8228, 8239, 14610, 4556, 4271, 11116, 14611, 11117, 11157, 14616, 14617, 14622, 14626, 14628, 14629, 14633, 14637, 14642, 14643, 14646, 14647, 2]
+// Exports: default
+
+// Module 14591 (UserProfileEditForm)
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8167 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8198 */;
+import PendingBadgeSettings from "PendingBadgeSettings" /* 13071 */;
+import _modDef14593 from "module_14593" /* 14593 */;
+import noop from "module_19" /* 19 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8193 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9214 */;
+
+require = fn;
+function EditUserProfileBanner(user) {
+  user = user.user;
+  const displayProfile = user.displayProfile;
+  ({ pendingBanner, tryItOutBanner, isTryItOut } = user);
+  pendingBanner = undefined;
+  let analyticsLocations;
+  ({ pendingAvatarSrc, pendingAccentColor, pendingThemeColors, disabled } = user);
+  if (isTryItOut) {
+    if (tryItOutBanner == null) {
+      tryItOutBanner = obj;
+    }
+    pendingBanner = tryItOutBanner;
+  }
+  obj = displayProfile(isTryItOut[11]);
+  const canUseCollectiblesResult = obj.canUseCollectibles(user);
+  analyticsLocations = displayProfile(isTryItOut[12])(displayProfile(isTryItOut[13]).EDIT_BANNER).analyticsLocations;
+  let obj2 = { value: analyticsLocations, children: null };
+  const obj3 = { user, displayProfile, pendingBanner, pendingAvatarSrc, pendingThemeColors, pendingAccentColor, bannerSafeArea: null, showProfilePreviewButton: null, onPressEdit: null, editButtonAccessibilityLabel: null, editDisabled: null };
+  let banner;
+  let tmp4 = displayProfile(isTryItOut[12]);
+  if (displayProfile != null) {
+    banner = displayProfile.banner;
+  }
+  obj3.bannerSafeArea = 12;
+  obj3.showProfilePreviewButton = canUseCollectiblesResult;
+  obj3.onPressEdit = function onPressEdit() {
+    const obj2 = { user, analyticsLocations, onBannerChange: null, showRemoveBanner: null, isTryItOut: null };
+    obj = ActionSheetActionCreatorsDefault;
+    if (isTryItOut) {
+      let fn = tmp2(8168).setTryItOutBanner;
+    } else {
+      fn = (banner) => user(isTryItOut[19]).setPendingChanges({ banner });
+    }
+    obj2.onBannerChange = fn;
+    const tmp3 = asyncRequireImpl(14595, dependencyMap.paths);
+    const tmp4 = isTryItOut;
+    let banner;
+    if (displayProfile != null) {
+      banner = displayProfile.banner;
+    }
+    obj2.showRemoveBanner = ProfileCustomizationUtils.showRemoveBanner(pendingBanner, banner);
+    obj2.isTryItOut = tmp4;
+    obj.openLazy(tmp3, "Change Banner", obj2);
+  };
+  const intl = tmp6(tmp2[21]).intl;
+  obj3.editButtonAccessibilityLabel = intl.string(user(isTryItOut[21]).t.VqsHy0);
+  obj3.editDisabled = disabled;
+  obj2.children = closure_13(displayProfile(isTryItOut[14]), obj3);
+  return closure_13(user(isTryItOut[12]).AnalyticsLocationProvider, obj2);
+}
+get_ActivityIndicator = fn(17);
+({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
+const FLOATING_UPSELL_HEIGHT = fn(7208).FLOATING_UPSELL_HEIGHT;
+const Constants = fn(1074);
+({ DISPLAY_NAME_MAX_LENGTH: closure_9, PRONOUNS_MAX_LENGTH: c10 } = Constants);
+let closure_11 = fn(1084).ProfileCustomizationScrollPositions;
+const constants = fn(14592).UserProfileEditAutoFocusElement;
+const jsxProd = fn(21);
+({ jsx: map1, jsxs: closure_14 } = jsxProd);
+let obj = { assetOrigin: fn(6989).AssetOriginTypes.NEW_ASSET, imageUri: _modDef14593, staticImageUri: _modDef14593, description: "", originalAsset: "call" };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileEditForm.tsx");
+
+export default function UserProfileEditForm(currentUser) {
+  const str = currentUser.currentUser;
+  ({ autoFocusElement, isTryItOut } = currentUser);
+  if (isTryItOut === undefined) {
+    isTryItOut = false;
+  }
+  pendingBadgeDisplayOrder = undefined;
+  let pendingBadgeHiddenBadges;
+  noop = undefined;
+  let isBadgeManagementEnabled;
+  let stateFromStores;
+  let stateFromStoresArray;
+  ProfileCustomizationNavigationStore = undefined;
+  const tmp3 = pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[22])();
+  const tmp4 = pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[23])();
+  const bioMaxLength = str(pendingBadgeHiddenBadges[24]).useBioMaxLength({ location: "user_profile_edit_form" });
+  const tmp7 = pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[25])();
+  const ref = noop.useRef(null);
+  const ref1 = noop.useRef(null);
+  const ref2 = noop.useRef(null);
+  const ref3 = noop.useRef(null);
+  const insets = pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[26])({ includeKeyboardHeight: true }).insets;
+  const PX_16 = pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[27]).space.PX_16;
+  const obj3 = { insets, inputs: null, scrollViewRef: null };
+  const items = [{ ref: ref1, offset: { type: "toRef", ref: ref2, extraOffset: PX_16 } }, { ref: ref2, offset: { type: "toRef", ref: ref3, extraOffset: PX_16 } }, ];
+  const obj6 = { ref: ref3, offset: null };
+  const obj7 = { type: "toValue", value: null };
+  obj = str(pendingBadgeHiddenBadges[24]);
+  const obj4 = { ref: ref1, offset: { type: "toRef", ref: ref2, extraOffset: PX_16 } };
+  const obj5 = { ref: ref2, offset: { type: "toRef", ref: ref3, extraOffset: PX_16 } };
+  obj7.value = pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[27]).space.PX_64;
+  obj6.offset = obj7;
+  items[2] = obj6;
+  obj3.inputs = items;
+  obj3.scrollViewRef = ref;
+  const onFocus = pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[28])(obj3).onFocus;
+  const tmp13 = pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[29])();
+  ({ errors, isSubmitting, pendingAvatarDecoration, pendingProfileEffect, pendingThemeColors, tryItOutThemeColors, pendingGlobalName, pendingPronouns, pendingBio, pendingLegacyUsernameDisabled, pendingBadgeDisplayOrder } = tmp13);
+  pendingBadgeHiddenBadges = tmp13.pendingBadgeHiddenBadges;
+  ({ pendingDisplayNameStyles, pendingAvatar, pendingBanner, pendingProfileFrame, pendingNameplate, pendingAccentColor, tryItOutBanner, tryItOutAvatarDecoration, tryItOutProfileEffect, tryItOutDisplayNameStyles, pendingPrimaryGuildId } = tmp13);
+  pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[30])();
+  const tmp12 = pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[28]);
+  const guildAutomodProfileQuarantineErrors = str(pendingBadgeHiddenBadges[31]).useGuildAutomodProfileQuarantineErrors();
+  let str2 = str.id;
+  const obj8 = str(pendingBadgeHiddenBadges[31]);
+  if (str2 == null) {
+    str2 = "";
+  }
+  const tmp16Result = pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[32])(str2);
+  const tmp16 = pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[32]);
+  const customStatusActivity = str(pendingBadgeHiddenBadges[33]).useCustomStatusActivity();
+  const tmp5Result = str(pendingBadgeHiddenBadges[33]);
+  const tmp5Result7 = str(pendingBadgeHiddenBadges[34]);
+  const pendingAvatarSrc = str(pendingBadgeHiddenBadges[35]).getPendingAvatarSrc({ userId: str.id, image: pendingAvatar });
+  const tmp19 = pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[36])(tmp16Result, pendingLegacyUsernameDisabled);
+  noop = tmp19;
+  const items1 = [tmp19, pendingBadgeDisplayOrder, pendingBadgeHiddenBadges];
+  const memo = obj2.useMemo(() => PendingBadgeSettings.applyPendingBadgeSettingsToProfileBadges(closure_3, { pendingBadgeDisplayOrder, pendingBadgeHiddenBadges }), items1);
+  const obj9 = { userId: str.id, image: pendingAvatar };
+  const tmp5Result8 = str(pendingBadgeHiddenBadges[35]);
+  isBadgeManagementEnabled = str(pendingBadgeHiddenBadges[38]).useIsBadgeManagementEnabled({ location: "UserProfileEditForm" });
+  const tmp5Result9 = str(pendingBadgeHiddenBadges[38]);
+  const items2 = [stateFromStoresArray];
+  stateFromStores = str(pendingBadgeHiddenBadges[39]).useStateFromStores(items2, () => BadgeDirectoryStore.hasCatalogFor(str.id));
+  const tmp5Result10 = str(pendingBadgeHiddenBadges[39]);
+  const items3 = [stateFromStoresArray];
+  stateFromStoresArray = str(pendingBadgeHiddenBadges[39]).useStateFromStoresArray(items3, () => BadgeDirectoryStore.getBadges(str.id));
+  const items4 = [str.id, isBadgeManagementEnabled];
+  const effect = obj2.useEffect(() => {
+    if (isBadgeManagementEnabled) {
+      if (!tmp2) {
+        const badgeDirectory = BadgeDirectoryActionCreators.fetchBadgeDirectory(tmp.id);
+      }
+      tmp2 = BadgeDirectoryStore.hasCatalogFor(str.id) && !BadgeDirectoryStore.isCatalogStaleFor(str.id);
+    }
+  }, items4);
+  const items5 = [stateFromStores, stateFromStoresArray, pendingBadgeDisplayOrder, pendingBadgeHiddenBadges];
+  const memo1 = obj2.useMemo(() => {
+    let found = null;
+    if (stateFromStores) {
+      const obj2 = { pendingBadgeDisplayOrder, pendingBadgeHiddenBadges };
+      const result = PendingBadgeSettings.applyPendingBadgeSettings(stateFromStoresArray, obj2);
+      found = result.filter((owned) => owned.owned && !owned.hidden);
+    }
+    return found;
+  }, items5);
+  let someResult = !stateFromStores;
+  if (stateFromStores) {
+    someResult = stateFromStoresArray.some((owned) => owned.owned);
+  }
+  const tmp5Result11 = str(pendingBadgeHiddenBadges[39]);
+  let result = pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[11]).canUsePremiumProfileCustomization(str);
+  let legacyUsername;
+  if (tmp16Result != null) {
+    legacyUsername = tmp16Result.getLegacyUsername();
+  }
+  let str3 = str.globalName;
+  if (str3 == null) {
+    str3 = "";
+  }
+  let str4;
+  if (tmp16Result != null) {
+    str4 = tmp16Result.pronouns;
+  }
+  if (str4 == null) {
+    str4 = "";
+  }
+  let str5;
+  if (tmp16Result != null) {
+    str5 = tmp16Result.bio;
+  }
+  if (str5 == null) {
+    str5 = "";
+  }
+  const obj10 = { user: str, displayProfile: tmp16Result, pendingThemeColors: null, isPreview: null };
+  let tmp29 = pendingThemeColors;
+  const tmpResult = pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[11]);
+  if (isTryItOut) {
+    tmp29 = tryItOutThemeColors;
+  }
+  obj10.pendingThemeColors = tmp29;
+  obj10.isPreview = isTryItOut;
+  const tmpResult11 = pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[41]);
+  ({ theme, primaryColor, secondaryColor } = pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[41])(obj10));
+  const tmpResult1Result = pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[41])(obj10);
+  const userProfileColors = str(pendingBadgeHiddenBadges[42]).useUserProfileColors({ theme, primaryColor, secondaryColor });
+  ({ gradientFallbackBackground, gradientSecondaryBackground, containerBackground } = userProfileColors);
+  let num = 0;
+  if (!result) {
+    num = 0;
+    if (!tmp7) {
+      num = FLOATING_UPSELL_HEIGHT;
+    }
+  }
+  const sum = insets.bottom + num;
+  const obj11 = { backgroundColor: userProfileColors.avatarBackground };
+  let first;
+  const sum1 = sum + tmp(tmp2[27]).space.PX_16;
+  if (errors != null) {
+    const username = errors.username;
+    if (username != null) {
+      first = username[0];
+    }
+  }
+  if (first == null) {
+    const global_name = errors.global_name;
+    let first1;
+    if (global_name != null) {
+      first1 = global_name[0];
+    }
+    first = first1;
+  }
+  if (first == null) {
+    let first2;
+    if (guildAutomodProfileQuarantineErrors != null) {
+      const nick = guildAutomodProfileQuarantineErrors.nick;
+      if (nick != null) {
+        first2 = nick[0];
+      }
+    }
+    first = first2;
+  }
+  const pronouns = errors.pronouns;
+  let first3;
+  if (pronouns != null) {
+    first3 = pronouns[0];
+  }
+  const bio = errors.bio;
+  let first4;
+  if (bio != null) {
+    first4 = bio[0];
+  }
+  let stringResult = null;
+  if (Object.keys(errors).length > 0) {
+    stringResult = null;
+    if (null == first4) {
+      const intl = tmp5(tmp2[21]).intl;
+      stringResult = intl.string(tmp5(tmp2[21]).t["84MExs"]);
+    }
+  }
+  const field = ProfileCustomizationNavigationStore.useField("scrollPosition");
+  ProfileCustomizationNavigationStore = tmp(tmp2[43])(ref, field);
+  const obj12 = { theme, primaryColor, secondaryColor, children: null };
+  const obj13 = { style: null, children: null };
+  const items6 = [tmp4.container, { backgroundColor: gradientSecondaryBackground }];
+  obj13.style = items6;
+  const obj14 = { ref, children: null };
+  const items7 = [closure_13(stateFromStores, { style: tmp4.bounceOffset }), ];
+  const obj16 = { fallbackBackground: gradientFallbackBackground, primaryColor, secondaryColor, containerStyle: { backgroundColor: gradientSecondaryBackground }, children: null };
+  const obj15 = { style: tmp4.bounceOffset };
+  const tmp44 = isBadgeManagementEnabled;
+  const tmp5Result12 = str(pendingBadgeHiddenBadges[42]);
+  const items8 = [closure_13(EditUserProfileBanner, { user: str, displayProfile: tmp16Result, pendingAvatarSrc, pendingBanner, pendingAccentColor, pendingThemeColors, tryItOutBanner, isTryItOut, disabled: isSubmitting }), ];
+  const obj17 = { style: null, children: closure_13(pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[47]), { user: str, disabled: isSubmitting, disableStatus: null != isTryItOut, statusStyle: obj11, isTryItOut, autoStartEditFlow: autoFocusElement === constants.AVATAR }) };
+  const items9 = [, , , ];
+  ({ avatarBackground: arr10[0], avatarPosition: arr10[1] } = tmp3);
+  items9[2] = tmp4.avatarContainer;
+  items9[3] = obj11;
+  obj17.style = items9;
+  const items10 = [closure_13(stateFromStores, obj17), ];
+  const obj19 = { fallbackBackground: gradientFallbackBackground, primaryColor, secondaryColor, containerStyle: null, children: null };
+  const items11 = [, , ];
+  ({ profileContentWrapper: arr12[0], profileContent: arr12[1] } = tmp3);
+  items11[2] = { paddingTop: 0, paddingBottom: sum1 };
+  obj19.containerStyle = items11;
+  const obj18 = { user: str, disabled: isSubmitting, disableStatus: null != isTryItOut, statusStyle: obj11, isTryItOut, autoStartEditFlow: autoFocusElement === constants.AVATAR };
+  const tmp46 = constants;
+  const tmpResult12 = pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[46]);
+  const items12 = [closure_13(pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[48]), { customStatusActivity, hasCustomProfileTheme: null != primaryColor, style: tmp3.customStatusBubble, emojiOnlyStyle: tmp3.emojiOnlyCustomStatusBubble, editEnabled: true }), , ];
+  const obj21 = { user: str, displayName: pendingGlobalName, badges: memo, catalogBadges: memo1, pronouns: null, badgeContainerBackground: null, displayNameAccessibilityRole: "header", pendingDisplayNameStyles: null };
+  let tmp49 = pendingPronouns;
+  const obj20 = { customStatusActivity, hasCustomProfileTheme: null != primaryColor, style: tmp3.customStatusBubble, emojiOnlyStyle: tmp3.emojiOnlyCustomStatusBubble, editEnabled: true };
+  const tmpResult13 = pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[46]);
+  if (pendingPronouns == null) {
+    tmp49 = str4;
+  }
+  obj21.pronouns = tmp49;
+  obj21.badgeContainerBackground = containerBackground;
+  if (isTryItOut) {
+    pendingDisplayNameStyles = tryItOutDisplayNameStyles;
+  }
+  obj21.pendingDisplayNameStyles = pendingDisplayNameStyles;
+  items12[1] = closure_13(pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[49]), obj21);
+  const obj22 = { style: null, children: null };
+  const items13 = [tmp4.formContainer, { backgroundColor: containerBackground }];
+  obj22.style = items13;
+  let tmp41Result = null;
+  if (null != stringResult) {
+    tmp41Result = null;
+    if ("" !== stringResult) {
+      const obj23 = { style: tmp4.errorContainer, children: null };
+      const obj24 = { variant: "text-sm/bold", color: "text-feedback-critical", children: stringResult };
+      obj23.children = tmp41(tmp5(tmp2[44]).Text, obj24);
+      tmp41Result = tmp41(tmp43, obj23);
+    }
+  }
+  const items14 = [tmp41Result, , , , , , , , , , , , , ];
+  const obj25 = { inputRef: ref1, label: null, errorMessage: null, value: null, onFocus: null, onChange: null, placeholder: null, maxLength: null, isDisabled: null };
+  const tmpResult14 = pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[49]);
+  const intl2 = tmp5(tmp2[21]).intl;
+  obj25.label = intl2.string(str(pendingBadgeHiddenBadges[21]).t["9AjdkD"]);
+  obj25.errorMessage = first;
+  if (pendingGlobalName == null) {
+    pendingGlobalName = str3;
+  }
+  obj25.value = pendingGlobalName;
+  obj25.onFocus = onFocus;
+  obj25.onChange = function onChange(globalName) {
+    return str(pendingBadgeHiddenBadges[19]).setPendingChanges({ globalName });
+  };
+  obj25.placeholder = str.toString();
+  obj25.maxLength = maxLength;
+  obj25.isDisabled = isSubmitting;
+  items14[1] = closure_13(pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[50]), obj25);
+  let tmp41Result6 = result;
+  if (!result) {
+    tmp41Result6 = isTryItOut;
+  }
+  if (tmp41Result6) {
+    const obj26 = { user: str, isTryItOut };
+    tmp41Result6 = tmp41(tmp(tmp2[51]), obj26);
+  }
+  items14[2] = tmp41Result6;
+  const obj27 = { inputRef: ref2, label: null, errorMessage: null, value: null, onFocus: null, onChange: null, maxLength: null, spellCheck: false, autoCorrect: false, isDisabled: null };
+  const tmpResult15 = pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[50]);
+  const intl3 = tmp5(tmp2[21]).intl;
+  obj27.label = intl3.string(str(pendingBadgeHiddenBadges[21]).t["+T3RI/"]);
+  obj27.errorMessage = first3;
+  if (pendingPronouns == null) {
+    pendingPronouns = str4;
+  }
+  obj27.value = pendingPronouns;
+  obj27.onFocus = onFocus;
+  obj27.onChange = function onChange(pronouns) {
+    return str(pendingBadgeHiddenBadges[19]).setPendingChanges({ pronouns });
+  };
+  obj27.maxLength = maxLength2;
+  obj27.isDisabled = isSubmitting;
+  items14[3] = closure_13(pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[50]), obj27);
+  let tmp41Result7 = !isTryItOut;
+  if (!isTryItOut) {
+    const obj28 = { badges: memo, catalogBadges: memo1, ownsAnyBadge: someResult };
+    tmp41Result7 = tmp41(tmp(tmp2[52]), obj28);
+  }
+  items14[4] = tmp41Result7;
+  const obj29 = { inputRef: ref3, label: null, errorMessage: null, value: null, onFocus: null, onChange: null, autoFocus: null, maxLength: null, numberOfLines: 5, isDisabled: null };
+  const tmpResult16 = pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[50]);
+  const intl4 = tmp5(tmp2[21]).intl;
+  obj29.label = intl4.string(str(pendingBadgeHiddenBadges[21]).t.ZzAR2Y);
+  obj29.errorMessage = first4;
+  if (pendingBio == null) {
+    pendingBio = str5;
+  }
+  obj29.value = pendingBio;
+  obj29.onFocus = onFocus;
+  obj29.onChange = function onChange(bio) {
+    return str(pendingBadgeHiddenBadges[19]).setPendingChanges({ bio });
+  };
+  obj29.autoFocus = autoFocusElement === tmp46.BIO;
+  obj29.maxLength = bioMaxLength;
+  obj29.isDisabled = isSubmitting;
+  items14[5] = closure_13(pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[50]), obj29);
+  const obj30 = { user: str, onProfileThemeColorsChanged: null, pendingAvatarSrc: null, pendingThemeColors: null, isTryItOut: null };
+  const tmpResult17 = pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[50]);
+  if (isTryItOut) {
+    let fn = tmp5(tmp2[18]).setTryItOutThemeColors;
+  } else {
+    fn = (themeColors) => str(pendingBadgeHiddenBadges[19]).setPendingChanges({ themeColors });
+  }
+  obj30.onProfileThemeColorsChanged = fn;
+  obj30.pendingAvatarSrc = pendingAvatarSrc;
+  if (isTryItOut) {
+    pendingThemeColors = tryItOutThemeColors;
+  }
+  obj30.pendingThemeColors = pendingThemeColors;
+  obj30.isTryItOut = isTryItOut;
+  items14[6] = closure_13(pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[53]), obj30);
+  const obj31 = { user: str, pendingAvatarDecoration: null, isTryItOut: null };
+  const tmpResult18 = pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[53]);
+  if (isTryItOut) {
+    pendingAvatarDecoration = tryItOutAvatarDecoration;
+  }
+  obj31.pendingAvatarDecoration = pendingAvatarDecoration;
+  obj31.isTryItOut = isTryItOut;
+  items14[7] = closure_13(pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[54]), obj31);
+  const obj32 = { user: str, pendingProfileEffect: null, displayProfile: null, isTryItOut: null };
+  const tmpResult19 = pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[54]);
+  if (isTryItOut) {
+    pendingProfileEffect = tryItOutProfileEffect;
+  }
+  let tmp41Result8 = "profile" === tmp5Result7.useCustomTypingIndicatorConfig("UserProfileEditForm").entryPoint;
+  obj32.pendingProfileEffect = pendingProfileEffect;
+  obj32.displayProfile = tmp16Result;
+  obj32.isTryItOut = isTryItOut;
+  items14[8] = closure_13(pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[55]), obj32);
+  items14[9] = closure_13(pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[56]), { user: str, pendingProfileFrame, displayProfile: tmp16Result });
+  items14[10] = closure_13(pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[57]), { user: str, pendingNameplate });
+  if (tmp41Result8) {
+    let tmp60 = result;
+    if (!result) {
+      tmp60 = isTryItOut;
+    }
+    tmp41Result8 = tmp60;
+  }
+  if (tmp41Result8) {
+    const obj33 = { isTryItOut };
+    tmp41Result8 = tmp41(tmp(tmp2[58]), obj33);
+  }
+  items14[11] = tmp41Result8;
+  const obj34 = {
+    ref(arg0) {
+      if (null != arg0) {
+        ref.current[constants.GUILD_TAG] = arg0;
+      }
+    },
+    children: closure_13(pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[59]), { user: str, disabled: isSubmitting, tagStyle: { backgroundColor: containerBackground }, pendingPrimaryGuildId })
+  };
+  items14[12] = closure_13(stateFromStores, obj34);
+  let tmp41Result9 = null != legacyUsername;
+  if (tmp41Result9) {
+    const obj36 = { legacyUsername, pendingLegacyUsernameDisabled };
+    tmp41Result9 = tmp41(tmp(tmp2[60]), obj36);
+  }
+  const obj37 = { children: null };
+  items14[13] = tmp41Result9;
+  obj22.children = items14;
+  items12[2] = closure_14(stateFromStores, obj22);
+  obj19.children = items12;
+  items10[1] = closure_14(tmpResult13, obj19);
+  obj37.children = items10;
+  items8[1] = closure_14(stateFromStores, obj37);
+  obj16.children = items8;
+  items7[1] = closure_14(tmpResult12, obj16);
+  obj14.children = items7;
+  const items15 = [closure_14(tmp44, obj14), ];
+  let tmp41Result10 = !result;
+  if (!result) {
+    tmp41Result10 = !tmp7;
+  }
+  if (tmp41Result10) {
+    const obj38 = { isTryItOut };
+    tmp41Result10 = tmp41(tmp5(tmp2[61]).UserProfilePremiumUpsellCard, obj38);
+  }
+  items15[1] = tmp41Result10;
+  obj13.children = items15;
+  obj12.children = closure_14(stateFromStores, obj13);
+  return closure_13(str(pendingBadgeHiddenBadges[45]).ThemeContextProvider, obj12);
+};

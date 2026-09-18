@@ -1,0 +1,44 @@
+// Module ID: 11405
+// Function ID: 11406
+// Name: SafetyToolsActionSheetHeader
+// Dependencies: [19, 17, 21, 4560, 576, 11396, 5624, 4556, 2]
+// Exports: default
+
+// Module 11405 (SafetyToolsActionSheetHeader)
+import nativeDefault from "native" /* 576 */;
+import NavigatorHeader from "NavigatorHeader" /* 5624 */;
+import SafetyToolsActionCreators from "SafetyToolsActionCreators" /* 11396 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4560);
+const obj2 = { navbarContainer: { display: "flex", flexDirection: "row", justifyContent: "center" }, navbarLeft: { position: "absolute", left: nativeDefault.space.PX_16 } };
+let closure_6 = createStyles.createStyles(obj2);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/self_mod/shared/native/SafetyToolsActionSheetHeader.tsx");
+
+export default function SafetyToolsActionSheetHeader(channelId) {
+  channelId = channelId.channelId;
+  const recipientId = channelId.recipientId;
+  const warningId = channelId.warningId;
+  const warningType = channelId.warningType;
+  ({ title, hasBackButton } = channelId);
+  const tmp = closure_6();
+  const navbarLeft = tmp;
+  const items = [channelId, recipientId, warningId, warningType];
+  const callback = warningId.useCallback(() => {
+    const result = SafetyToolsActionCreators.openSafetyToolsActionSheet(channelId, recipientId, warningId, warningType);
+  }, items);
+  const items1 = [callback, tmp.navbarLeft];
+  const obj = { style: tmp.navbarContainer, children: null };
+  let memo = null != hasBackButton;
+  if (memo) {
+    memo = warningId.useMemo(() => React4(NavigatorHeader.getHeaderBackButton(callback), { style: navbarLeft.navbarLeft }), items1);
+  }
+  const items2 = [memo, navbarLeft(channelId(recipientId[7]).Text, { variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: title })];
+  obj.children = items2;
+  return callback(warningType, obj);
+};

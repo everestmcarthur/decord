@@ -1,0 +1,52 @@
+// Module ID: 9067
+// Function ID: 9068
+// Name: InAppReportsDeleteMessageElement
+// Dependencies: [32, 19, 4781, 1074, 21, 504, 4740, 7456, 9057, 1114, 4518, 2]
+// Exports: default
+
+// Module 9067 (InAppReportsDeleteMessageElement)
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4740 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7456 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import MessageStore from "MessageStore" /* 4781 */;
+
+const require = fn;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsDeleteMessageElement.tsx");
+
+export default function DeleteMessageElement(message) {
+  message = message.message;
+  const reportId = message.reportId;
+  let stateFromStores;
+  const tmp = stateFromStores(noop.useState(false), 2);
+  dependencyMap = tmp[1];
+  const items = [MessageStore];
+  const items1 = [message];
+  stateFromStores = message(504).useStateFromStores(items, () => null == MessageStore.getMessage(message.getChannelId(), message.id), items1);
+  const items2 = [stateFromStores];
+  const effect = noop.useEffect(() => {
+    closure_2(stateFromStores);
+  }, items2);
+  const items3 = [message, reportId];
+  const callback = noop.useCallback(() => {
+    closure_2(true);
+    AppAnalyticsUtilsDefault.trackWithMetadata(AnalyticEvents.IAR_DELETE_MESSAGE_BUTTON_CLICKED, { report_id: reportId });
+    const obj2 = { report_id: reportId };
+    MessageActionCreatorsDefault.deleteMessage(message.getChannelId(), message.id);
+  }, items3);
+  let obj2 = { title: null, disabledTitle: null, description: null, disabled: null, variant: "danger", onPress: null, icon: null };
+  let obj = message(504);
+  const intl = message(1114).intl;
+  obj2.title = intl.string(message(1114).t.c9BHL9);
+  const intl2 = message(1114).intl;
+  obj2.disabledTitle = intl2.string(message(1114).t.AT2KSd);
+  const intl3 = message(1114).intl;
+  obj2.description = intl3.string(message(1114).t.dK8S0w);
+  obj2.disabled = tmp[0];
+  obj2.onPress = callback;
+  obj2.icon = jsx(message(4518).TrashIcon, { color: "text-feedback-critical" });
+  return jsx(reportId(9057), { title: null, disabledTitle: null, description: null, disabled: null, variant: "danger", onPress: null, icon: null });
+};

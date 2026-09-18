@@ -1,0 +1,26 @@
+// Module ID: 16515
+// Function ID: 16516
+// Name: SeparatorDot
+// Dependencies: [19, 17, 21, 4560, 576, 2]
+// Exports: default
+
+// Module 16515 (SeparatorDot)
+import nativeDefault from "native" /* 576 */;
+import noop from "module_19" /* 19 */;
+
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+const obj2 = { separatorDot: null };
+let size = { width: 4, height: 4, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
+obj2.separatorDot = size;
+let closure_2 = createStyles.createStyles(obj2);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/icymi/native/SeparatorDot.tsx");
+
+export default function SeparatorDot() {
+  const obj = { style: null };
+  const items = [closure_2().separatorDot];
+  obj.style = items;
+  return <View style={null} />;
+};

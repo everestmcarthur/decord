@@ -1,0 +1,31 @@
+// Module ID: 14083
+// Function ID: 14084
+// Name: SentryTelemetry
+// Dependencies: [1902, 1903, 2]
+
+// Module 14083 (SentryTelemetry)
+import TelemetryRingNative2 from "TelemetryRingNative" /* 1903 */;
+import BaseTelemetryChannel from "BaseTelemetryChannel" /* 1902 */;
+
+const TelemetryRingNative = TelemetryRingNative2;
+
+require = fn;
+let closure_3 = { type: "BYTES", limit: 1048576 };
+class SentryTelemetryImpl extends tmp3 {
+  constructor() {
+    tmp2 = closure_1(closure_2[1]);
+    items = [];
+    items[0] = closure_0(closure_2[1]).TelemetryChannel.SENTRY;
+    tmp1 = new tmp(tmp2, items, closure_1, new.target);
+    return tmp1;
+  }
+}
+const prototype = SentryTelemetryImpl.prototype;
+prototype["snapshotForBreadcrumbs"] = function snapshotForBreadcrumbs() {
+  return this.snapshot(-1, closure_3);
+};
+let items = [fn(1903).TelemetryChannel.SENTRY];
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/telemetry_ring/native/channels/SentryTelemetry.tsx");
+
+export default new "snapshotForBreadcrumbs"(TelemetryRingNative, items, tmp, prototype, SentryTelemetryImpl, "snapshotForBreadcrumbs", TelemetryRingNative);

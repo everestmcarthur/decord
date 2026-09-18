@@ -1,0 +1,40 @@
+// Module ID: 12700
+// Function ID: 12701
+// Name: SkipHeaderButton
+// Dependencies: [19, 21, 4560, 576, 1114, 7864, 2]
+// Exports: default
+
+// Module 12700 (SkipHeaderButton)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import HeaderShared from "HeaderShared" /* 7864 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+const obj2 = { button: { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT }, insideNavigatorButton: { paddingRight: 16 } };
+let closure_3 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/nuf/native/components/SkipHeaderButton.tsx");
+
+export default function SkipHeaderButton(label) {
+  const tmp = closure_3();
+  label = label.label;
+  if (label == null) {
+    const intl = util.intl;
+    label = intl.string(util.t["5Wxrcd"]);
+  }
+  const obj = {};
+  const merged = Object.assign(label);
+  const items = [tmp.button, ];
+  let prop;
+  if (label.insideNavigator) {
+    prop = tmp.insideNavigatorButton;
+  }
+  items[1] = prop;
+  obj.labelStyle = items;
+  obj.label = label;
+  obj.accessibilityLabel = label;
+  return jsx(HeaderShared.HeaderTextButton, {});
+};

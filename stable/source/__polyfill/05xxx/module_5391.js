@@ -1,0 +1,9 @@
+// Module ID: 5391
+// Function ID: 5392
+// Dependencies: [1122]
+
+// Module 5391
+import registerAsset from "module_1122" /* 1122 */;
+
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 24, height: 24, scales: [1], hash: "16b0b46c160f5dbee25bcf55b1de2e19", name: "img_account_sync_mastodon_white", type: "svg" });

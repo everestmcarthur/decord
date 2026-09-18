@@ -1,0 +1,63 @@
+// Module ID: 16212
+// Function ID: 16213
+// Name: DirectoryChannel
+// Dependencies: [19, 1957, 2012, 10123, 4742, 21, 4560, 576, 563, 1100, 10918, 16119, 9776, 2]
+
+// Module 16212 (DirectoryChannel)
+import nativeDefault from "native" /* 576 */;
+import router_utils from "router_utils" /* 1100 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10918 */;
+import noop from "module_19" /* 19 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildChannelStore from "GuildChannelStore" /* 2012 */;
+
+require = fn;
+const UnreadSetting = fn(4742).UnreadSetting;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let obj = { container: { marginVertical: fn(10123).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md } };
+let closure_8 = createStyles.createStyles(obj);
+let obj3 = { marginVertical: fn(10123).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_sidebar/native/DirectoryChannel.tsx");
+
+export default noop.memo((guildId) => {
+  guildId = guildId.guildId;
+  let selected = guildId.selected;
+  const tmp = closure_8();
+  const items = [ChannelStore, GuildChannelStore];
+  const stateFromStores = guildId(563).useStateFromStores(items, () => {
+    const directoryChannelIds = GuildChannelStore.getDirectoryChannelIds(guildId);
+    let channel = null;
+    if (0 !== directoryChannelIds.length) {
+      channel = ChannelStore.getChannel(directoryChannelIds[0]);
+    }
+    return channel;
+  });
+  let id;
+  if (stateFromStores != null) {
+    id = stateFromStores.id;
+  }
+  if (!selected) {
+    selected = id === guildId.selectedChannelId;
+  }
+  const items1 = [guildId, id];
+  [][0] = id;
+  const callback = noop.useCallback(() => {
+    router_utils.transitionToGuild(guildId, id);
+  }, items1);
+  let tmp7 = null;
+  if (null != stateFromStores) {
+    const obj2 = { onPress: callback, onLongPress: tmp6, style: tmp.container, accessible: true, accessibilityRole: "button", accessibilityLabel: null, accessibilityState: null, channel: null, selected: null, resolvedUnreadSetting: null };
+    const obj3 = { channel: stateFromStores };
+    obj2.accessibilityLabel = id(9776)(obj3);
+    const obj4 = { selected };
+    obj2.accessibilityState = obj4;
+    obj2.channel = stateFromStores;
+    obj2.selected = selected;
+    obj2.resolvedUnreadSetting = UnreadSetting.ONLY_MENTIONS;
+    tmp7 = jsx(id(16119), { onPress: callback, onLongPress: tmp6, style: tmp.container, accessible: true, accessibilityRole: "button", accessibilityLabel: null, accessibilityState: null, channel: null, selected: null, resolvedUnreadSetting: null });
+    const tmp10 = id(16119);
+  }
+  return tmp7;
+});

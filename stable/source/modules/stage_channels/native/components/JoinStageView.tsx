@@ -1,0 +1,31 @@
+// Module ID: 9946
+// Function ID: 9947
+// Name: JoinStageView
+// Dependencies: [19, 21, 5431, 5425, 9681, 1114, 8401, 9904, 2]
+// Exports: default
+
+// Module 9946 (JoinStageView)
+import util from "util" /* 1114 */;
+import StageChannelParticipants from "StageChannelParticipants" /* 5425 */;
+import StageChannelParticipantStoreHooks from "StageChannelParticipantStoreHooks" /* 5431 */;
+import StageChannelUtils from "StageChannelUtils" /* 8401 */;
+import StageViewWithPromptsDefault from "StageViewWithPrompts" /* 9681 */;
+import StageActionBarButtons from "StageActionBarButtons" /* 9904 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/stage_channels/native/components/JoinStageView.tsx");
+
+export default function JoinStageView(channel) {
+  channel = channel.channel;
+  const stageParticipants = StageChannelParticipantStoreHooks.useStageParticipants(channel.id, StageChannelParticipants.StageChannelParticipantNamedIndex.SPEAKER);
+  const found = stageParticipants.filter((type) => type.type === StageChannelParticipants.StageChannelParticipantTypes.VOICE);
+  const obj2 = { title: null, body: null, children: null };
+  const intl = util.intl;
+  obj2.title = intl.string(util.t.WZOeQv);
+  obj2.body = StageChannelUtils.getParticipantNamesText(channel, found);
+  obj2.children = jsx(StageActionBarButtons.JoinStagePrompt, { channel });
+  return <tmp2 title={null} body={null}>{null}</tmp2>;
+};

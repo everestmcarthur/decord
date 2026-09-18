@@ -1,0 +1,32 @@
+// Module ID: 15711
+// Function ID: 15712
+// Name: DesignTogglesActions
+// Dependencies: [5627, 573, 2]
+// Exports: clearAll, toggle
+
+// Module 15711 (DesignTogglesActions)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import DesignTogglesStore from "DesignTogglesStore" /* 5627 */;
+
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/devtools/design_toggles/DesignTogglesActions.tsx");
+
+export const toggle = function toggle(toggle, flag) {
+  let tmp = flag;
+  if (typeof flag !== "boolean") {
+    tmp = !DesignTogglesStore.get(toggle);
+  }
+  DispatcherDefault.dispatch({ type: "DEV_TOOLS_DESIGN_TOGGLE_SET", toggle, value: tmp });
+};
+export const clearAll = function clearAll() {
+  for (const key10005 in DesignTogglesStore.all()) {
+    let flag = false;
+    if (typeof false !== "boolean") {
+      flag = !DesignTogglesStore.get(key10005);
+    }
+    let obj = DispatcherDefault;
+    let obj2 = { type: "DEV_TOOLS_DESIGN_TOGGLE_SET", toggle: key10005, value: flag };
+    let dispatchResult = obj.dispatch(obj2);
+    continue;
+  }
+};

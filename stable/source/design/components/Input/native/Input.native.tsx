@@ -1,0 +1,74 @@
+// Module ID: 6607
+// Function ID: 6608
+// Name: Input
+// Dependencies: [19, 17, 21, 4560, 576, 6608, 4264, 4556, 6609, 2]
+// Exports: Input
+
+// Module 6607 (Input)
+import nativeDefault from "native" /* 576 */;
+import native from "native" /* 4264 */;
+import getRequiredFieldA11yName from "getRequiredFieldA11yName" /* 6608 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const createStyles = fn(4560);
+const obj2 = { inputRow: { flexDirection: "row", gap: nativeDefault.space.PX_8, marginTop: nativeDefault.space.PX_4, marginBottom: nativeDefault.space.PX_4 }, labelWrapper: null, label: null, description: null, error: null };
+let obj3 = { flexDirection: "row", gap: nativeDefault.space.PX_8, marginTop: nativeDefault.space.PX_4, marginBottom: nativeDefault.space.PX_4 };
+obj2.labelWrapper = { marginBottom: nativeDefault.space.PX_4, flexDirection: "row", alignItems: "center" };
+let obj4 = { marginBottom: nativeDefault.space.PX_4, flexDirection: "row", alignItems: "center" };
+obj2.label = { marginBottom: nativeDefault.space.PX_4 };
+let obj5 = { marginBottom: nativeDefault.space.PX_4 };
+obj2.description = { marginTop: nativeDefault.space.PX_4 };
+let obj6 = { marginTop: nativeDefault.space.PX_4 };
+obj2.error = { marginTop: nativeDefault.space.PX_4, width: "auto" };
+let closure_5 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Input/native/Input.native.tsx");
+
+export const Input = function Input(arg0) {
+  const tmp = closure_5();
+  ({ label, labelTrailing, labelId, description, errorMessage, required } = arg0);
+  ({ children, containerStyle } = arg0);
+  const obj = getRequiredFieldA11yName;
+  const requiredFieldA11yName = obj.getRequiredFieldA11yName(native.getNodeText(label), required);
+  const obj3 = { style: containerStyle, children: null };
+  if (null == label) {
+    const items = [null, , , ];
+    const obj4 = { style: tmp.inputRow, children };
+    items[1] = React3(tmp6, obj4);
+    let tmp11Result = null;
+    if (null != description) {
+      const obj5 = { variant: "text-xs/medium", color: "text-muted", style: tmp.description, children: description };
+      tmp11Result = tmp11(tmp2(4556).Text, obj5);
+    }
+    items[2] = tmp11Result;
+    let tmp11Result2 = null;
+    if (null != errorMessage) {
+      const obj6 = { style: tmp.error, children: errorMessage };
+      tmp11Result2 = tmp11(tmp2(6609).ErrorText, obj6);
+    }
+    items[3] = tmp11Result2;
+    obj3.children = items;
+    return tmp5(tmp6, obj3);
+  } else if (null != labelTrailing) {
+    const obj7 = { style: tmp.labelWrapper, children: null };
+    const obj8 = { variant: "text-sm/semibold", color: "text-subtle", nativeID: labelId, accessibilityLabel: requiredFieldA11yName, children: label };
+    const items1 = [React3(tmp2(4556).Text, obj8), labelTrailing];
+    obj7.children = items1;
+    let tmp5Result = tmp5(tmp6, obj7);
+  } else {
+    const obj9 = { variant: "text-sm/semibold", color: "text-subtle", style: tmp.label, nativeID: labelId, accessibilityLabel: requiredFieldA11yName, children: null };
+    const items2 = [label, ];
+    let tmp5Result2 = null;
+    if (required) {
+      const obj10 = { variant: "text-sm/bold", color: "text-feedback-critical", "aria-hidden": true, children: [" ", "*"] };
+      tmp5Result2 = tmp5(tmp2(4556).Text, obj10);
+    }
+    items2[1] = tmp5Result2;
+    obj9.children = items2;
+    tmp5Result = tmp5(tmp2(4556).Text, obj9);
+  }
+};

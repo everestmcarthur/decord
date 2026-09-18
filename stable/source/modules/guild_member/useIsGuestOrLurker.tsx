@@ -1,0 +1,45 @@
+// Module ID: 10054
+// Function ID: 10055
+// Name: useIsGuestOrLurker
+// Dependencies: [2021, 1979, 1074, 504, 2]
+// Exports: default, isGuestOrLurkerInGuild
+
+// Module 10054 (useIsGuestOrLurker)
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
+import GuildStore from "GuildStore" /* 1979 */;
+
+const require = globalThis.__r;
+
+const require = fn;
+const GuildFeatures = fn(1074).GuildFeatures;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_member/useIsGuestOrLurker.tsx");
+
+export default function useIsGuestOrLurker(arg0, arg1) {
+  _require = arg0;
+  dependencyMap = arg1;
+  const items = [GuildStore, GuildMemberStore];
+  const items1 = [arg0, arg1];
+  return require("initialize").useStateFromStores(items, () => {
+    const guild = GuildStore.getGuild(closure_0);
+    let hasItem;
+    if (guild != null) {
+      const features = guild.features;
+      hasItem = features.has(GuildFeatures.CONFERENCE);
+    }
+    return true !== hasItem && GuildMemberStore.isGuestOrLurker(closure_0, closure_1);
+  }, items1);
+};
+export const isGuestOrLurkerInGuild = function isGuestOrLurkerInGuild(guild_id, id) {
+  const guild = GuildStore.getGuild(guild_id);
+  let hasItem;
+  if (guild != null) {
+    const features = guild.features;
+    hasItem = features.has(GuildFeatures.CONFERENCE);
+  }
+  let isGuestOrLurkerResult = true !== hasItem;
+  if (isGuestOrLurkerResult) {
+    isGuestOrLurkerResult = GuildMemberStore.isGuestOrLurker(guild_id, id);
+  }
+  return isGuestOrLurkerResult;
+};

@@ -1,0 +1,80 @@
+// Module ID: 12439
+// Function ID: 12440
+// Name: usePendingGameProfileReturn
+// Dependencies: [19, 1916, 8688, 1074, 504, 8686, 8692, 2]
+// Exports: default
+
+// Module 12439 (usePendingGameProfileReturn)
+import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 8686 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8692 */;
+import noop from "module_19" /* 19 */;
+import GameStore from "GameStore" /* 1916 */;
+import GameProfileStore from "GameProfileStore" /* 8688 */;
+
+require = fn;
+const AVATAR_SIZE = fn(1074).AVATAR_SIZE;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/game_profile/hooks/usePendingGameProfileReturn.tsx");
+
+export default function usePendingGameProfileReturn(channelId) {
+  channelId = channelId.channelId;
+  let stateFromStores1;
+  const items = [GameProfileStore];
+  const stateFromStores = channelId(stateFromStores1[4]).useStateFromStores(items, () => {
+    const pendingReturn = GameProfileStore.getPendingReturn();
+    let tmp2 = null;
+    if (null != pendingReturn) {
+      tmp2 = null;
+      if (pendingReturn.channelId === channelId) {
+        tmp2 = pendingReturn;
+      }
+    }
+    return tmp2;
+  });
+  const items1 = [stateFromStores];
+  const callback = noop.useCallback(() => {
+    if (null != stateFromStores) {
+      const obj2 = { gameId: tmp.gameId, source: GameProfileAnalyticUtils.GameProfileSources.AnnouncementChannelReturn, initialScrollOffset: tmp.initialScrollOffset };
+      GameProfileActionCreatorsDefault.returnToGameProfile(obj2);
+    }
+  }, items1);
+  let obj = channelId(stateFromStores1[4]);
+  const items2 = [GameStore];
+  stateFromStores1 = channelId(stateFromStores1[4]).useStateFromStores(items2, () => {
+    let gameId;
+    if (stateFromStores != null) {
+      gameId = tmp.gameId;
+    }
+    let game = null;
+    if (null != gameId) {
+      game = GameStore.getGame(tmp.gameId);
+    }
+    return game;
+  });
+  let id;
+  if (stateFromStores1 != null) {
+    id = stateFromStores1.id;
+  }
+  const items3 = [id];
+  const effect = noop.useEffect(() => {
+    let id;
+    if (stateFromStores1 != null) {
+      id = stateFromStores1.id;
+    }
+    return null != id ? (() => stateFromStores(stateFromStores1[5]).clearGameProfilePendingReturn(id.id)) : undefined;
+  }, items3);
+  if (stateFromStores1 != null) {
+    const name = stateFromStores1.name;
+  }
+  if (null != stateFromStores1) {
+    if (null != name) {
+      let iconURL;
+      if (stateFromStores1 != null) {
+        iconURL = stateFromStores1.getIconURL(AVATAR_SIZE);
+      }
+      const obj3 = { gameId: stateFromStores1.id, gameName: name, gameIconUrl: iconURL, onReturnToGameProfile: callback };
+      return obj3;
+    }
+  }
+  return null;
+};

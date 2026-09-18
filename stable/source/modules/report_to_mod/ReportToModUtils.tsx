@@ -1,0 +1,256 @@
+// Module ID: 7276
+// Function ID: 7277
+// Name: ReportToModUtils
+// Dependencies: [7277, 1957, 1979, 4781, 1371, 7288, 7289, 7266, 7290, 7265, 1086, 4204, 7291, 7292, 7295, 7303, 2]
+// Exports: canAccessReportsChannel, canReportMessageToMods, getReportToModChannelId, isModeratorReportChannel, isModeratorReportChannelId, isModeratorReportMessage, isModeratorReportOrPostChannel, isModeratorReportOrPostChannelId, isModeratorReportPostChannel, isModeratorReportPostChannelId, isModeratorReportThreadStarterMessage, isSafeToTransitionToReportForCurrentUser, isUserAuthorOfReportedMessage, sortedModeratorReportTags
+
+// Module 7276 (ReportToModUtils)
+import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4204 */;
+import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 7265 */;
+import getGuildModeratorReportingEnabledDefault from "getGuildModeratorReportingEnabled" /* 7266 */;
+import ReportUtils from "ReportUtils" /* 7289 */;
+import getGuildModeratorReportChannelIdDefault from "getGuildModeratorReportChannelId" /* 7290 */;
+import SelfModUtils from "SelfModUtils" /* 7291 */;
+import ForumChannelTypes from "ForumChannelTypes" /* 7303 */;
+import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7277 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import MessageStore from "MessageStore" /* 4781 */;
+import UserStore from "UserStore" /* 1371 */;
+
+require = fn;
+const ReportToModPermissions = fn(7288).ReportToModPermissions;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/report_to_mod/ReportToModUtils.tsx");
+
+export const canReportMessageToMods = function canReportMessageToMods(message) {
+  if (obj.canReportUser(message.author)) {
+    const channel = ChannelStore.getChannel(message.channel_id);
+    if (null == channel) {
+      return false;
+    } else {
+      const guild = GuildStore.getGuild(channel.guild_id);
+      if (null == guild) {
+        return false;
+      } else {
+        return getGuildModeratorReportingEnabledDefault(guild) && null != getGuildModeratorReportChannelIdDefault(guild);
+      }
+    }
+  } else {
+    return false;
+  }
+  obj = ReportUtils;
+};
+export const canAccessReportsChannel = function canAccessReportsChannel(arg0, items) {
+  let tmp = items;
+  if (items === undefined) {
+    items = [GuildStore, UserStore];
+    tmp = items;
+  }
+  const contextForPermission = MemberSafetyPermissionsUtils.getContextForPermission(arg0, tmp);
+  if (null == contextForPermission) {
+    return false;
+  } else {
+    const guild = contextForPermission.guild;
+    let tmp7 = null == guild;
+    if (!tmp7) {
+      tmp7 = !getGuildModeratorReportingEnabledDefault(guild);
+    }
+    if (!tmp7) {
+      tmp7 = null == getGuildModeratorReportChannelIdDefault(guild);
+    }
+    let hasAnyResult = !tmp7;
+    if (!tmp7) {
+      const obj2 = BigFlagUtilsAll;
+      const obj4 = { user: contextForPermission.user, context: guild, checkElevated: false };
+      hasAnyResult = obj2.hasAny(PermissionUtilsAll.computePermissions(obj4), ReportToModPermissions);
+    }
+    return hasAnyResult;
+  }
+};
+export const getReportToModChannelId = function getReportToModChannelId(arg0) {
+  const guild = GuildStore.getGuild(arg0);
+  let tmp2 = null;
+  if (null != guild) {
+    tmp2 = getGuildModeratorReportChannelIdDefault(guild);
+  }
+  return tmp2;
+};
+export const isModeratorReportOrPostChannelId = function isModeratorReportOrPostChannelId(arg0) {
+  const channel = ChannelStore.getChannel(arg0);
+  let tmp = null != channel;
+  if (tmp) {
+    let tmp2 = null != channel;
+    if (tmp2) {
+      tmp2 = channel.isModeratorReportChannel() && channel.isForumChannel();
+      const tmp3 = channel.isModeratorReportChannel() && channel.isForumChannel();
+    }
+    if (!tmp2) {
+      let tmp4 = null != channel;
+      if (tmp4) {
+        tmp4 = channel.isModeratorReportChannel() && channel.isForumPost();
+        const tmp5 = channel.isModeratorReportChannel() && channel.isForumPost();
+      }
+      tmp2 = tmp4;
+    }
+    tmp = tmp2;
+  }
+  return tmp;
+};
+export const isModeratorReportChannelId = function isModeratorReportChannelId(arg0) {
+  const channel = ChannelStore.getChannel(arg0);
+  let tmp = null != channel;
+  if (tmp) {
+    tmp = channel.isModeratorReportChannel() && channel.isForumChannel();
+    const tmp2 = channel.isModeratorReportChannel() && channel.isForumChannel();
+  }
+  return tmp;
+};
+export const isModeratorReportChannel = function isModeratorReportChannel(isModeratorReportChannel) {
+  let tmp = null != isModeratorReportChannel;
+  if (tmp) {
+    tmp = isModeratorReportChannel.isModeratorReportChannel() && isModeratorReportChannel.isForumChannel();
+    const tmp2 = isModeratorReportChannel.isModeratorReportChannel() && isModeratorReportChannel.isForumChannel();
+  }
+  return tmp;
+};
+export const isModeratorReportPostChannelId = function isModeratorReportPostChannelId(arg0) {
+  const channel = ChannelStore.getChannel(arg0);
+  let tmp = null != channel;
+  if (tmp) {
+    tmp = channel.isModeratorReportChannel() && channel.isForumPost();
+    const tmp2 = channel.isModeratorReportChannel() && channel.isForumPost();
+  }
+  return tmp;
+};
+export const isModeratorReportPostChannel = function isModeratorReportPostChannel(isModeratorReportChannel) {
+  let tmp = null != isModeratorReportChannel;
+  if (tmp) {
+    tmp = isModeratorReportChannel.isModeratorReportChannel() && isModeratorReportChannel.isForumPost();
+    const tmp2 = isModeratorReportChannel.isModeratorReportChannel() && isModeratorReportChannel.isForumPost();
+  }
+  return tmp;
+};
+export const isModeratorReportOrPostChannel = function isModeratorReportOrPostChannel(isModeratorReportChannel) {
+  let tmp = null != isModeratorReportChannel;
+  if (tmp) {
+    let tmp2 = null != isModeratorReportChannel;
+    if (tmp2) {
+      tmp2 = isModeratorReportChannel.isModeratorReportChannel() && isModeratorReportChannel.isForumChannel();
+      const tmp3 = isModeratorReportChannel.isModeratorReportChannel() && isModeratorReportChannel.isForumChannel();
+    }
+    if (!tmp2) {
+      let tmp4 = null != isModeratorReportChannel;
+      if (tmp4) {
+        tmp4 = isModeratorReportChannel.isModeratorReportChannel() && isModeratorReportChannel.isForumPost();
+        const tmp5 = isModeratorReportChannel.isModeratorReportChannel() && isModeratorReportChannel.isForumPost();
+      }
+      tmp2 = tmp4;
+    }
+    tmp = tmp2;
+  }
+  return tmp;
+};
+export const isSafeToTransitionToReportForCurrentUser = function isSafeToTransitionToReportForCurrentUser(arg0) {
+  if (null == arg0) {
+    return true;
+  } else {
+    if (obj3.isCurrentUserTeen()) {
+      const channel = ChannelStore.getChannel(arg0);
+      let tmp2 = null != channel;
+      if (tmp2) {
+        let tmp3 = null != channel;
+        if (tmp3) {
+          tmp3 = channel.isModeratorReportChannel() && channel.isForumChannel();
+          const tmp4 = channel.isModeratorReportChannel() && channel.isForumChannel();
+        }
+        if (!tmp3) {
+          let tmp5 = null != channel;
+          if (tmp5) {
+            tmp5 = channel.isModeratorReportChannel() && channel.isForumPost();
+            const tmp6 = channel.isModeratorReportChannel() && channel.isForumPost();
+          }
+          tmp3 = tmp5;
+        }
+        tmp2 = tmp3;
+      }
+      if (tmp2) {
+        const message = ForumPostMessagesStore.getMessage(arg0);
+        ({ loaded, firstMessage } = message);
+        let tmp9 = !loaded;
+        if (loaded) {
+          tmp9 = null == firstMessage;
+        }
+        if (!tmp9) {
+          tmp9 = !tmp10(7292).messageHasObscurableMediaForBitmask(firstMessage, tmp10(7295).ContentHarmTypeBitMask.EXPLICIT);
+          const tmp10Result = tmp10(7292);
+        }
+        return tmp9;
+      } else {
+        return true;
+      }
+    } else {
+      return true;
+    }
+    obj3 = SelfModUtils;
+  }
+};
+export const isModeratorReportThreadStarterMessage = function isModeratorReportThreadStarterMessage(isFirstMessageInForumPost, isModeratorReportChannel) {
+  const result = isFirstMessageInForumPost.isFirstMessageInForumPost(isModeratorReportChannel);
+  let tmp2 = !result;
+  if (result) {
+    tmp2 = !isFirstMessageInForumPost.isSystemDM();
+  }
+  let tmp3 = !tmp2;
+  if (!tmp2) {
+    let tmp5 = null != isModeratorReportChannel;
+    if (tmp5) {
+      tmp5 = isModeratorReportChannel.isModeratorReportChannel() && isModeratorReportChannel.isForumPost();
+      const tmp6 = isModeratorReportChannel.isModeratorReportChannel() && isModeratorReportChannel.isForumPost();
+    }
+    tmp3 = tmp5;
+  }
+  return tmp3;
+};
+export const sortedModeratorReportTags = function sortedModeratorReportTags(found) {
+  return found.sort((id, id2) => {
+    let num = -1;
+    if (id.id != ForumChannelTypes.ReservedTagIds.MULTIPLE_REPORTS) {
+      let num2 = 0;
+      if (id2.id == ForumChannelTypes.ReservedTagIds.MULTIPLE_REPORTS) {
+        num2 = 1;
+      }
+      num = num2;
+    }
+    return num;
+  });
+};
+export const isModeratorReportMessage = function isModeratorReportMessage(messageSnapshots) {
+  messageSnapshots = messageSnapshots.messageSnapshots;
+  return messageSnapshots.some((moderatorReport) => null != moderatorReport.moderatorReport);
+};
+export const isUserAuthorOfReportedMessage = function isUserAuthorOfReportedMessage(arg0, arg1) {
+  const channel = ChannelStore.getChannel(arg0);
+  if (null != channel) {
+    if (channel.isModeratorReportChannel()) {
+      const messages = MessageStore.getMessages(arg0);
+      const firstResult = messages.first();
+      let reported_user_id;
+      if (firstResult != null) {
+        const messageSnapshots = firstResult.messageSnapshots;
+        if (messageSnapshots != null) {
+          const first = messageSnapshots[0];
+          if (first != null) {
+            const moderatorReport = first.moderatorReport;
+            if (moderatorReport != null) {
+              reported_user_id = moderatorReport.reported_user_id;
+            }
+          }
+        }
+      }
+      return reported_user_id === arg1;
+    }
+  }
+  return false;
+};

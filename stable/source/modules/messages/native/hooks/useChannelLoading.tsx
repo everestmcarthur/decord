@@ -1,0 +1,35 @@
+// Module ID: 11545
+// Function ID: 11546
+// Name: useChannelLoading
+// Dependencies: [32, 19, 11546, 11257, 4993, 2]
+// Exports: default
+
+// Module 11545 (useChannelLoading)
+import hooks_useMountEffectDefault from "hooks/useMountEffect" /* 4993 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 11257 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/messages/native/hooks/useChannelLoading.tsx");
+
+export default function useChannelLoading(arg0) {
+  ({ channelId: require, jumpTargetId: importDefault, oldestUnreadMessageId: dependencyMap, shouldJumpToOriginalPost: _slicedToArray } = arg0);
+  let channelLatestMessageLoadingStatsManager;
+  channelLatestMessageLoadingStatsManager = _slicedToArray(channelLatestMessageLoadingStatsManager.useState(() => new jumpTargetId(oldestUnreadMessageId[2])("Messages")), 1)[0];
+  hooks_useMountEffectDefault(() => {
+    const obj = messages_MessagesUtils;
+    const result = obj.startOrCancelChannelLatestMessagesLoad({ jumpTargetId, oldestUnreadMessageId, shouldJumpToOriginalPost: _slicedToArray(false), channelId, tracker });
+    return () => {
+      first.cancel();
+    };
+  });
+  return {
+    channelLatestMessageLoadingStatsManager,
+    startOrCancelLatestMessagesLoad(arg0) {
+      const obj = messages_MessagesUtils;
+      const result = obj.startOrCancelChannelLatestMessagesLoad({ jumpTargetId, oldestUnreadMessageId, shouldJumpToOriginalPost: _slicedToArray(arg0), channelId, tracker });
+    }
+  };
+};

@@ -1,0 +1,76 @@
+// Module ID: 9846
+// Function ID: 9847
+// Name: UserSearchWorkerManager
+// Dependencies: [17, 2]
+
+// Module 9846 (UserSearchWorkerManager)
+import get_ActivityIndicator from "module_17" /* 17 */;
+import size from "module_2" /* 2 */;
+
+const NativeEventEmitter = get_ActivityIndicator.NativeEventEmitter;
+const UserSearchWorkerManager = get_ActivityIndicator.NativeModules.UserSearchWorkerManager;
+class UserSearchWorker extends NativeEventEmitter {
+  constructor() {
+    tmp1 = new tmp(UserSearchWorkerManager, new.target, tmp);
+    closure_0 = tmp1;
+    set = new Set();
+    tmp1.handlers = set;
+    tmp1.subscription = null;
+    tmp1.handleCallback = function handleCallback(data) {
+      handlers = data;
+      handlers = handlers.handlers;
+      const item = handlers.forEach((fn) => fn({ data }));
+    };
+    return tmp1;
+  }
+}
+const prototype = UserSearchWorker.prototype;
+prototype["postMessage"] = function postMessage(arg0) {
+  if (arg0) {
+    const _JSON = JSON;
+    UserSearchWorkerManager.onmessage(JSON.stringify(arg0));
+  } else {
+    const _Error = Error;
+    const error = new Error("Invalid data");
+    throw error;
+  }
+};
+prototype["addEventListener"] = function addEventListener(arg0, arg1) {
+  if ("message" === arg0) {
+    const self = this;
+    if (null == this.subscription) {
+      self.subscription = self.addListener("ReturnResults", self.handleCallback);
+    }
+    const handlers = self.handlers;
+    handlers.add(arg1);
+  }
+};
+prototype["removeEventListener"] = function removeEventListener(arg0, arg1) {
+  if ("message" === arg0) {
+    const self = this;
+    const handlers = this.handlers;
+    handlers.delete(arg1);
+    if (0 === this.handlers.size) {
+      const subscription = self.subscription;
+      if (subscription != null) {
+        subscription.remove();
+      }
+      self.subscription = null;
+    }
+  }
+};
+prototype["terminate"] = function terminate() {
+  UserSearchWorkerManager.terminate();
+};
+let tmp2 = new tmp(UserSearchWorkerManager, prototype, "terminate", UserSearchWorkerManager, UserSearchWorker);
+let closure_129_0 = tmp2;
+tmp2.handlers = new Set();
+tmp2.subscription = null;
+tmp2.handleCallback = function handleCallback(data) {
+  handlers = data;
+  handlers = handlers.handlers;
+  const item = handlers.forEach((fn) => fn({ data }));
+};
+const result = size.fileFinishedImporting("modules/autocompleter/native/UserSearch.worker.tsx");
+
+export default tmp2;

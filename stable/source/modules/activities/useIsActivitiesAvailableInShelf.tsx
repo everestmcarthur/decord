@@ -1,0 +1,44 @@
+// Module ID: 9507
+// Function ID: 9508
+// Name: useIsActivitiesAvailableInShelf
+// Dependencies: [19, 9508, 9509, 9510, 2]
+// Exports: default
+
+// Module 9507 (useIsActivitiesAvailableInShelf)
+import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 9510 */;
+import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
+
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/useIsActivitiesAvailableInShelf.tsx");
+
+export default function useIsActivitiesAvailableInShelf(guildId, arg1) {
+  _require = guildId;
+  const isActivitiesEnabledForCurrentPlatform = require("useIsActivitiesEnabledForCurrentPlatform").useIsActivitiesEnabledForCurrentPlatform();
+  let tmp3 = null != guildId;
+  let obj = require("useIsActivitiesEnabledForCurrentPlatform");
+  if (tmp3) {
+    tmp3 = "" !== guildId;
+  }
+  if (!tmp3) {
+    tmp3 = tmp2;
+  }
+  dependencyMap = tmp3;
+  const items = [guildId, isActivitiesEnabledForCurrentPlatform, tmp3];
+  const effect = noop.useEffect(() => {
+    let tmp = closure_2;
+    if (closure_2) {
+      tmp = isActivitiesEnabledForCurrentPlatform;
+    }
+    if (tmp) {
+      const obj2 = { guildId };
+      const shelf = EmbeddedActivitiesActionCreators.fetchShelf(obj2);
+    }
+  }, items);
+  if (tmp3) {
+    tmp3 = isActivitiesEnabledForCurrentPlatform;
+  }
+  return tmp3;
+};

@@ -1,0 +1,55 @@
+// Module ID: 16784
+// Function ID: 16785
+// Name: IgnoredUserRequestsScreen
+// Dependencies: [19, 4209, 1371, 10865, 1074, 21, 7162, 7182, 504, 16782, 8180, 10871, 2]
+// Exports: default
+
+// Module 16784 (IgnoredUserRequestsScreen)
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8180 */;
+import noop from "module_19" /* 19 */;
+import RelationshipStore from "RelationshipStore" /* 4209 */;
+import UserStore from "UserStore" /* 1371 */;
+
+const require = fn;
+const UserRowModes = fn(10865).UserRowModes;
+const RelationshipTypes = fn(1074).RelationshipTypes;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/IgnoredUserRequestsScreen.tsx");
+
+export default function IgnoredUserRequestsScreen(navigation) {
+  navigation = navigation.navigation;
+  let stateFromStoresArray;
+  let stateFromStores;
+  let onPress;
+  const analyticsLocations = stateFromStoresArray(stateFromStores[6])(stateFromStoresArray(stateFromStores[7]).FRIEND_REQUESTS).analyticsLocations;
+  const tmp = stateFromStores;
+  const tmp2 = stateFromStoresArray(stateFromStores[6]);
+  const tmp3 = analyticsLocations;
+  const items = [RelationshipStore];
+  stateFromStoresArray = analyticsLocations(stateFromStores[8]).useStateFromStoresArray(items, () => analyticsLocations(stateFromStores[9]).getPendingRelationshipIds(mutableRelationships.getMutableRelationships()).ignoredUserIds);
+  const obj = analyticsLocations(stateFromStores[8]);
+  const items1 = [UserStore];
+  const items2 = [stateFromStoresArray];
+  stateFromStores = analyticsLocations(stateFromStores[8]).useStateFromStores(items1, () => {
+    const mapped = stateFromStoresArray.map((item) => user.getUser(item));
+    return mapped.filter((item) => null != item);
+  }, items2);
+  const items3 = [analyticsLocations];
+  onPress = onPress.useCallback((id) => {
+    showUserProfileActionSheetDefault({ userId: id.id, localUser: id, sourceAnalyticsLocations: analyticsLocations });
+  }, items3);
+  const items4 = [onPress, stateFromStores];
+  const callback1 = onPress.useCallback(() => {
+
+  }, []);
+  if (0 !== stateFromStores.length) {
+    const obj3 = { getItemProps: tmp7, getSectionProps: callback1, sections: null };
+    const items5 = [stateFromStores.length];
+    obj3.sections = items5;
+    return jsx(tmp3(tmp[11]).UsersFastList, { getItemProps: tmp7, getSectionProps: callback1, sections: null });
+  } else {
+    navigation.goBack();
+  }
+  const obj2 = analyticsLocations(stateFromStores[8]);
+};

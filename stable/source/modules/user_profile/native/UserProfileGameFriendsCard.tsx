@@ -1,0 +1,77 @@
+// Module ID: 13082
+// Function ID: 13083
+// Name: UserProfileGameFriendsCard
+// Dependencies: [19, 21, 4560, 7168, 1114, 12632, 7207, 4556, 2]
+// Exports: default
+
+// Module 13082 (UserProfileGameFriendsCard)
+import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7168 */;
+import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 12632 */;
+import noop from "module_19" /* 19 */;
+
+const UserProfileCardDefault = tmp2(7207);
+const require = fn;
+let jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_4 = createStyles.createStyles({ card: { flexDirection: "column" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileGameFriendsCard.tsx");
+
+export default function UserProfileGameFriendsCard(arg0) {
+  importDefault = undefined;
+  dependencyMap = undefined;
+  jsx = undefined;
+  ({ applicationIds, style } = arg0);
+  const tmp = closure_4();
+  const found = useGetOrFetchApplicationsDefault(applicationIds).filter((item) => null != item);
+  if (0 === found.length) {
+    return null;
+  } else {
+    importDefault = "text-md/normal";
+    if (1 === found.length) {
+      const intl2 = found(1114).intl;
+      const obj2 = {
+        applicationName() {
+              return jsx(ApplicationIconAndNameDefault, { application: found[0], textVariant, iconSize: 16 }, found[0].id);
+            }
+      };
+      let formatResult = intl2.format(found(1114).t.wQ6urw, obj2);
+      let tmp6 = found;
+    } else if (2 === found.length) {
+      const intl = found(1114).intl;
+      const obj = {
+        applicationName() {
+              return jsx(ApplicationIconAndNameDefault, { application: found[0], textVariant, iconSize: 16 }, found[0].id);
+            },
+        applicationName2() {
+              return jsx(ApplicationIconAndNameDefault, { application: found[1], textVariant, iconSize: 16 }, found[1].id);
+            }
+      };
+      formatResult = intl.format(found(1114).t.C98CSN, obj);
+      tmp6 = found;
+    } else {
+      dependencyMap = found[found.length - 1];
+      jsx = found.slice(0, -1);
+      const intl4 = found(1114).intl;
+      const obj3 = {
+        applications() {
+              return closure_3.map((application) => closure_3(textVariant(closure_2[5]), { application, useComma: true, textVariant, iconSize: 16 }, application.id));
+            },
+        applicationNameLast() {
+              return jsx(ApplicationIconAndNameDefault, { application, textVariant, iconSize: 16 });
+            }
+      };
+      formatResult = intl4.format(found(1114).t.UxpwAh, obj3);
+      tmp6 = found;
+    }
+    const obj4 = { style: null, title: null, children: null };
+    const items = [tmp.card, style];
+    obj4.style = items;
+    const intl3 = tmp6(1114).intl;
+    obj4.title = intl3.string(tmp6(1114).t["Uv/eTx"]);
+    const obj5 = { variant: "text-md/normal", color: "text-default", children: formatResult };
+    obj4.children = jsx(tmp6(4556).Text, { variant: "text-md/normal", color: "text-default", children: formatResult });
+    return jsx(UserProfileCardDefault, { style: null, title: null, children: null });
+  }
+  const arr = useGetOrFetchApplicationsDefault(applicationIds);
+};

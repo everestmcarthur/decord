@@ -1,0 +1,36 @@
+// Module ID: 9771
+// Function ID: 9772
+// Name: EditGuildEventStepHeader
+// Dependencies: [19, 17, 21, 4560, 4556, 2]
+// Exports: default
+
+// Module 9771 (EditGuildEventStepHeader)
+import Text_Text from "Text/Text" /* 4556 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const createStyles = fn(4560);
+let closure_5 = createStyles.createStyles({ header: { alignItems: "center", paddingBottom: 24 }, headerTitle: { marginTop: 8, marginBottom: 8 }, headerSubtitle: { textAlign: "center" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/EditGuildEventStepHeader.tsx");
+
+export default function EditGuildEventStepHeader(children) {
+  const subtitle = children.subtitle;
+  const tmp = closure_5();
+  const obj = { style: tmp.header, children: null };
+  const items = [React3(Text_Text.Text, { style: tmp.headerTitle, accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: children.title }), ];
+  let tmp4Result = null;
+  if (null != subtitle) {
+    tmp4Result = null;
+    if ("" !== subtitle) {
+      const obj3 = { style: tmp.headerSubtitle, variant: "text-sm/medium", color: "text-default", children: subtitle };
+      tmp4Result = React3(Text_Text.Text, obj3);
+    }
+  }
+  items[1] = tmp4Result;
+  obj.children = items;
+  return React4(View, obj);
+};

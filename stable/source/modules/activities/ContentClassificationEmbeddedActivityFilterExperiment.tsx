@@ -1,0 +1,13 @@
+// Module ID: 9485
+// Function ID: 9486
+// Name: ContentClassificationEmbeddedActivityFilterExperiment
+// Dependencies: [1433, 2]
+
+// Module 9485 (ContentClassificationEmbeddedActivityFilterExperiment)
+import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
+
+const apexExperiment = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-06-content-classification-embedded-activity-filter", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
+const result = size.fileFinishedImporting("modules/activities/ContentClassificationEmbeddedActivityFilterExperiment.tsx");
+
+export const ContentClassificationEmbeddedActivityFilterExperiment = apexExperiment;

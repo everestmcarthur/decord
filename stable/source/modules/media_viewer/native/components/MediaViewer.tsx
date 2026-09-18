@@ -1,0 +1,319 @@
+// Module ID: 12984
+// Function ID: 12985
+// Name: MediaViewer
+// Dependencies: [32, 19, 17, 21, 1115, 4296, 12985, 12986, 8266, 6655, 7072, 7162, 7182, 8294, 12990, 4561, 8271, 8333, 9487, 4297, 9489, 2]
+
+// Module 12984 (MediaViewer)
+import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
+import timing from "timing" /* 4561 */;
+import useVideoControls from "useVideoControls" /* 8271 */;
+import MediaViewerDimensionsContext from "MediaViewerDimensionsContext" /* 8294 */;
+import MediaViewerItem from "MediaViewerItem" /* 12986 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+function MediaViewer(arg0) {
+  ({ onClose, syncer } = arg0);
+  ({ index, sources } = syncer);
+  height = undefined;
+  let sharedValue;
+  let sharedValue1;
+  translatePos = undefined;
+  ref = undefined;
+  __initData = undefined;
+  ({ onLongPress, originLayout, renderMedia, renderOverlay, swipeVelocityThreshold } = arg0);
+  ({ useViewerProps, zoomed } = syncer);
+  value = [height(7182).MEDIA_VIEWER];
+  let tmp = height;
+  const tmp3 = height(7162);
+  [tmp5, tmp6] = sharedValue(sharedValue1.useState(true), 2);
+  const _require = tmp6;
+  const tmp4 = sharedValue(sharedValue1.useState(true), 2);
+  const tmp7 = _require;
+  const mediaViewerDimensions = require("MediaViewerDimensionsContext").useMediaViewerDimensions();
+  ({ width, height } = mediaViewerDimensions);
+  const tmp9 = height(12990)({ index, onClose, sources, windowHeight: height, windowWidth: width });
+  dependencyMap = tmp9;
+  let obj = require("MediaViewerDimensionsContext");
+  sharedValue = require("ReanimatedRexport").useSharedValue(0);
+  let obj2 = require("ReanimatedRexport");
+  sharedValue1 = require("ReanimatedRexport").useSharedValue(false);
+  let obj3 = require("ReanimatedRexport");
+  const animatedRef = require("ReanimatedRexport").useAnimatedRef();
+  closure_6 = tmp13;
+  const viewerProps = useViewerProps();
+  ({ ref, onScroll, onContentSizeChange, useItemVisible } = viewerProps);
+  let obj4 = require("ReanimatedRexport");
+  const mediaViewerPanGestureConfig = require("useMediaViewerPanGesture").useMediaViewerPanGestureConfig(tmp9, swipeVelocityThreshold, onClose);
+  ({ dismiss, translatePos } = mediaViewerPanGestureConfig);
+  const isClosing = mediaViewerPanGestureConfig.isClosing;
+  const isInteracting = mediaViewerPanGestureConfig.isInteracting;
+  const overlayEnabled = mediaViewerPanGestureConfig.overlayEnabled;
+  const absoluteFillObject = closure_6.absoluteFillObject;
+  let obj5 = require("useMediaViewerPanGesture");
+  class M {
+    constructor() {
+      obj = {};
+      merged = Object.assign(absoluteFillObject);
+      obj.height = height;
+      obj.backgroundColor = "black";
+      value = closure_3.get();
+      obj2 = closure_0(closure_2[5]);
+      items = [, , ];
+      items[0] = -closure_2;
+      items[1] = 0;
+      items[2] = closure_2;
+      obj.opacity = Math.min(value, obj2.interpolate(translatePos.get(), items, [0, 1, 0]));
+      return obj;
+    }
+  }
+  const obj6 = require("ReanimatedRexport");
+  M.__closure = { absoluteFillObject, windowHeight: height, entranceAnimationDriver: sharedValue, interpolate: require("ReanimatedRexport").interpolate, translatePos, closePosition: tmp9 };
+  M.__workletHash = 10332062530694;
+  M.__initData = __initData;
+  const obj8 = {};
+  const animatedStyle = obj6.useAnimatedStyle(M);
+  let merged = Object.assign(closure_6.absoluteFillObject);
+  obj8.backgroundColor = "transparent";
+  const obj7 = { absoluteFillObject, windowHeight: height, entranceAnimationDriver: sharedValue, interpolate: require("ReanimatedRexport").interpolate, translatePos, closePosition: tmp9 };
+  class P {
+    constructor() {
+      opacity = 0;
+      if (!isClosing.get()) {
+        tmp = closure_4;
+        opacity = 0;
+        if (!closure_4.get()) {
+          tmp2 = overlayEnabled;
+          if (overlayEnabled.get()) {
+            tmp3 = isInteracting;
+            if (!isInteracting.get()) {
+              tmp4 = closure_0;
+              tmp5 = closure_2;
+              obj = closure_0(closure_2[15]);
+              obj1 = { easing: null, duration: 150 };
+              tmp6 = closure_0;
+              tmp7 = closure_2;
+              obj1.easing = closure_0(closure_2[5]).Easing.linear;
+              num2 = 1;
+              withTimingResult = obj.withTiming(1, obj1);
+            }
+            tmp20 = withTimingResult;
+          }
+          tmp9 = closure_0;
+          tmp10 = closure_2;
+          obj3 = closure_0(closure_2[15]);
+          obj6 = { easing: null, duration: 75 };
+          tmp11 = closure_0;
+          tmp12 = closure_2;
+          obj6.easing = closure_0(closure_2[5]).Easing.linear;
+          fn = function n() {
+            c0(closure_2[5]).runOnJS(setShowHeader)(false);
+          };
+          obj7 = { runOnJS: null, setShowHeader: null };
+          tmp13 = closure_0;
+          tmp14 = closure_2;
+          obj7.runOnJS = closure_0(closure_2[5]).runOnJS;
+          tmp15 = closure_0;
+          obj7.setShowHeader = closure_0;
+          fn.__closure = obj7;
+          num3 = 11572173694016;
+          fn.__workletHash = 11572173694016;
+          tmp16 = closure_15;
+          fn.__initData = closure_15;
+          str = "respect-motion-settings";
+          tmp17 = obj3;
+          num4 = 0;
+          tmp18 = obj6;
+          tmp19 = fn;
+          withTimingResult = obj3.withTiming(0, obj6, "respect-motion-settings", fn);
+        }
+      }
+      return { opacity };
+    }
+  }
+  const obj9 = require("ReanimatedRexport");
+  P.__closure = { isClosing, hideRelayoutSharedValue: sharedValue1, overlayEnabled, isInteracting, withTiming: require("timing").withTiming, Easing: require("ReanimatedRexport").Easing, runOnJS: require("ReanimatedRexport").runOnJS, setShowHeader: tmp6 };
+  P.__workletHash = 14874736878670;
+  P.__initData = __initData;
+  const animatedStyle1 = obj9.useAnimatedStyle(P);
+  const obj10 = { isClosing, hideRelayoutSharedValue: sharedValue1, overlayEnabled, isInteracting, withTiming: require("timing").withTiming, Easing: require("ReanimatedRexport").Easing, runOnJS: require("ReanimatedRexport").runOnJS, setShowHeader: tmp6 };
+  let fn = function x() {
+    value = overlayEnabled.get();
+    if (value) {
+      value = !isInteracting.get();
+    }
+    if (value) {
+      ReanimatedRexport.runOnJS(c0)(true);
+    }
+  };
+  const obj11 = require("ReanimatedRexport");
+  fn.__closure = { overlayEnabled, isInteracting, runOnJS: require("ReanimatedRexport").runOnJS, setShowHeader: tmp6 };
+  fn.__workletHash = 2199049578465;
+  fn.__initData = __initData3;
+  const derivedValue = obj11.useDerivedValue(fn);
+  const obj12 = { overlayEnabled, isInteracting, runOnJS: require("ReanimatedRexport").runOnJS, setShowHeader: tmp6 };
+  function le() {
+    const obj = {};
+    const merged = Object.assign(absoluteFillObject);
+    obj.alignItems = "center";
+    obj.justifyContent = "center";
+    const items = [{ translateY: translatePos.get() }];
+    obj.transform = items;
+    let num = 0;
+    if (!sharedValue1.get()) {
+      const obj4 = { easing: ReanimatedRexport.Easing.linear, duration: 75 };
+      num = timing.withTiming(1, obj4);
+    }
+    obj.opacity = num;
+    return obj;
+  }
+  const obj13 = require("ReanimatedRexport");
+  le.__closure = { absoluteFillObject, translatePos, hideRelayoutSharedValue: sharedValue1, withTiming: require("timing").withTiming, Easing: require("ReanimatedRexport").Easing };
+  le.__workletHash = 8244409104374;
+  le.__initData = __initData4;
+  const animatedStyle2 = obj13.useAnimatedStyle(le);
+  ref = sharedValue1.useRef(null);
+  const items1 = [sources.length > 1, animatedRef, sharedValue1];
+  sharedValue1.useCallback(() => {
+    let tmp = closure_6;
+    if (closure_6) {
+      tmp = null != animatedRef.current;
+    }
+    if (tmp) {
+      let result = sharedValue1.set(true);
+      const _clearTimeout = clearTimeout;
+      clearTimeout(ref.current);
+      const _setTimeout = setTimeout;
+      ref.current = setTimeout(() => {
+        const result = sharedValue1.set(false);
+      }, 250);
+    }
+  }, items1);
+  const items2 = [sharedValue1];
+  const callback1 = sharedValue1.useCallback(() => {
+    const result = sharedValue1.set(false);
+  }, items2);
+  __initData = sharedValue1.useRef(false);
+  const items3 = [width, height, __initData];
+  const effect = sharedValue1.useEffect(() => {
+    if (ref2.current) {
+      callback();
+    } else {
+      tmp.current = true;
+    }
+  }, items3);
+  const items4 = [__initData];
+  const callback2 = sharedValue1.useCallback((orientation, orientation2) => {
+    if (orientation.orientation !== orientation2.orientation) {
+      callback();
+    }
+    if (closure_9) {
+      const result = useVideoControls.unpauseCurrentVideoIfNeeded();
+    }
+  }, items4);
+  const obj14 = { absoluteFillObject, translatePos, hideRelayoutSharedValue: sharedValue1, withTiming: require("timing").withTiming, Easing: require("ReanimatedRexport").Easing };
+  const orientationListener = require("DeviceOrientation").useOrientationListener(callback2);
+  const obj16 = { style: closure_6.absoluteFill, onAccessibilityEscape: dismiss, onLayout: callback1, children: null };
+  const obj15 = require("DeviceOrientation");
+  const items5 = [translatePos(height(9487), { barStyle: "light-content", hidden: !tmp5 }), translatePos(height(4296).View, { style: animatedStyle }), translatePos(height(4297), { ref: animatedRef, style: animatedStyle2, children: translatePos(ref, { entranceAnimationDriver: sharedValue, onContentSizeChange, onScroll, onLongPress, originLayout, panGestureConfig: mediaViewerPanGestureConfig, ref, renderMedia, sources, useItemVisible, windowHeight: height, windowWidth: width, index, zoomed }) }), , ];
+  const obj18 = { style: null, pointerEvents: null, children: null };
+  const items6 = [sharedValue(sharedValue1.useState(obj8), 1)[0], animatedStyle1];
+  obj18.style = items6;
+  let str = "none";
+  const obj17 = { barStyle: "light-content", hidden: !tmp5 };
+  const tmp27 = translatePos(ref, { entranceAnimationDriver: sharedValue, onContentSizeChange, onScroll, onLongPress, originLayout, panGestureConfig: mediaViewerPanGestureConfig, ref, renderMedia, sources, useItemVisible, windowHeight: height, windowWidth: width, index, zoomed });
+  const tmp28 = isClosing;
+  const tmp29 = animatedRef;
+  if (tmp5) {
+    str = "box-none";
+  }
+  obj18.pointerEvents = str;
+  obj18.children = renderOverlay(dismiss, overlayEnabled);
+  items5[3] = translatePos(height(4297), obj18);
+  items5[4] = translatePos(tmp(9489), {});
+  obj16.children = items5;
+  const children = tmp28(tmp29, obj16);
+  return translatePos(tmp7(7162).AnalyticsLocationProvider, { value: tmp3(value).analyticsLocations, children });
+}
+get_ActivityIndicator = fn(17);
+({ View: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const PlatformUtils = fn(1115);
+let closure_9 = PlatformUtils.isAndroid();
+let closure_10 = { code: "function MediaViewerTsx1(){const{zoomed,pinching}=this.__closure;return!zoomed.get()&&!pinching.get();}" };
+let closure_11 = { code: "function MediaViewerTsx2(){const{scrollEnabled}=this.__closure;return{scrollEnabled:scrollEnabled.get()};}" };
+let closure_12 = noop.memo((entranceAnimationDriver) => {
+  entranceAnimationDriver = entranceAnimationDriver.entranceAnimationDriver;
+  const onLongPress = entranceAnimationDriver.onLongPress;
+  const originLayout = entranceAnimationDriver.originLayout;
+  const panGestureConfig = entranceAnimationDriver.panGestureConfig;
+  const renderMedia = entranceAnimationDriver.renderMedia;
+  const sources = entranceAnimationDriver.sources;
+  const useItemVisible = entranceAnimationDriver.useItemVisible;
+  const windowWidth = entranceAnimationDriver.windowWidth;
+  const windowHeight = entranceAnimationDriver.windowHeight;
+  const zoomed = entranceAnimationDriver.zoomed;
+  let derivedValue;
+  let panGestureGenerator;
+  ({ onContentSizeChange, onScroll, ref, index } = entranceAnimationDriver);
+  const sharedValue = entranceAnimationDriver(originLayout[5]).useSharedValue(false);
+  const obj = entranceAnimationDriver(originLayout[5]);
+  class T {
+    constructor() {
+      value = zoomed.get();
+      tmp2 = !value;
+      if (!value) {
+        tmp3 = closure_10;
+        tmp2 = !closure_10.get();
+      }
+      return tmp2;
+    }
+  }
+  T.__closure = { zoomed, pinching: sharedValue };
+  T.__workletHash = 9157951736691;
+  T.__initData = sharedValue;
+  derivedValue = entranceAnimationDriver(originLayout[5]).useDerivedValue(T);
+  const items = [sharedValue];
+  const items1 = [sharedValue];
+  const callback = renderMedia.useCallback((nativeEvent) => sharedValue.set(2 === nativeEvent.nativeEvent.touches.length), items);
+  const callback1 = renderMedia.useCallback(() => sharedValue.set(false), items1);
+  const obj2 = entranceAnimationDriver(originLayout[5]);
+  const mediaViewerPanGesture = entranceAnimationDriver(originLayout[6]).useMediaViewerPanGesture(panGestureConfig, derivedValue);
+  panGestureGenerator = mediaViewerPanGesture.panGestureGenerator;
+  const items2 = [entranceAnimationDriver, onLongPress, originLayout, panGestureConfig, panGestureGenerator, renderMedia, sources, useItemVisible, windowHeight, windowWidth, zoomed];
+  const callback2 = renderMedia.useCallback((arg0, index) => React5(MediaViewerItem.MediaViewerItem, { originLayout, renderMedia, onLongPress, windowWidth, windowHeight, panGestureConfig, entranceAnimationDriver, source: sources[index], index, zoomed, panGesture: panGestureGenerator(index), useItemVisible }), items2);
+  const obj3 = entranceAnimationDriver(originLayout[6]);
+  class H {
+    constructor() {
+      obj = { scrollEnabled: closure_11.get() };
+      return obj;
+    }
+  }
+  H.__closure = { scrollEnabled: derivedValue };
+  H.__workletHash = 13550782123441;
+  H.__initData = derivedValue;
+  const animatedProps = entranceAnimationDriver(originLayout[5]).useAnimatedProps(H);
+  const obj4 = entranceAnimationDriver(originLayout[5]);
+  const obj5 = { gesture: mediaViewerPanGesture.nativeGesture, children: null };
+  const obj6 = { ref, style: useItemVisible.absoluteFill, sections: null, onTouchStart: callback, onTouchEnd: callback1, onTouchCancel: callback1, initialScrollItem: onLongPress(originLayout[8])(index), automaticallyAdjustContentInsets: false, showsVerticalScrollIndicator: false, showsHorizontalScrollIndicator: false, itemSize: windowWidth, renderItem: callback2, onContentSizeChange, pagingEnabled: true, onScroll, scrollEventThrottle: 16, animatedProps, disableLegacyGestureHandling: true, chunkBase: windowWidth, horizontal: true };
+  const items3 = [sources.length];
+  obj6.sections = items3;
+  obj5.children = windowWidth(entranceAnimationDriver(originLayout[10]).AnimatedFastList, obj6);
+  return windowWidth(entranceAnimationDriver(originLayout[9]).GestureDetector, obj5);
+});
+let closure_13 = { code: "function MediaViewerTsx3(){const{absoluteFillObject,windowHeight,entranceAnimationDriver,interpolate,translatePos,closePosition}=this.__closure;return{...absoluteFillObject,height:windowHeight,backgroundColor:'black',opacity:Math.min(entranceAnimationDriver.get(),interpolate(translatePos.get(),[-closePosition,0,closePosition],[0,1,0]))};}" };
+let __initData = { code: "function MediaViewerTsx4(){const{isClosing,hideRelayoutSharedValue,overlayEnabled,isInteracting,withTiming,Easing,runOnJS,setShowHeader}=this.__closure;return{opacity:isClosing.get()||hideRelayoutSharedValue.get()?0:overlayEnabled.get()&&!isInteracting.get()?withTiming(1,{easing:Easing.linear,duration:150}):withTiming(0,{easing:Easing.linear,duration:75},'respect-motion-settings',function(){runOnJS(setShowHeader)(false);})};}" };
+const __initData2 = { code: "function MediaViewerTsx5(){const{runOnJS,setShowHeader}=this.__closure;runOnJS(setShowHeader)(false);}" };
+const __initData3 = { code: "function MediaViewerTsx6(){const{overlayEnabled,isInteracting,runOnJS,setShowHeader}=this.__closure;if(overlayEnabled.get()&&!isInteracting.get()){runOnJS(setShowHeader)(true);}}" };
+const __initData4 = { code: "function MediaViewerTsx7(){const{absoluteFillObject,translatePos,hideRelayoutSharedValue,withTiming,Easing}=this.__closure;return{...absoluteFillObject,alignItems:'center',justifyContent:'center',transform:[{translateY:translatePos.get()}],opacity:hideRelayoutSharedValue.get()?0:withTiming(1,{easing:Easing.linear,duration:75})};}" };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/media_viewer/native/components/MediaViewer.tsx");
+
+export default noop.memo((arg0) => {
+  const obj = { children: null };
+  const merged = Object.assign(arg0);
+  obj.children = React5(MediaViewer, {});
+  return React5(MediaViewerDimensionsContext.MediaViewerDimensionsProvider, obj);
+});

@@ -1,0 +1,11 @@
+// Module ID: 6422
+// Function ID: 6423
+// Dependencies: [2]
+
+// Module 6422
+import size from "module_2" /* 2 */;
+
+const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ServerIconBoomBGoneExample-2x.png.js");
+
+export default "https://cdn.discordapp.com/assets/content/f9cbc8285f77db2b3829673d76bdb601daf17ff2f8c81b09abf2b0cadd93d889.png";
+export const metadata = { fileBytes: 41935 };

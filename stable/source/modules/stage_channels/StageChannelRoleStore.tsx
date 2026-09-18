@@ -1,0 +1,231 @@
+// Module ID: 5421
+// Function ID: 5422
+// Name: StageChannelRoleStore
+// Dependencies: [1957, 2021, 2015, 1979, 1371, 4579, 4707, 4204, 1965, 12, 504, 5422, 573, 2]
+
+// Module 5421 (StageChannelRoleStore)
+import _modDef12 from "module_12" /* 12 */;
+import initializeDefault from "initialize" /* 504 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4204 */;
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4707 */;
+import useStageSpeakingForCurrentUser from "useStageSpeakingForCurrentUser" /* 5422 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
+import GuildRoleStore from "GuildRoleStore" /* 2015 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import UserStore from "UserStore" /* 1371 */;
+import VoiceStateStore from "VoiceStateStore" /* 4579 */;
+
+require = fn;
+function buildStageChannelUserRoles(user, id2, flag) {
+  if (flag === undefined) {
+    flag = false;
+  }
+  if (null == dependencyMap[id2]) {
+    dependencyMap[id2] = {};
+  }
+  if (flag === undefined) {
+    flag = false;
+  }
+  const channel = ChannelStore.getChannel(id2);
+  let guildId;
+  if (channel != null) {
+    guildId = channel.getGuildId();
+  }
+  const guild = GuildStore.getGuild(guildId);
+  if (null != guild) {
+    if (null != channel) {
+      if (channel.isGuildStageVoice()) {
+        const obj = {};
+        const voiceStateForChannel = VoiceStateStore.getVoiceStateForChannel(id2, user);
+        const audienceRequestToSpeakState = useAudienceRequestToSpeakState.getAudienceRequestToSpeakState(voiceStateForChannel);
+        obj[obj.SPEAKER] = audienceRequestToSpeakState === useAudienceRequestToSpeakState.RequestToSpeakStates.ON_STAGE;
+        let canResult = null;
+        if (flag) {
+          obj2 = { permission: tmp8(1965).MODERATE_STAGE_CHANNEL_PERMISSIONS, user, context: guild, overwrites: channel.permissionOverwrites, roles: GuildRoleStore.getUnsafeMutableRoles(guild.id) };
+          canResult = PermissionUtilsAll.can(obj2);
+        }
+        obj[obj.MODERATOR] = canResult;
+        let tmp4 = obj;
+        tmp8 = require;
+      }
+      dependencyMap[id2][user] = tmp4;
+      return tmp4;
+    }
+  }
+  tmp4 = obj2;
+}
+function resetStageChannelRolesForGuild(guildId) {
+  const values = Object.values(ChannelStore.getMutableGuildChannelsForGuild(guildId));
+  const found = values.filter((isGuildStageVoice) => isGuildStageVoice.isGuildStageVoice());
+  for (const item10015 of found) {
+    let id = item10015.id;
+    delete tmp2[tmp];
+    continue;
+  }
+  return found.length > 0;
+}
+function handleGuildMemberUpdate(arg0) {
+  ({ guildId, user } = arg0);
+  let flag = null != user && null != guildId;
+  if (flag) {
+    const id = user.id;
+    flag = true;
+    const keys = Object.keys();
+    if (keys !== undefined) {
+      flag = true;
+      while (keys[tmp] !== undefined) {
+        let basicChannel = ChannelStore.getBasicChannel(tmp6);
+        let tmp7 = null != basicChannel && basicChannel.guild_id === guildId;
+        if (!tmp7) {
+          continue;
+        } else {
+          delete tmp3[tmp2];
+          continue;
+        }
+        continue;
+      }
+    }
+  }
+  return flag;
+}
+function handleGuildCreateOrDelete(arg0) {
+  for (const key10005 in closure_11) {
+    let basicChannel = ChannelStore.getBasicChannel(key10005);
+    let tmp4 = null != basicChannel;
+    if (tmp4) {
+      tmp4 = basicChannel.guild_id !== tmp3.id;
+    }
+    if (tmp4) {
+      continue;
+    } else {
+      delete tmp[tmp2];
+      continue;
+    }
+    continue;
+  }
+}
+const StagePermissionBuckets = { SPEAKER: "speaker", MODERATOR: "moderator" };
+const dependencyMap = {};
+let obj2 = { [StagePermissionBuckets.SPEAKER]: false, [StagePermissionBuckets.MODERATOR]: false };
+const Store = initializeDefault.Store;
+class StageChannelRoleStore extends Store {
+}
+const prototype = StageChannelRoleStore.prototype;
+prototype["initialize"] = function initialize() {
+  this.waitFor(GuildMemberStore, ChannelStore, GuildStore, UserStore, VoiceStateStore, GuildRoleStore);
+};
+prototype["isSpeaker"] = function isSpeaker(id, channelId) {
+  return this.getPermissionsForUser(id, channelId)[obj.SPEAKER];
+};
+prototype["isModerator"] = function isModerator(id, id2) {
+  let flag = this.getPermissionsForUser(id, id2, true)[obj.MODERATOR];
+  if (flag == null) {
+    flag = false;
+  }
+  return flag;
+};
+prototype["isAudienceMember"] = function isAudienceMember(userId, voiceChannelId) {
+  const permissionsForUser = this.getPermissionsForUser(userId, voiceChannelId);
+  let tmp3 = !tmp2;
+  if (!permissionsForUser[obj.SPEAKER]) {
+    tmp3 = !permissionsForUser[obj.MODERATOR];
+  }
+  return tmp3;
+};
+prototype["getPermissionsForUser"] = function getPermissionsForUser(id, id2, flag) {
+  if (flag === undefined) {
+    flag = false;
+  }
+  if (null != id) {
+    if (null != id2) {
+      const currentUser = UserStore.getCurrentUser();
+      id = undefined;
+      if (currentUser != null) {
+        id = currentUser.id;
+      }
+      if (id === id) {
+        const obj = useStageSpeakingForCurrentUser;
+        if (obj.isStageSpeakingDisabledForCurrentUser()) {
+          return obj2;
+        }
+      }
+      let tmp6;
+      if (dependencyMap[id2] != null) {
+        tmp6 = tmp5[id];
+      }
+      if (null != tmp6) {
+        let tmp9 = tmp6;
+        if (flag) {
+          tmp9 = tmp6;
+          if (null == tmp6[obj.MODERATOR]) {
+            tmp9 = buildStageChannelUserRoles(id, id2, true);
+          }
+        }
+        let tmp8 = tmp9;
+      } else {
+        tmp8 = buildStageChannelUserRoles(id, id2, flag);
+      }
+      return tmp8;
+    }
+  }
+  return obj2;
+};
+StageChannelRoleStore.displayName = "StageChannelRoleStore";
+const stageChannelRoleStore = new StageChannelRoleStore(DispatcherDefault, {
+  CHANNEL_UPDATES: function handleChannelUpdate(arg0) {
+    for (const item10006 of tmp3) {
+      let id = item10006.id;
+      delete tmp2[tmp];
+      continue;
+    }
+  },
+  CONNECTION_OPEN: function handleConnectionOpen() {
+    closure_11 = {};
+  },
+  GUILD_MEMBER_REMOVE: handleGuildMemberUpdate,
+  GUILD_MEMBER_UPDATE: handleGuildMemberUpdate,
+  GUILD_ROLE_UPDATE: function handleGuildRoleUpdate(guildId) {
+    resetStageChannelRolesForGuild(guildId.guildId);
+  },
+  PASSIVE_UPDATE_V2: function handlePassiveUpdateV2(guildId) {
+    return resetStageChannelRolesForGuild(guildId.guildId);
+  },
+  VOICE_STATE_UPDATES: function handleVoiceStateUpdates(voiceStates) {
+    voiceStates = voiceStates.voiceStates;
+    const isEmptyResult = _modDef12.isEmpty(closure_11);
+    let reduced = !isEmptyResult;
+    if (!isEmptyResult) {
+      reduced = voiceStates.reduce((acc, item) => {
+        ({ userId, channelId } = item);
+        let flag = false;
+        if (null != channelId) {
+          channel = channel.getChannel(channelId);
+          let num = null == channel || !channel.isGuildStageVoice();
+          if (!num) {
+            num = 0;
+            if (dependencyMap[channelId] != null) {
+              delete tmp[tmp2];
+              num = 0;
+            }
+          }
+          flag = !num;
+        }
+        if (!flag) {
+          flag = acc;
+        }
+        return flag;
+      }, false);
+    }
+    return reduced;
+  },
+  GUILD_CREATE: handleGuildCreateOrDelete,
+  GUILD_DELETE: handleGuildCreateOrDelete
+});
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/stage_channels/StageChannelRoleStore.tsx");
+
+export default stageChannelRoleStore;
+export { StagePermissionBuckets };
+export const NO_PERMISSIONS = obj2;

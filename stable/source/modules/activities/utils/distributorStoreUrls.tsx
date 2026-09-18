@@ -1,0 +1,23 @@
+// Module ID: 8691
+// Function ID: 8692
+// Name: distributorStoreUrls
+// Dependencies: [2]
+// Exports: buildXboxGamePassStoreDeepLinkUrl, buildXboxGamePassStoreUrl
+
+// Module 8691 (distributorStoreUrls)
+import size from "module_2" /* 2 */;
+
+const discord7937464 = "discord7937464";
+let c1 = "www.xbox.com";
+const msxbox = "msxbox";
+const result = size.fileFinishedImporting("modules/activities/utils/distributorStoreUrls.tsx");
+
+export const XBOX_DISCORD_OCID = "discord7937464";
+export const XBOX_GAME_PASS_STORE_HOSTNAME = "www.xbox.com";
+export const XBOX_GAME_PASS_PROTOCOL = "msxbox";
+export const buildXboxGamePassStoreUrl = function buildXboxGamePassStoreUrl(id) {
+  return "https://" + c1 + "/games/store/title/" + encodeURIComponent(id) + "?ocid=" + discord7937464;
+};
+export const buildXboxGamePassStoreDeepLinkUrl = function buildXboxGamePassStoreDeepLinkUrl(arg0) {
+  return "" + msxbox + "://game/?productid=" + encodeURIComponent(arg0) + "&ocid=" + discord7937464;
+};

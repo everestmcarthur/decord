@@ -1,0 +1,63 @@
+// Module ID: 11431
+// Function ID: 11432
+// Name: MediaPostEmbedStore
+// Dependencies: [504, 573, 2]
+
+// Module 11431 (MediaPostEmbedStore)
+import initializeDefault from "initialize" /* 504 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+
+const FetchState = { NOT_FETCHED: 0, [0]: "NOT_FETCHED", FETCHING: 1, [1]: "FETCHING", FETCHED: 2, [2]: "FETCHED", FAILED: 3, [3]: "FAILED" };
+let closure_1 = {};
+let closure_2 = {};
+const Store = initializeDefault.Store;
+class MediaPostEmbedStore extends Store {
+}
+const prototype = MediaPostEmbedStore.prototype;
+prototype["getMediaPostEmbed"] = function getMediaPostEmbed(mediaPostEmbedChannelId) {
+  if (null != mediaPostEmbedChannelId) {
+    return closure_1[mediaPostEmbedChannelId];
+  }
+};
+prototype["getEmbedFetchState"] = function getEmbedFetchState(mediaPostEmbedChannelId) {
+  let NOT_FETCHED = closure_2[mediaPostEmbedChannelId];
+  if (NOT_FETCHED == null) {
+    NOT_FETCHED = obj.NOT_FETCHED;
+  }
+  return NOT_FETCHED;
+};
+prototype["getMediaPostEmbeds"] = function getMediaPostEmbeds() {
+  return closure_1;
+};
+MediaPostEmbedStore.displayName = "MediaPostEmbedStore";
+const mediaPostEmbedStore = new MediaPostEmbedStore(DispatcherDefault, {
+  CONNECTION_OPEN: function handleConnectionOpen() {
+    closure_1 = {};
+    closure_2 = {};
+  },
+  MEDIA_POST_EMBED_FETCH: function handleFetchMediaPostEmbed(threadId) {
+    closure_2[threadId.threadId] = obj.FETCHING;
+  },
+  MEDIA_POST_EMBED_FETCH_SUCCESS: function handleFetchMediaPostEmbedSuccess(threadId) {
+    threadId = threadId.threadId;
+    const obj = {};
+    const merged = Object.assign(closure_1);
+    obj[threadId] = threadId.mediaPostEmbed;
+    closure_1 = obj;
+    closure_2[threadId] = obj.FETCHED;
+  },
+  MEDIA_POST_EMBED_FETCH_FAILURE: function handleFetchMediaPostFailure(threadId) {
+    closure_2[threadId.threadId] = obj.FAILED;
+  },
+  LOGOUT: function handleLogout(isSwitchingAccount) {
+    if (!isSwitchingAccount.isSwitchingAccount) {
+      closure_1 = {};
+      closure_2 = {};
+    }
+  }
+});
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/media_channel/MediaPostEmbedStore.tsx");
+
+export default mediaPostEmbedStore;
+export { FetchState };

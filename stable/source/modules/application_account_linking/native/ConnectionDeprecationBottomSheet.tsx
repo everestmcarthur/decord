@@ -1,0 +1,221 @@
+// Module ID: 16943
+// Function ID: 16944
+// Name: ConnectionDeprecationBottomSheet
+// Dependencies: [19, 17, 4788, 5281, 1954, 21, 4560, 576, 4271, 1611, 504, 5283, 7165, 7162, 7182, 16944, 4527, 16946, 1896, 7149, 7150, 4973, 16932, 4556, 1114, 3010, 8843, 4975, 12960, 4269, 1396, 4977, 7172, 7168, 2]
+// Exports: default, useShouldShowConnectionDeprecationBottomSheet
+
+// Module 16943 (ConnectionDeprecationBottomSheet)
+import nativeDefault from "native" /* 576 */;
+import AvatarUtils from "AvatarUtils" /* 1396 */;
+import themes from "themes" /* 4269 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import IconDefault from "Icon" /* 4977 */;
+import useStartAuthorizeDefault from "useStartAuthorize" /* 7165 */;
+import GameIcon from "GameIcon" /* 7172 */;
+import AccountLinkManager from "AccountLinkManager" /* 16944 */;
+import noop from "module_19" /* 19 */;
+import ApplicationStore from "ApplicationStore" /* 4788 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5281 */;
+
+const require = globalThis.__r;
+const GameIconDefault = GameIcon;
+
+const Icon = tmp2(4977);
+require = fn;
+function ConnectionIcon(arg0) {
+  ({ platform, theme } = arg0);
+  const tmp = closure_10();
+  const isThemeDarkResult = themes.isThemeDark(theme);
+  const icon = platform.icon;
+  const obj3 = { style: tmp.iconContainer, children: null };
+  const source = AvatarUtils.makeSource(isThemeDarkResult ? icon.darkPNG : icon.lightPNG);
+  const obj4 = { size: null, source: null, disableColor: true, style: null };
+  obj4.size = Icon.IconSizes.CUSTOM;
+  obj4.source = source;
+  obj4.style = tmp.connectionIcon;
+  obj3.children = React6(IconDefault, obj4);
+  return React6(View, obj3);
+}
+function ApplicationIcon(application) {
+  application = application.application;
+  const obj = { style: closure_10().iconContainer, children: null };
+  let tmpResult = null;
+  if (null != application) {
+    const obj2 = { game: application, size: GameIcon.GameIconSizes.NORMAL };
+    tmpResult = tmp(GameIconDefault, obj2);
+  }
+  obj.children = tmpResult;
+  return React6(View, obj);
+}
+const View = fn(17).View;
+const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+const createStyles = fn(4560);
+let obj2 = { iconContainer: { width: 56, height: 56, alignItems: "center", justifyContent: "center" }, content: { paddingHorizontal: nativeDefault.space.PX_16 }, text: { textAlign: "center" }, connectionIcon: { height: 48, width: 48 } };
+let closure_10 = createStyles.createStyles(obj2);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/application_account_linking/native/ConnectionDeprecationBottomSheet.tsx");
+
+export default function ConnectionDeprecationBottomSheet(arg0) {
+  ({ platformTypes: require, markAsDismissed } = arg0);
+  let replacedBy;
+  let startAuthorization;
+  let analyticsLocations;
+  let onSuccess;
+  const tmp = closure_10();
+  const theme = require("native").useThemeContext().theme;
+  const obj = require("native");
+  const items = [ConnectedAccountsStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => {
+    const accounts = ConnectedAccountsStore.getAccounts();
+    const found = accounts.find((type) => closure_1_0.includes(type.type));
+    let type;
+    if (found != null) {
+      type = found.type;
+    }
+    return type;
+  });
+  value = null;
+  if (null != stateFromStores) {
+    value = tmp4(tmp3[11]).get(stateFromStores);
+    const tmp4Result = tmp4(tmp3[11]);
+  }
+  replacedBy = undefined;
+  if (value != null) {
+    const migrationData = value.migrationData;
+    if (migrationData != null) {
+      replacedBy = migrationData.replacedBy;
+    }
+  }
+  const obj2 = require("initialize");
+  const items1 = [onSuccess];
+  const stateFromStores1 = require("initialize").useStateFromStores(items1, () => ApplicationStore.getApplication(replacedBy));
+  startAuthorization = tmp4(tmp3[12])(stateFromStores1).startAuthorization;
+  const tmp2Result = require("initialize");
+  analyticsLocations = markAsDismissed(replacedBy[13])(tmp4(tmp3[14]).ACTION_SHEET).analyticsLocations;
+  const items2 = [replacedBy];
+  onSuccess = startAuthorization.useCallback(() => {
+    const result = AccountLinkManager.claimIncentivizedAccountLinkingReward({
+      applicationId: replacedBy,
+      onSuccess() {
+        markAsDismissed(paths[16]).openLazy(closure_1_0(paths[18])(paths[17], paths.paths), "IncentivizedAccountLinkConfirmationBottomSheet");
+      }
+    });
+  }, items2);
+  const items3 = [analyticsLocations, startAuthorization, markAsDismissed, onSuccess];
+  if (null != value) {
+    if (null != stateFromStores1) {
+      const obj3 = {
+        startExpanded: true,
+        contentStyles: tmp.content,
+        header: closure_8(tmp2(tmp3[19]).BottomSheetTitleHeader, { title: null }),
+        onDismiss() {
+              return markAsDismissed(ContentDismissActionType.DISMISS);
+            },
+        children: null
+      };
+      const obj4 = { spacing: 24, style: null, children: null };
+      const obj5 = { paddingBottom: markAsDismissed(replacedBy[9])().bottom };
+      obj4.style = obj5;
+      const obj6 = { justify: "center", align: "center", direction: "horizontal", children: null };
+      const obj7 = { theme, platform: value };
+      const items4 = [closure_8(ConnectionIcon, obj7), , ];
+      const obj8 = { theme };
+      items4[1] = closure_8(tmp2(tmp3[22]).UnionIcon, obj8);
+      const obj9 = { application: stateFromStores1 };
+      items4[2] = closure_8(ApplicationIcon, obj9);
+      obj6.children = items4;
+      const items5 = [closure_9(tmp2(tmp3[21]).Stack, obj6), , ];
+      const obj10 = { justify: "center", children: null };
+      const obj11 = { variant: "heading-xl/bold", style: tmp.text, children: null };
+      const intl = tmp2(tmp3[24]).intl;
+      obj11.children = intl.string(tmp4(tmp3[25]).vycLU2);
+      const items6 = [closure_8(tmp2(tmp3[23]).Text, obj11), ];
+      const obj12 = { variant: "text-md/medium", style: tmp.text, children: null };
+      const intl2 = tmp2(tmp3[24]).intl;
+      const obj13 = {
+        connectionName: value.name,
+        orbCount: 200,
+        orbsIconHook() {
+              return closure_1_8(require("OrbsIcon").OrbsIcon, { size: "xs", color: markAsDismissed(replacedBy[7]).colors.TEXT_STRONG });
+            }
+      };
+      obj12.children = intl2.format(tmp4(tmp3[25]).qV9zT6, obj13);
+      items6[1] = closure_8(tmp2(tmp3[23]).Text, obj12);
+      obj10.children = items6;
+      items5[1] = closure_9(tmp2(tmp3[21]).Stack, obj10);
+      const obj14 = { children: null };
+      const obj15 = { text: null, icon: null, iconPosition: "end", size: "lg", onPress: null };
+      const intl3 = tmp2(tmp3[24]).intl;
+      obj15.text = intl3.string(tmp4(tmp3[25]).ZeOhh9);
+      const obj16 = { size: "sm", color: tmp4(tmp3[7]).colors.WHITE };
+      obj15.icon = closure_8(tmp2(tmp3[28]).WindowLaunchIcon, obj16);
+      obj15.onPress = tmp11;
+      const items7 = [closure_8(tmp2(tmp3[27]).Button, obj15), ];
+      const obj17 = { text: null, variant: "secondary", size: "lg", onPress: null };
+      const intl4 = tmp2(tmp3[24]).intl;
+      obj17.text = intl4.string(tmp2(tmp3[24]).t.TulDPl);
+      obj17.onPress = function onPress() {
+        ActionSheetActionCreatorsDefault.hideActionSheet();
+        if (markAsDismissed != null) {
+          tmp2(ContentDismissActionType.DISMISS);
+        }
+      };
+      items7[1] = closure_8(tmp2(tmp3[27]).Button, obj17);
+      obj14.children = items7;
+      items5[2] = closure_9(tmp2(tmp3[21]).Stack, obj14);
+      obj4.children = items5;
+      obj3.children = closure_9(tmp2(tmp3[21]).Stack, obj4);
+      return closure_8(tmp2(tmp3[20]).BottomSheet, obj3);
+    }
+  }
+  return false;
+};
+export const useShouldShowConnectionDeprecationBottomSheet = function useShouldShowConnectionDeprecationBottomSheet(deprecatedPlatformTypes) {
+  deprecatedPlatformTypes = deprecatedPlatformTypes.deprecatedPlatformTypes;
+  const items = [ConnectedAccountsStore];
+  const stateFromStoresObject = deprecatedPlatformTypes(504).useStateFromStoresObject(items, () => {
+    const obj = { fetchingConnections: ConnectedAccountsStore.isFetching(), matchingPlatform: null };
+    const accounts = ConnectedAccountsStore.getAccounts();
+    const mapped = accounts.map((type) => closure_1_1(closure_1_2[11]).get(type.type));
+    obj.matchingPlatform = mapped.find((migrationData) => {
+      migrationData = migrationData.migrationData;
+      let migrationExperimentEnabled;
+      if (migrationData != null) {
+        migrationExperimentEnabled = migrationData.getMigrationExperimentEnabled("ConnectionDeprecationBottomSheet");
+      }
+      if (migrationExperimentEnabled) {
+        migrationExperimentEnabled = deprecatedPlatformTypes.includes(migrationData.type);
+      }
+      return migrationExperimentEnabled;
+    });
+    return obj;
+  });
+  ({ fetchingConnections, matchingPlatform } = stateFromStoresObject);
+  let obj = deprecatedPlatformTypes(504);
+  let replacedBy;
+  if (matchingPlatform != null) {
+    let migrationData = matchingPlatform.migrationData;
+    if (migrationData != null) {
+      replacedBy = migrationData.replacedBy;
+    }
+  }
+  const getOrFetchApplication = deprecatedPlatformTypes(7168).useGetOrFetchApplication(replacedBy);
+  const tmp5 = useStartAuthorizeDefault(getOrFetchApplication);
+  ({ hasAlreadyLinked, canStartAuthorization } = tmp5);
+  if (!fetchingConnections) {
+    fetchingConnections = !tmp5.fetched;
+  }
+  if (!fetchingConnections) {
+    fetchingConnections = !canStartAuthorization;
+  }
+  if (!fetchingConnections) {
+    fetchingConnections = null == getOrFetchApplication;
+  }
+  let tmp6 = !fetchingConnections;
+  if (!fetchingConnections) {
+    tmp6 = !hasAlreadyLinked;
+  }
+  return tmp6;
+};

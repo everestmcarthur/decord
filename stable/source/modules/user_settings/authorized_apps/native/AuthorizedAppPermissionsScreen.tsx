@@ -1,0 +1,20 @@
+// Module ID: 14946
+// Function ID: 14947
+// Name: AuthorizedAppPermissionsScreen
+// Dependencies: [19, 21, 6994, 14947, 2]
+// Exports: default
+
+// Module 14946 (AuthorizedAppPermissionsScreen)
+import useSettingNavigationRoute from "useSettingNavigationRoute" /* 6994 */;
+import UserSettingsAuthedAppPermissionsDefault from "UserSettingsAuthedAppPermissions" /* 14947 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/authorized_apps/native/AuthorizedAppPermissionsScreen.tsx");
+
+export default function AuthorizedAppPermissionsScreen() {
+  const settingNavigationRoute = useSettingNavigationRoute.useSettingNavigationRoute();
+  return jsx(UserSettingsAuthedAppPermissionsDefault, { oauth2Token: settingNavigationRoute.params.oauth2Token });
+};

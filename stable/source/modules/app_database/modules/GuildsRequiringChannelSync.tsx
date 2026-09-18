@@ -1,0 +1,508 @@
+// Module ID: 7652
+// Function ID: 7653
+// Name: GuildsRequiringChannelSync
+// Dependencies: [1961, 502, 1957, 2021, 2015, 1979, 4199, 1074, 1964, 1085, 1086, 3, 1986, 4190, 1256, 1242, 1384, 2]
+
+// Module 7652 (GuildsRequiringChannelSync)
+import LoggerDefault from "Logger" /* 3 */;
+import Constants2 from "Constants" /* 1085 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import v1 from "v1" /* 1256 */;
+import FlagUtils from "FlagUtils" /* 1384 */;
+import ChannelConstants from "ChannelConstants" /* 1964 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 1986 */;
+import PremiumRoleUtils from "PremiumRoleUtils" /* 4190 */;
+import ChannelRecord from "ChannelRecord" /* 1961 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
+import GuildRoleStore from "GuildRoleStore" /* 2015 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import PermissionStore from "PermissionStore" /* 4199 */;
+import Constants from "Constants" /* 1074 */;
+import BigFlagUtils from "BigFlagUtils" /* 1086 */;
+import size from "module_2" /* 2 */;
+
+({ createChannelRecordFromServer: closure_4, ChannelRecordBase: hasOwnProperty } = ChannelRecord);
+({ AnalyticEvents: closure_12, BasicPermissions: map1 } = Constants);
+const ChannelFlags = ChannelConstants.ChannelFlags;
+const Permissions = Constants2.Permissions;
+let closure_15 = BigFlagUtils.combine(Permissions.VIEW_CHANNEL, Permissions.ADMINISTRATOR);
+let closure_16 = new LoggerDefault("GuildsRequiringChannelSync");
+let closure_17 = { NewGuild: "new_guild", OwnershipChange: "ownership_change", RolePermissions: "role_permissions", RoleSubscriptionTags: "role_subscription_tags", MemberRoles: "member_roles", ChannelVisibleParentHidden: "channel_visible_parent_hidden", Unknown: "unknown" };
+let closure_18 = { ConnectionOpen: "connection_open", GuildCreate: "guild_create", BackgroundSync: "background_sync" };
+class GuildsRequiringChannelSync {
+  constructor() {
+    obj = Object.create(new.target.prototype);
+    closure_0 = obj;
+    obj.actions = {
+      BACKGROUND_SYNC(arg0, arg1) {
+            return obj.handleBackgroundSync(arg0, arg1);
+          },
+      CONNECTION_OPEN(arg0, arg1) {
+            return obj.handleConnectionOpen(arg0, arg1);
+          },
+      GUILD_CREATE(arg0, arg1) {
+            return obj.handleGuildCreate(arg0, arg1);
+          },
+      CHANNEL_SYNC(arg0, arg1) {
+            return obj.handleChannelSync(arg0, arg1);
+          },
+      UNMARK_RESYNC_GUILDS(guildIds, database) {
+            return obj.handleUnmarkResyncGuilds(guildIds, database);
+          }
+    };
+    return obj;
+  }
+}
+const prototype = GuildsRequiringChannelSync.prototype;
+prototype["getAll"] = function getAll() {
+  const result = DatabaseDaosDefault.guildsRequiringChannelSync();
+  if (null == result) {
+    let resolved = Promise.resolve([]);
+  } else {
+    resolved = result.getMany();
+  }
+  return resolved;
+};
+prototype["handleConnectionOpen"] = function handleConnectionOpen(arg0, arg1) {
+  const self = this;
+  for (const item10008 of tmp) {
+    let handleGuildResult = self.handleGuild(item10008, arg1, closure_18.ConnectionOpen);
+    continue;
+  }
+};
+prototype["handleGuildCreate"] = function handleGuildCreate(guild, arg1) {
+  guild = guild.guild;
+  if (true !== guild.unavailable) {
+    const self = this;
+    this.handleGuild(guild, arg1, closure_18.GuildCreate);
+  }
+};
+prototype["handleBackgroundSync"] = function handleBackgroundSync(arg0, database) {
+  const self = this;
+  for (const item10008 of tmp) {
+    let result = self.handleBackgroundSyncGuild(item10008, arg1);
+    continue;
+  }
+};
+prototype["handleUnmarkResyncGuilds"] = function handleUnmarkResyncGuilds(guildIds, database) {
+  const self = this;
+  guildIds = guildIds.guildIds;
+  for (const item10008 of guildIds) {
+    let unmarkGuildForResyncResult = self.unmarkGuildForResync(item10008, arg1);
+    continue;
+  }
+  closure_16.verbose("Unmarked guilds " + JSON.stringify(guildIds));
+};
+prototype["detectRoleVisibilityChanges"] = function detectRoleVisibilityChanges(id, unsafeMutableRoles, obj, set) {
+  for (const key10008 in arg2) {
+    let tmp17 = arg2[key10008];
+    let tmp18 = arg1[key10008];
+    let isSubscriptionRoleResult = null != tmp18;
+    if (isSubscriptionRoleResult) {
+      obj = PremiumRoleUtils;
+      isSubscriptionRoleResult = obj.isSubscriptionRole(tmp18);
+    }
+    if (isSubscriptionRoleResult) {
+      let obj2 = PremiumRoleUtils;
+      isSubscriptionRoleResult = obj2.isSubscriptionRoleAvailableForPurchase(tmp18);
+    }
+    let tmp6 = require;
+    let obj3 = PremiumRoleUtils;
+    let isSubscriptionRoleResult1 = obj3.isSubscriptionRole(tmp17);
+    if (isSubscriptionRoleResult1) {
+      let tmp6Result = tmp6(4190);
+      isSubscriptionRoleResult1 = tmp6Result.isSubscriptionRoleAvailableForPurchase(tmp17);
+    }
+    if (!isSubscriptionRoleResult) {
+      if (isSubscriptionRoleResult1) {
+        return closure_17.RoleSubscriptionTags;
+      }
+    }
+    if (key10008 === arg0) {
+      if (null == tmp18) {
+        return closure_17.RolePermissions;
+      } else {
+        let arr = BigFlagUtils;
+        let found = arr.filter(tmp18.permissions, closure_15);
+        let arr2 = BigFlagUtils;
+        let found1 = arr2.filter(tmp17.permissions, closure_15);
+        let obj5 = BigFlagUtils;
+        if (obj5.equals(found, found1)) {
+          continue;
+        } else {
+          return closure_17.RolePermissions;
+        }
+      }
+    }
+    continue;
+  }
+  return null;
+};
+prototype["processMemberRoleIds"] = function processMemberRoleIds(arg0, roles) {
+  if (arg0.length !== roles.length) {
+    return { rolesAreDifferent: true, allRoleIds: null };
+  } else {
+    const _Set = Set;
+    const set = new Set();
+    const tmp18 = arg0[Symbol.iterator]();
+    while (tmp18 !== undefined) {
+      let addResult = set.add(tmp2);
+      continue;
+    }
+    const iter = roles[Symbol.iterator]();
+    const nextResult = iter.next();
+    while (iter !== undefined) {
+      let tmp9 = nextResult;
+      if (set.has(nextResult)) {
+        let addResult1 = set.add(tmp9);
+        continue;
+      } else {
+        let obj = { rolesAreDifferent: true, allRoleIds: null };
+        iter.return();
+        return obj;
+      }
+    }
+    const obj2 = { rolesAreDifferent: false, allRoleIds: set };
+    return obj2;
+  }
+};
+prototype["userBecameGuildOwner"] = function userBecameGuildOwner(ownerId, owner_id, id) {
+  let tmp = null != id;
+  if (tmp) {
+    let tmp3 = owner_id === id;
+    if (tmp3) {
+      tmp3 = ownerId !== id;
+    }
+    tmp = tmp3;
+  }
+  return tmp;
+};
+prototype["handleBackgroundSyncGuild"] = function handleBackgroundSyncGuild(item10008, database) {
+  let selfMember = GuildMemberStore.getSelfMember(item10008.id);
+  if (selfMember == null) {
+    selfMember = GuildMemberStore.getCachedSelfMember(item10008.id);
+  }
+  if (null != selfMember) {
+    const self = this;
+    if ("partial" === item10008.data_mode) {
+      if (self.backgroundSyncGuildHasObfuscatedChannels(item10008)) {
+        let ChannelVisibleParentHidden = closure_17.Unknown;
+        const obj2 = {};
+        if (null != item10008.partial_updates.roles) {
+          const roles = item10008.partial_updates.roles;
+          for (const item10021 of roles) {
+            let obj3 = { id: item10021.id, permissions: null, tags: null };
+            let deserializer = BigFlagUtils;
+            obj3.permissions = deserializer.deserialize(item10021.permissions);
+            let tags = item10021.tags;
+            if (tags == null) {
+              tags = {};
+            }
+            obj3.tags = tags;
+            obj2[item10021.id] = obj3;
+            continue;
+          }
+        }
+        const properties = item10008.properties;
+        const guild = GuildStore.getGuild(item10008.id);
+        let ownerId;
+        if (guild != null) {
+          ownerId = guild.ownerId;
+        }
+        let owner_id;
+        if (properties != null) {
+          owner_id = properties.owner_id;
+        }
+        const userBecameGuildOwnerResult = self.userBecameGuildOwner(ownerId, owner_id, AuthenticationStore.getId());
+        if (userBecameGuildOwnerResult) {
+          ChannelVisibleParentHidden = closure_17.OwnershipChange;
+          let flag = userBecameGuildOwnerResult;
+        } else {
+          const unsafeMutableRoles = GuildRoleStore.getUnsafeMutableRoles(item10008.id);
+          let roles1;
+          if (selfMember != null) {
+            roles1 = selfMember.roles;
+          }
+          if (roles1 == null) {
+            roles1 = [];
+          }
+          const set = new Set(roles1);
+          const result = self.detectRoleVisibilityChanges(item10008.id, unsafeMutableRoles, obj2, set);
+          flag = userBecameGuildOwnerResult;
+          if (null != result) {
+            flag = true;
+            ChannelVisibleParentHidden = result;
+          }
+        }
+        let result1 = !flag;
+        if (!flag) {
+          let channels = item10008.partial_updates.channels;
+          if (channels == null) {
+            channels = [];
+          }
+          let deleted_channel_ids = item10008.partial_updates.deleted_channel_ids;
+          if (deleted_channel_ids == null) {
+            deleted_channel_ids = [];
+          }
+          result1 = self.hasNewlyVisibleChannelWithHiddenParent(item10008.id, channels, deleted_channel_ids);
+        }
+        if (result1) {
+          ChannelVisibleParentHidden = closure_17.ChannelVisibleParentHidden;
+          flag = true;
+        }
+        if (flag) {
+          self.markGuildForResync(item10008.id, database, closure_18.BackgroundSync, ChannelVisibleParentHidden);
+        }
+      } else {
+        self.unmarkGuildForResync(item10008.id, database);
+      }
+    } else if ("full" === item10008.data_mode) {
+      self.unmarkGuildForResync(item10008.id, database);
+    }
+  }
+};
+prototype["handleGuild"] = function handleGuild(channels, database, BackgroundSync) {
+  const self = this;
+  if ("full_sync" !== channels.channels.op) {
+    const id = AuthenticationStore.getId();
+    const guild = GuildStore.getGuild(channels.id);
+    if (null != guild) {
+      const properties = channels.properties;
+      let owner_id;
+      if (properties != null) {
+        owner_id = properties.owner_id;
+      }
+      const userBecameGuildOwnerResult = self.userBecameGuildOwner(guild.ownerId, owner_id, id);
+      let MemberRoles = closure_17.Unknown;
+      let flag = userBecameGuildOwnerResult;
+      if (userBecameGuildOwnerResult) {
+        MemberRoles = tmp2.OwnershipChange;
+        flag = userBecameGuildOwnerResult;
+      }
+    } else {
+      MemberRoles = tmp2.NewGuild;
+      flag = true;
+    }
+    let tmp10 = null;
+    let tmp11 = MemberRoles;
+    if (!flag) {
+      let selfMember = GuildMemberStore.getSelfMember(channels.id);
+      if (selfMember == null) {
+        selfMember = obj.getCachedSelfMember(channels.id);
+      }
+      const members = channels.members;
+      const found = members.find((user) => user.user.id === id);
+      let roles;
+      if (found != null) {
+        roles = found.roles;
+      }
+      if (roles == null) {
+        roles = [];
+      }
+      ({ rolesAreDifferent, allRoleIds } = self.processMemberRoleIds(null != selfMember ? selfMember.roles : [], roles));
+      if (rolesAreDifferent) {
+        MemberRoles = tmp2.MemberRoles;
+      }
+      tmp10 = null;
+      tmp11 = MemberRoles;
+      flag = rolesAreDifferent;
+      if (null != allRoleIds) {
+        tmp10 = allRoleIds;
+        tmp11 = MemberRoles;
+        flag = rolesAreDifferent;
+      }
+      obj = GuildMemberStore;
+      const processMemberRoleIdsResult = self.processMemberRoleIds(null != selfMember ? selfMember.roles : [], roles);
+      const tmp14 = null != selfMember ? selfMember.roles : [];
+    }
+    let ChannelVisibleParentHidden = tmp11;
+    let flag2 = flag;
+    if (!flag) {
+      ChannelVisibleParentHidden = tmp11;
+      flag2 = flag;
+      if (null != tmp10) {
+        const unsafeMutableRoles = GuildRoleStore.getUnsafeMutableRoles(channels.id);
+        if ("full_sync" === channels.roles.op) {
+          let writes = channels.roles.items;
+        } else {
+          writes = channels.roles.writes;
+        }
+        writes[Symbol.iterator]();
+      }
+    }
+    while (true) {
+      let result = !flag2;
+      if (flag2) {
+        break;
+      } else {
+        result = self.hasNewlyVisibleChannelWithHiddenParent(channels.id, channels.channels.writes, channels.channels.deletes);
+        break;
+      }
+      if (result) {
+        ChannelVisibleParentHidden = closure_17.ChannelVisibleParentHidden;
+        flag2 = true;
+      }
+      if (flag2) {
+        if (self.gatewayGuildHasObfuscatedChannels(channels)) {
+          let markGuildForResyncResult = self.markGuildForResync(channels.id, database, BackgroundSync, ChannelVisibleParentHidden);
+        } else {
+          let unmarkGuildForResyncResult = self.unmarkGuildForResync(channels.id, database);
+        }
+      }
+    }
+  } else {
+    self.unmarkGuildForResync(channels.id, database);
+  }
+};
+prototype["handleChannelSync"] = function handleChannelSync(integrity_check, database) {
+  if (!integrity_check.integrity_check) {
+    const self = this;
+    this.unmarkGuildForResync(tmp, database);
+  }
+};
+prototype["markGuildForResync"] = function markGuildForResync(id, database, BackgroundSync, ChannelVisibleParentHidden) {
+  const v4Result = v1.v4();
+  AnalyticsUtilsDefault.track(constants.GUILD_CHANNEL_RESYNC_REQUESTED, { guild_id: id, request_id: v4Result, trigger: BackgroundSync, change_type: ChannelVisibleParentHidden });
+  const obj3 = { guild_id: id, request_id: v4Result, trigger: BackgroundSync, change_type: ChannelVisibleParentHidden };
+  const result = DatabaseDaosDefault.guildsRequiringChannelSyncTransaction(database);
+  result.put({ id, requestId: v4Result });
+};
+prototype["unmarkGuildForResync"] = function unmarkGuildForResync(id, database) {
+  const result = DatabaseDaosDefault.guildsRequiringChannelSyncTransaction(database);
+  result.delete(id);
+};
+prototype["hasNewlyVisibleChannelWithHiddenParent"] = function hasNewlyVisibleChannelWithHiddenParent(id, channels, deleted_channel_ids) {
+  let items = deleted_channel_ids;
+  if (deleted_channel_ids === undefined) {
+    items = [];
+  }
+  if (0 === channels.length) {
+    return false;
+  } else {
+    const mutableBasicGuildChannelsForGuild = ChannelStore.getMutableBasicGuildChannelsForGuild(id);
+    const _Set = Set;
+    const set = new Set(items);
+    const _Map = Map;
+    const map = new Map();
+    const iter2 = channels[Symbol.iterator]();
+    const nextResult = iter2.next();
+    while (iter2 !== undefined) {
+      if (nextResult instanceof hasOwnProperty) {
+        let tmp8 = nextResult;
+      } else {
+        tmp8 = React4(tmp4, id);
+      }
+      let result = map.set(tmp8.id, tmp8);
+      continue;
+    }
+    const values = map.values();
+    const iter = values[Symbol.iterator]();
+    const nextResult1 = iter.next();
+    while (iter !== undefined) {
+      let obj2 = nextResult1;
+      if (!nextResult1.isCategory()) {
+        let tmp16 = mutableBasicGuildChannelsForGuild[obj2.id];
+        let tmp17 = tmp16;
+        let canBasicChannelResult = null != tmp16;
+        if (canBasicChannelResult) {
+          canBasicChannelResult = PermissionStore.canBasicChannel(constants2.VIEW_CHANNEL, tmp17);
+        }
+        let tmp23 = !obj2.isObfuscated();
+        if (canBasicChannelResult) {
+        }
+        if (tmp23) {
+          let parent_id = obj2.parent_id;
+          let tmp29 = parent_id;
+          if (null != parent_id) {
+            if (!set.has(tmp29)) {
+              if (null == map.get(tmp29)) {
+                let tmp33 = mutableBasicGuildChannelsForGuild[tmp29];
+                iter.return();
+                let flag = true;
+                return true;
+              }
+            }
+          }
+        }
+      }
+      continue;
+    }
+    return false;
+  }
+};
+prototype["gatewayGuildHasObfuscatedChannels"] = function gatewayGuildHasObfuscatedChannels(channels) {
+  if ("full_sync" === channels.channels.op) {
+    let writes = channels.channels.items;
+    let items = [];
+  } else {
+    writes = channels.channels.writes;
+    items = channels.channels.deletes;
+  }
+  const self = this;
+  return this.guildHasStoredObfuscatedChannels(channels.id, items) || self.anyChannelRecordsObfuscated(writes);
+};
+prototype["backgroundSyncGuildHasObfuscatedChannels"] = function backgroundSyncGuildHasObfuscatedChannels(data_mode) {
+  if ("partial" === data_mode.data_mode) {
+    let channels1 = data_mode.partial_updates.channels;
+    if (channels1 == null) {
+      channels1 = [];
+    }
+    let deleted_channel_ids = data_mode.partial_updates.deleted_channel_ids;
+    if (deleted_channel_ids == null) {
+      deleted_channel_ids = [];
+    }
+    let items = deleted_channel_ids;
+    let channels = channels1;
+  } else {
+    channels = data_mode.channels;
+    items = [];
+  }
+  const self = this;
+  return this.guildHasStoredObfuscatedChannels(data_mode.id, items) || self.anyChannelsObfuscated(channels);
+};
+prototype["guildHasStoredObfuscatedChannels"] = function guildHasStoredObfuscatedChannels(id, items) {
+  if (items === undefined) {
+    items = [];
+  }
+  const values = Object.values(ChannelStore.getMutableGuildChannelsForGuild(id));
+  return this.anyChannelRecordsObfuscated(values.filter((id) => -1 === items.indexOf(id.id)));
+};
+prototype["anyChannelRecordsObfuscated"] = function anyChannelRecordsObfuscated(writes) {
+  return null != writes.find((isObfuscated) => isObfuscated.isObfuscated());
+};
+prototype["anyChannelsObfuscated"] = function anyChannelsObfuscated(channels) {
+  return null != channels.find((flags) => {
+    let num = flags.flags;
+    if (num == null) {
+      num = 0;
+    }
+    return FlagUtils.hasFlag(num, constants.OBFUSCATED);
+  });
+};
+prototype["resetInMemoryState"] = function resetInMemoryState() {
+
+};
+let obj = Object.create(GuildsRequiringChannelSync.prototype);
+let closure_129_0 = obj;
+obj.actions = {
+  BACKGROUND_SYNC(arg0, arg1) {
+    return obj.handleBackgroundSync(arg0, arg1);
+  },
+  CONNECTION_OPEN(arg0, arg1) {
+    return obj.handleConnectionOpen(arg0, arg1);
+  },
+  GUILD_CREATE(arg0, arg1) {
+    return obj.handleGuildCreate(arg0, arg1);
+  },
+  CHANNEL_SYNC(arg0, arg1) {
+    return obj.handleChannelSync(arg0, arg1);
+  },
+  UNMARK_RESYNC_GUILDS(guildIds, database) {
+    return obj.handleUnmarkResyncGuilds(guildIds, database);
+  }
+};
+let result = size.fileFinishedImporting("modules/app_database/modules/GuildsRequiringChannelSync.tsx");
+
+export default obj;

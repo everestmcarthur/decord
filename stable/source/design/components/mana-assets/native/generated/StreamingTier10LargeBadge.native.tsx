@@ -1,0 +1,40 @@
+// Module ID: 6489
+// Function ID: 6490
+// Name: StreamingTier10LargeBadge
+// Dependencies: [21, 5587, 6490, 2]
+// Exports: StreamingTier10LargeBadge
+
+// Module 6489 (StreamingTier10LargeBadge)
+import jsxProd from "jsxProd" /* 21 */;
+import FastImageDefault from "FastImage" /* 5587 */;
+import _modDef6490 from "module_6490" /* 6490 */;
+import size from "module_2" /* 2 */;
+
+const jsx = jsxProd.jsx;
+const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/StreamingTier10LargeBadge.native.tsx");
+
+export const StreamingTier10LargeBadge = function StreamingTier10LargeBadge(width) {
+  let num = width.width;
+  ({ accessible, accessibilityLabel, resizeMode } = width);
+  if (num === undefined) {
+    num = 100;
+  }
+  let num2 = width.height;
+  if (num2 === undefined) {
+    num2 = 100;
+  }
+  let num3 = width.scale;
+  if (num3 === undefined) {
+    num3 = 1;
+  }
+  const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  const obj2 = { uri: _modDef6490 };
+  obj.source = obj2;
+  const size = { width: num * num3, height: num2 * num3 };
+  const items = [size];
+  obj.style = items;
+  obj.accessible = accessible;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.resizeMode = resizeMode;
+  return jsx(FastImageDefault, { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null });
+};

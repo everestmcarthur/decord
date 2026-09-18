@@ -1,0 +1,73 @@
+// Module ID: 12704
+// Function ID: 12705
+// Name: ContactSyncInviteFriends
+// Dependencies: [19, 17, 1371, 1074, 21, 4560, 576, 504, 5587, 12705, 4556, 1114, 4975, 1242, 4404, 8362, 2]
+// Exports: default
+
+// Module 12704 (ContactSyncInviteFriends)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import FastImageDefault from "FastImage" /* 5587 */;
+import _modDef12705 from "module_12705" /* 12705 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
+
+const require = globalThis.__r;
+
+const UserUtilsDefault = tmp(4404);
+const showShareActionSheet = tmp5(8362);
+require = fn;
+const View = fn(17).View;
+const Constants = fn(1074);
+({ AnalyticEvents: hasOwnProperty, AnalyticsSections: metroRequire } = Constants);
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
+const createStyles = fn(4560);
+let obj2 = { container: { flex: 1, alignItems: "center", justifyContent: "center", paddingHorizontal: 16 }, art: { marginBottom: 16 }, title: { marginBottom: 8, textAlign: "center" }, subtitle: { lineHeight: 18, textAlign: "center" }, button: { marginTop: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_32 } };
+let closure_10 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/contact_sync/native/components/ContactSyncInviteFriends.tsx");
+
+export default function ContactSyncInviteFriends() {
+  let tmp = closure_10();
+  const items = [UserStore];
+  _require = require("initialize").useStateFromStores(items, () => currentUser.getCurrentUser());
+  let obj2 = { children: null };
+  const obj3 = { style: tmp.container, children: null };
+  const obj4 = { style: tmp.art, source: null };
+  let obj = require("initialize");
+  obj4.source = _modDef12705;
+  const items1 = [closure_7(FastImageDefault, obj4), , ];
+  const obj5 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+  let intl = require("util").intl;
+  obj5.children = intl.string(require("util").t.ZxBpLf);
+  items1[1] = closure_7(require("Text/Text").Text, obj5);
+  const obj6 = { style: tmp.subtitle, variant: "text-sm/medium", color: "text-default", children: null };
+  const intl2 = require("util").intl;
+  obj6.children = intl2.string(require("util").t["fXtCJ+"]);
+  items1[2] = closure_7(require("Text/Text").Text, obj6);
+  obj3.children = items1;
+  const items2 = [closure_8(View, obj3), ];
+  const obj7 = { style: tmp.button, children: null };
+  const obj8 = { variant: "primary", size: "lg", text: null, onPress: null };
+  const intl3 = require("util").intl;
+  obj8.text = intl3.string(require("util").t["6Qgrev"]);
+  obj8.onPress = function onPress() {
+    AnalyticsUtilsDefault.track(constants.FRIEND_ADD_VIEWED, { friend_add_type: "Invite", source_page: constants2.CONTACT_SYNC_MODAL });
+    const intl = util.intl;
+    let str = "";
+    if (null != closure_0) {
+      str = UserUtilsDefault.getUserTag(tmp6);
+      const tmpResult = UserUtilsDefault;
+    }
+    const obj2 = { friend_add_type: "Invite", source_page: constants2.CONTACT_SYNC_MODAL };
+    const tmp3 = constants2;
+    const formatToPlainStringResult = intl.formatToPlainString(util.t["6E9a1J"], { url: "https://discord.com/", username: str });
+    showShareActionSheet.showShareActionSheet({ message: formatToPlainStringResult }, tmp3.CONTACT_SYNC_MODAL);
+  };
+  obj7.children = closure_7(require("components/Button/Button").Button, obj8);
+  items2[1] = closure_7(View, obj7);
+  obj2.children = items2;
+  return closure_8(closure_9, obj2);
+};

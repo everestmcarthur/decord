@@ -1,0 +1,34 @@
+// Module ID: 11385
+// Function ID: 11386
+// Name: LikelyAtoMoreTipsModalActionItems
+// Dependencies: [19, 1371, 21, 504, 4404, 5687, 5605, 1114, 9065, 2]
+// Exports: default
+
+// Module 11385 (LikelyAtoMoreTipsModalActionItems)
+import UserUtilsDefault from "UserUtils" /* 4404 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
+
+const require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/ato_alerts/native/components/LikelyAtoMoreTipsModalActionItems.tsx");
+
+export default function LikelyAtoMoreTipsModalActionItems(senderId) {
+  senderId = senderId.senderId;
+  const items = [UserStore];
+  const items1 = [senderId];
+  const stateFromStores = senderId(504).useStateFromStores(items, () => UserStore.getUser(senderId), items1);
+  const items2 = [stateFromStores];
+  const memo = noop.useMemo(() => UserUtilsDefault.getName(stateFromStores), items2);
+  const obj2 = { hasIcons: true, children: null };
+  const obj3 = { label: null, subLabel: null, onPress: null, icon: null };
+  const intl = senderId(1114).intl;
+  obj3.label = intl.formatToPlainString(senderId(1114).t["F/ID+9"], { username: memo });
+  const intl2 = senderId(1114).intl;
+  obj3.subLabel = intl2.string(senderId(1114).t.w2ve0t);
+  obj3.onPress = senderId.handleMutePressed;
+  obj3.icon = jsx(senderId(9065).BellSlashIcon, {});
+  obj2.children = jsx(senderId(5605).TableRow, { label: null, subLabel: null, onPress: null, icon: null });
+  return jsx(senderId(5687).TableRowGroup, { hasIcons: true, children: null });
+};

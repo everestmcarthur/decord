@@ -1,0 +1,218 @@
+// Module ID: 13527
+// Function ID: 13528
+// Name: GuildBoostingUpsell
+// Dependencies: [19, 17, 5438, 1373, 21, 4560, 576, 13506, 1114, 9381, 13528, 13529, 13531, 9758, 13532, 8763, 13533, 10119, 13534, 12534, 13535, 9377, 13536, 10240, 504, 13421, 13537, 4495, 13326, 4411, 13335, 13336, 4556, 9397, 13541, 13542, 13543, 2]
+// Exports: default
+
+// Module 13527 (GuildBoostingUpsell)
+import initialize from "initialize" /* 504 */;
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import shared from "shared" /* 4411 */;
+import useThemeDefault from "useTheme" /* 4495 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import ReactionIcon from "ReactionIcon" /* 8763 */;
+import UploadIcon from "UploadIcon" /* 9377 */;
+import BoostGemIcon from "BoostGemIcon" /* 9381 */;
+import PremiumFeatureListDefault from "PremiumFeatureList" /* 9397 */;
+import ShieldUserIcon from "ShieldUserIcon" /* 9758 */;
+import StickerIcon from "StickerIcon" /* 10119 */;
+import StarIcon from "StarIcon" /* 10240 */;
+import HeadphonesIcon from "HeadphonesIcon" /* 12534 */;
+import _modDef13326 from "module_13326" /* 13326 */;
+import useSubscriptionPlansLoaded from "useSubscriptionPlansLoaded" /* 13421 */;
+import _modDef13506 from "module_13506" /* 13506 */;
+import _modDef13528 from "module_13528" /* 13528 */;
+import BoostTier3Icon from "BoostTier3Icon" /* 13529 */;
+import _modDef13531 from "module_13531" /* 13531 */;
+import _modDef13532 from "module_13532" /* 13532 */;
+import _modDef13533 from "module_13533" /* 13533 */;
+import _modDef13534 from "module_13534" /* 13534 */;
+import _modDef13535 from "module_13535" /* 13535 */;
+import _modDef13536 from "module_13536" /* 13536 */;
+import GuildSubscriptionNoGuilds from "GuildSubscriptionNoGuilds" /* 13537 */;
+import noop from "module_19" /* 19 */;
+import SortedGuildStore from "SortedGuildStore" /* 5438 */;
+
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: c3, Image: closure_4, StyleSheet } = get_ActivityIndicator);
+const FractionalPremiumStates = fn(1373).FractionalPremiumStates;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(4560);
+let obj2 = { root: { paddingHorizontal: 16, paddingVertical: 32 }, title: { marginTop: 16 }, features: { marginTop: 16 }, cardText: { lineHeight: 20, marginTop: 8, textAlign: "center" }, guildList: { marginTop: 16 }, logoPremiumGuild: { resizeMode: "contain", width: "100%", height: 34, maxWidth: 320, marginTop: 16 }, imgPremiumGuild: { width: 95, height: 65 }, imgNoGuilds: { width: 178, height: 112, marginTop: 32 }, header: { alignItems: "center" }, upsell: { marginTop: 32, paddingTop: 16, borderTopWidth: 2 * StyleSheet.hairlineWidth, borderTopColor: nativeDefault.colors.BORDER_SUBTLE }, subscriptionUpsell: { marginTop: 32 } };
+let closure_9 = createStyles.createStyles(obj2);
+class FEATURES_PREMIUM_GUILD_USER {
+  constructor() {
+    obj = { icon: closure_1(closure_2[7]), label: null, IconComponent: null, color: null };
+    intl = closure_0(closure_2[8]).intl;
+    obj.label = intl.string(closure_0(closure_2[8]).t["GS+bL0"]);
+    obj.IconComponent = closure_0(closure_2[9]).BoostGemIcon;
+    obj.color = closure_1(closure_2[6]).unsafe_rawColors.GUILD_BOOSTING_PINK;
+    items = [, , ];
+    items[0] = obj;
+    obj1 = { icon: closure_1(closure_2[10]), label: null, IconComponent: null };
+    intl2 = closure_0(closure_2[8]).intl;
+    obj1.label = intl2.string(closure_0(closure_2[8]).t.a7LWeM);
+    obj1.IconComponent = function IconComponent(arg0) {
+      const obj = {};
+      const merged = Object.assign(arg0);
+      obj.color = nativeDefault.unsafe_rawColors.GUILD_BOOSTING_PINK;
+      return closure_1_7(BoostTier3Icon.BoostTier3Icon, obj);
+    };
+    items[1] = obj1;
+    obj4 = { icon: closure_1(closure_2[12]), label: null, color: null, IconComponent: null };
+    intl3 = closure_0(closure_2[8]).intl;
+    obj4.label = intl3.string(closure_0(closure_2[8]).t.E76jz8);
+    obj4.color = closure_1(closure_2[6]).unsafe_rawColors.YELLOW_300;
+    obj4.IconComponent = closure_0(closure_2[13]).ShieldUserIcon;
+    items[2] = obj4;
+    return items;
+  }
+}
+const size = fn(2);
+const result = size.fileFinishedImporting("components_native/premium/GuildBoostingUpsell.tsx");
+
+export default function GuildBoostingUpsell(arg0) {
+  ({ fractionalState, isInReverseTrial } = arg0);
+  ({ onLearnMorePremium, hasAvailableSlots } = arg0);
+  const tmp = closure_9();
+  const items = [SortedGuildStore];
+  const stateFromStores = initialize.useStateFromStores(items, () => flattenedGuildIds.getFlattenedGuildIds().length > 0);
+  const subscriptionPlansLoaded = useSubscriptionPlansLoaded.useSubscriptionPlansLoaded();
+  const guildSubscriptionNoGuildsSource = GuildSubscriptionNoGuilds.useGuildSubscriptionNoGuildsSource();
+  if (fractionalState !== FractionalPremiumStates.NONE) {
+    if (!isInReverseTrial) {
+      let tmp11Result = null;
+    }
+    return tmp11Result;
+  }
+  const obj4 = { style: tmp.root, children: null };
+  const obj5 = { style: tmp.header, children: null };
+  const tmp8 = useThemeDefault();
+  const tmp9 = FractionalPremiumStates;
+  const items1 = [React5(React4, { style: tmp.imgPremiumGuild, source: _modDef13326 }), , , ];
+  const obj7 = { style: tmp.logoPremiumGuild, source: null };
+  const obj6 = { style: tmp.imgPremiumGuild, source: _modDef13326 };
+  if (tmp2Result.isThemeDark(tmp8)) {
+    let tmp7Result = tmp7(13335);
+  } else {
+    tmp7Result = tmp7(13336);
+  }
+  obj7.source = tmp7Result;
+  items1[1] = React5(React4, obj7);
+  const obj8 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
+  const intl = tmp2(1114).intl;
+  obj8.children = intl.string(util.t.hw6WTd);
+  items1[2] = React5(Text_Text.Text, obj8);
+  const obj9 = { style: tmp.cardText, variant: "text-md/medium", children: null };
+  const intl2 = tmp2(1114).intl;
+  obj9.children = intl2.string(util.t.K5jBdG);
+  items1[3] = React5(Text_Text.Text, obj9);
+  obj5.children = items1;
+  const items2 = [React6(React3, obj5), , , , , ];
+  const obj10 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
+  const intl3 = tmp2(1114).intl;
+  obj10.children = intl3.string(util.t.RvfRTB);
+  items2[1] = React5(Text_Text.Text, obj10);
+  const obj11 = { style: tmp.features, features: null };
+  tmp2Result = shared;
+  obj11.features = FEATURES_PREMIUM_GUILD_USER();
+  items2[2] = React5(PremiumFeatureListDefault, obj11);
+  const obj12 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
+  const intl4 = tmp2(1114).intl;
+  obj12.children = intl4.string(util.t["/pVhjb"]);
+  items2[3] = React5(Text_Text.Text, obj12);
+  const obj13 = { style: tmp.features, features: null };
+  const obj14 = { icon: null, label: null, IconComponent: null, color: null };
+  const tmp7Result3 = PremiumFeatureListDefault;
+  obj14.icon = _modDef13532;
+  const intl5 = tmp2(1114).intl;
+  obj14.label = intl5.string(util.t.Ts7BVI);
+  obj14.IconComponent = ReactionIcon.ReactionIcon;
+  obj14.color = nativeDefault.unsafe_rawColors.PREMIUM_PERK_YELLOW;
+  const items3 = [obj14, , , , ];
+  const obj15 = { icon: _modDef13533, label: null, IconComponent: null, color: null };
+  const intl6 = tmp2(1114).intl;
+  obj15.label = intl6.string(util.t.QcJbt6);
+  obj15.IconComponent = StickerIcon.StickerIcon;
+  obj15.color = nativeDefault.unsafe_rawColors.PREMIUM_PERK_PURPLE;
+  items3[1] = obj15;
+  const obj16 = { icon: _modDef13534, label: null, color: "#4173da", IconComponent: null };
+  const intl7 = tmp2(1114).intl;
+  obj16.label = intl7.string(util.t.rFNkf5);
+  obj16.IconComponent = HeadphonesIcon.HeadphonesIcon;
+  items3[2] = obj16;
+  const obj17 = { icon: _modDef13535, label: null, IconComponent: null, color: null };
+  const intl8 = tmp2(1114).intl;
+  obj17.label = intl8.string(util.t["BpjjS/"]);
+  obj17.IconComponent = UploadIcon.UploadIcon;
+  obj17.color = nativeDefault.unsafe_rawColors.GUILD_BOOSTING_PINK;
+  items3[3] = obj17;
+  const obj18 = { icon: _modDef13536, label: null, IconComponent: null, color: null };
+  const intl9 = tmp2(1114).intl;
+  obj18.label = intl9.string(util.t["9g5Lgb"]);
+  obj18.IconComponent = StarIcon.StarIcon;
+  obj18.color = nativeDefault.unsafe_rawColors.PREMIUM_PERK_GOLD;
+  items3[4] = obj18;
+  obj13.features = items3;
+  items2[4] = React5(PremiumFeatureListDefault, obj13);
+  const obj19 = { style: tmp.upsell, children: null };
+  let tmp13Result = null;
+  if (subscriptionPlansLoaded) {
+    tmp13Result = null;
+    if (fractionalState === tmp9.NONE) {
+      tmp13Result = tmp13(tmp7(13541), {});
+    }
+  }
+  const items4 = [tmp13Result, , ];
+  if (isInReverseTrial) {
+    items4[1] = null;
+    let tmp13Result2 = null;
+    if (subscriptionPlansLoaded) {
+      const obj20 = { onLearnMorePremium, style: tmp.subscriptionUpsell };
+      tmp13Result2 = tmp13(tmp7(13543), obj20);
+    }
+    items4[2] = tmp13Result2;
+    obj19.children = items4;
+    items2[5] = tmp11(tmp12, obj19);
+    obj4.children = items2;
+    tmp11Result = tmp11(tmp12, obj4);
+  } else {
+    const obj21 = { children: null };
+    if (stateFromStores) {
+      const obj22 = { style: tmp.cardText, variant: "text-md/medium", children: null };
+      const intl12 = tmp2(1114).intl;
+      obj22.children = intl12.string(tmp2(1114).t.WRzob8);
+      const items5 = [tmp13(tmp2(4556).Text, obj22), , ];
+      const obj23 = { style: null, variant: "text-md/bold", children: null };
+      const items6 = [tmp.cardText];
+      obj23.style = items6;
+      const intl13 = tmp2(1114).intl;
+      obj23.children = intl13.string(tmp2(1114).t.j4bXcm);
+      items5[1] = tmp13(tmp2(4556).Text, obj23);
+      const obj24 = { style: tmp.guildList };
+      items5[2] = tmp13(tmp7(13542), obj24);
+      obj21.children = items5;
+      let tmp19 = obj21;
+    } else {
+      const obj25 = { style: tmp.imgNoGuilds, source: guildSubscriptionNoGuildsSource };
+      const items7 = [tmp13(tmp14, obj25), , ];
+      const obj26 = { style: null, variant: "text-md/bold", children: null };
+      const items8 = [tmp.cardText];
+      obj26.style = items8;
+      const intl10 = tmp2(1114).intl;
+      obj26.children = intl10.string(tmp2(1114).t.FHm4bZ);
+      items7[1] = tmp13(tmp2(4556).Text, obj26);
+      const obj27 = { style: tmp.cardText, variant: "text-md/medium", children: null };
+      const intl11 = tmp2(1114).intl;
+      obj27.children = intl11.string(tmp2(1114).t.PSLiiu);
+      items7[2] = tmp13(tmp2(4556).Text, obj27);
+      obj21.children = items7;
+      tmp19 = obj21;
+    }
+    tmp11(tmp12, tmp19);
+  }
+};
+export { FEATURES_PREMIUM_GUILD_USER };

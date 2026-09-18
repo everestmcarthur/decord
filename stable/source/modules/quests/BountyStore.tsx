@@ -1,0 +1,126 @@
+// Module ID: 7702
+// Function ID: 7703
+// Name: BountyStore
+// Dependencies: [504, 573, 2]
+
+// Module 7702 (BountyStore)
+import initializeDefault from "initialize" /* 504 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+
+let c0 = false;
+let closure_1 = [];
+let set = new Set();
+let set1 = new Set();
+set = set1;
+new Map();
+let map = new Map();
+const Store = initializeDefault.Store;
+class BountyStore extends Store {
+}
+const prototype = BountyStore.prototype;
+Object.defineProperty(prototype, "isFetchingQuestHomeBounties", {
+  get: function isFetchingQuestHomeBounties() {
+    return c0;
+  },
+  set: undefined
+});
+Object.defineProperty(prototype, "questHomeBounties", {
+  get: function questHomeBounties() {
+    return closure_1;
+  },
+  set: undefined
+});
+prototype["isBountyCompleted"] = function isBountyCompleted(id) {
+  return set1.has(id);
+};
+prototype["getCompletedBountyCount"] = function getCompletedBountyCount(arg0) {
+  let num = 0;
+  while (tmp !== undefined) {
+    if (set1.has(tmp2.id)) {
+      num = num + 1;
+    }
+    continue;
+  }
+  return num;
+};
+prototype["isClaimingBountyReward"] = function isClaimingBountyReward(arg0) {
+  return set.has(arg0);
+};
+prototype["areAllBountiesCompleted"] = function areAllBountiesCompleted() {
+  return closure_1.every((id) => set.has(id.id));
+};
+prototype["getAdDecisionByPlacementAndAdCreativeId"] = function getAdDecisionByPlacementAndAdCreativeId(arg0, adContentId) {
+  value = map.get(arg0);
+  value2 = undefined;
+  if (value != null) {
+    value2 = value.get(adContentId);
+  }
+  if (value2 == null) {
+    value2 = null;
+  }
+  return value2;
+};
+prototype["getBountyVideoProgress"] = function getBountyVideoProgress(id) {
+  value = map.get(id);
+  if (value == null) {
+    value = null;
+  }
+  return value;
+};
+BountyStore.displayName = "BountyStore";
+const bountyStore = new BountyStore(DispatcherDefault, {
+  LOGOUT: function handleLogout() {
+    c0 = false;
+    closure_1 = [];
+    set = new Set();
+    set1 = new Set();
+    set = set1;
+    new Map();
+    map = new Map();
+  },
+  BOUNTIES_FETCH_QUEST_HOME_BOUNTIES_BEGIN: function handleFetchQuestHomeBountiesBegin() {
+    c0 = true;
+  },
+  BOUNTIES_FETCH_QUEST_HOME_BOUNTIES_SUCCESS: function handleFetchQuestHomeBountiesSuccess(bounties) {
+    c0 = false;
+    bounties = bounties.bounties;
+    ({ placement, adDecisionsByAdCreativeId } = bounties);
+    map = new Map();
+    map1 = new Map(map);
+    map = map1;
+    const result = map1.set(placement, adDecisionsByAdCreativeId);
+  },
+  BOUNTIES_FETCH_QUEST_HOME_BOUNTIES_FAILURE: function handleFetchQuestHomeBountiesFailure(placement) {
+    c0 = false;
+    closure_1 = [];
+    map = new Map(map);
+    map.delete(placement.placement);
+  },
+  BOUNTIES_CLAIM_REWARD_BEGIN: function handleClaimBountyRewardBegin(bountyId) {
+    set = new Set(set);
+    set.add(bountyId.bountyId);
+  },
+  BOUNTIES_CLAIM_REWARD_SUCCESS: function handleClaimBountyRewardSuccess(bountyId) {
+    bountyId = bountyId.bountyId;
+    set = new Set(set);
+    set.delete(bountyId);
+    set1 = new Set(set1);
+    set1.add(bountyId);
+  },
+  BOUNTIES_CLAIM_REWARD_FAILURE: function handleClaimBountyRewardFailure(bountyId) {
+    set = new Set(set);
+    set.delete(bountyId.bountyId);
+  },
+  BOUNTIES_VIDEO_PROGRESS_UPDATE: function handleBountyVideoProgressUpdate(arg0) {
+    ({ bountyId, timestampSec, maxTimestampSec, duration } = arg0);
+    map = new Map(map);
+    const result = map.set(bountyId, { timestampSec, maxTimestampSec, duration });
+  },
+  AD_SESSION_RESET: function handleAdSessionReset() {
+    map = new Map();
+  }
+});
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/quests/BountyStore.tsx");
+
+export default bountyStore;

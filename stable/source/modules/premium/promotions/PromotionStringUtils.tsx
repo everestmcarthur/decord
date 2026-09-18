@@ -1,0 +1,66 @@
+// Module ID: 13406
+// Function ID: 13407
+// Name: PromotionStringUtils
+// Dependencies: [4223, 1373, 504, 4218, 7234, 1114, 2024, 2]
+// Exports: getHelpArticleLinkProps, useFormatStringWithCommonPremiumParams
+
+// Module 13406 (PromotionStringUtils)
+import initialize from "initialize" /* 504 */;
+import util from "util" /* 1114 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4218 */;
+import PriceUtils from "PriceUtils" /* 7234 */;
+import SubscriptionPlanStore from "SubscriptionPlanStore" /* 4223 */;
+
+require = fn;
+const PremiumConstants = fn(1373);
+({ PremiumSubscriptionSKUs: closure_4, SubscriptionPlans: hasOwnProperty } = PremiumConstants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/promotions/PromotionStringUtils.tsx");
+
+export const useFormatStringWithCommonPremiumParams = function useFormatStringWithCommonPremiumParams(body) {
+  let str = "...";
+  const items = [SubscriptionPlanStore];
+  const stateFromStores = initialize.useStateFromStores(items, () => loadedForSKU.isLoadedForSKU(TIER_2.TIER_2));
+  if (-1 !== body.indexOf("{price}")) {
+    if (stateFromStores) {
+      try {
+        const defaultPrice = PremiumUtilsDefault.getDefaultPrice(PREMIUM_MONTH_TIER_2.PREMIUM_MONTH_TIER_2);
+        str = PriceUtils.formatPrice(defaultPrice.amount, defaultPrice.currency);
+        const tmpResult = PriceUtils;
+      } catch (err) {
+      }
+    }
+  }
+  return body.replace(/\{price\}/g, str);
+};
+export const getHelpArticleLinkProps = function getHelpArticleLinkProps(helpArticle, helpArticleId) {
+  let id1;
+  if (helpArticle != null) {
+    id1 = helpArticle.id;
+  }
+  let id = helpArticleId;
+  if (null != id1) {
+    id = helpArticleId;
+    if ("" !== helpArticle.id) {
+      id = helpArticle.id;
+    }
+  }
+  if ("" === id) {
+    return null;
+  } else {
+    let linkText1;
+    if (helpArticle != null) {
+      linkText1 = helpArticle.linkText;
+    }
+    if (null != linkText1) {
+      if ("" !== helpArticle.linkText) {
+        let linkText = helpArticle.linkText;
+      }
+      const obj = { url: HelpdeskUtilsDefault.getArticleURL(id), linkText };
+      return obj;
+    }
+    const intl = util.intl;
+    linkText = intl.string(util.t["sBp+u0"]);
+  }
+};

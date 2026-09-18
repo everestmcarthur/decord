@@ -1,0 +1,38 @@
+// Module ID: 9785
+// Function ID: 9786
+// Name: getGuildEventImage
+// Dependencies: [1074, 1430, 2]
+// Exports: default
+
+// Module 9785 (getGuildEventImage)
+import Constants from "Constants" /* 1074 */;
+import ImageLoaderUtils from "ImageLoaderUtils" /* 1430 */;
+import size from "module_2" /* 2 */;
+
+const Endpoints = Constants.Endpoints;
+let result = size.fileFinishedImporting("modules/guild_scheduled_events/utils/getGuildEventImage.tsx");
+
+export default function getGuildEventImageURL(image, size) {
+  if (null == image.image) {
+    return null;
+  } else {
+    let result = size;
+    if (null == size) {
+      const _window = window;
+      result = window.screen.width * ImageLoaderUtils.getDevicePixelRatio();
+    }
+    const _window2 = window;
+    const bestMediaProxySize = ImageLoaderUtils.getBestMediaProxySize(result);
+    if (null != CDN_HOST) {
+      const _HermesInternal = HermesInternal;
+      let combined = "https://" + CDN_HOST + "/guild-events/" + image.id + "/" + image.image;
+    } else {
+      const _location = location;
+      const _window3 = window;
+      const sum = location.protocol + window.GLOBAL_ENV.API_ENDPOINT;
+      combined = sum + Endpoints.GUILD_EVENT_IMAGE(image.id, image.image, "png");
+    }
+    const _HermesInternal2 = HermesInternal;
+    return combined + "?size=" + bestMediaProxySize;
+  }
+};

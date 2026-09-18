@@ -1,0 +1,238 @@
+// Module ID: 11033
+// Function ID: 11034
+// Name: GiftBadgePostPurchase
+// Dependencies: [19, 17, 8193, 11034, 1954, 21, 4560, 576, 1611, 4763, 4418, 4975, 11035, 1114, 2492, 11036, 4556, 4528, 4529, 10754, 11037, 4380, 1943, 504, 8185, 2]
+// Exports: default
+
+// Module 11033 (GiftBadgePostPurchase)
+import initialize from "initialize" /* 504 */;
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
+import dismissible_content from "dismissible_content" /* 1943 */;
+import _modDef2492 from "module_2492" /* 2492 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4380 */;
+import HapticUtils from "HapticUtils" /* 4528 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4529 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
+import BadgeId from "BadgeId" /* 8185 */;
+import GiftingBadgeProgressDefault from "GiftingBadgeProgress" /* 11036 */;
+import GiftingBadgeLevelUpProgressDefault from "GiftingBadgeLevelUpProgress" /* 11037 */;
+import noop from "module_19" /* 19 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8193 */;
+
+require = fn;
+function PostPurchaseFooter(onSendGift) {
+  onSendGift = onSendGift.onSendGift;
+  const items = [onSendGift];
+  const callback = noop.useCallback(() => {
+    ModalActionCreatorsDefault.pop();
+    onSendGift();
+  }, items);
+  const obj = { style: closure_12(useSafeAreaInsetsDefault().bottom).footer, children: null };
+  const callback1 = noop.useCallback(() => {
+    ModalActionCreatorsDefault.pop();
+    const rootNavigationRef = onSendGift(4418).getRootNavigationRef();
+    if (rootNavigationRef != null) {
+      rootNavigationRef.navigate("you");
+    }
+  }, []);
+  const obj2 = { grow: true, variant: "primary", icon: null, text: null, onPress: null };
+  const tmp = closure_12(useSafeAreaInsetsDefault().bottom);
+  obj2.icon = closure_10(onSendGift(11035).GiftIcon, { size: "sm", color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT });
+  const intl = onSendGift(1114).intl;
+  obj2.text = intl.string(_modDef2492.g86YiI);
+  obj2.onPress = callback;
+  const items1 = [closure_10(onSendGift(4975).Button, obj2), ];
+  const obj4 = { grow: true, variant: "secondary", text: null, onPress: null };
+  const intl2 = onSendGift(1114).intl;
+  obj4.text = intl2.string(_modDef2492["sa/cfM"]);
+  obj4.onPress = callback1;
+  items1[1] = closure_10(onSendGift(4975).Button, obj4);
+  obj.children = items1;
+  return closure_11(View, obj);
+}
+function InProgressScreen(arg0) {
+  ({ progress, title, progressBarTitle, description, currentTier, nextTier, onSendGift } = arg0);
+  const tmp = closure_12(useSafeAreaInsetsDefault().bottom);
+  const obj = { style: tmp.screenContainer, children: null };
+  const obj2 = { style: tmp.content, children: null };
+  const items = [closure_1_10(View, { style: tmp.progressWrapper, children: closure_1_10(GiftingBadgeProgressDefault, { progress, currentTier, nextTier, iconSize: 48, title: progressBarTitle }) }), ];
+  const obj4 = { style: tmp.messageSection, children: null };
+  const items1 = [closure_1_10(Text_Text.Text, { variant: "heading-xxl/bold", style: tmp.centerText, children: title }), closure_1_10(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", style: tmp.centerText, children: description })];
+  obj4.children = items1;
+  items[1] = closure_1_11(View, obj4);
+  obj2.children = items;
+  const items2 = [closure_1_11(View, obj2), closure_1_10(PostPurchaseFooter, { onSendGift })];
+  obj.children = items2;
+  return closure_1_11(View, obj);
+}
+function LevelUpScreen(arg0) {
+  ({ newTier, nextTier, giftsToNextTier } = arg0);
+  ({ simulatedProgress, currentTier, onSendGift } = arg0);
+  const tmp3 = closure_12(useSafeAreaInsetsDefault().bottom);
+  const effect = noop.useEffect(() => {
+    const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_HEAVY);
+  }, []);
+  const obj = { style: tmp3.screenContainer, children: null };
+  const obj2 = { style: tmp3.content, children: null };
+  const obj3 = { style: tmp3.levelUpIconWrapper, children: null };
+  let tmp7Result = null != newTier.simple_icon_url;
+  if (tmp7Result) {
+    const obj4 = { icon: newTier.simple_icon_url, size: 140 };
+    tmp7Result = tmp7(tmp(10754), obj4);
+  }
+  obj3.children = tmp7Result;
+  const items = [closure_1_10(View, obj3), ];
+  const obj5 = { style: tmp3.levelUpBody, children: null };
+  const items1 = [closure_1_10(GiftingBadgeLevelUpProgressDefault, { progress: simulatedProgress, currentTier, newTier, style: tmp3.levelUpProgress }), ];
+  const obj7 = { style: tmp3.messageSection, children: null };
+  const obj8 = { variant: "heading-xxl/bold", style: tmp3.centerText, children: null };
+  const intl = util.intl;
+  let str = newTier.name;
+  if (str == null) {
+    str = "";
+  }
+  obj8.children = intl.format(_modDef2492.k8MmO8, { tierName: str });
+  const items2 = [closure_1_10(Text_Text.Text, obj8), ];
+  let tmp7Result2 = null != nextTier && null != giftsToNextTier;
+  if (tmp7Result2) {
+    tmp7Result2 = giftsToNextTier > 0;
+  }
+  if (tmp7Result2) {
+    const obj9 = { variant: "text-md/normal", color: "text-subtle", style: tmp3.centerText, children: null };
+    const intl2 = tmp9(1114).intl;
+    const obj10 = { count: giftsToNextTier, nextTierName: null };
+    let str2 = nextTier.name;
+    if (str2 == null) {
+      str2 = "";
+    }
+    obj10.nextTierName = str2;
+    obj9.children = intl2.format(tmp(2492)["6QVlxw"], obj10);
+    tmp7Result2 = tmp7(tmp9(4556).Text, obj9);
+  }
+  items2[1] = tmp7Result2;
+  obj7.children = items2;
+  items1[1] = closure_1_11(View, obj7);
+  obj5.children = items1;
+  items[1] = closure_1_11(View, obj5);
+  obj2.children = items;
+  const items3 = [closure_1_11(View, obj2), closure_1_10(PostPurchaseFooter, { onSendGift })];
+  obj.children = items3;
+  return closure_1_11(View, obj);
+}
+const View = fn(17).View;
+const GiftingBadgeConstants = fn(11034);
+({ getRemainingGiftsToNextTier: metroRequire, getTierForProgress: closure_7, getNextTierForProgress: closure_8 } = GiftingBadgeConstants);
+const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const jsxProd = fn(21);
+({ jsx: c10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(4560);
+let closure_12 = createStyles.createStyles((arg0) => {
+  const obj = { screenContainer: { flex: 1 }, content: { flex: 1, alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_16 }, progressWrapper: null, messageSection: null, centerText: null, levelUpIconWrapper: null, levelUpBody: null, levelUpProgress: null, footer: null };
+  const obj2 = { flex: 1, alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_16 };
+  obj.progressWrapper = { padding: nativeDefault.space.PX_16, width: "100%", marginBottom: nativeDefault.space.PX_24 };
+  const obj3 = { padding: nativeDefault.space.PX_16, width: "100%", marginBottom: nativeDefault.space.PX_24 };
+  obj.messageSection = { gap: nativeDefault.space.PX_12, alignItems: "center", width: "100%", paddingHorizontal: nativeDefault.space.PX_16 };
+  obj.centerText = { textAlign: "center" };
+  const obj4 = { gap: nativeDefault.space.PX_12, alignItems: "center", width: "100%", paddingHorizontal: nativeDefault.space.PX_16 };
+  obj.levelUpIconWrapper = { paddingVertical: 26, paddingHorizontal: 74, marginBottom: nativeDefault.space.PX_48 };
+  const obj5 = { paddingVertical: 26, paddingHorizontal: 74, marginBottom: nativeDefault.space.PX_48 };
+  obj.levelUpBody = { gap: nativeDefault.space.PX_12, alignItems: "center", width: "100%" };
+  obj.levelUpProgress = { maxWidth: 260 };
+  const obj6 = { gap: nativeDefault.space.PX_12, alignItems: "center", width: "100%" };
+  obj.footer = { width: "100%", gap: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 + arg0 };
+  return obj;
+});
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/premium/native/gifting/GiftBadgePostPurchase.tsx");
+
+export default function GiftBadgePostPurchase(arg0) {
+  ({ currentProgress, onSendGift } = arg0);
+  const effect = noop.useEffect(() => {
+    const result = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(dismissible_content.DismissibleContent.NEW_GIFTING_BADGES_COACHMARK, { dismissAction: constants.INDIRECT_ACTION });
+  }, []);
+  const items = [BadgeDirectoryStore];
+  const stateFromStores = initialize.useStateFromStores(items, () => {
+    badgeById = badgeById.getBadgeById(BadgeId.BadgeId.GIFTING);
+    let tiers;
+    if (badgeById != null) {
+      tiers = badgeById.tiers;
+    }
+    return tiers;
+  });
+  if (null == stateFromStores) {
+    return null;
+  } else {
+    const tmp24 = React5(stateFromStores, currentProgress);
+    const sum = currentProgress + 1;
+    const tmp26 = React5(stateFromStores, sum);
+    let key;
+    if (tmp26 != null) {
+      key = tmp26.key;
+    }
+    let key1;
+    if (tmp24 != null) {
+      key1 = tmp24.key;
+    }
+    const tmp8 = React6(stateFromStores, sum);
+    const tmp10 = timestampProducer(stateFromStores, sum);
+    if (key !== key1) {
+      if (null != tmp26) {
+        const obj2 = { simulatedProgress: sum, currentTier: tmp24, newTier: tmp26, nextTier: tmp8, giftsToNextTier: tmp10, onSendGift };
+        let tmp11Result = closure_1_10(LevelUpScreen, obj2);
+      }
+      return tmp11Result;
+    }
+    if (1 === tmp10) {
+      const intl2 = tmp2(1114).intl;
+      let str2;
+      if (tmp8 != null) {
+        str2 = tmp8.name;
+      }
+      if (str2 == null) {
+        str2 = "";
+      }
+      const obj3 = { title: null, description: null, progressBarTitle: null, progress: null, currentTier: null, nextTier: null, onSendGift: null };
+      const obj4 = { nextTier: str2 };
+      obj3.title = intl2.formatToPlainString(_modDef2492.KjdBPz, obj4);
+      const intl3 = tmp2(1114).intl;
+      obj3.description = intl3.string(_modDef2492.oqDrEM);
+      const intl4 = tmp2(1114).intl;
+      obj3.progressBarTitle = intl4.string(_modDef2492["Ka5s+Q"]);
+      obj3.progress = sum;
+      obj3.currentTier = tmp26;
+      obj3.nextTier = tmp8;
+      obj3.onSendGift = onSendGift;
+      let obj5 = obj3;
+    } else {
+      obj5 = { title: null, description: null, progressBarTitle: null, progress: null, currentTier: null, nextTier: null, onSendGift: null };
+      const intl5 = tmp2(1114).intl;
+      obj5.title = intl5.string(_modDef2492["/rBQud"]);
+      const intl6 = tmp2(1114).intl;
+      obj5.description = intl6.string(_modDef2492.DDQMlx);
+      let name;
+      if (tmp24 != null) {
+        name = tmp24.name;
+      }
+      let str = "";
+      if (null != name) {
+        const intl = tmp2(1114).intl;
+        let name1;
+        if (tmp24 != null) {
+          name1 = tmp24.name;
+        }
+        const obj6 = { tierName: name1 };
+        str = intl.formatToPlainString(tmp27(2492).bwyQt8, obj6);
+      }
+      obj5.progressBarTitle = str;
+      obj5.progress = sum;
+      obj5.currentTier = tmp26;
+      obj5.nextTier = tmp8;
+      obj5.onSendGift = onSendGift;
+      tmp27 = importDefault;
+    }
+    tmp11Result = closure_1_10(InProgressScreen, obj5);
+  }
+};

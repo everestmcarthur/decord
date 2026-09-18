@@ -1,0 +1,22 @@
+// Module ID: 15507
+// Function ID: 15508
+// Name: FriendGamingActivityNotificationUtils
+// Dependencies: [4212, 1074, 1935, 1242, 2]
+// Exports: onFriendGamingActivityNotificationSettingsChanged
+
+// Module 15507 (FriendGamingActivityNotificationUtils)
+import Constants from "Constants" /* 1074 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import NotificationConstants from "NotificationConstants" /* 4212 */;
+import size from "module_2" /* 2 */;
+
+const constants = NotificationConstants.NotificationSettingsUpdateType;
+const AnalyticEvents = Constants.AnalyticEvents;
+const result = size.fileFinishedImporting("modules/notifications/friend_gaming_activity/FriendGamingActivityNotificationUtils.tsx");
+
+export const onFriendGamingActivityNotificationSettingsChanged = function onFriendGamingActivityNotificationSettingsChanged(friend_gaming_activity_notifications) {
+  const EnableFriendGamingActivityNotifications = UserSettings.EnableFriendGamingActivityNotifications;
+  EnableFriendGamingActivityNotifications.updateSetting(friend_gaming_activity_notifications);
+  AnalyticsUtilsDefault.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, { update_type: constants.ACCOUNT, friend_gaming_activity_notifications });
+};

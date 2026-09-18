@@ -1,0 +1,320 @@
+// Module ID: 4994
+// Function ID: 4995
+// Name: common/Alert
+// Dependencies: [19, 17, 21, 4560, 576, 1178, 4271, 4995, 4447, 4971, 4556, 1114, 4975, 5123, 5125, 1477, 5126, 2]
+// Exports: getAlertButtonVariant
+
+// Module 4994 (common/Alert)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
+import Timers from "Timers" /* 4447 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import components_Button_Button from "components/Button/Button" /* 4975 */;
+import CustomMarkupAll from "CustomMarkup" /* 4995 */;
+import Pressables from "Pressables" /* 5123 */;
+import ThemedGradientDefault from "ThemedGradient" /* 5125 */;
+import useIsScreenLandscape from "useIsScreenLandscape" /* 5126 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: hasOwnProperty, ScrollView: metroRequire, StyleSheet } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
+const createStyles = fn(4560);
+let obj = { alert: { borderRadius: nativeDefault.radii.sm, padding: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, titleText: null, divider: null, body: null, buttons: null, cancelButton: null, secondaryConfirm: null, gradient: null };
+let obj3 = { borderRadius: nativeDefault.radii.sm, padding: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+obj.titleText = { marginBottom: 16, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+let obj4 = { marginBottom: 16, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+obj.divider = { height: StyleSheet.hairlineWidth, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
+let obj5 = { height: StyleSheet.hairlineWidth, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
+obj.body = { marginTop: 16, color: nativeDefault.colors.TEXT_STRONG };
+obj.buttons = { marginTop: 24 };
+obj.cancelButton = { marginTop: 8 };
+obj.secondaryConfirm = { marginTop: 16, alignSelf: "center" };
+let obj6 = { marginTop: 16, color: nativeDefault.colors.TEXT_STRONG };
+obj.gradient = { borderRadius: nativeDefault.radii.sm };
+let closure_10 = createStyles.createLegacyClassComponentStyles(obj);
+const PureComponent = noop.PureComponent;
+class Alert extends PureComponent {
+  constructor() {
+    applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
+    closure_0 = applyArgumentsResult;
+    applyArgumentsResult.titleRef = closure_4.createRef();
+    applyArgumentsResult.state = { confirming: false };
+    obj = closure_2(closure_3[7]);
+    applyArgumentsResult.renderContent = obj.getParser();
+    timeout = new closure_0(closure_3[8]).Timeout();
+    applyArgumentsResult.timeout = timeout;
+    timeout1 = new closure_0(closure_3[8]).Timeout();
+    applyArgumentsResult.focusTimeout = timeout1;
+    applyArgumentsResult.handleConfirm = function handleConfirm() {
+      if (!applyArgumentsResult.state.confirming) {
+        ({ onClose, onConfirm, autoCloseOnConfirm } = obj.props);
+        obj.setState({ confirming: true });
+        const timeout = obj.timeout;
+        timeout.start(500, () => {
+          state.setState({ confirming: false });
+        });
+        if (autoCloseOnConfirm) {
+          if (onClose != null) {
+            onClose();
+          }
+        }
+        if (onConfirm != null) {
+          onConfirm();
+        }
+      }
+    };
+    applyArgumentsResult.handleCancel = function handleCancel() {
+      ({ onClose, onCancel } = applyArgumentsResult.props);
+      if (onCancel != null) {
+        onCancel();
+      }
+      if (onClose != null) {
+        onClose();
+      }
+    };
+    applyArgumentsResult.handleSecondaryConfirm = function handleSecondaryConfirm() {
+      ({ onClose, onConfirmSecondary } = applyArgumentsResult.props);
+      if (onClose != null) {
+        onClose();
+      }
+      if (onConfirmSecondary != null) {
+        onConfirmSecondary();
+      }
+    };
+    return applyArgumentsResult;
+  }
+}
+const prototype = Alert.prototype;
+prototype["componentDidMount"] = function componentDidMount() {
+  const self = this;
+  if (null != this.titleRef.current) {
+    const _setImmediate = setImmediate;
+    setImmediate(() => {
+      const focusTimeout = self.focusTimeout;
+      focusTimeout.start(300, () => {
+        const result = self(dependencyMap[9]).setAccessibilityFocus({ ref: titleRef.titleRef });
+      });
+    });
+  }
+};
+prototype["componentWillUnmount"] = function componentWillUnmount() {
+  const timeout = this.timeout;
+  timeout.stop();
+  const focusTimeout = this.focusTimeout;
+  focusTimeout.stop();
+};
+prototype["componentDidUpdate"] = function componentDidUpdate() {
+  const self = this;
+  const confirming = this.props.confirming;
+  if (null != confirming) {
+    const timeout = self.timeout;
+    timeout.stop();
+    const obj = { confirming };
+    self.setState(obj);
+  }
+};
+prototype["renderHeader"] = function renderHeader() {
+  const self = this;
+  const tmp = closure_10(this.context);
+  const title = this.props.title;
+  let tmp3Result = null;
+  if (null != title) {
+    tmp3Result = null;
+    if ("" !== title) {
+      const obj2 = { ref: self.titleRef, accessible: true, accessibilityRole: "header", variant: "heading-md/extrabold", color: "text-default", style: tmp.titleText, children: null };
+      let renderContentResult = title;
+      if (typeof title === "string") {
+        renderContentResult = self.renderContent(title);
+      }
+      const obj = { children: null };
+      obj2.children = renderContentResult;
+      const items = [React5(Text_Text.Text, obj2), ];
+      const obj3 = { style: tmp.divider };
+      items[1] = React5(hasOwnProperty, obj3);
+      obj.children = items;
+      tmp3Result = React6(tmp4, obj);
+    }
+  }
+  return tmp3Result;
+};
+prototype["renderBody"] = function renderBody() {
+  const self = this;
+  const props = this.props;
+  const body = props.body;
+  let tmp5Result = null;
+  if (null != body) {
+    const obj = { style: null, children: null };
+    const obj2 = { maxHeight: self.props.contentHeight };
+    obj.style = obj2;
+    const obj3 = { variant: "text-md/normal", style: tmp.body, children: null };
+    let renderContentResult = body;
+    if (typeof body === "string") {
+      renderContentResult = self.renderContent(body);
+    }
+    obj3.children = renderContentResult;
+    obj.children = React5(Text_Text.Text, obj3);
+    tmp5Result = tmp5(timestampProducer, obj);
+  }
+  const obj4 = { children: null };
+  const items = [tmp5Result, props.children];
+  obj4.children = items;
+  return React6(React7, obj4);
+};
+prototype["renderButtons"] = function renderButtons() {
+  const self = this;
+  const tmp = closure_10(this.context);
+  const props = this.props;
+  ({ cancelText, confirmText } = props);
+  if (undefined === confirmText) {
+    const intl = util.intl;
+    confirmText = intl.string(util.t.BddRzS);
+  }
+  ({ confirmColor, secondaryConfirmText, renderConfirmIcon, renderConfirmRightIcon, renderConfirmButton, isConfirmButtonDisabled } = props);
+  let tmp15Result = null;
+  if (!props.noDefaultButtons) {
+    let tmp6;
+    if (null != cancelText) {
+      const obj = { style: tmp.cancelButton, children: null };
+      const obj2 = { variant: "secondary", onPress: self.handleCancel, text: cancelText };
+      obj.children = React5(components_Button_Button.Button, obj2);
+      tmp6 = React5(hasOwnProperty, obj);
+    }
+    let tmp11;
+    if (null != secondaryConfirmText) {
+      const obj3 = { accessibilityRole: "button", style: tmp.secondaryConfirm, onPress: self.handleSecondaryConfirm, children: null };
+      const obj4 = { variant: "text-sm/semibold", color: "text-link", children: secondaryConfirmText };
+      obj3.children = React5(Text_Text.Text, obj4);
+      tmp11 = React5(Pressables.PressableOpacity, obj3);
+    }
+    const obj5 = { style: tmp.buttons, children: null };
+    let renderConfirmButtonResult;
+    if (renderConfirmButton != null) {
+      renderConfirmButtonResult = renderConfirmButton();
+    }
+    if (renderConfirmButtonResult == null) {
+      let str = "active";
+      if (native.ButtonColors.GREEN !== confirmColor) {
+        str = "destructive";
+        if (tmp21(1178).ButtonColors.RED !== confirmColor) {
+          str = "secondary";
+          if (tmp21(1178).ButtonColors.GREY !== confirmColor) {
+            str = "secondary";
+            if (tmp21(1178).ButtonColors.LIGHTGREY !== confirmColor) {
+              str = "secondary";
+              if (tmp21(1178).ButtonColors.TRANSPARENT !== confirmColor) {
+                str = "primary";
+                if (tmp21(1178).ButtonColors.WHITE === confirmColor) {
+                  str = "primary-overlay";
+                }
+              }
+            }
+          }
+        }
+      }
+      const obj6 = { variant: str, onPress: self.handleConfirm, text: confirmText, loading: tmp4, disabled: null, icon: null, iconPosition: null };
+      if (isConfirmButtonDisabled == null) {
+        isConfirmButtonDisabled = false;
+      }
+      obj6.disabled = isConfirmButtonDisabled;
+      let renderConfirmIconResult;
+      if (renderConfirmIcon != null) {
+        renderConfirmIconResult = renderConfirmIcon();
+      }
+      if (renderConfirmIconResult == null) {
+        let result;
+        if (renderConfirmRightIcon != null) {
+          result = renderConfirmRightIcon();
+        }
+        renderConfirmIconResult = result;
+      }
+      obj6.icon = renderConfirmIconResult;
+      let str2 = "start";
+      if (null == renderConfirmIcon) {
+        let str3;
+        if (null != renderConfirmRightIcon) {
+          str3 = "end";
+        }
+        str2 = str3;
+      }
+      obj6.iconPosition = str2;
+      renderConfirmButtonResult = React5(components_Button_Button.Button, obj6);
+    }
+    const items = [renderConfirmButtonResult, tmp6, tmp11];
+    obj5.children = items;
+    tmp15Result = React6(hasOwnProperty, obj5);
+  }
+  return tmp15Result;
+};
+prototype["renderFooter"] = function renderFooter() {
+  const footer = this.props.footer;
+  let tmp = null;
+  if (null != footer) {
+    const obj = { children: footer };
+    tmp = React5(hasOwnProperty, obj);
+  }
+  return tmp;
+};
+prototype["render"] = function render() {
+  const tmp = closure_10(this.context);
+  const props = this.props;
+  const width = props.width;
+  const obj = { children: null };
+  ({ style, isLandscape, onClose } = props);
+  const items = [React5(ThemedGradientDefault, { absolute: true, componentStyles: tmp.gradient }), ];
+  const obj3 = { onAccessibilityEscape: onClose, style: null, children: null };
+  const items1 = [tmp.alert, style, { width }];
+  obj3.style = items1;
+  const items2 = [this.renderHeader(), this.renderBody(), this.renderButtons(), this.renderFooter()];
+  obj3.children = items2;
+  items[1] = React6(hasOwnProperty, obj3);
+  obj.children = items;
+  const tmp3 = React6(React7, obj);
+  let tmp2Result = tmp3;
+  if (isLandscape) {
+    const obj4 = { style: null, children: null };
+    const obj5 = { maxHeight: width };
+    obj4.style = obj5;
+    obj4.children = tmp3;
+    tmp2Result = React5(timestampProducer, obj4);
+  }
+  return tmp2Result;
+};
+Alert.contextType = fn(4271).ThemeContext;
+const obj7 = { borderRadius: nativeDefault.radii.sm };
+Alert.defaultProps = { confirmColor: fn(1178).ButtonColors.BRAND, autoCloseOnConfirm: true };
+const memoResult = noop.memo((arg0) => {
+  const size = useWindowDimensionsDefault();
+  const isScreenLandscape = useIsScreenLandscape.useIsScreenLandscape();
+  const merged = Object.assign(arg0);
+  return React5(Alert, { width: Math.min(0.9 * Math.min(size.width, size.height), 400), contentHeight: 0.7 * size.height, isLandscape: isScreenLandscape });
+});
+memoResult.Colors = fn(1178).ButtonColors;
+let size = fn(2);
+let result = size.fileFinishedImporting("components_native/common/Alert.tsx");
+
+export default memoResult;
+export const getAlertButtonVariant = function getAlertButtonVariant(confirmColor) {
+  if (native.ButtonColors.GREEN === confirmColor) {
+    return "active";
+  } else if (tmp(1178).ButtonColors.RED === confirmColor) {
+    return "destructive";
+  } else {
+    if (tmp(1178).ButtonColors.GREY !== confirmColor) {
+      if (tmp(1178).ButtonColors.LIGHTGREY !== confirmColor) {
+        if (tmp(1178).ButtonColors.TRANSPARENT !== confirmColor) {
+          if (tmp(1178).ButtonColors.WHITE === confirmColor) {
+            return "primary-overlay";
+          } else {
+            return "primary";
+          }
+        }
+      }
+    }
+    return "secondary";
+  }
+};

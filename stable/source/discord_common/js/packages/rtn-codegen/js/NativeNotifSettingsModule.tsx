@@ -1,0 +1,14 @@
+// Module ID: 14452
+// Function ID: 14453
+// Name: NativeNotifSettingsModule
+// Dependencies: [17, 2]
+
+// Module 14452 (NativeNotifSettingsModule)
+import _mod17 from "module_17" /* 17 */;
+import size from "module_2" /* 2 */;
+
+const TurboModuleRegistry = _mod17.TurboModuleRegistry;
+const value = TurboModuleRegistry.get("NativeNotifSettingsModule");
+const result = size.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/NativeNotifSettingsModule.tsx");
+
+export default value;

@@ -1,0 +1,45 @@
+// Module ID: 11676
+// Function ID: 11677
+// Name: useChannelFollowerStats
+// Dependencies: [32, 19, 11677, 1090, 504, 11337, 2]
+// Exports: default
+
+// Module 11676 (useChannelFollowerStats)
+import DurationsDefault from "Durations" /* 1090 */;
+import ChannelFollowerActionCreatorsDefault from "ChannelFollowerActionCreators" /* 11337 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import ChannelFollowerStatsStore from "ChannelFollowerStatsStore" /* 11677 */;
+
+const require = globalThis.__r;
+
+const require = fn;
+const HOUR = DurationsDefault.Millis.HOUR;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/channel_following/useChannelFollowerStats.tsx");
+
+export default function useChannelFollowerStats(arg0) {
+  _require = arg0;
+  const tmp = stateFromStores(noop.useState(false), 2);
+  const first = tmp[0];
+  dependencyMap = tmp[1];
+  const items = [ChannelFollowerStatsStore];
+  const items1 = [arg0];
+  stateFromStores = require("initialize").useStateFromStores(items, () => ChannelFollowerStatsStore.getFollowerStatsForChannel(closure_0), items1);
+  const items2 = [arg0, stateFromStores, first];
+  const effect = noop.useEffect(() => {
+    if (null == stateFromStores) {
+      if (!first) {
+        closure_2(true);
+        const channelFollowerStats = ChannelFollowerActionCreatorsDefault.fetchChannelFollowerStats(closure_0);
+      }
+    } else {
+      const _Date = Date;
+    }
+    if (tmp11) {
+      closure_2(false);
+    }
+  }, items2);
+  const items3 = [stateFromStores, first];
+  return items3;
+};

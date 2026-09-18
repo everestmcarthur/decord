@@ -1,0 +1,40 @@
+// Module ID: 13803
+// Function ID: 13804
+// Name: ProvisionalAccountNoCallAllowed
+// Dependencies: [19, 1074, 21, 4560, 4910, 6610, 1114, 2024, 4910, 2]
+// Exports: default
+
+// Module 13803 (ProvisionalAccountNoCallAllowed)
+import util from "util" /* 1114 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
+import AlertModal from "AlertModal" /* 4910 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 6610 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+const HelpdeskArticles = fn(1074).HelpdeskArticles;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_5 = createStyles.createStyles({ header: { alignSelf: "center" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/provisional_accounts/native/ProvisionalAccountNoCallAllowed.tsx");
+
+export default function ProvisionalAccountNoCallAllowed() {
+  const obj = { header: null, title: null, content: null, actions: null };
+  const tmp = closure_5();
+  obj.header = jsx(CircleErrorIcon.CircleErrorIcon, { size: "lg", style: closure_5().header });
+  const intl = util.intl;
+  obj.title = intl.string(util.t["vh+Zpq"]);
+  const intl2 = util.intl;
+  const obj3 = { helpdeskArticle: null };
+  const obj2 = { size: "lg", style: closure_5().header };
+  obj3.helpdeskArticle = HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.SLAYER_PROVISIONAL_ACCOUNTS);
+  obj.content = intl2.format(util.t["tx08s+"], obj3);
+  const obj5 = { children: null };
+  const obj6 = { variant: "secondary", text: null };
+  const intl3 = util.intl;
+  obj6.text = intl3.string(util.t["NX+WJN"]);
+  obj5.children = jsx(AlertModal.AlertActionButton, { variant: "secondary", text: null }, "got-it");
+  obj.actions = jsx(AlertModal.AlertActions, { children: null });
+  return jsx(AlertModal.AlertModal, { header: null, title: null, content: null, actions: null });
+};

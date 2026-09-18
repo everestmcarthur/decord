@@ -1,0 +1,11 @@
+// Module ID: 11303
+// Function ID: 11304
+// Dependencies: [2]
+
+// Module 11303
+import size from "module_2" /* 2 */;
+
+const result = size.fileFinishedImporting("../discord_assets/assets/orbs/reward_tile_v3.webm.js");
+
+export default "https://cdn.discordapp.com/assets/content/fb761d9c206f93cd8c4e7301798abe3f623039a4054f2e7accd019e1bb059fc8.webm";
+export const metadata = { fileBytes: 45837 };

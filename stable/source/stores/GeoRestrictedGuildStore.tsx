@@ -1,0 +1,38 @@
+// Module ID: 13749
+// Function ID: 13750
+// Name: GeoRestrictedGuildStore
+// Dependencies: [504, 573, 2]
+
+// Module 13749 (GeoRestrictedGuildStore)
+import initializeDefault from "initialize" /* 504 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+
+let found = [];
+const Store = initializeDefault.Store;
+class GeoRestrictedGuildStore extends Store {
+}
+GeoRestrictedGuildStore.prototype["getGeoRestrictedGuilds"] = function getGeoRestrictedGuilds() {
+  return found;
+};
+GeoRestrictedGuildStore.displayName = "GeoRestrictedGuildStore";
+const geoRestrictedGuildStore = new GeoRestrictedGuildStore(DispatcherDefault, {
+  CONNECTION_OPEN: function handleConnectionOpen(geoRestrictedGuilds) {
+    found = geoRestrictedGuilds.geoRestrictedGuilds;
+  },
+  GUILD_DELETE: function handleDeleteGuild(guild) {
+    guild = guild.guild;
+    if (-1 === found.findIndex((id) => id.id === guild.id)) {
+      return false;
+    } else {
+      found = found.filter((id) => id.id !== guild.id);
+    }
+  },
+  GUILD_GEO_RESTRICTED: function handleGeoRestrictGuild(guildId) {
+    found = found.filter((id) => id.id !== guildId.guildId);
+    found.push({ id: guildId.guildId, name: guildId.name, icon: guildId.icon, unavailable: true, geo_restricted: true });
+  }
+});
+const size = fn(2);
+const result = size.fileFinishedImporting("stores/GeoRestrictedGuildStore.tsx");
+
+export default geoRestrictedGuildStore;

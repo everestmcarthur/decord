@@ -1,0 +1,62 @@
+// Module ID: 12078
+// Function ID: 12079
+// Name: ApplicationDirectorySimilarApplicationsStore
+// Dependencies: [1437, 504, 573, 2]
+
+// Module 12078 (ApplicationDirectorySimilarApplicationsStore)
+import initializeDefault from "initialize" /* 504 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import privDefault from "priv" /* 1437 */;
+
+let obj = { NOT_FETCHED: 0, [0]: "NOT_FETCHED", FETCHING: 1, [1]: "FETCHING", FETCHED: 2, [2]: "FETCHED", ERROR: 3, [3]: "ERROR" };
+let closure_1 = new privDefault({ max: 20 });
+obj = {};
+const Store = initializeDefault.Store;
+class ApplicationDirectorySimilarApplicationsStore extends Store {
+}
+const prototype = ApplicationDirectorySimilarApplicationsStore.prototype;
+prototype["getSimilarApplications"] = function getSimilarApplications(arg0) {
+  ({ applicationId, guildId, page } = arg0);
+  if (null != applicationId) {
+    const _HermesInternal = HermesInternal;
+    return closure_1.get("applicationId:" + applicationId + " guildId:" + guildId + " page:" + page);
+  }
+};
+prototype["getFetchState"] = function getFetchState(arg0) {
+  ({ applicationId, guildId, page } = arg0);
+  if (null != applicationId) {
+    const _HermesInternal = HermesInternal;
+    return obj["applicationId:" + applicationId + " guildId:" + guildId + " page:" + page];
+  }
+};
+ApplicationDirectorySimilarApplicationsStore.displayName = "ApplicationDirectorySimilarApplicationsStore";
+const applicationDirectorySimilarApplicationsStore = new ApplicationDirectorySimilarApplicationsStore(DispatcherDefault, {
+  APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS: function handleFetchSimilarApplications(applicationId) {
+    obj = {};
+    const combined = "applicationId:" + applicationId.applicationId + " guildId:" + applicationId.guildId + " page:" + applicationId.page;
+    const merged = Object.assign(obj);
+    obj[combined] = obj.FETCHING;
+  },
+  APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS_SUCCESS: function handleFetchSimilarApplicationsSuccess(page) {
+    page = page.page;
+    ({ similarApplications, loadId, totalPages } = page);
+    const combined = "applicationId:" + page.applicationId + " guildId:" + page.guildId + " page:" + page;
+    obj = { lastFetchTimeMs: Date.now(), applications: similarApplications, loadId, page, totalPages };
+    const result = closure_1.set(combined, obj);
+    const obj2 = {};
+    const merged = Object.assign(obj);
+    obj2[combined] = obj.FETCHED;
+    obj = obj2;
+  },
+  APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS_FAILURE: function handleFetchSimilarApplicationsFailure(applicationId) {
+    obj = {};
+    const combined = "applicationId:" + applicationId.applicationId + " guildId:" + applicationId.guildId + " page:" + applicationId.page;
+    const merged = Object.assign(obj);
+    obj[combined] = obj.ERROR;
+  }
+});
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/global_discovery_apps/stores/ApplicationDirectorySimilarApplicationsStore.tsx");
+
+export default applicationDirectorySimilarApplicationsStore;
+export const FetchState = obj;

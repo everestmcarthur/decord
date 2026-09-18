@@ -1,0 +1,74 @@
+// Module ID: 10023
+// Function ID: 10024
+// Name: useDeafStates
+// Dependencies: [502, 1908, 4579, 504, 2]
+// Exports: default, getDeafStates
+
+// Module 10023 (useDeafStates)
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import MediaEngineStore from "MediaEngineStore" /* 1908 */;
+import VoiceStateStore from "VoiceStateStore" /* 4579 */;
+
+const require = globalThis.__r;
+
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/video_calls/useDeafStates.tsx");
+
+export default function useDeafStates(arg0) {
+  _require = arg0;
+  const items = [VoiceStateStore, MediaEngineStore, AuthenticationStore];
+  const items1 = [arg0];
+  return require("initialize").useStateFromStoresObject(items, () => {
+    if (VoiceStateStore !== undefined) {
+      if (obj3 !== undefined) {
+        if (obj4 !== undefined) {
+          let voiceState = null;
+          if (null != obj) {
+            const guildId = obj.getGuildId();
+            voiceState = VoiceStateStore.getVoiceState(guildId, obj4.getId());
+          }
+          const obj5 = { selfDeaf: obj3.isSelfDeaf(), deaf: null };
+          let flag;
+          if (voiceState != null) {
+            flag = voiceState.deaf;
+          }
+          if (flag == null) {
+            flag = false;
+          }
+          obj5.deaf = flag;
+          return obj5;
+        }
+      }
+    }
+  }, items1);
+};
+export const getDeafStates = function getDeafStates(channel, VoiceStateStore, MediaEngineStore, AuthenticationStore) {
+  let obj = VoiceStateStore;
+  if (VoiceStateStore === undefined) {
+    obj = VoiceStateStore;
+  }
+  let obj2 = MediaEngineStore;
+  if (MediaEngineStore === undefined) {
+    obj2 = MediaEngineStore;
+  }
+  let obj3 = AuthenticationStore;
+  if (AuthenticationStore === undefined) {
+    obj3 = AuthenticationStore;
+  }
+  let voiceState = null;
+  if (null != channel) {
+    const guildId = channel.getGuildId();
+    voiceState = obj.getVoiceState(guildId, obj3.getId());
+  }
+  const obj4 = { selfDeaf: obj2.isSelfDeaf(), deaf: null };
+  let flag;
+  if (voiceState != null) {
+    flag = voiceState.deaf;
+  }
+  if (flag == null) {
+    flag = false;
+  }
+  obj4.deaf = flag;
+  return obj4;
+};

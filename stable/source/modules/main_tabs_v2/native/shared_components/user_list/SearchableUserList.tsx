@@ -1,0 +1,265 @@
+// Module ID: 10866
+// Function ID: 10867
+// Name: SearchableUserList
+// Dependencies: [32, 19, 17, 1371, 10865, 21, 4560, 576, 10867, 1369, 10868, 4411, 1114, 10869, 10871, 10999, 5125, 9761, 2]
+// Exports: default
+
+// Module 10866 (SearchableUserList)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import GlobalUtils from "GlobalUtils" /* 1369 */;
+import shared from "shared" /* 4411 */;
+import makeUserListPillDataDefault from "makeUserListPillData" /* 10868 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
+
+require = fn;
+const View = fn(17).View;
+const UserRowModes = fn(10865).UserRowModes;
+const jsxProd = fn(21);
+({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
+const createStyles = fn(4560);
+let obj2 = { searchBarContainer: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, searchBar: { height: "ip", minHeight: false }, searchBarRowContainer: null, noResults: null };
+const obj3 = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+obj2.searchBarRowContainer = { paddingTop: nativeDefault.space.PX_8 };
+let obj4 = { paddingTop: nativeDefault.space.PX_8 };
+obj2.noResults = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+let closure_11 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/SearchableUserList.tsx");
+
+export default function SearchableUserList(selectedUserIds) {
+  selectedUserIds = selectedUserIds.selectedUserIds;
+  const disabledUserIds = selectedUserIds.disabledUserIds;
+  const onSelectUser = selectedUserIds.onSelectUser;
+  const handleMessage = selectedUserIds.handleMessage;
+  let actions = selectedUserIds.actions;
+  if (actions === undefined) {
+    actions = [];
+  }
+  let ACTIONS = selectedUserIds.rowMode;
+  if (ACTIONS === undefined) {
+    ACTIONS = ref.ACTIONS;
+  }
+  let flag = selectedUserIds.autoFocusSearch;
+  if (flag === undefined) {
+    flag = false;
+  }
+  let flag2 = selectedUserIds.focusOnAdd;
+  if (flag2 === undefined) {
+    flag2 = true;
+  }
+  let flag3 = selectedUserIds.withGuildMembers;
+  if (flag3 === undefined) {
+    flag3 = false;
+  }
+  let flag4 = selectedUserIds.withAffinitySuggestions;
+  if (flag4 === undefined) {
+    flag4 = true;
+  }
+  let flag5 = selectedUserIds.withAlphabeticalSections;
+  if (flag5 === undefined) {
+    flag5 = true;
+  }
+  let flag6 = selectedUserIds.withFriends;
+  if (flag6 === undefined) {
+    flag6 = true;
+  }
+  let flag7 = selectedUserIds.withGameFriends;
+  if (flag7 === undefined) {
+    flag7 = false;
+  }
+  let flag8 = selectedUserIds.withFriendRequests;
+  if (flag8 === undefined) {
+    flag8 = false;
+  }
+  let flag9 = selectedUserIds.withFriendRequestsIncoming;
+  if (flag9 === undefined) {
+    flag9 = false;
+  }
+  let flag10 = selectedUserIds.withFriendRequestsOutgoing;
+  if (flag10 === undefined) {
+    flag10 = false;
+  }
+  let flag11 = selectedUserIds.withFriendRequestsSpam;
+  if (flag11 === undefined) {
+    flag11 = false;
+  }
+  let flag12 = selectedUserIds.withFriendSuggestions;
+  if (flag12 === undefined) {
+    flag12 = false;
+  }
+  let flag13 = selectedUserIds.hideSearchOnDefaultNoResults;
+  if (flag13 === undefined) {
+    flag13 = false;
+  }
+  ({ defaultNoResultsFound, disableGradient, insetEnd, disableStickySections, disableThemedGradient } = selectedUserIds);
+  if (insetEnd === undefined) {
+    insetEnd = disabledUserIds(onSelectUser[7]).space.PX_12;
+  }
+  ({ onContentLengthChange, onLayout, onScroll } = selectedUserIds);
+  const tmp4 = closure_11();
+  const tmp5 = handleMessage(ACTIONS.useState(""), 2);
+  const tmp8 = disabledUserIds(onSelectUser[8])({ query: tmp5[0], withGuildMembers: flag3, withAffinitySuggestions: flag4, withAlphabeticalSections: flag5, withFriends: flag6, withGameFriends: flag7, withFriendSuggestions: flag12, withFriendRequests: flag8, withFriendRequestsIncoming: flag9, withFriendRequestsOutgoing: flag10, withFriendRequestsSpam: flag11 });
+  closure_5 = tmp8;
+  let items = [selectedUserIds];
+  const memo = ACTIONS.useMemo(() => {
+    let items = selectedUserIds;
+    if (selectedUserIds == null) {
+      items = [];
+    }
+    const mapped = items.map(UserStore.getUser);
+    const found = mapped.filter(GlobalUtils.isNotNullish);
+    return found.map(makeUserListPillDataDefault);
+  }, items);
+  const items1 = [onSelectUser, memo];
+  const items2 = [tmp8];
+  const callback = ACTIONS.useCallback((arg0) => {
+    const user = UserStore.getUser(tmp.id);
+    if (null != user) {
+      onSelectUser(user);
+      const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
+      const intl = util.intl;
+      const obj = { text: tmp.text };
+      AccessibilityAnnouncer.announce(intl.formatToPlainString(util.t.srlxB8, obj));
+    }
+  }, items1);
+  const memo1 = ACTIONS.useMemo(() => closure_5.map((items) => items.items.length), items2);
+  const items3 = [tmp8];
+  const callback1 = ACTIONS.useCallback((arg0) => {
+    const element = { type: "section", props: { title: closure_5[arg0].title } };
+    return element;
+  }, items3);
+  const tmp12 = tmp5[0].trim().length > 0;
+  const items4 = [tmp8, disabledUserIds, onSelectUser, handleMessage, ACTIONS, selectedUserIds];
+  const callback2 = ACTIONS.useCallback((arg0, arg1) => {
+    ({ user, firstMatch } = closure_5[arg0].items[arg1]);
+    const props = { type: tmp.type, user, nickname: null, onPress: null, handleMessage: null, disabled: null, selected: null, mode: null, start: null, end: null };
+    let tmp3;
+    const diff = closure_5[arg0].items.length - 1;
+    if (user.username !== firstMatch) {
+      tmp3 = firstMatch;
+    }
+    props.nickname = tmp3;
+    props.onPress = onSelectUser;
+    props.handleMessage = handleMessage;
+    let flag;
+    if (disabledUserIds != null) {
+      flag = obj2.includes(user.id);
+    }
+    if (flag == null) {
+      flag = false;
+    }
+    props.disabled = flag;
+    let flag2;
+    if (selectedUserIds != null) {
+      flag2 = selectedUserIds.includes(user.id);
+    }
+    if (!flag2) {
+      let hasItem;
+      if (obj2 != null) {
+        hasItem = obj2.includes(user.id);
+      }
+      flag2 = hasItem;
+    }
+    if (flag2 == null) {
+      flag2 = false;
+    }
+    props.selected = flag2;
+    props.mode = ACTIONS;
+    props.start = 0 === arg1;
+    props.end = arg1 === diff;
+    return { type: "user", props };
+  }, items4);
+  ref = ACTIONS.useRef(null);
+  let tmp16;
+  if (!tmp12) {
+    tmp16 = actions;
+  }
+  const obj2 = { actions: tmp16, style: null };
+  let prop;
+  if (!tmp12) {
+    if (flag6) {
+      prop = tmp4.searchBarRowContainer;
+    }
+  }
+  obj2.style = prop;
+  const userListActionsProps = selectedUserIds(onSelectUser[13]).useUserListActionsProps(obj2);
+  const items5 = [tmp5[0]];
+  ({ renderHeader, headerSize } = userListActionsProps);
+  const layoutEffect = ACTIONS.useLayoutEffect(() => {
+    const current = ref.current;
+    if (current != null) {
+      current.scrollToTop(false);
+    }
+  }, items5);
+  const someResult = memo1.some((item) => item > 0);
+  if (flag13) {
+    flag13 = !someResult;
+  }
+  if (flag13) {
+    flag13 = !tmp12;
+  }
+  if (someResult) {
+    const obj4 = { ref, sections: memo1, getItemProps: callback2, getSectionProps: callback1, renderListHeader: renderHeader, listHeaderSize: headerSize, insetEnd, onContentLengthChange, onLayout, onScroll, disableStickySections, disableThemedGradient };
+    let tmp22Result = tmp22(tmp15(tmp7[14]).UsersFastList, obj4);
+    let tmp29 = tmp22;
+  } else {
+    const obj5 = { style: null, children: null };
+    if (tmp21) {
+      const items6 = [noResults, ];
+      let prop1;
+      if (flag6) {
+        if (!flag13) {
+          prop1 = tmp4.searchBarRowContainer;
+        }
+      }
+      items6[1] = prop1;
+      obj5.style = items6;
+      obj5.children = defaultNoResultsFound;
+      let tmp26 = obj5;
+    } else {
+      obj5.style = noResults;
+      const obj6 = { title: null, children: null };
+      let intl = tmp15(tmp7[12]).intl;
+      obj6.title = intl.string(tmp15(tmp7[12]).t.V6nAfF);
+      const obj7 = { actions, style: null };
+      let prop2;
+      if (flag6) {
+        prop2 = tmp4.searchBarRowContainer;
+      }
+      obj7.style = prop2;
+      obj6.children = tmp22(tmp15(tmp7[13]).UserFlashListActions, obj7);
+      obj5.children = tmp22(tmp6(tmp7[15]), obj6);
+      tmp26 = obj5;
+      const tmp6Result = tmp6(tmp7[15]);
+    }
+    tmp22Result = tmp22(closure_5, tmp26);
+    tmp29 = tmp22;
+  }
+  let tmp29Result = !disableGradient;
+  if (!disableGradient) {
+    tmp29Result = tmp29(tmp6(tmp7[16]), { absolute: true });
+  }
+  const children = [tmp29Result, , ];
+  let tmp29Result2 = null;
+  if (flag6) {
+    tmp29Result2 = null;
+    if (!flag13) {
+      const obj8 = { style: tmp4.searchBarContainer, children: null };
+      const obj9 = { onChangeText: tmp5[1], onRemove: callback, tags: memo, style: tmp4.searchBar, autoFocus: null, focusOnAdd: null };
+      if (flag) {
+        flag = someResult;
+      }
+      obj9.autoFocus = flag;
+      obj9.focusOnAdd = flag2;
+      obj8.children = tmp29(tmp6(tmp7[17]), obj9);
+      tmp29Result2 = tmp29(closure_5, obj8);
+      const tmp6Result2 = tmp6(tmp7[17]);
+    }
+  }
+  children[1] = tmp29Result2;
+  children[2] = tmp22Result;
+  return closure_10(closure_9, { children });
+};

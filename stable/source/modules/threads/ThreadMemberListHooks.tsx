@@ -1,0 +1,86 @@
+// Module ID: 16690
+// Function ID: 16691
+// Name: ThreadMemberListHooks
+// Dependencies: [19, 2015, 9843, 1085, 4992, 7312, 7286, 504, 1114, 2]
+// Exports: useThreadMemberListSections
+
+// Module 16690 (ThreadMemberListHooks)
+import util from "util" /* 1114 */;
+import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 7286 */;
+import GuildSubscriptionsActionCreators from "GuildSubscriptionsActionCreators" /* 7312 */;
+import noop from "module_19" /* 19 */;
+import GuildRoleStore from "GuildRoleStore" /* 2015 */;
+import ThreadMemberListStore from "ThreadMemberListStore" /* 9843 */;
+
+const require = globalThis.__r;
+
+require = fn;
+const StatusTypes = fn(1085).StatusTypes;
+let closure_7 = [];
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/threads/ThreadMemberListHooks.tsx");
+
+export const useThreadMemberListSections = function useThreadMemberListSections(channelId, stateFromStores) {
+  _require = channelId;
+  importDefault = stateFromStores;
+  require("useMountEffect")(() => {
+    let id;
+    if (closure_1 != null) {
+      id = tmp.id;
+    }
+    if (null != id) {
+      GuildSubscriptionsActionCreators.subscribeChannel(tmp.id, closure_0, GuildChannelSubscriptions.DEFAULT_RANGES);
+    }
+  });
+  const items = [closure_4];
+  stateFromStores = require("initialize").useStateFromStores(items, () => {
+    if (null != closure_1) {
+      let sortedRoles = GuildRoleStore.getSortedRoles(tmp.id);
+    } else {
+      sortedRoles = [];
+    }
+    return sortedRoles;
+  });
+  let obj = require("initialize");
+  const items1 = [ThreadMemberListStore];
+  const stateFromStoresObject = require("initialize").useStateFromStoresObject(items1, () => ({ version: ThreadMemberListStore.getMemberListVersion(closure_0), members: ThreadMemberListStore.getMemberListSections(closure_0) }));
+  const members = stateFromStoresObject.members;
+  closure_4 = tmp4;
+  const items2 = [stateFromStores, members, stateFromStoresObject.version, null == stateFromStores];
+  let memo = members.useMemo(() => {
+    if (closure_4) {
+      return closure_7;
+    } else {
+      const found = stateFromStores.filter((hoist) => hoist.hoist);
+      const mapped = found.map((id) => ({ id: id.id, label: id.name }));
+      let obj = { id: StatusTypes.ONLINE, label: null };
+      const intl = util.intl;
+      obj.label = intl.string(util.t.WbGtnH);
+      const obj2 = { id: StatusTypes.OFFLINE, label: null };
+      const intl2 = util.intl;
+      obj2.label = intl2.string(util.t.Vv0abJ);
+      mapped.push(obj, obj2);
+      return mapped.map((id) => {
+        id = id.id;
+        const obj = { label: id.label, userIds: null, id: null, roleId: null };
+        let userIds;
+        if (members != null) {
+          if (members[id] != null) {
+            userIds = tmp.userIds;
+          }
+        }
+        if (userIds == null) {
+          userIds = [];
+        }
+        obj.userIds = userIds;
+        obj.id = id;
+        obj.roleId = id;
+        return obj;
+      });
+    }
+  }, items2);
+  if (null == members) {
+    memo = closure_7;
+  }
+  return memo;
+};

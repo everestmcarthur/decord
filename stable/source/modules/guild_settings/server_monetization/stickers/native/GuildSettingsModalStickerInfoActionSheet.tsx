@@ -1,0 +1,159 @@
+// Module ID: 17587
+// Function ID: 17588
+// Name: GuildSettingsModalStickerInfoActionSheet
+// Dependencies: [5, 32, 19, 17, 5502, 21, 504, 10393, 4259, 6610, 1114, 7150, 7149, 576, 5687, 5605, 10255, 17580, 4518, 2]
+
+// Module 17587 (GuildSettingsModalStickerInfoActionSheet)
+import showGuildSettingsStickerCreateModalDefault from "showGuildSettingsStickerCreateModal" /* 17580 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import StickersStore from "StickersStore" /* 5502 */;
+
+const require = globalThis.__r;
+
+const require = fn;
+get_ActivityIndicator = fn(17);
+({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10 } = jsxProd);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_settings/server_monetization/stickers/native/GuildSettingsModalStickerInfoActionSheet.tsx");
+
+export default noop.memo(function GuildSettingsModalStickerInfoActionSheet(arg0) {
+  ({ guildId: require, stickerId: importDefault, hideActionSheet } = arg0);
+  _slicedToArray = undefined;
+  noop = async function _onDeleteSticker(arg0, value) {
+    if (c4 === 2) {
+      c4 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp7 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj3 = { value, done: true };
+        return obj3;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c4 = 2;
+        if (0 === v3) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj5 = { value, done: true };
+            return obj5;
+          } else if (null != stateFromStores) {
+            _slicedToArray(true);
+            c3 = 2;
+            v3 = 3;
+            c4 = 1;
+            const obj6 = { value: tmp4(tmp39[7]).deleteGuildSticker(tmp34), done: false };
+            return obj6;
+          } else {
+            c4 = 3;
+          }
+        } else if (1 !== tmp8) {
+          if (2 === tmp8) {
+            c3 = 1;
+            const obj7 = { key: "IMAGE_PICKER_ERROR", IconComponent: tmp4(tmp39[9]).CircleErrorIcon, content: null };
+            const intl = tmp4(tmp39[10]).intl;
+            obj7.content = intl.string(tmp4(tmp39[10]).t["5NMPSS"]);
+            v3(tmp39[8]).open(obj7);
+            const obj2 = v3(tmp39[8]);
+          } else if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c3 = 0;
+            closure_128_4(false);
+            c4 = 3;
+            const obj = { value, done: true };
+            return obj;
+          } else {
+            closure_128_2();
+            c3 = 1;
+          }
+          c3 = 0;
+          closure_128_4(false);
+        }
+        c3 = 0;
+        closure_128_4(false);
+        throw tmp39;
+      } catch (tmp39) {
+        if (tmp5 === c3) {
+          c4 = tmp3;
+          throw tmp39;
+        } else if (tmp2 === tmp41) {
+          v3 = tmp2;
+        } else {
+          v3 = tmp;
+        }
+      }
+    }
+  };
+  const items = [StickersStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => {
+    const stickersByGuildId = StickersStore.getStickersByGuildId(guildId);
+    let found;
+    if (stickersByGuildId != null) {
+      found = stickersByGuildId.find((id) => id.id === stickerId);
+    }
+    return found;
+  });
+  let obj = require("initialize");
+  [tmp5, c4] = noop.useState(false);
+  const items1 = [hideActionSheet, stateFromStores];
+  const effect = noop.useEffect(() => {
+    if (null == stateFromStores) {
+      hideActionSheet();
+    }
+  }, items1);
+  let tmp8Result2 = null;
+  if (null != stateFromStores) {
+    let obj2 = { header: null, children: null };
+    ({ name: obj3.title, description: obj3.subtitle } = stateFromStores);
+    obj2.header = closure_9(tmp(tmp2[12]).BottomSheetTitleHeader, { title: null, subtitle: null });
+    let obj5 = { style: null, children: null };
+    let obj6 = { paddingHorizontal: require("native").space.PX_12, paddingBottom: require("native").space.PX_16 };
+    obj5.style = obj6;
+    let obj7 = { icon: closure_9(tmp(tmp2[16]).PencilIcon, {}), label: null, onPress: null };
+    let intl = tmp(tmp2[10]).intl;
+    obj7.label = intl.string(tmp(tmp2[10]).t.tdhW5b);
+    obj7.onPress = function onPress() {
+      showGuildSettingsStickerCreateModalDefault({ guildId, stickerId });
+    };
+    const items2 = [closure_9(tmp(tmp2[15]).TableRow, obj7), ];
+    const obj8 = { icon: closure_9(tmp(tmp2[18]).TrashIcon, { color: "text-feedback-critical" }), trailing: null, label: null, variant: "danger", disabled: null, onPress: null };
+    let tmp8Result = null;
+    if (tmp5) {
+      tmp8Result = tmp8(closure_6, {});
+    }
+    const obj15 = { hasIcons: true, children: null };
+    obj8.trailing = tmp8Result;
+    const intl2 = tmp(tmp2[10]).intl;
+    obj8.label = intl2.string(tmp(tmp2[10]).t["+ZhGOk"]);
+    obj8.disabled = tmp5;
+    obj8.onPress = function onDeleteSticker() {
+      const self = this;
+      const apply = closure_5.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+      return applyArgumentsResult;
+    };
+    items2[1] = closure_9(tmp(tmp2[15]).TableRow, obj8);
+    obj15.children = items2;
+    obj5.children = closure_10(tmp(tmp2[14]).TableRowGroup, obj15);
+    obj2.children = closure_9(closure_7, obj5);
+    tmp8Result2 = tmp8(tmp(tmp2[11]).BottomSheet, obj2);
+    const obj4 = { title: null, subtitle: null };
+  }
+  return tmp8Result2;
+});

@@ -1,0 +1,97 @@
+// Module ID: 14486
+// Function ID: 14487
+// Name: fetchIsLinkTrusted
+// Dependencies: [5, 1074, 1272, 2]
+// Exports: fetchIsLinkTrusted
+
+// Module 14486 (fetchIsLinkTrusted)
+import HTTPUtils from "HTTPUtils" /* 1272 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+
+require = fn;
+let closure_4 = async function _fetchIsLinkTrusted(arg0, value) {
+  if (c5 === 2) {
+    c5 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp5 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c5 = 2;
+      if (0 === c3) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_2 = tmp6;
+          let body;
+          if (undefined === closure_0) {
+            c5 = 3;
+            return { value: false, done: true };
+          } else {
+            c4 = 1;
+            const HTTP = HTTPUtils.HTTP;
+            const request = { url: Endpoints.ACTIVITIES_TRUSTED_LINKS(tmp19), rejectWithError: false, query: null, timeout: 500 };
+            const obj4 = { url: tmp20 };
+            request.query = obj4;
+            c3 = 2;
+            c5 = 1;
+            const obj5 = { value: HTTP.get(request), done: false };
+            return obj5;
+          }
+        }
+      } else if (1 === tmp6) {
+        c4 = 0;
+        c5 = 3;
+        return { value: false, done: true };
+      } else if (arg0 === 1) {
+        c5 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 0;
+        c5 = 3;
+        const obj6 = { value, done: true };
+        return obj6;
+      } else {
+        body = value.body;
+        const _Boolean = Boolean;
+        c4 = 0;
+        c5 = 3;
+        const obj = { value: Boolean(body.trusted), done: true };
+        return obj;
+      }
+    } catch (tmp12) {
+      if (tmp3 === c4) {
+        c5 = tmp2;
+        throw tmp12;
+      } else {
+        c3 = tmp;
+      }
+    }
+  }
+};
+const Endpoints = fn(1074).Endpoints;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/utils/fetchIsLinkTrusted.tsx");
+
+export const fetchIsLinkTrusted = function fetchIsLinkTrusted() {
+  const self = this;
+  const apply = closure_4.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+};

@@ -1,0 +1,26 @@
+// Module ID: 17204
+// Function ID: 17205
+// Name: MobilePhoneShareIcon
+// Dependencies: [19, 21, 576, 4261, 17205, 2]
+// Exports: MobilePhoneShareIcon
+
+// Module 17204 (MobilePhoneShareIcon)
+import nativeDefault from "native" /* 576 */;
+import BaseIconImage from "BaseIconImage" /* 4261 */;
+import _mod17205 from "module_17205" /* 17205 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Icon/native/redesign/generated/MobilePhoneShareIcon.tsx");
+
+export const MobilePhoneShareIcon = function MobilePhoneShareIcon(color) {
+  let INTERACTIVE_ICON_DEFAULT = color.color;
+  if (INTERACTIVE_ICON_DEFAULT === undefined) {
+    INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
+  }
+  const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
+  const merged1 = Object.assign(merged);
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod17205, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+};

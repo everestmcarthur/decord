@@ -1,0 +1,31 @@
+// Module ID: 5939
+// Function ID: 5940
+// Name: DownloadIllocon
+// Dependencies: [21, 5587, 5940, 2]
+// Exports: DownloadIllocon
+
+// Module 5939 (DownloadIllocon)
+import jsxProd from "jsxProd" /* 21 */;
+import FastImageDefault from "FastImage" /* 5587 */;
+import _modDef5940 from "module_5940" /* 5940 */;
+import size from "module_2" /* 2 */;
+
+const jsx = jsxProd.jsx;
+const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/DownloadIllocon.native.tsx");
+
+export const DownloadIllocon = function DownloadIllocon(size) {
+  let num = size.size;
+  ({ accessible, accessibilityLabel, resizeMode } = size);
+  if (num === undefined) {
+    num = 64;
+  }
+  const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  const obj2 = { uri: _modDef5940 };
+  obj.source = obj2;
+  const items = [{ width: num, height: num }];
+  obj.style = items;
+  obj.accessible = accessible;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.resizeMode = resizeMode;
+  return jsx(FastImageDefault, { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null });
+};

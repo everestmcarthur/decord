@@ -1,0 +1,43 @@
+// Module ID: 8255
+// Function ID: 8256
+// Name: Banner
+// Dependencies: [19, 17, 1074, 21, 4560, 1091, 5587, 2]
+// Exports: default
+
+// Module 8255 (Banner)
+import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
+import FastImageDefault from "FastImage" /* 5587 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+const View = fn(17).View;
+const BANNER_HEIGHT = fn(1074).BANNER_HEIGHT;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_6 = createStyles.createStyles({ root: { width: "100%" }, image: { width: "100%", height: "100%" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/profile_customization/native/Banner.tsx");
+
+export default function ProfileBanner(bannerHeight) {
+  ({ bannerSource, bannerSafeArea } = bannerHeight);
+  ({ style, backgroundColor } = bannerHeight);
+  if (bannerSafeArea === undefined) {
+    bannerSafeArea = 0;
+  }
+  bannerHeight = bannerHeight.bannerHeight;
+  if (bannerHeight === undefined) {
+    bannerHeight = BANNER_HEIGHT;
+  }
+  const tmp = closure_6();
+  const obj = { backgroundColor: utils_ColorUtils.int2hex(backgroundColor), height: bannerHeight + bannerSafeArea };
+  const obj3 = { style: null, children: null };
+  const items = [tmp.root, obj, style];
+  obj3.style = items;
+  let tmp3Result = null;
+  if (null != bannerSource) {
+    const obj4 = { style: tmp.image, source: bannerSource };
+    tmp3Result = tmp3(FastImageDefault, obj4);
+  }
+  obj3.children = tmp3Result;
+  return <View style={null}>{null}</View>;
+};

@@ -1,0 +1,113 @@
+// Module ID: 8229
+// Function ID: 8230
+// Name: useProfileThemeOverrideStore
+// Dependencies: [1074, 560, 4495, 8230, 4411, 2]
+// Exports: useEffectiveThemeOverride, useHasNonNitroThemeOverride, useIsBannerDisabledByOverride
+
+// Module 8229 (useProfileThemeOverrideStore)
+import Constants from "Constants" /* 1074 */;
+import shared from "shared" /* 4411 */;
+import useThemeDefault from "useTheme" /* 4495 */;
+import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8230 */;
+import module_560 from "module_560" /* 560 */;
+import size from "module_2" /* 2 */;
+
+const ThemeTypes = Constants.ThemeTypes;
+let tmp2 = module_560.create()((arg0) => {
+  closure_0 = arg0;
+  return {
+    themeOverride: null,
+    savedClientTheme: null,
+    setThemeOverride(themeOverride) {
+      return closure_0({ themeOverride });
+    },
+    setSavedClientTheme(savedClientTheme) {
+      return closure_0({ savedClientTheme });
+    }
+  };
+});
+let closure_4 = tmp2;
+const result = size.fileFinishedImporting("modules/user_profile/hooks/useProfileThemeOverrideStore.tsx");
+
+export const useProfileThemeOverrideStore = tmp2;
+export const useEffectiveThemeOverride = function useEffectiveThemeOverride() {
+  const tmp = closure_4((themeOverride) => themeOverride.themeOverride);
+  const tmp3 = useThemeDefault();
+  if (null == tmp) {
+    return null;
+  } else {
+    if ("nitro" === tmp.mode) {
+      const themeColors = tmp.themeColors;
+      let first;
+      if (themeColors != null) {
+        first = themeColors[0];
+      }
+      if (first == null) {
+        first = null;
+      }
+      const themeColors2 = tmp.themeColors;
+      let tmp7;
+      if (themeColors2 != null) {
+        tmp7 = themeColors2[1];
+      }
+      if (tmp7 == null) {
+        tmp7 = null;
+      }
+      let tmp8 = tmp3;
+      if (null != first) {
+        tmp8 = tmp3;
+        if (null != tmp7) {
+          let profileTheme = UserProfileGradientUtils.getProfileTheme(first);
+          if (profileTheme == null) {
+            profileTheme = tmp3;
+          }
+          tmp8 = profileTheme;
+        }
+      }
+      let themeType = tmp8;
+      let tmp4 = tmp7;
+      let tmp5 = first;
+    } else {
+      themeType = tmp.themeType;
+      if (themeType == null) {
+        themeType = tmp3;
+      }
+      tmp4 = null;
+      tmp5 = null;
+    }
+    if (themeType !== ThemeTypes.DARK) {
+      let isThemeLightResult = themeType === tmp11.DARK;
+      if (isThemeLightResult) {
+        isThemeLightResult = shared.isThemeLight(tmp3);
+      }
+      let DARKER = themeType;
+      if (isThemeLightResult) {
+        DARKER = tmp11.DARKER;
+      }
+    } else {
+      DARKER = tmp3;
+    }
+    const obj4 = { theme: DARKER, primaryColor: tmp5, secondaryColor: tmp4 };
+    return obj4;
+  }
+};
+export const useIsBannerDisabledByOverride = function useIsBannerDisabledByOverride() {
+  const tmp = closure_4((themeOverride) => themeOverride.themeOverride);
+  let tmp2 = null != tmp;
+  if (tmp2) {
+    let tmp3 = "non-nitro" === tmp.mode;
+    if (!tmp3) {
+      tmp3 = true === tmp.disableBanner;
+    }
+    tmp2 = tmp3;
+  }
+  return tmp2;
+};
+export const useHasNonNitroThemeOverride = function useHasNonNitroThemeOverride() {
+  const tmp = closure_4((themeOverride) => themeOverride.themeOverride);
+  let tmp2 = null != tmp;
+  if (tmp2) {
+    tmp2 = "non-nitro" === tmp.mode;
+  }
+  return tmp2;
+};

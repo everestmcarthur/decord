@@ -1,0 +1,56 @@
+// Module ID: 7673
+// Function ID: 7674
+// Name: AppStartInfo
+// Dependencies: [32, 5, 7674, 4424, 2]
+
+// Module 7673 (AppStartInfo)
+import NativeTTIManagerModuleDefault from "NativeTTIManagerModule" /* 4424 */;
+import NativeTTIModuleDefault from "NativeTTIModule" /* 7674 */;
+import _slicedToArray from "module_32" /* 32 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+
+let closure_4 = {};
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/tti_analytics/native/AppStartInfo.android.tsx");
+
+export const AppStartInfo = {
+  getAppUIViewed() {
+    const mainActivityCreationTime = NativeTTIModuleDefault.getMainActivityCreationTime();
+    let tmp2 = null != mainActivityCreationTime;
+    if (tmp2) {
+      let flag = closure_4[mainActivityCreationTime];
+      if (!flag) {
+        tmp3[mainActivityCreationTime] = true;
+        flag = false;
+      }
+      tmp2 = flag;
+    }
+    return tmp2;
+  },
+  getAppStartInfo() {
+    return (async () => {
+      closure_128_0 = await NativeTTIManagerModuleDefault.getAppStartedTimestamp();
+      if (closure_128_0 <= 0) {
+        const _Error = Error;
+        const error = new Error("NativeTTIManager.getAppStartedTimestamp() returned an invalid timestamp. That's unexpected!");
+        throw error;
+      }
+      const items = [closure_129_0(closure_129_1[3]).getAppStartType(), , ];
+      closure_129_0(closure_129_1[3]);
+      items[1] = closure_129_0(closure_129_1[3]).getLaunchScenario();
+      closure_129_0(closure_129_1[3]);
+      items[2] = closure_129_0(closure_129_1[3]).getAppFirstVisibleTimestamp();
+      closure_128_1 = await Promise.all(items);
+      closure_128_2 = closure_129_2(closure_128_1, 3);
+      closure_128_3 = closure_128_2[0];
+      closure_128_4 = closure_128_2[1];
+      closure_128_5 = closure_128_2[2];
+      closure_128_6 = { app_start_type: closure_128_3, app_launch_scenario: closure_128_4 };
+      const mainActivityCreationTime = closure_129_0(closure_129_1[2]).getMainActivityCreationTime();
+      if (null != mainActivityCreationTime) {
+        closure_128_6.android_time_creation_to_create_main_activity = mainActivityCreationTime - closure_128_0;
+      }
+      return { appCreatedTime: closure_128_0, appFirstVisibleTime: closure_128_5, extraProperties: closure_128_6 };
+    })();
+  }
+};

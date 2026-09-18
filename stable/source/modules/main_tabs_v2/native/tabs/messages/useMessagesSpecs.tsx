@@ -1,0 +1,33 @@
+// Module ID: 16023
+// Function ID: 16024
+// Name: useMessagesSpecs
+// Dependencies: [109, 19, 1074, 4982, 1611, 16024, 16033, 16045, 576, 2]
+// Exports: default
+
+// Module 16023 (useMessagesSpecs)
+import nativeDefault from "native" /* 576 */;
+import MessagesHeader from "MessagesHeader" /* 16024 */;
+import MessagesItemChannel from "MessagesItemChannel" /* 16033 */;
+import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 16045 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+let closure_3 = ["height"];
+const DM_WIDTH = fn(1074).DM_WIDTH;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/useMessagesSpecs.tsx");
+
+export default function useMessagesSpecs() {
+  fontScale = fontScale(4982).useFontScale();
+  top = top(1611)().top;
+  const items = [fontScale, top];
+  return noop.useMemo(() => {
+    const messagesHeaderHeight = MessagesHeader.getMessagesHeaderHeight(fontScale);
+    const messagesItemChannelSizes = MessagesItemChannel.getMessagesItemChannelSizes(fontScale);
+    const obj3 = { headerSize: messagesHeaderHeight, listTop: top + messagesHeaderHeight, listLeft: DM_WIDTH, listItemHeight: messagesItemChannelSizes.height, listItemSizes: _objectWithoutProperties(messagesItemChannelSizes, closure_3), listItemSuggestedFriendHeight: null, scrollIndicatorInsetEnd: null };
+    obj3.listItemSuggestedFriendHeight = MessagesItemSuggestedFriend.getMessagesItemSuggestedFriendHeight(fontScale);
+    obj3.scrollIndicatorInsetEnd = nativeDefault.space.PX_4;
+    return obj3;
+  }, items);
+};

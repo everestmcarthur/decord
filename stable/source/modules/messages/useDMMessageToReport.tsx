@@ -1,0 +1,42 @@
+// Module ID: 12596
+// Function ID: 12597
+// Name: useDMMessageToReport
+// Dependencies: [12597, 12454, 12598, 2]
+// Exports: useDMMessageToReport
+
+// Module 12596 (useDMMessageToReport)
+import useLongestChannelMessageBeforeReply from "useLongestChannelMessageBeforeReply" /* 12454 */;
+import useIsRelationshipTypeSpamReportable from "useIsRelationshipTypeSpamReportable" /* 12597 */;
+import useMessageRequestPreview from "useMessageRequestPreview" /* 12598 */;
+import size from "module_2" /* 2 */;
+
+const result = size.fileFinishedImporting("modules/messages/useDMMessageToReport.tsx");
+
+export const useDMMessageToReport = function useDMMessageToReport(channel, id, arg2) {
+  let isRelationshipTypeSpamReportable = arg2;
+  if (!arg2) {
+    isRelationshipTypeSpamReportable = obj.useIsRelationshipTypeSpamReportable(id);
+  }
+  obj = useIsRelationshipTypeSpamReportable;
+  const longestChannelMessageBeforeReply = useLongestChannelMessageBeforeReply.useLongestChannelMessageBeforeReply(channel.id, id);
+  const tmp2Result = useLongestChannelMessageBeforeReply;
+  const messageRequestPreview = useMessageRequestPreview.useMessageRequestPreview(channel, { enabled: isRelationshipTypeSpamReportable });
+  const message = messageRequestPreview.message;
+  let tmp6 = longestChannelMessageBeforeReply;
+  ({ loaded, error } = messageRequestPreview);
+  if (longestChannelMessageBeforeReply == null) {
+    id = undefined;
+    if (message != null) {
+      const author = message.author;
+      if (author != null) {
+        id = author.id;
+      }
+    }
+    let tmp8 = null;
+    if (id === id) {
+      tmp8 = message;
+    }
+    tmp6 = tmp8;
+  }
+  return { message: tmp6, isReportable: isRelationshipTypeSpamReportable, isLoaded: null != tmp6 || loaded || error };
+};

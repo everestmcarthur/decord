@@ -1,0 +1,24 @@
+// Module ID: 13418
+// Function ID: 13419
+// Name: MobileNitroManageSubscriptionsSettingsExperiment
+// Dependencies: [1433, 2]
+// Exports: getMobileNitroManageSubscriptionsSettingsExperiment, useMobileNitroManageSubscriptionsSettingsExperiment
+
+// Module 13418 (MobileNitroManageSubscriptionsSettingsExperiment)
+import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
+
+const obj = { name: "2026-06-macaron", kind: "user", defaultConfig: { enabled: false }, variations: null };
+const obj2 = { 1: null };
+obj2[1] = { enabled: true };
+obj.variations = obj2;
+const apexExperiment = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/premium/experiments/MobileNitroManageSubscriptionsSettingsExperiment.tsx");
+
+export default apexExperiment;
+export const useMobileNitroManageSubscriptionsSettingsExperiment = function useMobileNitroManageSubscriptionsSettingsExperiment(location) {
+  return apexExperiment.useConfig({ location: location.location }).enabled;
+};
+export const getMobileNitroManageSubscriptionsSettingsExperiment = function getMobileNitroManageSubscriptionsSettingsExperiment(location) {
+  return apexExperiment.getConfig({ location: location.location }).enabled;
+};

@@ -1,0 +1,157 @@
+// Module ID: 9473
+// Function ID: 9474
+// Name: ChannelCallStore
+// Dependencies: [19, 1956, 9474, 1920, 4581, 4447, 8333, 560, 1249, 573, 4761, 12, 9475, 9476, 9477, 504, 9478, 2]
+// Exports: clearFocusTimer, resetChannelCallStore, resetFocus, resetFocusTimer, setFocus, setVoiceChatDrawerState, toggleFocus, useChannelCallOrientationHandlers, useIsVoiceChatFocused
+
+// Module 9473 (ChannelCallStore)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1249 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4761 */;
+import DeviceOrientation from "DeviceOrientation" /* 8333 */;
+import useIsPrivateAudioOnlyCallDefault from "useIsPrivateAudioOnlyCall" /* 9475 */;
+import useSelectedParticipantDefault from "useSelectedParticipant" /* 9476 */;
+import isOrientationLockSupportedDefault from "isOrientationLockSupported" /* 9478 */;
+import noop from "module_19" /* 19 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
+import apply from "module_12" /* 12 */;
+
+const require = globalThis.__r;
+
+require = fn;
+const ChannelCallConstants = fn(9474);
+({ VoiceCallOverlayType, VoiceChatDrawerState } = ChannelCallConstants);
+const OrientationLockState = fn(1920).OrientationLockState;
+const ParticipantTypes = fn(4581).ParticipantTypes;
+const timeout = new fn(4447).Timeout();
+let obj = { focus: true, pipFocus: false, isGestureEnabled: true, voiceChatDrawerState: VoiceChatDrawerState.CLOSED, voiceCallOverlayLayoutStates: null };
+let obj2 = {};
+let size = { x: "Array", y: "flexDirection", width: "y", height: "HermesInternal", screenOrientation: fn(8333).OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: true, isInitialized: true, isVisible: null };
+obj2[VoiceCallOverlayType.VOICE_CONTROLS_TOGGLE_BUTTON] = size;
+const size1 = { x: "Array", y: "flexDirection", width: "y", height: "HermesInternal", screenOrientation: fn(8333).OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: true, isInitialized: true, isVisible: null };
+obj2[VoiceCallOverlayType.CAMERA_PREVIEW_PICTURE_IN_PICTURE] = size1;
+obj.voiceCallOverlayLayoutStates = obj2;
+let closure_9 = Object.freeze(obj);
+const module_560 = fn(560);
+let obj3 = module_560.create(() => closure_9);
+size = fn(2);
+let result = size.fileFinishedImporting("modules/video_calls/native/ChannelCallStore.tsx");
+
+export const focusTimeout = timeout;
+export const setFocus = function setFocus(focus) {
+  _require = focus;
+  require("ReactBatchUpdates").batchUpdates(() => obj3.setState({ focus }));
+};
+export const toggleFocus = function toggleFocus() {
+  const focus = obj3.getState().focus;
+  focus(1249).batchUpdates(() => obj3.setState({ focus: !focus, pipFocus: false }));
+};
+export const resetFocusTimer = function resetFocusTimer() {
+  timeout.stop();
+  timeout.start(5000, () => {
+    require("ReactBatchUpdates").batchUpdates(() => state.setState({ focus: false }));
+  });
+};
+export const resetFocus = function resetFocus() {
+  if (obj3.getState().focus) {
+    timeout.stop();
+    timeout.start(5000, () => {
+      require("ReactBatchUpdates").batchUpdates(() => state.setState({ focus: false }));
+    });
+  } else {
+    ReactBatchUpdates.batchUpdates(() => state.setState({ focus: true }));
+  }
+};
+export const clearFocusTimer = function clearFocusTimer() {
+  timeout.stop();
+};
+export const setVoiceChatDrawerState = function setVoiceChatDrawerState(embeddedActivityLocationChannelId, CLOSED) {
+  _require = embeddedActivityLocationChannelId;
+  importDefault = CLOSED;
+  if (!tmp) {
+    DispatcherDefault.wait(() => ChannelRTCActionCreatorsDefault.updateChatOpen(closure_0, closure_1 === VoiceChatDrawerState.OPEN));
+  }
+  require("ReactBatchUpdates").batchUpdates(() => obj3.setState({ voiceChatDrawerState }));
+};
+export const togglePipFocus = apply.throttle(() => {
+  const pipFocus = obj3.getState().pipFocus;
+  pipFocus(1249).batchUpdates(() => obj3.setState({ pipFocus: !pipFocus }));
+}, 300);
+export const useIsVoiceChatFocused = function useIsVoiceChatFocused() {
+  const voiceChatDrawerState = obj3().voiceChatDrawerState;
+  return voiceChatDrawerState === VoiceChatDrawerState.OPEN || voiceChatDrawerState === VoiceChatDrawerState.CLOSING;
+};
+export const useChannelCallOrientationHandlers = function useChannelCallOrientationHandlers(isGuildStageVoice) {
+  const tmp2 = useIsPrivateAudioOnlyCallDefault(isGuildStageVoice);
+  _require = tmp2;
+  const tmp3 = useSelectedParticipantDefault(isGuildStageVoice);
+  importDefault = tmp3;
+  let isGuildStageVoiceResult = isGuildStageVoice.isGuildStageVoice();
+  if (isGuildStageVoiceResult) {
+    isGuildStageVoiceResult = null == tmp3;
+  }
+  dependencyMap = isGuildStageVoiceResult;
+  const voiceChatDrawerState = obj3().voiceChatDrawerState;
+  let tmp6 = voiceChatDrawerState === stateFromStores.OPEN || voiceChatDrawerState === stateFromStores.CLOSING;
+  if (!tmp6) {
+    tmp6 = !obj.useIsConnectedToVoiceChannel(isGuildStageVoice);
+  }
+  noop = tmp6;
+  const currentEmbeddedActivity = applicationId.getCurrentEmbeddedActivity();
+  applicationId = undefined;
+  if (currentEmbeddedActivity != null) {
+    applicationId = currentEmbeddedActivity.applicationId;
+  }
+  obj = require("VoiceChatHooks");
+  const tmp8 = applicationId;
+  const items = [tmp8];
+  const items1 = [applicationId];
+  stateFromStores = require("initialize").useStateFromStores(items, () => {
+    if (null != applicationId) {
+      let UNLOCKED2 = EmbeddedActivitiesStore.getOrientationLockStateForApp(tmp);
+      if (UNLOCKED2 == null) {
+        UNLOCKED2 = OrientationLockState.UNLOCKED;
+      }
+      let UNLOCKED = UNLOCKED2;
+    } else {
+      UNLOCKED = OrientationLockState.UNLOCKED;
+    }
+    return UNLOCKED;
+  }, items1);
+  const effect = noop.useEffect(() => closure_0(isGuildStageVoiceResult[6]).restoreDefaultOrientation, []);
+  const items2 = [stateFromStores, tmp3, applicationId, tmp2, isGuildStageVoiceResult, tmp6];
+  const effect1 = noop.useEffect(() => {
+    if (!isGuildStageVoiceResult) {
+      if (!closure_3) {
+        if (null != closure_1) {
+          if (tmp2.type === ParticipantTypes.ACTIVITY) {
+            if (tmp2.applicationId === applicationId) {
+              if (isOrientationLockSupportedDefault()) {
+                if (OrientationLockState.UNLOCKED === stateFromStores) {
+                  DeviceOrientation.unlockOrientation({ unlockAfterRotatingToPreviousLock: true });
+                } else if (tmp14.PORTRAIT === tmp13) {
+                  DeviceOrientation.lockOrientation("PORTRAIT", true);
+                } else if (tmp14.LANDSCAPE === tmp13) {
+                  DeviceOrientation.lockOrientation("LANDSCAPE", true);
+                }
+              }
+            }
+          }
+        }
+        const obj = DeviceOrientation;
+        if (closure_0) {
+          const result = obj.lockOrientationForiOS("PORTRAIT");
+        } else {
+          obj.unlockOrientation({ unlockAfterRotatingToPreviousLock: false });
+        }
+      }
+    }
+    DeviceOrientation.unlockOrientation({ unlockAfterRotatingToPreviousLock: false });
+    const result1 = DeviceOrientation.lockOrientationForiOS("PORTRAIT");
+  }, items2);
+};
+export const resetChannelCallStore = function resetChannelCallStore() {
+  timeout.stop();
+  ReactBatchUpdates.batchUpdates(() => state.setState(closure_1_9));
+};
+export const useChannelCallStore = obj3;

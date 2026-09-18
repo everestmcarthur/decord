@@ -1,0 +1,40 @@
+// Module ID: 5699
+// Function ID: 5700
+// Name: AccountAgeTier1SmallBadge
+// Dependencies: [21, 5587, 5700, 2]
+// Exports: AccountAgeTier1SmallBadge
+
+// Module 5699 (AccountAgeTier1SmallBadge)
+import jsxProd from "jsxProd" /* 21 */;
+import FastImageDefault from "FastImage" /* 5587 */;
+import _modDef5700 from "module_5700" /* 5700 */;
+import size from "module_2" /* 2 */;
+
+const jsx = jsxProd.jsx;
+const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/AccountAgeTier1SmallBadge.native.tsx");
+
+export const AccountAgeTier1SmallBadge = function AccountAgeTier1SmallBadge(width) {
+  let num = width.width;
+  ({ accessible, accessibilityLabel, resizeMode } = width);
+  if (num === undefined) {
+    num = 24;
+  }
+  let num2 = width.height;
+  if (num2 === undefined) {
+    num2 = 24;
+  }
+  let num3 = width.scale;
+  if (num3 === undefined) {
+    num3 = 1;
+  }
+  const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  const obj2 = { uri: _modDef5700 };
+  obj.source = obj2;
+  const size = { width: num * num3, height: num2 * num3 };
+  const items = [size];
+  obj.style = items;
+  obj.accessible = accessible;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.resizeMode = resizeMode;
+  return jsx(FastImageDefault, { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null });
+};

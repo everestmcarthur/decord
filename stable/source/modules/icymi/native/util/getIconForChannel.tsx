@@ -1,0 +1,37 @@
+// Module ID: 16497
+// Function ID: 16498
+// Name: getIconForChannel
+// Dependencies: [1074, 5094, 5101, 5097, 5080, 5088, 5087, 2]
+// Exports: getIconForChannel
+
+// Module 16497 (getIconForChannel)
+import Constants from "Constants" /* 1074 */;
+import TextIcon from "TextIcon" /* 5080 */;
+import ImageIcon from "ImageIcon" /* 5087 */;
+import ForumIcon from "ForumIcon" /* 5088 */;
+import AnnouncementsIcon from "AnnouncementsIcon" /* 5094 */;
+import StageIcon from "StageIcon" /* 5097 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 5101 */;
+import size from "module_2" /* 2 */;
+
+const ChannelTypes = Constants.ChannelTypes;
+const result = size.fileFinishedImporting("modules/icymi/native/util/getIconForChannel.tsx");
+
+export const getIconForChannel = function getIconForChannel(stateFromStores) {
+  const type = stateFromStores.type;
+  if (ChannelTypes.GUILD_ANNOUNCEMENT === type) {
+    return AnnouncementsIcon.AnnouncementsIcon;
+  } else if (tmp.GUILD_VOICE === type) {
+    return VoiceNormalIcon.VoiceNormalIcon;
+  } else if (tmp.GUILD_STAGE_VOICE === type) {
+    return StageIcon.StageIcon;
+  } else if (tmp.GUILD_TEXT === type) {
+    return TextIcon.TextIcon;
+  } else if (tmp.GUILD_FORUM === type) {
+    return ForumIcon.ForumIcon;
+  } else if (tmp.GUILD_MEDIA === type) {
+    return ImageIcon.ImageIcon;
+  } else {
+    return TextIcon.TextIcon;
+  }
+};

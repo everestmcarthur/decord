@@ -1,0 +1,11 @@
+// Module ID: 6286
+// Function ID: 6287
+// Dependencies: [2]
+
+// Module 6286
+import size from "module_2" /* 2 */;
+
+const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/NitroRocketNameplateAbstractUI-2x.png.js");
+
+export default "https://cdn.discordapp.com/assets/content/3628d7213d3484d71f41db462124058d9b184a242c0ce28a05f34072168958bb.png";
+export const metadata = { fileBytes: 81285 };

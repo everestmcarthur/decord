@@ -1,0 +1,64 @@
+// Module ID: 14700
+// Function ID: 14701
+// Name: useAutoScrollToSetting
+// Dependencies: [19, 14694, 11474, 14587, 14696, 1483, 2]
+// Exports: useAutoScrollToSearchResultSetting
+
+// Module 14700 (useAutoScrollToSetting)
+import noop from "module_19" /* 19 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 14694 */;
+
+const require = globalThis.__r;
+
+const require = fn;
+const NodeType = fn(11474).NodeType;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/settings/native/renderer/hooks/useAutoScrollToSetting.tsx");
+
+export const useAutoScrollToSearchResultSetting = function useAutoScrollToSearchResultSetting(ref, memo, scrollTarget) {
+  _require = ref;
+  dependencyMap = memo;
+  let current = ref.useField("selected");
+  const navigation = require("useNavigation").useNavigation();
+  ref = navigation.useRef(scrollTarget);
+  if (current == null) {
+    current = ref.current;
+  }
+  let flag = false;
+  if (null != current) {
+    flag = false;
+    if (tmp(14587).SETTING_RENDERER_CONFIG[current].type !== current.ROUTE) {
+      let initialScrollIndex = tmp(14696).getInitialScrollIndex(current, memo);
+      let tmp7 = 0 !== initialScrollIndex;
+      if (tmp7) {
+        tmp7 = 1 !== initialScrollIndex;
+      }
+      flag = tmp7;
+      const tmpResult = tmp(14696);
+    }
+  }
+  const items = [memo, flag, ref, navigation, current];
+  const effect = navigation.useEffect(() => {
+    navigation.addListener("transitionEnd", () => {
+      if (flag) {
+        const initialScrollIndex = ref(dependencyMap[4]).getInitialScrollIndex(closure_1_4, memo);
+        if (null != initialScrollIndex) {
+          if (ref != null) {
+            current = ref.current;
+            if (current != null) {
+              const obj2 = { index: initialScrollIndex, animated: false, viewOffset: 300 };
+              current.scrollToIndex(obj2);
+            }
+          }
+        }
+        const obj = ref(dependencyMap[4]);
+      }
+      closure_1_3.current = undefined;
+    });
+    return () => {
+      ref();
+      UserSettingSearchStore.setState({ selected: null });
+      ref.current = undefined;
+    };
+  }, items);
+};

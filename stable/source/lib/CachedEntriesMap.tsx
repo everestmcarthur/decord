@@ -1,0 +1,80 @@
+// Module ID: 1932
+// Function ID: 1933
+// Name: CachedEntriesMap
+// Dependencies: [1933, 2]
+
+// Module 1932 (CachedEntriesMap)
+import FunctionUtils from "FunctionUtils" /* 1933 */;
+import size from "module_2" /* 2 */;
+
+let result = size.fileFinishedImporting("lib/CachedEntriesMap.tsx");
+class CachedEntriesMap {
+  constructor() {
+    obj1 = Object.create(new.target.prototype);
+    closure_0 = obj1;
+    obj1.version = 0;
+    map = new Map();
+    obj1.data = map;
+    obj = closure_0(closure_1[0]);
+    obj1.cachedValues = obj.cachedFunction(() => {
+      const data = obj4.data;
+      return Array.from(data.values());
+    });
+    obj2 = closure_0(closure_1[0]);
+    obj1.cachedKeys = obj2.cachedFunction(() => {
+      const data = obj4.data;
+      return Array.from(data.keys());
+    });
+    obj3 = closure_0(closure_1[0]);
+    obj1.cachedEntries = obj3.cachedFunction(() => {
+      const data = obj4.data;
+      return Array.from(data.entries());
+    });
+    return obj1;
+  }
+}
+const prototype = CachedEntriesMap.prototype;
+prototype["keys"] = function keys() {
+  return this.cachedKeys(this.version);
+};
+prototype["values"] = function values() {
+  return this.cachedValues(this.version);
+};
+prototype["entries"] = function entries() {
+  return this.cachedEntries(this.version);
+};
+prototype["size"] = function size() {
+  return this.data.size;
+};
+prototype["get"] = function get(arg0) {
+  const data = this.data;
+  return data.get(arg0);
+};
+prototype["set"] = function set(arg0, arg1) {
+  const self = this;
+  const data = this.data;
+  if (data.get(arg0) !== arg1) {
+    const data2 = self.data;
+    const result = data2.set(arg0, arg1);
+    self.version = self.version + 1;
+  }
+};
+prototype["delete"] = function delete(arg0) {
+  const self = this;
+  const data = this.data;
+  const deleteResult = data.delete(arg0);
+  if (deleteResult) {
+    self.version = self.version + 1;
+  }
+  return deleteResult;
+};
+prototype["clear"] = function clear() {
+  const self = this;
+  if (0 !== this.data.size) {
+    const data = self.data;
+    data.clear();
+    self.version = self.version + 1;
+  }
+};
+
+export default CachedEntriesMap;

@@ -1,0 +1,53 @@
+// Module ID: 11006
+// Function ID: 11007
+// Name: PileOverflow
+// Dependencies: [19, 17, 2025, 21, 4560, 576, 563, 4556, 1880, 2]
+// Exports: PileOverflow
+
+// Module 11006 (PileOverflow)
+import useStateFromStores from "useStateFromStores" /* 563 */;
+import nativeDefault from "native" /* 576 */;
+import NumberUtils from "NumberUtils" /* 1880 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import noop from "module_19" /* 19 */;
+import LocaleStore from "LocaleStore" /* 2025 */;
+
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsxs: closure_4, jsx: hasOwnProperty } = jsxProd);
+const createStyles = fn(4560);
+let obj2 = { container: { alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, flexShrink: 0 } };
+let closure_6 = createStyles.createStyles(obj2);
+let items = [[64, "text-lg/semibold"], [48, "text-md/semibold"], [40, "text-md/semibold"], [30, "text-sm/semibold"], [24, "text-xs/semibold"], [16, "text-xxs/semibold"]];
+const map = new Map(items);
+let size = fn(2);
+const result = size.fileFinishedImporting("design/components/Pile/native/PileOverflow.native.tsx");
+
+export const PileOverflow = function PileOverflow(size) {
+  size = size.size;
+  ({ borderRadius, value } = size);
+  const items = [LocaleStore];
+  const stateFromStores = useStateFromStores.useStateFromStores(items, () => locale.locale);
+  const items1 = [closure_6().container, ];
+  const obj2 = { borderRadius, minWidth: size, height: size, paddingHorizontal: null };
+  let num = 4;
+  if (size >= 32) {
+    num = 8;
+  }
+  const obj3 = { style: items1, children: null };
+  obj2.paddingHorizontal = num;
+  items1[1] = obj2;
+  let str = map.get(size);
+  if (str == null) {
+    str = "text-md/semibold";
+  }
+  const obj4 = { lineClamp: 1, maxFontSizeMultiplier: 2, variant: str, children: null };
+  const tmp4 = hasOwnProperty;
+  const tmp5 = View;
+  const tmp6 = React4;
+  const items2 = ["+", NumberUtils.humanizeValue(value, stateFromStores)];
+  obj4.children = items2;
+  obj3.children = tmp6(Text_Text.Text, obj4);
+  return tmp4(tmp5, obj3);
+};

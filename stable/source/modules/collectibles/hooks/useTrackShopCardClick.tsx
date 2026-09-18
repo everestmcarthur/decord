@@ -1,0 +1,69 @@
+// Module ID: 8833
+// Function ID: 8834
+// Name: useTrackShopCardClick
+// Dependencies: [19, 8834, 1074, 8773, 8179, 7554, 7553, 1242, 2]
+// Exports: useTrackShopCardClick
+
+// Module 8833 (useTrackShopCardClick)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7553 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7554 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+const useSelectedVariantIndex = fn(8834).useSelectedVariantIndex;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/hooks/useTrackShopCardClick.tsx");
+
+export const useTrackShopCardClick = function useTrackShopCardClick(product) {
+  product = product.product;
+  require = product;
+  const analyticsLocations = product.analyticsLocations;
+  let cardId;
+  let sessionId;
+  let tilePosition;
+  closure_5 = undefined;
+  let shopDiscountSource;
+  let collectiblesAnalyticsContext = require("CollectiblesAnalyticsContext").useCollectiblesAnalyticsContext();
+  if (collectiblesAnalyticsContext == null) {
+    collectiblesAnalyticsContext = {};
+  }
+  cardId = collectiblesAnalyticsContext.cardId;
+  sessionId = collectiblesAnalyticsContext.sessionId;
+  tilePosition = collectiblesAnalyticsContext.tilePosition;
+  const tmp3 = tilePosition(product);
+  closure_5 = tmp3;
+  let obj = require("CollectiblesAnalyticsContext");
+  const currentUserIfAvailable = require("useCurrentUser").useCurrentUserIfAvailable();
+  let tmpResult = require("useCurrentUser");
+  shopDiscountSource = require("CollectiblesUtils").getShopDiscountSource(currentUserIfAvailable);
+  const items = [product, tmp3, sessionId, cardId, analyticsLocations, tilePosition, shopDiscountSource];
+  return sessionId.useCallback((cta, arg1) => {
+    if (obj.getIsVariantProduct(product)) {
+      let tmp4 = arg1;
+      if (arg1 == null) {
+        tmp4 = closure_5;
+      }
+      let skuId1;
+      if (tmp3.variants[tmp4] != null) {
+        skuId1 = tmp6.skuId;
+      }
+      if (skuId1 == null) {
+        skuId1 = tmp3.skuId;
+      }
+      let skuId = skuId1;
+    } else {
+      skuId = tmp3.skuId;
+    }
+    obj = CollectiblesProductUtils;
+    const obj3 = { sku_id: skuId, cta, shop_session_id: sessionId, card_id: cardId, product_sku_ids: null, location_stack: null, position_in_section: null, discount_source: null };
+    const obj2 = AnalyticsUtilsDefault;
+    obj3.product_sku_ids = CollectiblesProductUtils.getProductSkuIds(product);
+    obj3.location_stack = analyticsLocations;
+    obj3.position_in_section = tilePosition;
+    const tmpResult = CollectiblesProductUtils;
+    obj3.discount_source = CollectiblesUtils.getAnalyticsShopDiscountSource(shopDiscountSource);
+    obj2.track(AnalyticEvents.SHOP_CARD_CLICKED, obj3);
+  }, items);
+};

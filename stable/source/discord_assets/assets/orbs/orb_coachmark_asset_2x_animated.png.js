@@ -1,0 +1,11 @@
+// Module ID: 15836
+// Function ID: 15837
+// Dependencies: [2]
+
+// Module 15836
+import size from "module_2" /* 2 */;
+
+const result = size.fileFinishedImporting("../discord_assets/assets/orbs/orb_coachmark_asset_2x_animated.png.js");
+
+export default "https://cdn.discordapp.com/assets/content/6db549e820779a560ccb0f4a499695c1cccb9bfae2c61fbc883be4f6960851c5.png";
+export const metadata = { fileBytes: 526029 };

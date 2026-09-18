@@ -1,0 +1,125 @@
+// Module ID: 16448
+// Function ID: 16449
+// Name: ForYouShowAllRow
+// Dependencies: [19, 17, 1074, 12703, 21, 4560, 10126, 576, 1115, 1483, 1242, 1178, 4982, 16443, 5123, 16444, 14180, 4556, 1114, 7142, 2]
+// Exports: ForYouSuggestedFriendShowAllRow
+
+// Module 16448 (ForYouShowAllRow)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import native from "native" /* 1178 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import useFontScale from "useFontScale" /* 4982 */;
+import Pressables from "Pressables" /* 5123 */;
+import _modDef7142 from "module_7142" /* 7142 */;
+import ChannelListLayout from "ChannelListLayout" /* 10126 */;
+import AvatarDuoPile from "AvatarDuoPile" /* 14180 */;
+import ChannelPressableWrapper from "ChannelPressableWrapper" /* 16443 */;
+import ChannelWrapper from "ChannelWrapper" /* 16444 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+function ForYouShowAllRow(panelVariant) {
+  panelVariant = panelVariant.panelVariant;
+  ({ children, count, onPress } = panelVariant);
+  if (panelVariant === undefined) {
+    panelVariant = false;
+  }
+  const layout = ChannelListLayout.useMessagesTabLayout(panelVariant);
+  const tmp4 = closure_10(layout);
+  const layoutStyles = ChannelListLayout.getLayoutStyles(layout);
+  const fontScale = useFontScale.useFontScale();
+  const obj5 = { accessibilityRole: "button", underlayColor: tmp4.rowActive.backgroundColor, onPress, style: null, children: null };
+  const items = [tmp4.pressable, { borderRadius: layoutStyles.container.borderRadius }];
+  obj5.style = items;
+  const obj4 = ChannelPressableWrapper;
+  const obj7 = { style: tmp4.avatar, children: null };
+  const obj6 = ChannelWrapper;
+  const tmp8 = React7;
+  const tmp9 = React6;
+  const AvatarSizes = native.AvatarSizes;
+  const obj9 = { children: null };
+  const isLayoutCompactResult = ChannelListLayout.isLayoutCompact(layout);
+  obj7.children = React5(AvatarDuoPile.AvatarDuoPile, { size: ChannelListLayout.isLayoutCompact(layout) ? AvatarSizes.XSMALL_20 : AvatarSizes.SMALL, "aria-label": "", children });
+  const items1 = [React5(View, obj7), , ];
+  const obj11 = { style: tmp4.textContainer, children: null };
+  const obj12 = { lineClamp: 1, variant: layoutStyles.channelName.text.variant, color: "text-brand", style: tmp4.nameText, children: null };
+  const intl = tmp(1114).intl;
+  obj12.children = intl.format(util.t.NrzztX, { count });
+  obj11.children = React5(Text_Text.Text, obj12);
+  items1[1] = React5(View, obj11);
+  const obj10 = { size: ChannelListLayout.isLayoutCompact(layout) ? AvatarSizes.XSMALL_20 : AvatarSizes.SMALL, "aria-label": "", children };
+  items1[2] = React5(native.Icon, { style: tmp4.icon, color: tmp4.iconColor.color, source: _modDef7142, size: native.IconSizes.CUSTOM });
+  obj9.children = items1;
+  obj5.children = obj6.renderChannelWrapper(tmp8(tmp9, obj9), { layout, fontScale, panelVariant });
+  return obj4.renderChannelPressableWrapper(React5(Pressables.PressableHighlight, obj5), { layout, panelVariant });
+}
+const View = fn(17).View;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const Sections = fn(12703).Sections;
+const jsxProd = fn(21);
+({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
+const createStyles = fn(4560);
+let closure_10 = createStyles.createStyles((layout) => {
+  const layoutStyles = ChannelListLayout.getLayoutStyles(layout);
+  const sizeStyle = ChannelListLayout.makeSizeStyle(layoutStyles.icon.wrapper.size);
+  const obj3 = { rowActive: null, pressable: null, textContainer: null, nameText: null, avatar: null, icon: null, iconColor: null };
+  obj3.rowActive = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
+  obj3.pressable = { flex: 1 };
+  const obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
+  obj3.textContainer = { flexDirection: "column", flexGrow: 2, flexShrink: 2, alignSelf: "center", overflow: "hidden", marginTop: -2, marginRight: nativeDefault.space.PX_8 };
+  const obj5 = { flexDirection: "column", flexGrow: 2, flexShrink: 2, alignSelf: "center", overflow: "hidden", marginTop: -2, marginRight: nativeDefault.space.PX_8 };
+  let num = 0;
+  if (obj6.isAndroid()) {
+    num = 2;
+  }
+  obj3.nameText = { flexShrink: 1, marginBottom: num };
+  const obj7 = { position: "relative", borderRadius: nativeDefault.radii.round, justifyContent: "center", alignItems: "center", flexShrink: 0, flexGrow: 0 };
+  const merged = Object.assign(sizeStyle);
+  obj7.marginRight = layoutStyles.icon.margin.marginRight + 4;
+  obj3.avatar = obj7;
+  const size = { width: 8, height: 32, paddingRight: tmp4(576).space.PX_24 };
+  obj3.icon = size;
+  obj6 = PlatformUtils;
+  obj3.iconColor = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+  return obj3;
+});
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/notification_center/native/ForYouShowAllRow.tsx");
+
+export const ForYouSuggestedFriendShowAllRow = function ForYouSuggestedFriendShowAllRow(suggestedFriends) {
+  suggestedFriends = suggestedFriends.suggestedFriends;
+  let flag = suggestedFriends.panelVariant;
+  if (flag === undefined) {
+    flag = false;
+  }
+  let messagesTabLayout;
+  const navigation = suggestedFriends(messagesTabLayout[9]).useNavigation();
+  let obj = suggestedFriends(messagesTabLayout[9]);
+  messagesTabLayout = suggestedFriends(messagesTabLayout[6]).useMessagesTabLayout(flag);
+  const items = [navigation, suggestedFriends];
+  const items1 = [messagesTabLayout, suggestedFriends];
+  const callback = noop.useCallback(() => {
+    AnalyticsUtilsDefault.track(AnalyticEvents.FRIEND_FINDER_SECTION_EXPANDED, { section_id: Sections.FRIEND_SUGGESTIONS, truncated_count: 2, expanded_count: suggestedFriends.length, location: "NotificationsTab" });
+    navigation.navigate("friends", { screen: "suggested-friends", params: { presentation: "card" } });
+  }, items);
+  let obj2 = suggestedFriends(messagesTabLayout[6]);
+  return closure_7(ForYouShowAllRow, {
+    children: noop.useMemo(() => {
+      const substr = suggestedFriends.slice(2, 4);
+      return substr.map((user) => {
+        const obj = { user: user.user, guildId: "Array", size: 10392529183522122000000000000000000 };
+        const obj2 = suggestedFriends(messagesTabLayout[6]);
+        const tmp = closure_2_7;
+        const AvatarSizes = suggestedFriends(messagesTabLayout[11]).AvatarSizes;
+        obj.size = suggestedFriends(messagesTabLayout[6]).isLayoutCompact(closure_1_2) ? AvatarSizes.XSMALL_20 : AvatarSizes.SMALL;
+        return tmp(suggestedFriends(messagesTabLayout[11]).Avatar, obj, user.user.id);
+      });
+    }, items1),
+    count: suggestedFriends.length,
+    onPress: callback,
+    panelVariant: flag
+  });
+};

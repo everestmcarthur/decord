@@ -1,0 +1,18 @@
+// Module ID: 14120
+// Function ID: 14121
+// Name: AccessibilityFocusNativeComponent
+// Dependencies: [106, 65, 2]
+
+// Module 14120 (AccessibilityFocusNativeComponent)
+import weakSet from "weakSet" /* 106 */;
+import module_65 from "module_65" /* 65 */;
+import size from "module_2" /* 2 */;
+
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "AccessibilityFocusView", directEventTypes: { topAccessibilityFocus: { registrationName: "onAccessibilityFocus" }, topAccessibilityBlur: { registrationName: "onAccessibilityBlur" } }, validAttributes: null };
+const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onAccessibilityFocus: true, onAccessibilityBlur: true }));
+__INTERNAL_VIEW_CONFIG.validAttributes = {};
+const value = module_65.get("AccessibilityFocusView", () => obj);
+const result = size.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/AccessibilityFocusNativeComponent.tsx");
+
+export default value;
+export { __INTERNAL_VIEW_CONFIG };

@@ -1,0 +1,78 @@
+// Module ID: 7465
+// Function ID: 7466
+// Name: Clickstream
+// Dependencies: [32, 502, 4583, 11, 7466, 1242, 7467, 2]
+// Exports: trackClickstream
+
+// Module 7465 (Clickstream)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import ClickstreamExperiment from "ClickstreamExperiment" /* 7466 */;
+import ClickstreamEvents from "ClickstreamEvents" /* 7467 */;
+import _slicedToArray from "module_32" /* 32 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4583 */;
+
+require = fn;
+function isClickstreamEnabled(flag) {
+  if (flag === undefined) {
+    flag = true;
+  }
+  if (flag) {
+    const extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(AuthenticationStore.getId());
+    if (extractTimestampResult !== c7) {
+      drainClickstream(false);
+      c7 = extractTimestampResult;
+    }
+    result = ClickstreamExperiment.clickstreamExperimentEnabled();
+  }
+  return result;
+}
+function drainClickstream(flag) {
+  if (flag === undefined) {
+    flag = true;
+  }
+  if (isClickstreamEnabled(flag)) {
+    const tmp3 = obj[Symbol.iterator]();
+    while (tmp3 !== undefined) {
+      let tmp8 = _slicedToArray(tmp5, 2);
+      let first = tmp8[0];
+      let obj2 = AnalyticsUtilsDefault;
+      let obj3 = ClickstreamEvents;
+      let trackResult = obj2.track(first, obj3.getClickstreamDrainEvent(first, tmp8[1]));
+      continue;
+    }
+    map.clear();
+  } else {
+    obj.clear();
+  }
+}
+const map = new Map();
+let c7 = -1;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/app_analytics/clickstream/Clickstream.tsx");
+
+export const trackClickstream = function trackClickstream(CHANNEL_LATEST_MESSAGES_LOADED_CLICKSTREAM, arg1) {
+  const extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(AuthenticationStore.getId());
+  if (extractTimestampResult !== c7) {
+    drainClickstream(false);
+    c7 = extractTimestampResult;
+  }
+  result = ClickstreamExperiment.clickstreamExperimentEnabled();
+  if (result) {
+    if (!map.has(CHANNEL_LATEST_MESSAGES_LOADED_CLICKSTREAM)) {
+      const result1 = obj3.set(CHANNEL_LATEST_MESSAGES_LOADED_CLICKSTREAM, []);
+    }
+    value = obj3.get(CHANNEL_LATEST_MESSAGES_LOADED_CLICKSTREAM);
+    if (value != null) {
+      const obj4 = { timestamp: null, rtc_state: null };
+      const _Date = Date;
+      const date = new Date();
+      obj4.timestamp = date;
+      obj4.rtc_state = RTCConnectionStore.getState();
+      const merged = Object.assign(arg1);
+      value.push(obj4);
+    }
+  }
+};
+export { drainClickstream };

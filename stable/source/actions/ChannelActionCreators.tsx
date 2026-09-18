@@ -1,0 +1,880 @@
+// Module ID: 4573
+// Function ID: 4574
+// Name: ChannelActionCreators
+// Dependencies: [32, 5, 4574, 1961, 1957, 4575, 1074, 9188, 1272, 5522, 4418, 4571, 5411, 573, 8375, 1242, 1100, 4411, 1114, 7323, 4802, 2]
+
+// Module 4573 (ChannelActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import router_utils from "router_utils" /* 1100 */;
+import util from "util" /* 1114 */;
+import HTTPUtils from "HTTPUtils" /* 1272 */;
+import shared from "shared" /* 4411 */;
+import RootNavigationRef from "RootNavigationRef" /* 4418 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5411 */;
+import isChangelogChannelDefault from "isChangelogChannel" /* 8375 */;
+import _slicedToArray from "module_32" /* 32 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import ChangelogStore from "ChangelogStore" /* 4574 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import ReadStateStore from "ReadStateStore" /* 4575 */;
+
+const require = globalThis.__r;
+
+const transitionToChannel = tmp5(4571);
+require = fn;
+let closure_6 = fn(1961).createChannelRecordFromServer;
+const Constants = fn(1074);
+({ AnalyticEvents: closure_9, AbortCodes: c10, Endpoints: closure_11, Routes: closure_12, ME: map1, CURRENT_APP_CONTEXT: closure_14, ChannelTypes: closure_15 } = Constants);
+const size = fn(2);
+let result = size.fileFinishedImporting("actions/ChannelActionCreators.tsx");
+
+export default {
+  openPrivateChannel(joinCallVideo) {
+    ({ recipientIds: require, joinCall } = joinCallVideo);
+    if (joinCall === undefined) {
+      joinCall = false;
+    }
+    let flag = joinCallVideo.joinCallVideo;
+    if (flag === undefined) {
+      flag = false;
+    }
+    ({ location: _slicedToArray, onBeforeTransition: asyncGeneratorStep, navigateToChannel } = joinCallVideo);
+    if (navigateToChannel === undefined) {
+      navigateToChannel = true;
+    }
+    const self = this;
+    return (async (arg0, value) => {
+      if (c5 === 2) {
+        c5 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp6 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          const obj2 = { value, done: true };
+          return obj2;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c5 = 2;
+          if (0 === c4) {
+            if (arg0 === 1) {
+              c5 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c5 = 3;
+              const obj3 = { value, done: true };
+              return obj3;
+            } else {
+              closure_0 = tmp7;
+              closure_128_1 = undefined;
+              function joinCallIfRequested(_openCachedDMChannelResult) {
+                if (closure_1_1) {
+                  const tmp4 = closure_1(closure_2[7]);
+                  const call = tmp4.call;
+                  const id = _openCachedDMChannelResult.id;
+                  let recipientId = null;
+                  if (_openCachedDMChannelResult.isDM()) {
+                    recipientId = _openCachedDMChannelResult.getRecipientId();
+                  }
+                  if (typeof call === "unknown") {
+                    tmp4(tmp5, true, recipientId);
+                  } else {
+                    call(id, tmp5, true, recipientId);
+                  }
+                }
+              }
+              closure_128_0 = joinCallIfRequested;
+              const _getRecipientsResult = self._getRecipients(_require);
+              if (1 === _getRecipientsResult.length) {
+                const _openCachedDMChannelResult = self._openCachedDMChannel(v0(_getRecipientsResult, 1)[0], asyncGeneratorStep, navigateToChannel);
+                if (null != _openCachedDMChannelResult) {
+                  joinCallIfRequested(_openCachedDMChannelResult);
+                  c5 = 3;
+                  const obj4 = { value: Promise.resolve(_openCachedDMChannelResult.id), done: true };
+                  return obj4;
+                }
+              }
+              v0 = 1;
+              const HTTP = closure_0(tmp43[8]).HTTP;
+              const request = { url: constants2.USER_CHANNELS, body: null, context: null, oldFormErrors: true, retries: 3, rejectWithError: null };
+              const obj5 = { recipients: _getRecipientsResult };
+              request.body = obj5;
+              const obj7 = { location: _location };
+              request.context = obj7;
+              request.rejectWithError = closure_0(tmp43[8]).rejectWithMigratedError();
+              c4 = 2;
+              c5 = 1;
+              const obj8 = { value: HTTP.post(request), done: false };
+              return obj8;
+            }
+          } else if (1 === tmp7) {
+            v0 = 0;
+            closure_128_2 = tmp43;
+            let code;
+            if (closure_128_2 != null) {
+              const body = closure_128_2.body;
+              if (body != null) {
+                code = body.code;
+              }
+            }
+            if (code === constants.QUARANTINED) {
+              tmp3(tmp43[9])();
+            }
+            throw closure_128_2;
+          } else if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            v0 = 0;
+            c5 = 3;
+            const obj9 = { value, done: true };
+            return obj9;
+          } else {
+            closure_128_1 = value;
+            if (closure_129_5) {
+              if (closure_129_4 != null) {
+                closure_129_4();
+              }
+              closure_128_0(closure_129_6._openPrivateChannel(closure_128_1.body));
+            }
+            v0 = 0;
+            c5 = 3;
+            const obj = { value: closure_128_1.body.id, done: true };
+            return obj;
+          }
+        } catch (tmp43) {
+          if (tmp4 === v0) {
+            c5 = tmp2;
+            throw tmp43;
+          } else {
+            c4 = tmp;
+          }
+        }
+      }
+    })();
+  },
+  createGroupDmShell(arg0) {
+    ({ recipientId: require, location: importDefault, onBeforeTransition: dependencyMap, navigateToChannel } = arg0);
+    if (navigateToChannel === undefined) {
+      navigateToChannel = true;
+    }
+    const self = this;
+    return self(function*(arg0, value) {
+      if (c5 === 2) {
+        c5 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp6 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          const obj2 = { value, done: true };
+          return obj2;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c5 = 2;
+          if (0 === c4) {
+            if (arg0 === 1) {
+              c5 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c5 = 3;
+              const obj3 = { value, done: true };
+              return obj3;
+            } else {
+              closure_0 = tmp7;
+              closure_128_0 = undefined;
+              c3 = 1;
+              const HTTP = closure_0(tmp31[8]).HTTP;
+              const request = { url: constants2.USER_GROUP_DM_SHELL, body: null, context: null, oldFormErrors: true, retries: 3, rejectWithError: null };
+              const obj4 = { recipient_id };
+              request.body = obj4;
+              const obj5 = { location: _location };
+              request.context = obj5;
+              request.rejectWithError = closure_0(tmp31[8]).rejectWithMigratedError();
+              c4 = 2;
+              c5 = 1;
+              const obj6 = { value: HTTP.post(request), done: false };
+              return obj6;
+            }
+          } else if (1 === tmp7) {
+            c3 = 0;
+            closure_128_1 = tmp31;
+            let code;
+            if (closure_128_1 != null) {
+              const body = closure_128_1.body;
+              if (body != null) {
+                code = body.code;
+              }
+            }
+            if (code === constants.QUARANTINED) {
+              tmp3(tmp31[9])();
+            }
+            throw closure_128_1;
+          } else if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c3 = 0;
+            c5 = 3;
+            const obj7 = { value, done: true };
+            return obj7;
+          } else {
+            closure_128_0 = value;
+            if (closure_129_3) {
+              if (closure_129_2 != null) {
+                closure_129_2();
+              }
+              closure_129_4._openPrivateChannel(closure_128_0.body);
+            }
+            c3 = 0;
+            c5 = 3;
+            const obj = { value: closure_128_0.body.id, done: true };
+            return obj;
+          }
+        } catch (tmp31) {
+          if (tmp4 === c3) {
+            c5 = tmp2;
+            throw tmp31;
+          } else {
+            c4 = tmp;
+          }
+        }
+      }
+    })();
+  },
+  _openCachedDMChannel(id, fn, navigateToChannel) {
+    let flag = navigateToChannel;
+    if (navigateToChannel === undefined) {
+      flag = true;
+    }
+    const dMFromUserId = ChannelStore.getDMFromUserId(id);
+    let channel = null;
+    if (null != dMFromUserId) {
+      channel = ChannelStore.getChannel(dMFromUserId);
+    }
+    let tmp3 = null;
+    if (null != channel) {
+      tmp3 = channel;
+      if (flag) {
+        if (fn != null) {
+          fn();
+        }
+        if (null != obj2.getRootNavigationRef()) {
+          tmp6(4571).transitionToChannel(channel.id, { navigationReplace: true });
+          tmp3 = channel;
+          const tmp6Result = tmp6(4571);
+        } else {
+          const privateChannel = SelectedChannelActionCreatorsDefault.selectPrivateChannel(channel.id);
+          tmp3 = channel;
+        }
+        obj2 = RootNavigationRef;
+        tmp6 = require;
+      }
+    }
+    return tmp3;
+  },
+  ensurePrivateChannel(id) {
+    closure_0 = id;
+    const self = this;
+    return (async () => {
+      const HTTP = tmp2(1272).HTTP;
+      const request = { url: constants.USER_CHANNELS, body: { recipients: self._getRecipients(tmp2) }, oldFormErrors: true, rejectWithError: null };
+      self._getRecipients(tmp2);
+      request.rejectWithError = tmp2(1272).rejectWithMigratedError();
+      closure_128_0 = await HTTP.post(request);
+      closure_128_1 = closure_1_6(closure_128_0.body);
+      tmp5(573).dispatch({ type: "CHANNEL_CREATE", channel: closure_128_1 });
+      return closure_128_1.id;
+    })();
+  },
+  getOrEnsurePrivateChannel(id) {
+    closure_0 = id;
+    const self = this;
+    return (async (arg0, value) => {
+      if (c0 === 2) {
+        c0 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp3 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          const obj2 = { value, done: true };
+          return obj2;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c0 = 2;
+          if (0 === c1) {
+            if (arg0 === 1) {
+              c0 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c0 = 3;
+              const obj3 = { value, done: true };
+              return obj3;
+            } else {
+              dMFromUserId = dMFromUserId.getDMFromUserId(closure_0);
+              if (null == dMFromUserId) {
+                c1 = 1;
+                c0 = 1;
+                const obj4 = { value: self.ensurePrivateChannel(tmp7), done: false };
+                return obj4;
+              }
+              tmp7 = closure_0;
+            }
+          } else if (arg0 === 1) {
+            c0 = 3;
+            throw value;
+          } else {
+            dMFromUserId = value;
+            if (arg0 === 2) {
+              c0 = 3;
+              const obj = { value, done: true };
+              return obj;
+            }
+          }
+          c0 = 3;
+          const obj5 = { value: dMFromUserId, done: true };
+          return obj5;
+        } catch (tmp10) {
+          c0 = tmp;
+          throw tmp10;
+        }
+      }
+    })();
+  },
+  getDMChannel(arr) {
+    closure_0 = arr;
+    return (async () => {
+      const HTTP = tmp5(1272).HTTP;
+      closure_128_0 = await HTTP.get({ url: closure_1_11.DM_CHANNEL(tmp5), rejectWithError: true });
+      closure_128_1 = closure_1_6(closure_128_0.body);
+      tmp2(573).dispatch({ type: "CHANNEL_CREATE", channel: closure_128_1 });
+      return closure_128_1.id;
+    })();
+  },
+  _getRecipients(arg0) {
+    if (null != arg0) {
+      const _Array = Array;
+      let tmp2 = arg0;
+      if (!Array.isArray(arg0)) {
+        const items = [arg0];
+        tmp2 = items;
+      }
+      let items1 = tmp2;
+    } else {
+      items1 = [];
+    }
+    return items1;
+  },
+  _openPrivateChannel(body) {
+    const tmp = closure_6(body);
+    DispatcherDefault.dispatch({ type: "CHANNEL_CREATE", channel: tmp });
+    if (null != obj2.getRootNavigationRef()) {
+      transitionToChannel.transitionToChannel(tmp.id, { navigationReplace: true });
+      const tmp5Result = transitionToChannel;
+    } else {
+      const privateChannel = SelectedChannelActionCreatorsDefault.selectPrivateChannel(tmp.id);
+      const tmp2Result = SelectedChannelActionCreatorsDefault;
+    }
+    return tmp;
+  },
+  closePrivateChannel(id, arg1, arg2) {
+    let flag = arg1;
+    if (arg1 === undefined) {
+      flag = false;
+    }
+    let flag2 = arg2;
+    if (arg2 === undefined) {
+      flag2 = false;
+    }
+    if (isChangelogChannelDefault(id)) {
+      const obj = { last_changelog_id: ChangelogStore.latestChangelogId(), unread_count: ReadStateStore.getUnreadCount(id) };
+      tmp(1242).track(constants.CHANGE_LOG_DM_REMOVED, obj);
+      const tmpResult = tmp(1242);
+    }
+    DispatcherDefault.dispatch({ type: "CHANNEL_DELETE", channel: { id, guild_id: "Array", parent_id: "options" }, silent: flag2 });
+    if (flag) {
+      router_utils.transitionTo(constants2.FRIENDS);
+    }
+    const HTTP = HTTPUtils.HTTP;
+    const request = { url: closure_1_11.CHANNEL(id), query: { silent: flag2 }, oldFormErrors: true, rejectWithError: null };
+    const obj2 = { type: "CHANNEL_DELETE", channel: { id, guild_id: "Array", parent_id: "options" }, silent: flag2 };
+    const tmpResult2 = DispatcherDefault;
+    request.rejectWithError = HTTPUtils.rejectWithMigratedError();
+    const delResult = HTTP.del(request);
+    return HTTP.del(request).then(() => {
+      const AccessibilityAnnouncer = require("shared").AccessibilityAnnouncer;
+      const intl = require("util").intl;
+      AccessibilityAnnouncer.announce(intl.string(require("util").t.nRbucl));
+    }).catch(() => {
+      const AccessibilityAnnouncer = require("shared").AccessibilityAnnouncer;
+      const intl = require("util").intl;
+      AccessibilityAnnouncer.announce(intl.string(require("util").t.ndXVI5));
+    });
+  },
+  bulkLeaveGroupDMs(channel_ids) {
+    const HTTP = HTTPUtils.HTTP;
+    const request = { url: closure_1_11.USER_CHANNELS_BULK_LEAVE, body: { channel_ids }, oldFormErrors: true, rejectWithError: true };
+    return HTTP.post(request);
+  },
+  updatePermissionOverwrite(id, arr3) {
+    closure_0 = id;
+    closure_1 = arr3;
+    return (async () => {
+      const body = tmp2;
+      const HTTP = tmp5(1272).HTTP;
+      const request = { url: closure_1_11.CHANNEL_PERMISSIONS_OVERWRITE(tmp5, body.id), body, oldFormErrors: true, rejectWithError: tmp5(1272).rejectWithMigratedError() };
+      closure_128_0 = await HTTP.put(request);
+      body(573).dispatch({ type: "CHANNEL_PERMISSIONS_PUT_OVERWRITE_SUCCESS", channelId: closure_129_0, overwrite: closure_129_1 });
+      return closure_128_0;
+    })();
+  },
+  clearPermissionOverwrite(channelId, id) {
+    closure_0 = channelId;
+    closure_1 = id;
+    return (async () => {
+      const HTTP = tmp5(1272).HTTP;
+      closure_128_0 = await HTTP.del({ url: closure_1_11.CHANNEL_PERMISSIONS_OVERWRITE(tmp5, tmp2), oldFormErrors: true, rejectWithError: tmp5(1272).rejectWithMigratedError() });
+      tmp2(573).dispatch({ type: "CHANNEL_PERMISSIONS_DELETE_OVERWRITE_SUCCESS", channelId: closure_129_0, overwriteId: closure_129_1 });
+      return closure_128_0;
+    })();
+  },
+  addRecipient(arg0, arg1, location, arg3) {
+    const self = this;
+    closure_1 = arg0;
+    _require = arg3;
+    const HTTP = require("HTTPUtils").HTTP;
+    const obj = { url: closure_11.CHANNEL_RECIPIENT(arg0, arg1), context: { location }, oldFormErrors: true, rejectWithError: true };
+    const obj2 = { location };
+    const putResult = HTTP.put(obj);
+    return HTTP.put(obj).then((status) => {
+      const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
+      const intl = util.intl;
+      AccessibilityAnnouncer.announce(intl.string(util.t.cU0t1F));
+      if (closure_0 != null) {
+        closure_0();
+      }
+      if (201 === status.status) {
+        let id = self._openPrivateChannel(status.body).id;
+      } else {
+        id = closure_1;
+      }
+      return id;
+    }).catch(() => {
+      const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
+      const intl = util.intl;
+      AccessibilityAnnouncer.announce(intl.string(util.t["8GEdej"]));
+      return closure_1;
+    });
+  },
+  addRecipients(id, arg1, arg2, arg3) {
+    const self = this;
+    closure_1 = arg1;
+    closure_0 = arg2;
+    return this.addRecipient(id, arg1[0], arg2, arg3).then((result) => {
+      closure_0 = result;
+      const substr = closure_1.slice(1);
+      return Promise.all(substr.map((item) => self.addRecipient(closure_0, item, closure_0))).then(() => closure_0);
+    });
+  },
+  removeRecipient(arg0, arg1) {
+    const HTTP = HTTPUtils.HTTP;
+    return HTTP.del({ url: closure_1_11.CHANNEL_RECIPIENT(arg0, arg1), oldFormErrors: true, rejectWithError: true });
+  },
+  setDMOwner(arg0, owner) {
+    const HTTP = HTTPUtils.HTTP;
+    const request = { url: closure_1_11.CHANNEL(arg0), body: { owner }, oldFormErrors: true, rejectWithError: true };
+    return HTTP.patch(request);
+  },
+  setName(arg0, arg1) {
+    closure_0 = arg0;
+    closure_1 = arg1;
+    return (async () => {
+      const name = tmp3;
+      const channel2 = channel.getChannel(tmp2);
+      const HTTP = tmp2(1272).HTTP;
+      const request = { url: closure_1_11.CHANNEL(tmp2), body: { name }, oldFormErrors: true, rejectWithError: true };
+      closure_128_1 = await HTTP.patch(request);
+      if (channel2 != null) {
+        const guildId = channel2.getGuildId();
+      }
+      closure_128_2 = guildId;
+      let tmp10 = null == closure_128_2;
+      if (!tmp10) {
+        let isThreadResult;
+        if (channel2 != null) {
+          isThreadResult = obj.isThread();
+        }
+        tmp10 = isThreadResult;
+        obj = channel2;
+      }
+      if (!tmp10) {
+        const result = name(7323).checkGuildTemplateDirty(closure_128_2);
+        name(7323);
+      }
+      return closure_128_1;
+    })();
+  },
+  setIcon(arg0, arg1, arg2) {
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    return (async (arg0, value) => {
+      if (c5 === 2) {
+        c5 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp6 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c5 = 2;
+          if (0 === c4) {
+            if (arg0 === 1) {
+              c5 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c5 = 3;
+              const obj4 = { value, done: true };
+              return obj4;
+            } else {
+              let icon = tmp3;
+              const channel_id = tmp7;
+              closure_128_0 = undefined;
+              closure_128_1 = undefined;
+              closure_128_2 = undefined;
+              closure_128_3 = undefined;
+              channel = channel.getChannel(channel_id);
+              closure_128_0 = channel;
+              const obj6 = { channel_id, channel_type: null, old_icon_set: null, new_icon_set: null, location: null };
+              let type;
+              if (channel != null) {
+                type = channel.type;
+              }
+              obj6.channel_type = type;
+              icon = undefined;
+              if (channel != null) {
+                icon = channel.icon;
+              }
+              obj6.old_icon_set = null != icon;
+              obj6.new_icon_set = null != icon;
+              obj6.location = _location;
+              closure_128_1 = obj6;
+              const obj8 = {};
+              const merged = Object.assign(obj6);
+              obj8.status = "initiated";
+              icon(_location[15]).track(constants.CHANNEL_ICON_EDIT_PROGRESSED, obj8);
+              c3 = 1;
+              const HTTP = channel_id(_location[8]).HTTP;
+              const request = { url: closure_1_11.CHANNEL(channel_id), body: null, oldFormErrors: true, rejectWithError: true, failImmediatelyWhenRateLimited: true };
+              const obj9 = { icon };
+              request.body = obj9;
+              c4 = 2;
+              c5 = 1;
+              const obj10 = { value: HTTP.patch(request), done: false };
+              return obj10;
+            }
+          } else if (1 === tmp7) {
+            c3 = 0;
+            closure_128_4 = _location;
+            const obj11 = {};
+            const merged1 = Object.assign(closure_128_1);
+            obj11.status = "failed";
+            let retry_after;
+            if (closure_128_4 != null) {
+              const body = closure_128_4.body;
+              if (body != null) {
+                retry_after = body.retry_after;
+              }
+            }
+            obj11.is_rate_limited = null != retry_after;
+            let message;
+            if (closure_128_4 != null) {
+              const body2 = closure_128_4.body;
+              if (body2 != null) {
+                message = body2.message;
+              }
+            }
+            obj11.error_message = message;
+            icon(_location[15]).track(constants.CHANNEL_ICON_EDIT_PROGRESSED, obj11);
+            throw closure_128_4;
+          } else if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c3 = 0;
+            c5 = 3;
+            const obj12 = { value, done: true };
+            return obj12;
+          } else {
+            closure_128_2 = value;
+            const obj13 = {};
+            const merged2 = Object.assign(closure_128_1);
+            obj13.status = "success";
+            icon(_location[15]).track(constants.CHANNEL_ICON_EDIT_PROGRESSED, obj13);
+            let guildId;
+            if (closure_128_0 != null) {
+              guildId = closure_128_0.getGuildId();
+            }
+            closure_128_3 = guildId;
+            let tmp11 = null == closure_128_3;
+            if (!tmp11) {
+              let isThreadResult;
+              if (closure_128_0 != null) {
+                isThreadResult = obj.isThread();
+              }
+              tmp11 = isThreadResult;
+              obj = closure_128_0;
+            }
+            if (!tmp11) {
+              const result = icon(_location[19]).checkGuildTemplateDirty(closure_128_3);
+              const obj2 = icon(_location[19]);
+            }
+            c3 = 0;
+            c5 = 3;
+            const obj15 = { value: closure_128_2, done: true };
+            return obj15;
+          }
+        } catch (tmp51) {
+          _location = tmp51;
+          if (tmp4 === c3) {
+            c5 = tmp2;
+            throw tmp51;
+          } else {
+            c4 = tmp;
+          }
+        }
+      }
+    })();
+  },
+  updateChannel(arg0, arg1, arg2) {
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    return (async (arg0, value) => {
+      if (c5 === 2) {
+        c5 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp7 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          const obj4 = { value, done: true };
+          return obj4;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c5 = 2;
+          if (0 === c4) {
+            if (arg0 === 1) {
+              c5 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c5 = 3;
+              const obj5 = { value, done: true };
+              return obj5;
+            } else {
+              const channel_id = tmp5;
+              closure_128_0 = undefined;
+              closure_128_1 = undefined;
+              closure_128_2 = undefined;
+              closure_128_3 = undefined;
+              closure_128_4 = undefined;
+              closure_128_0 = tmp72;
+              channel = channel.getChannel(channel_id);
+              closure_128_1 = channel;
+              const obj6 = { channel_id, channel_type: null, old_icon_set: null, new_icon_set: null, location: null };
+              let type;
+              if (channel != null) {
+                type = channel.type;
+              }
+              obj6.channel_type = type;
+              let icon;
+              if (channel != null) {
+                icon = channel.icon;
+              }
+              obj6.old_icon_set = null != icon;
+              obj6.new_icon_set = null != tmp3.icon;
+              obj6.location = _location;
+              closure_128_2 = obj6;
+              if ("icon" in tmp3) {
+                const obj8 = {};
+                const merged = Object.assign(obj6);
+                obj8.status = "initiated";
+                tmp3(_location[15]).track(constants.CHANNEL_ICON_EDIT_PROGRESSED, obj8);
+                const obj9 = tmp3(_location[15]);
+              }
+              c3 = 1;
+              const HTTP = channel_id(_location[8]).HTTP;
+              const request = { context: null, url: null, body: null, oldFormErrors: true, rejectWithError: true };
+              const obj10 = { location: _location };
+              request.context = obj10;
+              request.url = closure_1_11.CHANNEL(channel_id);
+              request.body = tmp3;
+              c4 = 2;
+              c5 = 1;
+              const obj11 = { value: HTTP.patch(request), done: false };
+              return obj11;
+            }
+          } else if (1 === tmp8) {
+            c3 = 0;
+            closure_128_5 = _location;
+            if (closure_128_0) {
+              const obj12 = {};
+              const merged1 = Object.assign(closure_128_2);
+              obj12.status = "failed";
+              let retry_after;
+              if (closure_128_5 != null) {
+                const body = closure_128_5.body;
+                if (body != null) {
+                  retry_after = body.retry_after;
+                }
+              }
+              obj12.is_rate_limited = null != retry_after;
+              let message;
+              if (closure_128_5 != null) {
+                const body2 = closure_128_5.body;
+                if (body2 != null) {
+                  message = body2.message;
+                }
+              }
+              obj12.error_message = message;
+              tmp3(_location[15]).track(constants.CHANNEL_ICON_EDIT_PROGRESSED, obj12);
+              const obj7 = tmp3(_location[15]);
+            }
+            throw closure_128_5;
+          } else if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c3 = 0;
+            c5 = 3;
+            const obj13 = { value, done: true };
+            return obj13;
+          } else {
+            closure_128_3 = value;
+            let guildId;
+            if (closure_128_1 != null) {
+              guildId = closure_128_1.getGuildId();
+            }
+            closure_128_4 = guildId;
+            let tmp12 = null == closure_128_4;
+            if (!tmp12) {
+              let isThreadResult;
+              if (closure_128_1 != null) {
+                isThreadResult = obj.isThread();
+              }
+              tmp12 = isThreadResult;
+              obj = closure_128_1;
+            }
+            if (!tmp12) {
+              const result = tmp3(_location[19]).checkGuildTemplateDirty(closure_128_4);
+              const obj2 = tmp3(_location[19]);
+            }
+            if (closure_128_0) {
+              const obj14 = {};
+              const merged2 = Object.assign(closure_128_2);
+              obj14.status = "success";
+              tmp3(_location[15]).track(constants.CHANNEL_ICON_EDIT_PROGRESSED, obj14);
+              const obj3 = tmp3(_location[15]);
+            }
+            c3 = 0;
+            c5 = 3;
+            const obj15 = { value: closure_128_3, done: true };
+            return obj15;
+          }
+        } catch (tmp62) {
+          _location = tmp62;
+          if (tmp4 === c3) {
+            c5 = tmp2;
+            throw tmp62;
+          } else {
+            c4 = tmp;
+          }
+        }
+      }
+    })();
+  },
+  convertToGuild(arg0) {
+    const HTTP = HTTPUtils.HTTP;
+    return HTTP.post({ url: closure_1_11.CHANNEL_CONVERT(arg0), oldFormErrors: true, rejectWithError: true });
+  },
+  preload(arg0, channelId) {
+    let tmp = null;
+    if (arg0 !== map1) {
+      tmp = arg0;
+    }
+    DispatcherDefault.dispatch({ type: "CHANNEL_PRELOAD", guildId: tmp, channelId, context });
+  },
+  fetchChannelStoreListing(channelId, arg1) {
+    _require = channelId;
+    if (null != arg1) {
+      let result = closure_11.CHANNEL_STORE_LISTING_SKU(channelId, arg1);
+    } else {
+      result = closure_11.CHANNEL_STORE_LISTING(channelId);
+    }
+    const result1 = require("StoreUtils").httpGetWithCountryCodeQuery(result);
+    return result1.then((body) => {
+      DispatcherDefault.dispatch({ type: "STORE_LISTING_FETCH_SUCCESS", channelId, storeListing: body.body });
+    });
+  },
+  createTextChannel(arg0, arg1, parent_id, formatToPlainStringResult) {
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = parent_id;
+    closure_3 = formatToPlainStringResult;
+    return (async () => {
+      const name = tmp2;
+      const obj4 = { type: constants.GUILD_TEXT, name, permission_overwrites: [] };
+      if (null != parent_id) {
+        obj4.parent_id = parent_id;
+      }
+      if (null != topic) {
+        obj4.topic = topic;
+      }
+      const HTTP = tmp5(parent_id[8]).HTTP;
+      const request = { url: closure_1_11.GUILD_CHANNELS(tmp5), body: obj4, oldFormErrors: true, rejectWithError: tmp5(parent_id[8]).rejectWithMigratedError() };
+      closure_128_0 = await HTTP.post(request);
+      const result = name(parent_id[19]).checkGuildTemplateDirty(closure_129_0);
+      return closure_128_0;
+    })();
+  },
+  fetchChannel(arg0) {
+    closure_0 = arg0;
+    return (async () => {
+      const HTTP = v3(dependencyMap[8]).HTTP;
+      await HTTP.get({ url: closure_1_11.CHANNEL(closure_0), rejectWithError: true });
+      return arg1.body;
+    })();
+  },
+  openChannel(arg0) {
+    closure_0 = arg0;
+    const self = this;
+    return (async () => {
+      await self.fetchChannel(closure_0);
+      c2 = 0;
+      closure_128_0 = await "HermesInternal";
+      closure_128_1 = closure_1_6(closure_128_0);
+      tmp3(c2[13]).dispatch({ type: "CHANNEL_CREATE", channel: closure_128_1 });
+      c2 = 0;
+      return closure_128_1;
+    })();
+  }
+};

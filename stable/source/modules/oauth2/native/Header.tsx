@@ -1,0 +1,79 @@
+// Module ID: 9443
+// Function ID: 9444
+// Name: oauth2/Header
+// Dependencies: [19, 17, 1074, 21, 4560, 576, 1396, 1178, 4556, 9444, 1384, 1114, 2]
+// Exports: default
+
+// Module 9443 (oauth2/Header)
+import nativeDefault from "native" /* 576 */;
+import native from "native" /* 1178 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+const View = fn(17).View;
+const UserFlags = fn(1074).UserFlags;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4560);
+let obj2 = { header: { paddingBottom: 16, marginHorizontal: 16, borderTopLeftRadius: nativeDefault.radii.sm, borderTopRightRadius: nativeDefault.radii.sm, flexDirection: "column", justifyContent: "center", alignItems: "center" }, applicationNameWrapper: { flexDirection: "row" }, headerIcons: { alignItems: "center", flexDirection: "row", justifyContent: "space-between", marginBottom: 24 }, ellipseGroup: { flexDirection: "row", justifyContent: "space-between", marginHorizontal: 24 }, ellipse: null, botTag: null };
+let size = { width: 4, height: 4, marginHorizontal: 2, backgroundColor: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, opacity: 0.1, borderRadius: 2 };
+obj2.ellipse = size;
+obj2.botTag = { marginTop: 4, marginLeft: 8 };
+let closure_7 = createStyles.createStyles(obj2);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/oauth2/native/Header.tsx");
+
+export default function Header(accountScopes) {
+  ({ user, application, bot } = accountScopes);
+  const tmp = closure_7();
+  let userAvatarSource;
+  const applicationIconSource = AvatarUtilsDefault.getApplicationIconSource({ id: application.id, icon: application.icon });
+  if (null != user) {
+    userAvatarSource = tmp2(1396).getUserAvatarSource(user);
+    const tmp2Result = tmp2(1396);
+  }
+  const obj3 = { style: tmp.header, children: null };
+  const obj4 = { style: tmp.headerIcons, children: null };
+  const obj2 = { id: application.id, icon: application.icon };
+  const items = [hasOwnProperty(native.Avatar, { source: applicationIconSource, size: native.AvatarSizes.XLARGE }), , ];
+  const obj6 = { style: tmp.ellipseGroup, children: null };
+  const items1 = [hasOwnProperty(View, { style: tmp.ellipse }), hasOwnProperty(View, { style: tmp.ellipse }), hasOwnProperty(View, { style: tmp.ellipse })];
+  obj6.children = items1;
+  items[1] = timestampProducer(View, obj6);
+  const obj5 = { source: applicationIconSource, size: native.AvatarSizes.XLARGE };
+  const obj7 = { style: tmp.ellipse };
+  const obj8 = { style: tmp.ellipse };
+  const obj9 = { style: tmp.ellipse };
+  items[2] = hasOwnProperty(native.Avatar, { source: userAvatarSource, size: native.AvatarSizes.XLARGE });
+  obj4.children = items;
+  const items2 = [timestampProducer(View, obj4), , ];
+  const obj11 = { style: tmp.applicationNameWrapper, children: null };
+  const items3 = [hasOwnProperty(Text_Text.Text, { variant: "text-lg/bold", color: "mobile-text-heading-primary", children: application.name }), ];
+  let tmp8Result = null;
+  if (null != bot) {
+    const obj13 = { style: tmp.botTag, verified: null };
+    let hasFlagResult = null != bot.public_flags;
+    if (hasFlagResult) {
+      hasFlagResult = tmp9(1384).hasFlag(bot.public_flags, UserFlags.VERIFIED_BOT);
+      const tmp9Result = tmp9(1384);
+    }
+    obj13.verified = hasFlagResult;
+    tmp8Result = tmp8(tmp2(9444), obj13);
+    const tmp2Result2 = tmp2(9444);
+  }
+  items3[1] = tmp8Result;
+  obj11.children = items3;
+  items2[1] = timestampProducer(View, obj11);
+  if (accountScopes.accountScopes.length > 0) {
+    const intl2 = tmp9(1114).intl;
+    let stringResult = intl2.string(tmp9(1114).t.jFbDnJ);
+  } else {
+    const intl = tmp9(1114).intl;
+    stringResult = intl.string(tmp9(1114).t["X+Fdpo"]);
+  }
+  items2[2] = hasOwnProperty(Text_Text.Text, { variant: "heading-md/normal", color: "text-default", children: stringResult });
+  obj3.children = items2;
+  return timestampProducer(View, obj3);
+};

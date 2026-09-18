@@ -1,0 +1,16 @@
+// Module ID: 201
+// Function ID: 202
+// Name: BlobModule
+// Dependencies: [202]
+
+// Module 201 (BlobModule)
+import _modDef202 from "module_202" /* 202 */;
+
+const require = globalThis.__r;
+
+for (const key10016 in require("module_202")) {
+  arg5[key10016] = require("module_202")[key10016];
+  continue;
+}
+
+export default _modDef202;

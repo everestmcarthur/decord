@@ -1,0 +1,31 @@
+// Module ID: 6247
+// Function ID: 6248
+// Name: MoonIllocon
+// Dependencies: [21, 5587, 6248, 2]
+// Exports: MoonIllocon
+
+// Module 6247 (MoonIllocon)
+import jsxProd from "jsxProd" /* 21 */;
+import FastImageDefault from "FastImage" /* 5587 */;
+import _modDef6248 from "module_6248" /* 6248 */;
+import size from "module_2" /* 2 */;
+
+const jsx = jsxProd.jsx;
+const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/MoonIllocon.native.tsx");
+
+export const MoonIllocon = function MoonIllocon(size) {
+  let num = size.size;
+  ({ accessible, accessibilityLabel, resizeMode } = size);
+  if (num === undefined) {
+    num = 64;
+  }
+  const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  const obj2 = { uri: _modDef6248 };
+  obj.source = obj2;
+  const items = [{ width: num, height: num }];
+  obj.style = items;
+  obj.accessible = accessible;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.resizeMode = resizeMode;
+  return jsx(FastImageDefault, { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null });
+};

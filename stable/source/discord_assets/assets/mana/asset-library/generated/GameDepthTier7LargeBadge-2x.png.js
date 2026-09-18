@@ -1,0 +1,12 @@
+// Module ID: 6038
+// Function ID: 6039
+// Dependencies: [2]
+
+// Module 6038
+import size from "module_2" /* 2 */;
+
+const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GameDepthTier7LargeBadge-2x.png.js");
+
+export default "https://cdn.discordapp.com/assets/content/aa670e5b21a6d0e5d8d97305d6179a0fd798f6b82e42c38bafa64fe7f8a03860.png";
+export const vanityUrl = "https://cdn.discordapp.com/assets/mana/asset-library/generated/GameDepthTier7LargeBadge-2x.png";
+export const metadata = { fileBytes: 3160 };

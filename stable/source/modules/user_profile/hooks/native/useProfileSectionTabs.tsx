@@ -1,0 +1,95 @@
+// Module ID: 13073
+// Function ID: 13074
+// Name: useProfileSectionTabs
+// Dependencies: [32, 19, 8184, 2]
+// Exports: useProfileSectionTabs, useProfileTabIndices
+
+// Module 13073 (useProfileSectionTabs)
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+
+const UserProfileSections = fn(8184).UserProfileSections;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/hooks/native/useProfileSectionTabs.tsx");
+
+export function useProfileTabIndices(arg0, arg1) {
+  let num = -1;
+  let num2 = -1;
+  if (arg0) {
+    num2 = 1;
+  }
+  const obj = { boardTabIndex: num2, wishlistTabIndex: null };
+  if (arg1) {
+    let num3 = 1;
+    if (arg0) {
+      num3 = 2;
+    }
+    num = num3;
+  }
+  obj.wishlistTabIndex = num;
+  return obj;
+}
+export const useProfileSectionTabs = function useProfileSectionTabs(boardTabIndex) {
+  ({ initialUserProfileSection: _slicedToArray, wishlistTabIndex } = boardTabIndex);
+  boardTabIndex = boardTabIndex.boardTabIndex;
+  const onTabChange = boardTabIndex.onTabChange;
+  let num2;
+  [tmp2, tmp3] = wishlistTabIndex.useState(() => {
+    if (UserProfileSections.WISHLIST === _slicedToArray) {
+      return tmp2.WISHLIST;
+    } else {
+      return tmp2.WIDGETS === tmp ? tmp2.WIDGETS : tmp2.MAIN;
+    }
+  });
+  c4 = tmp3;
+  let num = wishlistTabIndex;
+  if (boardTabIndex.WISHLIST !== tmp2) {
+    num = boardTabIndex;
+    if (tmp4.WIDGETS !== tmp2) {
+      if (tmp4.MAIN === tmp2) {
+        num = 0;
+      }
+    }
+  }
+  if (num < 0) {
+    tmp3(tmp4.MAIN);
+  }
+  num2 = 0;
+  if (num >= 0) {
+    num2 = num;
+  }
+  const items = [wishlistTabIndex, boardTabIndex, onTabChange];
+  const items1 = [num2];
+  const callback = obj.useCallback((arg0) => {
+    if (wishlistTabIndex === arg0) {
+      let MAIN = UserProfileSections.WISHLIST;
+    } else if (boardTabIndex === arg0) {
+      MAIN = UserProfileSections.WIDGETS;
+    } else {
+      MAIN = UserProfileSections.MAIN;
+    }
+    _undefined(MAIN);
+    if (onTabChange != null) {
+      onTabChange(MAIN);
+    }
+  }, items);
+  const tmp = _slicedToArray(wishlistTabIndex.useState(() => {
+    if (UserProfileSections.WISHLIST === _slicedToArray) {
+      return tmp2.WISHLIST;
+    } else {
+      return tmp2.WIDGETS === tmp ? tmp2.WIDGETS : tmp2.MAIN;
+    }
+  }), 2);
+  return {
+    activeProfileTabSection: tmp2,
+    setActiveProfileTabSection: tmp3,
+    handleTabChange: callback,
+    restoreActiveIndex: wishlistTabIndex.useCallback((activeIndex) => {
+      activeIndex = activeIndex.activeIndex;
+      if (activeIndex.get() !== num2) {
+        activeIndex.setActiveIndex(tmp, false, true);
+      }
+    }, items1),
+    activeProfileTabSectionIndex: num2
+  };
+};

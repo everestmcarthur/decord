@@ -1,0 +1,158 @@
+// Module ID: 17304
+// Function ID: 17305
+// Name: AcceptInviteManager
+// Dependencies: [502, 1957, 2021, 1979, 4544, 4199, 7671, 1074, 7735, 1100, 4527, 4763, 17305, 1896, 7118, 17306, 573, 8744, 2]
+
+// Module 17304 (AcceptInviteManager)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
+import InviteTypeUtils from "InviteTypeUtils" /* 7735 */;
+import FriendInviteUtils from "FriendInviteUtils" /* 17306 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import InviteStore from "InviteStore" /* 4544 */;
+import PermissionStore from "PermissionStore" /* 4199 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7118 */;
+
+require = fn;
+const ACCEPT_INVITE_MODAL_KEY = fn(7671).ACCEPT_INVITE_MODAL_KEY;
+const Constants = fn(1074);
+({ InviteStates: c10, Permissions: closure_11, Routes: closure_12 } = Constants);
+const prototype = function AcceptInviteManager() {
+  const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
+  require = applyArgumentsResult;
+  applyArgumentsResult._isRegistration = false;
+  applyArgumentsResult.actions = {
+    DISPLAYED_INVITE_SHOW(code) {
+      return applyArgumentsResult._handleShowInvite(code);
+    },
+    DISPLAYED_INVITE_CLEAR() {
+      return applyArgumentsResult._handleClearInvite();
+    },
+    DEFERRED_INVITE_SHOW() {
+      return applyArgumentsResult._handleShowDeferredInvite();
+    },
+    REGISTER_SUCCESS() {
+      return applyArgumentsResult._handleRegisterSuccess();
+    }
+  };
+  applyArgumentsResult._handleShowInvite = function _handleShowInvite(code) {
+    code = code.code;
+    ({ deeplinkAttemptId, invite_instance_id } = code);
+    if (AuthenticationStore.isAuthenticated()) {
+      obj._handleInvite(code, deeplinkAttemptId, invite_instance_id);
+    } else {
+      obj._deferredCode = code;
+    }
+  };
+  applyArgumentsResult._handleClearInvite = function _handleClearInvite() {
+    applyArgumentsResult._deferredCode = null;
+    applyArgumentsResult._isRegistration = false;
+    ModalActionCreatorsDefault.popWithKey(ACCEPT_INVITE_MODAL_KEY);
+  };
+  applyArgumentsResult._handleShowDeferredInvite = function _handleShowDeferredInvite() {
+    if (null != applyArgumentsResult._deferredCode) {
+      obj._handleInvite(obj._deferredCode);
+      obj._deferredCode = null;
+    }
+  };
+  applyArgumentsResult._handleInvite = function _handleInvite(_deferredCode, deeplinkAttemptId, invite_instance_id) {
+    const code = _deferredCode;
+    const inviteInstanceId = invite_instance_id;
+    const result = InviteStore.addConditionalChangeListener(() => {
+      const invite = InviteStore.getInvite(code);
+      let flag = null == invite;
+      if (!flag) {
+        flag = invite.state !== constants.RESOLVED && invite.state !== constants.EXPIRED && invite.state !== constants.BANNED && invite.state !== constants.ERROR;
+        const tmp4 = invite.state !== constants.RESOLVED && invite.state !== constants.EXPIRED && invite.state !== constants.BANNED && invite.state !== constants.ERROR;
+      }
+      if (!flag) {
+        if (null == invite.channel) {
+          if (null == invite.guild) {
+            if (null != invite.inviter) {
+              let str = "Accept Invite";
+              if (null != deeplinkAttemptId) {
+                str = "Deep Link";
+              }
+              const obj = { location: str };
+              FriendInviteUtils.acceptFriendInvite(invite, obj);
+              DispatcherDefault.wait(() => set(8744).clearDisplayedInvite());
+              flag = false;
+            }
+          }
+        }
+        let flag2 = false;
+        if (invite.state === constants.RESOLVED) {
+          flag2 = false;
+          if (!obj9.isStreamInvite(invite)) {
+            const guild = invite.guild;
+            let id;
+            if (guild != null) {
+              id = guild.id;
+            }
+            const target_channel_id = invite.target_channel_id;
+            flag2 = false;
+            if (null != id) {
+              flag2 = false;
+              if (null != target_channel_id) {
+                flag2 = false;
+                if (null != GuildStore.getGuild(id)) {
+                  if (null != invite.roles) {
+                    if (invite.roles.length > 0) {
+                      const selfMember = GuildMemberStore.getSelfMember(id);
+                      let roles1;
+                      if (selfMember != null) {
+                        roles1 = selfMember.roles;
+                      }
+                      if (roles1 == null) {
+                        roles1 = [];
+                      }
+                      const set = new Set(roles1);
+                      const roles = invite.roles;
+                      flag2 = false;
+                    }
+                  }
+                  let flag3 = PermissionStore.can(constants2.VIEW_CHANNEL, ChannelStore.getChannel(target_channel_id));
+                  if (flag3) {
+                    const target_message_id = invite.target_message_id;
+                    tmp39(1100).transitionTo(closure_3_12.CHANNEL(id, target_channel_id, target_message_id), { navigationReplace: true, openChannel: true });
+                    flag3 = true;
+                    const tmp39Result = tmp39(1100);
+                  }
+                  flag2 = flag3;
+                }
+              }
+            }
+          }
+          obj9 = InviteTypeUtils;
+          tmp39 = require;
+        }
+        if (flag2) {
+          DispatcherDefault.wait(() => set(8744).clearDisplayedInvite());
+          flag = false;
+        } else {
+          ActionSheetActionCreatorsDefault.hideActionSheet();
+          const obj4 = { code, isRegistration: applyArgumentsResult._isRegistration, deeplinkAttemptId, inviteInstanceId };
+          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(17305, dependencyMap.paths), obj4, ACCEPT_INVITE_MODAL_KEY);
+          flag = false;
+        }
+      }
+      return flag;
+    });
+  };
+  applyArgumentsResult._handleRegisterSuccess = function _handleRegisterSuccess() {
+    applyArgumentsResult._isRegistration = true;
+  };
+  return applyArgumentsResult;
+}.prototype;
+class prototype extends tmp3 {
+}
+const prototype1 = new prototype();
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/accept_invite/native/AcceptInviteManager.tsx");
+
+export default prototype1;

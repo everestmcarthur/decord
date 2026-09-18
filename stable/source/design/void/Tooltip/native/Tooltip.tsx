@@ -1,0 +1,116 @@
+// Module ID: 14104
+// Function ID: 14105
+// Name: Tooltip/Tooltip
+// Dependencies: [19, 17, 1074, 21, 4560, 576, 1369, 4556, 1178, 2]
+// Exports: default
+
+// Module 14104 (Tooltip/Tooltip)
+import nativeDefault from "native" /* 576 */;
+import GlobalUtils from "GlobalUtils" /* 1369 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const TooltipArrowDirections = { UP: "UP", DOWN: "DOWN" };
+let obj2 = { CENTER: "CENTER", RIGHT: "RIGHT", LEFT: "LEFT" };
+const createStyles = fn(4560);
+let obj4 = { container: { padding: 10, borderRadius: nativeDefault.radii.xs, alignSelf: "flex-start", minWidth: 60, alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BRAND }, label: null, title: null, arrow: null };
+let obj5 = { padding: 10, borderRadius: nativeDefault.radii.xs, alignSelf: "flex-start", minWidth: 60, alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
+obj4.label = { fontFamily: fn(1074).Fonts.PRIMARY_MEDIUM, fontSize: 12, color: nativeDefault.colors.WHITE };
+obj4.title = { marginBottom: 4 };
+let size = { width: 0, height: 0, borderStyle: "solid", borderLeftColor: "transparent", borderRightColor: "transparent", borderTopColor: nativeDefault.colors.BACKGROUND_BRAND, borderBottomColor: nativeDefault.colors.BACKGROUND_BRAND };
+obj4.arrow = size;
+let closure_8 = createStyles.createStyles(obj4);
+size = fn(2);
+const result = size.fileFinishedImporting("design/void/Tooltip/native/Tooltip.tsx");
+
+export default function Tooltip(arrowHeight) {
+  ({ arrowStyle, label, title, arrowWidth } = arrowHeight);
+  ({ style, containerStyle, labelStyle, children } = arrowHeight);
+  if (arrowWidth === undefined) {
+    arrowWidth = 16;
+  }
+  let num = arrowHeight.arrowHeight;
+  if (num === undefined) {
+    num = 8;
+  }
+  let num2 = arrowHeight.arrowOffset;
+  if (num2 === undefined) {
+    num2 = 0;
+  }
+  let LEFT = arrowHeight.arrowPosition;
+  if (LEFT === undefined) {
+    LEFT = obj2.LEFT;
+  }
+  let UP = arrowHeight.arrowDirection;
+  if (UP === undefined) {
+    UP = obj.UP;
+  }
+  const tmp3 = closure_8();
+  const items = [LEFT, num2];
+  const memo = noop.useMemo(() => {
+    if (obj2.LEFT === LEFT) {
+      obj2 = { alignSelf: "flex-start", left: num2 };
+      return obj2;
+    } else if (tmp2.CENTER === tmp) {
+      return { alignSelf: "center" };
+    } else if (tmp2.RIGHT === tmp) {
+      const obj3 = { alignSelf: "flex-end", right: num2 };
+      return obj3;
+    } else {
+      GlobalUtils.assertNever(tmp);
+    }
+  }, items);
+  obj = { style, children: null };
+  let tmp8 = UP === obj.UP;
+  if (tmp8) {
+    obj2 = { style: null };
+    const items1 = [tmp3.arrow, , , ];
+    let obj3 = { borderLeftWidth: arrowWidth / 2, borderRightWidth: arrowWidth / 2, borderBottomWidth: num };
+    items1[1] = obj3;
+    items1[2] = memo;
+    items1[3] = arrowStyle;
+    obj2.style = items1;
+    tmp8 = closure_4(tmp6, obj2);
+  }
+  const items2 = [tmp8, , ];
+  const obj4 = { onLayout: arrowHeight.onLayout, style: null, children: null };
+  const items3 = [tmp3.container, containerStyle];
+  obj4.style = items3;
+  let tmp10 = null;
+  if (null != title) {
+    const obj5 = { style: tmp3.title, variant: "text-md/semibold", color: "text-overlay-light", children: title };
+    tmp10 = closure_4(num2(LEFT[7]).Heading, obj5);
+  }
+  const items4 = [tmp10, , ];
+  let tmp14 = null;
+  if (null != label) {
+    const obj6 = { style: null, children: null };
+    const items5 = [tmp3.label, labelStyle];
+    obj6.style = items5;
+    obj6.children = label;
+    tmp14 = closure_4(num2(LEFT[8]).LegacyText, obj6);
+  }
+  items4[1] = tmp14;
+  items4[2] = children;
+  obj4.children = items4;
+  items2[1] = closure_5(View, obj4);
+  let tmp18 = UP === obj.DOWN;
+  if (tmp18) {
+    const obj7 = { style: null };
+    const items6 = [tmp3.arrow, , , ];
+    const obj8 = { borderLeftWidth: arrowWidth / 2, borderRightWidth: arrowWidth / 2, borderTopWidth: num };
+    items6[1] = obj8;
+    items6[2] = memo;
+    items6[3] = arrowStyle;
+    obj7.style = items6;
+    tmp18 = closure_4(tmp6, obj7);
+  }
+  items2[2] = tmp18;
+  obj.children = items2;
+  return closure_5(View, obj);
+};
+export { TooltipArrowDirections };
+export const TooltipArrowPositions = obj2;

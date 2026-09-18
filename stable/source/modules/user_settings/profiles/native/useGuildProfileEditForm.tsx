@@ -1,0 +1,250 @@
+// Module ID: 14649
+// Function ID: 14650
+// Name: useGuildProfileEditForm
+// Dependencies: [109, 5, 19, 8161, 7621, 1979, 5438, 1371, 1074, 504, 11876, 4447, 573, 9216, 14650, 11091, 6988, 14608, 8168, 4461, 1114, 2]
+// Exports: default
+
+// Module 14649 (useGuildProfileEditForm)
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "module_19" /* 19 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8161 */;
+import UserProfileStore from "UserProfileStore" /* 7621 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import SortedGuildStore from "SortedGuildStore" /* 5438 */;
+import UserStore from "UserStore" /* 1371 */;
+
+const require = fn;
+let closure_3 = ["bannerOriginalMd5"];
+const IGNORE_GUILD_IDS = fn(8161).IGNORE_GUILD_IDS;
+const FormStates = fn(1074).FormStates;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_settings/profiles/native/useGuildProfileEditForm.tsx");
+
+export default function useGuildProfileEditForm() {
+  const items = [pendingDisplayNameStyles];
+  stateFromStores = stateFromStores(pendingNickname[9]).useStateFromStores(items, () => pendingDisplayNameStyles.getCurrentUser());
+  let obj = stateFromStores(pendingNickname[9]);
+  const items1 = [selectedGuild, pendingProfileFrame];
+  const stateFromStoresObject = stateFromStores(pendingNickname[9]).useStateFromStoresObject(items1, () => {
+    const selectedGuildId = selectedGuild.selectedGuildId;
+    const obj = {};
+    const merged = Object.assign(selectedGuild.getPendingChanges(selectedGuildId));
+    obj.errors = selectedGuild.getErrors(selectedGuildId);
+    obj.selectedGuild = pendingProfileFrame.getGuild(selectedGuildId);
+    obj.formState = selectedGuild.getFormState();
+    return obj;
+  });
+  const pendingAvatar = stateFromStoresObject.pendingAvatar;
+  pendingNickname = stateFromStoresObject.pendingNickname;
+  const pendingBanner = stateFromStoresObject.pendingBanner;
+  const pendingBio = stateFromStoresObject.pendingBio;
+  const pendingPronouns = stateFromStoresObject.pendingPronouns;
+  const pendingThemeColors = stateFromStoresObject.pendingThemeColors;
+  selectedGuild = stateFromStoresObject.selectedGuild;
+  const pendingAvatarDecoration = stateFromStoresObject.pendingAvatarDecoration;
+  const pendingProfileEffect = stateFromStoresObject.pendingProfileEffect;
+  pendingProfileFrame = stateFromStoresObject.pendingProfileFrame;
+  const pendingNameplate = stateFromStoresObject.pendingNameplate;
+  pendingDisplayNameStyles = stateFromStoresObject.pendingDisplayNameStyles;
+  const obj2 = stateFromStores(pendingNickname[9]);
+  const tmp4 = selectedGuild;
+  const tmp5 = pendingProfileFrame;
+  let id;
+  if (selectedGuild != null) {
+    id = selectedGuild.id;
+  }
+  const guildAutomodProfileQuarantineErrors = stateFromStores(pendingNickname[10]).useGuildAutomodProfileQuarantineErrors(id);
+  const obj3 = stateFromStores(pendingNickname[10]);
+  const items2 = [tmp4, pendingProfileEffect];
+  const stateFromStores1 = stateFromStores(pendingNickname[9]).useStateFromStores(items2, () => {
+    let isSubmitting = selectedGuild.getFormState() === memo.SUBMITTING;
+    if (!isSubmitting) {
+      isSubmitting = pendingProfileEffect.isSubmitting;
+    }
+    return isSubmitting;
+  });
+  let merged = Object.assign(guildAutomodProfileQuarantineErrors);
+  const merged1 = Object.assign(stateFromStoresObject.errors);
+  const memo = pendingThemeColors.useMemo(() => {
+    const delayedCall = new stateFromStores(pendingNickname[11]).DelayedCall(200, () => {
+      pendingAvatar(573).wait(stateFromStores(9216).resetAllPending);
+    });
+    return delayedCall;
+  }, []);
+  const items3 = [memo];
+  const effect = pendingThemeColors.useEffect(() => () => {
+    memo.cancel();
+    pendingAvatar(pendingNickname[12]).wait(stateFromStores(pendingNickname[13]).resetAllPending);
+  }, items3);
+  closure_14 = pendingAvatar(tmp2[14])();
+  const obj4 = {};
+  const obj6 = pendingThemeColors;
+  const tmpResult = stateFromStores(pendingNickname[9]);
+  const items4 = [tmp5, pendingNameplate];
+  let tmp15 = stateFromStores1;
+  const stateFromStores2 = stateFromStores(pendingNickname[9]).useStateFromStores(items4, () => {
+    const guild = GuildStore.getGuild(closure_14);
+    let id;
+    if (guild != null) {
+      id = guild.id;
+    }
+    if (null != id) {
+      if (!IGNORE_GUILD_IDS.has(guild.id)) {
+        return guild;
+      }
+    }
+    return GuildStore.getGuild(SortedGuildStore.getFlattenedGuildIds()[0]);
+  });
+  if (!stateFromStores1) {
+    tmp15 = stateFromStoresObject.formState === memo.CLOSED;
+  }
+  closure_15 = tmp15;
+  const items5 = [tmp15, stateFromStores, pendingAvatar, pendingNickname, pendingAvatarDecoration, pendingNameplate, pendingDisplayNameStyles, pendingBanner, pendingBio, pendingPronouns, pendingThemeColors, pendingProfileEffect, pendingProfileFrame, , ];
+  let id1;
+  const tmpResult2 = stateFromStores(pendingNickname[9]);
+  if (selectedGuild != null) {
+    id1 = selectedGuild.id;
+  }
+  const obj5 = {
+    handleSubmit: obj6.useCallback(pendingPronouns(function*(arg0, value) {
+      closure_3 = tmp2;
+      if (!closure_15) {
+        if (null != stateFromStores) {
+          const guildMemberChangesForUpdateRequest = stateFromStores(tmp3[15]).getGuildMemberChangesForUpdateRequest({ pendingAvatar, pendingNickname, pendingAvatarDecoration, pendingNameplate, pendingDisplayNameStyles });
+          closure_130_0 = guildMemberChangesForUpdateRequest;
+          stateFromStores(tmp3[15]);
+          let id;
+          if (selectedGuild != null) {
+            id = selectedGuild.id;
+          }
+          const profileChangesForUpdateRequest = stateFromStores(tmp3[15]).getProfileChangesForUpdateRequest({ pendingBanner, pendingBio, pendingPronouns, pendingThemeColors, pendingProfileEffect, pendingProfileFrame }, id);
+          closure_130_2 = true;
+          closure_130_3 = false;
+          const _Object = Object;
+          if (Object.keys(guildMemberChangesForUpdateRequest).length > 0) {
+            let id1;
+            if (selectedGuild != null) {
+              id1 = selectedGuild.id;
+            }
+            const v2 = 1;
+            c5 = 1;
+            return { value: stateFromStores(tmp3[13]).saveGuildIdentityChanges(id1, guildMemberChangesForUpdateRequest), done: false };
+          }
+          stateFromStores(tmp3[15]);
+        }
+      }
+      yield "HermesInternal";
+      if (1 === tmp6) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          return { value, done: true };
+        } else {
+          closure_130_4 = value;
+          if (closure_130_4.ok) {
+            const body2 = closure_130_4.body;
+            if (undefined !== closure_131_1) {
+              const obj12 = { isGuildProfile: true, avatarHash: body2.avatar, avatarId: closure_130_0.avatarId, avatarAssetOrigin: null };
+              let assetOrigin;
+              if (closure_131_1 != null) {
+                assetOrigin = closure_131_1.assetOrigin;
+              }
+              obj12.avatarAssetOrigin = assetOrigin;
+              const result = stateFromStores(tmp3[16]).trackUserAvatarUpdated(obj12);
+              stateFromStores(tmp3[16]);
+            }
+          } else {
+            let avatar;
+            if (closure_130_4 != null) {
+              const body = closure_130_4.body;
+              if (body != null) {
+                avatar = body.avatar;
+              }
+            }
+            if (null != avatar) {
+              const result1 = stateFromStores(tmp3[17]).showGenericGuildProfileUpdateFailureToast(closure_130_4.body.avatar);
+              closure_130_3 = true;
+              stateFromStores(tmp3[17]);
+            }
+          }
+          let tmp42 = closure_130_2;
+          if (closure_130_2) {
+            let ok;
+            if (closure_130_4 != null) {
+              ok = closure_130_4.ok;
+            }
+            stateFromStores = ok;
+            if (ok == null) {
+              stateFromStores = false;
+            }
+            tmp42 = stateFromStores;
+          }
+          closure_130_2 = tmp42;
+        }
+      } else if (arg0 === 1) {
+        c5 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c5 = 3;
+        return { value, done: true };
+      } else {
+        closure_130_8 = value;
+        let ok1;
+        if (closure_130_8 != null) {
+          ok1 = closure_130_8.ok;
+        }
+        if (!ok1) {
+          const aPIError = new stateFromStores(tmp3[19]).APIError(closure_130_8);
+          const firstFieldErrorMessage = aPIError.getFirstFieldErrorMessage("banner");
+          if (null != firstFieldErrorMessage) {
+            const result2 = stateFromStores(tmp3[17]).showGenericGuildProfileUpdateFailureToast(firstFieldErrorMessage);
+            closure_130_3 = true;
+            stateFromStores(tmp3[17]);
+          }
+        }
+        let tmp24 = closure_130_2;
+        if (closure_130_2) {
+          let ok2;
+          if (closure_130_8 != null) {
+            ok2 = closure_130_8.ok;
+          }
+          c1 = ok2;
+          if (ok2 == null) {
+            c1 = false;
+          }
+          tmp24 = c1;
+        }
+        closure_130_2 = tmp24;
+      }
+      let tmp54 = closure_130_2;
+      if (!closure_130_2) {
+        tmp54 = closure_130_3;
+      }
+      if (!tmp54) {
+        const intl = stateFromStores(tmp3[20]).intl;
+        const result3 = stateFromStores(tmp3[17]).showGenericGuildProfileUpdateFailureToast(intl.string(stateFromStores(tmp3[20]).t.s35OuK));
+        stateFromStores(tmp3[17]);
+      }
+      if (closure_130_2) {
+        closure_131_13.delay();
+      }
+      return closure_130_2;
+    }), items5),
+    isDisabled: tmp15,
+    isSubmitting: stateFromStores1,
+    resetPending: stateFromStores(pendingNickname[13]).resetAllPending
+  };
+  items5[13] = id1;
+  items5[14] = memo;
+  const merged2 = Object.assign(stateFromStoresObject);
+  if (selectedGuild == null) {
+    selectedGuild = stateFromStores2;
+  }
+  obj5.guild = selectedGuild;
+  obj5.errors = obj4;
+  return obj5;
+};
+export const RESET_DELAY_MS = 200;

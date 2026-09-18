@@ -1,0 +1,32 @@
+// Module ID: 15510
+// Function ID: 15511
+// Name: ServerTrendingNotificationSetting
+// Dependencies: [7976, 11473, 1114, 1935, 15511, 2]
+
+// Module 15510 (ServerTrendingNotificationSetting)
+import util from "util" /* 1114 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import SettingsConstants from "SettingsConstants" /* 7976 */;
+import ServerTrendingNotificationUtils from "ServerTrendingNotificationUtils" /* 15511 */;
+import SettingBuilders from "SettingBuilders" /* 11473 */;
+import size from "module_2" /* 2 */;
+
+const toggle = SettingBuilders.createToggle({
+  useTitle() {
+    const intl = util.intl;
+    return intl.string(util.t.Q3VWjI);
+  },
+  useDescription() {
+    const intl = util.intl;
+    return intl.string(util.t.Wc1RcU);
+  },
+  parent: SettingsConstants.MobileUserSettings.NOTIFICATIONS,
+  useValue: UserSettings.EnableServerTrendingNotifications.useSetting,
+  onValueChange: ServerTrendingNotificationUtils.onServerTrendingNotificationSettingsChanged,
+  usePredicate() {
+    return false;
+  }
+});
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/ServerTrendingNotificationSetting.tsx");
+
+export default toggle;

@@ -1,0 +1,17 @@
+// Module ID: 12447
+// Function ID: 12448
+// Name: MessageRequestConstants
+// Dependencies: [2]
+
+// Module 12447 (MessageRequestConstants)
+import size from "module_2" /* 2 */;
+
+const result = size.fileFinishedImporting("modules/message_request/MessageRequestConstants.tsx");
+
+export const MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL = "Message Request Accept Confirmation";
+export const MessageRequestAnalyticsAction = { ACCEPT: 0, [0]: "ACCEPT", REJECT: 1, [1]: "REJECT", ACCEPT_CONFIRMATION_PROMPT: 2, [2]: "ACCEPT_CONFIRMATION_PROMPT", DISMISS_CONFIRMATION_PROMPT: 3, [3]: "DISMISS_CONFIRMATION_PROMPT", ACCEPT_HAM_CONFIRMATION_PROMPT: 4, [4]: "ACCEPT_HAM_CONFIRMATION_PROMPT", DISMISS_HAM_CONFIRMATION_PROMPT: 5, [5]: "DISMISS_HAM_CONFIRMATION_PROMPT" };
+export const LIST_ROW_HEIGHT = 73;
+export const LIST_SECTION_HEIGHT = 26;
+export const BATCH_REJECT_LIMIT = 50;
+export const MOBILE_MESSAGE_REQUESTS_MODAL_KEY = "MESSAGE_REQUESTS";
+export const MessageRequestSections = { REQUESTS: "REQUESTS", SPAM: "SPAM" };

@@ -1,0 +1,24 @@
+// Module ID: 11436
+// Function ID: 11437
+// Name: CodedLinkActionCreators
+// Dependencies: [1081, 573, 2]
+
+// Module 11436 (CodedLinkActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import ConferenceModeConstants from "ConferenceModeConstants" /* 1081 */;
+import size from "module_2" /* 2 */;
+
+const CONFERENCE_MODE_ENABLED = ConferenceModeConstants.CONFERENCE_MODE_ENABLED;
+const result = size.fileFinishedImporting("modules/coded_links/web/CodedLinkActionCreators.tsx");
+
+export default {
+  openNativeAppModal(arg0, arg1) {
+
+  },
+  nativeModalOpened(code) {
+    DispatcherDefault.dispatch({ type: "NATIVE_APP_MODAL_OPENED", code });
+  },
+  nativeModalOpenFailed(code) {
+    DispatcherDefault.dispatch({ type: "NATIVE_APP_MODAL_OPEN_FAILED", code });
+  }
+};

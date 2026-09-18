@@ -1,0 +1,60 @@
+// Module ID: 10072
+// Function ID: 10073
+// Name: AudienceGridRow
+// Dependencies: [19, 17, 5414, 21, 4560, 10073, 10074, 2]
+
+// Module 10072 (AudienceGridRow)
+import BlankAudienceTileDefault from "BlankAudienceTile" /* 10073 */;
+import AudienceTileDefault from "AudienceTile" /* 10074 */;
+import noop from "module_19" /* 19 */;
+
+class BlankAudience {
+  constructor(arg0) {
+    count = global.count;
+    items = [];
+    for (let num = 0; num < count; num = num + 1) {
+      tmp = jsx;
+      tmp2 = closure_0;
+      tmp3 = closure_1;
+      arr1 = items.push(jsx(closure_0(closure_1[5]), {}, num));
+    }
+    return items;
+  }
+}
+const View = fn(17).View;
+const MAX_AUDIENCE_ROW_LIMIT = fn(5414).MAX_AUDIENCE_ROW_LIMIT;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4560);
+let closure_6 = createStyles.createStyles({ rowContainer: { flex: 1, flexDirection: "row", marginVertical: 16, paddingHorizontal: 4, justifyContent: "space-between" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/stage_channels/native/components/AudienceGridRow.tsx");
+
+export default noop.memo((theme) => {
+  ({ channel: importDefault, participants, renderBlankAudience } = theme);
+  if (renderBlankAudience === undefined) {
+    renderBlankAudience = true;
+  }
+  theme = theme.theme;
+  let num = 0;
+  if (renderBlankAudience) {
+    num = MAX_AUDIENCE_ROW_LIMIT - participants.length;
+  }
+  const items = [closure_6().rowContainer, ];
+  let str = "center";
+  if (renderBlankAudience) {
+    str = "space-between";
+  }
+  const obj = { style: items, children: null };
+  items[1] = { justifyContent: str };
+  const items1 = [participants.map((participant) => React4(AudienceTileDefault, { theme, channel, participant }, participant.id)), ];
+  let tmp5 = null;
+  if (num > 0) {
+    const obj2 = { count: num };
+    tmp5 = closure_4(BlankAudience, obj2);
+  }
+  items1[1] = tmp5;
+  obj.children = items1;
+  return closure_5(View, obj);
+});
+export { BlankAudience };

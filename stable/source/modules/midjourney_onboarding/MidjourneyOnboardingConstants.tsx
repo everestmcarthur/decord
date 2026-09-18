@@ -1,0 +1,12 @@
+// Module ID: 13863
+// Function ID: 13864
+// Name: MidjourneyOnboardingConstants
+// Dependencies: [2]
+
+// Module 13863 (MidjourneyOnboardingConstants)
+import size from "module_2" /* 2 */;
+
+const result = size.fileFinishedImporting("modules/midjourney_onboarding/MidjourneyOnboardingConstants.tsx");
+
+export const MIDJOURNEY_GUILD_ID = "662267976984297473";
+export const MIDJOURNEY_BOT_ID = "936929561302675456";

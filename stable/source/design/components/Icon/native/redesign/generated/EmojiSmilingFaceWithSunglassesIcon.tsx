@@ -1,0 +1,26 @@
+// Module ID: 15394
+// Function ID: 15395
+// Name: EmojiSmilingFaceWithSunglassesIcon
+// Dependencies: [19, 21, 576, 4261, 15395, 2]
+// Exports: EmojiSmilingFaceWithSunglassesIcon
+
+// Module 15394 (EmojiSmilingFaceWithSunglassesIcon)
+import nativeDefault from "native" /* 576 */;
+import BaseIconImage from "BaseIconImage" /* 4261 */;
+import _mod15395 from "module_15395" /* 15395 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Icon/native/redesign/generated/EmojiSmilingFaceWithSunglassesIcon.tsx");
+
+export const EmojiSmilingFaceWithSunglassesIcon = function EmojiSmilingFaceWithSunglassesIcon(color) {
+  let INTERACTIVE_ICON_DEFAULT = color.color;
+  if (INTERACTIVE_ICON_DEFAULT === undefined) {
+    INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
+  }
+  const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
+  const merged1 = Object.assign(merged);
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15395, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+};

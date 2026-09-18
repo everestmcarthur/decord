@@ -1,0 +1,221 @@
+// Module ID: 9103
+// Function ID: 9104
+// Name: VideoBackgroundUtils
+// Dependencies: [1957, 4583, 6987, 1074, 1396, 4740, 1242, 2]
+// Exports: getEffectAnalyticsType, getVideoBackgroundOptionFromProto, getVideoBackgroundProtoFromOption, isCustomBackgroundOption, isDefaultBackgroundOption, trackBackgroundOptionAdded, trackBackgroundOptionDeleted, trackBackgroundOptionUpdated
+
+// Module 9103 (VideoBackgroundUtils)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AvatarUtils from "AvatarUtils" /* 1396 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4740 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4583 */;
+
+require = fn;
+function isAnimatedBackgroundOption(type) {
+  let tmp = typeof type === "number";
+  if (typeof type === "number") {
+    tmp = type in OPTION_1;
+  }
+  if (tmp) {
+    let hasItem = React5.includes(type);
+  } else {
+    let tmp3 = null != type && typeof type === "object";
+    if (tmp3) {
+      tmp3 = "id" in type;
+    }
+    if (tmp3) {
+      let flag = type.type === constants.BACKGROUND;
+      if (!flag) {
+        type = type.type;
+        flag = false;
+      }
+      tmp3 = flag;
+    }
+    hasItem = tmp3;
+    if (hasItem) {
+      let isAnimatedIconHashResult = AvatarUtils.isAnimatedIconHash(type.asset);
+      if (!isAnimatedIconHashResult) {
+        isAnimatedIconHashResult = tmp6(1396).isVideoAssetHash(type.asset);
+        const tmp6Result = tmp6(1396);
+      }
+      hasItem = isAnimatedIconHashResult;
+      tmp6 = require;
+    }
+  }
+  return hasItem;
+}
+function getEffectDetailAnalyticsName(lastUsedVideoBackgroundOption) {
+  let str = "None";
+  if (null != lastUsedVideoBackgroundOption) {
+    let tmp = null != lastUsedVideoBackgroundOption && typeof lastUsedVideoBackgroundOption === "object";
+    if (tmp) {
+      tmp = "id" in lastUsedVideoBackgroundOption;
+    }
+    if (tmp) {
+      let flag = lastUsedVideoBackgroundOption.type === constants.BACKGROUND;
+      if (!flag) {
+        const type = lastUsedVideoBackgroundOption.type;
+        flag = false;
+      }
+      tmp = flag;
+    }
+    let str3 = "Custom";
+    if (!tmp) {
+      let str4 = "Blur";
+      if ("blur" !== lastUsedVideoBackgroundOption) {
+        let str6 = "Cybercity";
+        if (OPTION_1.OPTION_1 !== lastUsedVideoBackgroundOption) {
+          str6 = "Discord the Movie";
+          if (tmp4.OPTION_2 !== lastUsedVideoBackgroundOption) {
+            str6 = "Wumpus Vacation";
+            if (tmp4.OPTION_3 !== lastUsedVideoBackgroundOption) {
+              str6 = "Vaporwave";
+              if (tmp4.OPTION_4 !== lastUsedVideoBackgroundOption) {
+                str6 = "Capernite Day";
+                if (tmp4.OPTION_7 !== lastUsedVideoBackgroundOption) {
+                  str6 = "Capernite Night";
+                  if (tmp4.OPTION_8 !== lastUsedVideoBackgroundOption) {
+                    str6 = "Hacker Den";
+                    if (tmp4.OPTION_9 !== lastUsedVideoBackgroundOption) {
+                      if (tmp4.OPTION_10 === lastUsedVideoBackgroundOption) {
+                        str6 = "Wumpice";
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        const _HermesInternal = HermesInternal;
+        str4 = "Preset - " + str6;
+      }
+      str3 = str4;
+    }
+    str = str3;
+  }
+  return str;
+}
+const VideoBackgroundConstants = fn(6987);
+({ DefaultVideoBackground: hasOwnProperty, VideoFilterType: metroRequire, ANIMATED_DEFAULT_VIDEO_BACKGROUNDS: closure_7 } = VideoBackgroundConstants);
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/video_backgrounds/VideoBackgroundUtils.tsx");
+
+export const isCustomBackgroundOption = function isCustomBackgroundOption(videoBackgroundOptionFromProto) {
+  let tmp = null != videoBackgroundOptionFromProto && typeof videoBackgroundOptionFromProto === "object";
+  if (tmp) {
+    tmp = "id" in videoBackgroundOptionFromProto;
+  }
+  if (tmp) {
+    let flag = videoBackgroundOptionFromProto.type === constants.BACKGROUND;
+    if (!flag) {
+      const type = videoBackgroundOptionFromProto.type;
+      flag = false;
+    }
+    tmp = flag;
+  }
+  return tmp;
+};
+export const isDefaultBackgroundOption = function isDefaultBackgroundOption(videoBackgroundOptionFromProto) {
+  let tmp = typeof videoBackgroundOptionFromProto === "number";
+  if (typeof videoBackgroundOptionFromProto === "number") {
+    tmp = videoBackgroundOptionFromProto in OPTION_1;
+  }
+  return tmp;
+};
+export { isAnimatedBackgroundOption };
+export const getEffectAnalyticsType = function getEffectAnalyticsType(lastUsedVideoBackgroundOption) {
+  let str = "None";
+  if (null != lastUsedVideoBackgroundOption) {
+    str = "Video Background";
+  }
+  return str;
+};
+export { getEffectDetailAnalyticsName };
+export const trackBackgroundOptionUpdated = function trackBackgroundOptionUpdated(type, location, Enabled) {
+  const guildId = RTCConnectionStore.getGuildId();
+  const channelId = RTCConnectionStore.getChannelId();
+  const channel = ChannelStore.getChannel(channelId);
+  const voiceStateMetadata = AppAnalyticsUtils.getVoiceStateMetadata(guildId, channelId, true);
+  const obj5 = { location, effect_type: null, effect_detail: null, effect_state: null, channel_id: null, channel_type: null, guild_id: null, voice_state_count: null, video_stream_count: null, media_session_id: null, rtc_connection_id: null, is_animated: null };
+  let str = "None";
+  if (null != type) {
+    str = "Video Background";
+  }
+  obj5.effect_type = str;
+  obj5.effect_detail = getEffectDetailAnalyticsName(type);
+  obj5.effect_state = Enabled;
+  obj5.channel_id = channelId;
+  type = undefined;
+  if (channel != null) {
+    type = channel.type;
+  }
+  obj5.channel_type = type;
+  obj5.guild_id = guildId;
+  ({ voice_state_count: obj4.voice_state_count, video_stream_count: obj4.video_stream_count } = voiceStateMetadata);
+  obj5.media_session_id = RTCConnectionStore.getMediaSessionId();
+  obj5.rtc_connection_id = RTCConnectionStore.getRTCConnectionId();
+  obj5.is_animated = isAnimatedBackgroundOption(type);
+  AnalyticsUtilsDefault.track(AnalyticEvents.VIDEO_EFFECT_UPDATED, obj5);
+};
+export const trackBackgroundOptionAdded = function trackBackgroundOptionAdded(type, is_video, is_from_tenor) {
+  const obj = AnalyticsUtilsDefault;
+  obj.track(AnalyticEvents.VIDEO_BACKGROUND_ADDED, { is_animated: isAnimatedBackgroundOption(type), is_video, is_from_tenor });
+};
+export const trackBackgroundOptionDeleted = function trackBackgroundOptionDeleted(type) {
+  const obj = AnalyticsUtilsDefault;
+  obj.track(AnalyticEvents.VIDEO_BACKGROUND_DELETED, { is_animated: isAnimatedBackgroundOption(type) });
+};
+export const getVideoBackgroundProtoFromOption = function getVideoBackgroundProtoFromOption(type) {
+  if (null == type) {
+    let obj = { oneofKind: "Array" };
+  } else {
+    let tmp = null != type && typeof type === "object";
+    if (tmp) {
+      tmp = "id" in type;
+    }
+    if (tmp) {
+      let flag = type.type === constants.BACKGROUND;
+      if (!flag) {
+        type = type.type;
+        flag = false;
+      }
+      tmp = flag;
+    }
+    if (tmp) {
+      const obj2 = { oneofKind: "customAsset", customAsset: null };
+      ({ id: obj4.id, asset: obj4.assetHash } = type);
+      obj2.customAsset = { id: null, assetHash: null };
+      obj = obj2;
+      const obj3 = { id: null, assetHash: null };
+    } else if ("blur" === type) {
+      const obj7 = { oneofKind: "blur", blur: { useBlur: true } };
+      obj = obj7;
+    } else {
+      obj = { oneofKind: "presetOption", presetOption: type };
+    }
+  }
+  return obj;
+};
+export const getVideoBackgroundOptionFromProto = function getVideoBackgroundOptionFromProto(prop, id) {
+  if (null != prop) {
+    if (undefined !== prop.oneofKind) {
+      const oneofKind = prop.oneofKind;
+      if ("customAsset" === oneofKind) {
+        const obj = { type: constants.BACKGROUND, id: prop.customAsset.id, user_id: id, asset: prop.customAsset.assetHash };
+        return obj;
+      } else if ("blur" === oneofKind) {
+        let str3 = null;
+        if (prop.blur.useBlur) {
+          str3 = "blur";
+        }
+        return str3;
+      } else {
+        return "presetOption" === oneofKind ? prop.presetOption : undefined;
+      }
+    }
+  }
+  return null;
+};

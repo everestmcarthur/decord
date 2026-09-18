@@ -1,0 +1,147 @@
+// Module ID: 8266
+// Function ID: 8267
+// Name: useStateFromSharedValue
+// Dependencies: [32, 19, 1249, 4296, 2]
+// Exports: default, useDerivedStateFromSharedValue
+
+// Module 8266 (useStateFromSharedValue)
+import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+let c4 = 9999999;
+const map = new Map();
+let closure_6 = { code: "function useStateFromSharedValueTsx1(id,listener,sharedValue){const{runOnJS}=this.__closure;sharedValue.addListener(id,function(value){return runOnJS(listener)(value);});}" };
+let closure_7 = { code: "function useStateFromSharedValueTsx2(id,sharedValue){sharedValue.removeListener(id);}" };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/reanimated/native/useStateFromSharedValue.tsx");
+
+export default function useStateFromSharedValue(arg0) {
+  const tmp = _slicedToArray(noop.useState(() => closure_0.get()), 2);
+  closure_0 = arg0;
+  closure_1 = tmp2;
+  const items = [arg0, tmp[1]];
+  const layoutEffect = noop.useLayoutEffect(() => {
+    value = map.get(set);
+    if (value == null) {
+      const _Set = Set;
+      set = new Set();
+      const obj2 = {
+        sharedValue: tmp,
+        listeners: set,
+        valueListener(arg0) {
+            closure_0 = arg0;
+            set(1249).batchUpdates(() => {
+              for (const item10005 of set) {
+                let item10005Result = item10005(closure_0);
+                continue;
+              }
+            });
+          },
+        listenerId: null
+      };
+      sum = sum + 1;
+      obj2.listenerId = sum;
+      value = obj2;
+    }
+    set = value;
+    let listeners = value.listeners;
+    listeners.add(callback);
+    if (1 === value.listeners.size) {
+      const result = map.set(tmp, value);
+      let fn = function n(arg0, arg1, addListener) {
+        closure_0 = arg1;
+        addListener.addListener(arg0, (arg0) => set(4296).runOnJS(closure_0)(arg0));
+      };
+      const obj4 = { runOnJS: activeIndex(callback[3]).runOnJS };
+      fn.__closure = obj4;
+      fn.__workletHash = 568027628003;
+      fn.__initData = __initData;
+      activeIndex(callback[3]).runOnUI(fn)(value.listenerId, value.valueListener, tmp);
+      const obj3 = activeIndex(callback[3]);
+    }
+    return () => {
+      const listeners = set.listeners;
+      listeners.delete(callback);
+      if (0 === set.listeners.size) {
+        const fn = function n(arg0, removeListener) {
+          removeListener.removeListener(arg0);
+        };
+        fn.__closure = {};
+        fn.__workletHash = 15997703035823;
+        fn.__initData = __initData;
+        ReanimatedRexport.runOnUI(fn)(set.listenerId, closure_0);
+        map.delete(closure_0);
+      }
+    };
+  }, items);
+  return tmp[0];
+};
+export const useDerivedStateFromSharedValue = function useDerivedStateFromSharedValue(activeIndex, set) {
+  [tmp2, _slicedToArray] = noop.useState(() => callback(activeIndex.get(), undefined));
+  noop = noop.useRef(set);
+  const layoutEffect = noop.useLayoutEffect(() => {
+    closure_3.current = current;
+  });
+  const current = noop.useCallback((arg0) => {
+    closure_0 = arg0;
+    return closure_2((current) => ref.current(closure_0, current));
+  }, []);
+  const items = [activeIndex, current];
+  const layoutEffect1 = noop.useLayoutEffect(() => {
+    value = map.get(set);
+    if (value == null) {
+      const _Set = Set;
+      set = new Set();
+      const obj2 = {
+        sharedValue: tmp,
+        listeners: set,
+        valueListener(arg0) {
+            closure_0 = arg0;
+            set(1249).batchUpdates(() => {
+              for (const item10005 of set) {
+                let item10005Result = item10005(closure_0);
+                continue;
+              }
+            });
+          },
+        listenerId: null
+      };
+      sum = sum + 1;
+      obj2.listenerId = sum;
+      value = obj2;
+    }
+    set = value;
+    let listeners = value.listeners;
+    listeners.add(callback);
+    if (1 === value.listeners.size) {
+      const result = map.set(tmp, value);
+      let fn = function n(arg0, arg1, addListener) {
+        closure_0 = arg1;
+        addListener.addListener(arg0, (arg0) => set(4296).runOnJS(closure_0)(arg0));
+      };
+      const obj4 = { runOnJS: activeIndex(callback[3]).runOnJS };
+      fn.__closure = obj4;
+      fn.__workletHash = 568027628003;
+      fn.__initData = __initData;
+      activeIndex(callback[3]).runOnUI(fn)(value.listenerId, value.valueListener, tmp);
+      const obj3 = activeIndex(callback[3]);
+    }
+    return () => {
+      const listeners = set.listeners;
+      listeners.delete(callback);
+      if (0 === set.listeners.size) {
+        const fn = function n(arg0, removeListener) {
+          removeListener.removeListener(arg0);
+        };
+        fn.__closure = {};
+        fn.__workletHash = 15997703035823;
+        fn.__initData = __initData;
+        ReanimatedRexport.runOnUI(fn)(set.listenerId, closure_0);
+        map.delete(closure_0);
+      }
+    };
+  }, items);
+  return tmp2;
+};

@@ -1,0 +1,35 @@
+// Module ID: 11736
+// Function ID: 11737
+// Name: useEmojisForReactionRow
+// Dependencies: [19, 1374, 10290, 1477, 4217, 2]
+// Exports: useEmojisForReactionRow
+
+// Module 11736 (useEmojisForReactionRow)
+import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
+
+const require = fn;
+const EmojiIntention = fn(1374).EmojiIntention;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/reactions/native/useEmojisForReactionRow.tsx");
+
+export const useEmojisForReactionRow = function useEmojisForReactionRow(channel, arg1, arg2) {
+  _require = channel;
+  const guildId = channel.getGuildId();
+  const frequentlyUsedReactionEmojis = require("EmojiPickerUtils").useFrequentlyUsedReactionEmojis(guildId);
+  rounded = Math.floor(Math.min(frequentlyUsedReactionEmojis(rounded[3])().width, arg1) / arg2);
+  const items = [frequentlyUsedReactionEmojis, channel, rounded];
+  const memo = noop.useMemo(() => {
+    let length;
+    const found = frequentlyUsedReactionEmojis.filter((emoji) => !frequentlyUsedReactionEmojis(rounded[4]).isEmojiFilteredOrLocked({ emoji, channel, intention: constants.REACTION }));
+    if (found.length < rounded) {
+      do {
+        let arr = found.push(null);
+        length = found.length;
+      } while (length < rounded);
+    }
+    return found;
+  }, items);
+  return memo.slice(0, rounded - 1);
+};

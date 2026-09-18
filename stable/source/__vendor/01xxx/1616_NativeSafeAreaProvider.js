@@ -1,0 +1,10 @@
+// Module ID: 1616
+// Function ID: 1617
+// Name: NativeSafeAreaProvider
+// Dependencies: [1617]
+
+// Module 1616 (NativeSafeAreaProvider)
+import _modDef1617 from "module_1617" /* 1617 */;
+
+
+export const NativeSafeAreaProvider = _modDef1617;

@@ -1,0 +1,280 @@
+// Module ID: 13740
+// Function ID: 13741
+// Name: BlockedUserInGdmActionSheet
+// Dependencies: [19, 17, 1957, 1371, 13741, 1074, 21, 4560, 576, 4556, 4712, 1114, 504, 1369, 1178, 11830, 10915, 4520, 4515, 1242, 7198, 11379, 5687, 5605, 4975, 4527, 13742, 4573, 2]
+// Exports: default
+
+// Module 13740 (BlockedUserInGdmActionSheet)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4573 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 4712 */;
+import TableRow from "TableRow" /* 5605 */;
+import SharedSpacesWarningActionCreators from "SharedSpacesWarningActionCreators" /* 13742 */;
+import noop from "module_19" /* 19 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import UserStore from "UserStore" /* 1371 */;
+
+require = fn;
+function getUserCalloutRowText(arg0) {
+  ({ calledOutUserIds, totalUsers, guildId: require, channelId: importDefault } = arg0);
+  const items = [...calledOutUserIds];
+  dependencyMap = items.map((item) => user.getUser(item));
+  if (totalUsers >= 4) {
+    const intl4 = util.intl;
+    const obj2 = {
+      usernameHook1() {
+          const obj = { variant: "text-md/semibold", children: NicknameUtilsDefault.getName(closure_1_0, closure_1_1, 19) };
+          return closure_2_11(Text_Text.Text, obj);
+        },
+      usernameHook2() {
+          const obj = { variant: "text-md/semibold", children: NicknameUtilsDefault.getName(closure_1_0, closure_1_1, 17) };
+          return closure_2_11(Text_Text.Text, obj);
+        },
+      numberOfOtherUsers: totalUsers - calledOutUserIds.length
+    };
+    let formatResult = intl4.format(util.t.qfo6KR, obj2);
+  } else if (3 === totalUsers) {
+    const intl3 = util.intl;
+    const obj3 = {
+      usernameHook1() {
+          const obj = { variant: "text-md/semibold", children: NicknameUtilsDefault.getName(closure_1_0, closure_1_1, 19) };
+          return closure_2_11(Text_Text.Text, obj);
+        },
+      usernameHook2() {
+          const obj = { variant: "text-md/semibold", children: NicknameUtilsDefault.getName(closure_1_0, closure_1_1, 17) };
+          return closure_2_11(Text_Text.Text, obj);
+        }
+    };
+    formatResult = intl3.format(util.t["67ZE+9"], obj3);
+  } else if (2 === totalUsers) {
+    const intl2 = util.intl;
+    const obj4 = {
+      usernameHook1() {
+          const obj = { variant: "text-md/semibold", children: NicknameUtilsDefault.getName(closure_1_0, closure_1_1, 19) };
+          return closure_2_11(Text_Text.Text, obj);
+        },
+      usernameHook2() {
+          const obj = { variant: "text-md/semibold", children: NicknameUtilsDefault.getName(closure_1_0, closure_1_1, 17) };
+          return closure_2_11(Text_Text.Text, obj);
+        }
+    };
+    formatResult = intl2.format(util.t.veV4IN, obj4);
+  } else {
+    const intl = util.intl;
+    let obj = {
+      usernameHook() {
+          const obj = { variant: "text-md/semibold", children: NicknameUtilsDefault.getName(closure_1_0, closure_1_1, 19) };
+          return closure_2_11(Text_Text.Text, obj);
+        }
+    };
+    formatResult = intl.format(util.t["4WHCtq"], obj);
+  }
+  return formatResult;
+}
+function UserCalloutAvatars(userIds) {
+  userIds = userIds.userIds;
+  let REFRESH_MEDIUM_32 = dependencyMap;
+  const items = [UserStore];
+  const items1 = [userIds];
+  const stateFromStoresArray = userIds(504).useStateFromStoresArray(items, () => userIds.map((item) => user.getUser(item)), items1);
+  let found = stateFromStoresArray.filter(userIds(1369).isNotNullish);
+  if (1 === userIds.length) {
+    if (null != UserStore.getUser(userIds[0])) {
+      const obj3 = { user: null, guildId: null, size: null, "aria-hidden": true };
+      found = found[0];
+      obj3.user = found;
+      obj3.guildId = userIds.guildId;
+      REFRESH_MEDIUM_32 = tmp(1178).AvatarSizes.REFRESH_MEDIUM_32;
+      obj3.size = REFRESH_MEDIUM_32;
+      let tmp6 = closure_11(tmp(1178).Avatar, obj3);
+    } else {
+      tmp6 = closure_11(tmp(11830).UserIcon, {});
+    }
+  } else {
+    const obj4 = { users: found, size: tmp(1178).AvatarSizes.REFRESH_MEDIUM_32 };
+    return closure_11(tmp(10915).FacepileGroupDMAvatar, obj4);
+  }
+}
+function BlockedUserInGDMDescription(arg0) {
+  ({ numOfBlockedUsers, numOfIgnoredUsers } = arg0);
+  if (numOfBlockedUsers > 0) {
+    if (tmp2) {
+      const obj2 = { children: null };
+      const intl5 = util.intl;
+      const items = [intl5.string(util.t.xbRNI3), "\n", ];
+      const intl6 = util.intl;
+      items[2] = intl6.string(util.t["Bp2/ni"]);
+      obj2.children = items;
+      let tmp3 = map1(closure_1_12, obj2);
+    }
+    return tmp3;
+  }
+  if (numOfBlockedUsers > 0) {
+    const obj3 = { children: null };
+    const intl3 = util.intl;
+    const obj4 = { n: numOfBlockedUsers };
+    const items1 = [intl3.format(util.t.iKtixW, obj4), "\n", ];
+    const intl4 = util.intl;
+    items1[2] = intl4.string(util.t.SN1hrl);
+    obj3.children = items1;
+    tmp3 = map1(closure_1_12, obj3);
+  } else {
+    tmp3 = null;
+    if (tmp2) {
+      const obj = { children: null };
+      const intl = util.intl;
+      const obj5 = { n: numOfIgnoredUsers };
+      const items2 = [intl.format(util.t["6IRwua"], obj5), "\n", ];
+      const intl2 = util.intl;
+      items2[2] = intl2.string(util.t["6AKLRt"]);
+      obj.children = items2;
+      tmp3 = map1(closure_1_12, obj);
+    }
+  }
+}
+get_ActivityIndicator = fn(17);
+({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
+const SharedSpaceWarningConstants = fn(13741);
+({ BlockWarningEngagements: closure_8, GdmWarningMedium: closure_9 } = SharedSpaceWarningConstants);
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const jsxProd = fn(21);
+({ jsx: closure_11, Fragment: closure_12, jsxs: map1 } = jsxProd);
+const createStyles = fn(4560);
+let obj2 = { container: { paddingTop: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8, textAlign: "center" }, headerImage: { alignSelf: "center", width: 73, height: 86 }, title: { textAlign: "center", alignSelf: "center" }, description: { textAlign: "center", alignSelf: "center" }, tableGroup: null, buttons: null, icon: null };
+let obj3 = { paddingTop: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8, textAlign: "center" };
+obj2.tableGroup = { paddingVertical: nativeDefault.space.PX_24 };
+obj2.buttons = { gap: 8 };
+obj2.icon = { display: "flex", justifyContent: "center", alignItems: "center", minWidth: 32 };
+let closure_14 = createStyles.createStyles(obj2);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/shared_space_warnings/native/BlockedUserInGdmActionSheet.tsx");
+
+export default function BlockedUserInGdmActionSheet(channelId) {
+  channelId = channelId.channelId;
+  const blockedUserIds = channelId.blockedUserIds;
+  const ignoredUserIds = channelId.ignoredUserIds;
+  const tmp = closure_14();
+  noop = tmp;
+  const items = [channelId, blockedUserIds, ignoredUserIds];
+  const effect = noop.useEffect(() => {
+    AnalyticsUtilsDefault.track(AnalyticEvents.GDM_BLOCKED_USER_WARNING_VIEWED, { channel_id: channelId, warning_medium: constants2.ACTION_SHEET, ignored_user_ids: ignoredUserIds, blocked_user_ids: blockedUserIds });
+  }, items);
+  const channel = ChannelStore.getChannel(channelId);
+  let obj = { icon: closure_11(channelId(ignoredUserIds[17]).CircleCheckIcon, {}), label: null };
+  const intl = channelId(ignoredUserIds[11]).intl;
+  obj.label = intl.string(channelId(ignoredUserIds[11]).t.RIMw54);
+  const items1 = [obj, ];
+  let obj2 = { icon: closure_11(channelId(ignoredUserIds[18]).CircleInformationIcon, {}), label: null };
+  const intl2 = channelId(ignoredUserIds[11]).intl;
+  obj2.label = intl2.string(channelId(ignoredUserIds[11]).t.bejNWN);
+  items1[1] = obj2;
+  if (blockedUserIds.length > 0) {
+    if (tmp5) {
+      const items2 = [];
+      HermesBuiltin.arraySpread(ignoredUserIds, HermesBuiltin.arraySpread(blockedUserIds, 0));
+      const substr = items2.slice(0, 2);
+      let obj3 = { userIds: substr, guildId: null };
+      let guild_id;
+      if (channel != null) {
+        guild_id = channel.guild_id;
+      }
+      const obj4 = { icon: null, label: null };
+      obj3.guildId = guild_id;
+      obj4.icon = tmp6(UserCalloutAvatars, obj3);
+      const obj5 = { calledOutUserIds: substr, totalUsers: items2.length, channelId, guildId: null };
+      let guild_id1;
+      if (channel != null) {
+        guild_id1 = channel.guild_id;
+      }
+      obj5.guildId = guild_id1;
+      obj4.label = getUserCalloutRowText(obj5);
+      items1.unshift(obj4);
+    }
+    const obj6 = { startExpanded: true, children: null };
+    const obj7 = { style: tmp.container, children: null };
+    const obj8 = { source: blockedUserIds(tmp8[21]), style: tmp.headerImage };
+    const items3 = [tmp6(closure_4, obj8), , , ];
+    const obj9 = { children: null };
+    const obj10 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
+    const intl3 = tmp7(tmp8[11]).intl;
+    obj10.children = intl3.string(tmp7(tmp8[11]).t["mwJJ+f"]);
+    const items4 = [tmp6(tmp7(tmp8[9]).Text, obj10), ];
+    const obj11 = { variant: "text-md/medium", color: "text-default", style: tmp.description, children: null };
+    const obj12 = { numOfBlockedUsers: blockedUserIds.length, numOfIgnoredUsers: ignoredUserIds.length };
+    obj11.children = tmp6(BlockedUserInGDMDescription, obj12);
+    items4[1] = tmp6(tmp7(tmp8[9]).Text, obj11);
+    obj9.children = items4;
+    items3[1] = closure_13(closure_5, obj9);
+    const obj13 = { style: tmp.tableGroup, children: null };
+    const obj14 = {
+      hasIcons: true,
+      children: items1.map((item, index) => {
+          ({ icon, label } = item);
+          const obj = { icon: closure_2_11(hasOwnProperty, { style: icon.icon, children: icon }), label };
+          return closure_2_11(TableRow.TableRow, obj, index);
+        })
+    };
+    obj13.children = tmp6(tmp7(tmp8[22]).TableRowGroup, obj14);
+    items3[2] = tmp6(closure_5, obj13);
+    const obj15 = { style: tmp.buttons, children: null };
+    const obj16 = {
+      size: "lg",
+      onPress() {
+          ActionSheetActionCreatorsDefault.hideActionSheet();
+          const result = SharedSpacesWarningActionCreators.dismissGdmBlockedUserWarning(channelId);
+          ChannelActionCreatorsDefault.closePrivateChannel(channelId, true, true);
+          AnalyticsUtilsDefault.track(AnalyticEvents.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, { action: constants.CLICK_TO_LEAVE, channel_id: channelId, warning_medium: constants2.ACTION_SHEET, ignored_user_ids: ignoredUserIds, blocked_user_ids: blockedUserIds });
+        },
+      text: null
+    };
+    const intl4 = tmp7(tmp8[11]).intl;
+    obj16.text = intl4.string(tmp7(tmp8[11]).t.I4q1kA);
+    const items5 = [tmp6(tmp7(tmp8[24]).Button, obj16), ];
+    const obj17 = {
+      size: "lg",
+      variant: "secondary",
+      onPress() {
+          ActionSheetActionCreatorsDefault.hideActionSheet();
+          const result = SharedSpacesWarningActionCreators.dismissGdmBlockedUserWarning(channelId);
+          AnalyticsUtilsDefault.track(AnalyticEvents.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, { action: constants.CLICK_TO_STAY, channel_id: channelId, warning_medium: constants2.ACTION_SHEET, ignored_user_ids: ignoredUserIds, blocked_user_ids: blockedUserIds });
+        },
+      text: null
+    };
+    const intl5 = tmp7(tmp8[11]).intl;
+    obj17.text = intl5.string(tmp7(tmp8[11]).t.DRJhmT);
+    items5[1] = tmp6(tmp7(tmp8[24]).Button, obj17);
+    obj15.children = items5;
+    items3[3] = closure_13(closure_5, obj15);
+    obj7.children = items3;
+    obj6.children = closure_13(closure_5, obj7);
+    return tmp6(tmp7(tmp8[20]).ActionSheet, obj6);
+  }
+  const items6 = [];
+  if (blockedUserIds.length > 0) {
+    HermesBuiltin.arraySpread(blockedUserIds, 0);
+    let substr1 = items6.slice(0, 2);
+  } else {
+    HermesBuiltin.arraySpread(ignoredUserIds, 0);
+    substr1 = items6.slice(0, 2);
+  }
+  const obj18 = { userIds: substr1, guildId: null };
+  let guild_id2;
+  if (channel != null) {
+    guild_id2 = channel.guild_id;
+  }
+  const obj19 = { icon: closure_11(UserCalloutAvatars, obj18), label: null };
+  obj18.guildId = guild_id2;
+  const obj20 = { calledOutUserIds: substr1, totalUsers: blockedUserIds.length > 0 ? blockedUserIds.length : ignoredUserIds.length, channelId, guildId: null };
+  let guild_id3;
+  if (channel != null) {
+    guild_id3 = channel.guild_id;
+  }
+  obj20.guildId = guild_id3;
+  obj19.label = getUserCalloutRowText(obj20);
+  items1.unshift(obj19);
+};
+export { getUserCalloutRowText };

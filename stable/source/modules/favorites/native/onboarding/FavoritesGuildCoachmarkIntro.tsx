@@ -1,0 +1,80 @@
+// Module ID: 16316
+// Function ID: 16317
+// Name: FavoritesGuildCoachmarkIntro
+// Dependencies: [32, 19, 16287, 1074, 1954, 21, 4296, 10238, 16311, 1114, 3225, 16317, 11132, 2]
+// Exports: default
+
+// Module 16316 (FavoritesGuildCoachmarkIntro)
+import util from "util" /* 1114 */;
+import _modDef3225 from "module_3225" /* 3225 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
+import FavoritesGuildAnalytics from "FavoritesGuildAnalytics" /* 10238 */;
+import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 16311 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import GuildsBarDnDStore from "GuildsBarDnDStore" /* 16287 */;
+
+require = fn;
+const FAVORITES = fn(1074).FAVORITES;
+const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const jsx = fn(21).jsx;
+const __initData = { code: "function FavoritesGuildCoachmarkIntroTsx1(){const{scrollPosition}=this.__closure;return scrollPosition.get()<=0;}" };
+const __initData2 = { code: "function FavoritesGuildCoachmarkIntroTsx2(atTop,wasAtTop){const{runOnJS,setScrolledToTop}=this.__closure;if(atTop===wasAtTop){return;}runOnJS(setScrolledToTop)(atTop);}" };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/favorites/native/onboarding/FavoritesGuildCoachmarkIntro.tsx");
+
+export default function FavoritesGuildCoachmarkIntro(markAsDismissed) {
+  markAsDismissed = markAsDismissed.markAsDismissed;
+  _slicedToArray = undefined;
+  let onDismiss;
+  let callback1;
+  const scrollPosition = callback1.getState().scrollPosition;
+  const tmp = _slicedToArray(onDismiss.useState(() => scrollPosition.get() <= 0), 2);
+  const visible = tmp[0];
+  _slicedToArray = tmp3;
+  const fn = function v() {
+    return scrollPosition.get() <= 0;
+  };
+  fn.__closure = { scrollPosition };
+  fn.__workletHash = 6053526688640;
+  fn.__initData = __initData;
+  const fn2 = function p(arg0, arg1) {
+    if (arg0 !== arg1) {
+      ReanimatedRexport.runOnJS(closure_3)(arg0);
+    }
+  };
+  let obj = markAsDismissed(visible[6]);
+  fn2.__closure = { runOnJS: markAsDismissed(visible[6]).runOnJS, setScrolledToTop: tmp[1] };
+  fn2.__workletHash = 13648062364539;
+  fn2.__initData = __initData2;
+  const animatedReaction = obj.useAnimatedReaction(fn, fn2);
+  const items = [markAsDismissed];
+  onDismiss = onDismiss.useCallback(() => {
+    markAsDismissed(ContentDismissActionType.USER_DISMISS);
+  }, items);
+  const items1 = [markAsDismissed];
+  callback1 = onDismiss.useCallback(() => {
+    const result = FavoritesGuildAnalytics.setNextFavoritesGuildViewSource("intro_dc");
+    transitionGuildsBarToGuildOrOpenSelectedChannelDefault(FAVORITES);
+    markAsDismissed(ContentDismissActionType.TAKE_ACTION);
+  }, items1);
+  const items2 = [visible, onDismiss, callback1];
+  const memo = onDismiss.useMemo(() => {
+    const obj = { visible, position: "bottom", title: null, description: null, onDismiss: null, renderImgComponent: null, buttonLabel: null, onButtonPress: null };
+    const intl = util.intl;
+    obj.title = intl.string(_modDef3225["bu/mLv"]);
+    const intl2 = util.intl;
+    obj.description = intl2.string(_modDef3225.kxQJ7q);
+    obj.onDismiss = onDismiss;
+    obj.renderImgComponent = function renderImgComponent() {
+      return closure_1_8(scrollPosition(visible[11]), {});
+    };
+    const intl3 = util.intl;
+    obj.buttonLabel = intl3.string(_modDef3225["vN/KQ9"]);
+    obj.onButtonPress = callback1;
+    return obj;
+  }, items2);
+  const obj2 = { runOnJS: markAsDismissed(visible[6]).runOnJS, setScrolledToTop: tmp[1] };
+  const coachmark = markAsDismissed(visible[12]).useCoachmark(markAsDismissed.targetRef, memo);
+  return null;
+};

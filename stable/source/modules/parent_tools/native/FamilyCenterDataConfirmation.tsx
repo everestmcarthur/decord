@@ -1,0 +1,185 @@
+// Module ID: 11923
+// Function ID: 11924
+// Name: FamilyCenterDataConfirmation
+// Dependencies: [19, 21, 4973, 4556, 5687, 5605, 1114, 2396, 11924, 4497, 9292, 5088, 11925, 11927, 11035, 8670, 4523, 11929, 7380, 5680, 2]
+// Exports: default
+
+// Module 11923 (FamilyCenterDataConfirmation)
+import util from "util" /* 1114 */;
+import _modDef2396 from "module_2396" /* 2396 */;
+import UserPlusIcon from "UserPlusIcon" /* 4497 */;
+import ClockIcon from "ClockIcon" /* 4523 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import Stack_Stack from "Stack/Stack" /* 4973 */;
+import ForumIcon from "ForumIcon" /* 5088 */;
+import TableRow from "TableRow" /* 5605 */;
+import XSmallIcon from "XSmallIcon" /* 5680 */;
+import TableRowGroup from "TableRowGroup" /* 5687 */;
+import SettingsIcon from "SettingsIcon" /* 7380 */;
+import FlagIcon from "FlagIcon" /* 8670 */;
+import ServerIcon from "ServerIcon" /* 9292 */;
+import GiftIcon from "GiftIcon" /* 11035 */;
+import useAgeSpecificText from "useAgeSpecificText" /* 11924 */;
+import PhoneIcon from "PhoneIcon" /* 11925 */;
+import CreditCardIcon from "CreditCardIcon" /* 11927 */;
+import PiggyBankIcon from "PiggyBankIcon" /* 11929 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+function RowGroup(children) {
+  const rows = children.rows;
+  let obj = { spacing: 8, children: null };
+  const items = [
+    React3(Text_Text.Text, { accessibilityRole: "header", variant: "text-sm/semibold", color: "text-muted", children: children.title }),
+    React3(TableRowGroup.TableRowGroup, {
+      hasIcons: true,
+      children: rows.map((header) => {
+        header = header.header;
+        ({ description, IconComponent, negative } = header);
+        const obj = { label: header, subLabel: description, icon: null };
+        let str = "default";
+        if (true === negative) {
+          str = "text-status-dnd";
+        }
+        obj.icon = closure_1_3(TableRow.TableRow.Icon, { variant: str, IconComponent });
+        return closure_1_3(TableRow.TableRow, obj, header);
+      })
+    })
+  ];
+  obj.children = items;
+  return React4(Stack_Stack.Stack, obj);
+}
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterDataConfirmation.tsx");
+
+export default function FamilyCenterDataConfirmation() {
+  const intl = util.intl;
+  const intl2 = util.intl;
+  const stringResult = intl.string(_modDef2396.CI1Env);
+  const intl3 = util.intl;
+  const stringResult1 = intl2.string(_modDef2396["ksze+o"]);
+  const stringResult2 = intl3.string(_modDef2396["n73g+V"]);
+  const intl4 = util.intl;
+  const obj = useAgeSpecificText;
+  const intl5 = util.intl;
+  const ageSpecificText = obj.useAgeSpecificText(intl4.string(_modDef2396["5x3taM"]), intl5.string(_modDef2396.WZwGFX));
+  const stringResult3 = intl4.string(_modDef2396["5x3taM"]);
+  const intl6 = util.intl;
+  const obj2 = useAgeSpecificText;
+  const intl7 = util.intl;
+  const ageSpecificText1 = obj2.useAgeSpecificText(intl6.string(_modDef2396.FcKkcr), intl7.string(_modDef2396.PQtDFk));
+  const stringResult4 = intl6.string(_modDef2396.FcKkcr);
+  const intl8 = util.intl;
+  const obj3 = useAgeSpecificText;
+  const intl9 = util.intl;
+  const ageSpecificText2 = obj3.useAgeSpecificText(intl8.string(_modDef2396["dES/2r"]), intl9.string(_modDef2396.ep6mdN));
+  const stringResult5 = intl8.string(_modDef2396["dES/2r"]);
+  const intl10 = util.intl;
+  const obj4 = useAgeSpecificText;
+  const intl11 = util.intl;
+  const ageSpecificText3 = obj4.useAgeSpecificText(intl10.string(_modDef2396.GWPcQg), intl11.string(_modDef2396.yFnKIg));
+  const stringResult6 = intl10.string(_modDef2396.GWPcQg);
+  const intl12 = util.intl;
+  const obj5 = useAgeSpecificText;
+  const intl13 = util.intl;
+  const ageSpecificText4 = obj5.useAgeSpecificText(intl12.string(_modDef2396["30+sih"]), intl13.string(_modDef2396["0cuLn1"]));
+  const stringResult7 = intl12.string(_modDef2396["30+sih"]);
+  const intl14 = util.intl;
+  const obj6 = useAgeSpecificText;
+  const intl15 = util.intl;
+  const ageSpecificText5 = obj6.useAgeSpecificText(intl14.string(_modDef2396.tHTyRh), intl15.string(_modDef2396.TeNlMb));
+  const stringResult8 = intl14.string(_modDef2396.tHTyRh);
+  const intl16 = util.intl;
+  const obj7 = useAgeSpecificText;
+  const intl17 = util.intl;
+  const ageSpecificText6 = obj7.useAgeSpecificText(intl16.string(_modDef2396.PfveQ6), intl17.string(_modDef2396["f7ofm/"]));
+  const stringResult9 = intl16.string(_modDef2396.PfveQ6);
+  const intl18 = util.intl;
+  const obj8 = useAgeSpecificText;
+  const intl19 = util.intl;
+  const ageSpecificText7 = obj8.useAgeSpecificText(intl18.string(_modDef2396.MKeCj3), intl19.string(_modDef2396.HdcGGl));
+  const stringResult10 = intl18.string(_modDef2396.MKeCj3);
+  const intl20 = util.intl;
+  const obj9 = useAgeSpecificText;
+  const intl21 = util.intl;
+  const ageSpecificText8 = obj9.useAgeSpecificText(intl20.string(_modDef2396.wZejZr), intl21.string(_modDef2396.tdgcf1));
+  const stringResult11 = intl20.string(_modDef2396.wZejZr);
+  const intl22 = util.intl;
+  const obj10 = useAgeSpecificText;
+  const intl23 = util.intl;
+  const ageSpecificText9 = obj10.useAgeSpecificText(intl22.string(_modDef2396.ASf7XN), intl23.string(_modDef2396["82y87X"]));
+  const stringResult12 = intl22.string(_modDef2396.ASf7XN);
+  const intl24 = util.intl;
+  const obj11 = useAgeSpecificText;
+  const intl25 = util.intl;
+  const obj12 = { header: null, description: null, IconComponent: null };
+  const ageSpecificText10 = obj11.useAgeSpecificText(intl24.string(_modDef2396["0QDVFN"]), intl25.string(_modDef2396["1xBHHV"]));
+  const intl26 = util.intl;
+  obj12.header = intl26.string(_modDef2396["/zMYZX"]);
+  obj12.description = ageSpecificText;
+  obj12.IconComponent = UserPlusIcon.UserPlusIcon;
+  const items = [obj12, , , , , , ];
+  const obj13 = { header: null, description: null, IconComponent: null };
+  const intl27 = util.intl;
+  obj13.header = intl27.string(_modDef2396["44NEx6"]);
+  obj13.description = ageSpecificText1;
+  obj13.IconComponent = ServerIcon.ServerIcon;
+  items[1] = obj13;
+  const obj14 = { header: null, description: null, IconComponent: null };
+  const intl28 = util.intl;
+  obj14.header = intl28.string(_modDef2396["Z3G+8h"]);
+  const intl29 = util.intl;
+  obj14.description = intl29.string(_modDef2396.KBgArX);
+  obj14.IconComponent = ForumIcon.ForumIcon;
+  items[2] = obj14;
+  const obj15 = { header: null, description: null, IconComponent: null };
+  const intl30 = util.intl;
+  obj15.header = intl30.string(_modDef2396.GNs2ZH);
+  const intl31 = util.intl;
+  obj15.description = intl31.string(_modDef2396.Ief2xc);
+  obj15.IconComponent = PhoneIcon.PhoneIcon;
+  items[3] = obj15;
+  const obj16 = { header: null, description: null, IconComponent: null };
+  const intl32 = util.intl;
+  obj16.header = intl32.string(_modDef2396.PjM3r5);
+  obj16.description = ageSpecificText2;
+  obj16.IconComponent = CreditCardIcon.CreditCardIcon;
+  items[4] = obj16;
+  const obj17 = { header: null, description: null, IconComponent: null };
+  const intl33 = util.intl;
+  obj17.header = intl33.string(_modDef2396.Fv3n8L);
+  obj17.description = ageSpecificText3;
+  obj17.IconComponent = GiftIcon.GiftIcon;
+  items[5] = obj17;
+  const stringResult13 = intl24.string(_modDef2396["0QDVFN"]);
+  items[6] = { header: ageSpecificText4, description: ageSpecificText5, IconComponent: FlagIcon.FlagIcon };
+  const obj19 = { header: null, description: null, IconComponent: null };
+  const intl34 = util.intl;
+  obj19.header = intl34.string(_modDef2396.kyT6pZ);
+  obj19.description = ageSpecificText6;
+  obj19.IconComponent = ClockIcon.ClockIcon;
+  const items1 = [obj19, , ];
+  const obj20 = { header: null, description: null, IconComponent: null };
+  const intl35 = util.intl;
+  obj20.header = intl35.string(_modDef2396["52ld7c"]);
+  obj20.description = ageSpecificText7;
+  obj20.IconComponent = PiggyBankIcon.PiggyBankIcon;
+  items1[1] = obj20;
+  const obj21 = { header: null, description: null, IconComponent: null };
+  const intl36 = util.intl;
+  obj21.header = intl36.string(_modDef2396.UCuHM8);
+  obj21.description = ageSpecificText8;
+  obj21.IconComponent = SettingsIcon.SettingsIcon;
+  items1[2] = obj21;
+  const obj22 = { spacing: 24, children: null };
+  const items2 = [React3(RowGroup, { title: stringResult, rows: items }), React3(RowGroup, { title: stringResult1, rows: items1 }), ];
+  const obj23 = { title: stringResult2, rows: null };
+  const obj18 = { header: ageSpecificText4, description: ageSpecificText5, IconComponent: FlagIcon.FlagIcon };
+  const items3 = [{ header: ageSpecificText9, description: ageSpecificText10, IconComponent: XSmallIcon.XSmallIcon, negative: true }];
+  obj23.rows = items3;
+  items2[2] = React3(RowGroup, obj23);
+  obj22.children = items2;
+  return React4(Stack_Stack.Stack, obj22);
+};

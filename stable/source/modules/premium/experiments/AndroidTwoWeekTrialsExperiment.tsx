@@ -1,0 +1,24 @@
+// Module ID: 13302
+// Function ID: 13303
+// Name: AndroidTwoWeekTrialsExperiment
+// Dependencies: [1433, 2]
+// Exports: isAndroidTwoWeekTrialsExperimentEnabled, isAndroidTwoWeekTrialsTrialCTAEnabled
+
+// Module 13302 (AndroidTwoWeekTrialsExperiment)
+import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
+
+const obj = { name: "2026-06-android-two-week-trials", kind: "user", defaultConfig: { enabled: false, trialCTAEnabled: false }, variations: null };
+const obj2 = { 1: null, 2: { enabled: true, trialCTAEnabled: true } };
+obj2[2] = { enabled: true, trialCTAEnabled: false };
+obj.variations = obj2;
+const apexExperiment = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/premium/experiments/AndroidTwoWeekTrialsExperiment.tsx");
+
+export const AndroidTwoWeekTrialsExperiment = apexExperiment;
+export const isAndroidTwoWeekTrialsExperimentEnabled = function isAndroidTwoWeekTrialsExperimentEnabled(location) {
+  return apexExperiment.getConfig({ location: location.location }).enabled;
+};
+export const isAndroidTwoWeekTrialsTrialCTAEnabled = function isAndroidTwoWeekTrialsTrialCTAEnabled(location) {
+  return apexExperiment.getConfig({ location: location.location }).trialCTAEnabled;
+};

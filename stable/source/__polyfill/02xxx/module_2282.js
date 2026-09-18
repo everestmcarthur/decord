@@ -1,0 +1,9 @@
+// Module ID: 2282
+// Function ID: 2283
+// Dependencies: [1122]
+
+// Module 2282
+import registerAsset from "module_1122" /* 1122 */;
+
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9jbGlwcw==", scales: [1], hash: "190f20546a929cf22205c95f0099574b", name: "ko.messages.190f20546a929cf22205c95f0099574b.compiled.messages", type: "jsona" });

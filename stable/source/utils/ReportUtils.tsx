@@ -1,0 +1,134 @@
+// Module ID: 7289
+// Function ID: 7290
+// Name: ReportUtils
+// Dependencies: [1957, 4480, 4199, 1371, 1074, 2]
+// Exports: canDeleteAndReportMessage, canReportAndDeleteInChannel, canReportMessage, canReportUser
+
+// Module 7289 (ReportUtils)
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 4480 */;
+import PermissionStore from "PermissionStore" /* 4199 */;
+import UserStore from "UserStore" /* 1371 */;
+
+const Constants = fn(1074);
+({ ChannelTypes: closure_4, Permissions: hasOwnProperty, MessageTypesSets: metroRequire } = Constants);
+const size = fn(2);
+const result = size.fileFinishedImporting("utils/ReportUtils.tsx");
+
+export const canReportUser = function canReportUser(user) {
+  if (null == user) {
+    return false;
+  } else {
+    const currentUser = UserStore.getCurrentUser();
+    let tmp3 = null != currentUser;
+    if (tmp3) {
+      let tmp4 = currentUser.id !== user.id;
+      if (tmp4) {
+        tmp4 = true !== user.system;
+      }
+      tmp3 = tmp4;
+    }
+    return tmp3;
+  }
+};
+export const canReportMessage = function canReportMessage(message) {
+  let tmp = null != message;
+  if (tmp) {
+    const NON_REPORTABLE = constants3.NON_REPORTABLE;
+    tmp = !NON_REPORTABLE.has(message.type);
+  }
+  if (tmp) {
+    const author = message.author;
+    let flag = false;
+    if (null != author) {
+      const currentUser = UserStore.getCurrentUser();
+      let tmp5 = null != currentUser;
+      if (tmp5) {
+        let tmp6 = currentUser.id !== author.id;
+        if (tmp6) {
+          tmp6 = true !== author.system;
+        }
+        tmp5 = tmp6;
+      }
+      flag = tmp5;
+    }
+    tmp = flag;
+  }
+  return tmp;
+};
+export const canReportAndDeleteInChannel = function canReportAndDeleteInChannel(channelId) {
+  const channel = ChannelStore.getChannel(channelId);
+  if (null == channel) {
+    return false;
+  } else {
+    if (channel.type !== constants.DM) {
+      if (channel.type !== tmp6.GROUP_DM) {
+        const obj = { channelId };
+        if (PermissionStore.canWithPartialContext(constants2.MANAGE_MESSAGES, obj)) {
+          const memberCount = GuildMemberCountStore.getMemberCount(channel.getGuildId());
+          let tmp5 = null != memberCount;
+          if (tmp5) {
+            tmp5 = memberCount >= 50;
+          }
+          return tmp5;
+        } else {
+          return false;
+        }
+      }
+    }
+    return true;
+  }
+};
+export const canDeleteAndReportMessage = function canDeleteAndReportMessage(type) {
+  let tmp = null != type;
+  if (tmp) {
+    let tmp2 = null != type;
+    if (tmp2) {
+      const NON_REPORTABLE = constants3.NON_REPORTABLE;
+      tmp2 = !NON_REPORTABLE.has(type.type);
+    }
+    if (tmp2) {
+      const author = type.author;
+      let flag = false;
+      if (null != author) {
+        const currentUser = UserStore.getCurrentUser();
+        let tmp6 = null != currentUser;
+        if (tmp6) {
+          let tmp7 = currentUser.id !== author.id;
+          if (tmp7) {
+            tmp7 = true !== author.system;
+          }
+          tmp6 = tmp7;
+        }
+        flag = tmp6;
+      }
+      tmp2 = flag;
+    }
+    tmp = tmp2;
+  }
+  if (tmp) {
+    const channelId = type.getChannelId();
+    const channel = ChannelStore.getChannel(channelId);
+    let flag3 = false;
+    if (null != channel) {
+      flag3 = true;
+      if (channel.type !== constants.DM) {
+        flag3 = true;
+        if (channel.type !== tmp10.GROUP_DM) {
+          const obj = { channelId };
+          flag3 = false;
+          if (PermissionStore.canWithPartialContext(constants2.MANAGE_MESSAGES, obj)) {
+            const memberCount = GuildMemberCountStore.getMemberCount(channel.getGuildId());
+            let tmp15 = null != memberCount;
+            if (tmp15) {
+              tmp15 = memberCount >= 50;
+            }
+            flag3 = tmp15;
+          }
+        }
+      }
+    }
+    tmp = flag3;
+  }
+  return tmp;
+};

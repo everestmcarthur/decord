@@ -1,0 +1,177 @@
+// Module ID: 10059
+// Function ID: 10060
+// Name: UserSummaryItem
+// Dependencies: [19, 17, 2021, 21, 4560, 576, 1178, 504, 1396, 4712, 1114, 4556, 2]
+// Exports: default
+
+// Module 10059 (UserSummaryItem)
+import nativeDefault from "native" /* 576 */;
+import noop from "module_19" /* 19 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
+
+const require = globalThis.__r;
+
+const require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let obj2 = { container: { flexDirection: "row" }, names: { marginStart: 4, paddingRight: 1 }, namesLegacy: { marginStart: 4, paddingRight: 1, color: nativeDefault.colors.TEXT_SUBTLE }, plusCountContainer: null, cutout: null };
+let obj3 = { marginStart: 4, paddingRight: 1, color: nativeDefault.colors.TEXT_SUBTLE };
+obj2.plusCountContainer = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, marginStart: 2, alignItems: "center" };
+obj2.cutout = { marginRight: -4 };
+let closure_6 = createStyles.createStyles(obj2);
+let obj5 = { direction: fn(1178).CutoutDirection.RIGHT };
+let size = fn(2);
+const result = size.fileFinishedImporting("components_native/common/UserSummaryItem.tsx");
+
+export default function UserSummaryItem(users) {
+  ({ namesStyle, namesVariant, max } = users);
+  if (max === undefined) {
+    max = 3;
+  }
+  users = users.users;
+  _require = users;
+  let renderedUsers = users.renderedUsers;
+  if (renderedUsers === undefined) {
+    renderedUsers = [];
+  }
+  ({ withNames, guildId } = users);
+  importDefault = guildId;
+  ({ avatarSize, channelId } = users);
+  if (avatarSize === undefined) {
+    avatarSize = require("native").AvatarSizes.XXSMALL;
+  }
+  ({ cutout, withPlusCount } = users);
+  if (cutout === undefined) {
+    cutout = obj5;
+  }
+  const tmp4 = closure_6();
+  let tmp5 = renderedUsers.length > 0 ? renderedUsers.length : users.length;
+  const bound = Math.min(tmp5, max);
+  let obj = {};
+  const items = [GuildMemberStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => closure_0.forEach((id) => {
+    let tmp2 = null != closure_1_1;
+    if (tmp2) {
+      tmp2 = null != id;
+    }
+    if (tmp2) {
+      obj[id.id] = member.getMember(closure_1_1, id.id);
+    }
+  }));
+  if (0 === bound) {
+    return null;
+  } else {
+    const items1 = [];
+    let num = 0;
+    let num2 = 0;
+    if (0 < bound) {
+      do {
+        if (0 === renderedUsers.length) {
+          let tmp12 = users[num];
+          _require = tmp12;
+          let id;
+          if (tmp12 != null) {
+            id = tmp12.id;
+          }
+          if (id == null) {
+            let _HermesInternal = HermesInternal;
+            id = "@" + num;
+          }
+          let tmp15 = avatarSize;
+          let obj3 = require("AvatarUtils");
+          let fn = obj3.makeSource(null);
+          if (null != tmp12) {
+            importDefault = obj[tmp12.id];
+            fn = function u(flag) {
+              if (flag === undefined) {
+                flag = false;
+              }
+              const avatarURL = closure_0.getAvatarURL(importDefault, closure_0(avatarSize[6]).AVATAR_SIZE_MAP[dependencyMap], flag);
+              let avatar;
+              if (closure_1 != null) {
+                avatar = tmp3.avatar;
+              }
+              let tmp5 = avatarURL;
+              if (null != avatar) {
+                let guildMemberAvatarURL = closure_1(tmp[8]).getGuildMemberAvatarURL(tmp3, flag);
+                if (guildMemberAvatarURL == null) {
+                  guildMemberAvatarURL = avatarURL;
+                }
+                tmp5 = guildMemberAvatarURL;
+                obj = closure_1(tmp[8]);
+              }
+              return closure_1(avatarSize[8]).makeSource(tmp5);
+            };
+          }
+          if (num < tmp8) {
+            let obj4 = { size: avatarSize, source: fn, style: null, cutout: null };
+            let items2 = [tmp4.cutout, tmp3];
+            obj4.style = items2;
+            obj4.cutout = cutout;
+            let arr = items1.push(jsx(require("native").CutoutableAvatarImage, { size: avatarSize, source: fn, style: null, cutout: null }, id));
+          } else {
+            obj5 = { size: avatarSize, source: fn };
+            let arr2 = items1.push(jsx(require("native").CutoutableAvatarImage, { size: avatarSize, source: fn }, id));
+          }
+        } else {
+          let arr3 = items1.push(renderedUsers[num]);
+        }
+        num = num2 + 1;
+        num2 = num;
+      } while (num < bound);
+    }
+    const name = require("NicknameUtils").getName(guildId, channelId, users[0]);
+    let tmp25 = withNames;
+    if (withNames) {
+      tmp25 = users.length > 1;
+    }
+    let formatToPlainStringResult = name;
+    if (tmp25) {
+      const intl = require("util").intl;
+      const obj7 = { name, count: users.length - 1 };
+      formatToPlainStringResult = intl.formatToPlainString(require("util").t.GhkJ21, obj7);
+    }
+    if (withNames) {
+      if (null != users[0]) {
+        const _HermesInternal3 = HermesInternal;
+        const combined = "username-" + formatToPlainStringResult;
+        if (null != namesVariant) {
+          const obj8 = { variant: namesVariant, color: "redesign-channel-name-muted-text", style: null, lineClamp: 1, children: null };
+          const items3 = [tmp4.names, namesStyle];
+          obj8.style = items3;
+          obj8.children = formatToPlainStringResult;
+          items1.push(jsx(require("Text/Text").Text, { variant: namesVariant, color: "redesign-channel-name-muted-text", style: null, lineClamp: 1, children: null }, combined));
+        } else {
+          const obj9 = { style: null, numberOfLines: 1, children: null };
+          const items4 = [tmp4.namesLegacy, namesStyle];
+          obj9.style = items4;
+          obj9.children = formatToPlainStringResult;
+          items1.push(jsx(require("native").LegacyText, { style: null, numberOfLines: 1, children: null }, combined));
+        }
+      }
+    }
+    if (tmp5 > max) {
+      if (withPlusCount) {
+        items1.pop();
+        const text = `+${tmp5 + 1 - max}`;
+        const tmp37 = require("native").AVATAR_SIZE_MAP[avatarSize];
+        const obj10 = { style: null, children: null };
+        const items5 = [tmp4.plusCountContainer, ];
+        const size = { borderRadius: tmp37, width: tmp37, height: tmp37, padding: tmp37 / 8 };
+        items5[1] = size;
+        obj10.style = items5;
+        const obj11 = { variant: "text-xs/normal", color: "mobile-text-heading-primary", children: text };
+        obj10.children = jsx(require("Text/Text").Text, { variant: "text-xs/normal", color: "mobile-text-heading-primary", children: text });
+        const _HermesInternal2 = HermesInternal;
+        items1.push(<obj key={"plus-" + `+${tmp5 + 1 - max}`} style={null}>{null}</obj>);
+      }
+    }
+    const obj12 = { style: null, children: null };
+    const items6 = [users.style, tmp4.container];
+    obj12.style = items6;
+    obj12.children = items1;
+    return <obj style={null}>{null}</obj>;
+  }
+  const obj2 = require("initialize");
+};

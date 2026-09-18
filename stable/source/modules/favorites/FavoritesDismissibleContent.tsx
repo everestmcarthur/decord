@@ -1,0 +1,96 @@
+// Module ID: 10245
+// Function ID: 10246
+// Name: FavoritesDismissibleContent
+// Dependencies: [32, 19, 1954, 1943, 7389, 10231, 10229, 10244, 7388, 10243, 2]
+// Exports: useFavoritesBetaTagDismissibleContent, useFavoritesMenuItemPopoverDismissibleContent, useShouldRenderFavoritesMenuItemPopover
+
+// Module 10245 (FavoritesDismissibleContent)
+import dismissible_content from "dismissible_content" /* 1943 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7388 */;
+import useGetDismissibleContent from "useGetDismissibleContent" /* 7389 */;
+import FavoritesHooks from "FavoritesHooks" /* 10229 */;
+import FavoritesGuildExperiment from "FavoritesGuildExperiment" /* 10231 */;
+import FavoritesGuildIntroPopover from "FavoritesGuildIntroPopover" /* 10243 */;
+import useCanShowFavoritesGuildOnboardingDefault from "useCanShowFavoritesGuildOnboarding" /* 10244 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
+
+require = fn;
+const ContentDismissActionType = fn(1954).ContentDismissActionType;
+let items = [fn(1943).DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO, fn(1943).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM, fn(1943).DismissibleContent.FAVORITES_GUILD_NEW_BADGE, fn(1943).DismissibleContent.FAVORITES_GUILD_SUGGESTIONS];
+const items1 = [fn(1943).DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO, fn(1943).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM];
+const items2 = [fn(1943).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM];
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/favorites/FavoritesDismissibleContent.tsx");
+
+export const FAVORITES_GUILD_DISMISSIBLE_CONTENT = items;
+export const useFavoritesMenuItemPopoverDismissibleContent = function useFavoritesMenuItemPopoverDismissibleContent(set) {
+  const obj = FavoritesGuildExperiment;
+  const isFavoritesGuildSelected = FavoritesHooks.useIsFavoritesGuildSelected();
+  const tmp4 = useCanShowFavoritesGuildOnboardingDefault();
+  let first = _slicedToArray(useGetDismissibleContent.useDangerouslyPeekDismissibleContents(items1), 1)[0];
+  if (first == null) {
+    first = null;
+  }
+  useSelectedDismissibleContent;
+  if (obj.useFavoritesGuildConfig({ location: "FavoritesDismissibleContent" }).isFreemium) {
+    if (set) {
+      if (tmp4) {
+        if (!isFavoritesGuildSelected) {
+          if (first === tmp(1943).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM) {
+            let items = [tmp(1943).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM];
+          }
+          const obj4 = { shouldShowPopover: null, markPopoverAsDismissed: null };
+          [tmp11, tmp12] = tmp8(items);
+          obj4.shouldShowPopover = tmp11 === tmp(1943).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM;
+          obj4.markPopoverAsDismissed = tmp12;
+          return obj4;
+        }
+      }
+    }
+  }
+  items = [];
+};
+export const useShouldRenderFavoritesMenuItemPopover = function useShouldRenderFavoritesMenuItemPopover() {
+  const tmp3 = _slicedToArray(useGetDismissibleContent.useDangerouslyPeekDismissibleContents(items2), 1)[0] === dismissible_content.DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM;
+  const tmp4 = _slicedToArray(noop.useState(tmp3), 2);
+  const first = tmp4[0];
+  let tmp6 = tmp3;
+  if (tmp3) {
+    tmp6 = !first;
+  }
+  if (tmp6) {
+    tmp4[1](true);
+  }
+  let tmp8 = tmp3;
+  if (!tmp3) {
+    tmp8 = first;
+  }
+  if (tmp8) {
+    tmp8 = !FavoritesGuildIntroPopover.hasOfferedFavoritesGuildOnboarding();
+    const tmpResult = FavoritesGuildIntroPopover;
+  }
+  return tmp8;
+};
+export const useFavoritesBetaTagDismissibleContent = function useFavoritesBetaTagDismissibleContent(arg0) {
+  useSelectedDismissibleContent;
+  if (obj.useFavoritesGuildConfig({ location: "FavoritesDismissibleContent" }).isFreemium) {
+    if (arg0) {
+      const items = [tmp(1943).DismissibleContent.FAVORITES_GUILD_NEW_BADGE];
+    }
+    [tmp9, require] = tmp4([]);
+    const tmp10 = tmp9 === tmp(1943).DismissibleContent.FAVORITES_GUILD_NEW_BADGE;
+    closure_1 = tmp10;
+    const obj2 = {
+      shouldShowBetaTag: tmp10,
+      dismissBetaTag() {
+          if (closure_1) {
+            require(ContentDismissActionType.TAKE_ACTION);
+          }
+        }
+    };
+    return obj2;
+  }
+};

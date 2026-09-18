@@ -1,0 +1,230 @@
+// Module ID: 8059
+// Function ID: 8060
+// Name: PremiumSubscriptionOfferUtil
+// Dependencies: [32, 19, 4224, 1373, 7447, 8060, 8061, 504, 4153, 8062, 8063, 1894, 8066, 2]
+// Exports: renewalInvoiceChurnDiscountInfo, useActiveDiscountInfo, useFetchChurnUserDiscountOffer, useIsInPremiumOfferExperience, useIsNUXEligible, useShouldFetchChurnOffer
+
+// Module 8059 (PremiumSubscriptionOfferUtil)
+import initialize from "initialize" /* 504 */;
+import Server from "Server" /* 1894 */;
+import _modDef4153 from "module_4153" /* 4153 */;
+import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7447 */;
+import PremiumSubscriptionTrialUtil from "PremiumSubscriptionTrialUtil" /* 8060 */;
+import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 8061 */;
+import useDiscountOfferDefault from "useDiscountOffer" /* 8062 */;
+import UserOfferActionCreators from "UserOfferActionCreators" /* 8063 */;
+import ReverseTrialUtils from "ReverseTrialUtils" /* 8066 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import SubscriptionStore from "SubscriptionStore" /* 4224 */;
+
+const require = globalThis.__r;
+
+require = fn;
+const PremiumConstants = fn(1373);
+({ PREMIUM_TIER_2_ANNUAL_20_PERCENT_DISCOUNT_ID: metroRequire, PREMIUM_TIER_2_ANNUAL_25_PERCENT_DISCOUNT_ID: closure_7, PREMIUM_TIER_2_ANNUAL_V2_20_PERCENT_DISCOUNT_ID: closure_8, PREMIUM_TIER_2_ANNUAL_V2_30_PERCENT_DISCOUNT_ID: closure_9, PREMIUM_TIER_2_CHURN_1_MONTH_DISCOUNT_ID: c10, PREMIUM_TIER_2_CHURN_3_MONTH_DISCOUNT_ID: closure_11, PREMIUM_TIER_2_LIKELIHOOD_1_MONTH_30_PERCENT_DISCOUNT_ID: closure_12, PREMIUM_TIER_2_LIKELIHOOD_1_MONTH_40_PERCENT_DISCOUNT_ID: map1, PREMIUM_TIER_2_LIKELIHOOD_DISCOUNT_ID: closure_14, PREMIUM_TIER_2_REACTIVATION_DISCOUNT_ID: closure_15, PREMIUM_TIER_2_REENGAGEMENT_1_MONTH_40_PERCENT_DISCOUNT_ID: closure_16, PREMIUM_TIER_2_REFERRAL_INCENTIVE_DISCOUNT_ID: closure_17, PREMIUM_GROUP_30_PERCENT_3_MONTH_DISCOUNT_ID: closure_18 } = PremiumConstants);
+function useHasDiscountApplied() {
+  const items = [SubscriptionStore];
+  const stateFromStores = initialize.useStateFromStores(items, () => SubscriptionStore.getPremiumTypeSubscription());
+  let prop;
+  if (stateFromStores != null) {
+    const metadata = stateFromStores.metadata;
+    if (metadata != null) {
+      prop = metadata.active_discount_expires_at;
+    }
+  }
+  let tmp4 = null != prop;
+  if (tmp4) {
+    const _Date = Date;
+    tmp4 = _modDef4153(Date.now()) <= _modDef4153(prop);
+    const tmp6Result = _modDef4153(Date.now());
+  }
+  return tmp4;
+}
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/PremiumSubscriptionOfferUtil.tsx");
+
+export const useIsInPremiumOfferExperience = function useIsInPremiumOfferExperience() {
+  const premiumTrialOffer = usePremiumTrialOffer.usePremiumTrialOffer();
+  const hasActiveTrial = PremiumSubscriptionTrialUtil.useHasActiveTrial();
+  const premiumDiscountOffer = usePremiumDiscountOffer.usePremiumDiscountOffer();
+  usePremiumDiscountOffer;
+  if (typeof useHasDiscountApplied === "function") {
+    const items = [SubscriptionStore];
+    const stateFromStores = initialize.useStateFromStores(items, () => SubscriptionStore.getPremiumTypeSubscription());
+    let prop;
+    if (stateFromStores != null) {
+      const metadata = stateFromStores.metadata;
+      if (metadata != null) {
+        prop = metadata.active_discount_expires_at;
+      }
+    }
+    let tmp12 = null != prop;
+    if (tmp12) {
+      const _Date = Date;
+      tmp12 = _modDef4153(Date.now()) <= _modDef4153(prop);
+      const tmp14Result = _modDef4153(Date.now());
+    }
+    return null != premiumTrialOffer || hasActiveTrial || null != premiumDiscountOffer || null != tmp7 || tmp12;
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+};
+export { useHasDiscountApplied };
+export const useActiveDiscountInfo = function useActiveDiscountInfo() {
+  const items = [SubscriptionStore];
+  const stateFromStores = initialize.useStateFromStores(items, () => premiumTypeSubscription.getPremiumTypeSubscription());
+  let discountId;
+  if (stateFromStores != null) {
+    const metadata = stateFromStores.metadata;
+    if (metadata != null) {
+      discountId = metadata.active_discount_id;
+    }
+  }
+  if (closure_1_10 !== discountId) {
+    if (closure_1_12 !== discountId) {
+      if (closure_1_11 !== discountId) {
+        if (closure_1_14 !== discountId) {
+          if (__initData !== discountId) {
+            if (map1 === discountId) {
+              const obj2 = { duration: 1, percentage: 40, discountId };
+              return obj2;
+            } else if (timestampProducer === discountId) {
+              const obj3 = { duration: 1, percentage: 20, discountId };
+              return obj3;
+            } else if (React5 === discountId) {
+              const obj4 = { duration: 1, percentage: 25, discountId };
+              return obj4;
+            } else if (React6 === discountId) {
+              const obj5 = { duration: 12, percentage: 20, discountId };
+              return obj5;
+            } else if (React7 === discountId) {
+              const obj6 = { duration: 12, percentage: 30, discountId };
+              return obj6;
+            } else if (value2 === discountId) {
+              const obj7 = { duration: 1, percentage: 40, discountId };
+              return obj7;
+            } else if (collapsedCategories === discountId) {
+              const obj8 = { duration: 3, percentage: 30, discountId };
+              return obj8;
+            } else if (closure_1_17 === discountId) {
+              const obj9 = { duration: 1, percentage: 30, discountId };
+              return obj9;
+            }
+          }
+        }
+      }
+      const obj10 = { duration: 3, percentage: 30, discountId };
+      return obj10;
+    }
+  }
+  return { duration: 1, percentage: 30, discountId };
+};
+export const useFetchChurnUserDiscountOffer = function useFetchChurnUserDiscountOffer(arg0) {
+  let tmp2 = useDiscountOfferDefault(closure_1_10);
+  const tmp3 = useDiscountOfferDefault(closure_1_11);
+  [tmp5, require] = noop.useState(false);
+  const tmp4 = _slicedToArray(noop.useState(false), 2);
+  [tmp7, tmp8] = noop.useState(false);
+  importDefault = tmp8;
+  const tmp6 = _slicedToArray(noop.useState(false), 2);
+  [tmp10, dependencyMap] = noop.useState(null);
+  if (tmp2 == null) {
+    tmp2 = tmp3;
+  }
+  if (tmp2 == null) {
+    tmp2 = null;
+  }
+  if (null != tmp2) {
+    const obj2 = { churnUserDiscountOffer: tmp2, isFetchingChurnDiscountOffer: false };
+    return obj2;
+  } else if (arg0) {
+    const obj3 = { churnUserDiscountOffer: tmp10, isFetchingChurnDiscountOffer: tmp7 };
+    return obj3;
+  } else {
+    let tmp11 = tmp7;
+    if (!tmp7) {
+      tmp11 = tmp5;
+    }
+    if (!tmp11) {
+      tmp8(true);
+      const churnDiscountOffer = UserOfferActionCreators.fetchChurnDiscountOffer();
+      churnDiscountOffer.then((result) => {
+        dependencyMap(result);
+        require(true);
+        tmp8(false);
+      }).catch(() => {
+        require(true);
+        tmp8(false);
+      });
+      const nextPromise = churnDiscountOffer.then((result) => {
+        dependencyMap(result);
+        require(true);
+        tmp8(false);
+      });
+    }
+    const obj4 = { churnUserDiscountOffer: tmp10, isFetchingChurnDiscountOffer: tmp7 };
+    return obj4;
+  }
+  const tmp9 = _slicedToArray(noop.useState(null), 2);
+};
+export const useShouldFetchChurnOffer = function useShouldFetchChurnOffer() {
+  const items = [SubscriptionStore];
+  const stateFromStores = initialize.useStateFromStores(items, () => SubscriptionStore.getPremiumTypeSubscription());
+  if (typeof useHasDiscountApplied === "function") {
+    const items1 = [tmp3];
+    const stateFromStores1 = initialize.useStateFromStores(items1, () => SubscriptionStore.getPremiumTypeSubscription());
+    let prop;
+    if (stateFromStores1 != null) {
+      const metadata = stateFromStores1.metadata;
+      if (metadata != null) {
+        prop = metadata.active_discount_expires_at;
+      }
+    }
+    let tmp8 = null != prop;
+    if (tmp8) {
+      const _Date = Date;
+      tmp8 = _modDef4153(Date.now()) <= _modDef4153(prop);
+      const tmp10Result = _modDef4153(Date.now());
+    }
+    let tmp13 = null !== stateFromStores && stateFromStores.hasPremiumNitroMonthly && !tmp8;
+    if (tmp13) {
+      let hasActiveTrial;
+      if (stateFromStores != null) {
+        hasActiveTrial = stateFromStores.hasActiveTrial;
+      }
+      tmp13 = !hasActiveTrial;
+    }
+    return tmp13;
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+  tmp3 = SubscriptionStore;
+};
+export const renewalInvoiceChurnDiscountInfo = function renewalInvoiceChurnDiscountInfo(arg0) {
+  const iter = arg0.invoiceItems[Symbol.iterator]();
+  while (iter !== undefined) {
+    let discounts = iter.next().discounts;
+    let found = discounts.find((type) => type.type === Server.InvoiceDiscountTypes.SUBSCRIPTION_PLAN);
+    let tmp2 = found;
+    if (null != found) {
+      let discount_id = tmp2.discount_id;
+      if (closure_1_10 === discount_id) {
+        let obj3 = { duration: 1, percentage: null, discountId: null };
+        ({ percentage_amount: obj2.percentage, discount_id: obj2.discountId } = found);
+        iter.return();
+        return obj3;
+      } else if (closure_1_11 === discount_id) {
+        let obj = { duration: 3, percentage: null, discountId: null };
+        ({ percentage_amount: obj.percentage, discount_id: obj.discountId } = tmp2);
+        iter.return();
+        return obj;
+      }
+    }
+    continue;
+  }
+  return null;
+};
+export const useIsNUXEligible = function useIsNUXEligible() {
+  return ReverseTrialUtils.useIsInReverseTrial();
+};

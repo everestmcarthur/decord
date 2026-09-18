@@ -1,0 +1,125 @@
+// Module ID: 7681
+// Function ID: 7682
+// Name: EditMessageStore
+// Dependencies: [4781, 1935, 7682, 7686, 504, 573, 2]
+
+// Module 7681 (EditMessageStore)
+import initializeDefault from "initialize" /* 504 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import MessageParserDefault from "MessageParser" /* 7682 */;
+import SlateUtils from "SlateUtils" /* 7686 */;
+import MessageStore from "MessageStore" /* 4781 */;
+
+require = fn;
+const dependencyMap = {};
+let closure_5 = {};
+const Store = initializeDefault.Store;
+class EditMessageStore extends Store {
+}
+const prototype = EditMessageStore.prototype;
+prototype["initialize"] = function initialize() {
+  this.waitFor(MessageStore);
+};
+prototype["isEditing"] = function isEditing(arg0, arg1) {
+  let messageId;
+  if (dependencyMap[arg0] != null) {
+    messageId = tmp.messageId;
+  }
+  return messageId === arg1;
+};
+prototype["isEditingAny"] = function isEditingAny(arg0) {
+  return null != dependencyMap[arg0];
+};
+prototype["getEditingTextValue"] = function getEditingTextValue(id) {
+  let textValue;
+  if (dependencyMap[id] != null) {
+    textValue = tmp.textValue;
+  }
+  return textValue;
+};
+prototype["getEditingRichValue"] = function getEditingRichValue(arg0) {
+  let richValue;
+  if (dependencyMap[arg0] != null) {
+    richValue = tmp.richValue;
+  }
+  return richValue;
+};
+prototype["getEditingMessageId"] = function getEditingMessageId(id) {
+  let messageId;
+  if (dependencyMap[id] != null) {
+    messageId = tmp.messageId;
+  }
+  return messageId;
+};
+prototype["getEditingMessage"] = function getEditingMessage(id) {
+  let message = null;
+  if (null != dependencyMap[id]) {
+    message = null;
+    if (null != tmp.messageId) {
+      message = MessageStore.getMessage(id, tmp.messageId);
+    }
+  }
+  return message;
+};
+prototype["getEditActionSource"] = function getEditActionSource(channel_id) {
+  return closure_5[channel_id];
+};
+EditMessageStore.displayName = "EditMessageStore";
+const editMessageStore = new EditMessageStore(DispatcherDefault, {
+  MESSAGE_START_EDIT: function handleMessageStartEdit(arg0) {
+    ({ channelId, content } = arg0);
+    ({ messageId, source } = arg0);
+    const UseLegacyChatInput = UserSettings.UseLegacyChatInput;
+    const setting = UseLegacyChatInput.getSetting();
+    const unparseResult = MessageParserDefault.unparse(content, channelId);
+    const obj2 = { channelId, messageId, textValue: unparseResult, richValue: null };
+    const tmp3 = closure_4;
+    if (setting) {
+      content = unparseResult;
+    }
+    obj2.richValue = SlateUtils.toRichValue(content);
+    tmp3[channelId] = obj2;
+    closure_5[channelId] = source;
+  },
+  MESSAGE_UPDATE_EDIT: function handleMessageUpdateEdit(channelId) {
+    channelId = channelId.channelId;
+    if (null == dependencyMap[channelId]) {
+      return false;
+    } else {
+      const obj = {};
+      const merged = Object.assign(tmp3);
+      obj.textValue = tmp;
+      obj.richValue = tmp2;
+      dependencyMap[channelId] = obj;
+    }
+  },
+  MESSAGE_END_EDIT: function handleMessageEndEdit(channelId) {
+    channelId = channelId.channelId;
+    if (null != channelId) {
+      if (null != dependencyMap[channelId]) {
+        delete tmp3[tmp2];
+        delete tmp[tmp2];
+      }
+    }
+    return false;
+  },
+  MESSAGE_DELETE: function handleMessageDelete(id) {
+    let messageId;
+    if (dependencyMap[id.channelId] != null) {
+      messageId = tmp4.messageId;
+    }
+    if (messageId === id.id) {
+      delete tmp3[tmp2];
+      delete tmp[tmp2];
+    }
+  },
+  LOGOUT: function handleLogout() {
+    closure_4 = {};
+    closure_5 = {};
+  }
+});
+const size = fn(2);
+const result = size.fileFinishedImporting("stores/EditMessageStore.tsx");
+
+export default editMessageStore;

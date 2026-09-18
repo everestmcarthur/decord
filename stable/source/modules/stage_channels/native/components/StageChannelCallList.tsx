@@ -1,0 +1,312 @@
+// Module ID: 10049
+// Function ID: 10050
+// Name: StageChannelCallList
+// Dependencies: [32, 19, 10050, 5414, 21, 1178, 10051, 5425, 4992, 5431, 38, 10058, 1114, 10059, 10060, 10072, 7072, 10076, 1477, 5126, 2]
+// Exports: default
+
+// Module 10049 (StageChannelCallList)
+import _modDef38 from "module_38" /* 38 */;
+import util from "util" /* 1114 */;
+import StageChannelParticipants from "StageChannelParticipants" /* 5425 */;
+import SpeakerTile from "SpeakerTile" /* 10051 */;
+import StageSectionHeaderDefault from "StageSectionHeader" /* 10058 */;
+import StageGridRowDefault from "StageGridRow" /* 10060 */;
+import AudienceGridRowDefault from "AudienceGridRow" /* 10072 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+const StageChannelListStore = fn(10050);
+({ useActiveSpeakerPillScrollHandler: hasOwnProperty, useActiveSpeakerPillState: metroRequire } = StageChannelListStore);
+const MAX_AUDIENCE_ROW_LIMIT = fn(5414).MAX_AUDIENCE_ROW_LIMIT;
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+let cutout = { direction: fn(1178).CutoutDirection.RIGHT, radius: 13, inset: -6 };
+let closure_11 = { STREAM: 0, [0]: "STREAM", SPEAKER: 1, [1]: "SPEAKER", AUDIENCE: 2, [2]: "AUDIENCE" };
+let closure_12 = noop.memo((channel) => {
+  channel = channel.channel;
+  const listSections = channel.listSections;
+  const rowsBySection = channel.rowsBySection;
+  let collapsed;
+  noop = undefined;
+  let tmp = collapsed(noop.useState(false), 2);
+  collapsed = tmp[0];
+  noop = tmp3;
+  let tmp4 = collapsed(noop.useState(false), 2);
+  const first1 = tmp4[0];
+  closure_6 = tmp6;
+  const tmp7 = collapsed(closure_6(), 2);
+  const first2 = tmp7[0];
+  closure_8 = tmp9;
+  listSections(rowsBySection[8])(() => () => {
+    closure_1_8(false);
+  });
+  let items = [listSections];
+  const sections = noop.useMemo(() => {
+    let num = listSections[stageParticipantsCount.STREAM];
+    if (num == null) {
+      num = 1;
+    }
+    const items = [Math.max(num, 1), , ];
+    let num2 = tmp[tmp2.SPEAKER];
+    if (num2 == null) {
+      num2 = 1;
+    }
+    items[1] = Math.max(num2, 1);
+    items[2] = listSections[stageParticipantsCount.AUDIENCE];
+    return items;
+  }, items);
+  const actualStageSpeakerCount = channel(rowsBySection[9]).useActualStageSpeakerCount(channel.id);
+  let obj = channel(rowsBySection[9]);
+  const stageParticipantsCount = channel(rowsBySection[9]).useStageParticipantsCount(channel.id, channel(rowsBySection[7]).StageChannelParticipantNamedIndex.AUDIENCE);
+  let items1 = [actualStageSpeakerCount, stageParticipantsCount];
+  const callback = noop.useCallback((arg0) => {
+    if (stageParticipantsCount.STREAM === arg0) {
+      return 0;
+    } else if (tmp.SPEAKER === arg0) {
+      let num4 = 48;
+      if (0 === actualStageSpeakerCount) {
+        num4 = 0;
+      }
+      return num4;
+    } else if (tmp.AUDIENCE === arg0) {
+      let num2 = 48;
+      if (0 === stageParticipantsCount) {
+        num2 = 0;
+      }
+      return num2;
+    } else {
+      _modDef38(null != arg0, "Section Not Found");
+      return 0;
+    }
+  }, items1);
+  const items2 = [callback, rowsBySection, collapsed, first1];
+  const itemSize = noop.useCallback((arg0, arg1) => {
+    if (null == arg1) {
+      return 0;
+    } else {
+      let num = 0;
+      if (0 === arg1) {
+        num = callback(arg0);
+      }
+      if (stageParticipantsCount.STREAM === arg0) {
+        let sum = num;
+        if (null != rowsBySection[arg0][arg1]) {
+          sum = SpeakerTile.SPEAKER_TILE_HEIGHTS.FULL + 8 + num;
+        }
+        return sum;
+      } else if (tmp2.SPEAKER === arg0) {
+        if (null == rowsBySection[arg0][arg1]) {
+          return num;
+        } else {
+          if (arg1 > 0) {
+            let sum1 = SpeakerTile.SPEAKER_TILE_HEIGHTS.THIRD + 8;
+          } else if (1 === length) {
+            sum1 = SpeakerTile.SPEAKER_TILE_HEIGHTS.FULL + 8;
+          } else if (2 === length) {
+            sum1 = SpeakerTile.SPEAKER_TILE_HEIGHTS.HALF + 8;
+          } else {
+            sum1 = SpeakerTile.SPEAKER_TILE_HEIGHTS.THIRD + 8;
+          }
+          let sum2 = num;
+          if (!first1) {
+            sum2 = sum1 + num;
+          }
+          return sum2;
+        }
+      } else if (tmp2.AUDIENCE === arg0) {
+        let sum3 = num;
+        if (!first) {
+          sum3 = 102 + num;
+        }
+        return sum3;
+      } else {
+        _modDef38(null != arg0, "Section Not Found");
+        return 0;
+      }
+    }
+  }, items2);
+  let obj2 = channel(rowsBySection[9]);
+  const stageParticipants = channel(rowsBySection[9]).useStageParticipants(channel.id, channel(rowsBySection[7]).StageChannelParticipantNamedIndex.SPEAKER);
+  const found = stageParticipants.filter((type) => type.type === channel(rowsBySection[7]).StageChannelParticipantTypes.VOICE);
+  const mapped = found.map((user) => user.user);
+  const items3 = [tmp[1], collapsed, first1, tmp4[1], actualStageSpeakerCount, stageParticipantsCount, mapped];
+  const callback2 = noop.useCallback((arg0) => {
+    if (stageParticipantsCount.STREAM === arg0) {
+      return null;
+    } else if (tmp.AUDIENCE === arg0) {
+      let tmp13 = null;
+      if (0 !== stageParticipantsCount) {
+        const obj2 = { label: null, count: null, onToggleCollapse: null, collapsed: null };
+        const intl = util.intl;
+        obj2.label = intl.string(util.t["3foUu5"]);
+        obj2.count = tmp12;
+        obj2.onToggleCollapse = function onToggleCollapse() {
+          return closure_1_4(!collapsed);
+        };
+        obj2.collapsed = collapsed;
+        tmp13 = React6(StageSectionHeaderDefault, obj2);
+      }
+      return tmp13;
+    } else if (tmp.SPEAKER === arg0) {
+      let tmp21Result2 = null;
+      if (0 !== actualStageSpeakerCount) {
+        const obj3 = { label: null, count: null, onToggleCollapse: null, collapsed: null, children: null };
+        const intl2 = util.intl;
+        obj3.label = intl2.string(util.t.CduOkx);
+        obj3.count = tmp6;
+        obj3.onToggleCollapse = function onToggleCollapse() {
+          return closure_1_6(!first1);
+        };
+        obj3.collapsed = first1;
+        let tmp21Result;
+        if (first1) {
+          cutout = { users: mapped, max: 10, avatarSize: tmp25(1178).AvatarSizes.XSMALL_20, cutout: null };
+          cutout.cutout = cutout;
+          tmp21Result = tmp21(tmp22(10059), cutout);
+          const tmp22Result = tmp22(10059);
+        }
+        obj3.children = tmp21Result;
+        tmp21Result2 = tmp21(StageSectionHeaderDefault, obj3);
+        tmp22 = importDefault;
+        tmp25 = require;
+      }
+      return tmp21Result2;
+    } else {
+      _modDef38(null != arg0, "Section Not Found");
+      return null;
+    }
+  }, items3);
+  const renderSectionFooter = noop.useCallback((arg0) => {
+    if (stageParticipantsCount.SPEAKER !== arg0) {
+      if (stageParticipantsCount.AUDIENCE !== arg0) {
+        listSections(rowsBySection[10])(null != arg0, "Section Not Found");
+        return null;
+      }
+    }
+    return null;
+  }, []);
+  const items4 = [channel, callback2, rowsBySection, collapsed, first1];
+  const sectionFooterSize = noop.useCallback((arg0) => {
+    if (stageParticipantsCount.SPEAKER === arg0) {
+      return 0;
+    } else if (tmp.AUDIENCE === arg0) {
+      return 160;
+    } else {
+      listSections(rowsBySection[10])(null != arg0, "Section Not Found");
+      return 0;
+    }
+  }, []);
+  const items5 = [sections, itemSize];
+  const renderItem = noop.useCallback((arg0, row) => {
+    let tmp = null;
+    if (0 === row) {
+      tmp = callback2(arg0);
+    }
+    if (null == rowsBySection[arg0][row]) {
+      return tmp;
+    } else if (stageParticipantsCount.STREAM === arg0) {
+      const obj2 = { children: null };
+      const obj3 = { channel, participants: tmp3[arg0][row], row };
+      obj2.children = React6(StageGridRowDefault, obj3);
+      const _HermesInternal3 = HermesInternal;
+      return React6(noop.Fragment, obj2, "stream-" + arg0 + "-" + row);
+    } else if (tmp31.SPEAKER === arg0) {
+      const items = [tmp, ];
+      let tmp19 = !first1;
+      if (!first1) {
+        const obj4 = { channel, participants: tmp3[arg0][row], row };
+        tmp19 = React6(StageGridRowDefault, obj4);
+      }
+      const obj5 = { children: null };
+      items[1] = tmp19;
+      obj5.children = items;
+      const _HermesInternal2 = HermesInternal;
+      return React7(noop.Fragment, obj5, "speaker-" + arg0 + "-" + row);
+    } else if (tmp31.AUDIENCE === arg0) {
+      const items1 = [tmp, ];
+      let tmp10 = !first;
+      if (!first) {
+        const obj = { channel, participants: tmp3[arg0][row] };
+        tmp10 = React6(AudienceGridRowDefault, obj);
+      }
+      const obj6 = { children: null };
+      items1[1] = tmp10;
+      obj6.children = items1;
+      const _HermesInternal = HermesInternal;
+      return React7(noop.Fragment, obj6, "audience-" + arg0 + "-" + row);
+    } else {
+      _modDef38(null != arg0, "Section Not Found");
+      return null;
+    }
+  }, items4);
+  const memo1 = noop.useMemo(() => {
+    let num = 0;
+    if (sections[stageParticipantsCount.STREAM] > 0) {
+      num = itemSize(tmp.STREAM, 0);
+    }
+    return num;
+  }, items5);
+  const items6 = [sections, itemSize];
+  const memo2 = noop.useMemo(() => {
+    let tmp4;
+    let num = 0;
+    let num2 = 0;
+    let num3 = 0;
+    if (0 < sections[stageParticipantsCount.SPEAKER]) {
+      do {
+        num2 = num2 + itemSize(stageParticipantsCount.SPEAKER, num);
+        num = num + 1;
+        num3 = num2;
+        tmp4 = sections[stageParticipantsCount.SPEAKER];
+      } while (num < tmp4);
+    }
+    return num3;
+  }, items6);
+  const items7 = [tmp7[1], first2, memo2, memo1];
+  const onScroll = noop.useCallback((nativeEvent) => {
+    const y = nativeEvent.nativeEvent.contentOffset.y;
+    const diff = memo2 + memo1 - 60;
+    let tmp2 = first2;
+    if (!first2) {
+      if (y > diff) {
+        closure_8(true);
+      }
+    }
+    if (tmp2) {
+      tmp2 = y < diff;
+    }
+    if (tmp2) {
+      closure_8(false);
+    }
+  }, items7);
+  return closure_8(listSections(rowsBySection[16]), { ref: collapsed(first1(), 1)[0], sections, renderItem, itemSize, renderSectionFooter, sectionFooterSize, onScroll });
+});
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/stage_channels/native/components/StageChannelCallList.tsx");
+
+export default function StageChannelCallList(channel) {
+  channel = channel.channel;
+  let width;
+  let isScreenLandscape;
+  const throttleDurationForChannel = width(10076).useThrottleDurationForChannel(channel.id);
+  width = isScreenLandscape(1477)().width;
+  let obj = width(10076);
+  isScreenLandscape = width(5126).useIsScreenLandscape();
+  const items = [width, isScreenLandscape];
+  const memo = noop.useMemo(() => {
+    let num = 3;
+    if (isScreenLandscape) {
+      const _Math = Math;
+      const _Math2 = Math;
+      num = Math.max(3, Math.floor(width / tmp2(10051).LANDSCAPE_MAX_TILE_WIDTH));
+    }
+    const obj = {};
+    obj[StageChannelParticipants.StageChannelParticipantNamedIndex.SPEAKER] = num;
+    obj[StageChannelParticipants.StageChannelParticipantNamedIndex.AUDIENCE] = MAX_AUDIENCE_ROW_LIMIT;
+    return obj;
+  }, items);
+  const obj2 = width(5126);
+  const tmp4 = _slicedToArray(width(10076).useStageChannelParticipantsListThrottled(channel.id, memo, throttleDurationForChannel, true), 2);
+  return closure_8(closure_12, { channel, listSections: tmp4[0], rowsBySection: tmp4[1] });
+};

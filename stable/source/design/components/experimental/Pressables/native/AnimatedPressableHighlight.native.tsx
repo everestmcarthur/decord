@@ -1,0 +1,70 @@
+// Module ID: 5609
+// Function ID: 5610
+// Name: AnimatedPressableHighlight
+// Dependencies: [19, 17, 21, 4296, 5123, 5610, 4262, 576, 1115, 2]
+
+// Module 5609 (AnimatedPressableHighlight)
+import nativeDefault from "native" /* 576 */;
+import useToken from "useToken" /* 4262 */;
+import useIOSPressEffects from "useIOSPressEffects" /* 5610 */;
+import noop from "module_19" /* 19 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
+
+require = fn;
+const Pressable = fn(17).Pressable;
+const jsx = fn(21).jsx;
+let closure_6 = ReanimatedRexport.createAnimatedComponent(fn(5123).PressableHighlight);
+const PlatformUtils = fn(1115);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/experimental/Pressables/native/AnimatedPressableHighlight.native.tsx");
+
+export const AnimatedPressableHighlight = PlatformUtils.isAndroid() ? (function AnimatedPressableHighlightAndroid(children) {
+  const merged = Object.assign(children, Object.assign({ children: 0 }));
+  const token = useToken.useToken(nativeDefault.colors.MOBILE_ANDROID_BUTTON_BACKGROUND_RIPPLE);
+  const items = [token, ];
+  let androidRippleConfig = merged.androidRippleConfig;
+  let cornerRadius;
+  if (androidRippleConfig != null) {
+    cornerRadius = androidRippleConfig.cornerRadius;
+  }
+  items[1] = cornerRadius;
+  const obj2 = {
+    android_ripple: noop.useMemo(() => {
+      const obj = { color: token, cornerRadius: null };
+      const androidRippleConfig = merged.androidRippleConfig;
+      let num;
+      if (androidRippleConfig != null) {
+        num = androidRippleConfig.cornerRadius;
+      }
+      if (num == null) {
+        num = 12;
+      }
+      obj.cornerRadius = num;
+      return obj;
+    }, items)
+  };
+  const merged1 = Object.assign(merged);
+  obj2.children = children.children;
+  return <Pressable android_ripple={noop.useMemo(() => {
+    const obj = { color: token, cornerRadius: null };
+    const androidRippleConfig = merged.androidRippleConfig;
+    let num;
+    if (androidRippleConfig != null) {
+      num = androidRippleConfig.cornerRadius;
+    }
+    if (num == null) {
+      num = 12;
+    }
+    obj.cornerRadius = num;
+    return obj;
+  }, items)} />;
+}) : (function AnimatedPressableHighlightiOS(children) {
+  const merged = Object.assign(children, Object.assign({ children: 0 }));
+  const iOSPressEffects = useIOSPressEffects.useIOSPressEffects(4);
+  const obj2 = { accessibilityRole: "button", onPressIn: iOSPressEffects.onPressIn, onPressOut: iOSPressEffects.onPressOut };
+  const merged1 = Object.assign(merged);
+  const items = [iOSPressEffects.pressableStyles, merged.style];
+  obj2.style = items;
+  obj2.children = children.children;
+  return <closure_6 accessibilityRole="button" onPressIn={iOSPressEffects.onPressIn} onPressOut={iOSPressEffects.onPressOut} />;
+});

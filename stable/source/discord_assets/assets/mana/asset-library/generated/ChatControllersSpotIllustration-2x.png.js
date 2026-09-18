@@ -1,0 +1,11 @@
+// Module ID: 5836
+// Function ID: 5837
+// Dependencies: [2]
+
+// Module 5836
+import size from "module_2" /* 2 */;
+
+const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ChatControllersSpotIllustration-2x.png.js");
+
+export default "https://cdn.discordapp.com/assets/content/f7a6fe1da9a5344567135a60ed32fb1d17c9d2bdfce3ca99ba8f1cac6a0cee44.png";
+export const metadata = { fileBytes: 66495 };

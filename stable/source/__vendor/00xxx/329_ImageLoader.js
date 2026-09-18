@@ -1,0 +1,16 @@
+// Module ID: 329
+// Function ID: 330
+// Name: ImageLoader
+// Dependencies: [330]
+
+// Module 329 (ImageLoader)
+import _modDef330 from "module_330" /* 330 */;
+
+const require = globalThis.__r;
+
+for (const key10016 in require("module_330")) {
+  arg5[key10016] = require("module_330")[key10016];
+  continue;
+}
+
+export default _modDef330;

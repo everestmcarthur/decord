@@ -1,0 +1,14 @@
+// Module ID: 17907
+// Function ID: 17908
+// Name: NativeI18nModule
+// Dependencies: [17, 2]
+
+// Module 17907 (NativeI18nModule)
+import _mod17 from "module_17" /* 17 */;
+import size from "module_2" /* 2 */;
+
+const TurboModuleRegistry = _mod17.TurboModuleRegistry;
+const enforcing = TurboModuleRegistry.getEnforcing("NativeI18nModule");
+const result = size.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/NativeI18nModule.tsx");
+
+export default enforcing;

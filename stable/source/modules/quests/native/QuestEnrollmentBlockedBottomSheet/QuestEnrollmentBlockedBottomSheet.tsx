@@ -1,0 +1,94 @@
+// Module ID: 15171
+// Function ID: 15172
+// Name: QuestEnrollmentBlockedBottomSheet
+// Dependencies: [19, 17, 7703, 21, 4560, 576, 504, 11783, 5447, 7439, 7150, 4556, 1114, 2]
+// Exports: default
+
+// Module 15171 (QuestEnrollmentBlockedBottomSheet)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7150 */;
+import useCountdownDefault from "useCountdown" /* 7439 */;
+import noop from "module_19" /* 19 */;
+import QuestStore from "QuestStore" /* 7703 */;
+
+const require = globalThis.__r;
+
+require = fn;
+function QuestEnrollmentBlockedBottomSheet(questEnrollmentBlockedUntil) {
+  questEnrollmentBlockedUntil = questEnrollmentBlockedUntil.questEnrollmentBlockedUntil;
+  const tmp = closure_6();
+  let date = questEnrollmentBlockedUntil;
+  if (questEnrollmentBlockedUntil == null) {
+    const _Date = Date;
+    date = new Date();
+  }
+  const tmp3Result = useCountdownDefault(date);
+  ({ minutes, seconds } = tmp3Result);
+  const padStartResult = String(tmp3Result.hours).padStart(2, "0");
+  const StringResult = String(tmp3Result.hours);
+  const padStartResult1 = String(minutes).padStart(2, "0");
+  const StringResult1 = String(minutes);
+  const padStartResult2 = String(seconds).padStart(2, "0");
+  let tmp12 = null;
+  if (null != questEnrollmentBlockedUntil) {
+    const obj = { header: null, footer: null, startExpanded: true, children: null };
+    const obj2 = { style: tmp.heading, children: null };
+    const obj3 = { variant: "heading-xl/bold", children: null };
+    const intl = util.intl;
+    obj3.children = intl.string(util.t["XEHDT/"]);
+    obj2.children = jsx(Text_Text.Text, { variant: "heading-xl/bold", children: null });
+    obj.header = <View style={tmp.heading}>{null}</View>;
+    const obj4 = { style: tmp.container, children: null };
+    const obj5 = { variant: "text-md/normal", children: null };
+    const intl2 = util.intl;
+    const obj6 = { countdownString: null };
+    const _HermesInternal = HermesInternal;
+    obj6.countdownString = "" + padStartResult + ":" + padStartResult1 + ":" + padStartResult2;
+    obj5.children = intl2.formatToPlainString(util.t["+5XVH+"], obj6);
+    obj4.children = jsx(Text_Text.Text, { variant: "text-md/normal", children: null });
+    obj.children = <View style={tmp.container}>{null}</View>;
+    tmp12 = jsx(Sheet_BottomSheet.BottomSheet, { header: null, footer: null, startExpanded: true, children: null });
+  }
+  return tmp12;
+}
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let obj2 = { heading: { display: "flex", justifyContent: "center", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 }, container: null };
+let obj3 = { display: "flex", justifyContent: "center", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 };
+obj2.container = { display: "flex", justifyContent: "center", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_32 };
+let closure_6 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/quests/native/QuestEnrollmentBlockedBottomSheet/QuestEnrollmentBlockedBottomSheet.tsx");
+
+export default function QuestEnrollmentBlockedBottomSheetConnected(questContentPosition) {
+  ({ questId: require, questEnrollmentBlockedUntil: importDefault, sourceQuestContent } = questContentPosition);
+  const items = [QuestStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => QuestStore.getQuest(questId));
+  let tmp4 = null;
+  if (null != stateFromStores) {
+    const obj2 = {
+      overrideVisibility: true,
+      questOrQuests: stateFromStores,
+      questContent: tmp(tmp2[8]).QuestContent.QUEST_ENROLLMENT_BLOCKED_BOTTOM_SHEET,
+      questContentPosition: questContentPosition.questContentPosition,
+      sourceQuestContent,
+      children() {
+          return <QuestEnrollmentBlockedBottomSheet questId={questId} questEnrollmentBlockedUntil={questEnrollmentBlockedUntil} sourceQuestContent={sourceQuestContent} />;
+        }
+    };
+    tmp4 = jsx(tmp(tmp2[7]).QuestContentImpressionTrackerNative, {
+      overrideVisibility: true,
+      questOrQuests: stateFromStores,
+      questContent: tmp(tmp2[8]).QuestContent.QUEST_ENROLLMENT_BLOCKED_BOTTOM_SHEET,
+      questContentPosition: questContentPosition.questContentPosition,
+      sourceQuestContent,
+      children() {
+          return <QuestEnrollmentBlockedBottomSheet questId={questId} questEnrollmentBlockedUntil={questEnrollmentBlockedUntil} sourceQuestContent={sourceQuestContent} />;
+        }
+    });
+  }
+  return tmp4;
+};

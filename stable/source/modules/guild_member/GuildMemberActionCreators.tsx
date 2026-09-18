@@ -1,0 +1,34 @@
+// Module ID: 7120
+// Function ID: 7121
+// Name: GuildMemberActionCreators
+// Dependencies: [2014, 1074, 5552, 573, 1272, 2]
+// Exports: updateGuildSelfMember
+
+// Module 7120 (GuildMemberActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import HTTPUtils from "HTTPUtils" /* 1272 */;
+import ImpersonateActionCreators from "ImpersonateActionCreators" /* 5552 */;
+import ImpersonateStore from "ImpersonateStore" /* 2014 */;
+
+require = fn;
+const Endpoints = fn(1074).Endpoints;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_member/GuildMemberActionCreators.tsx");
+
+export const updateGuildSelfMember = function updateGuildSelfMember(guildId, memberOptions) {
+  let flag = arg2;
+  if (arg2 === undefined) {
+    flag = false;
+  }
+  if (ImpersonateStore.isFullServerPreview(guildId)) {
+    const obj3 = { memberOptions };
+    const result = ImpersonateActionCreators.updateImpersonatedData(guildId, obj3);
+  } else {
+    const obj5 = { type: "GUILD_MEMBER_UPDATE_LOCAL", guildId, roles: null, flags: null };
+    ({ roles: obj2.roles, flags: obj2.flags } = memberOptions);
+    DispatcherDefault.dispatch(obj5);
+    const HTTP = HTTPUtils.HTTP;
+    const request = { url: Endpoints.SET_GUILD_MEMBER(guildId), body: memberOptions, oldFormErrors: flag || undefined, rejectWithError: false };
+    return HTTP.patch(request);
+  }
+};

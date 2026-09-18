@@ -1,0 +1,54 @@
+// Module ID: 4960
+// Function ID: 4961
+// Name: useAccessibilityViewIsModalToggle
+// Dependencies: [19, 4961, 2]
+// Exports: default
+
+// Module 4960 (useAccessibilityViewIsModalToggle)
+import AccessibilityFocusLockManagerDefault from "AccessibilityFocusLockManager" /* 4961 */;
+import noop from "module_19" /* 19 */;
+
+const size = fn(2);
+let result = size.fileFinishedImporting("design/components/AccessibilityView/useAccessibilityViewIsModalToggle.native.tsx");
+
+export default function useAccessibilityViewIsModalToggle(accessibilityViewIsModal) {
+  let flag = accessibilityViewIsModal.accessibilityViewIsModal;
+  if (flag === undefined) {
+    flag = false;
+  }
+  const nativeID = accessibilityViewIsModal.nativeID;
+  noop = undefined;
+  noop = noop.useRef(undefined);
+  let items = [flag, nativeID];
+  const callback = noop.useCallback(() => {
+    let tmp = arg0;
+    if (arg0 === undefined) {
+      tmp = flag;
+    }
+    if (tmp) {
+      if (null == nativeID) {
+        const _Error = Error;
+        const error = new Error("Must have a unique nativeID when accessibilityViewIsModal is enabled.");
+        throw error;
+      } else if (ref.current !== tmp6) {
+        ref.current = tmp6;
+        const items = [tmp6];
+        const result = AccessibilityFocusLockManagerDefault.enableAccessibilityFocusLock(items);
+      }
+    } else {
+      const current = ref.current;
+      if (null != current) {
+        ref.current = undefined;
+        const items1 = [current];
+        const result1 = AccessibilityFocusLockManagerDefault.disableAccessibilityFocusLock(items1);
+      }
+    }
+  }, items);
+  let items1 = [callback];
+  const effect = noop.useEffect(() => {
+    callback();
+    return () => {
+      callback(false);
+    };
+  }, items1);
+};

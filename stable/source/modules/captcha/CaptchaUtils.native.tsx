@@ -1,0 +1,84 @@
+// Module ID: 17289
+// Function ID: 17290
+// Name: captcha/CaptchaUtils
+// Dependencies: [4251, 11284, 504, 4527, 17290, 1896, 11282, 2]
+
+// Module 17289 (captcha/CaptchaUtils)
+import initialize from "initialize" /* 504 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import SharedCaptchaUtils from "SharedCaptchaUtils" /* 11282 */;
+import ActionSheetStore from "ActionSheetStore" /* 4251 */;
+
+const require = globalThis.__r;
+
+require = fn;
+const CAPTCHA_MODAL_KEY = fn(11284).CAPTCHA_MODAL_KEY;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/captcha/CaptchaUtils.native.tsx");
+
+export default {
+  showCaptcha(options, arg1) {
+    _require = arg1;
+    let obj = arg2;
+    if (arg2 === undefined) {
+      obj = {};
+    }
+    ({ sitekey, captchaService } = options);
+    const obj2 = ActionSheetActionCreatorsDefault;
+    const obj3 = {
+      sitekey,
+      captchaService,
+      onCaptchaVerify(captcha_key, captcha_rqtoken) {
+        return closure_0({ captcha_key, captcha_rqtoken });
+      },
+      close() {
+        return ActionSheetActionCreatorsDefault.hideActionSheet(CAPTCHA_MODAL_KEY);
+      }
+    };
+    const merged = Object.assign(obj);
+    const merged1 = Object.assign(options.options);
+    obj2.openLazy(require("asyncRequireImpl")(17290, dependencyMap.paths), CAPTCHA_MODAL_KEY, obj3);
+  },
+  showCaptchaAsync(nextResult1) {
+    if (arg1 === undefined) {
+      let obj = {};
+    }
+    c1 = undefined;
+    c2 = undefined;
+    c3 = undefined;
+    c4 = undefined;
+    ({ sitekey: c1, captchaService: c2, captchaSessionId: c3, options: c4 } = nextResult1);
+    return new Promise((arg0, arg1) => {
+      closure_0 = arg0;
+      sitekey = arg1;
+      obj = sitekey(captchaService[3]);
+      const merged = Object.assign(closure_0);
+      const merged1 = Object.assign(c4);
+      obj.openLazy(obj(captchaService[5])(captchaService[4], captchaService.paths), c4, {
+        sitekey,
+        captchaService,
+        onCaptchaVerify(captcha_key, captcha_rqtoken) {
+          return closure_0({ captcha_key, captcha_rqtoken, captcha_session_id });
+        },
+        onReject(dependencyMap) {
+          if (dependencyMap === SharedCaptchaUtils.CaptchaError.CANCEL) {
+            const captchaCancelError = new SharedCaptchaUtils.CaptchaCancelError();
+            closure_1(captchaCancelError);
+          } else {
+            const _Error = Error;
+            const _HermesInternal = HermesInternal;
+            const error = new Error("Failed to display captcha for service " + c2 + ".");
+            closure_1(error);
+          }
+        },
+        close() {
+          return closure_1(captchaService[3]).hideActionSheet(closure_1_4);
+        }
+      }, "stack");
+    });
+  },
+  useIsCaptchaModalOpen() {
+    const items = [ActionSheetStore];
+    return initialize.useStateFromStores(items, () => key.getKey() === CAPTCHA_MODAL_KEY);
+  }
+};

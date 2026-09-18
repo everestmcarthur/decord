@@ -1,0 +1,127 @@
+// Module ID: 16415
+// Function ID: 16416
+// Name: NotificationCenterStore
+// Dependencies: [32, 7637, 1090, 504, 7640, 11, 573, 2]
+
+// Module 16415 (NotificationCenterStore)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
+import initializeDefault from "initialize" /* 504 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import DurationsDefault from "Durations" /* 1090 */;
+import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 7640 */;
+import _slicedToArray from "module_32" /* 32 */;
+import RecentMentionsStore from "RecentMentionsStore" /* 7637 */;
+
+require = fn;
+function handleLoadFinished() {
+  obj.hasNewMentions = false;
+  obj.isDataStale = false;
+  obj.isRefreshing = false;
+}
+let closure_5 = 90 * DurationsDefault.Millis.DAY;
+let obj = { tab: null, localItemAcks: {}, hasNewMentions: false, isDataStale: false, isRefreshing: false };
+const PersistedStore = initializeDefault.PersistedStore;
+class NotificationCenterStore extends PersistedStore {
+}
+const prototype = NotificationCenterStore.prototype;
+prototype["initialize"] = function initialize(localItemAcks) {
+  this.waitFor(RecentMentionsStore);
+  if (null != localItemAcks) {
+    localItemAcks = localItemAcks.localItemAcks;
+    if (localItemAcks == null) {
+      localItemAcks = {};
+    }
+    localItemAcks.localItemAcks = (function purge(localItemAcks) {
+      obj = {};
+      const entries = Object.entries(localItemAcks);
+      while (tmp2 !== undefined) {
+        let tmp5 = _slicedToArray(tmp3, 2);
+        [tmp6, tmp7] = tmp5;
+        let _Date = Date;
+        let tmp8 = tmp7;
+        if (Date.now() - tmp7 < closure_1_5) {
+          obj[tmp6] = tmp8;
+        }
+        continue;
+      }
+      return obj;
+    })(localItemAcks);
+    localItemAcks.isDataStale = true;
+  }
+};
+prototype["getState"] = function getState() {
+  return obj;
+};
+prototype["getTab"] = function getTab() {
+  let ForYou = obj.tab;
+  if (ForYou == null) {
+    ForYou = NotificationCenterItemsTypes.NotificationCenterTabs.ForYou;
+  }
+  return ForYou;
+};
+prototype["isLocalItemAcked"] = function isLocalItemAcked(addResult) {
+  let tmp = null != addResult.local_id;
+  if (tmp) {
+    let tmp3 = null != obj.localItemAcks[addResult.local_id];
+    if (!tmp3) {
+      obj = SnowflakeUtilsDefault;
+      tmp3 = obj.age(addResult.id) > closure_5;
+    }
+    tmp = tmp3;
+  }
+  return tmp;
+};
+prototype["hasNewMentions"] = function hasNewMentions() {
+  return obj.hasNewMentions;
+};
+prototype["isDataStale"] = function isDataStale() {
+  return obj.isDataStale;
+};
+prototype["isRefreshing"] = function isRefreshing() {
+  return obj.isRefreshing;
+};
+prototype["shouldReload"] = function shouldReload() {
+  let isRefreshing = obj.hasNewMentions;
+  if (!isRefreshing) {
+    isRefreshing = obj.isDataStale;
+  }
+  if (!isRefreshing) {
+    isRefreshing = obj.isRefreshing;
+  }
+  return isRefreshing;
+};
+NotificationCenterStore.displayName = "NotificationCenterStore";
+NotificationCenterStore.persistKey = "NotificationCenterStore";
+obj = {
+  MESSAGE_CREATE: function handleMessageCreate(message) {
+    if (RecentMentionsStore.hasMention(message.message.id)) {
+      obj.hasNewMentions = true;
+    }
+  },
+  NOTIFICATION_CENTER_SET_TAB: function handleSetTab(tab) {
+    obj = {};
+    const merged = Object.assign(obj);
+    obj.tab = tab.tab;
+  },
+  NOTIFICATION_CENTER_ITEMS_LOCAL_ACK: function handleAck(localIds) {
+    localIds = localIds.localIds;
+    const item = localIds.forEach((item) => {
+      obj = {};
+      const merged = Object.assign(obj);
+      const obj2 = {};
+      const merged1 = Object.assign(obj.localItemAcks);
+      obj2[item] = Date.now();
+      obj.localItemAcks = obj2;
+    });
+  },
+  NOTIFICATION_CENTER_REFRESH: function handleRefreshData() {
+    obj.isRefreshing = true;
+  },
+  LOAD_NOTIFICATION_CENTER_ITEMS_FAILURE: handleLoadFinished,
+  LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: handleLoadFinished
+};
+const notificationCenterStore = new NotificationCenterStore(DispatcherDefault, obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/notification_center/NotificationCenterStore.tsx");
+
+export default notificationCenterStore;

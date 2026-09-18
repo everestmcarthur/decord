@@ -1,0 +1,75 @@
+// Module ID: 17665
+// Function ID: 17666
+// Name: EnableCommunityModal
+// Dependencies: [19, 21, 17664, 5630, 5624, 1114, 7377, 6992, 17666, 17667, 17679, 17680, 7000, 2]
+// Exports: default
+
+// Module 17665 (EnableCommunityModal)
+import util from "util" /* 1114 */;
+import NavigatorHeader from "NavigatorHeader" /* 5624 */;
+import useNavigatorBackPressHandler from "useNavigatorBackPressHandler" /* 5630 */;
+import Navigator from "Navigator" /* 7000 */;
+import EnableCommunityModalActionCreatorsDefault from "EnableCommunityModalActionCreators" /* 17664 */;
+import EnableCommunitySharedNavigation from "EnableCommunitySharedNavigation" /* 17666 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+function onModalClose() {
+  EnableCommunityModalActionCreatorsDefault.close();
+}
+function HeaderBackButton(arg0) {
+  useNavigatorBackPressHandler.useNavigatorBackPressHandler(() => {
+    EnableCommunityModalActionCreatorsDefault.close();
+    return true;
+  });
+  const intl = util.intl;
+  return NavigatorHeader.getHeaderTextButton(intl.string(util.t["13/7kX"]), onModalClose)(arg0);
+}
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/public_guilds/native/components/EnableCommunityModal/EnableCommunityModal.tsx");
+
+export default function EnableCommunityModal() {
+  const memo = noop.useMemo(() => {
+    function headerRight() {
+      const obj = { source: closure_1_1(6992), onPress, accessibilityLabel: null };
+      const intl = closure_1_0(1114).intl;
+      obj.accessibilityLabel = intl.string(closure_1_0(1114).t.cpT0Cq);
+      return closure_1_4(closure_1_0(7377).HeaderActionButton, obj);
+    }
+    return {
+      [closure_1_0(closure_1_2[8]).EnableCommunityModalSteps.STEP_1]: {
+        headerRight,
+        headerLeft,
+        headerTitle() {
+          return null;
+        },
+        render() {
+          return closure_1_4(closure_1_1(17667), {});
+        }
+      },
+      [closure_1_0(closure_1_2[8]).EnableCommunityModalSteps.STEP_2]: {
+        headerRight,
+        headerTitle() {
+          return null;
+        },
+        render() {
+          return closure_1_4(closure_1_1(17679), {});
+        }
+      },
+      [closure_1_0(closure_1_2[8]).EnableCommunityModalSteps.STEP_3]: {
+        headerRight,
+        headerTitle() {
+          return null;
+        },
+        render() {
+          return closure_1_4(closure_1_1(17680), {});
+        }
+      }
+    };
+  }, []);
+  let obj = { screens: memo, initialRouteName: EnableCommunitySharedNavigation.EnableCommunityModalSteps.STEP_1, headerBackTitle: null };
+  let intl = util.intl;
+  obj.headerBackTitle = intl.string(util.t["13/7kX"]);
+  return jsx(Navigator.Navigator, { screens: memo, initialRouteName: EnableCommunitySharedNavigation.EnableCommunityModalSteps.STEP_1, headerBackTitle: null });
+};

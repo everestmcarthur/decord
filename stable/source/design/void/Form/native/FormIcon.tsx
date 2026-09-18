@@ -1,0 +1,38 @@
+// Module ID: 7148
+// Function ID: 7149
+// Name: FormIcon
+// Dependencies: [19, 21, 4560, 1178, 2]
+// Exports: default
+
+// Module 7148 (FormIcon)
+import native from "native" /* 1178 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_3 = createStyles.createStyles({ icon: { opacity: 0.6 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("design/void/Form/native/FormIcon.tsx");
+
+export default function FormIcon(color) {
+  ({ style, themedColor } = color);
+  const merged = Object.assign(color, Object.assign({ style: 0, color: 0, themedColor: 0 }));
+  const tmp2 = closure_3();
+  if (null != themedColor) {
+    const obj2 = { style: null, themedColor: null };
+    const items = [tmp2.icon, style];
+    obj2.style = items;
+    obj2.themedColor = themedColor;
+    const merged1 = Object.assign(merged);
+    let tmp9 = jsx(native.ThemedIcon, { style: null, themedColor: null });
+  } else {
+    const obj = { style: null, color: null };
+    const items1 = [tmp2.icon, style];
+    obj.style = items1;
+    obj.color = color.color;
+    const merged2 = Object.assign(merged);
+    tmp9 = jsx(native.Icon, { style: null, color: null });
+  }
+  return tmp9;
+};

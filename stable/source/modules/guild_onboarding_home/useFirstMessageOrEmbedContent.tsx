@@ -1,0 +1,44 @@
+// Module ID: 16569
+// Function ID: 16570
+// Name: useFirstMessageOrEmbedContent
+// Dependencies: [2]
+// Exports: default
+
+// Module 16569 (useFirstMessageOrEmbedContent)
+import size from "module_2" /* 2 */;
+
+const result = size.fileFinishedImporting("modules/guild_onboarding_home/useFirstMessageOrEmbedContent.tsx");
+
+export default function useFirstMessageOrEmbedContent(content) {
+  if (null == content) {
+    return null;
+  } else {
+    content = content.content;
+    let length;
+    if (content != null) {
+      length = content.length;
+    }
+    if (length > 0) {
+      return content.content;
+    } else {
+      const embeds1 = content.embeds;
+      let length1;
+      if (embeds1 != null) {
+        length1 = embeds1.length;
+      }
+      if (length1 > 0) {
+        const embeds = content.embeds;
+        for (const item10013 of embeds) {
+          if (null != item10013.rawDescription) {
+            if (tmp5.rawDescription.length > 0) {
+              obj.return();
+              return item10013.rawDescription;
+            }
+          }
+          continue;
+        }
+      }
+      return null;
+    }
+  }
+};

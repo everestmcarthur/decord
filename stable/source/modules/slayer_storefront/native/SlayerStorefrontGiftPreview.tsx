@@ -1,0 +1,91 @@
+// Module ID: 11452
+// Function ID: 11453
+// Name: SlayerStorefrontGiftPreview
+// Dependencies: [19, 17, 21, 4560, 8831, 4556, 1114, 9465, 3417, 2]
+// Exports: default
+
+// Module 11452 (SlayerStorefrontGiftPreview)
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 8831 */;
+import InfoBox from "InfoBox" /* 9465 */;
+import noop from "module_19" /* 19 */;
+
+const InfoBoxDefault = InfoBox;
+
+require = fn;
+function WarningBox(application) {
+  application = application.application;
+  ({ canStartAuthorization, hasAccountLinked, mobileAccountLinkingDisabled, sku } = application);
+  let tmp2 = null;
+  if (hasAccountLinked) {
+    return null;
+  } else {
+    let name = importDefault;
+    let BMMo2K = dependencyMap;
+    const obj = { look: InfoBox.InfoBoxLooks.WARNING, style: tmp.warningBox, children: null };
+    const intl = util.intl;
+    if (mobileAccountLinkingDisabled) {
+      BMMo2K = name(3417).BMMo2K;
+      tmp2 = application == tmp2;
+      name = undefined;
+      if (!tmp2) {
+        name = application.name;
+      }
+      const obj2 = { applicationName: name };
+      application = intl.formatToPlainString(BMMo2K, obj2);
+      obj.children = application;
+      let tmp7 = obj;
+    } else if (canStartAuthorization) {
+      const obj3 = { skuName: sku.name, applicationName: null };
+      let name1;
+      if (application != tmp2) {
+        name1 = application.name;
+      }
+      obj3.applicationName = name1;
+      obj.children = intl.formatToPlainString(tmp6(1114).t["EgCl+Q"], obj3);
+      tmp7 = obj;
+    } else {
+      obj.children = intl.format(tmp6(1114).t["3T0cpx"], {});
+      tmp7 = obj;
+    }
+    React4(InfoBoxDefault, tmp7);
+  }
+}
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4560);
+let closure_6 = createStyles.createStyles({ container: { alignItems: "center", justifyContent: "center", gap: 16, marginTop: 20 }, text: { textAlign: "center", paddingHorizontal: 32 }, warningBox: { marginHorizontal: 16 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/slayer_storefront/native/SlayerStorefrontGiftPreview.tsx");
+
+export default function SlayerStorefrontGiftPreview(arg0) {
+  ({ sku, application, mobileAccountLinkingDisabled } = arg0);
+  ({ sender, hasAccountLinked, canStartAuthorization } = arg0);
+  if (mobileAccountLinkingDisabled === undefined) {
+    mobileAccountLinkingDisabled = false;
+  }
+  const tmp = closure_6();
+  let tmp3Result = null;
+  if (null != sku) {
+    const obj = { style: tmp.container, children: null };
+    const obj2 = { sku };
+    const items = [React4(SlayerStorefrontItemCardDefault, obj2), , ];
+    const obj3 = { variant: "heading-md/normal", color: "mobile-text-heading-primary", style: tmp.text, children: null };
+    const intl = util.intl;
+    const obj4 = { sender, skuName: sku.name, applicationName: null };
+    let name;
+    if (application != null) {
+      name = application.name;
+    }
+    obj4.applicationName = name;
+    obj3.children = intl.formatToPlainString(util.t["2tBYtA"], obj4);
+    items[1] = React4(Text_Text.Text, obj3);
+    const obj5 = { canStartAuthorization, hasAccountLinked, mobileAccountLinkingDisabled, sku, application };
+    items[2] = React4(WarningBox, obj5);
+    obj.children = items;
+    tmp3Result = hasOwnProperty(View, obj);
+  }
+  return tmp3Result;
+};

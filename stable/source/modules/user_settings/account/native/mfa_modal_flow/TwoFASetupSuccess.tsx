@@ -1,0 +1,177 @@
+// Module ID: 14794
+// Function ID: 14795
+// Name: TwoFASetupSuccess
+// Dependencies: [5, 32, 19, 17, 21, 4560, 576, 6597, 1114, 14784, 6949, 14785, 14795, 4556, 1178, 4975, 2]
+// Exports: default
+
+// Module 14794 (TwoFASetupSuccess)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import components_Button_Button from "components/Button/Button" /* 4975 */;
+import TwoFASetupModal from "TwoFASetupModal" /* 14785 */;
+import _mod14795 from "module_14795" /* 14795 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: metroRequire, Image: closure_7 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+const createStyles = fn(4560);
+let obj2 = { container: { alignSelf: "stretch", flex: 1, alignItems: "center", justifyContent: "flex-start", flexDirection: "column" }, flex: { flex: 1 }, image: { width: 190, height: 70 }, success: { marginTop: 33 }, successBody: { fontSize: 14, textAlign: "center", marginHorizontal: 20, marginTop: 4, color: nativeDefault.colors.TEXT_STRONG }, divider: null, buttonWrapper: null, ctaDescription: null, errorText: null };
+let size = { height: 2, width: 48, margin: 32, backgroundColor: nativeDefault.colors.BORDER_STRONG };
+obj2.divider = size;
+obj2.buttonWrapper = { alignSelf: "stretch", margin: 16, marginTop: 0 };
+let obj3 = { fontSize: 14, textAlign: "center", marginHorizontal: 20, marginTop: 4, color: nativeDefault.colors.TEXT_STRONG };
+obj2.ctaDescription = { fontSize: 14, textAlign: "center", marginTop: 4, marginHorizontal: 16, color: nativeDefault.colors.TEXT_STRONG };
+let obj4 = { fontSize: 14, textAlign: "center", marginTop: 4, marginHorizontal: 16, color: nativeDefault.colors.TEXT_STRONG };
+obj2.errorText = { fontSize: 14, textAlign: "center", marginHorizontal: 16, marginTop: 8, color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
+let closure_10 = createStyles.createStyles(obj2);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/account/native/mfa_modal_flow/TwoFASetupSuccess.tsx");
+
+export default function TwoFASetupSuccess() {
+  const tmp = closure_10();
+  [tmp3, require] = noop.useState(false);
+  const tmp2 = _slicedToArray(noop.useState(false), 2);
+  [tmp5, importDefault] = noop.useState("");
+  const callback = noop.useCallback(() => {
+    setRegistering = async function _onRegisterSuccess(arg0, value) {
+      if (c6 === 2) {
+        c6 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp7 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          const obj2 = { value, done: true };
+          return obj2;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c6 = 2;
+          if (0 === c5) {
+            if (arg0 === 1) {
+              c6 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c6 = 3;
+              const obj3 = { value, done: true };
+              return obj3;
+            } else {
+              closure_2 = tmp3;
+              closure_129_0 = undefined;
+              closure_129_1 = undefined;
+              ({ ticket: closure_129_0, credential: closure_129_1 } = closure_0);
+              c5 = 1;
+              c6 = 1;
+              return { value: "PX_16", done: true };
+            }
+          } else if (1 === tmp8) {
+            if (arg0 === 1) {
+              c6 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c6 = 3;
+              const obj4 = { value, done: true };
+              return obj4;
+            } else {
+              c4 = 1;
+              const intl = setRegistering(1114).intl;
+              c5 = 3;
+              c6 = 1;
+              const obj5 = { value: setRegistering(6597).finishRegisterWebAuthnCredential(intl.string(setRegistering(1114).t["8H5RmH"]), closure_129_0, closure_129_1), done: false };
+              return obj5;
+            }
+          } else {
+            if (2 === tmp8) {
+              c4 = 0;
+              tmp5(tmp19.body.message);
+              c6 = 3;
+            } else if (arg0 === 1) {
+              c6 = 3;
+              throw value;
+            } else if (arg0 !== 2) {
+              setError(14784).close();
+              c4 = 0;
+              const obj = setError(14784);
+            }
+            c4 = 0;
+            c6 = 3;
+            const obj6 = { value, done: true };
+            return obj6;
+          }
+        } catch (tmp19) {
+          if (tmp4 === c4) {
+            c6 = tmp2;
+            throw tmp19;
+          } else {
+            c5 = tmp;
+          }
+        }
+      }
+    };
+    setError("");
+    setError(dependencyMap[10]).registerPasskey({
+      setRegistering,
+      setError,
+      onRegisterSuccess(arg0) {
+        const self = this;
+        const apply = closure_0.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
+        }
+        return applyArgumentsResult;
+      }
+    });
+  }, []);
+  let obj = { style: tmp.container, children: null };
+  const items = [closure_8(closure_6, { style: tmp.flex }), , , , , , , ];
+  let obj2 = { style: tmp.flex };
+  const tmp4 = _slicedToArray(noop.useState(""), 2);
+  items[1] = closure_8(closure_7, { source: _mod14795, style: tmp.image });
+  let obj4 = { style: tmp.success, variant: "text-lg/semibold", color: "mobile-text-heading-primary", children: null };
+  let intl = util.intl;
+  obj4.children = intl.string(util.t.Awk3Gw);
+  items[2] = closure_8(Text_Text.Text, obj4);
+  let obj5 = { style: tmp.successBody, children: null };
+  const intl2 = util.intl;
+  obj5.children = intl2.string(util.t["0d1bXM"]);
+  items[3] = closure_8(native.LegacyText, obj5);
+  items[4] = closure_8(closure_6, { style: tmp.divider });
+  const obj7 = { style: tmp.ctaDescription, children: null };
+  const intl3 = util.intl;
+  obj7.children = intl3.string(util.t.okgGTu);
+  items[5] = closure_8(native.LegacyText, obj7);
+  const obj8 = { style: tmp.buttonWrapper, children: null };
+  const intl4 = util.intl;
+  const string = intl4.string;
+  const t = util.t;
+  if (tmp3) {
+    let stringResult = string(t.wePEBF);
+  } else {
+    stringResult = string(t.NIFmCJ);
+  }
+  const items1 = [closure_8(components_Button_Button.Button, { text: stringResult, onPress: callback, disabled: tmp3, loading: tmp3, grow: true }), ];
+  let tmp7Result = "" !== tmp5;
+  if (tmp7Result) {
+    const obj9 = { style: tmp.errorText, children: tmp5 };
+    tmp7Result = tmp7(native.LegacyText, obj9);
+  }
+  const obj10 = { children: null };
+  items1[1] = tmp7Result;
+  obj8.children = items1;
+  items[6] = closure_9(closure_6, obj8);
+  items[7] = closure_8(closure_6, { style: tmp.flex });
+  obj.children = items;
+  obj10.children = closure_9(closure_6, obj);
+  return closure_8(TwoFASetupModal.TwoFASetupModalScreen, obj10);
+};

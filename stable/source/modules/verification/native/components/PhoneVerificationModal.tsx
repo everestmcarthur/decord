@@ -1,0 +1,203 @@
+// Module ID: 7042
+// Function ID: 7043
+// Name: PhoneVerificationModal
+// Dependencies: [5, 19, 1074, 7043, 21, 5624, 7044, 7045, 4763, 1250, 7078, 6993, 7000, 1114, 2]
+// Exports: default
+
+// Module 7042 (PhoneVerificationModal)
+import UserSettingsConfirmPasswordDefault from "UserSettingsConfirmPassword" /* 6993 */;
+import AddPhoneDefault from "AddPhone" /* 7044 */;
+import PhoneActionCreatorsDefault from "PhoneActionCreators" /* 7045 */;
+import VerifyPhoneDefault from "VerifyPhone" /* 7078 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
+
+const require = fn;
+const VerificationModalScenes = fn(1074).VerificationModalScenes;
+let closure_5 = fn(7043).PHONE_VERIFICATION_MODAL_KEY;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/verification/native/components/PhoneVerificationModal.tsx");
+
+export default function PhoneVerificationModal(onClose) {
+  let obj = { screens: null, initialRouteName: null, headerBackTitle: null };
+  _require = onClose;
+  let obj2 = {};
+  let obj3 = { headerTitle: require("NavigatorHeader").getHeaderNoTitle(), headerLeft: null, render: null };
+  const obj4 = require("NavigatorHeader");
+  obj3.headerLeft = require("NavigatorHeader").getHeaderCloseButton(onClose.onClose);
+  obj3.render = function render(reason, arg1) {
+    onClose = reason;
+    closure_1 = arg1;
+    const obj = {};
+    const merged = Object.assign(reason);
+    reason = undefined;
+    if (reason != null) {
+      reason = reason.reason;
+    }
+    if (reason == null) {
+      reason = onClose.reason;
+    }
+    obj.reason = reason;
+    obj.onComplete = function onComplete(phone) {
+      return closure_1.push(VerificationModalScenes.VERIFY_PHONE, {
+        phone,
+        onVerified(arg0) {
+          reason = arg0;
+          closure_1.push(constants.VERIFY_PASSWORD, {
+            hideUnverifiedBanner: true,
+            onSubmit(password) {
+              reason = undefined;
+              if (reason != null) {
+                reason = reason.reason;
+              }
+              if (reason == null) {
+                reason = reason.reason;
+              }
+              return PhoneActionCreatorsDefault.addPhone(reason, password, reason);
+            },
+            onSuccess() {
+              closure_1_1(closure_1_2[8]).popWithKey(closure_1_5);
+            }
+          });
+        }
+      });
+    };
+    let fn = null;
+    if (onClose.allowDeletePhone) {
+      fn = () => {
+        closure_1.push(VerificationModalScenes.VERIFY_PASSWORD, {
+          hideUnverifiedBanner: true,
+          onSubmit(password) {
+            reason = undefined;
+            if (closure_1_0 != null) {
+              reason = closure_1_0.reason;
+            }
+            if (reason == null) {
+              reason = closure_0.reason;
+            }
+            return PhoneActionCreatorsDefault.removePhone(password, reason);
+          },
+          onSuccess() {
+            closure_1_1(closure_1_2[8]).pop();
+          }
+        });
+      };
+    }
+    obj.onDeletePhone = fn;
+    return jsx(AddPhoneDefault, {});
+  };
+  obj2[VerificationModalScenes.ADD_PHONE] = obj3;
+  let obj6 = { headerTitle: null, impressionName: null, render: null };
+  let obj5 = require("NavigatorHeader");
+  obj6.headerTitle = require("NavigatorHeader").getHeaderNoTitle();
+  obj6.impressionName = require("discord_common/AnalyticsUtils").ImpressionNames.USER_VERIFY_PHONE;
+  obj6.render = function render(arg0, arg1) {
+    closure_0 = arg1;
+    let obj = {};
+    const merged = Object.assign(arg0);
+    obj.disableKeyboardAvoidingView = true;
+    obj.onVerified = function onVerified(arg0) {
+      closure_0 = arg0;
+      let obj = { hideUnverifiedBanner: true, onSubmit: null, onSuccess: null };
+      closure_1 = asyncGeneratorStep(async (arg0) => {
+        const reason = arg0;
+        c2 = 0;
+        c1 = 0;
+        c4 = 0;
+        return (async (arg0, value) => {
+          if (c1 === 2) {
+            c1 = 3;
+            throw new TypeError("Generator functions may not be called on executing generators");
+          } else if (tmp5 === 3) {
+            if (arg0 === 1) {
+              throw value;
+            } else if (arg0 === 2) {
+              const obj2 = { value, done: true };
+              return obj2;
+            } else {
+              return { value: "HermesInternal", done: null };
+            }
+          } else {
+            try {
+              c1 = 2;
+              if (0 === c2) {
+                if (arg0 === 1) {
+                  c1 = 3;
+                  throw value;
+                } else if (arg0 === 2) {
+                  c1 = 3;
+                  const obj3 = { value, done: true };
+                  return obj3;
+                } else {
+                  c4 = 1;
+                  c2 = 2;
+                  c1 = 1;
+                  const obj5 = { value: v3(7045).addPhone(reason, reason, reason.reason), done: false };
+                  return obj5;
+                }
+              } else if (1 === tmp6) {
+                c4 = 0;
+                c1 = 3;
+                const obj6 = { value, done: true };
+                return obj6;
+              } else if (arg0 === 1) {
+                c1 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c4 = 0;
+                c1 = 3;
+                const obj7 = { value, done: true };
+                return obj7;
+              } else {
+                c4 = 0;
+                c1 = 3;
+                const obj = { value, done: true };
+                return obj;
+              }
+            } catch (tmp13) {
+              value = tmp13;
+              if (tmp3 === c4) {
+                c1 = tmp2;
+                throw tmp13;
+              } else {
+                c2 = tmp;
+              }
+            }
+          }
+        })();
+      });
+      obj.onSubmit = function() {
+        const self = this;
+        const apply = closure_1.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
+        }
+        return applyArgumentsResult;
+      };
+      obj.onSuccess = function onSuccess() {
+        closure_1(4763).popWithKey(closure_1_5);
+      };
+      closure_0.push(VerificationModalScenes.VERIFY_PASSWORD, obj);
+    };
+    return jsx(VerifyPhoneDefault, {});
+  };
+  obj2[VerificationModalScenes.VERIFY_PHONE] = obj6;
+  const obj8 = { headerTitle: null, render: null };
+  let obj7 = require("NavigatorHeader");
+  obj8.headerTitle = require("NavigatorHeader").getHeaderNoTitle();
+  obj8.render = function render(arg0) {
+    const merged = Object.assign(arg0);
+    return jsx(UserSettingsConfirmPasswordDefault, {});
+  };
+  obj2[VerificationModalScenes.VERIFY_PASSWORD] = obj8;
+  obj.screens = obj2;
+  obj.initialRouteName = VerificationModalScenes.ADD_PHONE;
+  const intl = require("util").intl;
+  obj.headerBackTitle = intl.string(require("util").t["13/7kX"]);
+  return jsx(require("Navigator").Navigator, { screens: null, initialRouteName: null, headerBackTitle: null });
+};

@@ -1,0 +1,57 @@
+// Module ID: 10156
+// Function ID: 10157
+// Name: NotificationSettingsMuteBanner
+// Dependencies: [19, 17, 21, 4560, 576, 4556, 4975, 1114, 2]
+// Exports: NotificationSettingsMuteBanner, getMuteBannerSubtitleFromConfig
+
+// Module 10156 (NotificationSettingsMuteBanner)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import components_Button_Button from "components/Button/Button" /* 4975 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const createStyles = fn(4560);
+let obj2 = { card: { padding: 16, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", borderRadius: nativeDefault.radii.lg + 8, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND } };
+let closure_5 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsMuteBanner.tsx");
+
+export const NotificationSettingsMuteBanner = function NotificationSettingsMuteBanner(children) {
+  const obj = { style: null, children: null };
+  const items = [children.style, closure_5().card];
+  obj.style = items;
+  const obj2 = { style: { flex: 1, marginRight: 8 }, children: null };
+  const items1 = [React3(Text_Text.Text, { variant: "text-md/semibold", color: "text-overlay-light", children: children.title }), React3(Text_Text.Text, { variant: "text-xs/medium", color: "text-overlay-light", children: children.subtitle })];
+  obj2.children = items1;
+  const items2 = [React4(View, obj2), ];
+  const obj5 = { text: null, onPress: null, variant: "primary-overlay" };
+  const intl = util.intl;
+  obj5.text = intl.string(util.t.YqAjXy);
+  obj5.onPress = children.onPressUnmute;
+  items2[1] = React3(components_Button_Button.Button, obj5);
+  obj.children = items2;
+  return React4(View, obj);
+};
+export const getMuteBannerSubtitleFromConfig = function getMuteBannerSubtitleFromConfig(config) {
+  let end_time;
+  if (config != null) {
+    end_time = config.end_time;
+  }
+  if (null == end_time) {
+    const intl = util.intl;
+    let stringResult = intl.string(util.t["tFqP/P"]);
+  } else {
+    const intl2 = util.intl;
+    const obj = { endTime: null };
+    const _Date = Date;
+    const date = new Date(config.end_time);
+    obj.endTime = date.toLocaleString(util.intl.currentLocale, { month: "numeric", day: "numeric", hour: "numeric", minute: "2-digit" });
+    stringResult = intl2.formatToPlainString(util.t.C7m4oh, obj);
+  }
+  return stringResult;
+};

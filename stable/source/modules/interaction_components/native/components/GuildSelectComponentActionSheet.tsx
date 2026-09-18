@@ -1,0 +1,136 @@
+// Module ID: 14653
+// Function ID: 14654
+// Name: GuildSelectComponentActionSheet
+// Dependencies: [32, 19, 17, 1979, 5438, 21, 4560, 4792, 1114, 4527, 11827, 5584, 4712, 1178, 4556, 5442, 2]
+// Exports: default
+
+// Module 14653 (GuildSelectComponentActionSheet)
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 4712 */;
+import InteractionComponentTypes from "InteractionComponentTypes" /* 4792 */;
+import SelectComponentActionSheetDefault from "SelectComponentActionSheet" /* 11827 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import SortedGuildStore from "SortedGuildStore" /* 5438 */;
+
+const require = globalThis.__r;
+
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+const createStyles = fn(4560);
+let closure_10 = createStyles.createStyles({ guildIdentity: { flexDirection: "row", alignItems: "center" }, iconContainer: { marginRight: 16 }, avatar: { marginRight: 4 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/interaction_components/native/components/GuildSelectComponentActionSheet.tsx");
+
+export default function GuildSelectComponentActionSheet(arg0) {
+  ({ selectedGuild, onSelectGuild: require, user: importDefault } = arg0);
+  let first;
+  let first1;
+  let callback;
+  const tmp = closure_10();
+  dependencyMap = tmp;
+  const tmp2 = first(first1.useState(""), 2);
+  first = tmp2[0];
+  const tmp6 = first(first1.useState({ type: InteractionComponentTypes.SelectOptionType.GUILD, value: selectedGuild.id, label: selectedGuild.name, guild: selectedGuild }), 2);
+  first1 = tmp6[0];
+  closure_5 = tmp6[1];
+  if (null != first1) {
+    let items = [first1];
+    let items1 = items;
+  } else {
+    items1 = [];
+  }
+  let obj3 = { maxValues: 1, minValues: 1, placeholder: null };
+  function submitSelection() {
+    return require("ActionSheetActionCreators").hideActionSheet();
+  }
+  const intl = tmp4(1114).intl;
+  obj3.placeholder = intl.string(util.t["ZImm/x"]);
+  callback = obj.useCallback((query) => {
+    if (0 === query.length) {
+      flattenedGuildIds = flattenedGuildIds.getFlattenedGuildIds();
+      const _Array = Array;
+      const array = new Array();
+      let reduced = flattenedGuildIds.reduce((arr, item) => {
+        guild = guild.getGuild(item);
+        if (null != guild) {
+          const obj = { type: closure_1_0(4792).SelectOptionType.GUILD, value: null, label: null, guild: null };
+          ({ id: obj.value, name: obj.label } = guild);
+          obj.guild = guild;
+          arr.push(obj);
+        }
+        return arr;
+      }, array);
+    } else {
+      const obj2 = { query };
+      let obj = require("AutocompleteUtils");
+      reduced = require("AutocompleteUtils").queryGuilds(obj2).map((record) => {
+        record = record.record;
+        return { type: closure_1_0(4792).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
+      });
+      const queryGuildsResult = require("AutocompleteUtils").queryGuilds(obj2);
+    }
+    return reduced;
+  }, []);
+  const items2 = [first, callback];
+  const memo = obj.useMemo(() => callback(first), items2);
+  return closure_8(SelectComponentActionSheetDefault, {
+    onPressOptionItem(arg0, guild) {
+      require(guild.guild);
+      closure_5(guild);
+      ActionSheetActionCreatorsDefault.hideActionSheet();
+    },
+    onRemoveOptionItem() {
+      closure_5(null);
+    },
+    renderIcon(guild) {
+      return closure_1_8(require("GuildIcon"), { guild: guild.guild });
+    },
+    renderHeaderIcon(guild) {
+      const obj = { size: require("GuildIcon").GuildIconSizes.XSMALL, guild: guild.guild };
+      return closure_1_8(require("GuildIcon"), obj);
+    },
+    iconContainerStyle: tmp.iconContainer,
+    renderDescription(guild) {
+      const hasAvatarForGuildResult = closure_1_1.hasAvatarForGuild(guild.guild.id);
+      let username = NicknameUtilsDefault.getNickname(guild.guild.id, undefined, closure_1_1);
+      const obj2 = { style: guildIdentity.guildIdentity, children: null };
+      let tmp8 = hasAvatarForGuildResult;
+      if (hasAvatarForGuildResult) {
+        const obj3 = { size: native.AvatarSizes.SIZE_16, style: tmp7.avatar, user: tmp, guildId: guild.guild.id, animate: true };
+        tmp8 = React6(native.Avatar, obj3);
+      }
+      const items = [tmp8, ];
+      if (username == null) {
+        username = tmp.username;
+      }
+      items[1] = React6(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", children: username });
+      obj2.children = items;
+      return React7(View, obj2);
+    },
+    selectionActionComponent: obj3,
+    options: memo,
+    selectedCount: items1.length,
+    selectedOptions: items1,
+    isSelected(value) {
+      value = undefined;
+      if (first1 != null) {
+        value = first1.value;
+      }
+      return value.value === value;
+    },
+    submitSelection,
+    onQueryChange: tmp2[1],
+    itemAccessibilityLabel(label) {
+      return label.label;
+    },
+    allowEmpty: false,
+    expanded: true
+  });
+};

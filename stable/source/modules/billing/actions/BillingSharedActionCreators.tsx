@@ -1,0 +1,346 @@
+// Module ID: 4885
+// Function ID: 4886
+// Name: BillingSharedActionCreators
+// Dependencies: [5, 4222, 4886, 1074, 1272, 4240, 573, 1114, 1242, 4461, 4233, 2]
+// Exports: createPaymentSource, dispatchConfirmationError, popupBridgeState, validatePaymentSourceBillingAddress
+
+// Module 4885 (BillingSharedActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import util from "util" /* 1114 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import HTTPUtils from "HTTPUtils" /* 1272 */;
+import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 4461 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import PaymentSourceRecord from "PaymentSourceRecord" /* 4222 */;
+
+require = fn;
+let closure_8 = async function _validatePaymentSourceBillingAddress(arg0, value) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj5 = { value, done: true };
+          return obj5;
+        } else {
+          closure_2 = tmp3;
+          closure_1 = tmp7;
+          closure_129_0 = undefined;
+          c4 = 1;
+          const HTTP = HTTPUtils.HTTP;
+          const request = { url: constants.BILLING_PAYMENT_SOURCES_VALIDATE_BILLING_ADDRESS, body: null, rejectWithError: false };
+          const obj6 = { billing_address: null };
+          ({ name: obj11.name, line1: obj11.line_1, line2: obj11.line_2, city: obj11.city, state: obj11.state, postalCode: obj11.postal_code, country: obj11.country, email: obj11.email } = closure_0);
+          obj6.billing_address = { name: null, line_1: null, line_2: null, city: null, state: null, postal_code: null, country: null, email: null };
+          request.body = obj6;
+          c5 = 2;
+          c6 = 1;
+          const obj8 = { value: HTTP.post(request), done: false };
+          return obj8;
+        }
+      } else if (1 === tmp7) {
+        c4 = 0;
+        closure_129_1 = closure_3;
+        closure_129_0 = closure_130_0(closure_130_2[5]).parseV8BillingAddressSkemaErrorToBillingError(closure_129_1);
+        const obj3 = closure_130_0(closure_130_2[5]);
+        const obj9 = { type: "BILLING_PAYMENT_SOURCE_CREATE_FAIL", error: closure_129_0 };
+        closure_130_1(closure_130_2[6]).dispatch(obj9);
+        throw closure_129_0;
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 0;
+        c6 = 3;
+        const obj10 = { value, done: true };
+        return obj10;
+      } else {
+        c4 = 0;
+        c6 = 3;
+        const obj = { value: value.body.token, done: true };
+        return obj;
+      }
+    } catch (tmp20) {
+      closure_3 = tmp20;
+      if (tmp4 === c4) {
+        c6 = tmp2;
+        throw tmp20;
+      } else {
+        c5 = tmp;
+      }
+    }
+  }
+};
+let closure_9 = async function _popupBridgeState() {
+  closure_2 = tmp2;
+  closure_1 = tmp5;
+  closure_129_0 = closure_0;
+  const HTTP = HTTPUtils.HTTP;
+  await HTTP.post({ url: closure_2_7.BILLING_POPUP_BRIDGE(closure_0), oldFormErrors: true, rejectWithError: true });
+  const state = arg1.body.state;
+  closure_130_1(closure_130_2[6]).dispatch({ type: "BILLING_POPUP_BRIDGE_STATE_UPDATE", state, paymentSourceType: closure_129_0 });
+  return state;
+};
+let closure_10 = async function _createPaymentSource(arg0, value) {
+  if (c10 === 2) {
+    c10 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c10 = 2;
+      if (0 === c9) {
+        if (arg0 === 1) {
+          c10 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c10 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_6 = tmp3;
+          closure_5 = tmp7;
+          closure_133_4 = undefined;
+          closure_133_0 = closure_0;
+          closure_133_1 = closure_1;
+          closure_133_2 = closure_2;
+          closure_133_3 = closure_3;
+          let flag = closure_4;
+          if (closure_4 === undefined) {
+            flag = false;
+          }
+          closure_133_4 = flag;
+          closure_133_5 = undefined;
+          closure_133_6 = undefined;
+          closure_133_7 = undefined;
+          c9 = 1;
+          c10 = 1;
+          return { value: "PX_16", done: true };
+        }
+      } else if (1 === tmp7) {
+        if (arg0 === 1) {
+          c10 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c10 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else {
+          closure_134_1(closure_134_2[6]).dispatch({ type: "BILLING_PAYMENT_SOURCE_CREATE_START" });
+          c8 = 1;
+          const HTTP = closure_134_0(closure_134_2[4]).HTTP;
+          const request = { url: closure_134_7.BILLING_PAYMENT_SOURCES, query: null, body: null, rejectWithError: false };
+          const obj7 = { location: closure_133_3.analyticsLocation };
+          request.query = obj7;
+          const obj8 = { payment_gateway: closure_133_0, token: closure_133_1, billing_address: null, billing_address_token: null, bank: null, pix: null, return_url: null, default: null };
+          const obj9 = { name: closure_133_2.name, line_1: closure_133_2.line1, line_2: closure_133_2.line2, city: closure_133_2.city, state: closure_133_2.state, postal_code: closure_133_2.postalCode, country: closure_133_2.country, email: closure_133_2.email };
+          obj8.billing_address = obj9;
+          obj8.billing_address_token = closure_133_3.billingAddressToken;
+          obj8.bank = closure_133_3.bank;
+          let tmp39;
+          if (null != closure_133_3.pix) {
+            const obj10 = { tax_id: closure_133_3.pix.taxId };
+            tmp39 = obj10;
+          }
+          obj8.pix = tmp39;
+          obj8.return_url = closure_133_3.returnUrl;
+          obj8.default = closure_133_4;
+          request.body = obj8;
+          c9 = 3;
+          c10 = 1;
+          const obj11 = { value: HTTP.post(request), done: false };
+          return obj11;
+        }
+      } else if (2 === tmp7) {
+        c8 = 0;
+        closure_133_8 = closure_7;
+        closure_133_7 = closure_134_0(closure_134_2[5]).parseV8BillingAddressSkemaErrorToBillingError(closure_133_8);
+        (function addFieldsToBillingError(fields, body) {
+          let adyen_redirect_url;
+          if (body != null) {
+            body = body.body;
+            if (body != null) {
+              adyen_redirect_url = body.adyen_redirect_url;
+            }
+          }
+          if (adyen_redirect_url) {
+            let adyen_redirect_url1;
+            if (body != null) {
+              const body2 = body.body;
+              if (body2 != null) {
+                adyen_redirect_url1 = body2.adyen_redirect_url;
+              }
+            }
+            fields.fields.adyen_redirect_url = adyen_redirect_url1;
+          }
+        })(closure_133_7, closure_133_8);
+        if (closure_133_7.code !== closure_134_0(closure_134_2[5]).ErrorCodes.CONFIRMATION_REQUIRED) {
+          const obj12 = { type: "BILLING_PAYMENT_SOURCE_CREATE_FAIL", error: closure_133_7 };
+          closure_134_1(closure_134_2[6]).dispatch(obj12);
+          const obj6 = closure_134_1(closure_134_2[6]);
+        }
+        throw closure_133_7;
+      } else if (arg0 === 1) {
+        c10 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c8 = 0;
+        c10 = 3;
+        const obj14 = { value, done: true };
+        return obj14;
+      } else {
+        closure_133_5 = value;
+        closure_133_6 = closure_134_4.createFromServer(closure_133_5.body);
+        const obj15 = { type: "BILLING_PAYMENT_SOURCE_CREATE_SUCCESS", paymentSource: closure_133_6 };
+        closure_134_1(closure_134_2[6]).dispatch(obj15);
+        c8 = 0;
+        c10 = 3;
+        const obj16 = { value: closure_133_6, done: true };
+        return obj16;
+      }
+    } catch (tmp47) {
+      closure_7 = tmp47;
+      if (tmp4 === c8) {
+        c10 = tmp2;
+        throw tmp47;
+      } else {
+        c9 = tmp;
+      }
+    }
+  }
+};
+const StripeErrorTypes = fn(4886).StripeErrorTypes;
+const Constants = fn(1074);
+({ AnalyticEvents: metroRequire, Endpoints: closure_7 } = Constants);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/billing/actions/BillingSharedActionCreators.tsx");
+
+export const validatePaymentSourceBillingAddress = function validatePaymentSourceBillingAddress() {
+  const self = this;
+  const apply = closure_8.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+};
+export const dispatchConfirmationError = function dispatchConfirmationError(type, flag, stringResult, arg3) {
+  if (flag === undefined) {
+    flag = true;
+  }
+  if (stringResult === undefined) {
+    const intl = util.intl;
+    stringResult = intl.string(util.t.khEaRI);
+  }
+  let obj = arg3;
+  if (arg3 === undefined) {
+    obj = {};
+  }
+  let message = type;
+  if (StripeErrorTypes.includes(type.type)) {
+    let combined = stringResult;
+    if (null != message.message) {
+      const _HermesInternal = HermesInternal;
+      combined = "" + stringResult + ": " + message.message;
+    }
+    const obj5 = { failure_message: combined, error_type: null, failure_code: null, failure_sub_code: null, payment_source_type: null };
+    ({ type: obj3.error_type, code: obj3.failure_code, decline_code: obj3.failure_sub_code, payment_method } = message);
+    type = undefined;
+    if (payment_method != null) {
+      type = payment_method.type;
+    }
+    obj5.payment_source_type = type;
+    if ("card_error" === message.type) {
+      const obj7 = {};
+      const merged = Object.assign(obj5);
+      const _Error = Error;
+      const error = new Error();
+      obj7.stacktrace = error.stack;
+      AnalyticsUtilsDefault.track(constants.PAYMENT_SOURCE_CREATION_FAILED, obj7);
+      flag = false;
+    }
+    let billingError = new V6OrEarlierAPIError.BillingError(combined);
+    let flag2 = flag;
+    let tmp12 = obj5;
+    let tmp15 = require;
+  } else {
+    let tmp6 = message;
+    if (typeof message === "string") {
+      tmp6 = stringResult;
+    }
+    const obj8 = { failure_message: null, status_code: null };
+    const billingError1 = new V6OrEarlierAPIError.BillingError(tmp6);
+    ({ message: obj2.failure_message, code: obj2.status_code } = billingError1);
+    tmp12 = obj8;
+    billingError = billingError1;
+    flag2 = flag;
+    tmp15 = tmp4;
+    if (429 === billingError1.code) {
+      flag2 = false;
+      tmp12 = obj8;
+      billingError = billingError1;
+      tmp15 = tmp4;
+    }
+  }
+  DispatcherDefault.dispatch({ type: "BILLING_PAYMENT_SOURCE_CREATE_FAIL", error: billingError });
+  if (typeof message !== "string") {
+    message = billingError.message;
+  }
+  const error1 = new Error(message);
+  if (flag2) {
+    const obj9 = {};
+    const merged1 = Object.assign(obj);
+    const obj14 = {};
+    const merged2 = Object.assign(tmp12);
+    const merged3 = Object.assign(obj.extra);
+    obj9.extra = obj14;
+    const result = tmp15(4233).captureBillingException(error1, obj9);
+    const tmp15Result = tmp15(4233);
+  }
+  return error1;
+};
+export const popupBridgeState = function popupBridgeState() {
+  const self = this;
+  const apply = closure_9.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+};
+export const createPaymentSource = function createPaymentSource() {
+  const self = this;
+  const apply = closure_10.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+};

@@ -1,0 +1,82 @@
+// Module ID: 14792
+// Function ID: 14793
+// Name: TwoFASetupEnterCode
+// Dependencies: [32, 19, 1895, 14786, 21, 4560, 14789, 1483, 504, 6951, 14683, 1114, 14785, 7123, 1178, 14793, 5586, 2]
+// Exports: default
+
+// Module 14792 (TwoFASetupEnterCode)
+import MFAUtils from "MFAUtils" /* 6951 */;
+import MFAActionCreatorsDefault from "MFAActionCreators" /* 14683 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import AppStateStore from "AppStateStore" /* 1895 */;
+
+const require = globalThis.__r;
+
+require = fn;
+const TwoFAModalSetupSections = fn(14786).TwoFAModalSetupSections;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(4560);
+let closure_9 = createStyles.createStyles({ container: { flex: 1, justifyContent: "center", alignItems: "center" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/account/native/mfa_modal_flow/TwoFASetupEnterCode.tsx");
+
+export default function TwoFASetupEnterCode(set) {
+  _require = set;
+  const tmp = closure_9();
+  const twoFASetupStyles = require("TwoFASetupStyles").useTwoFASetupStyles();
+  importDefault = ref.useRef(set);
+  const effect = ref.useEffect(() => {
+    closure_1.current = current;
+  });
+  let obj = require("TwoFASetupStyles");
+  navigation = require("useNavigation").useNavigation();
+  let obj2 = require("useNavigation");
+  const items = [ref1];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => ref1.getState());
+  const tmp6 = _slicedToArray(ref.useState(false), 2);
+  _slicedToArray = tmp6[1];
+  ref = ref.useRef(null);
+  ref1 = ref.useRef(null);
+  const items1 = [navigation];
+  const callback = ref.useCallback((code) => {
+    closure_3(true);
+    const encodeTotpSecretResult = MFAUtils.encodeTotpSecret(ref.current.totpSecret);
+    const obj3 = { code, secret: encodeTotpSecretResult };
+    const enableResult = MFAActionCreatorsDefault.enable({ code, secret: encodeTotpSecretResult });
+    MFAActionCreatorsDefault.enable({ code, secret: encodeTotpSecretResult }).then(() => {
+      navigation.push(constants.SUCCESS);
+    }).catch((error) => {
+      if (null != error.body) {
+        let message = error.body.message;
+      } else {
+        const intl = closure_0(navigation[11]).intl;
+        message = intl.string(closure_0(navigation[11]).t["1u5B+G"]);
+      }
+      closure_1_4.current = message;
+      current = ref.current;
+      if (current != null) {
+        current.clear();
+      }
+      closure_1_3(false);
+    });
+  }, items1);
+  const obj4 = { children: null };
+  const obj5 = { bottom: true, style: tmp.container, children: null };
+  const obj6 = { style: null, children: null };
+  const items2 = [, ];
+  ({ modalHeader: arr3[0], text: arr3[1] } = twoFASetupStyles);
+  obj6.style = items2;
+  let intl = require("util").intl;
+  obj6.children = intl.string(require("util").t.HZPBOd);
+  const items3 = [closure_7(require("native").LegacyText, obj6), ];
+  const obj7 = { style: { maxHeight: 520 }, ref: ref1, showActivityIndicator: tmp6[0], handleSubmit: callback, error: null, appState: null };
+  let obj3 = require("initialize");
+  obj7.error = require("useRefValue")(ref);
+  obj7.appState = stateFromStores;
+  items3[1] = closure_7(require("MFACodeInput"), obj7);
+  obj5.children = items3;
+  obj4.children = closure_8(require("common/SafeAreaView").SafeAreaPaddingView, obj5);
+  return closure_7(require("TwoFASetupModal").TwoFASetupModalScreen, obj4);
+};

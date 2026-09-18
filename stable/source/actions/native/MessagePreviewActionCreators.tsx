@@ -1,0 +1,29 @@
+// Module ID: 16647
+// Function ID: 16648
+// Name: MessagePreviewActionCreators
+// Dependencies: [1074, 1272, 573, 2]
+
+// Module 16647 (MessagePreviewActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
+
+({ Endpoints: c3, MAX_MESSAGES_PER_CHANNEL: closure_4 } = Constants);
+const result = size.fileFinishedImporting("actions/native/MessagePreviewActionCreators.tsx");
+
+export default {
+  fetchMessages(channelId, around) {
+    _require = channelId;
+    const HTTP = require("HTTPUtils").HTTP;
+    const request = { url: closure_3.MESSAGES(channelId), query: { limit, around }, retries: 2, oldFormErrors: true, rejectWithError: true };
+    value = HTTP.get(request);
+    value.then((body) => {
+      DispatcherDefault.dispatch({ type: "LOAD_MESSAGES_AROUND_SUCCESS", channelId, messages: body.body, around });
+    });
+  },
+  clearMessages() {
+    DispatcherDefault.dispatch({ type: "CLEAR_MESSAGES_AROUND_SUCCESS" });
+  }
+};

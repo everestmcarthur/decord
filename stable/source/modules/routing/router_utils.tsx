@@ -1,0 +1,223 @@
+// Module ID: 1100
+// Function ID: 1101
+// Name: router_utils
+// Dependencies: [1074, 3, 1101, 1109, 1112, 2]
+// Exports: back, currentRouteHasBackNavigation, forward, getFingerprintLocation, getHistory, getLastRouteChangeSource, getLastRouteChangeSourceLocationStack, hasNavigated, isValidFingerprintRoute, replaceWith, shouldNavigate, transitionToGuild
+
+// Module 1100 (router_utils)
+import LoggerDefault from "Logger" /* 3 */;
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
+import RoutingSources from "RoutingSources" /* 1112 */;
+import Constants from "Constants" /* 1074 */;
+import _extends_mod from "module_1101" /* 1101 */;
+import size from "module_2" /* 2 */;
+
+function transitionTo(CHANNELResult, guildScheduledEvent2) {
+  closure_0 = CHANNELResult;
+  let tmp = typeof CHANNELResult !== "string";
+  if (typeof CHANNELResult === "string") {
+    tmp = !items.some((item) => ME.startsWith(item));
+  }
+  let flag = !tmp;
+  if (!tmp) {
+    const _HermesInternal = HermesInternal;
+    logger.log("" + "assign" + " - route to external path " + CHANNELResult);
+    const _window = window;
+    const _Event = Event;
+    const event = new Event("beforeunload");
+    window.dispatchEvent(event);
+    const _window2 = window;
+    const _location = window.location;
+    _location.assign(CHANNELResult);
+    flag = true;
+  }
+  if (!flag) {
+    const _URL = URL;
+    const _window3 = window;
+    const _HermesInternal2 = HermesInternal;
+    const uRL = new URL(CHANNELResult, "https:" + window.GLOBAL_ENV.WEBAPP_ENDPOINT);
+    const obj = { pathname: null, search: null, hash: null };
+    ({ pathname: obj.pathname, search: obj.search, hash: obj.hash } = uRL);
+    const merged = Object.assign(guildScheduledEvent2);
+    const _HermesInternal3 = HermesInternal;
+    logger.log("transitionTo - Transitioning to " + CHANNELResult);
+    if (guildScheduledEvent2 != null) {
+      const source = guildScheduledEvent2.source;
+    }
+    if (guildScheduledEvent2 != null) {
+      sourceLocationStack = guildScheduledEvent2.sourceLocationStack;
+    }
+    const _location2 = _extends.location;
+    let tmp24 = _location2.pathname === obj.pathname;
+    if (tmp24) {
+      const search = obj.search;
+      let str9 = "";
+      if (null != search) {
+        str9 = "";
+        if ("" !== search) {
+          str9 = "";
+          if (search !== "?") {
+            let text = search;
+            if (!search.startsWith("?")) {
+              text = `?${search}`;
+            }
+            str9 = text;
+          }
+        }
+      }
+      tmp24 = _location2.search === str9;
+    }
+    if (tmp24) {
+      const hash = obj.hash;
+      let str12 = "";
+      if (null != hash) {
+        str12 = "";
+        if ("" !== hash) {
+          str12 = "";
+          if (hash !== "#") {
+            let text1 = hash;
+            if (!hash.startsWith("#")) {
+              text1 = `#${hash}`;
+            }
+            str12 = text1;
+          }
+        }
+      }
+      tmp24 = _location2.hash === str12;
+    }
+    if (tmp24) {
+      const replaced = str7.replace(obj);
+      c3 = source;
+    } else if (null != guildScheduledEvent2) {
+      str7.push(obj);
+    }
+    _extends.push(CHANNELResult);
+  }
+}
+({ Routes: hasOwnProperty, PageAnalyticsLocations: metroRequire, ComponentActions: closure_7 } = Constants);
+const logger = new LoggerDefault("Routing/Utils");
+const items = [Constants.RelativeMarketingURLs.DEVELOPER_PORTAL];
+let _extends = _extends_mod;
+_extends = _extends.createMemoryHistory();
+let closure_10 = _extends.listen((arg0, arg1) => {
+  if ("REPLACE" !== arg1) {
+    closure_10();
+  }
+});
+const result = size.fileFinishedImporting("modules/routing/router_utils.tsx");
+
+export const shouldNavigate = function shouldNavigate() {
+  const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
+  return !ComponentDispatch.hasSubscribers(constants2.MODAL_CLOSE);
+};
+export { transitionTo };
+export const transitionToGuild = function transitionToGuild(guildId, channelId, messageId, guildScheduledEvent2) {
+  logger.log("transitionToGuild - Transitioning to " + JSON.stringify({ guildId, channelId, messageId }));
+  transitionTo(hasOwnProperty.CHANNEL(guildId, channelId, messageId), guildScheduledEvent2);
+};
+export const currentRouteHasBackNavigation = function currentRouteHasBackNavigation() {
+  let hasItem = null != c3;
+  if (hasItem) {
+    const ChannelBackNavigationSources = RoutingSources.ChannelBackNavigationSources;
+    hasItem = ChannelBackNavigationSources.has(c3);
+  }
+  return hasItem;
+};
+export const replaceWith = function replaceWith(ME, state, arg2) {
+  let tmp = typeof ME !== "string";
+  if (typeof ME === "string") {
+    tmp = !items.some((item) => ME.startsWith(item));
+  }
+  let flag = !tmp;
+  if (!tmp) {
+    const _HermesInternal = HermesInternal;
+    logger.log("" + "replace" + " - route to external path " + ME);
+    const _window = window;
+    const _Event = Event;
+    const event = new Event("beforeunload");
+    window.dispatchEvent(event);
+    const _window2 = window;
+    const replaced = window.location.replace(ME);
+    flag = true;
+    const str5 = window.location;
+  }
+  if (!flag) {
+    const _HermesInternal2 = HermesInternal;
+    logger.log("Replacing route with " + ME);
+    if (typeof ME === "string") {
+      const replaced1 = _extends.replace(ME, state);
+    } else {
+      const replaced2 = _extends.replace(ME);
+    }
+    c3 = arg2;
+  }
+};
+export function getHistory() {
+  return _extends;
+}
+export function getLastRouteChangeSource() {
+  return c3;
+}
+export function getLastRouteChangeSourceLocationStack() {
+  return sourceLocationStack;
+}
+export const isValidFingerprintRoute = function isValidFingerprintRoute(arg0) {
+  return true;
+};
+export const getFingerprintLocation = function getFingerprintLocation(arg0) {
+  let ACCOUNT_REVERT = arg0;
+  if (null == arg0) {
+    let str = _extends.location.pathname;
+    if (str == null) {
+      str = "";
+    }
+    ACCOUNT_REVERT = str;
+  }
+  if (ACCOUNT_REVERT.startsWith(hasOwnProperty.LOGIN)) {
+    ACCOUNT_REVERT = constants.LOGIN;
+  } else if (ACCOUNT_REVERT.startsWith(obj.REGISTER)) {
+    ACCOUNT_REVERT = constants.REGISTER;
+  } else if (ACCOUNT_REVERT.startsWith(obj.INVITE(""))) {
+    ACCOUNT_REVERT = constants.INVITE;
+  } else if (ACCOUNT_REVERT.startsWith(obj.VERIFY)) {
+    ACCOUNT_REVERT = constants.VERIFY;
+  } else if (ACCOUNT_REVERT.startsWith(obj.DISABLE_EMAIL_NOTIFICATIONS)) {
+    ACCOUNT_REVERT = constants.DISABLE_EMAIL_NOTIFICATIONS;
+  } else if (ACCOUNT_REVERT.startsWith(obj.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS)) {
+    ACCOUNT_REVERT = constants.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS;
+  } else if (ACCOUNT_REVERT.startsWith(obj.REJECT_IP)) {
+    ACCOUNT_REVERT = constants.REJECT_IP;
+  } else if (ACCOUNT_REVERT.startsWith(obj.REJECT_MFA)) {
+    ACCOUNT_REVERT = constants.REJECT_MFA;
+  } else if (ACCOUNT_REVERT.startsWith(obj.AUTHORIZE_IP)) {
+    ACCOUNT_REVERT = constants.AUTHORIZE_IP;
+  } else if (ACCOUNT_REVERT.startsWith(obj.AUTHORIZE_PAYMENT)) {
+    ACCOUNT_REVERT = constants.AUTHORIZE_PAYMENT;
+  } else if (ACCOUNT_REVERT.startsWith(obj.RESET)) {
+    ACCOUNT_REVERT = constants.RESET;
+  } else if (ACCOUNT_REVERT.startsWith(obj.REPORT)) {
+    ACCOUNT_REVERT = constants.REPORT;
+  } else if (ACCOUNT_REVERT.startsWith(obj.REPORT_SECOND_LOOK)) {
+    ACCOUNT_REVERT = constants.REPORT_SECOND_LOOK;
+  } else if (ACCOUNT_REVERT.startsWith(obj.ACCOUNT_REVERT(""))) {
+    ACCOUNT_REVERT = constants.ACCOUNT_REVERT;
+  }
+  return ACCOUNT_REVERT;
+};
+export function hasNavigated() {
+  return false;
+}
+export const back = function back() {
+  const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
+  if (!hasSubscribersResult) {
+    c3 = null;
+    _extends.goBack();
+  }
+};
+export const forward = function forward() {
+  const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
+  if (!hasSubscribersResult) {
+    c3 = null;
+    _extends.goForward();
+  }
+};

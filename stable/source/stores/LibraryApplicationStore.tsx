@@ -1,0 +1,310 @@
+// Module ID: 7397
+// Function ID: 7398
+// Name: LibraryApplicationStore
+// Dependencies: [7398, 502, 1074, 510, 7399, 1384, 504, 12, 573, 2]
+
+// Module 7397 (LibraryApplicationStore)
+import initializeDefault from "initialize" /* 504 */;
+import Storage6 from "Storage" /* 510 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import FlagUtilsAll from "FlagUtils" /* 1384 */;
+import LibraryApplicationUtils from "LibraryApplicationUtils" /* 7399 */;
+import LibraryApplicationRecord from "LibraryApplicationRecord" /* 7398 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+
+require = fn;
+function setLibraryApplications(libraryApplications) {
+  while (tmp !== undefined) {
+    let fromServer = LibraryApplicationRecord.createFromServer(tmp2);
+    let obj = LibraryApplicationUtils;
+    closure_9[obj.getComboId(fromServer.id, fromServer.branchId)] = fromServer;
+    continue;
+  }
+}
+function handleLibraryApplicationUpdate(libraryApplication) {
+  const fromServer = LibraryApplicationRecord.createFromServer(libraryApplication.libraryApplication);
+  const comboId = LibraryApplicationUtils.getComboId(fromServer.id, fromServer.branchId);
+  closure_9[comboId] = fromServer;
+  set.delete(comboId);
+}
+const LibraryApplicationFlags = fn(1074).LibraryApplicationFlags;
+const LibraryApplicationStore = "LibraryApplicationStore";
+let c8 = false;
+const dependencyMap = {};
+const dependencyMap2 = {};
+const set = new Set();
+let activeLibraryApplicationBranchIds = {};
+let activeLaunchOptionIds = {};
+let c14 = false;
+const Store = initializeDefault.Store;
+class LibraryApplicationStore extends Store {
+}
+const prototype = LibraryApplicationStore.prototype;
+prototype["initialize"] = function initialize() {
+  this.waitFor(AuthenticationStore);
+  const Storage = Storage6.Storage;
+  value = Storage.get(LibraryApplicationStore);
+  if (null != value) {
+    if (null == value.activeLaunchOptionIds) {
+      const Storage2 = tmp2(510).Storage;
+      const Storage3 = tmp2(510).Storage;
+      let value3 = Storage3.get(tmp4);
+      if (value3 == null) {
+        value3 = {};
+      }
+      const obj = {};
+      const merged = Object.assign(value3);
+      obj.activeLaunchOptionIds = activeLaunchOptionIds;
+      const result = Storage2.set(tmp4, obj);
+    } else {
+      activeLaunchOptionIds = value.activeLaunchOptionIds;
+    }
+    if (null == value.activeLibraryApplicationBranchIds) {
+      const Storage4 = tmp2(510).Storage;
+      const Storage5 = tmp2(510).Storage;
+      let value4 = Storage5.get(tmp4);
+      if (value4 == null) {
+        value4 = {};
+      }
+      const obj2 = {};
+      const merged1 = Object.assign(value4);
+      obj2.activeLibraryApplicationBranchIds = activeLibraryApplicationBranchIds;
+      const result1 = Storage4.set(tmp4, obj2);
+    } else {
+      activeLibraryApplicationBranchIds = value.activeLibraryApplicationBranchIds;
+    }
+  }
+};
+Object.defineProperty(prototype, "libraryApplications", {
+  get: function libraryApplications() {
+    const obj = {};
+    const merged = Object.assign(closure_10);
+    const merged1 = Object.assign(closure_9);
+    const keys = Object.keys(obj);
+    const item = keys.forEach((item) => {
+      if (isHiddenResult) {
+        delete tmp[tmp2];
+      }
+    });
+    return obj;
+  },
+  set: undefined
+});
+prototype["getAllLibraryApplications"] = function getAllLibraryApplications() {
+  const merged = Object.assign(closure_10);
+  const merged1 = Object.assign(closure_9);
+  return {};
+};
+prototype["hasLibraryApplication"] = function hasLibraryApplication() {
+  const merged = Object.assign(closure_10);
+  const merged1 = Object.assign(closure_9);
+  return Object.keys({}).length > 0;
+};
+prototype["hasApplication"] = function hasApplication(arg0, arg1) {
+  let flag = arg2;
+  if (arg2 === undefined) {
+    flag = false;
+  }
+  const comboId = LibraryApplicationUtils.getComboId(arg0, arg1);
+  let obj2 = dependencyMap[comboId];
+  if (obj2 == null) {
+    obj2 = dependencyMap2[comboId];
+  }
+  let tmp5 = null != obj2;
+  if (tmp5) {
+    let isHiddenResult = !flag;
+    if (!flag) {
+      isHiddenResult = obj2.isHidden();
+    }
+    let result = !isHiddenResult;
+    if (!isHiddenResult) {
+      result = LibraryApplicationUtils.isUserEntitledToLibraryApplication(obj2);
+      const tmpResult = LibraryApplicationUtils;
+    }
+    tmp5 = result;
+  }
+  return tmp5;
+};
+prototype["getLibraryApplication"] = function getLibraryApplication(applicationId, item, arg2) {
+  let flag = arg2;
+  if (arg2 === undefined) {
+    flag = false;
+  }
+  const comboId = LibraryApplicationUtils.getComboId(applicationId, item);
+  let tmp4 = dependencyMap[comboId];
+  if (tmp4 == null) {
+    tmp4 = dependencyMap2[comboId];
+  }
+  let tmp6 = tmp4;
+  if (flag) {
+    tmp6 = tmp4;
+    if (null != tmp4) {
+      let tmp7 = null;
+      if (tmpResult.isUserEntitledToLibraryApplication(tmp4)) {
+        tmp7 = tmp4;
+      }
+      tmp6 = tmp7;
+      tmpResult = LibraryApplicationUtils;
+    }
+  }
+  return tmp6;
+};
+prototype["getActiveLibraryApplication"] = function getActiveLibraryApplication(id) {
+  let flag = arg1;
+  if (arg1 === undefined) {
+    flag = false;
+  }
+  if (null != activeLibraryApplicationBranchIds[id]) {
+    const comboId = LibraryApplicationUtils.getComboId(id, tmp);
+    let obj2 = dependencyMap[comboId];
+    if (obj2 == null) {
+      obj2 = dependencyMap2[comboId];
+    }
+    if (null != obj2) {
+      if (tmp2Result.isUserEntitledToLibraryApplication(obj2)) {
+        return obj2;
+      }
+      tmp2Result = tmp2(7399);
+    }
+    tmp2 = require;
+  }
+  const obj3 = {};
+  const merged = Object.assign(dependencyMap2);
+  const merged1 = Object.assign(dependencyMap);
+  for (const key10030 in obj3) {
+    if (obj3[key10030].id !== arg0) {
+      continue;
+    } else {
+      let obj5 = obj3[key10030];
+      let obj6 = LibraryApplicationUtils;
+      if (!obj6.isUserEntitledToLibraryApplication(obj5)) {
+        continue;
+      } else {
+        return obj5;
+      }
+      continue;
+    }
+    continue;
+  }
+};
+prototype["isUpdatingFlags"] = function isUpdatingFlags(arg0, arg1) {
+  return set.has(LibraryApplicationUtils.getComboId(arg0, arg1));
+};
+prototype["getActiveLaunchOptionId"] = function getActiveLaunchOptionId(arg0, arg1) {
+  const obj = LibraryApplicationUtils;
+  return activeLaunchOptionIds[obj.getComboId(obj, arg0, arg1)];
+};
+Object.defineProperty(prototype, "fetched", {
+  get: function fetched() {
+    return c8;
+  },
+  set: undefined
+});
+Object.defineProperty(prototype, "entitledBranchIds", {
+  get: function entitledBranchIds() {
+    const merged = Object.assign(closure_10);
+    const merged1 = Object.assign(closure_9);
+    const obj = {};
+    const tmp = require("module_12");
+    const values = require("module_12")({}).values();
+    const found = values.filter((item) => LibraryApplicationUtils.isUserEntitledToLibraryApplication(item));
+    const tmpResult = require("module_12")({});
+    return found.map((branchId) => branchId.branchId).value();
+  },
+  set: undefined
+});
+Object.defineProperty(prototype, "hasRemovedLibraryApplicationThisSession", {
+  get: function hasRemovedLibraryApplicationThisSession() {
+    return c14;
+  },
+  set: undefined
+});
+prototype["whenInitialized"] = function whenInitialized(arg0) {
+  closure_0 = arg0;
+  const result = this.addConditionalChangeListener(() => {
+    if (c8) {
+      const _setImmediate = setImmediate;
+      setImmediate(closure_0);
+      return false;
+    }
+  });
+};
+LibraryApplicationStore.displayName = "LibraryApplicationStore";
+const libraryApplicationStore = new LibraryApplicationStore(DispatcherDefault, {
+  LOGOUT: function handleLogout() {
+    c8 = false;
+  },
+  LIBRARY_FETCH_SUCCESS: function handleFetchSuccess(libraryApplications) {
+    closure_9 = {};
+    setLibraryApplications(libraryApplications.libraryApplications);
+    c8 = true;
+  },
+  SKU_PURCHASE_SUCCESS: function handlePurchaseSuccess(libraryApplications) {
+    setLibraryApplications(libraryApplications.libraryApplications);
+  },
+  LIBRARY_APPLICATION_FLAGS_UPDATE_START: function handleFlagsUpdateStart(flags) {
+    ({ applicationId, branchId } = flags);
+    const comboId = LibraryApplicationUtils.getComboId(applicationId, branchId);
+    const comboId1 = LibraryApplicationUtils.getComboId(applicationId, branchId);
+    let obj3 = dependencyMap[comboId1];
+    if (obj3 == null) {
+      obj3 = dependencyMap2[comboId1];
+    }
+    let hasFlagResult = null != obj3 && !obj3.isHidden();
+    if (hasFlagResult) {
+      hasFlagResult = FlagUtilsAll.hasFlag(flags.flags, LibraryApplicationFlags.HIDDEN);
+    }
+    if (hasFlagResult) {
+      c14 = true;
+    }
+    set.add(comboId);
+  },
+  LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: handleLibraryApplicationUpdate,
+  LIBRARY_APPLICATION_UPDATE: handleLibraryApplicationUpdate,
+  LIBRARY_APPLICATION_ACTIVE_LAUNCH_OPTION_UPDATE: function handleActiveLaunchOptionIdUpdate(arg0) {
+    ({ applicationId, branchId, launchOptionId } = arg0);
+    activeLaunchOptionIds[LibraryApplicationUtils.getComboId(applicationId, branchId)] = launchOptionId;
+    const Storage = Storage6.Storage;
+    const Storage2 = Storage6.Storage;
+    let obj2 = Storage2.get(LibraryApplicationStore);
+    if (obj2 == null) {
+      obj2 = {};
+    }
+    const obj3 = {};
+    const merged = Object.assign(obj2);
+    obj3.activeLaunchOptionIds = activeLaunchOptionIds;
+    const result = Storage.set(LibraryApplicationStore, obj3);
+  },
+  LIBRARY_APPLICATION_ACTIVE_BRANCH_UPDATE: function handleActiveBranchUpdate(arg0) {
+    ({ applicationId, branchId } = arg0);
+    if (activeLibraryApplicationBranchIds[applicationId] === branchId) {
+      return false;
+    } else {
+      activeLibraryApplicationBranchIds[applicationId] = branchId;
+      const Storage = Storage6.Storage;
+      const Storage2 = Storage6.Storage;
+      let obj = Storage2.get(LibraryApplicationStore);
+      if (obj == null) {
+        obj = {};
+      }
+      const obj2 = {};
+      const merged = Object.assign(obj);
+      obj2.activeLibraryApplicationBranchIds = activeLibraryApplicationBranchIds;
+      const result = Storage.set(LibraryApplicationStore, obj2);
+    }
+  },
+  LIBRARY_APPLICATIONS_TEST_MODE_ENABLED: function handleTestModeEnabled(arg0) {
+    for (const item10006 of tmp) {
+      let obj = LibraryApplicationUtils;
+      closure_10[obj.getComboId(item10006.id, item10006.branchId)] = item10006;
+      continue;
+    }
+  },
+  DEVELOPER_TEST_MODE_RESET: function handleTestModeDisabled() {
+    closure_10 = {};
+  }
+});
+const size = fn(2);
+let result = size.fileFinishedImporting("stores/LibraryApplicationStore.tsx");
+
+export default libraryApplicationStore;

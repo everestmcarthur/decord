@@ -1,0 +1,734 @@
+// Module ID: 14695
+// Function ID: 14696
+// Name: SettingRenderer
+// Dependencies: [32, 109, 19, 17, 2025, 14694, 1979, 11474, 21, 4560, 576, 1178, 5605, 1483, 14696, 504, 1114, 10823, 5584, 14698, 14699, 7201, 4279, 5685, 5688, 7190, 4258, 9991, 4528, 4529, 5607, 4973, 4556, 1880, 1115, 14181, 5123, 4975, 4262, 6997, 1874, 2]
+// Exports: renderSettingItem, renderSettingSearchResultItem, renderSettingSearchResultPlaceholderItem
+
+// Module 14695 (SettingRenderer)
+import nativeDefault from "native" /* 576 */;
+import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1874 */;
+import ToastUtils from "ToastUtils" /* 4258 */;
+import useToken from "useToken" /* 4262 */;
+import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 4279 */;
+import HapticUtils from "HapticUtils" /* 4528 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4529 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import GuildIcon from "GuildIcon" /* 5584 */;
+import TableRow from "TableRow" /* 5605 */;
+import TableRadioRow from "TableRadioRow" /* 5688 */;
+import Tracking from "Tracking" /* 6997 */;
+import ClipboardUtils from "ClipboardUtils" /* 7190 */;
+import TableSwitchRow from "TableSwitchRow" /* 7201 */;
+import VolumeSliderDefault from "VolumeSlider" /* 9991 */;
+import ClydeIcon from "ClydeIcon" /* 10823 */;
+import SettingRendererUtils from "SettingRendererUtils" /* 14696 */;
+import useHighlightSettingItem from "useHighlightSettingItem" /* 14698 */;
+import SettingListItemHighlightDefault from "SettingListItemHighlight" /* 14699 */;
+import _slicedToArray from "module_32" /* 32 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import noop from "module_19" /* 19 */;
+import LocaleStore from "LocaleStore" /* 2025 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 14694 */;
+import GuildStore from "GuildStore" /* 1979 */;
+
+const GuildIconDefault = GuildIcon;
+
+const TableRadioGroup = tmp2(5685);
+require = fn;
+class GuildSelectDefaultIcon {
+  constructor(arg0) {
+    str = global.size;
+    if (str === undefined) {
+      str = "sm";
+    }
+    num = 32;
+    tmp = closure_17();
+    if ("xs" === str) {
+      num = 24;
+    }
+    obj = { style: null, children: null };
+    obj1 = {};
+    merged = Object.assign(tmp.defaultIcon);
+    obj1.width = num;
+    obj1.height = num;
+    obj1.borderRadius = num / 3;
+    obj.style = obj1;
+    obj.children = jsx(closure_0(closure_2[17]).ClydeIcon, { color: "white", size: str });
+    return jsx(View, obj);
+  }
+}
+function ForceSwitchIcons(children) {
+  const context = noop.useContext(AccessibilityPreferencesContext.AccessibilityPreferencesContext);
+  const items = [context];
+  value = noop.useMemo(() => {
+    const obj = {};
+    const merged = Object.assign(context);
+    obj.switchIconsEnabled = true;
+    return obj;
+  }, items);
+  return closure_1_14(AccessibilityPreferencesContext.AccessibilityPreferencesContext.Provider, { value, children: children.children });
+}
+function SettingSearchResultBreadcrumbs(breadcrumbs) {
+  breadcrumbs = breadcrumbs.breadcrumbs;
+  let tmp = null;
+  if (0 !== breadcrumbs.length) {
+    const obj = { variant: "text-xs/medium", color: "text-muted", children: breadcrumbs.join(" \u2192 ") };
+    tmp = closure_1_14(Text_Text.Text, obj);
+  }
+  return tmp;
+}
+function SettingSearchResultIcon(IconComponent) {
+  IconComponent = IconComponent.IconComponent;
+  useToken;
+  if (null == IconComponent) {
+    const obj2 = { style: null };
+    const obj3 = { width: tmp4 };
+    obj2.style = obj3;
+    let tmp6 = closure_1_14(View, obj2);
+  } else {
+    const obj = { IconComponent };
+    tmp6 = closure_1_14(TableRow.TableRow.Icon, obj);
+  }
+  return tmp6;
+}
+function RouteSettingSearchResult(setting) {
+  ({ settingData, title } = setting);
+  setting = setting.setting;
+  const index = setting.index;
+  const total = setting.total;
+  ({ IconComponent, breadcrumbs } = setting);
+  const stackNavigation = title(index[13]).useStackNavigation();
+  const screen = settingData.screen;
+  const usePreNavigationAction = settingData.usePreNavigationAction;
+  let preNavigationAction;
+  if (usePreNavigationAction != null) {
+    preNavigationAction = usePreNavigationAction();
+  }
+  const items = [preNavigationAction, index, stackNavigation, screen, setting, title, total];
+  const callback = noop.useCallback(() => {
+    UserSettingSearchStore.setState({ selected: setting });
+    const result = Tracking.trackSettingSearchResultPress({ setting, title, route: screen.route, searchResultPosition: index, numSearchResults: total });
+    const obj = { selected: setting };
+    const obj3 = { setting, title, route: screen.route, searchResultPosition: index, numSearchResults: total };
+    const result1 = SettingRendererUtils.onRouteSettingOnPress({ navigation: stackNavigation, screen, preNavigationAction });
+  }, items);
+  let obj = title(index[13]);
+  const tmp = title;
+  const tmp2 = index;
+  return closure_14(tmp(tmp2[12]).TableRow, { label: title, onPress: callback, arrow: true, icon: closure_14(SettingSearchResultIcon, { IconComponent }), subLabel: closure_14(SettingSearchResultBreadcrumbs, { breadcrumbs }), start: 0 === index, end: index === total - 1 });
+}
+function PressableSettingSearchResult(setting) {
+  ({ settingData, title } = setting);
+  setting = setting.setting;
+  const index = setting.index;
+  const total = setting.total;
+  const onPress = settingData.onPress;
+  const items = [setting, title, index, total, onPress];
+  ({ IconComponent, breadcrumbs } = setting);
+  const callback = noop.useCallback(() => {
+    const result = Tracking.trackSettingSearchResultPress({ setting, title, searchResultPosition: index, numSearchResults: total });
+    const obj2 = { setting, title, searchResultPosition: index, numSearchResults: total };
+    const result1 = KeyboardManagerUtils.dismissGlobalKeyboard();
+    onPress();
+  }, items);
+  return closure_14(title(index[12]).TableRow, { label: title, onPress: callback, icon: closure_14(SettingSearchResultIcon, { IconComponent }), subLabel: closure_14(SettingSearchResultBreadcrumbs, { breadcrumbs }), start: 0 === index, end: index === total - 1, arrow: settingData.withArrow });
+}
+function StaticSettingSearchResult(title) {
+  title = title.title;
+  const setting = title.setting;
+  const index = title.index;
+  const total = title.total;
+  const useTrailing = title.settingData.useTrailing;
+  let trailing;
+  ({ IconComponent, breadcrumbs } = title);
+  if (useTrailing != null) {
+    trailing = useTrailing();
+  }
+  const items = [index, setting, trailing, title, total];
+  const callback = noop.useCallback(() => {
+    if (null != trailing) {
+      const obj2 = { setting, title, searchResultPosition: index, numSearchResults: total };
+      const result = Tracking.trackSettingSearchResultPress(obj2);
+      ClipboardUtils.copy(tmp);
+      const result1 = ToastUtils.presentCopiedToClipboard();
+    }
+  }, items);
+  let obj = { label: title, onPress: null, icon: null, subLabel: null, trailing: null, start: null, end: null };
+  let tmp6;
+  if (null != trailing) {
+    tmp6 = callback;
+  }
+  obj.onPress = tmp6;
+  obj.icon = closure_14(SettingSearchResultIcon, { IconComponent });
+  obj.subLabel = closure_14(SettingSearchResultBreadcrumbs, { breadcrumbs });
+  let tmp3Result = null;
+  if (null != trailing) {
+    let obj2 = { text: trailing };
+    tmp3Result = tmp3(title(index[12]).TableRow.TrailingText, obj2);
+  }
+  obj.trailing = tmp3Result;
+  obj.start = 0 === index;
+  obj.end = index === total - 1;
+  return closure_14(title(index[12]).TableRow, obj);
+}
+function SettingSearchResultPlaceholder(arg0) {
+  ({ start, end } = arg0);
+  const tmp = closure_17();
+  const obj = { start, end, label: null, icon: null };
+  const obj2 = { style: null };
+  const items = [tmp.placeholderUsername, _slicedToArray(noop.useState(() => ({ width: `${10 + 80 * Math.random() | 0}%` })), 1)[0]];
+  obj2.style = items;
+  obj.label = closure_1_14(View, obj2);
+  obj.icon = closure_1_14(View, { style: tmp.placeholderAvatar });
+  return closure_1_14(TableRow.TableRow, obj);
+}
+let closure_3 = ["onSlidingComplete", "step", "startIcon", "endIcon", "minimumValue", "maximumValue", "valueLabel", "defaultValue", "onValueChange"];
+let closure_4 = ["settingData"];
+const View = fn(17).View;
+const SettingRendererConstants = fn(11474);
+({ GUILD_SELECT_ALL_SERVERS_OPTION_ID: closure_12, NodeType: map1 } = SettingRendererConstants);
+const jsxProd = fn(21);
+({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
+const createStyles = fn(4560);
+let obj = { slider: { marginTop: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_8 }, sliderTitle: { flexDirection: "row", justifyContent: "space-between" }, radioSettingHighlight: { top: 26 }, defaultIcon: null, placeholderAvatar: null, placeholderUsername: null };
+let obj3 = { marginTop: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_8 };
+obj.defaultIcon = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, justifyContent: "center", alignItems: "center" };
+let size = { width: fn(1178).AVATAR_SIZE_MAP[fn(undefined, 1178).AvatarSizes.REFRESH_MEDIUM_32], height: fn(1178).AVATAR_SIZE_MAP[fn(undefined, 1178).AvatarSizes.REFRESH_MEDIUM_32], borderRadius: nativeDefault.radii.xl, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
+obj.placeholderAvatar = size;
+let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, justifyContent: "center", alignItems: "center" };
+obj.placeholderUsername = { height: 20, borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
+let closure_17 = createStyles.createStyles(obj);
+let closure_18 = noop.memo((arg0) => {
+  ({ useTrailing, usePreNavigationAction, screen } = arg0);
+  ({ useDescription, useIsDisabled, IconComponent } = arg0);
+  let preNavigationAction;
+  ({ useTitle, variant, start, end } = arg0);
+  const stackNavigation = screen(preNavigationAction[13]).useStackNavigation();
+  preNavigationAction = undefined;
+  const title = useTitle();
+  if (usePreNavigationAction != null) {
+    preNavigationAction = usePreNavigationAction();
+  }
+  let description;
+  if (useDescription != null) {
+    description = useDescription();
+  }
+  let isDisabled;
+  if (useIsDisabled != null) {
+    isDisabled = useIsDisabled();
+  }
+  let trailing;
+  if (useTrailing != null) {
+    trailing = useTrailing();
+  }
+  const items = [stackNavigation, screen, preNavigationAction];
+  const callback = noop.useCallback(() => {
+    const result = SettingRendererUtils.onRouteSettingOnPress({ navigation: stackNavigation, screen, preNavigationAction });
+  }, items);
+  const obj2 = { label: title, subLabel: description, disabled: isDisabled, arrow: true, variant, icon: null, trailing: null, onPress: null, start: null, end: null };
+  let tmp10Result = null;
+  if (null != IconComponent) {
+    const obj3 = { IconComponent };
+    tmp10Result = tmp10(tmp(tmp2[12]).TableRow.Icon, obj3);
+  }
+  obj2.icon = tmp10Result;
+  let tmp12 = null;
+  if (null != trailing) {
+    let tmp13;
+    if (null != trailing) {
+      let tmp10Result2 = trailing;
+      if (typeof trailing === "string") {
+        const obj4 = { text: trailing };
+        tmp10Result2 = tmp10(tmp(tmp2[12]).TableRow.TrailingText, obj4);
+      }
+      tmp13 = tmp10Result2;
+    }
+    tmp12 = tmp13;
+  }
+  obj2.trailing = tmp12;
+  obj2.onPress = callback;
+  obj2.start = start;
+  obj2.end = end;
+  return closure_14(screen(preNavigationAction[12]).TableRow, obj2);
+});
+let closure_20 = noop.memo((useSelectedGuildId) => {
+  const merged = Object.assign(useSelectedGuildId, Object.assign({ useSelectedGuildId: 0 }));
+  dependencyMap = undefined;
+  const selectedGuildId = useSelectedGuildId.useSelectedGuildId();
+  const items = [GuildStore];
+  closure_1 = selectedGuildId(504).useStateFromStores(items, () => GuildStore.getGuild(selectedGuildId));
+  closure_129_0 = selectedGuildId;
+  let obj = selectedGuildId(504);
+  const items1 = [GuildStore];
+  const stateFromStores = selectedGuildId(504).useStateFromStores(items1, () => GuildStore.getGuild(selectedGuildId));
+  if (selectedGuildId === closure_12) {
+    const intl2 = tmp3(1114).intl;
+    let stringResult = intl2.string(tmp3(1114).t.OMVg25);
+  } else {
+    stringResult = undefined;
+    if (stateFromStores != null) {
+      stringResult = stateFromStores.name;
+    }
+    if (stringResult == null) {
+      const intl = tmp3(1114).intl;
+      stringResult = intl.string(tmp3(1114).t["XBwns+"]);
+    }
+  }
+  dependencyMap = stringResult;
+  const items2 = [stringResult];
+  const obj2 = selectedGuildId(504);
+  const obj3 = {};
+  const callback = noop.useCallback(() => c2, items2);
+  const merged1 = Object.assign(merged);
+  obj3.type = constants.PRESSABLE;
+  obj3.useTitle = callback;
+  obj3.withArrow = true;
+  obj3.IconComponent = noop.memo(() => {
+    if (null == closure_1) {
+      let tmp7 = closure_2_14(GuildSelectDefaultIcon, {});
+    } else {
+      const obj = { size: GuildIcon.GuildIconSizes.SMALL_32, guild: tmp };
+      tmp7 = closure_2_14(GuildIconDefault, obj);
+    }
+    return tmp7;
+  });
+  return closure_14(closure_21, obj3);
+});
+let closure_21 = noop.memo((arg0) => {
+  ({ useDescription, useIsDisabled, useTrailing, variant, start, end, IconComponent } = arg0);
+  ({ setting, onPress, useTitle, withArrow } = arg0);
+  let highlightSettingItem = useHighlightSettingItem.useHighlightSettingItem(setting);
+  let description;
+  const title = useTitle();
+  if (useDescription != null) {
+    description = useDescription();
+  }
+  let isDisabled;
+  if (useIsDisabled != null) {
+    isDisabled = useIsDisabled();
+  }
+  let trailing;
+  if (useTrailing != null) {
+    trailing = useTrailing();
+  }
+  const obj2 = { label: title, subLabel: description, arrow: withArrow, variant, icon: null, onPress: null, disabled: null, trailing: null, start: null, end: null };
+  let tmp10Result = null;
+  if (null != IconComponent) {
+    const obj3 = { IconComponent, variant };
+    tmp10Result = tmp10(tmp(5605).TableRow.Icon, obj3);
+  }
+  obj2.icon = tmp10Result;
+  obj2.onPress = onPress;
+  obj2.disabled = isDisabled;
+  let tmp12;
+  if (null != trailing) {
+    let tmp10Result2 = trailing;
+    if (typeof trailing === "string") {
+      const obj4 = { text: trailing };
+      tmp10Result2 = tmp10(tmp(5605).TableRow.TrailingText, obj4);
+    }
+    tmp12 = tmp10Result2;
+  }
+  obj2.trailing = tmp12;
+  obj2.start = start;
+  obj2.end = end;
+  const children = [closure_1_14(TableRow.TableRow, obj2), ];
+  if (highlightSettingItem) {
+    const obj5 = { start, end };
+    highlightSettingItem = tmp10(SettingListItemHighlightDefault, obj5);
+  }
+  children[1] = highlightSettingItem;
+  return value2(__initData, { children });
+});
+let closure_22 = noop.memo((arg0) => {
+  ({ useDescription, useIsDisabled, variant, start, end, IconComponent } = arg0);
+  ({ setting, onValueChange, useTitle, useValue, hasIcon } = arg0);
+  let highlightSettingItem = useHighlightSettingItem.useHighlightSettingItem(setting);
+  const title = useTitle();
+  let description;
+  value = useValue();
+  if (useDescription != null) {
+    description = useDescription();
+  }
+  let isDisabled;
+  if (useIsDisabled != null) {
+    isDisabled = useIsDisabled();
+  }
+  const obj2 = { label: title, subLabel: description, icon: null, value: null, variant: null, disabled: null, onValueChange: null, start: null, end: null };
+  let tmp8Result = null;
+  if (null != IconComponent) {
+    const obj3 = { IconComponent, variant };
+    tmp8Result = tmp8(tmp(5605).TableRow.Icon, obj3);
+  }
+  obj2.icon = tmp8Result;
+  obj2.value = value;
+  obj2.variant = variant;
+  obj2.disabled = isDisabled;
+  obj2.onValueChange = onValueChange;
+  obj2.start = start;
+  obj2.end = end;
+  const tmp8Result3 = closure_1_14(TableSwitchRow.TableSwitchRow, obj2);
+  let tmp8Result4 = tmp8Result3;
+  if (true === hasIcon) {
+    const obj4 = { children: tmp8Result3 };
+    tmp8Result4 = tmp8(ForceSwitchIcons, obj4);
+  }
+  const children = [tmp8Result4, ];
+  if (highlightSettingItem) {
+    const obj5 = { start, end };
+    highlightSettingItem = tmp8(SettingListItemHighlightDefault, obj5);
+  }
+  children[1] = highlightSettingItem;
+  return value2(__initData, { children });
+});
+let closure_24 = noop.memo((arg0) => {
+  ({ setting, useTitle, useValue, useOptions, onValueChange } = arg0);
+  const tmp = closure_17();
+  let highlightSettingItem = useHighlightSettingItem.useHighlightSettingItem(setting);
+  const title = useTitle();
+  value = useValue();
+  const options = useOptions();
+  let combined = value;
+  if (typeof value === "number") {
+    let _HermesInternal = HermesInternal;
+    combined = "" + value;
+  }
+  const tmp10 = closure_1_14;
+  const tmp8 = value2;
+  const tmp9 = __initData;
+  const children = [
+    closure_1_14(TableRadioGroup.TableRadioGroup, {
+      title,
+      defaultValue: combined,
+      onChange: onValueChange,
+      hasIcons: false,
+      children: options.map((label) => {
+        if (typeof label.value === "number") {
+          const _HermesInternal = HermesInternal;
+          let combined = "" + label.value;
+        } else {
+          combined = label.value;
+        }
+        return closure_1_14(TableRadioRow.TableRadioRow, { value: combined, label: label.label, subLabel: label.subLabel, disabled: label.disabled }, label.value);
+      })
+    }, combined),
+
+  ];
+  if (highlightSettingItem) {
+    const obj3 = { start: true, end: true, style: tmp.radioSettingHighlight };
+    highlightSettingItem = tmp10(SettingListItemHighlightDefault, obj3);
+  }
+  children[1] = highlightSettingItem;
+  return tmp8(tmp9, { children });
+});
+let closure_25 = noop.memo((arg0) => {
+  ({ variant, useTrailing, useIsDisabled, useDescription, start, end, IconComponent } = arg0);
+  let trailing;
+  ({ setting, useTitle } = arg0);
+  let highlightSettingItem = trailing(14698).useHighlightSettingItem(setting);
+  trailing = undefined;
+  const title = useTitle();
+  if (useTrailing != null) {
+    trailing = useTrailing();
+  }
+  let description;
+  if (useDescription != null) {
+    description = useDescription();
+  }
+  let isDisabled;
+  if (useIsDisabled != null) {
+    isDisabled = useIsDisabled();
+  }
+  const items = [trailing];
+  const callback = noop.useCallback(() => {
+    if (null != trailing) {
+      ClipboardUtils.copy(tmp);
+      const result = ToastUtils.presentCopiedToClipboard();
+    }
+  }, items);
+  let obj2 = { label: title, subLabel: description, onPress: null, variant: null, disabled: null, icon: null, trailing: null, start: null, end: null };
+  let tmp12 = null;
+  if (null != trailing) {
+    tmp12 = callback;
+  }
+  obj2.onPress = tmp12;
+  obj2.variant = variant;
+  obj2.disabled = isDisabled;
+  let tmp11Result = null;
+  if (null != IconComponent) {
+    const obj3 = { IconComponent, variant };
+    tmp11Result = tmp11(tmp(5605).TableRow.Icon, obj3);
+  }
+  obj2.icon = tmp11Result;
+  let tmp11Result2 = null;
+  if (null != trailing) {
+    const obj4 = { text: trailing };
+    tmp11Result2 = tmp11(tmp(5605).TableRow.TrailingText, obj4);
+  }
+  obj2.trailing = tmp11Result2;
+  obj2.start = start;
+  obj2.end = end;
+  const children = [closure_14(trailing(5605).TableRow, obj2), ];
+  if (highlightSettingItem) {
+    const obj5 = { start, end };
+    highlightSettingItem = tmp11(SettingListItemHighlightDefault, obj5);
+  }
+  children[1] = highlightSettingItem;
+  return closure_16(closure_15, { children });
+});
+let closure_26 = noop.memo((arg0) => {
+  ({ useValue, start, end } = arg0);
+  ({ setting, useTitle, onValueChange, maximum } = arg0);
+  let highlightSettingItem = useHighlightSettingItem.useHighlightSettingItem(setting);
+  const title = useTitle();
+  value = undefined;
+  if (useValue != null) {
+    value = useValue();
+  }
+  const obj2 = { label: title, start, end, subLabel: null };
+  const tmp4 = closure_17();
+  const tmp7 = value2;
+  const tmp8 = __initData;
+  const tmp9 = closure_1_14;
+  obj2.subLabel = closure_1_14(View, { style: closure_17().slider, children: closure_1_14(VolumeSliderDefault, { value, maxVolume: maximum, onValueChange, accessibilityLabel: title }) });
+  const children = [closure_1_14(TableRow.TableRow, obj2), ];
+  if (highlightSettingItem) {
+    const obj4 = { start, end };
+    highlightSettingItem = tmp9(SettingListItemHighlightDefault, obj4);
+  }
+  children[1] = highlightSettingItem;
+  return tmp7(tmp8, { children });
+});
+let closure_27 = noop.memo((useTrailing) => {
+  useTrailing = useTrailing.useTrailing;
+  let num2;
+  let num4;
+  let num3;
+  let onValueChange;
+  _objectWithoutProperties = undefined;
+  value = undefined;
+  closure_8 = undefined;
+  c9 = undefined;
+  let callback1;
+  let callback3;
+  ({ start, end, useProps } = useTrailing);
+  const title = useTrailing.useTitle();
+  const props = useProps();
+  const onSlidingComplete = props.onSlidingComplete;
+  const step = props.step;
+  let num = 0.1;
+  if (undefined !== step) {
+    num = step;
+  }
+  const minimumValue = props.minimumValue;
+  num2 = 0;
+  ({ startIcon, endIcon } = props);
+  if (undefined !== minimumValue) {
+    num2 = minimumValue;
+  }
+  const maximumValue = props.maximumValue;
+  num3 = 1;
+  num4 = 1;
+  if (undefined !== maximumValue) {
+    num4 = maximumValue;
+  }
+  ({ valueLabel, defaultValue } = props);
+  if (undefined !== defaultValue) {
+    num3 = defaultValue;
+  }
+  onValueChange = props.onValueChange;
+  const tmp3 = _objectWithoutProperties(props, num4);
+  _objectWithoutProperties = tmp3;
+  const tmp4 = closure_17();
+  const items = [c9];
+  const stateFromStores = onSlidingComplete(num2[15]).useStateFromStores(items, () => _undefined.locale);
+  const tmp8 = onValueChange(value.useState(() => {
+    value = value.value;
+    if (value == null) {
+      value = num3;
+    }
+    return value;
+  }), 2);
+  value = tmp8[0];
+  closure_8 = tmp8[1];
+  const obj = onSlidingComplete(num2[15]);
+  [tmp11, c9] = onValueChange(value.useState(false), 2);
+  const items1 = [onValueChange];
+  const callback = value.useCallback(() => {
+    _undefined(true);
+  }, []);
+  callback1 = value.useCallback((arg0) => {
+    closure_8(arg0);
+    if (onValueChange != null) {
+      onValueChange(arg0);
+    }
+  }, items1);
+  const items2 = [onSlidingComplete];
+  const items3 = [callback1, onSlidingComplete];
+  const callback2 = value.useCallback((arg0) => {
+    _undefined(false);
+    if (onSlidingComplete != null) {
+      tmp2(arg0);
+    }
+  }, items2);
+  callback3 = value.useCallback((arg0) => {
+    callback1(arg0);
+    if (onSlidingComplete != null) {
+      onSlidingComplete(arg0);
+    }
+  }, items3);
+  const items4 = [num3, callback3];
+  const items5 = [callback3, num4, num, value];
+  const callback4 = value.useCallback(() => callback3(num3), items4);
+  const items6 = [callback3, num2, num, value];
+  const callback5 = value.useCallback(() => {
+    callback3(Math.min(num4, first + num));
+    const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
+  }, items5);
+  let trailing;
+  const callback6 = value.useCallback(() => {
+    callback3(Math.max(num2, first - num));
+    const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
+  }, items6);
+  if (useTrailing != null) {
+    trailing = useTrailing();
+  }
+  const obj2 = { start, end, shadow: "none", border: "none", children: null };
+  const obj3 = { style: tmp4.sliderTitle, children: null };
+  const items7 = [closure_14(onSlidingComplete(num2[32]).Text, { variant: "text-md/semibold", children: title }), trailing];
+  obj3.children = items7;
+  const items8 = [closure_16(closure_8, obj3), ];
+  let tmp20Result = null != value;
+  if (tmp20Result) {
+    if (formatPercentResult == null) {
+      formatPercentResult = tmp5(tmp6[33]).formatPercent(stateFromStores, value);
+      const tmp5Result = tmp5(tmp6[33]);
+    }
+    const obj4 = { variant: "text-sm/medium", color: "text-muted", children: formatPercentResult };
+    tmp20Result = tmp20(tmp5(tmp6[32]).Text, obj4);
+  }
+  items8[1] = tmp20Result;
+  const items9 = [closure_16(onSlidingComplete(num2[31]).Stack, { direction: "horizontal", justify: "space-between", children: items8 }), , ];
+  const tmp10 = onValueChange(value.useState(false), 2);
+  const tmp22 = closure_8;
+  let slider;
+  if (tmp5Result2.isAndroid()) {
+    slider = tmp4.slider;
+  }
+  const obj5 = { style: slider, children: null };
+  const obj6 = {};
+  const merged = Object.assign(tmp3);
+  obj6.accessibilityLabel = title;
+  obj6.step = num;
+  obj6.onValueChange = callback1;
+  obj6.value = value;
+  obj6.minimumValue = num2;
+  obj6.maximumValue = num4;
+  obj6.onSlidingStart = callback;
+  obj6.onSlidingComplete = callback2;
+  obj6.startIcon = closure_14(onSlidingComplete(num2[36]).PressableOpacity, { accessible: false, onPress: callback6, children: startIcon });
+  obj6.endIcon = closure_14(onSlidingComplete(num2[36]).PressableOpacity, { accessible: false, onPress: callback5, children: endIcon });
+  obj5.children = closure_14(onSlidingComplete(num2[35]).Slider, obj6);
+  items9[1] = closure_14(tmp22, obj5);
+  let tmp26 = !tmp11;
+  if (!tmp11) {
+    tmp26 = value === num3;
+  }
+  const obj7 = { children: null };
+  const obj8 = { disabled: tmp26, variant: "secondary", text: null, onPress: null };
+  const intl = tmp5(tmp6[16]).intl;
+  obj8.text = intl.string(onSlidingComplete(num2[16]).t["3b//lO"]);
+  obj8.onPress = callback4;
+  items9[2] = closure_14(onSlidingComplete(num2[37]).Button, obj8);
+  obj7.children = items9;
+  obj2.children = closure_16(onSlidingComplete(num2[31]).Stack, obj7);
+  return closure_14(onSlidingComplete(num2[30]).Card, obj2);
+});
+size = fn(2);
+let result = size.fileFinishedImporting("modules/settings/native/renderer/SettingRenderer.tsx");
+
+export { GuildSelectDefaultIcon };
+export const renderSettingItem = function renderSettingItem(item) {
+  ({ setting, settingData, start, end } = item);
+  const type = settingData.type;
+  if (constants.GUILD_SELECTOR === type) {
+    const obj2 = {};
+    const merged = Object.assign(settingData);
+    obj2.setting = setting;
+    obj2.start = start;
+    obj2.end = end;
+    return closure_1_14(closure_20, obj2);
+  } else if (tmp.ROUTE === type) {
+    const obj3 = {};
+    const merged1 = Object.assign(settingData);
+    obj3.start = start;
+    obj3.end = end;
+    return closure_1_14(closure_18, obj3);
+  } else if (tmp.PRESSABLE === type) {
+    const obj4 = {};
+    const merged2 = Object.assign(settingData);
+    obj4.start = start;
+    obj4.end = end;
+    obj4.setting = setting;
+    return closure_1_14(closure_21, obj4);
+  } else if (tmp.TOGGLE === type) {
+    const obj5 = {};
+    const merged3 = Object.assign(settingData);
+    obj5.start = start;
+    obj5.end = end;
+    obj5.setting = setting;
+    return closure_1_14(closure_22, obj5);
+  } else if (tmp.STATIC === type) {
+    const obj6 = {};
+    const merged4 = Object.assign(settingData);
+    obj6.start = start;
+    obj6.end = end;
+    obj6.setting = setting;
+    return closure_1_14(closure_25, obj6);
+  } else if (tmp.VOLUME_SLIDER === type) {
+    const obj7 = {};
+    const merged5 = Object.assign(settingData);
+    obj7.start = start;
+    obj7.end = end;
+    obj7.setting = setting;
+    return closure_1_14(closure_26, obj7);
+  } else if (tmp.RADIO === type) {
+    const obj8 = {};
+    const merged6 = Object.assign(settingData);
+    obj8.setting = setting;
+    return closure_1_14(closure_24, obj8);
+  } else if (tmp.SLIDER === type) {
+    const obj = {};
+    const merged7 = Object.assign(settingData);
+    obj.start = start;
+    obj.end = end;
+    obj.setting = setting;
+    return closure_1_14(closure_27, obj);
+  }
+};
+export const renderSettingSearchResultItem = function renderSettingSearchResultItem(settingData) {
+  settingData = settingData.settingData;
+  const tmp = _objectWithoutProperties(settingData, closure_4);
+  const type = settingData.type;
+  if (constants.ROUTE === type) {
+    const obj2 = { settingData };
+    const merged = Object.assign(tmp);
+    return closure_1_14(RouteSettingSearchResult, obj2);
+  } else if (tmp2.PRESSABLE === type) {
+    const obj3 = { settingData };
+    const merged1 = Object.assign(tmp);
+    return closure_1_14(PressableSettingSearchResult, obj3);
+  } else if (tmp2.STATIC === type) {
+    const obj = { settingData };
+    const merged2 = Object.assign(tmp);
+    return closure_1_14(StaticSettingSearchResult, obj);
+  } else {
+    const _Error = Error;
+    const _HermesInternal = HermesInternal;
+    const error = new Error("[SettingRenderer] Found unsupported renderer type for setting: " + settingData.setting);
+    throw error;
+  }
+};
+export const renderSettingSearchResultPlaceholderItem = function renderSettingSearchResultPlaceholderItem(start) {
+  return closure_1_14(SettingSearchResultPlaceholder, { start: start.start, end: start.end });
+};

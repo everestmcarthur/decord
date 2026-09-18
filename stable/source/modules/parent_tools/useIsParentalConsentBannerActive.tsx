@@ -1,0 +1,24 @@
+// Module ID: 14868
+// Function ID: 14869
+// Name: useIsParentalConsentBannerActive
+// Dependencies: [14869, 14871, 2]
+// Exports: useIsParentalConsentBannerActive
+
+// Module 14868 (useIsParentalConsentBannerActive)
+import useParentalConsentWarning from "useParentalConsentWarning" /* 14869 */;
+import ParentalConsentWarningTypes from "ParentalConsentWarningTypes" /* 14871 */;
+import size from "module_2" /* 2 */;
+
+const result = size.fileFinishedImporting("modules/parent_tools/useIsParentalConsentBannerActive.tsx");
+
+export const useIsParentalConsentBannerActive = function useIsParentalConsentBannerActive() {
+  const parentalConsentWarning = useParentalConsentWarning.useParentalConsentWarning();
+  let hasItem;
+  if (parentalConsentWarning != null) {
+    const surfaces = parentalConsentWarning.surfaces;
+    if (surfaces != null) {
+      hasItem = surfaces.includes(ParentalConsentWarningTypes.ParentalConsentWarningSurface.BANNER);
+    }
+  }
+  return true === hasItem;
+};

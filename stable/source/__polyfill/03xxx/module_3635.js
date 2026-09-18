@@ -1,0 +1,9 @@
+// Module ID: 3635
+// Function ID: 3636
+// Dependencies: [1122]
+
+// Module 3635
+import registerAsset from "module_1122" /* 1122 */;
+
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcw==", scales: [1], hash: "6ef514cbac0955b20cf6c91a8aa97a72", name: "ro.messages.6ef514cbac0955b20cf6c91a8aa97a72.compiled.messages", type: "jsona" });

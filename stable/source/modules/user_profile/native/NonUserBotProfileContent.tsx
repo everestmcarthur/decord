@@ -1,0 +1,121 @@
+// Module ID: 8241
+// Function ID: 8242
+// Name: NonUserBotProfileContent
+// Dependencies: [19, 17, 7208, 7151, 21, 8242, 8191, 4712, 4404, 8243, 8231, 8244, 1611, 8228, 8239, 7190, 4258, 8245, 4296, 8257, 11157, 1114, 11212, 2]
+
+// Module 8241 (NonUserBotProfileContent)
+import ToastUtils from "ToastUtils" /* 4258 */;
+import UserUtilsDefault from "UserUtils" /* 4404 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 4712 */;
+import ClipboardUtils from "ClipboardUtils" /* 7190 */;
+import useProfileThemeDefault from "useProfileTheme" /* 8228 */;
+import useUserProfileBannerHeightDefault from "useUserProfileBannerHeight" /* 8231 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8242 */;
+import useBadgesDefault from "useBadges" /* 8243 */;
+import useUserProfileOverscrollStylesDefault from "useUserProfileOverscrollStyles" /* 8244 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+const View = fn(17).View;
+const Constants = fn(7208);
+({ PROFILE_CONTENT_BOTTOM_PADDING: closure_4, PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING: hasOwnProperty } = Constants);
+const ACTION_SHEET_MAX_WIDTH = fn(7151).ACTION_SHEET_MAX_WIDTH;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_profile/native/NonUserBotProfileContent.tsx");
+
+export default noop.memo(function NonUserBotProfileContent(scrollPosition) {
+  ({ user, channel, displayProfile } = scrollPosition);
+  let trackUserProfileAction;
+  importDefault = undefined;
+  const tmp3 = UserProfileSharedStylesDefault();
+  trackUserProfileAction = trackUserProfileAction(8191).useUserProfileAnalyticsContext().trackUserProfileAction;
+  let obj = trackUserProfileAction(8191);
+  let guild_id;
+  if (channel != null) {
+    guild_id = channel.guild_id;
+  }
+  let id;
+  if (channel != null) {
+    id = channel.id;
+  }
+  const name = NicknameUtilsDefault.useName(guild_id, id, user);
+  importDefault = UserUtilsDefault.useUserTag(user);
+  const tmpResult = UserUtilsDefault;
+  const tmp9 = useUserProfileBannerHeightDefault(ACTION_SHEET_MAX_WIDTH);
+  const tmp8 = useBadgesDefault(displayProfile);
+  ({ bannerAnimatedStyle, bannerImageAnimatedStyle, contentAnimatedStyle, blurAnimatedProps, showBlur } = useUserProfileOverscrollStylesDefault({ scrollPosition: scrollPosition.scrollPosition, bannerHeight: tmp9 }));
+  const tmp10 = useUserProfileOverscrollStylesDefault({ scrollPosition: scrollPosition.scrollPosition, bannerHeight: tmp9 });
+  ({ theme, primaryColor, secondaryColor } = useProfileThemeDefault({ user, displayProfile }));
+  const tmp11 = useProfileThemeDefault({ user, displayProfile });
+  const userProfileColors = trackUserProfileAction(8239).useUserProfileColors({ theme, primaryColor, secondaryColor });
+  const containerBackground = userProfileColors.containerBackground;
+  if (null == user) {
+    return null;
+  } else {
+    const obj3 = { user, displayProfile, bannerHeight: tmp9, bannerAnimatedStyle, bannerImageAnimatedStyle, blurAnimatedProps, showBlur };
+    const items = [closure_7(tmp(8245), obj3), ];
+    const obj4 = { style: contentAnimatedStyle, children: null };
+    const obj5 = { user, guildId: null, backgroundColor: null, disableStatus: true };
+    let guildId;
+    if (displayProfile != null) {
+      guildId = displayProfile.guildId;
+    }
+    obj5.guildId = guildId;
+    obj5.backgroundColor = tmp13;
+    const items1 = [closure_7(tmp4(8257).OpenableUserProfileAvatar, obj5), ];
+    const obj6 = { style: null, children: null };
+    const items2 = [, , ];
+    ({ profileContentWrapper: arr2[0], profileContent: arr2[1] } = tmp3);
+    const obj7 = { paddingTop, paddingBottom: tmp(1611)().bottom + closure_4 };
+    items2[2] = obj7;
+    obj6.style = items2;
+    const obj8 = { style: tmp3.primaryInfo, children: null };
+    const obj9 = { user, guildId: null, displayName: null, pronouns: null, badges: null, badgeContainerBackground: null, displayNameAccessibilityHint: null, onPressDisplayName: null, onPressUserTag: null, onPressPronouns: null, showBadgeToastOnPress: true };
+    let guild_id1;
+    if (channel != null) {
+      guild_id1 = channel.guild_id;
+    }
+    obj9.guildId = guild_id1;
+    obj9.displayName = name;
+    let pronouns;
+    if (displayProfile != null) {
+      pronouns = displayProfile.pronouns;
+    }
+    function handleCopyUsername() {
+      trackUserProfileAction({ action: "COPY_USERNAME" });
+      ClipboardUtils.copy(closure_1);
+      const result = ToastUtils.presentUsernameCopied();
+    }
+    const obj10 = { children: null };
+    obj9.pronouns = pronouns;
+    obj9.badges = tmp8;
+    obj9.badgeContainerBackground = containerBackground;
+    const intl = tmp4(1114).intl;
+    obj9.displayNameAccessibilityHint = intl.string(tmp4(1114).t.y5MwJy);
+    obj9.onPressDisplayName = handleCopyUsername;
+    obj9.onPressUserTag = handleCopyUsername;
+    obj9.onPressPronouns = function onPressPronouns() {
+      trackUserProfileAction({ action: "PRESS_PRONOUNS" });
+      ToastUtils.presentUserPronouns();
+    };
+    obj8.children = closure_7(tmp(11157), obj9);
+    const items3 = [closure_7(View, obj8), ];
+    const obj11 = { style: tmp3.cards, children: null };
+    const obj12 = { userId: user.id, displayProfile, channel, style: null };
+    const items4 = [tmp3.card, ];
+    const obj13 = { backgroundColor: containerBackground };
+    items4[1] = obj13;
+    obj12.style = items4;
+    obj11.children = closure_7(tmp(11212), obj12);
+    items3[1] = closure_7(View, obj11);
+    obj6.children = items3;
+    items1[1] = closure_8(View, obj6);
+    obj4.children = items1;
+    items[1] = closure_8(tmp(4296).View, obj4);
+    obj10.children = items;
+    return closure_8(closure_9, obj10);
+  }
+  const tmp4Result = trackUserProfileAction(8239);
+});

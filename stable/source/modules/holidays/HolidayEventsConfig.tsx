@@ -1,0 +1,34 @@
+// Module ID: 17384
+// Function ID: 17385
+// Name: HolidayEventsConfig
+// Dependencies: [9910, 1114, 17385, 17386, 1943, 2]
+
+// Module 17384 (HolidayEventsConfig)
+import util from "util" /* 1114 */;
+import dismissible_content from "dismissible_content" /* 1943 */;
+import Constants from "Constants" /* 9910 */;
+import _modDef17385 from "module_17385" /* 17385 */;
+import _modDef17386 from "module_17386" /* 17386 */;
+import size from "module_2" /* 2 */;
+
+const obj = {
+  experiment: null,
+  useIsExperimentEligible() {
+    return false;
+  },
+  getIsExperimentEligible() {
+    return false;
+  },
+  startTimeMs: 1766163600000,
+  endTimeMs: 1767632400000,
+  isDesktopOnly: true,
+  soundpack: Constants.Soundpacks.WINTER_HOLIDAY,
+  soundpackLabel: util.t.Z5OQNp,
+  appSpinnerSources: { webmDark: _modDef17385, webmLight: _modDef17386 },
+  coachmarkDismissibleContent: dismissible_content.DismissibleContent.HOLIDAY_COACHMARK_WINTER_2025,
+  coachmarkBackgroundColor: "#1170ed"
+};
+const result = size.fileFinishedImporting("modules/holidays/HolidayEventsConfig.tsx");
+
+export default obj;
+export const HolidayEmojiAnimationType = { THROW_EMOJI: 0, [0]: "THROW_EMOJI", SNOW: 1, [1]: "SNOW" };

@@ -1,0 +1,88 @@
+// Module ID: 12285
+// Function ID: 12286
+// Name: VoicePanelHeaderGlassBlur
+// Dependencies: [19, 17, 21, 4560, 1115, 4296, 4974, 4495, 7073, 4964, 4411, 5589, 2]
+
+// Module 12285 (VoicePanelHeaderGlassBlur)
+import useThemeDefault from "useTheme" /* 4495 */;
+import VisualEffectViewAnimatedDefault from "VisualEffectViewAnimated" /* 4964 */;
+import spring from "spring" /* 4974 */;
+import NativeViewDefault from "NativeView" /* 5589 */;
+import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 7073 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+const StyleSheet = fn(17).StyleSheet;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4560);
+let closure_6 = createStyles.createStyles({ blur: { position: "absolute", top: 0, left: 0, right: 0 }, strokeContainer: { position: "absolute", left: 0, right: 0, bottom: -StyleSheet.hairlineWidth, height: StyleSheet.hairlineWidth }, stroke: { height: StyleSheet.hairlineWidth, opacity: 0.15, backgroundColor: "white" }, strokeAlt: { height: StyleSheet.hairlineWidth, opacity: 0.8, backgroundColor: "black" }, strokeAltLight: { height: StyleSheet.hairlineWidth, opacity: 0.2, backgroundColor: "black" } });
+const PlatformUtils = fn(1115);
+const IS_ANDROID = PlatformUtils.isAndroid();
+const __initData = { code: "function VoicePanelHeaderGlassBlurTsx1(){const{shown,IS_ANDROID}=this.__closure;return{opacity:shown.get()?IS_ANDROID?0.7:1:0};}" };
+const __initData2 = { code: "function VoicePanelHeaderGlassBlurTsx2(){const{withSpring,shown}=this.__closure;return{blurAmount:withSpring(shown.get()?0.3:0)};}" };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_panel/native/shared/VoicePanelHeaderGlassBlur.tsx");
+
+export default noop.memo(function HeaderGlassBlur(shown) {
+  shown = shown.shown;
+  ({ blurStyle, style } = shown);
+  const tmp = closure_6();
+  const fn = function k() {
+    let opacity = 0;
+    if (shown.get()) {
+      let num2 = 1;
+      if (closure_7) {
+        num2 = 0.7;
+      }
+      opacity = num2;
+    }
+    return { opacity };
+  };
+  fn.__closure = { shown, IS_ANDROID };
+  fn.__workletHash = 3451055086565;
+  fn.__initData = __initData;
+  const animatedStyle = shown(4296).useAnimatedStyle(fn);
+  let obj = shown(4296);
+  const obj2 = { shown, IS_ANDROID };
+  const tmp2 = shown;
+  const fn2 = function p() {
+    let num = 0;
+    if (shown.get()) {
+      num = 0.3;
+    }
+    return { blurAmount: spring.withSpring(num) };
+  };
+  const obj3 = shown(4296);
+  fn2.__closure = { withSpring: shown(4974).withSpring, shown };
+  fn2.__workletHash = 5642055202507;
+  fn2.__initData = __initData2;
+  const animatedProps = obj3.useAnimatedProps(fn2);
+  const tmp7 = useThemeDefault();
+  const obj5 = { style: null, children: null };
+  const items = [tmp.blur, style, animatedStyle];
+  obj5.style = items;
+  const obj4 = { withSpring: shown(4974).withSpring, shown };
+  const tmp9 = ReanimatedNativeViewDefault;
+  const tmp11 = VisualEffectViewAnimatedDefault;
+  let str = "light";
+  if (obj6.isThemeDark(tmp7)) {
+    str = "dark";
+  }
+  const obj7 = { blurStyle: "ultra-thin", blurTheme: str, style: null, animatedProps };
+  const items1 = [StyleSheet.absoluteFillObject, blurStyle];
+  obj7.style = items1;
+  const items2 = [closure_4(tmp11, obj7), ];
+  const obj8 = { style: tmp.strokeContainer, children: null };
+  obj6 = shown(4411);
+  const items3 = [closure_4(NativeViewDefault, { style: tmp.stroke }), ];
+  const obj9 = { style: tmp.stroke };
+  const tmp6Result = NativeViewDefault;
+  const tmp6Result2 = NativeViewDefault;
+  const tmp2Result = tmp2(4411);
+  items3[1] = closure_4(tmp6Result2, { style: tmp2(4411).isThemeDark(tmp7) ? tmp.strokeAlt : tmp.strokeAltLight });
+  obj8.children = items3;
+  items2[1] = closure_5(tmp6Result, obj8);
+  obj5.children = items2;
+  return closure_5(tmp9, obj5);
+});

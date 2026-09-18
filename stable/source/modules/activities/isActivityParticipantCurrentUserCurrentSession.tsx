@@ -1,0 +1,25 @@
+// Module ID: 13988
+// Function ID: 13989
+// Name: isActivityParticipantCurrentUserCurrentSession
+// Dependencies: [502, 2]
+// Exports: isActivityParticipantCurrentUserCurrentSession
+
+// Module 13988 (isActivityParticipantCurrentUserCurrentSession)
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/isActivityParticipantCurrentUserCurrentSession.tsx");
+
+export const isActivityParticipantCurrentUserCurrentSession = function isActivityParticipantCurrentUserCurrentSession(userId) {
+  let obj = arg1;
+  if (arg1 === undefined) {
+    obj = AuthenticationStore;
+  }
+  const id = obj.getId();
+  let tmp3 = userId.userId === id;
+  if (tmp3) {
+    tmp3 = null == userId.sessionId || undefined === userId.sessionId || userId.sessionId === tmp2;
+    const tmp5 = null == userId.sessionId || undefined === userId.sessionId || userId.sessionId === tmp2;
+  }
+  return tmp3;
+};

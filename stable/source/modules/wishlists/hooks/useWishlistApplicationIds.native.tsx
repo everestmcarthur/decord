@@ -1,0 +1,19 @@
+// Module ID: 10799
+// Function ID: 10800
+// Name: useWishlistApplicationIds
+// Dependencies: [19, 1074, 2]
+// Exports: useWishlistApplicationIds
+
+// Module 10799 (useWishlistApplicationIds)
+import noop from "module_19" /* 19 */;
+
+let closure_1 = fn(1074).COLLECTIBLES_APPLICATION_ID;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/wishlists/hooks/useWishlistApplicationIds.native.tsx");
+
+export const useWishlistApplicationIds = function useWishlistApplicationIds() {
+  return noop.useMemo(() => {
+    const items = [closure_1_1];
+    return items;
+  }, []);
+};

@@ -1,0 +1,24 @@
+// Module ID: 15965
+// Function ID: 15966
+// Name: useAuthFlowBackHandler
+// Dependencies: [19, 15950, 15946, 5630, 2]
+// Exports: default
+
+// Module 15965 (useAuthFlowBackHandler)
+import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
+
+const require = fn;
+let closure_3 = fn(15950).RegistrationTransitionActionTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/auth/native/components/utils/useAuthFlowBackHandler.tsx");
+
+export default function useAuthFlowBackHandler(step) {
+  _require = step;
+  dependencyMap = noop.useContext(require("Auth").TrackRegistrationContext);
+  require("useNavigatorBackPressHandler").useNavigatorBackPressHandler(() => {
+    closure_1({ step, actionType: constants.VIEWED });
+    return false;
+  });
+};

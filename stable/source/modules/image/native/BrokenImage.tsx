@@ -1,0 +1,23 @@
+// Module ID: 12089
+// Function ID: 12090
+// Name: BrokenImage
+// Dependencies: [19, 21, 8457, 2]
+// Exports: default
+
+// Module 12089 (BrokenImage)
+import inlineStyles from "inlineStyles" /* 8457 */;
+import noop from "module_19" /* 19 */;
+
+const inlineStylesDefault = inlineStyles;
+
+require = fn;
+const jsx = fn(21).jsx;
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/image/native/BrokenImage.tsx");
+
+export default function BrokenImage(arg0) {
+  const size = { width: 24, height: 24, fill: "hsl(217, 7.6%, 33.5%)" };
+  const merged = Object.assign(arg0);
+  size.children = jsx(inlineStyles.Path, { d: "M21 5v6.59l-3-3-4 4-4-4-4 4-3-3V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2Zm-3 6.42 3 3V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-6.58l3 3 4-4 4 4 4-4Z" });
+  return jsx(inlineStylesDefault, { width: 24, height: 24, fill: "hsl(217, 7.6%, 33.5%)" });
+};

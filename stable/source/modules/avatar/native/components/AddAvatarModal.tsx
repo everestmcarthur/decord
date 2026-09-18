@@ -1,0 +1,228 @@
+// Module ID: 17438
+// Function ID: 17439
+// Name: AddAvatarModal
+// Dependencies: [5, 32, 19, 17, 8161, 1074, 21, 4560, 576, 5682, 5524, 1611, 504, 14596, 17439, 8170, 8249, 5138, 8165, 8167, 4556, 1114, 17448, 1178, 4975, 17436, 1250, 7377, 5624, 7000, 2]
+
+// Module 17438 (AddAvatarModal)
+import initialize from "initialize" /* 504 */;
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import components_Button_Button from "components/Button/Button" /* 4975 */;
+import NavigatorHeader from "NavigatorHeader" /* 5624 */;
+import Navigator from "Navigator" /* 7000 */;
+import VideoBackground from "VideoBackground" /* 8249 */;
+import AddAvatarModalActionCreators from "AddAvatarModalActionCreators" /* 17436 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8161 */;
+import TextStyles from "TextStyles" /* 5524 */;
+
+require = fn;
+function AddAvatarScreen() {
+  _slicedToArray = async function _handleSelectAvatar(noop, value) {
+    if (c3 === 2) {
+      c3 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (noop === 1) {
+        throw value;
+      } else if (noop === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c3 = 2;
+        if (0 === dependencyMap) {
+          if (noop === 1) {
+            c3 = 3;
+            throw value;
+          } else if (noop === 2) {
+            c3 = 3;
+            const obj5 = { value, done: true };
+            return obj5;
+          } else {
+            closure_1 = tmp5;
+            let base64;
+            closure_128_1 = undefined;
+            _require(false);
+            const obj7 = { size };
+            dependencyMap = 1;
+            c3 = 1;
+            const obj9 = { value: tmp2(5138).openImagePicker(obj7), done: false };
+            return obj9;
+          }
+        } else if (noop === 1) {
+          c3 = 3;
+          throw value;
+        } else if (noop === 2) {
+          c3 = 3;
+          const obj10 = { value, done: true };
+          return obj10;
+        } else {
+          base64 = value.base64;
+          if (null == base64) {
+            pendingImage = undefined;
+            if (null != base64) {
+              const obj11 = { imageUri: base64, description: null };
+              const obj = tmp2(14596);
+              obj11.description = tmp2(8170).generateAvatarDescription();
+              pendingImage = obj.createPendingImage(obj11);
+              const obj3 = tmp2(8170);
+            }
+            closure_128_1 = pendingImage;
+            const obj12 = { avatar: closure_128_1 };
+            tmp2(8165).setPendingChanges(obj12);
+            const obj4 = tmp2(8165);
+            let str = "set";
+            if (null == closure_128_1) {
+              str = "remove";
+            }
+            const result = tmp2(8167).announcePendingAvatarChange(str);
+            closure_129_2(undefined);
+            c3 = 3;
+            const obj6 = tmp2(8167);
+          }
+          closure_129_0(true);
+        }
+      } catch (tmp42) {
+        c3 = tmp;
+        throw tmp42;
+      }
+    }
+  };
+  const tmp = closure_11();
+  [tmp3, require] = noop.useState(false);
+  const tmp4 = _slicedToArray(noop.useState(), 2);
+  const selectedAvatar = tmp4[0];
+  dependencyMap = tmp6;
+  const bottom = selectedAvatar(1611)().bottom;
+  const tmp2 = _slicedToArray(noop.useState(false), 2);
+  const items = [UserProfileSettingsStore];
+  let pendingImage;
+  const stateFromStores = initialize.useStateFromStores(items, () => pendingChanges.getPendingChanges().pendingAvatar);
+  if (null != selectedAvatar) {
+    let obj2 = { imageUri: tmp9(17439).DEFAULT_AVATARS[selectedAvatar], description: null };
+    const tmp9Result = tmp9(14596);
+    obj2.description = tmp9(8170).generateAvatarDescription();
+    pendingImage = tmp9Result.createPendingImage(obj2);
+    const tmp9Result3 = tmp9(8170);
+  }
+  if (pendingImage == null) {
+    pendingImage = stateFromStores;
+  }
+  let imageUri;
+  if (pendingImage != null) {
+    imageUri = pendingImage.imageUri;
+  }
+  const items1 = [tmp.container, ];
+  let num = 16;
+  const tmp9Result4 = VideoBackground;
+  if (bottom > 0) {
+    num = bottom;
+  }
+  let obj3 = { style: items1, children: null };
+  items1[1] = { paddingBottom: num };
+  let obj4 = { style: tmp.headerContainer, children: null };
+  let obj5 = { children: null };
+  let obj6 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+  const intl = tmp9(1114).intl;
+  obj6.children = intl.string(util.t.XQRWvR);
+  const items2 = [closure_9(Text_Text.Text, obj6), ];
+  let obj7 = { style: tmp.subtitle, variant: "heading-deprecated-12/medium", color: "text-default", children: null };
+  const intl2 = tmp9(1114).intl;
+  obj7.children = intl2.string(util.t.fH9TLT);
+  items2[1] = closure_9(Text_Text.Text, obj7);
+  obj5.children = items2;
+  const items3 = [closure_10(View, obj5), , ];
+  const memoizedImageSourceResult = VideoBackground.memoizedImageSource(imageUri);
+  items3[1] = closure_9(selectedAvatar(17448), {
+    avatarSource: VideoBackground.memoizedImageSource(imageUri),
+    showPendingAvatar: null != pendingImage,
+    onSelectAvatar: function handleSelectAvatar() {
+      const self = this;
+      const apply = closure_4.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+      return applyArgumentsResult;
+    }
+  });
+  let obj9 = { style: tmp.errorContainer, children: null };
+  let obj10 = { style: tmp.errorText, children: null };
+  if (stringResult) {
+    const intl3 = tmp9(1114).intl;
+    stringResult = intl3.string(tmp9(1114).t.XyLlVm);
+  }
+  obj10.children = stringResult;
+  obj9.children = closure_9(native.LegacyText, obj10);
+  items3[2] = closure_9(View, obj9);
+  obj4.children = items3;
+  const items4 = [closure_10(View, obj4), closure_9(selectedAvatar(17439), { onAvatarSelect: tmp4[1], selectedAvatar }), ];
+  let obj11 = { style: tmp.buttonContainer, children: null };
+  let obj12 = { text: null, grow: true, onPress: null, disabled: null };
+  const intl4 = tmp9(1114).intl;
+  obj12.text = intl4.string(util.t.PDTjLN);
+  obj12.onPress = function onPress() {
+    return AddAvatarModalActionCreators.handlePressNext(pendingImage, first);
+  };
+  obj12.disabled = null == pendingImage;
+  obj11.children = closure_9(components_Button_Button.Button, obj12);
+  items4[2] = closure_9(View, obj11);
+  obj3.children = items4;
+  return closure_10(View, obj3);
+}
+class AddAvatarModal {
+  constructor() {
+    memo = closure_5.useMemo(() => {
+      let obj = { ADD_AVATAR: null };
+      const obj2 = {
+        impressionName: discord_common_AnalyticsUtils.ImpressionNames.AVATAR_UPLOAD,
+        headerRight() {
+          const obj = { text: null, onPress: null };
+          const intl = closure_1_0(1114).intl;
+          obj.text = intl.string(closure_1_0(1114).t["5Wxrcd"]);
+          obj.onPress = function onPress() {
+            return closure_1_0(dependencyMap[25]).showSkipAvatarModal();
+          };
+          return closure_1_9(closure_1_0(7377).HeaderActionButton, obj);
+        },
+        headerLeft() {
+          return null;
+        },
+        headerTitle: NavigatorHeader.getHeaderNoTitle(),
+        ignoreKeyboard: true,
+        fullscreen: true,
+        render() {
+          return closure_1_9(closure_1_12, {});
+        }
+      };
+      obj.ADD_AVATAR = obj2;
+      return obj;
+    }, []);
+    return jsx(closure_0(closure_2[29]).Navigator, { screens: memo, initialRouteName: "ADD_AVATAR" });
+  }
+}
+const View = fn(17).View;
+const Constants = fn(1074);
+({ UPLOAD_MEDIUM_SIZE: closure_8, Fonts, ModalAnimation } = Constants);
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10 } = jsxProd);
+const createStyles = fn(4560);
+let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, justifyContent: "center", paddingTop: fn(5682).NAV_BAR_HEIGHT + 32, alignItems: "center" }, headerContainer: { display: "flex", alignItems: "center" }, buttonContainer: { marginHorizontal: 16, marginBottom: 16 }, title: { marginBottom: 8, textAlign: "center" }, subtitle: { textAlign: "center" }, errorContainer: { alignSelf: "center", paddingTop: 24 }, errorText: null };
+const merged = Object.assign(TextStyles(Fonts.DISPLAY_MEDIUM, nativeDefault.unsafe_rawColors.RED_400, 12));
+obj2.errorText = {};
+let closure_11 = createStyles.createStyles(obj2);
+AddAvatarModal.modalConfig = { animation: ModalAnimation.SLIDE_IN_OUT };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/avatar/native/components/AddAvatarModal.tsx");
+
+export default AddAvatarModal;

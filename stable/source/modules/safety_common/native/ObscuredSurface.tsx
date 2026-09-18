@@ -1,0 +1,59 @@
+// Module ID: 8717
+// Function ID: 8718
+// Name: ObscuredSurface
+// Dependencies: [19, 17, 21, 4560, 576, 8718, 5081, 4556, 1114, 2]
+// Exports: default
+
+// Module 8717 (ObscuredSurface)
+import nativeDefault from "native" /* 576 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import ImageWarningIcon from "ImageWarningIcon" /* 5081 */;
+import ObscuredSurfaceContext from "ObscuredSurfaceContext" /* 8718 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4560);
+let obj2 = { container: { position: "relative", overflow: "hidden" }, content: { pointerEvents: "none", userSelect: "none" }, cover: { position: "absolute", inset: 0, zIndex: 1, backgroundColor: nativeDefault.colors.SPOILER_HIDDEN_BACKGROUND }, warning: null };
+let obj3 = { position: "absolute", inset: 0, zIndex: 1, backgroundColor: nativeDefault.colors.SPOILER_HIDDEN_BACKGROUND };
+obj2.warning = { position: "absolute", insetInlineStart: "50%", top: "50%", transform: "translate(-50%, -50%)", display: "flex", flexDirection: "column", alignItems: "center", gap: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_8, textAlign: "center", userSelect: "none", zIndex: 2 };
+let closure_6 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/safety_common/native/ObscuredSurface.tsx");
+
+export default function ObscuredSurface(obscured) {
+  ({ heading, description, children } = obscured);
+  const tmp = closure_6();
+  let tmp3Result = children;
+  if (obscured.obscured) {
+    const obj = { value: ObscuredSurfaceContext.OBSCURED_VALUE, children: null };
+    const obj2 = { style: tmp.container, children: null };
+    const obj3 = { style: tmp.content, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", accessible: false, "aria-hidden": true, children };
+    const items = [React4(View, obj3), , ];
+    const obj4 = { style: tmp.cover };
+    items[1] = React4(View, obj4);
+    const obj5 = { style: tmp.warning, children: null };
+    const obj6 = { size: "lg", color: nativeDefault.colors.TEXT_DEFAULT };
+    const items1 = [React4(ImageWarningIcon.ImageWarningIcon, obj6), , ];
+    if (heading == null) {
+      const intl = tmp4(1114).intl;
+      heading = intl.string(tmp4(1114).t.xC8Saf);
+    }
+    const obj7 = { variant: "heading-md/semibold", color: "text-strong", children: heading };
+    items1[1] = React4(Text_Text.Text, obj7);
+    if (description == null) {
+      const intl2 = tmp4(1114).intl;
+      description = intl2.string(tmp4(1114).t["0fc/DG"]);
+    }
+    const obj8 = { variant: "text-sm/normal", color: "text-muted", children: description };
+    items1[2] = React4(Text_Text.Text, obj8);
+    obj5.children = items1;
+    items[2] = hasOwnProperty(View, obj5);
+    obj2.children = items;
+    obj.children = hasOwnProperty(View, obj2);
+    tmp3Result = tmp3(ObscuredSurfaceContext.ObscuredSurfaceContext.Provider, obj);
+  }
+  return tmp3Result;
+};

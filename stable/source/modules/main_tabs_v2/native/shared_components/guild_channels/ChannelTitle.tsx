@@ -1,0 +1,52 @@
+// Module ID: 16664
+// Function ID: 16665
+// Name: guild_channels/ChannelTitle
+// Dependencies: [19, 4742, 21, 4560, 576, 10126, 4556, 2]
+
+// Module 16664 (guild_channels/ChannelTitle)
+import nativeDefault from "native" /* 576 */;
+import noop from "module_19" /* 19 */;
+
+const require = fn;
+const UnreadSetting = fn(4742).UnreadSetting;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_5 = createStyles.createStyleProperties({ muted: nativeDefault.colors.TEXT_MUTED, normal: nativeDefault.colors.REDESIGN_CHANNEL_NAME_MUTED_TEXT, unreadOrConnected: nativeDefault.colors.REDESIGN_CHANNEL_NAME_TEXT });
+const obj = { muted: nativeDefault.colors.TEXT_MUTED, normal: nativeDefault.colors.REDESIGN_CHANNEL_NAME_MUTED_TEXT, unreadOrConnected: nativeDefault.colors.REDESIGN_CHANNEL_NAME_TEXT };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/ChannelTitle.tsx");
+
+export default noop.memo(function ChannelTitle(unread) {
+  ({ title, muted } = unread);
+  unread = unread.unread;
+  const resolvedUnreadSetting = unread.resolvedUnreadSetting;
+  const connected = unread.connected;
+  const layoutStyles = muted(unread[5]).getLayoutStyles(unread.layout);
+  let tmp2 = closure_5();
+  const normal = tmp2;
+  const items = [unread, tmp2, connected, muted, resolvedUnreadSetting];
+  const memo = resolvedUnreadSetting.useMemo(() => {
+    let color = normal.normal;
+    if (muted) {
+      color = tmp.muted;
+    } else {
+      let tmp2 = unread;
+      if (unread) {
+        tmp2 = resolvedUnreadSetting === UnreadSetting.ALL_MESSAGES;
+      }
+      if (!tmp2) {
+        tmp2 = connected;
+      }
+      if (tmp2) {
+        color = tmp.unreadOrConnected;
+      }
+    }
+    return { color, paddingRight: 4, flexShrink: 1 };
+  }, items);
+  const obj2 = { variant: layoutStyles.channelName.text.variant, lineClamp: 1, maxFontSizeMultiplier: 1.75, style: memo, children: null };
+  if (title == null) {
+    title = "";
+  }
+  obj2.children = title;
+  return normal(muted(unread[6]).Text, obj2);
+});

@@ -1,0 +1,235 @@
+// Module ID: 7899
+// Function ID: 7900
+// Name: ForumActionCreators
+// Dependencies: [5, 1074, 4904, 1114, 573, 1272, 7765, 7900, 7901, 7902, 7767, 2]
+
+// Module 7899 (ForumActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import util from "util" /* 1114 */;
+import HTTPUtils from "HTTPUtils" /* 1272 */;
+import AnalyticsFeedItemSeenActionCreators from "AnalyticsFeedItemSeenActionCreators" /* 7900 */;
+import ForumChannelSeenManager from "ForumChannelSeenManager" /* 7901 */;
+import AnalyticsFeedItemSeenManager from "AnalyticsFeedItemSeenManager" /* 7902 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+
+require = fn;
+function withErrorHandling() {
+  const self = this;
+  const apply = closure_7.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+let closure_7 = async function _withErrorHandling(arg0, value) {
+  if (c8 === 2) {
+    c8 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp7 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c8 = 2;
+      if (0 === c7) {
+        if (arg0 === 1) {
+          c8 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c8 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else {
+          closure_4 = tmp3;
+          closure_3 = tmp5;
+          closure_131_0 = closure_1;
+          closure_131_1 = closure_2;
+          c6 = 1;
+          c7 = 2;
+          c8 = 1;
+          const obj6 = { value: _require(), done: false };
+          return obj6;
+        }
+      } else if (1 === tmp8) {
+        c6 = 0;
+        closure_131_2 = closure_5;
+        const body = closure_131_2.body;
+        let code;
+        if (body != null) {
+          code = body.code;
+        }
+        if (code === closure_132_4.NON_MODERATED_TAG_REQUIRED) {
+          const obj7 = { title: closure_131_0, body: closure_131_1 };
+          closure_132_1(closure_132_2[2]).show(obj7);
+          const obj5 = closure_132_1(closure_132_2[2]);
+        } else {
+          const body3 = closure_131_2.body;
+          let code1;
+          if (body3 != null) {
+            code1 = body3.code;
+          }
+          let tmp19 = code1 === closure_132_4.INVALID_FORM_BODY;
+          if (tmp19) {
+            const body2 = closure_131_2.body;
+            let emoji;
+            if (body2 != null) {
+              emoji = body2.errors.emoji;
+            }
+            tmp19 = emoji;
+          }
+          if (tmp19) {
+            const obj8 = { title: null, body: null };
+            const intl = closure_132_0(closure_132_2[3]).intl;
+            obj8.title = intl.string(closure_132_0(closure_132_2[3]).t.T8sBLJ);
+            const intl2 = closure_132_0(closure_132_2[3]).intl;
+            obj8.body = intl2.string(closure_132_0(closure_132_2[3]).t.aHt1Bd);
+            closure_132_1(closure_132_2[2]).show(obj8);
+            const obj3 = closure_132_1(closure_132_2[2]);
+          }
+        }
+        c8 = 3;
+      } else if (arg0 === 1) {
+        c8 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c6 = 0;
+        c8 = 3;
+        const obj9 = { value, done: true };
+        return obj9;
+      } else {
+        c6 = 0;
+        c8 = 3;
+        const obj = { value, done: true };
+        return obj;
+      }
+    } catch (tmp42) {
+      closure_5 = tmp42;
+      if (tmp4 === c6) {
+        c8 = tmp2;
+        throw tmp42;
+      } else {
+        c7 = tmp;
+      }
+    }
+  }
+};
+const Constants = fn(1074);
+({ AbortCodes: closure_4, Endpoints: hasOwnProperty } = Constants);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/forums/ForumActionCreators.tsx");
+
+export default {
+  resort(id) {
+    DispatcherDefault.dispatch({ type: "RESORT_THREADS", channelId: id });
+  },
+  createForumTag(name, channelId) {
+    const HTTP = HTTPUtils.HTTP;
+    const request = { url: hasOwnProperty.FORUM_TAGS(channelId), body: null, rejectWithError: null };
+    const obj = { name: name.name, emoji_id: name.emojiId, emoji_name: null, moderated: null };
+    let emojiName;
+    if (null == name.emojiId) {
+      emojiName = name.emojiName;
+    }
+    obj.emoji_name = emojiName;
+    obj.moderated = name.moderated;
+    request.body = obj;
+    request.rejectWithError = HTTPUtils.rejectWithMigratedError();
+    return HTTP.post(request);
+  },
+  updateForumTag(id, channelId) {
+    const HTTP = HTTPUtils.HTTP;
+    const request = { url: hasOwnProperty.FORUM_TAG(channelId, id.id), body: null, rejectWithError: null };
+    const obj = { name: id.name, emoji_id: id.emojiId, emoji_name: null, moderated: null };
+    let emojiName;
+    if (null == id.emojiId) {
+      emojiName = id.emojiName;
+    }
+    obj.emoji_name = emojiName;
+    obj.moderated = id.moderated;
+    request.body = obj;
+    request.rejectWithError = HTTPUtils.rejectWithMigratedError();
+    closure_0 = HTTP.put(request);
+    const intl = tmp(1114).intl;
+    const tmpResult = HTTPUtils;
+    const intl2 = tmp(1114).intl;
+    withErrorHandling(() => closure_0, intl.string(util.t.T8sBLJ), intl2.string(util.t.imcb5u));
+  },
+  deleteForumTag(channelId, id) {
+    const HTTP = HTTPUtils.HTTP;
+    const obj = { url: hasOwnProperty.FORUM_TAG(channelId, id), rejectWithError: HTTPUtils.rejectWithMigratedError() };
+    closure_0 = HTTP.del(obj);
+    const intl = util.intl;
+    const intl2 = util.intl;
+    withErrorHandling(() => closure_0, intl.string(util.t["0ZkNDU"]), intl2.string(util.t.imcb5u));
+  },
+  updateForumPostTags(id, arg1) {
+    closure_0 = id;
+    closure_1 = arg1;
+    return (async () => {
+      await v1(7765).unarchiveThreadIfNecessary(tmp4);
+      const HTTP = tmp4(1272).HTTP;
+      const request = { url: closure_1_5.CHANNEL(closure_128_0), body: { applied_tags: closure_128_1 }, rejectWithError: tmp4(1272).rejectWithMigratedError() };
+      return HTTP.patch(request);
+    })();
+  },
+  hideAdminOnboarding(channelId, hide) {
+    DispatcherDefault.dispatch({ type: "ADMIN_ONBOARDING_GUIDE_HIDE", channelId, hide });
+  },
+  markPostAsSeen(arg0, feedItemId, timestampMillis) {
+    const obj = AnalyticsFeedItemSeenActionCreators;
+    const result = obj.markAnalyticsFeedItemSeen(ForumChannelSeenManager.getForumPostSeenManagerId(arg0), feedItemId, timestampMillis);
+  },
+  markPostAsUnseen(arg0, feedItemId, timestampMillis) {
+    const obj = AnalyticsFeedItemSeenActionCreators;
+    const result = obj.markAnalyticsFeedItemUnseen(ForumChannelSeenManager.getForumPostSeenManagerId(arg0), feedItemId, timestampMillis);
+  },
+  flushSeenItems(arg0, IMMEDIATE_WITH_COOLDOWN) {
+    if (IMMEDIATE_WITH_COOLDOWN === undefined) {
+      IMMEDIATE_WITH_COOLDOWN = AnalyticsFeedItemSeenManager.ForceFlushType.IMMEDIATE_WITH_COOLDOWN;
+    }
+    const obj = AnalyticsFeedItemSeenActionCreators;
+    const result = obj.flushAnalyticsFeedItems(ForumChannelSeenManager.getForumPostSeenManagerId(arg0), IMMEDIATE_WITH_COOLDOWN);
+  },
+  searchForumPosts(guild_id, id, arg2, c1, c2) {
+    closure_1 = id;
+    closure_2 = arg2;
+    asyncGeneratorStep = c1;
+    closure_4 = c2;
+    return (async () => {
+      const channelId = tmp3;
+      channelId(573).dispatch({ type: "FORUM_SEARCH_START", channelId });
+      await channelId(7765).searchThreads(closure_0, channelId, closure_2, closure_3, closure_4);
+      if (1 === tmp7) {
+        dependencyMap = 0;
+        channelId(573).dispatch({ type: "FORUM_SEARCH_FAILURE", channelId: closure_129_1 });
+        c4 = 3;
+        channelId(573);
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw arg1;
+      } else if (arg0 !== 2) {
+        closure_128_0 = arg1;
+        guild_id(7767).trackForumSearched({ guildId: closure_129_0, channelId: closure_129_1, numSearchResults: closure_128_0.length });
+        guild_id(7767);
+        channelId(573).dispatch({ type: "FORUM_SEARCH_SUCCESS", channelId: closure_129_1, threadIds: closure_128_0 });
+        dependencyMap = 0;
+        channelId(573);
+      }
+      return arg1;
+    })();
+  },
+  updateForumSearchQuery(id, query) {
+    DispatcherDefault.dispatch({ type: "FORUM_SEARCH_QUERY_UPDATED", channelId: id, query });
+  },
+  clearForumSearch(id) {
+    DispatcherDefault.dispatch({ type: "FORUM_SEARCH_CLEAR", channelId: id });
+  }
+};

@@ -1,0 +1,143 @@
+// Module ID: 16822
+// Function ID: 16823
+// Name: ChannelSettingsInstantInvites
+// Dependencies: [32, 19, 17, 8632, 1957, 1074, 21, 4560, 576, 1611, 504, 8631, 10937, 1178, 10954, 10955, 1114, 7039, 16823, 7055, 2]
+// Exports: default
+
+// Module 16822 (ChannelSettingsInstantInvites)
+import nativeDefault from "native" /* 576 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
+import InstantInvite from "InstantInvite" /* 10937 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import ChannelSettingsStore from "ChannelSettingsStore" /* 8632 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+
+const require = globalThis.__r;
+const InstantInviteDefault = InstantInvite;
+
+const FastestListDefault = tmp2(7055);
+const _modDef10954 = tmp2(10954);
+const _modDef10955 = tmp2(10955);
+const InstantInviteSelfMeasurerDefault = tmp2(16823);
+require = fn;
+const View = fn(17).View;
+const ChannelSettingsSections = fn(1074).ChannelSettingsSections;
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10 } = jsxProd);
+const createStyles = fn(4560);
+let obj2 = { content: { paddingHorizontal: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 }, gap: null };
+let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 };
+obj2.gap = { height: nativeDefault.space.PX_16 };
+let closure_11 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("components_native/channel_settings/ChannelSettingsInstantInvites.tsx");
+
+export default function ConnectedChannelSettingsInstantInvites() {
+  let tmp = closure_11();
+  _require = tmp;
+  let tmp2 = importDefault;
+  let obj = dependencyMap;
+  [tmp4, importDefault] = invites(memo.useState(undefined), 2);
+  let items = [tmp];
+  let tmpResult = _require;
+  const callback = memo.useCallback((arg0) => {
+    importDefault(arg0 + gap.gap.height);
+  }, items);
+  const tmp3 = invites(memo.useState(undefined), 2);
+  const items1 = [memo1];
+  dependencyMap = require("initialize").useStateFromStores(items1, () => memo1.getChannel());
+  let obj2 = require("initialize");
+  const items2 = [memo1];
+  const stateFromStoresObject = require("initialize").useStateFromStoresObject(items2, () => memo1.getInvites());
+  invites = stateFromStoresObject.invites;
+  const loading = stateFromStoresObject.loading;
+  const items3 = [invites];
+  memo = memo.useMemo(() => {
+    const values = Object.values(invites);
+    return values.sort((inviter, inviter2) => {
+      inviter = inviter.inviter;
+      let str;
+      if (inviter != null) {
+        str = inviter.username;
+      }
+      if (str == null) {
+        str = "";
+      }
+      const formatted = str.toLowerCase();
+      inviter2 = inviter2.inviter;
+      let str2;
+      if (inviter2 != null) {
+        str2 = inviter2.username;
+      }
+      if (str2 == null) {
+        str2 = "";
+      }
+      return formatted.localeCompare(str2.toLowerCase());
+    });
+  }, items3);
+  const obj3 = require("initialize");
+  const items4 = [ChannelStore];
+  const stateFromStoresArray = require("initialize").useStateFromStoresArray(items4, () => {
+    if (null != id) {
+      const sortedLinkedChannelsForGuild = ChannelStore.getSortedLinkedChannelsForGuild(tmp.guild_id);
+      let found = sortedLinkedChannelsForGuild.filter((id) => id.id === id.id);
+    } else {
+      found = [];
+    }
+    return found;
+  });
+  const items5 = [memo, stateFromStoresArray];
+  memo1 = memo.useMemo(() => {
+    const items = [...memo.map((data) => ({ type: "invite", data })), ...stateFromStoresArray.map((data) => ({ type: "channel", data }))];
+    return items;
+  }, items5);
+  const items6 = [memo1.length];
+  const effect = memo.useEffect(() => {
+    require("ChannelSettingsActionCreators").setSection(constants.INSTANT_INVITES);
+  }, []);
+  const items7 = [memo1];
+  const callback1 = memo.useCallback((arg0, arg1) => {
+    if ("invite" === memo1[arg1].type) {
+      const obj2 = { invite: tmp.data };
+      let tmp5 = React7(InstantInviteDefault, obj2);
+    } else {
+      const obj = { channel: tmp.data };
+      tmp5 = React7(InstantInvite.LinkedChannelInvite, obj);
+    }
+    return tmp5;
+  }, items7);
+  if (!loading) {
+    if (0 === memo1.length) {
+      const obj5 = { lightSource: _modDef10954, darkSource: _modDef10955, title: null, body: null };
+      const intl = tmpResult(1114).intl;
+      obj5.title = intl.string(tmpResult(1114).t["+nLJkZ"]);
+      const intl2 = tmpResult(1114).intl;
+      obj5.body = intl2.string(tmpResult(1114).t.F53CAc);
+      return closure_9(tmpResult(1178).EmptyState, obj5);
+    }
+  }
+  if (!loading) {
+    if (null != tmp4) {
+      const obj6 = { style: tmp.content, children: null };
+      const obj7 = { sections: items6, estimatedListSize: "windowSize", itemSize: tmp4, renderItem: callback1, insetStart: tmp.gap.height, insetEnd: useSafeAreaInsetsDefault().bottom };
+      obj6.children = closure_9(FastestListDefault, obj7);
+      let tmp16Result = closure_9(stateFromStoresArray, obj6);
+    }
+  }
+  const obj8 = { style: tmp.content, children: null };
+  tmp = closure_9;
+  const items8 = [closure_9(tmpResult(7039).SceneLoadingIndicator, {}), ];
+  tmpResult = null;
+  if (memo1.length > 0) {
+    tmp2 = InstantInviteSelfMeasurerDefault;
+    obj = { item: null, onMeasured: null };
+    memo1 = memo1[0];
+    obj.item = memo1;
+    obj.onMeasured = callback;
+    tmpResult = tmp(tmp2, obj);
+  }
+  items8[1] = tmpResult;
+  obj8.children = items8;
+  tmp16Result = closure_10(stateFromStoresArray, obj8);
+};

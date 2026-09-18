@@ -1,0 +1,207 @@
+// Module ID: 9577
+// Function ID: 9578
+// Name: getPrimaryAppCommand
+// Dependencies: [5, 19, 1957, 9296, 1894, 9304, 9300, 9251, 2]
+// Exports: default, isPrimaryAppCommandUsableInAppDM, useGetPrimaryAppCommand, useIsPrimaryAppCommandUsableInAppDM, useQueryForPrimaryAppCommand
+
+// Module 9577 (getPrimaryAppCommand)
+import Server from "Server" /* 1894 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9251 */;
+import ApplicationCommandIndexActionCreators from "ApplicationCommandIndexActionCreators" /* 9300 */;
+import ApplicationCommandQueryTypes from "ApplicationCommandQueryTypes" /* 9304 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "module_19" /* 19 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import ApplicationCommandIndexStore_mod from "ApplicationCommandIndexStore" /* 9296 */;
+
+const require = globalThis.__r;
+
+require = fn;
+let closure_10 = async function _getPrimaryAppCommand(arg0, value) {
+  if (c5 === 2) {
+    c5 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c5 = 2;
+      if (0 === c4) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_3 = tmp5;
+          closure_2 = tmp2;
+          closure_130_0 = closure_1;
+          closure_130_1 = undefined;
+          closure_130_2 = undefined;
+          channel = channel.getChannel(closure_0);
+          closure_130_1 = channel;
+          closure_130_2 = undefined;
+          let tmp13 = null != channel;
+          if (tmp13) {
+            const obj4 = { channel, type: "channel" };
+            const tmp12 = queryForPrimaryAppCommand(obj4, tmp32);
+            closure_130_2 = tmp12;
+            tmp13 = null == tmp12;
+          }
+          if (tmp13) {
+            const obj5 = { type: "application", applicationId: tmp32 };
+            c4 = 1;
+            c5 = 1;
+            const obj6 = { value: hasOwnProperty(obj5), done: false };
+            return obj6;
+          }
+        }
+      } else if (arg0 === 1) {
+        c5 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c5 = 3;
+        const obj7 = { value, done: true };
+        return obj7;
+      } else {
+        const obj = { channel: closure_130_1, type: "channel" };
+        closure_130_2 = closure_131_11(obj, closure_130_0);
+      }
+      if (null != closure_130_2) {
+        c5 = 3;
+        const obj8 = { value: closure_130_2, done: true };
+        return obj8;
+      } else {
+        const _Error = Error;
+        const error = new Error(closure_131_8);
+        throw error;
+      }
+    } catch (tmp26) {
+      c5 = tmp;
+      throw tmp26;
+    }
+  }
+};
+function queryForPrimaryAppCommand(withAffinitySuggestions, id) {
+  const obj = { commandTypes: null };
+  items = [Server.ApplicationCommandType.PRIMARY_ENTRY_POINT];
+  obj.commandTypes = items;
+  return ApplicationCommandIndexStore.query(withAffinitySuggestions, obj, { placeholderCount: 1, scoreMethod: ApplicationCommandQueryTypes.ScoreMethod.COMMAND_ONLY, applicationId: id, allowFetch: false, allowApplicationState: true }).commands[0];
+}
+let ApplicationCommandIndexStore = fn(9296);
+({ getOrFetchApplicationCommandIndexForTarget: hasOwnProperty, useQueryState: metroRequire } = ApplicationCommandIndexStore);
+let ApplicationCommandIndexStore = ApplicationCommandIndexStore_mod;
+let c8 = "no primary app command for application";
+let items = [fn(1894).ApplicationCommandType.PRIMARY_ENTRY_POINT];
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/application_commands/getPrimaryAppCommand.tsx");
+
+export default function getPrimaryAppCommand() {
+  const self = this;
+  const apply = closure_10.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+};
+export const NO_PRIMARY_APP_COMMAND_ERROR = "no primary app command for application";
+export { queryForPrimaryAppCommand };
+export const useGetPrimaryAppCommand = function useGetPrimaryAppCommand(context, id) {
+  _require = id;
+  const tmp = closure_6(context, { commandTypes: items }, { placeholderCount: 1, scoreMethod: require("ApplicationCommandQueryTypes").ScoreMethod.COMMAND_ONLY, applicationId: id, allowFetch: false, allowApplicationState: true });
+  loading = tmp.loading;
+  const first = tmp.commands[0];
+  closure_2 = tmp3;
+  items = [id, null != first, loading];
+  const effect = noop.useEffect(() => {
+    let tmp = closure_2;
+    if (!closure_2) {
+      tmp = loading;
+    }
+    if (!tmp) {
+      const obj2 = { type: "application", applicationId };
+      const applicationCommandIndex = ApplicationCommandIndexActionCreators.requestApplicationCommandIndex(obj2);
+    }
+  }, items);
+  return first;
+};
+export const useQueryForPrimaryAppCommand = function useQueryForPrimaryAppCommand(arg0, applicationId) {
+  return timestampProducer(arg0, { commandTypes: items }, { placeholderCount: 1, scoreMethod: ApplicationCommandQueryTypes.ScoreMethod.COMMAND_ONLY, applicationId, allowFetch: false, allowApplicationState: true });
+};
+export const useIsPrimaryAppCommandUsableInAppDM = function useIsPrimaryAppCommandUsableInAppDM(applicationId) {
+  applicationId = applicationId.applicationId;
+  let loading;
+  ({ context, botUserId } = applicationId);
+  const tmp3 = closure_6(context, { commandTypes: items }, { placeholderCount: 1, scoreMethod: applicationId(loading[5]).ScoreMethod.COMMAND_ONLY, applicationId, allowFetch: false, allowApplicationState: true });
+  loading = tmp3.loading;
+  const first = tmp3.commands[0];
+  closure_2 = tmp5;
+  items = [applicationId, null != first, loading];
+  const effect = noop.useEffect(() => {
+    let tmp = closure_2;
+    if (!closure_2) {
+      tmp = loading;
+    }
+    if (!tmp) {
+      const obj2 = { type: "application", applicationId };
+      const applicationCommandIndex = ApplicationCommandIndexActionCreators.requestApplicationCommandIndex(obj2);
+    }
+  }, items);
+  let tmp7 = null != first;
+  if (tmp7) {
+    let tmp8 = null != botUserId;
+    if (tmp8) {
+      let flag = false;
+      if (null != first) {
+        let hasItem = null != first.integration_types;
+        if (hasItem) {
+          const integration_types = first.integration_types;
+          hasItem = integration_types.includes(tmp(tmp2[7]).ApplicationIntegrationType.USER_INSTALL);
+        }
+        let hasItem1 = null != first.contexts;
+        if (hasItem1) {
+          const contexts = first.contexts;
+          hasItem1 = contexts.includes(tmp(tmp2[4]).InteractionContextType.BOT_DM);
+        }
+        if (hasItem) {
+          hasItem = hasItem1;
+        }
+        flag = hasItem;
+      }
+      tmp8 = flag;
+    }
+    tmp7 = tmp8;
+  }
+  return tmp7;
+};
+export const isPrimaryAppCommandUsableInAppDM = function isPrimaryAppCommandUsableInAppDM(integration_types) {
+  if (null == integration_types) {
+    return false;
+  } else {
+    let hasItem = null != integration_types.integration_types;
+    if (hasItem) {
+      integration_types = integration_types.integration_types;
+      hasItem = integration_types.includes(ApplicationIntegrationType.ApplicationIntegrationType.USER_INSTALL);
+    }
+    let hasItem1 = null != integration_types.contexts;
+    if (hasItem1) {
+      const contexts = integration_types.contexts;
+      hasItem1 = contexts.includes(Server.InteractionContextType.BOT_DM);
+    }
+    if (hasItem) {
+      hasItem = hasItem1;
+    }
+    return hasItem;
+  }
+};

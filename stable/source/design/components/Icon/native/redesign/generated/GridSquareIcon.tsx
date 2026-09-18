@@ -1,0 +1,26 @@
+// Module ID: 16820
+// Function ID: 16821
+// Name: GridSquareIcon
+// Dependencies: [19, 21, 576, 4261, 15781, 2]
+// Exports: GridSquareIcon
+
+// Module 16820 (GridSquareIcon)
+import nativeDefault from "native" /* 576 */;
+import BaseIconImage from "BaseIconImage" /* 4261 */;
+import _mod15781 from "module_15781" /* 15781 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Icon/native/redesign/generated/GridSquareIcon.tsx");
+
+export const GridSquareIcon = function GridSquareIcon(color) {
+  let INTERACTIVE_ICON_DEFAULT = color.color;
+  if (INTERACTIVE_ICON_DEFAULT === undefined) {
+    INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
+  }
+  const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
+  const merged1 = Object.assign(merged);
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15781, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+};

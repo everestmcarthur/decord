@@ -1,0 +1,45 @@
+// Module ID: 17067
+// Function ID: 17068
+// Name: useSoundOrganizer
+// Dependencies: [11, 2]
+// Exports: useSoundOrganizer
+
+// Module 17067 (useSoundOrganizer)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
+import size from "module_2" /* 2 */;
+
+function sortSoundsOldestToNewestCreationDate(value7) {
+  let flag = arg1;
+  if (arg1 === undefined) {
+    flag = true;
+  }
+  const items = [...value7];
+  const sorted = items.sort((soundId, soundId2) => SnowflakeUtilsDefault.compare(soundId.soundId, soundId2.soundId));
+  let sorted1 = sorted;
+  if (flag) {
+    const items1 = [];
+    HermesBuiltin.arraySpread(sorted, 0);
+    sorted1 = items1.sort((available, available2) => {
+      if (!available.available) {
+        let num2 = 0;
+        if (!available.available) {
+          num2 = 0;
+          if (available2.available) {
+            num2 = 1;
+          }
+        }
+        let num = num2;
+      } else {
+        num = -1;
+      }
+      return num;
+    });
+  }
+  return sorted1;
+}
+const result = size.fileFinishedImporting("modules/soundboard/useSoundOrganizer.tsx");
+
+export { sortSoundsOldestToNewestCreationDate };
+export function useSoundOrganizer() {
+  return sortSoundsOldestToNewestCreationDate;
+}

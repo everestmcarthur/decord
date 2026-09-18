@@ -1,0 +1,27 @@
+// Module ID: 17744
+// Function ID: 17745
+// Name: EditStateContextProvider
+// Dependencies: [19, 21, 2]
+// Exports: EditStateContextProvider, useEditStateContext
+
+// Module 17744 (EditStateContextProvider)
+import noop from "module_19" /* 19 */;
+
+const jsx = fn(21).jsx;
+const redux = noop.createContext(undefined);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/edit_state/EditStateContextProvider.tsx");
+
+export const useEditStateContext = function useEditStateContext() {
+  const context = noop.useContext(closure_2);
+  if (null == context) {
+    const _Error = Error;
+    const error = new Error("No edit state; are you missing an <EditStateContextProvider />?");
+    throw error;
+  } else {
+    return context;
+  }
+};
+export const EditStateContextProvider = function EditStateContextProvider(children) {
+  return <redux.Provider value={Object.assign(arg0, Object.assign({ children: 0 }))}>{arg0.children}</redux.Provider>;
+};

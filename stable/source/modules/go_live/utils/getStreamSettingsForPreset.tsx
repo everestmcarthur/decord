@@ -1,0 +1,95 @@
+// Module ID: 9959
+// Function ID: 9960
+// Name: getStreamSettingsForPreset
+// Dependencies: [4607, 9960, 9961, 1115, 4698, 2]
+// Exports: canStreamWithPreset, getMaxSettingsForPreset
+
+// Module 9959 (getStreamSettingsForPreset)
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import GoLiveVideoPresetResolutionExperimentDefault from "GoLiveVideoPresetResolutionExperiment" /* 9960 */;
+import canStreamWithSettingsDefault from "canStreamWithSettings" /* 9961 */;
+import StreamSettingsConstants from "StreamSettingsConstants" /* 4607 */;
+import size from "module_2" /* 2 */;
+
+function getApplicationStreamPresetValues() {
+  const obj2 = { [closure_1_4.PRESET_DOCUMENTS]: items };
+  items = [{ resolution: hasOwnProperty.RESOLUTION_SOURCE, fps: React3.FPS_15 }, { resolution: hasOwnProperty.RESOLUTION_SOURCE, fps: React3.FPS_5 }];
+  const obj3 = { resolution: hasOwnProperty.RESOLUTION_SOURCE, fps: React3.FPS_15 };
+  const items1 = [{ resolution: GoLiveVideoPresetResolutionExperimentDefault.getConfig({ location: "getApplicationStreamPresetValues" }).videoPresetResolutionMax, fps: React3.FPS_60 }, { resolution: hasOwnProperty.RESOLUTION_1080, fps: React3.FPS_60 }, { resolution: hasOwnProperty.RESOLUTION_720, fps: React3.FPS_60 }, { resolution: hasOwnProperty.RESOLUTION_720, fps: React3.FPS_30 }];
+  obj2[constants.PRESET_VIDEO] = items1;
+  obj2[constants.PRESET_AUTO] = [];
+  obj2[constants.PRESET_CUSTOM] = [];
+  const items2 = [{ resolution: hasOwnProperty.RESOLUTION_720, fps: React3.FPS_30 }];
+  obj2[constants.PRESET_MOBILE_DEFAULT] = items2;
+  const items3 = [{ resolution: hasOwnProperty.RESOLUTION_480, fps: React3.FPS_30 }];
+  obj2[constants.PRESET_MOBILE_PERFORMANCE] = items3;
+  const items4 = [{ resolution: hasOwnProperty.RESOLUTION_1080, fps: React3.FPS_60 }];
+  obj2[constants.PRESET_MOBILE_HIGH_QUALITY] = items4;
+  return obj2;
+}
+function getStreamSettingsForPreset(arg0, user, guildPremiumTier, arg3) {
+  const tmp = getApplicationStreamPresetValues()[arg0];
+  if (null == tmp) {
+    return null;
+  } else {
+    for (const item10011 of tmp) {
+      let tmp3 = item10011;
+      let tmp4 = importDefault;
+      if (canStreamWithSettingsDefault(arg0, item10011.resolution, item10011.fps, arg1, arg2)) {
+        if (arg0 === constants.PRESET_VIDEO) {
+          let tmp26 = require;
+          if (PlatformUtils.isPlatformEmbedded) {
+            let tmp26Result = tmp26(1115);
+            if (tmp26Result.isDesktop()) {
+              let str = "getStreamSettingsForPreset";
+              let tmp11 = tmp4(4698)("getStreamSettingsForPreset", arg1, arg3);
+              let tmp12 = tmp11;
+              let maxResolution;
+              if (tmp11 != null) {
+                maxResolution = tmp11.maxResolution;
+              }
+              if (null != maxResolution) {
+                if (null != tmp12.maxFPS) {
+                  if (tmp3.resolution !== hasOwnProperty.RESOLUTION_SOURCE) {
+                    if (tmp3.resolution < tmp12.maxResolution) {
+                      if (tmp3.fps <= tmp12.maxFPS) {
+                        let items = [, ];
+                        ({ maxResolution: arr2[0], maxFPS: arr2[1] } = tmp12);
+                        obj2.return();
+                        return items;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        let items1 = [, ];
+        ({ resolution: arr[0], fps: arr[1] } = tmp3);
+        obj2.return();
+        return items1;
+      }
+    }
+    return null;
+  }
+}
+({ ApplicationStreamFPS: c3, ApplicationStreamPresets: closure_4, ApplicationStreamResolutions: hasOwnProperty } = StreamSettingsConstants);
+const result = size.fileFinishedImporting("modules/go_live/utils/getStreamSettingsForPreset.tsx");
+
+export default getStreamSettingsForPreset;
+export { getApplicationStreamPresetValues };
+export const getMaxSettingsForPreset = function getMaxSettingsForPreset(PRESET_MOBILE_DEFAULT) {
+  const tmp = getApplicationStreamPresetValues()[PRESET_MOBILE_DEFAULT];
+  let first;
+  if (tmp != null) {
+    first = tmp[0];
+  }
+  if (first == null) {
+    first = null;
+  }
+  return first;
+};
+export const canStreamWithPreset = function canStreamWithPreset(arg0, user, guildPremiumTier, arg3) {
+  return null != getStreamSettingsForPreset(arg0, user, guildPremiumTier, arg3);
+};

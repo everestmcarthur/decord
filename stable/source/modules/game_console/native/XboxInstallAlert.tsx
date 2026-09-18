@@ -1,0 +1,56 @@
+// Module ID: 9468
+// Function ID: 9469
+// Name: XboxInstallAlert
+// Dependencies: [19, 9239, 21, 4560, 576, 4994, 1114, 1178, 9450, 1115, 4255, 2]
+// Exports: default
+
+// Module 9468 (XboxInstallAlert)
+import nativeDefault from "native" /* 576 */;
+import native from "native" /* 1178 */;
+import LinkingDefault from "Linking" /* 4255 */;
+import common_AlertDefault from "common/Alert" /* 4994 */;
+import _modDef9450 from "module_9450" /* 9450 */;
+import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
+
+require = fn;
+const GameConsoleConstants = fn(9239);
+({ XBOX_ANDROID_APP_LINK: c3, XBOX_IOS_APP_LINK: closure_4 } = GameConsoleConstants);
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+const obj2 = { externalLinkIcon: null };
+let size = { tintColor: nativeDefault.colors.WHITE, width: 20, height: 20, marginLeft: 8 };
+obj2.externalLinkIcon = size;
+let closure_6 = createStyles.createStyles(obj2);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/game_console/native/XboxInstallAlert.tsx");
+
+export default function XboxInstallAlert(arg0) {
+  _require = closure_6();
+  let obj = {};
+  const merged = Object.assign(arg0);
+  const intl = require("util").intl;
+  obj.title = intl.string(require("util").t["12Kx2v"]);
+  const intl2 = require("util").intl;
+  obj.body = intl2.string(require("util").t.msZW3j);
+  const intl3 = require("util").intl;
+  obj.confirmText = intl3.string(require("util").t["n+VrqG"]);
+  const intl4 = require("util").intl;
+  obj.cancelText = intl4.string(require("util").t.kYaBOg);
+  obj.fillCancelText = true;
+  obj.renderConfirmRightIcon = function renderConfirmRightIcon() {
+    return jsx(native.Icon, { source: _modDef9450, style: closure_0.externalLinkIcon });
+  };
+  obj.onConfirm = function onConfirm() {
+    const obj = closure_0(1115);
+    const isAndroidResult = closure_0(1115).isAndroid();
+    const openURL = LinkingDefault.openURL;
+    if (isAndroidResult) {
+      openURL(closure_1_3);
+    } else {
+      openURL(closure_1_4);
+    }
+  };
+  return jsx(common_AlertDefault, {});
+};

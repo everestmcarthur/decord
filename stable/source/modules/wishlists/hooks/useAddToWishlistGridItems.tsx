@@ -1,0 +1,55 @@
+// Module ID: 13096
+// Function ID: 13097
+// Name: useAddToWishlistGridItems
+// Dependencies: [19, 1373, 10797, 13072, 2]
+// Exports: useAddToWishlistGridItems
+
+// Module 13096 (useAddToWishlistGridItems)
+import WishlistUtils from "WishlistUtils" /* 13072 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+const PremiumSubscriptionSKUs = fn(1373).PremiumSubscriptionSKUs;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/wishlists/hooks/useAddToWishlistGridItems.tsx");
+
+export const useAddToWishlistGridItems = function useAddToWishlistGridItems(userId) {
+  const wishlist = userId.wishlist;
+  ({ numWishlistItemsToRecommend, maxWishlistItemsToShow } = userId);
+  if (maxWishlistItemsToShow === undefined) {
+    maxWishlistItemsToShow = numWishlistItemsToRecommend;
+  }
+  closure_4 = undefined;
+  const recommendationsForSingleUser = wishlist(maxWishlistItemsToShow[2]).useRecommendationsForSingleUser({ userId: userId.userId, numItems: numWishlistItemsToRecommend, source: userId.source });
+  const recommendations = recommendationsForSingleUser.recommendations;
+  const status = recommendationsForSingleUser.status;
+  let items = [wishlist];
+  const memo = recommendations.useMemo(() => {
+    let mapped;
+    if (wishlist != null) {
+      const items = wishlist.items;
+      mapped = items.map((skuId) => skuId.skuId);
+    }
+    if (mapped == null) {
+      mapped = [];
+    }
+    return new Set(mapped);
+  }, items);
+  let tmp2 = "success" === status;
+  if (tmp2) {
+    tmp2 = !memo.has(memo.TIER_2);
+  }
+  closure_4 = tmp2;
+  const obj3 = { items: null, status };
+  const items1 = [recommendations, memo, tmp2, maxWishlistItemsToShow];
+  obj3.items = recommendations.useMemo(() => {
+    const found = recommendations.filter((id) => !set.has(id.id));
+    const mapped = found.map((sku) => ({ sku, itemSource: "recommendation" }));
+    if (closure_4) {
+      const obj = { sku: WishlistUtils.createNitroSuggestedSku(), itemSource: "takeover" };
+      mapped.unshift(obj);
+    }
+    return mapped.slice(0, maxWishlistItemsToShow);
+  }, items1);
+  return obj3;
+};

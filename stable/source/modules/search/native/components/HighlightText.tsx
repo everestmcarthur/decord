@@ -1,0 +1,28 @@
+// Module ID: 10131
+// Function ID: 10132
+// Name: HighlightText
+// Dependencies: [19, 1074, 21, 4560, 4409, 576, 1178, 2]
+// Exports: default
+
+// Module 10131 (HighlightText)
+import nativeDefault from "native" /* 576 */;
+import native from "native" /* 1178 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+const obj2 = { text: null };
+const obj3 = { fontFamily: fn(1074).Fonts.PRIMARY_BOLD, backgroundColor: null, color: null };
+const ColorUtils = fn(4409);
+obj3.backgroundColor = ColorUtils.hexOpacityToRgba(nativeDefault.unsafe_rawColors.YELLOW_300, 0.3);
+obj3.color = nativeDefault.colors.TEXT_STRONG;
+obj2.text = obj3;
+let closure_3 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/search/native/components/HighlightText.tsx");
+
+export default function HighlightText(children) {
+  const tmp = closure_3();
+  return jsx(native.LegacyText, { style: closure_3().text, children: children.children });
+};

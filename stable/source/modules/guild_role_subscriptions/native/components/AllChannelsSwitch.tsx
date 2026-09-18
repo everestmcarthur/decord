@@ -1,0 +1,104 @@
+// Module ID: 17764
+// Function ID: 17765
+// Name: AllChannelsSwitch
+// Dependencies: [19, 17, 15231, 1074, 21, 4560, 576, 5524, 4277, 9056, 1178, 17765, 1114, 17766, 2]
+// Exports: default
+
+// Module 17764 (AllChannelsSwitch)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4277 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 9056 */;
+import _modDef17765 from "module_17765" /* 17765 */;
+import _modDef17766 from "module_17766" /* 17766 */;
+import noop from "module_19" /* 19 */;
+import TextStyles_mod from "TextStyles" /* 5524 */;
+
+const require = globalThis.__r;
+
+require = fn;
+function Row(arg0) {
+  ({ selected, disabled } = arg0);
+  ({ icon, label, onPress } = arg0);
+  if (disabled === undefined) {
+    disabled = false;
+  }
+  const tmp = closure_7();
+  const radioA11yNative = useA11yRolesNative.useRadioA11yNative({ selected, disabled });
+  ({ accessibilityRole, accessibilityState } = radioA11yNative);
+  const obj2 = { style: tmp.row, accessibilityRole, accessibilityState, disabled: null, onPress: null, children: null };
+  let tmp7 = selected;
+  const tmp5 = timestampProducer;
+  if (!selected) {
+    tmp7 = disabled;
+  }
+  obj2.disabled = tmp7;
+  obj2.onPress = onPress;
+  const tmp6 = TouchableHitBoxDefault;
+  const items = [hasOwnProperty(native.Icon, { size: native.Icon.Sizes.MEDIUM, source: icon }), , ];
+  const items1 = [tmp.rowLabel, ];
+  let rowLabelSelected = selected;
+  if (selected) {
+    rowLabelSelected = tmp.rowLabelSelected;
+  }
+  items1[1] = rowLabelSelected;
+  items[1] = hasOwnProperty(native.LegacyText, { style: items1, numberOfLines: 1, ellipsizeMode: "tail", children: label });
+  items[2] = hasOwnProperty(native.RadioIndicator, { style: tmp.rowIndicator, active: selected });
+  obj2.children = items;
+  return tmp5(tmp6, obj2);
+}
+const View = fn(17).View;
+const AllChannelAccessOptions = fn(15231).AllChannelAccessOptions;
+const Fonts = fn(1074).Fonts;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4560);
+let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm }, row: { alignSelf: "stretch", alignItems: "center", flexDirection: "row", justifyContent: "flex-start", padding: 16 }, rowLabel: null, rowLabelSelected: null, rowIndicator: null, separator: null };
+let obj4 = {};
+let TextStyles = TextStyles_mod;
+const merged = Object.assign(TextStyles(Fonts.PRIMARY_MEDIUM, nativeDefault.colors.TEXT_SUBTLE, 16));
+obj4.flexShrink = 1;
+obj4.marginHorizontal = 16;
+obj2.rowLabel = obj4;
+let TextStyles = TextStyles_mod;
+const merged1 = Object.assign(TextStyles(Fonts.PRIMARY_SEMIBOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 16));
+obj2.rowLabelSelected = {};
+obj2.rowIndicator = { marginStart: "auto" };
+const obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm };
+const obj5 = {};
+obj2.separator = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, height: 1, marginStart: 56 };
+let closure_7 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/AllChannelsSwitch.tsx");
+
+export default function AllChannelsSwitch(style) {
+  ({ channelAccessFormat, setChannelAccessFormat: require, disabled } = style);
+  if (disabled === undefined) {
+    disabled = false;
+  }
+  const tmp = closure_7();
+  const obj = { style: null, accessibilityRole: "radiogroup", accessibilityState: { disabled }, children: null };
+  const items = [tmp.container, style.style];
+  obj.style = items;
+  const obj2 = { icon: _modDef17765, label: null, selected: null, onPress: null, disabled: null };
+  const intl = util.intl;
+  obj2.label = intl.string(util.t["vs2T+B"]);
+  obj2.selected = channelAccessFormat === AllChannelAccessOptions.SOME_CHANNELS_ACCESS;
+  obj2.onPress = function onPress() {
+    return require(AllChannelAccessOptions.SOME_CHANNELS_ACCESS);
+  };
+  obj2.disabled = disabled;
+  const items1 = [closure_5(Row, obj2), closure_5(View, { style: tmp.separator }), ];
+  const obj4 = { icon: _modDef17766, label: null, selected: null, onPress: null, disabled: null };
+  const intl2 = util.intl;
+  obj4.label = intl2.string(util.t.l4Tr7X);
+  obj4.selected = channelAccessFormat === AllChannelAccessOptions.ALL_CHANNELS_ACCESS;
+  obj4.onPress = function onPress() {
+    return require(AllChannelAccessOptions.ALL_CHANNELS_ACCESS);
+  };
+  obj4.disabled = disabled;
+  items1[2] = closure_5(Row, obj4);
+  obj.children = items1;
+  return closure_6(View, obj);
+};

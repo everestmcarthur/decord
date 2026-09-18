@@ -1,0 +1,150 @@
+// Module ID: 8415
+// Function ID: 8416
+// Name: AgeVerificationIncodeWebViewConstants
+// Dependencies: [2]
+// Exports: buildIncodeFallbackSessionInjection, buildIncodeParamsInjection, parseIncodeWebViewMessage, postIncodeCaptureComplete, postIncodeFallbackRequest, postIncodeResult, readInjectedIncodeParams
+
+// Module 8415 (AgeVerificationIncodeWebViewConstants)
+import size from "module_2" /* 2 */;
+
+let c0 = "__DISCORD_AGE_VERIFICATION_INCODE_PARAMS__";
+let c1 = "Verification.Result";
+let c2 = "Verification.CaptureComplete";
+let c3 = "Verification.FallbackRequest";
+let c4 = "__DISCORD_APPLY_INCODE_FALLBACK_SESSION__";
+const AgeVerificationIncodeResultStatus = { COMPLETED: "completed", CANCELLED: "cancelled", ERROR: "error" };
+const result = size.fileFinishedImporting("modules/age_assurance/AgeVerificationIncodeWebViewConstants.tsx");
+
+export const AGE_VERIFICATION_INCODE_PATH = "/age-verification/incode";
+export const AGE_VERIFICATION_INCODE_PARAMS_KEY = "__DISCORD_AGE_VERIFICATION_INCODE_PARAMS__";
+export const AGE_VERIFICATION_INCODE_PARAMS_SCHEMA_VERSION = 2;
+export const VERIFICATION_RESULT_EVENT_TYPE = "Verification.Result";
+export const VERIFICATION_CAPTURE_COMPLETE_EVENT_TYPE = "Verification.CaptureComplete";
+export const VERIFICATION_FALLBACK_REQUEST_EVENT_TYPE = "Verification.FallbackRequest";
+export const INCODE_FALLBACK_SESSION_CALLBACK_KEY = "__DISCORD_APPLY_INCODE_FALLBACK_SESSION__";
+export { AgeVerificationIncodeResultStatus };
+export const readInjectedIncodeParams = function readInjectedIncodeParams() {
+  if (null != window[c0]) {
+    if (typeof tmp === "object") {
+      ({ schemaVersion, apiUrl, sessionToken, consentId, interviewId, theme, method } = tmp);
+      if (null == schemaVersion) {
+        let tmp2 = null;
+        if (typeof apiUrl === "string") {
+          tmp2 = null;
+          if (typeof sessionToken === "string") {
+            tmp2 = null;
+            if (typeof consentId === "string") {
+              tmp2 = null;
+              if (typeof interviewId === "string") {
+                if (null == theme) {
+                  const obj = { apiUrl, sessionToken, consentId, interviewId, theme: null, method: null };
+                  if (theme == null) {
+                    theme = null;
+                  }
+                  obj.theme = theme;
+                  if (method == null) {
+                    method = null;
+                  }
+                  obj.method = method;
+                  tmp2 = obj;
+                } else {
+                  tmp2 = null;
+                }
+              }
+            }
+          }
+        }
+      } else {
+        tmp2 = null;
+      }
+      return tmp2;
+    }
+  }
+  return null;
+};
+export const buildIncodeParamsInjection = function buildIncodeParamsInjection(arg0, arg1) {
+  const obj = {};
+  const merged = Object.assign(arg0);
+  obj.schemaVersion = 2;
+  const json = JSON.stringify(JSON.stringify(obj));
+  return "if (window.location.origin === " + JSON.stringify(arg1) + ") { window." + c0 + " = JSON.parse(" + json + "); } true;";
+};
+export const parseIncodeWebViewMessage = function parseIncodeWebViewMessage(str) {
+  if (null == str) {
+    return null;
+  } else {
+    let parsed = str;
+    if (typeof str === "string") {
+      const _JSON = JSON;
+      parsed = JSON.parse(str);
+    }
+    let eventType;
+    if (parsed != null) {
+      eventType = parsed.eventType;
+    }
+    if (eventType === c2) {
+      let tmp10 = null;
+      if (typeof parsed.interviewId === "string") {
+        tmp10 = null;
+        if (0 !== parsed.interviewId.length) {
+          const obj2 = { kind: "capture_complete", interviewId: parsed.interviewId };
+          tmp10 = obj2;
+        }
+      }
+      return tmp10;
+    } else {
+      let eventType1;
+      if (parsed != null) {
+        eventType1 = parsed.eventType;
+      }
+      if (eventType1 === c3) {
+        let tmp9 = null;
+        if (typeof parsed.previousInterviewId === "string") {
+          tmp9 = null;
+          if (0 !== parsed.previousInterviewId.length) {
+            const obj3 = { kind: "fallback_request", previousInterviewId: parsed.previousInterviewId };
+            tmp9 = obj3;
+          }
+        }
+        return tmp9;
+      } else {
+        let eventType2;
+        if (parsed != null) {
+          eventType2 = parsed.eventType;
+        }
+        if (eventType2 !== c1) {
+          return null;
+        } else {
+          const status = parsed.status;
+          if (status !== obj.COMPLETED) {
+            if (status !== tmp7.CANCELLED) {
+              let tmp8 = null;
+            }
+            return tmp8;
+          }
+          obj = { kind: "result", status };
+          tmp8 = obj;
+        }
+      }
+    }
+  }
+};
+export const postIncodeResult = function postIncodeResult(arg0) {
+  if (ReactNativeWebView != null) {
+    ReactNativeWebView.postMessage(tmp);
+  }
+};
+export const postIncodeCaptureComplete = function postIncodeCaptureComplete(arg0) {
+  if (ReactNativeWebView != null) {
+    ReactNativeWebView.postMessage(tmp);
+  }
+};
+export const postIncodeFallbackRequest = function postIncodeFallbackRequest(arg0) {
+  if (ReactNativeWebView != null) {
+    ReactNativeWebView.postMessage(tmp);
+  }
+};
+export const buildIncodeFallbackSessionInjection = function buildIncodeFallbackSessionInjection(arg0) {
+  const json = JSON.stringify(JSON.stringify(arg0));
+  return "(function(){var detail=JSON.parse(" + json + ");var key=" + JSON.stringify(c4) + ";var n=0;var apply=function(){var cb=window[key];if(typeof cb===\"function\"){cb(detail);return true;}return false;};if(apply()){return;}var id=setInterval(function(){n+=1;if(apply()||n>40){clearInterval(id);}},50);})();true;";
+};

@@ -1,0 +1,226 @@
+// Module ID: 10937
+// Function ID: 10938
+// Name: InstantInvite
+// Dependencies: [19, 17, 1961, 1074, 21, 4560, 7168, 10938, 10939, 4905, 1114, 10940, 1100, 10942, 5607, 4973, 7172, 4556, 8672, 8098, 10946, 10947, 10948, 10951, 10953, 2]
+// Exports: LinkedChannelInvite
+
+// Module 10937 (InstantInvite)
+import util from "util" /* 1114 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4905 */;
+import ArrowSmallRightIcon from "ArrowSmallRightIcon" /* 10940 */;
+import InstantInviteIconsDefault from "InstantInviteIcons" /* 10942 */;
+import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 10947 */;
+import InviteRolesDisplayDefault from "InviteRolesDisplay" /* 10951 */;
+import InstantInviteUsesLabelDefault from "InstantInviteUsesLabel" /* 10953 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+const View = fn(17).View;
+let closure_5 = fn(1961).createChannelRecordFromInvite;
+const Routes = fn(1074).Routes;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(4560);
+let closure_9 = createStyles.createStyles({ creatorWrapper: { marginLeft: -16, marginBottom: -16, marginTop: 8, flex: 1 }, gameWrapper: { flex: 1, flexDirection: "row", alignItems: "center", gap: 8 }, gameText: { flex: 1 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_instant_invites/native/InstantInvite.tsx");
+
+export default noop.memo((onInviteRevoked) => {
+  const invite = onInviteRevoked.invite;
+  const guild = invite.guild;
+  let id;
+  ({ uses, maxUses } = invite);
+  if (guild != null) {
+    id = guild.id;
+  }
+  const items = [invite];
+  const memo = noop.useMemo(() => closure_5(invite.channel), items);
+  const tmp = closure_9();
+  const items1 = [invite.roles];
+  const inviteActions = invite(10948).useInviteActions({ invite, onInviteRevoked: onInviteRevoked.onInviteRevoked });
+  const memo1 = noop.useMemo(() => {
+    const roles = invite.roles;
+    return roles.map((id) => id.id);
+  }, items1);
+  let tmp9Result = memo1.length > 0 && null != id;
+  const obj2 = { direction: "horizontal", justify: "space-between", children: null };
+  const items2 = [
+    closure_7(invite(4556).Text, { variant: "text-lg/bold", tabularNumbers: true, children: invite.code }),
+    closure_7(invite(8672).ContextMenu, {
+      items: inviteActions,
+      children(ref) {
+        const merged = Object.assign(ref, Object.assign({ ref: 0 }));
+        const obj = { size: "sm", variant: "secondary", icon: InstantInviteIconsDefault.more, accessibilityLabel: null, ref: null };
+        const intl = invite(1114).intl;
+        obj.accessibilityLabel = intl.string(invite(1114).t.DEoVWZ);
+        obj.ref = ref.ref;
+        const merged1 = Object.assign(merged);
+        return closure_1_7(invite(8098).IconButton, obj);
+      }
+    })
+  ];
+  obj2.children = items2;
+  const items3 = [closure_8(invite(4973).Stack, obj2), , , ];
+  let obj = invite(10948);
+  const obj3 = { variant: "text-lg/bold", tabularNumbers: true, children: invite.code };
+  const obj4 = {
+    items: inviteActions,
+    children(ref) {
+      const merged = Object.assign(ref, Object.assign({ ref: 0 }));
+      const obj = { size: "sm", variant: "secondary", icon: InstantInviteIconsDefault.more, accessibilityLabel: null, ref: null };
+      const intl = invite(1114).intl;
+      obj.accessibilityLabel = intl.string(invite(1114).t.DEoVWZ);
+      obj.ref = ref.ref;
+      const merged1 = Object.assign(merged);
+      return closure_1_7(invite(8098).IconButton, obj);
+    }
+  };
+  items3[1] = closure_7(invite(10946).InstantInviteDetails, { channel: memo, expiresAt: invite.getExpiresAt() });
+  if (tmp9Result) {
+    const obj6 = { roleIds: memo1, guildId: id };
+    tmp9Result = tmp9(InviteRolesDisplayDefault, obj6);
+  }
+  items3[2] = tmp9Result;
+  const obj7 = { style: tmp.creatorWrapper, children: null };
+  const inviter = invite.inviter;
+  let id1;
+  if (inviter != null) {
+    id1 = inviter.id;
+  }
+  let tmp9Result2 = null;
+  if (null != id1) {
+    const inviter2 = invite.inviter;
+    let id2;
+    if (inviter2 != null) {
+      id2 = inviter2.id;
+    }
+    const obj8 = { start: true, end: true, userId: id2, guildId: id };
+    tmp9Result2 = tmp9(DetailedGuildIdentityUserRowDefault, obj8);
+  }
+  const obj9 = { children: null };
+  const obj10 = { direction: "horizontal", align: "flex-end", children: null };
+  obj7.children = tmp9Result2;
+  const items4 = [closure_7(View, obj7), closure_7(InstantInviteUsesLabelDefault, { uses, maxUses })];
+  obj10.children = items4;
+  items3[3] = closure_8(invite(4973).Stack, obj10);
+  obj9.children = items3;
+  return closure_8(invite(5607).Card, obj9);
+});
+export const LinkedChannelInvite = function LinkedChannelInvite(channel) {
+  channel = channel.channel;
+  let canUnlinkLobbyChannel;
+  dependencyMap = undefined;
+  let action;
+  const tmp = closure_9();
+  const linkedLobby = channel.linkedLobby;
+  let linked_by;
+  if (linkedLobby != null) {
+    linked_by = linkedLobby.linked_by;
+  }
+  const linkedLobby2 = channel.linkedLobby;
+  let application_id;
+  if (linkedLobby2 != null) {
+    application_id = linkedLobby2.application_id;
+  }
+  const getOrFetchApplication = channel(7168).useGetOrFetchApplication(application_id);
+  let obj = channel(7168);
+  canUnlinkLobbyChannel = channel(10938).useCanUnlinkLobbyChannel(channel);
+  let str;
+  const tmp3Result = channel(10938);
+  if (getOrFetchApplication != null) {
+    str = getOrFetchApplication.name;
+  }
+  if (str == null) {
+    str = "";
+  }
+  const tmp9Result = canUnlinkLobbyChannel(10939)(channel.id, str);
+  dependencyMap = tmp9Result;
+  let items = [canUnlinkLobbyChannel, tmp9Result];
+  action = action.useCallback(() => {
+    if (canUnlinkLobbyChannel) {
+      dependencyMap();
+    } else {
+      const obj2 = { title: null, body: null };
+      const intl = util.intl;
+      obj2.title = intl.string(util.t.JmUENg);
+      const intl2 = util.intl;
+      obj2.body = intl2.string(util.t.SrvsML);
+      actions_AlertActionCreatorsDefault.show(obj2);
+    }
+  }, items);
+  const items1 = [, , ];
+  ({ guild_id: arr2[0], id: arr2[1] } = channel);
+  items1[2] = action;
+  const memo = action.useMemo(() => {
+    const obj = { label: null, IconComponent: null, action: null };
+    const intl = util.intl;
+    obj.label = intl.string(util.t.aW2YlJ);
+    obj.IconComponent = ArrowSmallRightIcon.ArrowSmallRightIcon;
+    obj.action = function action() {
+      channel(closure_2[12]).transitionTo(Routes.CHANNEL(closure_1_0.guild_id, closure_1_0.id));
+    };
+    const items = [obj, ];
+    const obj2 = { label: null, iconSource: null, variant: "destructive", action: null };
+    const intl2 = util.intl;
+    obj2.label = intl2.string(util.t.JmUENg);
+    obj2.iconSource = InstantInviteIconsDefault.revoke;
+    obj2.action = action;
+    items[1] = obj2;
+    return items;
+  }, items1);
+  let obj2 = { style: tmp.gameWrapper, children: null };
+  const obj3 = { game: getOrFetchApplication, size: null };
+  const tmp9 = canUnlinkLobbyChannel(10939);
+  obj3.size = channel(7172).GameIconSizes.SIZE_24;
+  const items2 = [closure_7(canUnlinkLobbyChannel(7172), obj3), ];
+  const obj4 = { ellipsizeMode: "tail", lineClamp: 1, variant: "text-lg/bold", style: tmp.gameText, children: null };
+  let name;
+  if (getOrFetchApplication != null) {
+    name = getOrFetchApplication.name;
+  }
+  const obj5 = { direction: "horizontal", justify: "space-between", children: null };
+  obj4.children = name;
+  items2[1] = closure_7(channel(4556).Text, obj4);
+  obj2.children = items2;
+  const items3 = [
+    closure_8(View, obj2),
+    closure_7(channel(8672).ContextMenu, {
+      items: memo,
+      children(ref) {
+        const merged = Object.assign(ref, Object.assign({ ref: 0 }));
+        const obj = { size: "sm", variant: "secondary", icon: canUnlinkLobbyChannel(10942).more, accessibilityLabel: null, ref: null };
+        const intl = channel(1114).intl;
+        obj.accessibilityLabel = intl.string(channel(1114).t.DEoVWZ);
+        obj.ref = ref.ref;
+        const merged1 = Object.assign(merged);
+        return closure_1_7(channel(8098).IconButton, obj);
+      }
+    })
+  ];
+  obj5.children = items3;
+  const items4 = [closure_8(channel(4973).Stack, obj5), closure_7(channel(10946).InstantInviteDetails, { channel }), ];
+  const obj7 = { style: tmp.creatorWrapper, children: null };
+  let tmp15Result = null;
+  if (null != linked_by) {
+    const obj8 = { start: true, end: true, userId: linked_by, guildId: channel.guild_id };
+    tmp15Result = tmp15(tmp8(10947), obj8);
+  }
+  const obj9 = { children: null };
+  const obj6 = {
+    items: memo,
+    children(ref) {
+      const merged = Object.assign(ref, Object.assign({ ref: 0 }));
+      const obj = { size: "sm", variant: "secondary", icon: canUnlinkLobbyChannel(10942).more, accessibilityLabel: null, ref: null };
+      const intl = channel(1114).intl;
+      obj.accessibilityLabel = intl.string(channel(1114).t.DEoVWZ);
+      obj.ref = ref.ref;
+      const merged1 = Object.assign(merged);
+      return closure_1_7(channel(8098).IconButton, obj);
+    }
+  };
+  const tmp8Result = canUnlinkLobbyChannel(7172);
+  obj7.children = tmp15Result;
+  items4[2] = closure_7(channel(4973).Stack, { direction: "horizontal", align: "flex-end", children: closure_7(View, obj7) });
+  obj9.children = items4;
+  return closure_8(channel(5607).Card, obj9);
+};

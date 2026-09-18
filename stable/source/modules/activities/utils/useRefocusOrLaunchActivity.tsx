@@ -1,0 +1,164 @@
+// Module ID: 11523
+// Function ID: 11524
+// Name: useRefocusOrLaunchActivity
+// Dependencies: [5, 19, 9516, 1956, 9517, 7163, 504, 9512, 9513, 9541, 11524, 2]
+// Exports: default
+
+// Module 11523 (useRefocusOrLaunchActivity)
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "module_19" /* 19 */;
+import FramesStore from "FramesStore" /* 9516 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
+
+const require = fn;
+const FramesConstants = fn(9517);
+({ MAIN_SURFACE: closure_7, FrameLayoutModes: closure_8 } = FramesConstants);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/activities/utils/useRefocusOrLaunchActivity.tsx");
+
+export default function useRefocusOrLaunchActivity(applicationId) {
+  applicationId = applicationId.applicationId;
+  let analyticsLocations = applicationId.analyticsLocations;
+  const runBeforeLaunchAttempt = applicationId.runBeforeLaunchAttempt;
+  const runAfterLaunchAttempt = applicationId.runAfterLaunchAttempt;
+  let stateFromStores1;
+  const data = applicationId(runBeforeLaunchAttempt[5]).useApplication(applicationId).data;
+  let obj = applicationId(runBeforeLaunchAttempt[5]);
+  const items = [stateFromStores1];
+  const stateFromStores = applicationId(runBeforeLaunchAttempt[6]).useStateFromStores(items, () => stateFromStores1.getCurrentEmbeddedActivity());
+  let obj2 = applicationId(runBeforeLaunchAttempt[6]);
+  const items1 = [stateFromStores];
+  stateFromStores1 = applicationId(runBeforeLaunchAttempt[6]).useStateFromStores(items1, () => stateFromStores.getMainFrame());
+  const obj3 = applicationId(runBeforeLaunchAttempt[6]);
+  const canLaunchFrameResult = applicationId(runBeforeLaunchAttempt[7]).canLaunchFrame(data);
+  c7 = canLaunchFrameResult;
+  const items2 = [analyticsLocations, data, applicationId, canLaunchFrameResult, stateFromStores, stateFromStores1, runAfterLaunchAttempt, runBeforeLaunchAttempt];
+  return data.useCallback(runAfterLaunchAttempt(function*(arg0, value) {
+    if (c5 === 2) {
+      c5 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c5 = 2;
+        if (0 === dependencyMap) {
+          if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c5 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
+          } else {
+            if (null != applicationId) {
+              if (null != data) {
+                let tmp9 = null != stateFromStores;
+                if (tmp9) {
+                  tmp9 = tmp43.applicationId === tmp41;
+                }
+                if (null != stateFromStores1) {
+                  if (tmp10.applicationId === tmp41) {
+                    const obj5 = { frameId: tmp10.id, layoutMode: constants.FOCUSED };
+                    const result = tmp3(9513).updateFrameLayoutMode(obj5);
+                    const obj10 = tmp3(9513);
+                  }
+                }
+                if (tmp9) {
+                  const _location = tmp43.location;
+                  let guild_id = null;
+                  if ("guild_id" in _location) {
+                    guild_id = _location.guild_id;
+                  }
+                  tmp3(9541)(guild_id, _location);
+                  const tmp26 = tmp3(9541);
+                } else {
+                  if (runBeforeLaunchAttempt != null) {
+                    runBeforeLaunchAttempt();
+                  }
+                  c4 = 1;
+                  if (c7) {
+                    const obj7 = { applicationId: tmp41, surface, analyticsContext: null };
+                    const obj8 = { isStart: true, analyticsLocations };
+                    obj7.analyticsContext = obj8;
+                    dependencyMap = 2;
+                    c5 = 1;
+                    const obj9 = { value: tmp3(9513).launchFrame(obj7), done: false };
+                    return obj9;
+                  } else {
+                    let id;
+                    if (tmp42 != null) {
+                      const bot = tmp42.bot;
+                      if (bot != null) {
+                        id = bot.id;
+                      }
+                    }
+                    if (null == id) {
+                      c4 = 0;
+                    }
+                  }
+                }
+                const obj11 = { appId: tmp41, botId: null, analyticsLocations: null };
+                let id1;
+                if (tmp42 != null) {
+                  const bot2 = tmp42.bot;
+                  if (bot2 != null) {
+                    id1 = bot2.id;
+                  }
+                }
+                obj11.botId = id1;
+                if (analyticsLocations == null) {
+                  analyticsLocations = [];
+                }
+                obj11.analyticsLocations = analyticsLocations;
+                dependencyMap = 3;
+                c5 = 1;
+                const obj12 = { value: analyticsLocations(11524).launchActivityInBotDM(obj11), done: false };
+                return obj12;
+              }
+            }
+            c5 = 3;
+          }
+        } else if (1 === tmp7) {
+          c4 = 0;
+        } else if (2 === tmp7) {
+          if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 0;
+            c5 = 3;
+            const obj13 = { value, done: true };
+            return obj13;
+          }
+        } else if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 0;
+          c5 = 3;
+          const obj = { value, done: true };
+          return obj;
+        }
+        if (closure_129_3 != null) {
+          closure_129_3();
+        }
+      } catch (tmp33) {
+        closure_3 = tmp33;
+        if (tmp4 === c4) {
+          c5 = tmp2;
+          throw tmp33;
+        } else {
+          dependencyMap = tmp;
+        }
+      }
+    }
+  }), items2);
+};

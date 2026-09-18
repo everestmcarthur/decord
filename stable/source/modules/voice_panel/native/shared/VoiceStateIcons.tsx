@@ -1,0 +1,125 @@
+// Module ID: 9125
+// Function ID: 9126
+// Name: VoiceStateIcons
+// Dependencies: [19, 17, 21, 4560, 576, 9126, 9127, 9129, 9131, 9133, 1369, 1178, 8457, 9135, 9136, 2]
+
+// Module 9125 (VoiceStateIcons)
+import nativeDefault from "native" /* 576 */;
+import native from "native" /* 1178 */;
+import inlineStyles from "inlineStyles" /* 8457 */;
+import VoiceStateIconUtils from "VoiceStateIconUtils" /* 9126 */;
+import _modDef9135 from "module_9135" /* 9135 */;
+import _modDef9136 from "module_9136" /* 9136 */;
+import noop from "module_19" /* 19 */;
+
+const inlineStylesDefault = inlineStyles;
+
+require = fn;
+function VideoDisabledSvgIcon(size) {
+  let MEDIUM = size.size;
+  if (MEDIUM === undefined) {
+    MEDIUM = native.IconSizes.MEDIUM;
+  }
+  const merged = Object.assign(size, Object.assign({ size: 0, style: 0 }));
+  const tmp4 = closure_6();
+  const iconStyle = native.getIconStyle(MEDIUM);
+  const flattenResult = StyleSheet.flatten(size.style);
+  let tintColor;
+  if (flattenResult != null) {
+    tintColor = flattenResult.tintColor;
+  }
+  if (tintColor == null) {
+    tintColor = tmp4.defaultTint.tintColor;
+  }
+  const obj2 = {};
+  const merged1 = Object.assign(merged);
+  const items = [iconStyle, flattenResult];
+  obj2.style = items;
+  obj2.viewBox = "0 0 24 24";
+  const items1 = [React4(inlineStyles.Path, { d: "M8.48485 19H13C15.2091 19 17 17.2091 17 15L19.563 17.0504C20.5451 17.8361 22 17.1368 22 15.8791V8.12094C22 7.35968 21.467 6.80301 20.8285 6.65636L8.48485 19Z", fill: tintColor }), React4(inlineStyles.Path, { d: "M14.9873 5.52783C14.4019 5.192 13.7233 5 13 5H6C3.79086 5 2 6.79086 2 9V15C2 15.9811 2.35325 16.8798 2.93949 17.5757L14.9873 5.52783Z", fill: tintColor }), React4(inlineStyles.Path, { d: "M21.2785 2.70712C20.888 2.31659 20.2549 2.31659 19.8643 2.70711L2.70711 19.8643C2.31658 20.2549 2.31658 20.888 2.70711 21.2785L2.72146 21.2929C3.11199 21.6834 3.74515 21.6834 4.13567 21.2929L21.2929 4.13568C21.6834 3.74515 21.6834 3.11199 21.2929 2.72147L21.2785 2.70712Z", fill: tmp4.redTint.tintColor })];
+  obj2.children = items1;
+  return hasOwnProperty(inlineStylesDefault, obj2);
+}
+const StyleSheet = fn(17).StyleSheet;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4560);
+let obj = { redTint: { tintColor: nativeDefault.colors.ICON_FEEDBACK_CRITICAL }, defaultTint: null, noTint: null };
+let obj3 = { tintColor: nativeDefault.colors.ICON_FEEDBACK_CRITICAL };
+obj.defaultTint = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+obj.noTint = { tintColor: "Array" };
+let closure_6 = createStyles.createStyles(obj);
+let obj4 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+const memoResult = noop.memo((arg0) => {
+  ({ style, state, alwaysWhite } = arg0);
+  if (alwaysWhite === undefined) {
+    alwaysWhite = false;
+  }
+  const tmp = closure_6();
+  if (VoiceStateIconUtils.MuteDeafenIconState.DEAFENED_SERVER === state) {
+    const items = [style, ];
+    let redTint = null;
+    if (!alwaysWhite) {
+      redTint = tmp.redTint;
+    }
+    const obj = { style: null, size: "xs" };
+    items[1] = redTint;
+    obj.style = items;
+    return React4(tmp2(9127).HeadphonesDenyIcon, obj);
+  } else if (tmp2(9126).MuteDeafenIconState.DEAFENED === state) {
+    const obj2 = { style: null, size: "xs" };
+    const items1 = [style];
+    obj2.style = items1;
+    return React4(tmp2(9129).HeadphonesSlashIcon, obj2);
+  } else if (tmp2(9126).MuteDeafenIconState.MUTED_SERVER === state) {
+    const items2 = [style, ];
+    let redTint1 = null;
+    if (!alwaysWhite) {
+      redTint1 = tmp.redTint;
+    }
+    const obj3 = { style: null, size: "xs" };
+    items2[1] = redTint1;
+    obj3.style = items2;
+    return React4(tmp2(9131).MicrophoneDenyIcon, obj3);
+  } else if (tmp2(9126).MuteDeafenIconState.MUTED_LOCAL === state) {
+    const obj4 = { style: null, size: "xs" };
+    const items3 = [style];
+    obj4.style = items3;
+    return React4(tmp2(9131).MicrophoneDenyIcon, obj4);
+  } else if (tmp2(9126).MuteDeafenIconState.MUTED === state) {
+    const obj5 = { style: null, size: "xs" };
+    const items4 = [style];
+    obj5.style = items4;
+    return React4(tmp2(9133).MicrophoneSlashIcon, obj5);
+  } else {
+    tmp2(1369).assertNever(state);
+  }
+});
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_panel/native/shared/VoiceStateIcons.tsx");
+
+export const MuteDeafenIcon = memoResult;
+export const VideoIcon = noop.memo((state) => {
+  state = state.state;
+  const merged = Object.assign(state, Object.assign({ state: 0 }));
+  if (VoiceStateIconUtils.VideoIconState.VIDEO_DISABLED_LOCAL_AUTO === state) {
+    const obj = {};
+    const merged1 = Object.assign(merged);
+    obj.source = _modDef9135;
+    const items = [merged.style, tmp2.noTint];
+    obj.style = items;
+    return React4(tmp3(1178).Icon, obj);
+  } else if (tmp3(9126).VideoIconState.VIDEO_DISABLED_LOCAL === state) {
+    const obj2 = {};
+    const merged2 = Object.assign(merged);
+    return React4(VideoDisabledSvgIcon, obj2);
+  } else if (tmp3(9126).VideoIconState.VIDEO_ACTIVE === state) {
+    const obj3 = {};
+    const merged3 = Object.assign(merged);
+    obj3.source = _modDef9136;
+    return React4(tmp3(1178).Icon, obj3);
+  } else {
+    tmp3(1369).assertNever(state);
+  }
+  tmp2 = closure_6();
+});

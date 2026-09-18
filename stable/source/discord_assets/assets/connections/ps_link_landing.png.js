@@ -1,0 +1,11 @@
+// Module ID: 9263
+// Function ID: 9264
+// Dependencies: [2]
+
+// Module 9263
+import size from "module_2" /* 2 */;
+
+const result = size.fileFinishedImporting("../discord_assets/assets/connections/ps_link_landing.png.js");
+
+export default "https://cdn.discordapp.com/assets/content/09152e47812b0b36abe406a49de1cc71ebae44cd025b7f7ce471ecf1bd152285.png";
+export const metadata = { fileBytes: 221118 };

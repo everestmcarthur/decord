@@ -1,0 +1,46 @@
+// Module ID: 17751
+// Function ID: 17752
+// Name: FormTrialActiveUserLimitPicker
+// Dependencies: [19, 21, 17752, 13899, 1114, 4527, 9432, 1896, 2]
+// Exports: default
+
+// Module 17751 (FormTrialActiveUserLimitPicker)
+import util from "util" /* 1114 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+const jsx = fn(21).jsx;
+let c4 = "GuildRoleSubscriptionTrialActiveUserLimitSelect";
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/FormTrialActiveUserLimitPicker.tsx");
+
+export default function FormTrialActiveUserLimitPicker(activeTrialUserlimit) {
+  const str = activeTrialUserlimit.activeTrialUserlimit;
+  const onChange = activeTrialUserlimit.onChange;
+  dependencyMap = onChange(17752)();
+  if (null == str) {
+    let intl = str(1114).intl;
+    let stringResult = intl.string(str(1114).t.zHfL6o);
+  } else {
+    stringResult = str.toString();
+  }
+  return jsx(onChange(13899), {
+    label: stringResult,
+    onPress() {
+      const obj2 = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
+      const obj = ActionSheetActionCreatorsDefault;
+      const intl = util.intl;
+      obj2.title = intl.string(util.t["/JD9oe"]);
+      obj2.items = items;
+      obj2.onItemSelect = function onItemSelect(arg0) {
+        closure_1_1(arg0);
+        onChange(closure_2[5]).hideActionSheet(closure_2_4);
+      };
+      obj2.selectedItem = str;
+      obj.openLazy(asyncRequireImpl(9432, dependencyMap.paths), c4, obj2);
+    },
+    disabled: activeTrialUserlimit.disabled
+  });
+};

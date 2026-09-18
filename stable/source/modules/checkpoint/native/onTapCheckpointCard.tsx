@@ -1,0 +1,28 @@
+// Module ID: 11943
+// Function ID: 11944
+// Name: onTapCheckpointCard
+// Dependencies: [1957, 1074, 1242, 4740, 2]
+// Exports: onTapCheckpointCard
+
+// Module 11943 (onTapCheckpointCard)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4740 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+
+require = fn;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/checkpoint/native/onTapCheckpointCard.tsx");
+
+export const onTapCheckpointCard = function onTapCheckpointCard(message) {
+  const channel = ChannelStore.getChannel(message.message.channel_id);
+  const obj = AnalyticsUtilsDefault;
+  const obj2 = { other_user_id: message.authorId };
+  const merged = Object.assign(AppAnalyticsUtils.collectChannelAnalyticsMetadata(channel));
+  let guild_id;
+  if (channel != null) {
+    guild_id = channel.guild_id;
+  }
+  const merged1 = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(guild_id));
+  obj.track(AnalyticEvents.CHECKPOINT_CARD_CLICKED, obj2);
+};

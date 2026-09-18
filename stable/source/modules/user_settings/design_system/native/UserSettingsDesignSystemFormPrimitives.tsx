@@ -1,0 +1,142 @@
+// Module ID: 15802
+// Function ID: 15803
+// Name: UserSettingsDesignSystemFormPrimitives
+// Dependencies: [32, 19, 17, 1074, 21, 4560, 4556, 5685, 5688, 5687, 7201, 9435, 5604, 5605, 14181, 9992, 5101, 4973, 2]
+// Exports: default
+
+// Module 15802 (UserSettingsDesignSystemFormPrimitives)
+import Text_Text from "Text/Text" /* 4556 */;
+import Stack_Stack from "Stack/Stack" /* 4973 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 5101 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 5604 */;
+import TableRow from "TableRow" /* 5605 */;
+import TableRadioGroup from "TableRadioGroup" /* 5685 */;
+import TableRowGroup from "TableRowGroup" /* 5687 */;
+import TableRadioRow from "TableRadioRow" /* 5688 */;
+import TableSwitchRow from "TableSwitchRow" /* 7201 */;
+import Checkbox from "Checkbox" /* 9435 */;
+import VoiceXIcon from "VoiceXIcon" /* 9992 */;
+import Slider from "Slider" /* 14181 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+function Radio() {
+  const obj = { children: null };
+  const items = [timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "Radio" }), timestampProducer(Text_Text.Text, { variant: "text-md/normal", children: "Select a single option from a short list of multiple options" }), ];
+  const obj2 = { title: "Role Colors", hasIcons: false, defaultValue: "color-in-names", onChange: NOOP, children: null };
+  const items1 = [timestampProducer(TableRadioRow.TableRadioRow, { label: "Show role colors in names", value: "color-in-names" }), timestampProducer(TableRadioRow.TableRadioRow, { label: "Show role colors next to names", value: "color-next-to-names" }), timestampProducer(TableRadioRow.TableRadioRow, { label: "Don't show role colors", value: "no-color" }), timestampProducer(TableRadioRow.TableRadioRow, { label: "Disabled Item", subLabel: "This should not be selectable", value: "option4", disabled: true })];
+  obj2.children = items1;
+  items[2] = React5(TableRadioGroup.TableRadioGroup, obj2);
+  obj.children = items;
+  return React5(React6, obj);
+}
+function Switch() {
+  [tmp2, c0] = noop.useState(true);
+  const tmp = _slicedToArray(noop.useState(true), 2);
+  const obj = {
+    value: tmp2,
+    onValueChange: noop.useCallback((arg0) => {
+      _undefined(arg0);
+    }, [])
+  };
+  [tmp4, c0] = noop.useState(false);
+  const tmp3 = _slicedToArray(noop.useState(false), 2);
+  const obj2 = {
+    value: tmp4,
+    onValueChange: noop.useCallback((arg0) => {
+      _undefined(arg0);
+    }, [])
+  };
+  [tmp6, c0] = noop.useState(true);
+  const tmp5 = _slicedToArray(noop.useState(true), 2);
+  c0 = undefined;
+  const obj3 = {
+    value: tmp6,
+    onValueChange: noop.useCallback((arg0) => {
+      _undefined(arg0);
+    }, [])
+  };
+  [tmp8, c0] = noop.useState(false);
+  const tmp7 = _slicedToArray(noop.useState(false), 2);
+  const obj5 = { children: null };
+  const items = [timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "Switch" }), timestampProducer(Text_Text.Text, { variant: "text-md/normal", children: "Toggle the state of a single setting on or off, immediately" }), , ];
+  const obj6 = { title: "Emoji", hasIcons: false, children: null };
+  const merged = Object.assign(obj);
+  obj6.children = timestampProducer(TableSwitchRow.TableSwitchRow, { label: "Show emoji reactions on messages", subLabel: "Show more information in less space" });
+  items[2] = timestampProducer(TableRowGroup.TableRowGroup, obj6);
+  const obj8 = { title: "Display images, videos, and lolcats", hasIcons: false, children: null };
+  const merged1 = Object.assign(obj2);
+  const items1 = [timestampProducer(TableSwitchRow.TableSwitchRow, { label: "When posted as links to chat" }), , , ];
+  const merged2 = Object.assign(obj3);
+  items1[1] = timestampProducer(TableSwitchRow.TableSwitchRow, { label: "When uploaded directly to Discord" });
+  const merged3 = Object.assign({
+    value: tmp8,
+    onValueChange: noop.useCallback((arg0) => {
+      _undefined(arg0);
+    }, [])
+  });
+  items1[2] = timestampProducer(TableSwitchRow.TableSwitchRow, { label: "With image descriptions" });
+  items1[3] = timestampProducer(TableSwitchRow.TableSwitchRow, { label: "Disabled switch item", subLabel: "This should not be switchable", disabled: true, value: false, onValueChange: NOOP });
+  obj8.children = items1;
+  items[3] = React5(TableRowGroup.TableRowGroup, obj8);
+  obj5.children = items;
+  return React5(React6, obj5);
+}
+function InlineCheckbox(startChecked) {
+  let flag = startChecked.startChecked;
+  ({ label, description, required } = startChecked);
+  if (flag === undefined) {
+    flag = false;
+  }
+  if (flag === undefined) {
+    flag = true;
+  }
+  c0 = undefined;
+  [tmp2, c0] = noop.useState(flag);
+  const onToggle = noop.useCallback((arg0) => {
+    _undefined(arg0);
+  }, []);
+  return timestampProducer(Checkbox.Checkbox, { label, description, required, checked, onToggle });
+}
+function InlineCheckboxDemo() {
+  const obj = { children: null };
+  const items = [timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "Inline Checkbox" }), timestampProducer(InlineCheckbox, { label: "Checkbox label", description: "This is a description", startChecked: true }), timestampProducer(InlineCheckbox, { label: "Trust google.com links from now on" }), timestampProducer(InlineCheckbox, { label: "I agree to the Terms of Service", required: true })];
+  obj.children = items;
+  return React5(React6, obj);
+}
+function CheckboxRowDemo() {
+  const obj = { children: null };
+  const items = [timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "Checkbox" }), timestampProducer(Text_Text.Text, { variant: "text-md/normal", children: "Select one or more options from a short list of options" }), ];
+  const obj2 = { title: "Who can send you a friend request?", hasIcons: false, children: null };
+  const items1 = [timestampProducer(TableCheckboxRow.TableCheckboxRow, { label: "Everyone", subLabel: "Anyone can send you a friend request", checked: false, onPress: NOOP }), timestampProducer(TableCheckboxRow.TableCheckboxRow, { label: "Friends of Friends", subLabel: "Anyone who is friends with your friends can send you a friend request", checked: true, onPress: NOOP }), timestampProducer(TableCheckboxRow.TableCheckboxRow, { label: "Server Members", subLabel: "Anyone who is in a server with you can send you a friend request", checked: true, onPress: NOOP })];
+  obj2.children = items1;
+  items[2] = React5(TableRowGroup.TableRowGroup, obj2);
+  obj.children = items;
+  return React5(React6, obj);
+}
+function SliderDemo() {
+  const obj = { children: null };
+  const items = [timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "Slider" }), ];
+  const obj2 = { start: true, end: true, label: "Volume", subLabel: timestampProducer(Slider.Slider, { startIcon: timestampProducer(VoiceXIcon.VoiceXIcon, {}), endIcon: timestampProducer(VoiceNormalIcon.VoiceNormalIcon, {}), onValueChange: NOOP }) };
+  items[1] = timestampProducer(TableRow.TableRow, obj2);
+  obj.children = items;
+  return React5(React6, obj);
+}
+const ScrollView = fn(17).ScrollView;
+const NOOP = fn(1074).NOOP;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
+const createStyles = fn(4560);
+let closure_9 = createStyles.createStyles({ container: { padding: 16, paddingBottom: 32 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemFormPrimitives.tsx");
+
+export default function UserSettingsDesignSystemFormPrimitives() {
+  const obj = { children: null };
+  const obj2 = { spacing: 24, style: closure_9().container, children: null };
+  const items = [timestampProducer(Radio, {}), timestampProducer(Switch, {}), timestampProducer(CheckboxRowDemo, {}), timestampProducer(InlineCheckboxDemo, {}), timestampProducer(SliderDemo, {})];
+  obj2.children = items;
+  obj.children = React5(Stack_Stack.Stack, obj2);
+  return timestampProducer(ScrollView, obj);
+};
