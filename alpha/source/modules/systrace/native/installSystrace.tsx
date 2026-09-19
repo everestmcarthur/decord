@@ -1,12 +1,12 @@
-// Module ID: 14610
-// Function ID: 14611
+// Module ID: 14665
+// Function ID: 14666
 // Name: installSystrace
-// Dependencies: [17, 1364, 14611, 2]
+// Dependencies: [17, 1364, 14666, 2]
 // Exports: installSystrace
 
-// Module 14610 (installSystrace)
+// Module 14665 (installSystrace)
 import _mod17 from "module_17" /* 17 */;
-import NativeSystraceModule from "NativeSystraceModule" /* 14611 */;
+import NativeSystraceModule from "NativeSystraceModule" /* 14666 */;
 import size from "module_2" /* 2 */;
 
 const Systrace = _mod17.Systrace;

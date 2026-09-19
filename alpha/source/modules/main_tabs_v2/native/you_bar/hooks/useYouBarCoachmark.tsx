@@ -1,18 +1,18 @@
-// Module ID: 16621
-// Function ID: 16622
+// Module ID: 16697
+// Function ID: 16698
 // Name: useYouBarCoachmark
-// Dependencies: [32, 19, 4543, 1955, 1115, 1944, 4458, 13328, 14932, 1485, 504, 13903, 4751, 7584, 16622, 11380, 2]
+// Dependencies: [32, 19, 4577, 2038, 1115, 2027, 4492, 13384, 14986, 1485, 504, 13958, 4785, 7628, 16698, 11392, 2]
 // Exports: useYouBarCoachmark
 
-// Module 16621 (useYouBarCoachmark)
+// Module 16697 (useYouBarCoachmark)
 import util from "util" /* 1115 */;
-import dismissible_content from "dismissible_content" /* 1944 */;
+import dismissible_content from "dismissible_content" /* 2027 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4543 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4577 */;
 
 require = fn;
-const ContentDismissActionType = fn(1955).ContentDismissActionType;
+const ContentDismissActionType = fn(2038).ContentDismissActionType;
 let closure_6 = [];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/hooks/useYouBarCoachmark.tsx");

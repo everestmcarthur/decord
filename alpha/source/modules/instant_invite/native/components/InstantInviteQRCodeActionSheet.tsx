@@ -1,16 +1,16 @@
-// Module ID: 10108
-// Function ID: 10109
+// Module ID: 10118
+// Function ID: 10119
 // Name: InstantInviteQRCodeActionSheet
-// Dependencies: [19, 17, 1980, 1372, 1074, 21, 4722, 576, 5754, 504, 1115, 573, 4419, 7393, 7345, 10109, 4718, 2]
+// Dependencies: [19, 17, 2063, 1372, 1074, 21, 4756, 576, 5796, 504, 1115, 573, 4453, 7437, 7389, 10119, 4752, 2]
 // Exports: default
 
-// Module 10108 (InstantInviteQRCodeActionSheet)
+// Module 10118 (InstantInviteQRCodeActionSheet)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import nativeDefault from "native" /* 576 */;
-import GuildIconDefault from "GuildIcon" /* 5754 */;
-import components_native_QRCodeDefault from "components_native/QRCode" /* 10109 */;
+import GuildIconDefault from "GuildIcon" /* 5796 */;
+import components_native_QRCodeDefault from "components_native/QRCode" /* 10119 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 1980 */;
+import GuildStore from "GuildStore" /* 2063 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const require = fn;
@@ -19,7 +19,7 @@ const Constants = fn(1074);
 ({ InstantInviteSources: closure_7, RelationshipTypes: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { container: { padding: nativeDefault.space.PX_12, display: "flex", alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_24 }, iconContainer: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, justifyContent: "center", alignItems: "center" }, icon: null, code: null };
 let obj3 = { padding: nativeDefault.space.PX_12, display: "flex", alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_24 };
 obj2.icon = { padding: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.lg + nativeDefault.space.PX_4, backgroundColor: nativeDefault.colors.WHITE };
@@ -59,12 +59,12 @@ export default function InstantInviteQRCodeActionSheet(location) {
     if (null != channel2) {
       tmp13 = null;
       if (null != GuildStore.getGuild(channel2.guild_id)) {
-        const obj4 = { guild: obj8.getGuild(channel2.guild_id), size: tmp6(5754).GuildIconSizes.LARGE };
+        const obj4 = { guild: obj8.getGuild(channel2.guild_id), size: tmp6(5796).GuildIconSizes.LARGE };
         tmp13 = closure_9(GuildIconDefault, obj4);
       }
       obj8 = GuildStore;
     }
-    presentFriendRequestAcceptedToast = tmp6(4419).presentFriendRequestAcceptedToast;
+    presentFriendRequestAcceptedToast = tmp6(4453).presentFriendRequestAcceptedToast;
     const items1 = [presentFriendRequestAcceptedToast];
     const effect = noop.useEffect(() => {
       function handleRelationshipAdd(relationship) {
@@ -80,7 +80,7 @@ export default function InstantInviteQRCodeActionSheet(location) {
     }, items1);
     const obj5 = { header: null, children: null };
     const obj6 = { title: stringResult };
-    obj5.header = closure_9(tmp6(7345).BottomSheetTitleHeader, obj6);
+    obj5.header = closure_9(tmp6(7389).BottomSheetTitleHeader, obj6);
     const obj7 = { style: tmp.container, children: null };
     const obj9 = { text: location.link, size: 240, style: tmp.code, accessibilityLabel: null };
     let plainText;
@@ -103,12 +103,12 @@ export default function InstantInviteQRCodeActionSheet(location) {
     let tmp19Result2 = null != tmp12;
     if (tmp19Result2) {
       const obj13 = { variant: "text-md/normal", children: tmp12.visible };
-      tmp19Result2 = tmp19(tmp6(4718).Text, obj13);
+      tmp19Result2 = tmp19(tmp6(4752).Text, obj13);
     }
     items3[1] = tmp19Result2;
     obj7.children = items3;
     obj5.children = closure_10(View, obj7);
-    return closure_9(tmp6(7393).ActionSheet, obj5);
+    return closure_9(tmp6(7437).ActionSheet, obj5);
   }
   tmp12 = null;
   if (_location === constants.ADD_FRIENDS_MODAL) {

@@ -1,16 +1,16 @@
-// Module ID: 10990
-// Function ID: 10991
+// Module ID: 11003
+// Function ID: 11004
 // Name: GiftingBadgesUtils
-// Dependencies: [8422, 1372, 10986, 10991, 10992, 504, 4542, 1944, 2]
+// Dependencies: [8460, 1372, 10999, 11004, 11005, 504, 4576, 2027, 2]
 // Exports: getGiftingBadgeProgressPercent, getGiftingBadgeTierIconUrl, getIsGiftingBadgesDesktopEnabled, useIsEligibleToShowGiftingBadgeCoachmark, useIsGiftingBadgeComplexArtEnabled, useIsGiftingBadgesDesktopEnabled
 
-// Module 10990 (GiftingBadgesUtils)
+// Module 11003 (GiftingBadgesUtils)
 import initialize from "initialize" /* 504 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4542 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8422 */;
-import GiftingBadgeExperiment2 from "GiftingBadgeExperiment" /* 10986 */;
-import GiftingBadgeDesktopExperiment2 from "GiftingBadgeDesktopExperiment" /* 10991 */;
-import GiftingBadgeComplexArtExperiment2 from "GiftingBadgeComplexArtExperiment" /* 10992 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4576 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8460 */;
+import GiftingBadgeExperiment2 from "GiftingBadgeExperiment" /* 10999 */;
+import GiftingBadgeDesktopExperiment2 from "GiftingBadgeDesktopExperiment" /* 11004 */;
+import GiftingBadgeComplexArtExperiment2 from "GiftingBadgeComplexArtExperiment" /* 11005 */;
 import UserStore from "UserStore" /* 1372 */;
 import size from "module_2" /* 2 */;
 
@@ -111,7 +111,7 @@ export const useIsEligibleToShowGiftingBadgeCoachmark = function useIsEligibleTo
     return flag;
   });
   const tmpResult = initialize;
-  const result = DismissibleContentUnsafeUtils.useIsDismissibleContentDismissed_UNSAFE(tmp(1944).DismissibleContent.NEW_GIFTING_BADGES_COACHMARK);
+  const result = DismissibleContentUnsafeUtils.useIsDismissibleContentDismissed_UNSAFE(tmp(2027).DismissibleContent.NEW_GIFTING_BADGES_COACHMARK);
   if (tmp4) {
     tmp4 = stateFromStores;
   }

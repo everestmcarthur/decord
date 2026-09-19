@@ -1,14 +1,14 @@
-// Module ID: 16104
-// Function ID: 16105
+// Module ID: 16180
+// Function ID: 16181
 // Name: ManageSponsoredContentSetting
-// Dependencies: [8194, 1074, 11714, 1115, 2154, 16105, 2]
+// Dependencies: [8232, 1074, 11723, 1115, 2154, 16181, 2]
 
-// Module 16104 (ManageSponsoredContentSetting)
+// Module 16180 (ManageSponsoredContentSetting)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1115 */;
 import _modDef2154 from "module_2154" /* 2154 */;
-import SettingsConstants from "SettingsConstants" /* 8194 */;
-import SettingBuilders from "SettingBuilders" /* 11714 */;
+import SettingsConstants from "SettingsConstants" /* 8232 */;
+import SettingBuilders from "SettingBuilders" /* 11723 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

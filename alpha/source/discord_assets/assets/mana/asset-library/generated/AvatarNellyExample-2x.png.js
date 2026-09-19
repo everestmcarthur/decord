@@ -1,8 +1,8 @@
-// Module ID: 5964
-// Function ID: 5965
+// Module ID: 6008
+// Function ID: 6009
 // Dependencies: [2]
 
-// Module 5964
+// Module 6008
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/AvatarNellyExample-2x.png.js");

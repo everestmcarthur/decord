@@ -1,13 +1,13 @@
-// Module ID: 4424
-// Function ID: 4425
+// Module ID: 4458
+// Function ID: 4459
 // Name: SemanticColorContext
-// Dependencies: [1092, 672, 4425, 4431, 4540, 2]
+// Dependencies: [1092, 672, 4459, 4465, 4574, 2]
 // Exports: getSemanticColorContextFromThemeContext
 
-// Module 4424 (SemanticColorContext)
+// Module 4458 (SemanticColorContext)
 import _modDef672 from "module_672" /* 672 */;
-import getGradientThemeFromFlags from "getGradientThemeFromFlags" /* 4431 */;
-import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 4540 */;
+import getGradientThemeFromFlags from "getGradientThemeFromFlags" /* 4465 */;
+import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 4574 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("design/tokens/native/SemanticColorContext.native.tsx");
@@ -39,7 +39,7 @@ export const getSemanticColorContextFromThemeContext = function getSemanticColor
       const obj4 = { "gradient.start": int2hexResult, "gradient.mid": hexResult, "gradient.end": int2hexResult1, "gradient.top": int2hexResult, "gradient.bottom": int2hexResult1, "gradient.primary": int2hexResult, "gradient.secondary": int2hexResult1 };
       obj3.colors = obj4;
       tmp9 = obj3;
-      tmpResult4 = tmp(4425);
+      tmpResult4 = tmp(4459);
     }
     gradientThemeMetadata = tmp9;
   }

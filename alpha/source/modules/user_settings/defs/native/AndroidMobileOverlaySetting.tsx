@@ -1,22 +1,22 @@
-// Module ID: 15463
-// Function ID: 15464
+// Module ID: 15518
+// Function ID: 15519
 // Name: AndroidMobileOverlaySetting
-// Dependencies: [10224, 8194, 504, 1115, 11714, 10235, 2]
+// Dependencies: [10236, 8232, 504, 1115, 11723, 10247, 2]
 
-// Module 15463 (AndroidMobileOverlaySetting)
+// Module 15518 (AndroidMobileOverlaySetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
-import MobileVoiceOverlayActionCreatorsDefault from "MobileVoiceOverlayActionCreators" /* 10235 */;
-import MobileVoiceOverlayStore from "MobileVoiceOverlayStore" /* 10224 */;
+import MobileVoiceOverlayActionCreatorsDefault from "MobileVoiceOverlayActionCreators" /* 10247 */;
+import MobileVoiceOverlayStore from "MobileVoiceOverlayStore" /* 10236 */;
 
 require = fn;
-const SettingBuilders = fn(11714);
+const SettingBuilders = fn(11723);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["9CSZJm"]);
   },
-  parent: fn(8194).MobileUserSettings.VOICE,
+  parent: fn(8232).MobileUserSettings.VOICE,
   useValue: function useAndroidMobileOverlaySettingValue() {
     const items = [MobileVoiceOverlayStore];
     return initialize.useStateFromStores(items, () => enabled.getEnabled());
@@ -26,7 +26,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.Wfoivk);
   },
-  usePredicate: fn(10224).isMobileOverlaySupported
+  usePredicate: fn(10236).isMobileOverlaySupported
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/AndroidMobileOverlaySetting.tsx");

@@ -1,11 +1,11 @@
-// Module ID: 8906
-// Function ID: 8907
+// Module ID: 8945
+// Function ID: 8946
 // Name: useOpenGameProfileModal
-// Dependencies: [8907, 8911, 2]
+// Dependencies: [8946, 8950, 2]
 // Exports: default
 
-// Module 8906 (useOpenGameProfileModal)
-import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 8911 */;
+// Module 8945 (useOpenGameProfileModal)
+import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 8950 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

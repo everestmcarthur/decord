@@ -1,6 +1,9 @@
 // Module ID: 14416
 // Function ID: 14417
-// Dependencies: [14417]
+// Dependencies: [1121]
 
 // Module 14416
-Object.defineProperty(Intl, "Locale", { value: fn(14417).Locale, writable: true, enumerable: false, configurable: true });
+import registerAsset from "module_1121" /* 1121 */;
+
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties", scales: [1], hash: "e2ea348445c8a662d796c112d980d074", name: "Microphone", type: "lottie" });

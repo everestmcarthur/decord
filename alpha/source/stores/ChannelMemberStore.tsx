@@ -1,25 +1,25 @@
-// Module ID: 7475
-// Function ID: 7476
+// Module ID: 7519
+// Function ID: 7520
 // Name: ChannelMemberStore
-// Dependencies: [4637, 4744, 502, 1958, 4641, 2022, 2016, 1980, 4762, 5449, 1372, 1074, 1115, 4366, 1240, 12, 1086, 504, 573, 2]
+// Dependencies: [4671, 4778, 502, 2041, 4675, 2105, 2099, 2063, 4796, 5491, 1372, 1074, 1115, 4400, 1240, 12, 1086, 504, 573, 2]
 
-// Module 7475 (ChannelMemberStore)
+// Module 7519 (ChannelMemberStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
 import MurmurHashV3Default from "MurmurHashV3" /* 1240 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4366 */;
-import ExperimentStore from "ExperimentStore" /* 4637 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4744 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4400 */;
+import ExperimentStore from "ExperimentStore" /* 4671 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4778 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 4641 */;
-import GuildMemberStore from "GuildMemberStore" /* 2022 */;
-import GuildRoleStore from "GuildRoleStore" /* 2016 */;
-import GuildStore from "GuildStore" /* 1980 */;
-import PresenceStore from "PresenceStore" /* 4762 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5449 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 4675 */;
+import GuildMemberStore from "GuildMemberStore" /* 2105 */;
+import GuildRoleStore from "GuildRoleStore" /* 2099 */;
+import GuildStore from "GuildStore" /* 2063 */;
+import PresenceStore from "PresenceStore" /* 4796 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5491 */;
 import UserStore from "UserStore" /* 1372 */;
 
 let require = fn;

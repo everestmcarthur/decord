@@ -1,13 +1,13 @@
-// Module ID: 10193
-// Function ID: 10194
+// Module ID: 10205
+// Function ID: 10206
 // Name: LottieIcon
-// Dependencies: [19, 17, 21, 576, 6813, 4442, 4423, 5700, 2]
+// Dependencies: [19, 17, 21, 576, 6857, 4476, 4457, 5742, 2]
 
-// Module 10193 (LottieIcon)
+// Module 10205 (LottieIcon)
 import nativeDefault from "native" /* 576 */;
-import useToken from "useToken" /* 4423 */;
-import _modDef5700 from "module_5700" /* 5700 */;
-import IconSize from "IconSize" /* 6813 */;
+import useToken from "useToken" /* 4457 */;
+import _modDef5742 from "module_5742" /* 5742 */;
+import IconSize from "IconSize" /* 6857 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -59,7 +59,7 @@ export const LottieIcon = noop.forwardRef((color, ref) => {
   }
   sum1 = num2 + num3;
   ref = noop.useRef(null);
-  enabled = noop.useContext(tmp3(4442).AccessibilityPreferencesContext).reducedMotion.enabled;
+  enabled = noop.useContext(tmp3(4476).AccessibilityPreferencesContext).reducedMotion.enabled;
   let tmp12 = tmp5;
   if ("custom" === size) {
     tmp12 = width;
@@ -128,6 +128,6 @@ export const LottieIcon = noop.forwardRef((color, ref) => {
   obj3.onAnimationLoaded = callback1;
   const items4 = [size1, { opacity: num }];
   obj3.style = items4;
-  obj2.children = jsx(_modDef5700, { ref, source: color.dotLottie, colorFilters: null, hardwareAccelerationAndroid: true, loop: false, onAnimationLoaded: null, resizeMode: "cover", style: null });
+  obj2.children = jsx(_modDef5742, { ref, source: color.dotLottie, colorFilters: null, hardwareAccelerationAndroid: true, loop: false, onAnimationLoaded: null, resizeMode: "cover", style: null });
   return <tmp19 style={size1}>{null}</tmp19>;
 });

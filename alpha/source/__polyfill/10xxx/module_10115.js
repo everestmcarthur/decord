@@ -1,7 +1,9 @@
 // Module ID: 10115
 // Function ID: 10116
-// Dependencies: []
+// Dependencies: [1121]
 
 // Module 10115
+import registerAsset from "module_1121" /* 1121 */;
 
-export default { L: 1, M: 0, Q: 3, H: 2 };
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/instant_invite/native/images", width: 32, height: 32, scales: [2, 3], hash: "6745f221b3e662876db35721a519454b", name: "copy", type: "png" });

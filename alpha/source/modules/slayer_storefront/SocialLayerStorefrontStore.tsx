@@ -1,12 +1,12 @@
-// Module ID: 7424
-// Function ID: 7425
+// Module ID: 7468
+// Function ID: 7469
 // Name: SocialLayerStorefrontStore
-// Dependencies: [2026, 502, 504, 573, 2]
+// Dependencies: [2109, 502, 504, 573, 2]
 
-// Module 7424 (SocialLayerStorefrontStore)
+// Module 7468 (SocialLayerStorefrontStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import LocaleStore from "LocaleStore" /* 2026 */;
+import LocaleStore from "LocaleStore" /* 2109 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 function handleUserSettingsStoreUpdate() {

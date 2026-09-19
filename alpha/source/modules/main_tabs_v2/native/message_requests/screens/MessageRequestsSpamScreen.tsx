@@ -1,11 +1,11 @@
-// Module ID: 17274
-// Function ID: 17275
+// Module ID: 17351
+// Function ID: 17352
 // Name: MessageRequestsSpamScreen
-// Dependencies: [19, 21, 17272, 2]
+// Dependencies: [19, 21, 17349, 2]
 // Exports: default
 
-// Module 17274 (MessageRequestsSpamScreen)
-import SpamMessageListDefault from "SpamMessageList" /* 17272 */;
+// Module 17351 (MessageRequestsSpamScreen)
+import SpamMessageListDefault from "SpamMessageList" /* 17349 */;
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;

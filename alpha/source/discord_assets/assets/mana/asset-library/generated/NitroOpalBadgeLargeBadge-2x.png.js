@@ -1,8 +1,8 @@
-// Module ID: 6470
-// Function ID: 6471
+// Module ID: 6514
+// Function ID: 6515
 // Dependencies: [2]
 
-// Module 6470
+// Module 6514
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/NitroOpalBadgeLargeBadge-2x.png.js");

@@ -1,18 +1,18 @@
-// Module ID: 17129
-// Function ID: 17130
+// Module ID: 17205
+// Function ID: 17206
 // Name: usePostableChannelCount
-// Dependencies: [2013, 4361, 1074, 504, 1086, 2]
+// Dependencies: [2096, 4395, 1074, 504, 1086, 2]
 // Exports: default
 
-// Module 17129 (usePostableChannelCount)
+// Module 17205 (usePostableChannelCount)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
-import GuildChannelStore from "GuildChannelStore" /* 2013 */;
-import PermissionStore from "PermissionStore" /* 4361 */;
+import GuildChannelStore from "GuildChannelStore" /* 2096 */;
+import PermissionStore from "PermissionStore" /* 4395 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-let closure_4 = fn(2013).GUILD_SELECTABLE_CHANNELS_KEY;
+let closure_4 = fn(2096).GUILD_SELECTABLE_CHANNELS_KEY;
 const Permissions = fn(1074).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild/usePostableChannelCount.tsx");

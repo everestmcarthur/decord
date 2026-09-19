@@ -1,16 +1,16 @@
-// Module ID: 11501
-// Function ID: 11502
+// Module ID: 11513
+// Function ID: 11514
 // Name: AvailableForumTag
-// Dependencies: [19, 5629, 1375, 21, 4722, 576, 504, 10871, 9144, 7326, 1397, 4718, 2]
+// Dependencies: [19, 5671, 1375, 21, 4756, 576, 504, 10887, 9183, 7370, 1397, 4752, 2]
 // Exports: default
 
-// Module 11501 (AvailableForumTag)
+// Module 11513 (AvailableForumTag)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4718 */;
-import EmojiDefault from "Emoji" /* 7326 */;
-import native from "native" /* 9144 */;
+import Text_Text from "Text/Text" /* 4752 */;
+import EmojiDefault from "Emoji" /* 7370 */;
+import native from "native" /* 9183 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 5629 */;
+import EmojiStore from "EmojiStore" /* 5671 */;
 
 const require = globalThis.__r;
 
@@ -18,7 +18,7 @@ require = fn;
 const EMOJI_URL_BASE_SIZE = fn(1375).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 const obj2 = { pill: { display: "flex", flexDirection: "row", alignItems: "center", paddingHorizontal: 12, borderRadius: 20, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, margin: 6, borderWidth: 2, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, overflow: "hidden", height: 32 }, pillSelected: null, pillDisabled: null, emoji: null, imageEmoji: null, textEmoji: null };
 const obj3 = { display: "flex", flexDirection: "row", alignItems: "center", paddingHorizontal: 12, borderRadius: 20, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, margin: 6, borderWidth: 2, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, overflow: "hidden", height: 32 };
 obj2.pillSelected = { borderColor: nativeDefault.colors.BACKGROUND_BRAND, borderWidth: 1 };

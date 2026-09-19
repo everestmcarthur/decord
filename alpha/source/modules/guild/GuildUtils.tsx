@@ -1,11 +1,11 @@
-// Module ID: 10583
-// Function ID: 10584
+// Module ID: 10599
+// Function ID: 10600
 // Name: guild/GuildUtils
-// Dependencies: [5690, 2]
+// Dependencies: [5732, 2]
 // Exports: handleJoinGuild
 
-// Module 10583 (guild/GuildUtils)
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5690 */;
+// Module 10599 (guild/GuildUtils)
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5732 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/guild/GuildUtils.tsx");

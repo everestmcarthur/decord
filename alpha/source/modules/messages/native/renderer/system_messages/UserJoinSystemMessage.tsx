@@ -1,16 +1,16 @@
-// Module ID: 8204
-// Function ID: 8205
+// Module ID: 8242
+// Function ID: 8243
 // Name: UserJoinSystemMessage
-// Dependencies: [1958, 1980, 1074, 8179, 8205, 8216, 8217, 8220, 1115, 8181, 8183, 2]
+// Dependencies: [2041, 2063, 1074, 8217, 8243, 8254, 8255, 8258, 1115, 8219, 8221, 2]
 // Exports: createUserJoinSystemMessage
 
-// Module 8204 (UserJoinSystemMessage)
+// Module 8242 (UserJoinSystemMessage)
 import util from "util" /* 1115 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8179 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8181 */;
-import SystemMessageUtilsDefault from "SystemMessageUtils" /* 8205 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
-import GuildStore from "GuildStore" /* 1980 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8217 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8219 */;
+import SystemMessageUtilsDefault from "SystemMessageUtils" /* 8243 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
+import GuildStore from "GuildStore" /* 2063 */;
 
 require = fn;
 const SystemChannelFlags = fn(1074).SystemChannelFlags;
@@ -34,11 +34,11 @@ export const createUserJoinSystemMessage = function createUserJoinSystemMessage(
       if (tmp10) {
         tmp10 = !(guild.systemChannelFlags & SystemChannelFlags.SUPPRESS_JOIN_NOTIFICATION_REPLIES);
       }
-      const tmpResult = tmp(8216);
+      const tmpResult = tmp(8254);
       if (tmpResult.computeIsStickerReplyEnabled(guildId, channel, message, tmp10)) {
-        const tmpResult3 = tmp(8217);
-        transformStickerResult = tmpResult3.transformSticker(tmp(8220).pickWelcomeSticker(message.id));
-        const tmpResult4 = tmp(8220);
+        const tmpResult3 = tmp(8255);
+        transformStickerResult = tmpResult3.transformSticker(tmp(8258).pickWelcomeSticker(message.id));
+        const tmpResult4 = tmp(8258);
       }
     }
   }
@@ -48,6 +48,6 @@ export const createUserJoinSystemMessage = function createUserJoinSystemMessage(
   obj2.sticker = transformStickerResult;
   const intl2 = tmp(1115).intl;
   obj2.stickerLabel = intl2.string(util.t["7Tj6HT"]);
-  const merged = Object.assign(tmp4(8183)(roleStyle));
+  const merged = Object.assign(tmp4(8221)(roleStyle));
   return obj2;
 };

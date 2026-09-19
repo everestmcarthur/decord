@@ -1,13 +1,13 @@
-// Module ID: 6171
-// Function ID: 6172
+// Module ID: 6215
+// Function ID: 6216
 // Name: ExperimentalMarvelRivalsWidgetAbstractUI
-// Dependencies: [21, 5757, 6172, 2]
+// Dependencies: [21, 5799, 6216, 2]
 // Exports: ExperimentalMarvelRivalsWidgetAbstractUI
 
-// Module 6171 (ExperimentalMarvelRivalsWidgetAbstractUI)
+// Module 6215 (ExperimentalMarvelRivalsWidgetAbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5757 */;
-import _modDef6172 from "module_6172" /* 6172 */;
+import FastImageDefault from "FastImage" /* 5799 */;
+import _modDef6216 from "module_6216" /* 6216 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const ExperimentalMarvelRivalsWidgetAbstractUI = function ExperimentalMar
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6172 };
+  const obj2 = { uri: _modDef6216 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

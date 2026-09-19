@@ -1,13 +1,13 @@
-// Module ID: 17792
-// Function ID: 17793
+// Module ID: 17872
+// Function ID: 17873
 // Name: SavedMessagesManager
-// Dependencies: [5, 8058, 11947, 17793, 7314, 2]
+// Dependencies: [5, 8096, 11956, 17873, 7358, 2]
 
-// Module 17792 (SavedMessagesManager)
-import ForLaterExperiment from "ForLaterExperiment" /* 8058 */;
-import SavedMessagesActions from "SavedMessagesActions" /* 11947 */;
+// Module 17872 (SavedMessagesManager)
+import ForLaterExperiment from "ForLaterExperiment" /* 8096 */;
+import SavedMessagesActions from "SavedMessagesActions" /* 11956 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7314 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7358 */;
 
 require = fn;
 let closure_3 = async function _refreshSavedMessages(arg0, value) {

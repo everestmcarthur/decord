@@ -1,20 +1,20 @@
-// Module ID: 18166
-// Function ID: 18167
+// Module ID: 18245
+// Function ID: 18246
 // Name: useInviteAssignableRoles
-// Dependencies: [19, 2017, 2016, 4361, 1372, 1074, 504, 4366, 2]
+// Dependencies: [19, 2100, 2099, 4395, 1372, 1074, 504, 4400, 2]
 // Exports: default
 
-// Module 18166 (useInviteAssignableRoles)
-import PermissionUtilsAll from "PermissionUtils" /* 4366 */;
+// Module 18245 (useInviteAssignableRoles)
+import PermissionUtilsAll from "PermissionUtils" /* 4400 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleStore from "GuildRoleStore" /* 2016 */;
-import PermissionStore from "PermissionStore" /* 4361 */;
+import GuildRoleStore from "GuildRoleStore" /* 2099 */;
+import PermissionStore from "PermissionStore" /* 4395 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const isEveryoneRole = fn(2017).isEveryoneRole;
+const isEveryoneRole = fn(2100).isEveryoneRole;
 const Permissions = fn(1074).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/instant_invite/useInviteAssignableRoles.tsx");

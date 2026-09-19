@@ -1,13 +1,13 @@
-// Module ID: 10596
-// Function ID: 10597
+// Module ID: 10612
+// Function ID: 10613
 // Name: BicycleIcon
-// Dependencies: [19, 21, 576, 4422, 10597, 2]
+// Dependencies: [19, 21, 576, 4456, 10613, 2]
 // Exports: BicycleIcon
 
-// Module 10596 (BicycleIcon)
+// Module 10612 (BicycleIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4422 */;
-import _mod10597 from "module_10597" /* 10597 */;
+import BaseIconImage from "BaseIconImage" /* 4456 */;
+import _mod10613 from "module_10613" /* 10613 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const BicycleIcon = function BicycleIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10597, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10613, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

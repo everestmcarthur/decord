@@ -1,14 +1,14 @@
-// Module ID: 17019
-// Function ID: 17020
+// Module ID: 17095
+// Function ID: 17096
 // Name: SearchScreenLayout
-// Dependencies: [19, 17, 12582, 21, 4722, 16779, 504, 17020, 17112, 2]
+// Dependencies: [19, 17, 12591, 21, 4756, 16855, 504, 17096, 17188, 2]
 
-// Module 17019 (SearchScreenLayout)
-import AppFreezerDefault from "AppFreezer" /* 16779 */;
-import SearchTabsLayoutDefault from "SearchTabsLayout" /* 17020 */;
-import AutocompleteScreenDefault from "AutocompleteScreen" /* 17112 */;
+// Module 17095 (SearchScreenLayout)
+import AppFreezerDefault from "AppFreezer" /* 16855 */;
+import SearchTabsLayoutDefault from "SearchTabsLayout" /* 17096 */;
+import AutocompleteScreenDefault from "AutocompleteScreen" /* 17188 */;
 import noop from "module_19" /* 19 */;
-import SearchQueryStore from "SearchQueryStore" /* 12582 */;
+import SearchQueryStore from "SearchQueryStore" /* 12591 */;
 
 const require = fn;
 function SearchFreezeContainer(visible) {
@@ -23,7 +23,7 @@ function SearchFreezeContainer(visible) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let closure_8 = createStyles.createStyles({ hidden: { opacity: 0 }, visible: { flex: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/layout/SearchScreenLayout.tsx");

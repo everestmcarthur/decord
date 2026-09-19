@@ -1,31 +1,31 @@
-// Module ID: 12127
-// Function ID: 12128
+// Module ID: 12136
+// Function ID: 12137
 // Name: AutomatedUnderageAppealModalActionCreators
-// Dependencies: [5, 8652, 8644, 21, 12125, 573, 4689, 12128, 1897, 8651, 8662, 8645, 8668, 8643, 4925, 8675, 8812, 2]
+// Dependencies: [5, 8690, 8682, 21, 12134, 573, 4723, 12137, 1980, 8689, 8700, 8683, 8706, 8681, 4959, 8713, 8850, 2]
 
-// Module 12127 (AutomatedUnderageAppealModalActionCreators)
+// Module 12136 (AutomatedUnderageAppealModalActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4689 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1980 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4723 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-const ModalActionCreatorsDefault = tmp(4925);
+const ModalActionCreatorsDefault = tmp(4959);
 require = fn;
-const SafetyHubConstants = fn(8652);
+const SafetyHubConstants = fn(8690);
 ({ AGE_APPEAL_ACTION_SHEET_NAME: closure_4, AGE_CHECK_POLL_DELAY_MS: hasOwnProperty } = SafetyHubConstants);
-let closure_6 = fn(8644).AGE_VERIFICATION_GET_STARTED_MODAL_KEY;
+let closure_6 = fn(8682).AGE_VERIFICATION_GET_STARTED_MODAL_KEY;
 const jsx = fn(21).jsx;
 let obj = {
   open(classificationId, onClose) {
     DispatcherDefault.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN" });
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12128, dependencyMap.paths), React4, { classificationId, onClose });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12137, dependencyMap.paths), React4, { classificationId, onClose });
   },
   openV2(classificationId, onClose) {
     _require = classificationId;
     importDefault = onClose;
     DispatcherDefault.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN" });
     if (obj2.isCurrentUserSuspended()) {
-      if (tmp4Result.isExpressiveModalV2Enabled(tmp4(8645).AgeVerificationModalEntryPoint.AUTOMATED_UNDERAGE_APPEALS)) {
+      if (tmp4Result.isExpressiveModalV2Enabled(tmp4(8683).AgeVerificationModalEntryPoint.AUTOMATED_UNDERAGE_APPEALS)) {
         const _Math = Math;
         const _Date = Date;
         dependencyMap = Math.floor(Date.now() / 1000);
@@ -58,7 +58,7 @@ let obj = {
                   classificationId = tmp4;
                   dependencyMap = 1;
                   v3 = 1;
-                  const obj6 = { value: classificationId(8668).shouldShowManualReviewFallback(classificationId(8645).AgeVerificationModalEntryPoint.AUTOMATED_UNDERAGE_APPEALS), done: false };
+                  const obj6 = { value: classificationId(8706).shouldShowManualReviewFallback(classificationId(8683).AgeVerificationModalEntryPoint.AUTOMATED_UNDERAGE_APPEALS), done: false };
                   return obj6;
                 }
               } else if (arg0 === 1) {
@@ -70,11 +70,11 @@ let obj = {
                 return obj7;
               } else {
                 if (value) {
-                  const result = onClose(8643).showManualReviewFallbackModal(classificationId(8645).AgeVerificationModalEntryPoint.AUTOMATED_UNDERAGE_APPEALS, closure_129_1);
-                  const obj3 = onClose(8643);
+                  const result = onClose(8681).showManualReviewFallbackModal(classificationId(8683).AgeVerificationModalEntryPoint.AUTOMATED_UNDERAGE_APPEALS, closure_129_1);
+                  const obj3 = onClose(8681);
                 } else {
                   const obj8 = { onClose: closure_129_1 };
-                  onClose(4925).pushLazy(v3(async () => {
+                  onClose(4959).pushLazy(v3(async () => {
                     await tmp2(paths[8])(paths[15], paths.paths);
                     closure_128_0 = arg1.default;
                     return () => closure_3_7(closure_1_0, {
@@ -88,8 +88,8 @@ let obj = {
                       },
                       onComplete() {
                         closure_0 = dependencyMap;
-                        closure_2_0(12125).resetAgeCheckStatus();
-                        obj = closure_2_0(12125);
+                        closure_2_0(12134).resetAgeCheckStatus();
+                        obj = closure_2_0(12134);
                         closure_2_1(573).dispatch({ type: "SAFETY_HUB_EXPRESSIVE_MODAL_V2_VERIFICATION_SUBMITTED" });
                         const obj2 = closure_2_1(573);
                         closure_2_1(573).dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_START_POLL" });
@@ -97,7 +97,7 @@ let obj = {
                       }
                     });
                   }), obj8, closure_1_6);
-                  obj = onClose(4925);
+                  obj = onClose(4959);
                 }
                 v3 = 3;
               }

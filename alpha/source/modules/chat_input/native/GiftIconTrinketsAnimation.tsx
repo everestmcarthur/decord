@@ -1,22 +1,22 @@
-// Module ID: 12492
-// Function ID: 12493
+// Module ID: 12501
+// Function ID: 12502
 // Name: GiftIconTrinketsAnimation
-// Dependencies: [19, 17, 4714, 21, 4722, 4423, 576, 504, 1926, 1364, 9049, 5757, 2]
+// Dependencies: [19, 17, 4748, 21, 4756, 4457, 576, 504, 2009, 1364, 9088, 5799, 2]
 
-// Module 12492 (GiftIconTrinketsAnimation)
+// Module 12501 (GiftIconTrinketsAnimation)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
-import useToken from "useToken" /* 4423 */;
+import useToken from "useToken" /* 4457 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4714 */;
+import AccessibilityStore from "AccessibilityStore" /* 4748 */;
 
 const PlatformUtils = APNGPlayer(1364);
-const FastImageDefault = tmp(5757);
-const APNGPlayer2 = APNGPlayer(9049);
+const FastImageDefault = tmp(5799);
+const APNGPlayer2 = APNGPlayer(9088);
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let closure_6 = createStyles.createStyles((width) => ({ containerRefresh: { position: "absolute", top: 0, left: 0, width, height: width, overflow: "visible", marginLeft: 0, zIndex: 0 }, trinketsRefresh: { zIndex: 4, position: "absolute", pointerEvents: "none", width: "175%", height: "175%", top: "-37.5%", left: "-37.5%" } }));
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat_input/native/GiftIconTrinketsAnimation.tsx");

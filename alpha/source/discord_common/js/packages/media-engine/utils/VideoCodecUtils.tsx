@@ -1,11 +1,11 @@
-// Module ID: 4837
-// Function ID: 4838
+// Module ID: 4871
+// Function ID: 4872
 // Name: VideoCodecUtils
-// Dependencies: [4747, 2]
+// Dependencies: [4781, 2]
 // Exports: codecNameToPayloadName, filterParsedVideoCodecs, filterVideoCodecs, getExperimentCodecs, parseNativeCodecs
 
-// Module 4837 (VideoCodecUtils)
-import Constants from "Constants" /* 4747 */;
+// Module 4871 (VideoCodecUtils)
+import Constants from "Constants" /* 4781 */;
 import size from "module_2" /* 2 */;
 
 const ExperimentFlags = Constants.ExperimentFlags;

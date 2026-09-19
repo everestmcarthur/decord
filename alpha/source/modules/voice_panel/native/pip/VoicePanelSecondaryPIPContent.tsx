@@ -1,24 +1,24 @@
-// Module ID: 17542
-// Function ID: 17543
+// Module ID: 17619
+// Function ID: 17620
 // Name: VoicePanelSecondaryPIPContent
-// Dependencies: [19, 1957, 9748, 1958, 1921, 9743, 9749, 21, 4722, 12514, 17468, 504, 4351, 4458, 11245, 9776, 17395, 7269, 16893, 9880, 2]
+// Dependencies: [19, 2040, 9312, 2041, 2004, 9314, 9313, 21, 4756, 12523, 17545, 504, 4385, 4492, 11258, 9613, 17472, 7313, 16960, 9722, 2]
 // Exports: default
 
-// Module 17542 (VoicePanelSecondaryPIPContent)
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11245 */;
-import getActivityContainerPIPStylesSpecDefault from "getActivityContainerPIPStylesSpec" /* 17395 */;
+// Module 17619 (VoicePanelSecondaryPIPContent)
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11258 */;
+import getActivityContainerPIPStylesSpecDefault from "getActivityContainerPIPStylesSpec" /* 17472 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1957 */;
-import FramesStore from "FramesStore" /* 9748 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2040 */;
+import FramesStore from "FramesStore" /* 9312 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
 
 const require = fn;
-const ActivityLayoutMode = fn(1921).ActivityLayoutMode;
-const ActivityPanelModes = fn(9743).ActivityPanelModes;
-const FramesConstants = fn(9749);
+const ActivityLayoutMode = fn(2004).ActivityLayoutMode;
+const ActivityPanelModes = fn(9314).ActivityPanelModes;
+const FramesConstants = fn(9313);
 ({ asLaunched: closure_9, FrameLayoutModes: c10, getPipOrientationLockStateForFrame: closure_11 } = FramesConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let closure_13 = createStyles.createStyles({ activityContainer: { flex: 1 }, wrapper: { position: "absolute", left: "50%", top: "50%" } });
 const __initData = { code: "function VoicePanelSecondaryPIPContentTsx1(){const{pipState,roundToNearestPixel}=this.__closure;const scale=pipState.scale.get();const width=pipState.width*scale;const height=pipState.height*scale;return{width:width,height:height,marginLeft:roundToNearestPixel(width/2)*-1,marginTop:roundToNearestPixel(height/2)*-1};}" };
 const __initData2 = { code: "function VoicePanelSecondaryPIPContentTsx2(){const{pipState,getActivityContainerPipStylesSpec,activePipOrientationLockState,windowDimensions}=this.__closure;const scale=pipState.scale.get();const{width:width,height:height,shouldVerticallyCenter:shouldVerticallyCenter,shouldHorizontallyCenter:shouldHorizontallyCenter,marginLeft:marginLeft,marginTop:marginTop}=getActivityContainerPipStylesSpec({pipWidth:pipState.width*scale,pipHeight:pipState.height*scale,pipOrientationLockState:activePipOrientationLockState,isLandscape:windowDimensions.get().landscape});return{width:width,height:height,left:shouldHorizontallyCenter?'50%':'0%',top:shouldVerticallyCenter?'50%':'0%',marginLeft:marginLeft,marginTop:marginTop};}" };

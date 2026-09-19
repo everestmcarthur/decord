@@ -1,12 +1,12 @@
-// Module ID: 18270
-// Function ID: 18271
+// Module ID: 18349
+// Function ID: 18350
 // Name: reactAssetProvider
-// Dependencies: [17, 1364, 18271, 18272, 2]
+// Dependencies: [17, 1364, 18350, 18351, 2]
 // Exports: default
 
-// Module 18270 (reactAssetProvider)
-import NativeReactAssetModuleDefault from "NativeReactAssetModule" /* 18271 */;
-import native_required_assets from "native_required_assets" /* 18272 */;
+// Module 18349 (reactAssetProvider)
+import NativeReactAssetModuleDefault from "NativeReactAssetModule" /* 18350 */;
+import native_required_assets from "native_required_assets" /* 18351 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import size from "module_2" /* 2 */;

@@ -1,12 +1,12 @@
-// Module ID: 14859
-// Function ID: 14860
+// Module ID: 14913
+// Function ID: 14914
 // Name: UserProfileLegacyUsernameSwitch
-// Dependencies: [19, 21, 1936, 14834, 1115, 7180, 8394, 2]
+// Dependencies: [19, 21, 2019, 14888, 1115, 7224, 8432, 2]
 // Exports: default
 
-// Module 14859 (UserProfileLegacyUsernameSwitch)
-import UserSettingsAccountActionCreators from "UserSettingsAccountActionCreators" /* 7180 */;
-import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8394 */;
+// Module 14913 (UserProfileLegacyUsernameSwitch)
+import UserSettingsAccountActionCreators from "UserSettingsAccountActionCreators" /* 7224 */;
+import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8432 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ let result = size.fileFinishedImporting("modules/user_profile/native/UserProfile
 export default function UserProfileLegacyUsernameSwitch(pendingLegacyUsernameDisabled) {
   pendingLegacyUsernameDisabled = pendingLegacyUsernameDisabled.pendingLegacyUsernameDisabled;
   let setting;
-  const LegacyUsernameDisabled = setting(1936).LegacyUsernameDisabled;
+  const LegacyUsernameDisabled = setting(2019).LegacyUsernameDisabled;
   setting = LegacyUsernameDisabled.useSetting();
   let tmp4 = setting;
   if (undefined !== pendingLegacyUsernameDisabled) {
@@ -44,5 +44,5 @@ export default function UserProfileLegacyUsernameSwitch(pendingLegacyUsernameDis
       UserProfileSettingsActionCreators.setPendingChanges(obj2);
     }
   };
-  return jsx(setting(14834).UserProfileEditFormSwitch, { value: !tmp4, label: null, subLabel: null, accessibilityLabel: null, onValueChange: null });
+  return jsx(setting(14888).UserProfileEditFormSwitch, { value: !tmp4, label: null, subLabel: null, accessibilityLabel: null, onValueChange: null });
 };

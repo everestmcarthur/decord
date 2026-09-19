@@ -1,12 +1,12 @@
-// Module ID: 7179
-// Function ID: 7180
+// Module ID: 7223
+// Function ID: 7224
 // Name: verification/ChangeEmailUtils
-// Dependencies: [5, 5793, 7180, 7187, 1094, 2]
+// Dependencies: [5, 5835, 7224, 7231, 1094, 2]
 // Exports: finishChangeEmailFlow, finishVerifyEmailFlow, saveEmail
 
-// Module 7179 (verification/ChangeEmailUtils)
+// Module 7223 (verification/ChangeEmailUtils)
 import ConstantsIOS from "ConstantsIOS" /* 1094 */;
-import UserSettingsAccountActionCreatorsAll from "UserSettingsAccountActionCreators" /* 7180 */;
+import UserSettingsAccountActionCreatorsAll from "UserSettingsAccountActionCreators" /* 7224 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -108,7 +108,7 @@ let closure_6 = async function _saveEmail(arg0, value) {
     }
   }
 };
-const ChangeEmailStore = fn(5793);
+const ChangeEmailStore = fn(5835);
 ({ setChangeEmailError: closure_4, ChangeEmailFields: hasOwnProperty } = ChangeEmailStore);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/verification/native/ChangeEmailUtils.tsx");

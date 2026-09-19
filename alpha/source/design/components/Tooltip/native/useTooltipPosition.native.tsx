@@ -1,10 +1,10 @@
-// Module ID: 11384
-// Function ID: 11385
+// Module ID: 11396
+// Function ID: 11397
 // Name: useTooltipPosition
 // Dependencies: [19, 2]
 // Exports: default
 
-// Module 11384 (useTooltipPosition)
+// Module 11396 (useTooltipPosition)
 import noop from "module_19" /* 19 */;
 
 let size = fn(2);

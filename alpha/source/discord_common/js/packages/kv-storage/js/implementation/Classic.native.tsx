@@ -1,9 +1,9 @@
-// Module ID: 1990
-// Function ID: 1991
+// Module ID: 2073
+// Function ID: 2074
 // Name: Classic
 // Dependencies: [17, 2]
 
-// Module 1990 (Classic)
+// Module 2073 (Classic)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

@@ -1,26 +1,26 @@
-// Module ID: 10138
-// Function ID: 10139
+// Module ID: 10148
+// Function ID: 10149
 // Name: InstantInviteRow
-// Dependencies: [19, 17, 1958, 10066, 1980, 10078, 1372, 10139, 7938, 21, 4722, 576, 504, 4875, 10067, 10140, 5292, 1177, 10048, 4566, 1115, 1397, 1926, 4718, 5775, 10141, 2]
+// Dependencies: [19, 17, 2041, 10076, 2063, 10088, 1372, 10149, 7976, 21, 4756, 576, 504, 4909, 10077, 10150, 5334, 1177, 9900, 4600, 1115, 1397, 2009, 4752, 5817, 10151, 2]
 
-// Module 10138 (InstantInviteRow)
+// Module 10148 (InstantInviteRow)
 import nativeDefault from "native" /* 576 */;
-import InstantInviteUtils from "InstantInviteUtils" /* 10067 */;
-import InviteQueueDefault from "InviteQueue" /* 10140 */;
+import InstantInviteUtils from "InstantInviteUtils" /* 10077 */;
+import InviteQueueDefault from "InviteQueue" /* 10150 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
-import CreateInviteModalStore from "CreateInviteModalStore" /* 10066 */;
-import GuildStore from "GuildStore" /* 1980 */;
-import InviteSuggestionsStore from "InviteSuggestionsStore" /* 10078 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
+import CreateInviteModalStore from "CreateInviteModalStore" /* 10076 */;
+import GuildStore from "GuildStore" /* 2063 */;
+import InviteSuggestionsStore from "InviteSuggestionsStore" /* 10088 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 const View = fn(17).View;
-const InstantInviteSendStateStore = fn(10139);
+const InstantInviteSendStateStore = fn(10149);
 ({ setSendState: closure_9, useInstantInviteSendStates: c10 } = InstantInviteSendStateStore);
-const InviteSendStates = fn(7938).InviteSendStates;
+const InviteSendStates = fn(7976).InviteSendStates;
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj = { acronym: null };
 let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "center", overflow: "hidden", marginTop: 0, marginRight: 10, borderColor: nativeDefault.colors.BORDER_MUTED, borderStyle: "solid", borderWidth: 2 };
 obj.acronym = size;
@@ -135,17 +135,17 @@ export default noop.memo(function InstantInviteRow(row) {
           React7(tmp, id, InviteSendStates.SENDING);
           const type = row.type;
           if (InstantInviteUtils.RowTypes.FRIEND !== type) {
-            if (tmp7(10067).RowTypes.DM !== type) {
-              if (tmp7(10067).RowTypes.GROUP_DM === type) {
+            if (tmp7(10077).RowTypes.DM !== type) {
+              if (tmp7(10077).RowTypes.GROUP_DM === type) {
                 if (null != tmp) {
-                  const obj2 = { inviteKey: tmp, type: tmp7(10140).InvitePropertiesType.GROUP_DM, channel: ChannelStore.getChannel(tmp3), location: "Invite Action Sheet", inviteAnalyticsMetadata: null };
+                  const obj2 = { inviteKey: tmp, type: tmp7(10150).InvitePropertiesType.GROUP_DM, channel: ChannelStore.getChannel(tmp3), location: "Invite Action Sheet", inviteAnalyticsMetadata: null };
                   const obj3 = { suggestionData: InviteSuggestionsStore.getSelectedInviteMetadata(tmp6), source };
                   obj2.inviteAnalyticsMetadata = obj3;
                   InviteQueueDefault.enqueue(obj2, handleSendState);
                 }
-              } else if (tmp7(10067).RowTypes.CHANNEL === type) {
+              } else if (tmp7(10077).RowTypes.CHANNEL === type) {
                 if (null != tmp) {
-                  const obj5 = { inviteKey: tmp, type: tmp7(10140).InvitePropertiesType.CHANNEL, channel: ChannelStore.getChannel(tmp3), location: "Invite Action Sheet", inviteAnalyticsMetadata: null };
+                  const obj5 = { inviteKey: tmp, type: tmp7(10150).InvitePropertiesType.CHANNEL, channel: ChannelStore.getChannel(tmp3), location: "Invite Action Sheet", inviteAnalyticsMetadata: null };
                   const obj6 = { suggestionData: InviteSuggestionsStore.getSelectedInviteMetadata(tmp6), source };
                   obj5.inviteAnalyticsMetadata = obj6;
                   InviteQueueDefault.enqueue(obj5, handleSendState);
@@ -154,7 +154,7 @@ export default noop.memo(function InstantInviteRow(row) {
             }
           }
           if (null != tmp) {
-            const obj8 = { inviteKey: tmp, type: tmp7(10140).InvitePropertiesType.USER, user: UserStore.getUser(tmp3), location: "Invite Action Sheet", inviteAnalyticsMetadata: null };
+            const obj8 = { inviteKey: tmp, type: tmp7(10150).InvitePropertiesType.USER, user: UserStore.getUser(tmp3), location: "Invite Action Sheet", inviteAnalyticsMetadata: null };
             const obj9 = { suggestionData: InviteSuggestionsStore.getSelectedInviteMetadata(tmp6), source };
             obj8.inviteAnalyticsMetadata = obj9;
             InviteQueueDefault.enqueue(obj8, handleSendState);

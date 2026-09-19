@@ -1,13 +1,13 @@
-// Module ID: 5885
-// Function ID: 5886
+// Module ID: 5927
+// Function ID: 5928
 // Name: AccountAgeTier5SmallBadge
-// Dependencies: [21, 5757, 5886, 2]
+// Dependencies: [21, 5799, 5928, 2]
 // Exports: AccountAgeTier5SmallBadge
 
-// Module 5885 (AccountAgeTier5SmallBadge)
+// Module 5927 (AccountAgeTier5SmallBadge)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5757 */;
-import _modDef5886 from "module_5886" /* 5886 */;
+import FastImageDefault from "FastImage" /* 5799 */;
+import _modDef5928 from "module_5928" /* 5928 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const AccountAgeTier5SmallBadge = function AccountAgeTier5SmallBadge(widt
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5886 };
+  const obj2 = { uri: _modDef5928 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

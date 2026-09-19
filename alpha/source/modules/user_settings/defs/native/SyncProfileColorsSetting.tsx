@@ -1,26 +1,26 @@
-// Module ID: 15626
-// Function ID: 15627
+// Module ID: 15681
+// Function ID: 15682
 // Name: SyncProfileColorsSetting
-// Dependencies: [4714, 8194, 504, 11714, 1115, 14656, 2]
+// Dependencies: [4748, 8232, 504, 11723, 1115, 14711, 2]
 
-// Module 15626 (SyncProfileColorsSetting)
+// Module 15681 (SyncProfileColorsSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
-import AccessibilityStore from "AccessibilityStore" /* 4714 */;
+import AccessibilityStore from "AccessibilityStore" /* 4748 */;
 
 require = fn;
-const SettingBuilders = fn(11714);
+const SettingBuilders = fn(11723);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["sSY+mD"]);
   },
-  parent: fn(8194).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(8232).MobileUserSettings.ACCESSIBILITY,
   useValue: function useProfileColorsSettingValue() {
     const items = [AccessibilityStore];
     return initialize.useStateFromStores(items, () => AccessibilityStore.syncProfileThemeWithUserTheme);
   },
-  onValueChange: fn(14656).toggleSyncProfileThemeWithUserTheme
+  onValueChange: fn(14711).toggleSyncProfileThemeWithUserTheme
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/SyncProfileColorsSetting.tsx");

@@ -1,25 +1,25 @@
-// Module ID: 2012
-// Function ID: 2013
+// Module ID: 2095
+// Function ID: 2096
 // Name: SelectedChannelStore
-// Dependencies: [1962, 502, 1958, 2013, 1980, 1909, 4361, 4543, 1074, 1965, 510, 12, 1370, 1086, 504, 573, 2]
+// Dependencies: [2045, 502, 2041, 2096, 2063, 1992, 4395, 4577, 1074, 2048, 510, 12, 1370, 1086, 504, 573, 2]
 // Exports: findFirstVoiceChannelId, handleConnectionOpen
 
-// Module 2012 (SelectedChannelStore)
+// Module 2095 (SelectedChannelStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import Storage3 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
-import ChannelConstants from "ChannelConstants" /* 1965 */;
-import ChannelRecord from "ChannelRecord" /* 1962 */;
+import ChannelConstants from "ChannelConstants" /* 2048 */;
+import ChannelRecord from "ChannelRecord" /* 2045 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
-import GuildChannelStore from "GuildChannelStore" /* 2013 */;
-import GuildStore from "GuildStore" /* 1980 */;
-import MediaEngineStore from "MediaEngineStore" /* 1909 */;
-import PermissionStore from "PermissionStore" /* 4361 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4543 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
+import GuildChannelStore from "GuildChannelStore" /* 2096 */;
+import GuildStore from "GuildStore" /* 2063 */;
+import MediaEngineStore from "MediaEngineStore" /* 1992 */;
+import PermissionStore from "PermissionStore" /* 4395 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4577 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 

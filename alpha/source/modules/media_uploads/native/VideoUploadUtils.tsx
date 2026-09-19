@@ -1,10 +1,10 @@
-// Module ID: 5330
-// Function ID: 5331
+// Module ID: 5372
+// Function ID: 5373
 // Name: VideoUploadUtils
 // Dependencies: [1184, 3, 2]
 // Exports: calculateOptimalBitrate, calculateTargetDimensions, canSkipVideoTranscode, logEncoderSettings, logSourceMetadata
 
-// Module 5330 (VideoUploadUtils)
+// Module 5372 (VideoUploadUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1184 */;
 import size from "module_2" /* 2 */;
@@ -98,10 +98,10 @@ export const calculateTargetDimensions = function calculateTargetDimensions(vide
   size.height = sum1;
   return size;
 };
-export const canSkipVideoTranscode = function canSkipVideoTranscode(targetResolution, videoMetadata, fileSize, arg3) {
+export const canSkipVideoTranscode = function canSkipVideoTranscode(targetResolution, videoMetadata, fileSize, effectiveUploadLimit) {
   if (null != fileSize) {
-    if (null != arg3) {
-      if (fileSize > arg3) {
+    if (null != effectiveUploadLimit) {
+      if (fileSize > effectiveUploadLimit) {
         return false;
       }
     }

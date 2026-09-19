@@ -1,18 +1,18 @@
-// Module ID: 15248
-// Function ID: 15249
+// Module ID: 15303
+// Function ID: 15304
 // Name: VideoQuestPlayerControlButton
-// Dependencies: [19, 21, 4722, 576, 672, 5292, 5132, 2]
+// Dependencies: [19, 21, 4756, 576, 672, 5334, 5174, 2]
 
-// Module 15248 (VideoQuestPlayerControlButton)
+// Module 15303 (VideoQuestPlayerControlButton)
 import nativeDefault from "native" /* 576 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5132 */;
-import Pressables from "Pressables" /* 5292 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5174 */;
+import Pressables from "Pressables" /* 5334 */;
 import noop from "module_19" /* 19 */;
 import n from "module_672" /* 672 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj = { disabled: { opacity: 0.5 }, container: { borderRadius: nativeDefault.radii.round, overflow: "hidden" }, blur: null };
 const obj4 = { backgroundColor: null, padding: null };
 const obj3 = { borderRadius: nativeDefault.radii.round, overflow: "hidden" };

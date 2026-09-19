@@ -1,16 +1,16 @@
-// Module ID: 12361
-// Function ID: 12362
+// Module ID: 12370
+// Function ID: 12371
 // Name: useAppLauncherFrecents
-// Dependencies: [19, 7303, 1372, 12362, 1921, 5168, 1895, 9654, 504, 7366, 8571, 12363, 9644, 9527, 9819, 2]
+// Dependencies: [19, 7347, 1372, 12371, 2004, 5210, 1978, 9529, 504, 7410, 8609, 12372, 9519, 9402, 9600, 2]
 // Exports: default, useAppLauncherFrecentApps
 
-// Module 12361 (useAppLauncherFrecents)
-import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7366 */;
-import ApplicationCommandQueryApiAll from "ApplicationCommandQueryApi" /* 9654 */;
+// Module 12370 (useAppLauncherFrecents)
+import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7410 */;
+import ApplicationCommandQueryApiAll from "ApplicationCommandQueryApi" /* 9529 */;
 import noop from "module_19" /* 19 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7303 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7347 */;
 import UserStore from "UserStore" /* 1372 */;
-import AppLauncherLastUsedCommandStore from "AppLauncherLastUsedCommandStore" /* 12362 */;
+import AppLauncherLastUsedCommandStore from "AppLauncherLastUsedCommandStore" /* 12371 */;
 
 const require = fn;
 function useFrecentApps(onlyActivityApps) {
@@ -101,12 +101,12 @@ function useFrecentApps(onlyActivityApps) {
     return found2;
   }, items5);
 }
-const FetchState = fn(7303).FetchState;
-const WATCH_YOUTUBE_PROD_APP_ID = fn(1921).WATCH_YOUTUBE_PROD_APP_ID;
-const ApplicationCommandConstants = fn(5168);
+const FetchState = fn(7347).FetchState;
+const WATCH_YOUTUBE_PROD_APP_ID = fn(2004).WATCH_YOUTUBE_PROD_APP_ID;
+const ApplicationCommandConstants = fn(5210);
 const BuiltInSectionId = ApplicationCommandConstants.BuiltInSectionId;
 let filters = { commandTypes: null };
-let items = [fn(1895).ApplicationCommandType.CHAT, fn(1895).ApplicationCommandType.PRIMARY_ENTRY_POINT];
+let items = [fn(1978).ApplicationCommandType.CHAT, fn(1978).ApplicationCommandType.PRIMARY_ENTRY_POINT];
 filters.commandTypes = items;
 const options = { placeholderCount: 0, limit: ApplicationCommandConstants.DISCOVERY_COMMANDS_QUERY_LIMIT, includeFrecency: true };
 const size = fn(2);

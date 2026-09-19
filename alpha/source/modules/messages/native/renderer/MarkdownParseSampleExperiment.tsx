@@ -1,10 +1,10 @@
-// Module ID: 8323
-// Function ID: 8324
+// Module ID: 8361
+// Function ID: 8362
 // Name: MarkdownParseSampleExperiment
 // Dependencies: [1434, 2]
 // Exports: getMarkdownParseSampleRate
 
-// Module 8323 (MarkdownParseSampleExperiment)
+// Module 8361 (MarkdownParseSampleExperiment)
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

@@ -1,13 +1,13 @@
-// Module ID: 9444
-// Function ID: 9445
+// Module ID: 10032
+// Function ID: 10033
 // Name: usePendingFolderGuildIds
-// Dependencies: [4544, 1980, 504, 2]
+// Dependencies: [4578, 2063, 504, 2]
 // Exports: default, getPendingFolderGuildIds
 
-// Module 9444 (usePendingFolderGuildIds)
+// Module 10032 (usePendingFolderGuildIds)
 import initialize from "initialize" /* 504 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4544 */;
-import GuildStore from "GuildStore" /* 1980 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4578 */;
+import GuildStore from "GuildStore" /* 2063 */;
 
 require = fn;
 const size = fn(2);

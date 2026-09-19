@@ -1,8 +1,8 @@
-// Module ID: 6534
-// Function ID: 6535
+// Module ID: 6578
+// Function ID: 6579
 // Dependencies: [2]
 
-// Module 6534
+// Module 6578
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/PasskeysSpotIllustration-2x.png.js");

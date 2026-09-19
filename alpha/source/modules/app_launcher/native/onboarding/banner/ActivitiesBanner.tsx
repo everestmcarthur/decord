@@ -1,12 +1,12 @@
-// Module ID: 12291
-// Function ID: 12292
+// Module ID: 12300
+// Function ID: 12301
 // Name: ActivitiesBanner
-// Dependencies: [32, 19, 21, 12280, 12292, 12303, 1115, 2]
+// Dependencies: [32, 19, 21, 12289, 12301, 12312, 1115, 2]
 // Exports: default
 
-// Module 12291 (ActivitiesBanner)
-import useActivityApplications from "useActivityApplications" /* 12280 */;
-import BannerBaseDefault from "BannerBase" /* 12303 */;
+// Module 12300 (ActivitiesBanner)
+import useActivityApplications from "useActivityApplications" /* 12289 */;
+import BannerBaseDefault from "BannerBase" /* 12312 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

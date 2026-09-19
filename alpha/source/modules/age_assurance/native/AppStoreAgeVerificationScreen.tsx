@@ -1,13 +1,13 @@
-// Module ID: 8803
-// Function ID: 8804
+// Module ID: 8841
+// Function ID: 8842
 // Name: AppStoreAgeVerificationScreen
-// Dependencies: [5, 32, 19, 17, 21, 7798, 7803, 1484, 4935, 8804, 8807, 8672, 8806, 8654, 8655, 5142, 4718, 1115, 3032, 5603, 5144, 8645, 2]
+// Dependencies: [5, 32, 19, 17, 21, 5084, 5089, 1484, 4968, 8842, 8845, 8710, 8844, 8692, 8693, 5184, 4752, 1115, 3034, 5645, 5186, 8683, 2]
 // Exports: default
 
-// Module 8803 (AppStoreAgeVerificationScreen)
-import MonitoringAgentDefault from "MonitoringAgent" /* 7798 */;
-import MetricEvents from "MetricEvents" /* 7803 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8645 */;
+// Module 8841 (AppStoreAgeVerificationScreen)
+import MonitoringAgentDefault from "MonitoringAgent" /* 5084 */;
+import MetricEvents from "MetricEvents" /* 5089 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8683 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -34,7 +34,7 @@ export default function AppStoreAgeVerificationScreen(modalSessionId) {
   let obj = modalSessionId(1484);
   [tmp5, c2] = callback1(noop.useState({ type: "loading" }), 2);
   const tmp4 = callback1(noop.useState({ type: "loading" }), 2);
-  const watchAgeVerificationStatusChange = modalSessionId(4935).useWatchAgeVerificationStatusChange(modalSessionId.onClose);
+  const watchAgeVerificationStatusChange = modalSessionId(4968).useWatchAgeVerificationStatusChange(modalSessionId.onClose);
   let items = [navigation];
   const callback = noop.useCallback(() => {
     navigation.goBack();
@@ -209,31 +209,31 @@ export default function AppStoreAgeVerificationScreen(modalSessionId) {
     const items3 = [tmp10(ActivityIndicator, { size: "large" }), ];
     let obj4 = { variant: "text-md/medium", color: "text-strong", children: null };
     const intl = tmp(1115).intl;
-    obj4.children = intl.string(navigation(3032).MN6I4Y);
-    items3[1] = tmp10(tmp(4718).Text, obj4);
+    obj4.children = intl.string(navigation(3034).MN6I4Y);
+    items3[1] = tmp10(tmp(4752).Text, obj4);
     obj3.children = items3;
     let tmp15 = closure_9(closure_8, obj3);
   } else {
     const obj5 = { children: null };
     let obj6 = { variant: "text-md/medium", color: "text-strong", accessibilityRole: "alert", children: null };
     const intl2 = tmp(1115).intl;
-    obj6.children = intl2.string(navigation(3032).tBwanH);
-    const items4 = [tmp10(tmp(4718).Text, obj6), ];
+    obj6.children = intl2.string(navigation(3034).tBwanH);
+    const items4 = [tmp10(tmp(4752).Text, obj6), ];
     let obj7 = { children: null };
     let obj8 = { variant: "primary", size: "lg", text: null, onPress: null };
     const intl3 = tmp(1115).intl;
-    obj8.text = intl3.string(navigation(3032)["Jx33+I"]);
+    obj8.text = intl3.string(navigation(3034)["Jx33+I"]);
     obj8.onPress = function onPress() {
       const result = AgeVerificationAnalyticsUtils.trackAgeVerificationModalClicked(modalSessionId, AgeVerificationAnalyticsUtils.AgeVerificationModalVersion.EXPRESSIVE_V2, AgeVerificationAnalyticsUtils.AgeVerificationModalCta.METHOD_SELECT);
       callback();
     };
-    obj7.children = tmp10(tmp(5144).Button, obj8);
-    items4[1] = tmp10(tmp(5603).ButtonGroup, obj7);
+    obj7.children = tmp10(tmp(5186).Button, obj8);
+    items4[1] = tmp10(tmp(5645).ButtonGroup, obj7);
     obj5.children = items4;
     tmp15 = closure_9(closure_8, obj5);
   }
   let obj9 = { children: null };
-  let obj2 = modalSessionId(4935);
-  obj9.children = closure_7(modalSessionId(8655).ModalContent, { children: closure_7(modalSessionId(5142).Stack, { align: "center", justify: "center", spacing: 16, children: tmp15 }) });
-  return closure_7(modalSessionId(8654).ModalScreen, obj9);
+  let obj2 = modalSessionId(4968);
+  obj9.children = closure_7(modalSessionId(8693).ModalContent, { children: closure_7(modalSessionId(5184).Stack, { align: "center", justify: "center", spacing: 16, children: tmp15 }) });
+  return closure_7(modalSessionId(8692).ModalScreen, obj9);
 };

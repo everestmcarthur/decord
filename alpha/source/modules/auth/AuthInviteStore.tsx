@@ -1,12 +1,12 @@
-// Module ID: 4640
-// Function ID: 4641
+// Module ID: 4674
+// Function ID: 4675
 // Name: AuthInviteStore
-// Dependencies: [1972, 504, 573, 2]
+// Dependencies: [2055, 504, 573, 2]
 
-// Module 4640 (AuthInviteStore)
+// Module 4674 (AuthInviteStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import GuildRecordUtils from "GuildRecordUtils" /* 1972 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 2055 */;
 
 require = fn;
 let closure_2 = {};

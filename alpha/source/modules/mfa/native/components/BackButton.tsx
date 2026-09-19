@@ -1,13 +1,13 @@
-// Module ID: 15893
-// Function ID: 15894
+// Module ID: 15948
+// Function ID: 15949
 // Name: BackButton
-// Dependencies: [21, 1484, 15894, 1115, 15888, 2]
+// Dependencies: [21, 1484, 15949, 1115, 15943, 2]
 // Exports: default
 
-// Module 15893 (BackButton)
+// Module 15948 (BackButton)
 import jsxProd from "jsxProd" /* 21 */;
-import MfaStepsTypes from "MfaStepsTypes" /* 15888 */;
-import buttonDefault from "button" /* 15894 */;
+import MfaStepsTypes from "MfaStepsTypes" /* 15943 */;
+import buttonDefault from "button" /* 15949 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;

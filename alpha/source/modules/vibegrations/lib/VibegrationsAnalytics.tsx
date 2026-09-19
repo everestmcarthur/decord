@@ -1,14 +1,14 @@
-// Module ID: 16855
-// Function ID: 16856
+// Module ID: 9310
+// Function ID: 9311
 // Name: VibegrationsAnalytics
-// Dependencies: [4950, 16851, 1074, 7440, 1241, 2]
+// Dependencies: [4983, 9308, 1074, 7484, 1241, 2]
 // Exports: trackVibegrationDeployed, trackVibegrationErrored, trackVibegrationTurnResulted
 
-// Module 16855 (VibegrationsAnalytics)
+// Module 9310 (VibegrationsAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import VibegrationsUtils from "VibegrationsUtils" /* 7440 */;
-import ApplicationStore from "ApplicationStore" /* 4950 */;
-import VibegrationsProjectStore from "VibegrationsProjectStore" /* 16851 */;
+import VibegrationsUtils from "VibegrationsUtils" /* 7484 */;
+import ApplicationStore from "ApplicationStore" /* 4983 */;
+import VibegrationsProjectStore from "VibegrationsProjectStore" /* 9308 */;
 
 require = fn;
 function vibegrationLocation(project_id, isPreview) {

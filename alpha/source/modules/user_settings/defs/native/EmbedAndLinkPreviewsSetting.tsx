@@ -1,13 +1,13 @@
-// Module ID: 15679
-// Function ID: 15680
+// Module ID: 15734
+// Function ID: 15735
 // Name: EmbedAndLinkPreviewsSetting
-// Dependencies: [8194, 11714, 1115, 1936, 2]
+// Dependencies: [8232, 11723, 1115, 2019, 2]
 
-// Module 15679 (EmbedAndLinkPreviewsSetting)
+// Module 15734 (EmbedAndLinkPreviewsSetting)
 import util from "util" /* 1115 */;
-import UserSettings from "UserSettings" /* 1936 */;
-import SettingsConstants from "SettingsConstants" /* 8194 */;
-import SettingBuilders from "SettingBuilders" /* 11714 */;
+import UserSettings from "UserSettings" /* 2019 */;
+import SettingsConstants from "SettingsConstants" /* 8232 */;
+import SettingBuilders from "SettingBuilders" /* 11723 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({

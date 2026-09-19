@@ -1,19 +1,19 @@
-// Module ID: 9824
-// Function ID: 9825
+// Module ID: 9323
+// Function ID: 9324
 // Name: SuccessResultModal
-// Dependencies: [19, 17, 1958, 4361, 2012, 1074, 1483, 21, 4722, 576, 8564, 1115, 4925, 7538, 1241, 504, 4689, 4588, 1610, 7319, 9825, 4718, 5144, 2]
+// Dependencies: [19, 17, 2041, 4395, 2095, 1074, 1483, 21, 4756, 576, 8602, 1115, 4959, 7582, 1241, 504, 4723, 4622, 1610, 7363, 9324, 4752, 5186, 2]
 // Exports: default
 
-// Module 9824 (SuccessResultModal)
+// Module 9323 (SuccessResultModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4689 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4925 */;
-import transitionToGuild from "transitionToGuild" /* 7538 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4723 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4959 */;
+import transitionToGuild from "transitionToGuild" /* 7582 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
-import PermissionStore from "PermissionStore" /* 4361 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
+import PermissionStore from "PermissionStore" /* 4395 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2095 */;
 
 const AnalyticsUtilsDefault = tmp(1241);
 require = fn;
@@ -24,7 +24,7 @@ const Constants = fn(1074);
 const AppLauncherRouteName = fn(1483).AppLauncherRouteName;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, scrollView: { flex: 1 }, scrollViewContentContainer: null, inner: null, text: null, footer: null, footerLandscape: null, footerPortrait: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.scrollViewContentContainer = { height: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "center" };

@@ -1,17 +1,17 @@
-// Module ID: 15392
-// Function ID: 15393
+// Module ID: 15447
+// Function ID: 15448
 // Name: QuestDockContentCollapsed
-// Dependencies: [19, 17, 5614, 15301, 21, 4722, 15302, 4458, 5143, 7269, 2]
+// Dependencies: [19, 17, 5656, 15356, 21, 4756, 15357, 4492, 5185, 7313, 2]
 
-// Module 15392 (QuestDockContentCollapsed)
-import spring from "spring" /* 5143 */;
+// Module 15447 (QuestDockContentCollapsed)
+import spring from "spring" /* 5185 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const QuestDockMode = fn(5614).QuestDockMode;
-const QUEST_DOCK_MODE_CHANGE_PHYSICS = fn(15301).QUEST_DOCK_MODE_CHANGE_PHYSICS;
+const QuestDockMode = fn(5656).QuestDockMode;
+const QUEST_DOCK_MODE_CHANGE_PHYSICS = fn(15356).QUEST_DOCK_MODE_CHANGE_PHYSICS;
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj = { questDockContentCollapsed: null };
 const obj3 = {};
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);
@@ -31,7 +31,7 @@ export default noop.memo(function QuestDockContentCollapsed(children) {
     tmp = hideOnExpand;
   }
   hideOnExpand = tmp;
-  const activeQuestDockMode = noop.useContext(hideOnExpand(15302).QuestDockGestureContext).activeQuestDockMode;
+  const activeQuestDockMode = noop.useContext(hideOnExpand(15357).QuestDockGestureContext).activeQuestDockMode;
   const tmp2 = closure_7();
   const fn = function l() {
     let num = 1;
@@ -43,12 +43,12 @@ export default noop.memo(function QuestDockContentCollapsed(children) {
     }
     return { opacity: spring.withSpring(num, closure_5) };
   };
-  let obj = hideOnExpand(4458);
-  fn.__closure = { withSpring: hideOnExpand(5143).withSpring, activeQuestDockMode, QuestDockMode, hideOnExpand: tmp, QUEST_DOCK_MODE_CHANGE_PHYSICS };
+  let obj = hideOnExpand(4492);
+  fn.__closure = { withSpring: hideOnExpand(5185).withSpring, activeQuestDockMode, QuestDockMode, hideOnExpand: tmp, QUEST_DOCK_MODE_CHANGE_PHYSICS };
   fn.__workletHash = 13361221764426;
   fn.__initData = __initData;
   const animatedStyle = obj.useAnimatedStyle(fn);
-  const obj2 = { withSpring: hideOnExpand(5143).withSpring, activeQuestDockMode, QuestDockMode, hideOnExpand: tmp, QUEST_DOCK_MODE_CHANGE_PHYSICS };
+  const obj2 = { withSpring: hideOnExpand(5185).withSpring, activeQuestDockMode, QuestDockMode, hideOnExpand: tmp, QUEST_DOCK_MODE_CHANGE_PHYSICS };
   class C {
     constructor() {
       pointerEvents = "auto";
@@ -65,9 +65,9 @@ export default noop.memo(function QuestDockContentCollapsed(children) {
   C.__closure = { activeQuestDockMode, QuestDockMode, hideOnExpand: tmp };
   C.__workletHash = 14339269503421;
   C.__initData = __initData2;
-  const animatedProps = hideOnExpand(4458).useAnimatedProps(C);
+  const animatedProps = hideOnExpand(4492).useAnimatedProps(C);
   const obj4 = { style: null, animatedProps, children: children.children };
   const items = [tmp2.questDockContentCollapsed, animatedStyle];
   obj4.style = items;
-  return jsx(activeQuestDockMode(7269), { style: null, animatedProps, children: children.children });
+  return jsx(activeQuestDockMode(7313), { style: null, animatedProps, children: children.children });
 });

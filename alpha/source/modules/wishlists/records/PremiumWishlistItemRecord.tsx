@@ -1,12 +1,12 @@
-// Module ID: 9021
-// Function ID: 9022
+// Module ID: 9060
+// Function ID: 9061
 // Name: PremiumWishlistItemRecord
-// Dependencies: [5681, 9019, 1074, 2]
+// Dependencies: [5723, 9058, 1074, 2]
 // Exports: isPremiumWishlistItemRecord
 
-// Module 9021 (PremiumWishlistItemRecord)
-import SKURecord from "SKURecord" /* 5681 */;
-import BaseWishlistItemRecord from "BaseWishlistItemRecord" /* 9019 */;
+// Module 9060 (PremiumWishlistItemRecord)
+import SKURecord from "SKURecord" /* 5723 */;
+import BaseWishlistItemRecord from "BaseWishlistItemRecord" /* 9058 */;
 
 const SKUProductLines = fn(1074).SKUProductLines;
 const prototype = function PremiumWishlistItemRecord(sku) {

@@ -1,13 +1,13 @@
-// Module ID: 9053
-// Function ID: 9054
+// Module ID: 9092
+// Function ID: 9093
 // Name: CutoutableAvatarDecoration
-// Dependencies: [19, 17, 4714, 21, 563, 1397, 1364, 9054, 9050, 5757, 2]
+// Dependencies: [19, 17, 4748, 21, 563, 1397, 1364, 9093, 9089, 5799, 2]
 // Exports: default
 
-// Module 9053 (CutoutableAvatarDecoration)
+// Module 9092 (CutoutableAvatarDecoration)
 import AvatarUtils from "AvatarUtils" /* 1397 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4714 */;
+import AccessibilityStore from "AccessibilityStore" /* 4748 */;
 
 require = fn;
 const View = fn(17).View;

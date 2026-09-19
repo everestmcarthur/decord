@@ -1,22 +1,22 @@
-// Module ID: 7966
-// Function ID: 7967
+// Module ID: 8004
+// Function ID: 8005
 // Name: ReactionActionCreators
-// Dependencies: [5, 502, 1958, 4943, 1074, 1091, 5066, 1115, 1110, 573, 7965, 1271, 7967, 1241, 4902, 4573, 7985, 4379, 2]
+// Dependencies: [5, 502, 2041, 4976, 1074, 1091, 5108, 1115, 1110, 573, 8003, 1271, 8005, 1241, 4936, 4607, 8023, 4413, 2]
 // Exports: getReactors, playBurstReaction
 
-// Module 7966 (ReactionActionCreators)
+// Module 8004 (ReactionActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1091 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1110 */;
 import util from "util" /* 1115 */;
-import EmojiUtils from "EmojiUtils" /* 4379 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5066 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 7965 */;
-import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 7967 */;
+import EmojiUtils from "EmojiUtils" /* 4413 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5108 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 8003 */;
+import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8005 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
-import MessageStore from "MessageStore" /* 4943 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
+import MessageStore from "MessageStore" /* 4976 */;
 
 require = fn;
 function checkReactionResponse(arg0, fn, isRetry) {
@@ -789,7 +789,7 @@ let closure_23 = async function _removeReaction(arg0, value) {
                   if (burst != null) {
                     burst = burst.burst;
                   }
-                  const AccessibilityAnnouncer = channelId(4573).AccessibilityAnnouncer;
+                  const AccessibilityAnnouncer = channelId(4607).AccessibilityAnnouncer;
                   intl = channelId(1115).intl;
                   if (!burst) {
                     const obj6 = { name: tmp2.name };

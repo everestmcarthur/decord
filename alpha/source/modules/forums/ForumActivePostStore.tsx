@@ -1,23 +1,23 @@
-// Module ID: 7501
-// Function ID: 7502
+// Module ID: 7545
+// Function ID: 7546
 // Name: ForumActivePostStore
-// Dependencies: [5677, 7502, 502, 1958, 4737, 2012, 1967, 1969, 12, 7503, 11, 504, 1975, 573, 2]
+// Dependencies: [5719, 7546, 502, 2041, 4771, 2095, 2050, 2052, 12, 7547, 11, 504, 2058, 573, 2]
 // Exports: computeThreadIdsSnapshot
 
-// Module 7501 (ForumActivePostStore)
+// Module 7545 (ForumActivePostStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import ThreadSortOrder from "ThreadSortOrder" /* 1967 */;
-import ThreadSearchTagSetting from "ThreadSearchTagSetting" /* 1969 */;
-import SetUtils from "SetUtils" /* 1975 */;
-import ForumUtils from "ForumUtils" /* 7503 */;
-import ActiveThreadsStore from "ActiveThreadsStore" /* 5677 */;
-import ThreadMessageStore from "ThreadMessageStore" /* 7502 */;
+import ThreadSortOrder from "ThreadSortOrder" /* 2050 */;
+import ThreadSearchTagSetting from "ThreadSearchTagSetting" /* 2052 */;
+import SetUtils from "SetUtils" /* 2058 */;
+import ForumUtils from "ForumUtils" /* 7547 */;
+import ActiveThreadsStore from "ActiveThreadsStore" /* 5719 */;
+import ThreadMessageStore from "ThreadMessageStore" /* 7546 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
-import ReadStateStore from "ReadStateStore" /* 4737 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
+import ReadStateStore from "ReadStateStore" /* 4771 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2095 */;
 import apply_mod from "module_12" /* 12 */;
 
 require = fn;
@@ -86,7 +86,7 @@ function rebuildState(refreshThreadIds) {
       refreshThreadIds1 = sortThreadIds;
     }
     if (refreshThreadIds1) {
-      LATEST_ACTIVITY = LATEST_ACTIVITY(1967).ThreadSortOrder.LATEST_ACTIVITY;
+      LATEST_ACTIVITY = LATEST_ACTIVITY(2050).ThreadSortOrder.LATEST_ACTIVITY;
       closure_21 = apply.chain(closure_19).sort((id, id) => {
         let compare = dependencyMap;
         let num = -1;
@@ -94,7 +94,7 @@ function rebuildState(refreshThreadIds) {
           let lastMessageIdResult1 = id;
           if (tmpResult.isForumPostPinned(id)) {
             num = 1;
-          } else if (closure_0 === tmp(1967).ThreadSortOrder.LATEST_ACTIVITY) {
+          } else if (closure_0 === tmp(2050).ThreadSortOrder.LATEST_ACTIVITY) {
             compare = SnowflakeUtilsDefault.compare;
             let lastMessageIdResult = ReadStateStore.lastMessageId(lastMessageIdResult1);
             if (lastMessageIdResult == null) {
@@ -108,12 +108,12 @@ function rebuildState(refreshThreadIds) {
           } else {
             compareResult = SnowflakeUtilsDefault.compare(lastMessageIdResult1, id);
           }
-          tmpResult = tmp(7503);
+          tmpResult = tmp(7547);
         }
         return num;
       });
       const chainResult = apply.chain(closure_19);
-      const CREATION_DATE = LATEST_ACTIVITY(1967).ThreadSortOrder.CREATION_DATE;
+      const CREATION_DATE = LATEST_ACTIVITY(2050).ThreadSortOrder.CREATION_DATE;
       closure_20 = apply.chain(closure_19).sort((id, id) => {
         let compare = dependencyMap;
         let num = -1;
@@ -121,7 +121,7 @@ function rebuildState(refreshThreadIds) {
           let lastMessageIdResult1 = id;
           if (tmpResult.isForumPostPinned(id)) {
             num = 1;
-          } else if (closure_0 === tmp(1967).ThreadSortOrder.LATEST_ACTIVITY) {
+          } else if (closure_0 === tmp(2050).ThreadSortOrder.LATEST_ACTIVITY) {
             compare = SnowflakeUtilsDefault.compare;
             let lastMessageIdResult = ReadStateStore.lastMessageId(lastMessageIdResult1);
             if (lastMessageIdResult == null) {
@@ -135,13 +135,13 @@ function rebuildState(refreshThreadIds) {
           } else {
             compareResult = SnowflakeUtilsDefault.compare(lastMessageIdResult1, id);
           }
-          tmpResult = tmp(7503);
+          tmpResult = tmp(7547);
         }
         return num;
       });
       const chainResult1 = apply.chain(closure_19);
     }
-    const valueResult = LATEST_ACTIVITY === LATEST_ACTIVITY(1967).ThreadSortOrder.LATEST_ACTIVITY ? closure_21 : closure_20.value();
+    const valueResult = LATEST_ACTIVITY === LATEST_ACTIVITY(2050).ThreadSortOrder.LATEST_ACTIVITY ? closure_21 : closure_20.value();
     let found = valueResult;
     if (0 !== set.size) {
       closure_130_0 = set;
@@ -187,7 +187,7 @@ function rebuildState(refreshThreadIds) {
       tmp33 = found1;
     }
     found1 = tmp33;
-    const iter = LATEST_ACTIVITY === LATEST_ACTIVITY(1967).ThreadSortOrder.LATEST_ACTIVITY ? closure_21 : closure_20;
+    const iter = LATEST_ACTIVITY === LATEST_ACTIVITY(2050).ThreadSortOrder.LATEST_ACTIVITY ? closure_21 : closure_20;
     obj = set1;
   }
 }
@@ -195,8 +195,8 @@ let items = [];
 let id = null;
 let c12 = null;
 let set = new Set();
-let LATEST_ACTIVITY = fn(1967).ThreadSortOrder.LATEST_ACTIVITY;
-let MATCH_SOME = fn(1969).ThreadSearchTagSetting.MATCH_SOME;
+let LATEST_ACTIVITY = fn(2050).ThreadSortOrder.LATEST_ACTIVITY;
+let MATCH_SOME = fn(2052).ThreadSearchTagSetting.MATCH_SOME;
 let closure_16 = 0;
 let closure_17 = [];
 let c18 = false;
@@ -382,7 +382,7 @@ export const computeThreadIdsSnapshot = function computeThreadIdsSnapshot(id) {
         let lastMessageIdResult1 = id;
         if (tmpResult.isForumPostPinned(id)) {
           num = 1;
-        } else if (closure_0 === tmp(1967).ThreadSortOrder.LATEST_ACTIVITY) {
+        } else if (closure_0 === tmp(2050).ThreadSortOrder.LATEST_ACTIVITY) {
           compare = SnowflakeUtilsDefault.compare;
           let lastMessageIdResult = ReadStateStore.lastMessageId(lastMessageIdResult1);
           if (lastMessageIdResult == null) {
@@ -396,7 +396,7 @@ export const computeThreadIdsSnapshot = function computeThreadIdsSnapshot(id) {
         } else {
           compareResult = SnowflakeUtilsDefault.compare(lastMessageIdResult1, id);
         }
-        tmpResult = tmp(7503);
+        tmpResult = tmp(7547);
       }
       return num;
     });

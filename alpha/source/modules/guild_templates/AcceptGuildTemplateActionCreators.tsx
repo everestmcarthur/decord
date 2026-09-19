@@ -1,13 +1,13 @@
-// Module ID: 12048
-// Function ID: 12049
+// Module ID: 12057
+// Function ID: 12058
 // Name: AcceptGuildTemplateActionCreators
-// Dependencies: [5447, 1980, 1074, 573, 1271, 7538, 2]
+// Dependencies: [5489, 2063, 1074, 573, 1271, 7582, 2]
 
-// Module 12048 (AcceptGuildTemplateActionCreators)
+// Module 12057 (AcceptGuildTemplateActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import transitionToGuild from "transitionToGuild" /* 7538 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5447 */;
-import GuildStore from "GuildStore" /* 1980 */;
+import transitionToGuild from "transitionToGuild" /* 7582 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5489 */;
+import GuildStore from "GuildStore" /* 2063 */;
 
 require = fn;
 const Endpoints = fn(1074).Endpoints;

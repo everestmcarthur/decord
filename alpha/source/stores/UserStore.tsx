@@ -1,7 +1,7 @@
 // Module ID: 1372
 // Function ID: 1373
 // Name: UserStore
-// Dependencies: [1373, 1386, 502, 1073, 1074, 1374, 1388, 1383, 1882, 1883, 1389, 1393, 1394, 1395, 1385, 12, 1894, 1895, 1370, 2]
+// Dependencies: [1373, 1386, 502, 1073, 1074, 1374, 1388, 1383, 1965, 1966, 1389, 1393, 1394, 1395, 1385, 12, 1977, 1978, 1370, 2]
 
 // Module 1372 (UserStore)
 import _mod12 from "module_12" /* 12 */;
@@ -9,8 +9,8 @@ import GlobalUtils from "GlobalUtils" /* 1370 */;
 import UserStoreUtils from "UserStoreUtils" /* 1383 */;
 import FlagUtilsAll from "FlagUtils" /* 1385 */;
 import PrimaryGuildUtils from "PrimaryGuildUtils" /* 1388 */;
-import isActivityParticipantValidGuildMemberDefault from "isActivityParticipantValidGuildMember" /* 1894 */;
-import Server from "Server" /* 1895 */;
+import isActivityParticipantValidGuildMemberDefault from "isActivityParticipantValidGuildMember" /* 1977 */;
+import Server from "Server" /* 1978 */;
 import OverridePremiumTypeStore from "OverridePremiumTypeStore" /* 1373 */;
 import UserRecord from "UserRecord" /* 1386 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -96,15 +96,15 @@ function transformUser(mfa_enabled) {
   }
   const avatar_decoration_data = mfa_enabled.avatar_decoration_data;
   if (undefined !== avatar_decoration_data) {
-    mfa_enabled.avatarDecorationData = tmp4(1882).parseAvatarDecorationData(avatar_decoration_data);
+    mfa_enabled.avatarDecorationData = tmp4(1965).parseAvatarDecorationData(avatar_decoration_data);
     delete tmp[tmp3];
-    const tmp4Result = tmp4(1882);
+    const tmp4Result = tmp4(1965);
   }
   const collectibles = mfa_enabled.collectibles;
   if (undefined !== collectibles) {
     delete tmp[tmp3];
-    mfa_enabled.collectibles = tmp4(1883).parseServerUserCollectibles(collectibles);
-    const tmp4Result6 = tmp4(1883);
+    mfa_enabled.collectibles = tmp4(1966).parseServerUserCollectibles(collectibles);
+    const tmp4Result6 = tmp4(1966);
   }
   const global_name = mfa_enabled.global_name;
   if (undefined !== global_name) {

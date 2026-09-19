@@ -1,12 +1,12 @@
-// Module ID: 4860
-// Function ID: 4861
+// Module ID: 4894
+// Function ID: 4895
 // Name: getFrontierTuningConfigIfEligible
-// Dependencies: [1980, 1074, 1886, 4380, 4861, 2]
+// Dependencies: [2063, 1074, 1969, 4414, 4895, 2]
 // Exports: default
 
-// Module 4860 (getFrontierTuningConfigIfEligible)
-import PremiumUtilsDefault from "PremiumUtils" /* 4380 */;
-import GuildStore from "GuildStore" /* 1980 */;
+// Module 4894 (getFrontierTuningConfigIfEligible)
+import PremiumUtilsDefault from "PremiumUtils" /* 4414 */;
+import GuildStore from "GuildStore" /* 2063 */;
 
 const require = fn;
 const BoostedGuildTiers = fn(1074).BoostedGuildTiers;
@@ -24,7 +24,7 @@ export default function getFrontierTuningConfigIfEligible(location, currentUser,
       if (!obj4.isPremium(currentUser)) {
         if (!obj.canStreamQuality(PremiumUtilsDefault.StreamQuality.MID, currentUser)) {
           const obj2 = { location, guildId };
-          const config = tmp3(4861).getConfig(obj2);
+          const config = tmp3(4895).getConfig(obj2);
           let tmp6 = null;
           if (null != config.maxBitrate) {
             tmp6 = config;

@@ -1,15 +1,15 @@
-// Module ID: 17489
-// Function ID: 17490
+// Module ID: 17566
+// Function ID: 17567
 // Name: SecureFramesCallVerificationBottomSheet
-// Dependencies: [19, 4745, 1074, 21, 504, 9399, 8593, 9405, 1115, 9388, 2]
+// Dependencies: [19, 4779, 1074, 21, 504, 9980, 8631, 9986, 1115, 9969, 2]
 // Exports: default
 
-// Module 17489 (SecureFramesCallVerificationBottomSheet)
-import showShareActionSheet from "showShareActionSheet" /* 8593 */;
-import SecureFramesTracking from "SecureFramesTracking" /* 9399 */;
-import SecureFramesVerificationBottomSheetDefault from "SecureFramesVerificationBottomSheet" /* 9405 */;
+// Module 17566 (SecureFramesCallVerificationBottomSheet)
+import showShareActionSheet from "showShareActionSheet" /* 8631 */;
+import SecureFramesTracking from "SecureFramesTracking" /* 9980 */;
+import SecureFramesVerificationBottomSheetDefault from "SecureFramesVerificationBottomSheet" /* 9986 */;
 import noop from "module_19" /* 19 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4745 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4779 */;
 
 require = fn;
 const AnalyticsSections = fn(1074).AnalyticsSections;
@@ -42,7 +42,7 @@ export default function SecureFramesCallVerificationBottomSheet(channelId) {
   obj2.subtitle = intl2.string(channelId(1115).t["MPp7+C"]);
   const intl3 = channelId(1115).intl;
   const obj3 = { helpArticle: null };
-  obj3.helpArticle = channelId(9388).getSecureFramesHelpdeskArticle();
+  obj3.helpArticle = channelId(9969).getSecureFramesHelpdeskArticle();
   obj2.footer = intl3.format(channelId(1115).t.wKxADe, obj3);
   obj2.epochAuthenticator = stateFromStores;
   obj2.onShareClick = callback;

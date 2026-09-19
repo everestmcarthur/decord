@@ -1,13 +1,13 @@
-// Module ID: 6601
-// Function ID: 6602
+// Module ID: 6645
+// Function ID: 6646
 // Name: ServerBannerDefaultExample
-// Dependencies: [21, 5757, 6602, 2]
+// Dependencies: [21, 5799, 6646, 2]
 // Exports: ServerBannerDefaultExample
 
-// Module 6601 (ServerBannerDefaultExample)
+// Module 6645 (ServerBannerDefaultExample)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5757 */;
-import _modDef6602 from "module_6602" /* 6602 */;
+import FastImageDefault from "FastImage" /* 5799 */;
+import _modDef6646 from "module_6646" /* 6646 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const ServerBannerDefaultExample = function ServerBannerDefaultExample(wi
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6602 };
+  const obj2 = { uri: _modDef6646 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

@@ -1,10 +1,10 @@
-// Module ID: 1886
-// Function ID: 1887
+// Module ID: 1969
+// Function ID: 1970
 // Name: PremiumTypeUtils
 // Dependencies: [1374, 2]
 // Exports: isPremium, isPremiumAtLeast, isPremiumAtMost, isPremiumExactly
 
-// Module 1886 (PremiumTypeUtils)
+// Module 1969 (PremiumTypeUtils)
 import PremiumConstants from "PremiumConstants" /* 1374 */;
 import size from "module_2" /* 2 */;
 

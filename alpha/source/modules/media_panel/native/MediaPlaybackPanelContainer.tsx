@@ -1,12 +1,12 @@
-// Module ID: 17596
-// Function ID: 17597
+// Module ID: 17673
+// Function ID: 17674
 // Name: MediaPlaybackPanelContainer
-// Dependencies: [19, 21, 14756, 4347, 17597, 17599, 2]
+// Dependencies: [19, 21, 14810, 4381, 17674, 17676, 2]
 
-// Module 17596 (MediaPlaybackPanelContainer)
-import MediaPlayerManager from "MediaPlayerManager" /* 14756 */;
-import MediaPlaybackPanelControllerDefault from "MediaPlaybackPanelController" /* 17597 */;
-import MediaPlaybackPanelUIDefault from "MediaPlaybackPanelUI" /* 17599 */;
+// Module 17673 (MediaPlaybackPanelContainer)
+import MediaPlayerManager from "MediaPlayerManager" /* 14810 */;
+import MediaPlaybackPanelControllerDefault from "MediaPlaybackPanelController" /* 17674 */;
+import MediaPlaybackPanelUIDefault from "MediaPlaybackPanelUI" /* 17676 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

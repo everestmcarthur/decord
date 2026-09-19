@@ -1,15 +1,15 @@
-// Module ID: 1919
-// Function ID: 1920
+// Module ID: 2002
+// Function ID: 2003
 // Name: ApplicationRecord
-// Dependencies: [1387, 1920, 1386, 1921, 1349, 1086, 1922, 1397, 1924, 11, 2]
+// Dependencies: [1387, 2003, 1386, 2004, 1349, 1086, 2005, 1397, 2007, 11, 2]
 
-// Module 1919 (ApplicationRecord)
+// Module 2002 (ApplicationRecord)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
-import ApplicationOverlayMethodFlags from "ApplicationOverlayMethodFlags" /* 1924 */;
+import ApplicationOverlayMethodFlags from "ApplicationOverlayMethodFlags" /* 2007 */;
 import Record from "Record" /* 1387 */;
-import CompanyRecord from "CompanyRecord" /* 1920 */;
+import CompanyRecord from "CompanyRecord" /* 2003 */;
 import UserRecord from "UserRecord" /* 1386 */;
 
 require = fn;
@@ -27,7 +27,7 @@ function createExecutable(os) {
   }
   return obj;
 }
-const Constants = fn(1921);
+const Constants = fn(2004);
 ({ END_GAME_APPLICATION_ID, POKER_NIGHT_APPLICATION_ID } = Constants);
 const ApplicationTypes = fn(1349).ApplicationTypes;
 let closure_7 = { [POKER_NIGHT_APPLICATION_ID]: 7, [END_GAME_APPLICATION_ID]: 12 };

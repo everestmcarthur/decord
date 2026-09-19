@@ -1,14 +1,14 @@
-// Module ID: 9788
-// Function ID: 9789
+// Module ID: 9605
+// Function ID: 9606
 // Name: confirmActivityChangeAlert
-// Dependencies: [4371, 1372, 4875, 5066, 1115, 1926, 2]
+// Dependencies: [4405, 1372, 4909, 5108, 1115, 2009, 2]
 // Exports: default
 
-// Module 9788 (confirmActivityChangeAlert)
+// Module 9605 (confirmActivityChangeAlert)
 import util from "util" /* 1115 */;
-import useChannelName from "useChannelName" /* 4875 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5066 */;
-import RelationshipStore from "RelationshipStore" /* 4371 */;
+import useChannelName from "useChannelName" /* 4909 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5108 */;
+import RelationshipStore from "RelationshipStore" /* 4405 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -20,7 +20,7 @@ export default function confirmActivityChangeModal(name, channel, onConfirm, onC
   if (null != channel) {
     str = useChannelName.computeChannelName(channel, UserStore, RelationshipStore);
   }
-  const obj3 = { title: null, cancelText: null, confirmText: null, onConfirm: null, onCancel: null, body: null };
+  const obj3 = { title: null, cancelText: null, confirmText: null, onConfirm: null, onCancel: null, body: null, isDismissable: false };
   const intl = util.intl;
   obj3.title = intl.string(util.t.XkIWkk);
   const intl2 = util.intl;

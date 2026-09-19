@@ -1,19 +1,19 @@
-// Module ID: 5779
-// Function ID: 5780
+// Module ID: 5821
+// Function ID: 5822
 // Name: AnimatedPressableHighlight
-// Dependencies: [19, 17, 21, 4458, 5292, 5780, 4423, 576, 1364, 2]
+// Dependencies: [19, 17, 21, 4492, 5334, 5822, 4457, 576, 1364, 2]
 
-// Module 5779 (AnimatedPressableHighlight)
+// Module 5821 (AnimatedPressableHighlight)
 import nativeDefault from "native" /* 576 */;
-import useToken from "useToken" /* 4423 */;
-import useIOSPressEffects from "useIOSPressEffects" /* 5780 */;
+import useToken from "useToken" /* 4457 */;
+import useIOSPressEffects from "useIOSPressEffects" /* 5822 */;
 import noop from "module_19" /* 19 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4458 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4492 */;
 
 require = fn;
 const Pressable = fn(17).Pressable;
 const jsx = fn(21).jsx;
-let closure_6 = ReanimatedRexport.createAnimatedComponent(fn(5292).PressableHighlight);
+let closure_6 = ReanimatedRexport.createAnimatedComponent(fn(5334).PressableHighlight);
 const PlatformUtils = fn(1364);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/experimental/Pressables/native/AnimatedPressableHighlight.native.tsx");

@@ -1,18 +1,18 @@
-// Module ID: 12668
-// Function ID: 12669
+// Module ID: 12677
+// Function ID: 12678
 // Name: EmojiSuggestionBarLarge
-// Dependencies: [32, 19, 17, 10531, 21, 4722, 576, 12669, 4458, 10551, 10570, 4432, 2]
+// Dependencies: [32, 19, 17, 10547, 21, 4756, 576, 12678, 4492, 10567, 10586, 4466, 2]
 
-// Module 12668 (EmojiSuggestionBarLarge)
+// Module 12677 (EmojiSuggestionBarLarge)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 4432 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4458 */;
-import EmojiPickerListRow from "EmojiPickerListRow" /* 10551 */;
-import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils" /* 12669 */;
+import native from "native" /* 4466 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4492 */;
+import EmojiPickerListRow from "EmojiPickerListRow" /* 10567 */;
+import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils" /* 12678 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const ReanimatedRexportDefault = tmp(4458);
+const ReanimatedRexportDefault = tmp(4492);
 require = fn;
 function EmojiSuggestionBarLargeAnimated(arg0) {
   ({ reducedMotion: require, handlePress: importDefault, handlePressEmojiUnavailable: dependencyMap } = arg0);
@@ -59,7 +59,7 @@ function EmojiSuggestionBarLargeAnimated(arg0) {
       if (locked) {
         let openEmojiActionSheet = dependencyMap;
       } else {
-        openEmojiActionSheet = tmp8(10570).openEmojiActionSheet;
+        openEmojiActionSheet = tmp8(10586).openEmojiActionSheet;
       }
       obj3.onLongPressEmoji = openEmojiActionSheet;
       obj3.animateEmoji = !reducedMotion;
@@ -77,9 +77,9 @@ function renderEmojiSuggestionBarLargeItem(arg0, arg1, transitionState, cleanUp)
   return <EmojiSuggestionBarLargeAnimated key={arg0} />;
 }
 const View = fn(17).View;
-const IMAGE_SIZE = fn(10531).IMAGE_SIZE;
+const IMAGE_SIZE = fn(10547).IMAGE_SIZE;
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let closure_8 = createStyles.createStyles((arg0) => {
   const obj = { containerLargeWrapper: { overflow: "hidden" }, containerLarge: null, emptySlot: null };
   let str = "space-between";

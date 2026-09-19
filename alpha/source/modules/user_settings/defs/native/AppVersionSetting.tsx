@@ -1,23 +1,23 @@
-// Module ID: 15772
-// Function ID: 15773
+// Module ID: 15827
+// Function ID: 15828
 // Name: AppVersionSetting
-// Dependencies: [1363, 1115, 15773, 11714, 11066, 1936, 2]
+// Dependencies: [1363, 1115, 15828, 11723, 11079, 2019, 2]
 
-// Module 15772 (AppVersionSetting)
+// Module 15827 (AppVersionSetting)
 import util from "util" /* 1115 */;
-import CopyClientInfoSetting from "CopyClientInfoSetting" /* 15773 */;
+import CopyClientInfoSetting from "CopyClientInfoSetting" /* 15828 */;
 import ClientInfoUtils from "ClientInfoUtils" /* 1363 */;
 
 require = fn;
 const constants = ClientInfoUtils.getConstants();
-const SettingBuilders = fn(11714);
+const SettingBuilders = fn(11723);
 let obj = {
   useTitle: function useAppVersionSettingTitle() {
     const intl = util.intl;
     return intl.string(util.t.H66MEk);
   },
   parent: null,
-  IconComponent: fn(11066).ClydeIcon,
+  IconComponent: fn(11079).ClydeIcon,
   useTrailing: function useAppVersionSettingTrailing() {
     const clientInfoString = CopyClientInfoSetting.getClientInfoString(closure_3.ReleaseChannel);
     const obj2 = CopyClientInfoSetting;
@@ -31,7 +31,7 @@ let obj = {
     }
     return combined;
   },
-  usePredicate: fn(1936).DeveloperMode.useSetting
+  usePredicate: fn(2019).DeveloperMode.useSetting
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/AppVersionSetting.tsx");
@@ -42,7 +42,7 @@ export default SettingBuilders.createStatic({
     return intl.string(util.t.H66MEk);
   },
   parent: null,
-  IconComponent: fn(11066).ClydeIcon,
+  IconComponent: fn(11079).ClydeIcon,
   useTrailing: function useAppVersionSettingTrailing() {
     const clientInfoString = CopyClientInfoSetting.getClientInfoString(closure_3.ReleaseChannel);
     const obj2 = CopyClientInfoSetting;
@@ -56,5 +56,5 @@ export default SettingBuilders.createStatic({
     }
     return combined;
   },
-  usePredicate: fn(1936).DeveloperMode.useSetting
+  usePredicate: fn(2019).DeveloperMode.useSetting
 });

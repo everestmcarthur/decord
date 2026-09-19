@@ -1,13 +1,13 @@
-// Module ID: 15983
-// Function ID: 15984
+// Module ID: 16059
+// Function ID: 16060
 // Name: DesignSystemsSetting
-// Dependencies: [1074, 11714, 15471, 15984, 15833, 2]
+// Dependencies: [1074, 11723, 15526, 16060, 15888, 2]
 
-// Module 15983 (DesignSystemsSetting)
+// Module 16059 (DesignSystemsSetting)
 import Constants from "Constants" /* 1074 */;
-import PaintPaletteIcon from "PaintPaletteIcon" /* 15471 */;
-import useDesignSystemsSettingPredicate from "useDesignSystemsSettingPredicate" /* 15984 */;
-import SettingBuilders from "SettingBuilders" /* 11714 */;
+import PaintPaletteIcon from "PaintPaletteIcon" /* 15526 */;
+import useDesignSystemsSettingPredicate from "useDesignSystemsSettingPredicate" /* 16060 */;
+import SettingBuilders from "SettingBuilders" /* 11723 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

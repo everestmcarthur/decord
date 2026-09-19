@@ -1,17 +1,17 @@
-// Module ID: 8952
-// Function ID: 8953
+// Module ID: 8991
+// Function ID: 8992
 // Name: GameProfileMedia
-// Dependencies: [32, 19, 17, 4714, 1085, 21, 576, 8953, 4722, 8917, 8491, 8539, 1115, 8954, 8943, 504, 8957, 8958, 2]
+// Dependencies: [32, 19, 17, 4748, 1085, 21, 576, 8992, 4756, 8956, 8529, 8577, 1115, 8993, 8982, 504, 8996, 8997, 2]
 // Exports: default
 
-// Module 8952 (GameProfileMedia)
+// Module 8991 (GameProfileMedia)
 import nativeDefault from "native" /* 576 */;
-import openMediaModal from "openMediaModal" /* 8491 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8917 */;
-import GameProfileMediaSources from "GameProfileMediaSources" /* 8953 */;
+import openMediaModal from "openMediaModal" /* 8529 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8956 */;
+import GameProfileMediaSources from "GameProfileMediaSources" /* 8992 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4714 */;
+import AccessibilityStore from "AccessibilityStore" /* 4748 */;
 
 require = fn;
 function Separator() {
@@ -39,12 +39,12 @@ const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
 const PX_12 = nativeDefault.space.PX_12;
 const PX_16 = nativeDefault.space.PX_16;
-let closure_15 = 2 * (fn(8953).MEDIA_ITEM_MAX_WIDTH + PX_12);
-const createStyles = fn(4722);
+let closure_15 = 2 * (fn(8992).MEDIA_ITEM_MAX_WIDTH + PX_12);
+const createStyles = fn(4756);
 let obj = { container: { gap: nativeDefault.space.PX_12, marginHorizontal: -nativeDefault.space.PX_16 }, list: { overflow: "visible" }, separator: { width: PX_12 }, listPadding: { width: PX_16 }, mediaItem: null, mediaImage: null, mediaVideo: null, reducedMotionPoster: null, playIconWrapper: null };
 let obj3 = { gap: nativeDefault.space.PX_12, marginHorizontal: -nativeDefault.space.PX_16 };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
-obj.mediaItem = { maxWidth: fn(8953).MEDIA_ITEM_MAX_WIDTH, maxHeight: fn(8953).MEDIA_ITEM_MAX_HEIGHT, borderRadius: nativeDefault.radii.lg, overflow: "hidden" };
+obj.mediaItem = { maxWidth: fn(8992).MEDIA_ITEM_MAX_WIDTH, maxHeight: fn(8992).MEDIA_ITEM_MAX_HEIGHT, borderRadius: nativeDefault.radii.lg, overflow: "hidden" };
 obj.mediaImage = { width: "100%", height: "100%", resizeMode: "cover" };
 let size = { width: "100%", height: "100%", backgroundColor: nativeDefault.colors.BLACK };
 obj.mediaVideo = size;

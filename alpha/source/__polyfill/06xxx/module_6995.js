@@ -1,30 +1,54 @@
 // Module ID: 6995
 // Function ID: 6996
-// Dependencies: [19]
-// Exports: useStableCallback
+// Dependencies: [5, 32, 19, 17]
+// Exports: useIsScreenReaderEnabled
 
 // Module 6995
-import noop from "module_19" /* 19 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-({ useCallback: closure_0, useEffect: closure_1, useLayoutEffect: c2, useRef: c3 } = noop);
+const noop = fn(19);
+({ useEffect: c2, useState: c3 } = noop);
+const AccessibilityInfo = fn(17).AccessibilityInfo;
 
-export const useStableCallback = function useStableCallback(current) {
-  React3(undefined);
-  React2(() => {
-    closure_1.current = current;
-  });
-  framebus(() => () => {
-    ref.current = undefined;
+export const useIsScreenReaderEnabled = function useIsScreenReaderEnabled() {
+  const tmp = _slicedToArray(closure_3(false), 2);
+  closure_0 = tmp[1];
+  closure_2(() => {
+    closure_129_0 = closure_0(function*() {
+      closure_1 = tmp3;
+      yield screenReaderEnabled.isScreenReaderEnabled();
+      if (1 === tmp7) {
+        c3 = 0;
+        const _console = console;
+        console.warn("Could not read accessibility info: defaulting to false");
+        c5 = 3;
+      } else if (arg0 === 1) {
+        c5 = 3;
+        throw arg1;
+      } else if (arg0 !== 2) {
+        closure_128_0 = arg1;
+        closure_0(closure_128_0);
+        c3 = 0;
+      }
+      return arg1;
+    });
+    (function checkStatus() {
+      const self = this;
+      const apply = closure_0.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+      return applyArgumentsResult;
+    })();
+    closure_0 = AccessibilityInfo.addEventListener("screenReaderChanged", (event) => {
+      closure_0(event);
+    });
+    return () => {
+      closure_0.remove();
+    };
   }, []);
-  return React(() => {
-    const items = [...arguments];
-    current = ref.current;
-    let applyResult;
-    if (current != null) {
-      const items1 = [];
-      HermesBuiltin.arraySpread(items, 0);
-      applyResult = HermesBuiltin.apply(items1, tmp);
-    }
-    return applyResult;
-  }, []);
+  return tmp[0];
 };

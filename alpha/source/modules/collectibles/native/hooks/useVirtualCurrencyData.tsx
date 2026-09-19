@@ -1,12 +1,12 @@
-// Module ID: 13397
-// Function ID: 13398
+// Module ID: 13453
+// Function ID: 13454
 // Name: useVirtualCurrencyData
-// Dependencies: [19, 7749, 9089, 2]
+// Dependencies: [19, 7793, 9128, 2]
 // Exports: useVirtualCurrencyData
 
-// Module 13397 (useVirtualCurrencyData)
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7749 */;
-import _mod9089 from "module_9089" /* 9089 */;
+// Module 13453 (useVirtualCurrencyData)
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7793 */;
+import _mod9128 from "module_9128" /* 9128 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ const result = size.fileFinishedImporting("modules/collectibles/native/hooks/use
 export const useVirtualCurrencyData = function useVirtualCurrencyData(product, canUseShopDiscountsResult) {
   const productOrbPrice = CollectiblesProductUtils.getProductOrbPrice({ product, hasShopDiscount: canUseShopDiscountsResult });
   const obj2 = { product, hasShopDiscount: canUseShopDiscountsResult };
-  const balance = _mod9089.useFetchVirtualCurrencyBalance().balance;
+  const balance = _mod9128.useFetchVirtualCurrencyBalance().balance;
   const items = [productOrbPrice, balance];
   return {
     price: productOrbPrice,

@@ -1,9 +1,9 @@
-// Module ID: 15989
-// Function ID: 15990
+// Module ID: 16065
+// Function ID: 16066
 // Name: useDesignSystemSettingsState
 // Dependencies: [560, 2]
 
-// Module 15989 (useDesignSystemSettingsState)
+// Module 16065 (useDesignSystemSettingsState)
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 

@@ -1,17 +1,17 @@
-// Module ID: 16893
-// Function ID: 16894
+// Module ID: 16960
+// Function ID: 16961
 // Name: FrameView
-// Dependencies: [32, 19, 9748, 9749, 1921, 21, 7359, 573, 9816, 16894, 9880, 16895, 16896, 9895, 504, 2]
+// Dependencies: [32, 19, 9312, 9313, 2004, 21, 7403, 573, 9561, 16961, 9722, 16962, 16963, 9737, 504, 2]
 // Exports: InlineFrameView
 
-// Module 16893 (FrameView)
+// Module 16960 (FrameView)
 import initialize from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import FramesNativeManagerDefault from "FramesNativeManager" /* 9816 */;
-import frames_getDefaultOrientationLockState from "frames/getDefaultOrientationLockState" /* 16894 */;
+import FramesNativeManagerDefault from "FramesNativeManager" /* 9561 */;
+import frames_getDefaultOrientationLockState from "frames/getDefaultOrientationLockState" /* 16961 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 9748 */;
+import FramesStore from "FramesStore" /* 9312 */;
 
 require = fn;
 function FrameViewInner(frame) {
@@ -75,9 +75,9 @@ function FrameViewInner(frame) {
   }} applicationId={frame.applicationId} frameId={frame.id} activityUrl={frame.data.url} queryParams={null} onLoadError={null} allowPopups={null} referrerPolicy="origin" isPipOrGridMode={null} webViewKey={null} safeAreasConfig={null} />;
   return jsx(frame(setIsResetting[10]).BaseActivityView, { wakeLockKey: "FrameActivities", showLoadingIndicator: first, isResetting, children: null });
 }
-const FramesConstants = fn(9749);
+const FramesConstants = fn(9313);
 ({ asLaunched: metroRequire, FrameLayoutModes: closure_7 } = FramesConstants);
-const ActivityPlatform = fn(1921).ActivityPlatform;
+const ActivityPlatform = fn(2004).ActivityPlatform;
 const jsx = fn(21).jsx;
 const memoResult = noop.memo(function FrameViewGate(arg0) {
   const items = [FramesStore];

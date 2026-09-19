@@ -1,13 +1,13 @@
-// Module ID: 13363
-// Function ID: 13364
+// Module ID: 13419
+// Function ID: 13420
 // Name: ShopThisLookAnalyticsUtils
-// Dependencies: [1074, 1890, 1241, 2]
+// Dependencies: [1074, 1973, 1241, 2]
 // Exports: trackShopThisLookMenuAction, trackShopThisLookRowAction
 
-// Module 13363 (ShopThisLookAnalyticsUtils)
+// Module 13419 (ShopThisLookAnalyticsUtils)
 import Constants from "Constants" /* 1074 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1890 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1973 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;
@@ -28,11 +28,11 @@ export const trackShopThisLookRowAction = function trackShopThisLookRowAction(ar
   const obj2 = { action, sku_id: skuId, product_type: null, is_disabled: null, source: null };
   if (CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME === productType) {
     let NAMEPLATE = obj.PROFILE_FRAME;
-  } else if (tmp2(1890).CollectiblesItemType.PROFILE_EFFECT === productType) {
+  } else if (tmp2(1973).CollectiblesItemType.PROFILE_EFFECT === productType) {
     NAMEPLATE = obj.PROFILE_EFFECT;
-  } else if (tmp2(1890).CollectiblesItemType.AVATAR_DECORATION === productType) {
+  } else if (tmp2(1973).CollectiblesItemType.AVATAR_DECORATION === productType) {
     NAMEPLATE = obj.AVATAR_DECORATION;
-  } else if (tmp2(1890).CollectiblesItemType.NAMEPLATE === productType) {
+  } else if (tmp2(1973).CollectiblesItemType.NAMEPLATE === productType) {
     NAMEPLATE = obj.NAMEPLATE;
   }
   obj2.product_type = NAMEPLATE;

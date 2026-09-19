@@ -1,17 +1,17 @@
-// Module ID: 7240
-// Function ID: 7241
+// Module ID: 7284
+// Function ID: 7285
 // Name: AddPhone
-// Dependencies: [5, 32, 19, 17, 7137, 1952, 1372, 1074, 1085, 21, 4722, 576, 504, 6784, 7241, 4622, 4718, 1115, 7242, 7157, 4925, 7243, 1897, 5144, 5067, 7273, 2]
+// Dependencies: [5, 32, 19, 17, 7181, 2035, 1372, 1074, 1085, 21, 4756, 576, 504, 6828, 7285, 4656, 4752, 1115, 7286, 7201, 4959, 7287, 1980, 5186, 5109, 7317, 2]
 // Exports: default
 
-// Module 7240 (AddPhone)
+// Module 7284 (AddPhone)
 import nativeDefault from "native" /* 576 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5067 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PhoneStore from "PhoneStore" /* 7137 */;
-import UserRequiredActionStore from "UserRequiredActionStore" /* 1952 */;
+import PhoneStore from "PhoneStore" /* 7181 */;
+import UserRequiredActionStore from "UserRequiredActionStore" /* 2035 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const require = globalThis.__r;
@@ -23,7 +23,7 @@ const UserFlags = fn(1074).UserFlags;
 const NOOP_NULL = fn(1085).NOOP_NULL;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { background: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, container: { padding: 16, flex: 1 }, title: { textAlign: "center" }, input: { marginTop: 24 }, redesignInput: null, button: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.redesignInput = { borderRadius: nativeDefault.radii.lg };
@@ -275,7 +275,8 @@ export default function AddPhone(reason) {
                           return closure_3_13(closure_0, obj);
                         };
                       });
-                    }
+                    },
+                isDismissable: false
               };
               actions_AlertActionCreatorsDefault.openLazy(obj3);
             } else if (onDeletePhone != null) {

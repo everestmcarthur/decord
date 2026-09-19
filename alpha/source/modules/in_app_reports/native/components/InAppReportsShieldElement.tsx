@@ -1,17 +1,17 @@
-// Module ID: 8886
-// Function ID: 8887
+// Module ID: 8925
+// Function ID: 8926
 // Name: InAppReportsShieldElement
-// Dependencies: [19, 17, 21, 4722, 5862, 2]
+// Dependencies: [19, 17, 21, 4756, 5904, 2]
 // Exports: default
 
-// Module 8886 (InAppReportsShieldElement)
-import native from "native" /* 5862 */;
+// Module 8925 (InAppReportsShieldElement)
+import native from "native" /* 5904 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let closure_4 = createStyles.createStyles({ container: { flex: 0, alignSelf: "center", marginBottom: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsShieldElement.tsx");

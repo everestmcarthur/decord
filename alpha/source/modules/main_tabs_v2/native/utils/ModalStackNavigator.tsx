@@ -1,17 +1,17 @@
-// Module ID: 11174
-// Function ID: 11175
+// Module ID: 11187
+// Function ID: 11188
 // Name: ModalStackNavigator
-// Dependencies: [19, 21, 8118, 7196, 8067, 11175, 1364, 2]
+// Dependencies: [19, 21, 8156, 7240, 8105, 11188, 1364, 2]
 
-// Module 11174 (ModalStackNavigator)
-import Navigator from "Navigator" /* 7196 */;
-import HeaderShared from "HeaderShared" /* 8067 */;
-import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 11175 */;
+// Module 11187 (ModalStackNavigator)
+import Navigator from "Navigator" /* 7240 */;
+import HeaderShared from "HeaderShared" /* 8105 */;
+import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 11188 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const NativeStackNavigator = fn(8118);
+const NativeStackNavigator = fn(8156);
 let closure_4 = NativeStackNavigator.createNativeStackNavigator();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/utils/ModalStackNavigator.tsx");

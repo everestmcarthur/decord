@@ -1,8 +1,8 @@
-// Module ID: 6466
-// Function ID: 6467
+// Module ID: 6510
+// Function ID: 6511
 // Dependencies: [2]
 
-// Module 6466
+// Module 6510
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/NitroGradientBackgroundAbstractUI-2x.png.js");

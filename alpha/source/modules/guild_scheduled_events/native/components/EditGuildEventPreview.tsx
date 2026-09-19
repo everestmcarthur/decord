@@ -1,18 +1,18 @@
-// Module ID: 10013
-// Function ID: 10014
+// Module ID: 9864
+// Function ID: 9865
 // Name: EditGuildEventPreview
-// Dependencies: [19, 17, 1958, 1074, 21, 4722, 576, 1364, 504, 4875, 9950, 10014, 4718, 1115, 10015, 1177, 10016, 9949, 7319, 10017, 5144, 9910, 5067, 10032, 1897, 2]
+// Dependencies: [19, 17, 2041, 1074, 21, 4756, 576, 1364, 504, 4909, 9789, 9865, 4752, 1115, 9866, 1177, 9867, 9788, 7363, 9868, 5186, 9752, 5109, 9884, 1980, 2]
 // Exports: default
 
-// Module 10013 (EditGuildEventPreview)
+// Module 9864 (EditGuildEventPreview)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
-import Text_Text from "Text/Text" /* 4718 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5067 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 9949 */;
-import guildEventDetailsParser from "guildEventDetailsParser" /* 10016 */;
+import Text_Text from "Text/Text" /* 4752 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5109 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 9788 */;
+import guildEventDetailsParser from "guildEventDetailsParser" /* 9867 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
 
 require = fn;
 function PreviewBody(event) {
@@ -24,7 +24,7 @@ function PreviewBody(event) {
   let items = [eventLocationIconSource];
   const items1 = [channel_id];
   const stateFromStores = require("initialize").useStateFromStores(items, () => ChannelStore.getChannel(channel_id), items1);
-  const tmp6 = channel_id(4875)(stateFromStores);
+  const tmp6 = channel_id(4909)(stateFromStores);
   dependencyMap = tmp6;
   let obj = require("initialize");
   const tmp5 = channel_id;
@@ -47,7 +47,7 @@ function PreviewBody(event) {
     const intl2 = tmp2(1115).intl;
     const obj6 = { channelName: null };
     const obj7 = { channel: stateFromStores };
-    obj6.channelName = tmp5(10015)(obj7);
+    obj6.channelName = tmp5(9866)(obj7);
     formatToPlainStringResult = intl2.formatToPlainString(tmp2(1115).t.sxcQPE, obj6);
   }
   obj5.accessibilityLabel = formatToPlainStringResult;
@@ -96,7 +96,7 @@ function PreviewBody(event) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { container: { flex: 1, padding: 16, paddingBottom: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "column", height: "100%", overflow: "visible" }, centered: { flexDirection: "column", alignItems: "center", justifyContent: "center" }, centerContainer: { flexGrow: 0, width: "100%" }, flex: { flex: 1, overflow: "visible" }, header: { alignItems: "center", paddingBottom: 24 }, headerTitle: { marginTop: 16, marginBottom: 8 }, headerSubtitle: { textAlign: "center" }, eventContainer: null, channelContainer: null, channelIcon: null, buttonContainer: null, error: null };
 let obj3 = { flex: 1, padding: 16, paddingBottom: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "column", height: "100%", overflow: "visible" };
 obj2.eventContainer = { padding: 16, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, marginBottom: 24, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1, borderRadius: nativeDefault.radii.sm, shadowOpacity: 0.2, elevation: 2, shadowRadius: 16, shadowOffset: { height: 8, width: 0 }, overflow: "visible" };
@@ -175,7 +175,8 @@ export default function EditGuildEventPreview(guild) {
                             return closure_3_6(closure_0, obj);
                           };
                         });
-                      }
+                      },
+                isDismissable: false
               };
               actions_AlertActionCreatorsDefault.openLazy(obj3);
             }

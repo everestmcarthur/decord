@@ -1,15 +1,15 @@
-// Module ID: 9139
-// Function ID: 9140
+// Module ID: 9178
+// Function ID: 9179
 // Name: GameProfileReportButton
-// Dependencies: [19, 21, 4689, 8917, 4925, 9140, 1897, 9140, 5144, 1115, 2]
+// Dependencies: [19, 21, 4723, 8956, 4959, 9179, 1980, 9179, 5186, 1115, 2]
 // Exports: default
 
-// Module 9139 (GameProfileReportButton)
-import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4689 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4925 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8917 */;
-import GameDetectionReportModal from "GameDetectionReportModal" /* 9140 */;
+// Module 9178 (GameProfileReportButton)
+import asyncRequireImpl from "asyncRequireImpl" /* 1980 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4723 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4959 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8956 */;
+import GameDetectionReportModal from "GameDetectionReportModal" /* 9179 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -26,11 +26,11 @@ export default function GameProfileReportButton(applicationId) {
     trackAction(GameProfileAnalyticUtils.GameProfileTrackActionActions.Feedback);
     const obj2 = ModalActionCreatorsDefault;
     const obj3 = { applicationId };
-    obj2.pushLazy(asyncRequireImpl(9140, dependencyMap.paths), obj3, GameDetectionReportModal.MODAL_KEY);
+    obj2.pushLazy(asyncRequireImpl(9179, dependencyMap.paths), obj3, GameDetectionReportModal.MODAL_KEY);
   }, items);
   let obj = { variant: "secondary", size: "md", text: null, onPress: null };
   const intl = applicationId(1115).intl;
   obj.text = intl.string(applicationId(1115).t.qP2cXd);
   obj.onPress = callback;
-  return jsx(applicationId(5144).Button, { variant: "secondary", size: "md", text: null, onPress: null });
+  return jsx(applicationId(5186).Button, { variant: "secondary", size: "md", text: null, onPress: null });
 };

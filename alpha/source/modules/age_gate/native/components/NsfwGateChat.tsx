@@ -1,14 +1,14 @@
-// Module ID: 12905
-// Function ID: 12906
+// Module ID: 12914
+// Function ID: 12915
 // Name: NsfwGateChat
-// Dependencies: [19, 17, 21, 4722, 576, 12906, 4718, 1115, 2]
+// Dependencies: [19, 17, 21, 4756, 576, 12915, 4752, 1115, 2]
 // Exports: default
 
-// Module 12905 (NsfwGateChat)
+// Module 12914 (NsfwGateChat)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4718 */;
-import _modDef12906 from "module_12906" /* 12906 */;
+import Text_Text from "Text/Text" /* 4752 */;
+import _modDef12915 from "module_12915" /* 12915 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 const obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "center" }, border: null, description: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "center" };
 obj2.border = { height: StyleSheet.hairlineWidth, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
@@ -30,7 +30,7 @@ export default function NsfwGateChat() {
   const obj = { children: null };
   const items = [hasOwnProperty(React3, { style: tmp.border }), ];
   const obj3 = { style: tmp.container, children: null };
-  const items1 = [hasOwnProperty(React4, { source: _modDef12906 }), ];
+  const items1 = [hasOwnProperty(React4, { source: _modDef12915 }), ];
   const obj5 = { style: tmp.description, variant: "text-md/medium", color: "text-muted", children: null };
   const intl = util.intl;
   obj5.children = intl.string(util.t.W4Qyxr);

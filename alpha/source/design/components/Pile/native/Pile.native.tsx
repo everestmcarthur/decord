@@ -1,19 +1,19 @@
-// Module ID: 11254
-// Function ID: 11255
+// Module ID: 11267
+// Function ID: 11268
 // Name: Pile
-// Dependencies: [19, 17, 21, 4722, 1370, 12, 9054, 11255, 2]
+// Dependencies: [19, 17, 21, 4756, 1370, 12, 9093, 11268, 2]
 // Exports: Pile
 
-// Module 11254 (Pile)
+// Module 11267 (Pile)
 import GlobalUtils from "GlobalUtils" /* 1370 */;
-import ClipViewDefault from "ClipView" /* 9054 */;
-import PileOverflow from "PileOverflow" /* 11255 */;
+import ClipViewDefault from "ClipView" /* 9093 */;
+import PileOverflow from "PileOverflow" /* 11268 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let closure_6 = createStyles.createStyles({ pile: { flexDirection: "row" } });
 let size = fn(2);
 let result = size.fileFinishedImporting("design/components/Pile/native/Pile.native.tsx");
@@ -47,7 +47,7 @@ export const Pile = function Pile(aria_label) {
         if (tmp3Result.isArray(tmp5)) {
           sum = tmp5[arg1 + 1];
         }
-        if (tmp3(9054).CutoutShape.Circle === closure_1_0) {
+        if (tmp3(9093).CutoutShape.Circle === closure_1_0) {
           const point = { shape: tmp10, x: null, y: null, size: null };
           if (null == closure_1_3) {
             let result = -dependencyMap;
@@ -63,7 +63,7 @@ export const Pile = function Pile(aria_label) {
           point.y = result1;
           sum = sum + 2 * dependencyMap;
           point.size = sum;
-        } else if (tmp3(9054).CutoutShape.RoundedRect === tmp10) {
+        } else if (tmp3(9093).CutoutShape.RoundedRect === tmp10) {
           size = { shape: tmp10, x: null, y: null, width: null, height: null, cornerRadius: null };
           if (null == closure_1_3) {
             let result2 = -dependencyMap;

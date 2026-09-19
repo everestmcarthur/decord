@@ -1,17 +1,17 @@
-// Module ID: 11654
-// Function ID: 11655
+// Module ID: 11663
+// Function ID: 11664
 // Name: VibingWumpusModal
-// Dependencies: [32, 19, 17, 4714, 11615, 11655, 1074, 21, 4722, 576, 563, 11208, 1241, 11656, 5699, 11657, 4718, 1115, 5144, 4925, 8506, 8508, 7196, 2]
+// Dependencies: [32, 19, 17, 4748, 11624, 11664, 1074, 21, 4756, 576, 563, 11221, 1241, 11665, 5741, 11666, 4752, 1115, 5186, 4959, 8544, 8546, 7240, 2]
 // Exports: default
 
-// Module 11654 (VibingWumpusModal)
+// Module 11663 (VibingWumpusModal)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import Navigator from "Navigator" /* 7196 */;
-import InappropriateConversationsActionCreators from "InappropriateConversationsActionCreators" /* 11208 */;
+import Navigator from "Navigator" /* 7240 */;
+import InappropriateConversationsActionCreators from "InappropriateConversationsActionCreators" /* 11221 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4714 */;
+import AccessibilityStore from "AccessibilityStore" /* 4748 */;
 
 require = fn;
 class VibingWumpusScreen {
@@ -157,13 +157,13 @@ class VibingWumpusScreen {
 }
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const VIBING_WUMPUS_MODAL_KEY = fn(11615).VIBING_WUMPUS_MODAL_KEY;
-const InappropriateConversationsConstants = fn(11655);
+const VIBING_WUMPUS_MODAL_KEY = fn(11624).VIBING_WUMPUS_MODAL_KEY;
+const InappropriateConversationsConstants = fn(11664);
 ({ VibingWumpusAction: closure_9, VibingWumpusSource: c10 } = InappropriateConversationsConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { container: { display: "flex", alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_32, gap: nativeDefault.space.PX_16, height: "100%" }, warningText: null, ctaContainer: null, takeoverHeader: null, takeoverDescription: null, wumpus: null, rings: null };
 let obj3 = { display: "flex", alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_32, gap: nativeDefault.space.PX_16, height: "100%" };
 obj2.warningText = { marginBottom: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_4 };

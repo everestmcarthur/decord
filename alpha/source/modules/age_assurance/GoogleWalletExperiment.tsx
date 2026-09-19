@@ -1,10 +1,10 @@
-// Module ID: 8821
-// Function ID: 8822
+// Module ID: 8859
+// Function ID: 8860
 // Name: GoogleWalletExperiment
 // Dependencies: [1434, 2]
 // Exports: isGoogleWalletEnabled, useIsGoogleWalletEnabled
 
-// Module 8821 (GoogleWalletExperiment)
+// Module 8859 (GoogleWalletExperiment)
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

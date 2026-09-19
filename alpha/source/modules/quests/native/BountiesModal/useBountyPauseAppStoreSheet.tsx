@@ -1,19 +1,19 @@
-// Module ID: 15240
-// Function ID: 15241
+// Module ID: 15291
+// Function ID: 15292
 // Name: useBountyPauseAppStoreSheet
-// Dependencies: [19, 5614, 1074, 11535, 11732, 15234, 1110, 5619, 7924, 11742, 7914, 5621, 15232, 2]
+// Dependencies: [19, 5656, 1074, 11544, 11739, 15289, 1110, 5661, 7962, 11749, 7952, 5663, 15286, 2]
 // Exports: useBountyPauseAppStoreSheet
 
-// Module 15240 (useBountyPauseAppStoreSheet)
+// Module 15291 (useBountyPauseAppStoreSheet)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1110 */;
-import AdCreativeType from "AdCreativeType" /* 5621 */;
-import AnalyticsActions from "AnalyticsActions" /* 7914 */;
-import AdsVideoTypes from "AdsVideoTypes" /* 15232 */;
-import QuestCustomAppStoreOverlayUtils from "QuestCustomAppStoreOverlayUtils" /* 15234 */;
+import AdCreativeType from "AdCreativeType" /* 5663 */;
+import AnalyticsActions from "AnalyticsActions" /* 7952 */;
+import AdsVideoTypes from "AdsVideoTypes" /* 15286 */;
+import QuestCustomAppStoreOverlayUtils from "QuestCustomAppStoreOverlayUtils" /* 15289 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const QuestsExperimentLocations = fn(5614).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5656).QuestsExperimentLocations;
 const ComponentActions = fn(1074).ComponentActions;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/useBountyPauseAppStoreSheet.tsx");
@@ -112,7 +112,7 @@ export const useBountyPauseAppStoreSheet = function useBountyPauseAppStoreSheet(
     if (isActive) {
       if (arg0 === AdsVideoTypes.PlaybackTriggerSource.USER_INTERACTION) {
         if (null != c5) {
-          if (tmp4 === tmp2(11535).BountiesMobileQuestBarCtrVariant.FIRST_TAP_APP_STORE_OVERLAY) {
+          if (tmp4 === tmp2(11544).BountiesMobileQuestBarCtrVariant.FIRST_TAP_APP_STORE_OVERLAY) {
             if (!ref.current) {
               tmp8.current = true;
               callback1().then((result) => {

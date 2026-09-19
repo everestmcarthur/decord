@@ -1,13 +1,13 @@
-// Module ID: 13207
-// Function ID: 13208
+// Module ID: 13255
+// Function ID: 13256
 // Name: useMediaItemSpoilerState
-// Dependencies: [32, 19, 8496, 4458, 4723, 1177, 2]
+// Dependencies: [32, 19, 8534, 4492, 4757, 1177, 2]
 // Exports: useMediaItemSpoilerState
 
-// Module 13207 (useMediaItemSpoilerState)
+// Module 13255 (useMediaItemSpoilerState)
 import native from "native" /* 1177 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4458 */;
-import timing from "timing" /* 4723 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4492 */;
+import timing from "timing" /* 4757 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,8 +18,8 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/media_viewer/native/useMediaItemSpoilerState.tsx");
 
 export const useMediaItemSpoilerState = function useMediaItemSpoilerState(index) {
-  mediaItemHasSpoiler = mediaItemHasSpoiler(8496).useMediaItemHasSpoiler(index);
-  let obj = mediaItemHasSpoiler(8496);
+  mediaItemHasSpoiler = mediaItemHasSpoiler(8534).useMediaItemHasSpoiler(index);
+  let obj = mediaItemHasSpoiler(8534);
   let obj2 = noop;
   const tmp = mediaItemHasSpoiler;
   [tmp5, dependencyMap] = sharedValue(noop.useState(mediaItemHasSpoiler), 2);
@@ -28,7 +28,7 @@ export const useMediaItemSpoilerState = function useMediaItemSpoilerState(index)
   if (mediaItemHasSpoiler) {
     num = 1;
   }
-  sharedValue = mediaItemHasSpoiler(4458).useSharedValue(num);
+  sharedValue = mediaItemHasSpoiler(4492).useSharedValue(num);
   const items = [mediaItemHasSpoiler, sharedValue];
   const effect = obj2.useEffect(() => {
     let num = 0;
@@ -47,13 +47,13 @@ export const useMediaItemSpoilerState = function useMediaItemSpoilerState(index)
     const result = sharedValue.set(obj.withTiming(num, obj2, "respect-motion-settings", fn));
   }, items);
   const items1 = [tmp5, ];
-  const obj3 = mediaItemHasSpoiler(4458);
+  const obj3 = mediaItemHasSpoiler(4492);
   let fn = function l() {
     return { opacity: sharedValue.get() };
   };
   fn.__closure = { spoilerOpacity: sharedValue };
   fn.__workletHash = 8496335051493;
   fn.__initData = __initData;
-  items1[1] = tmp(4458).useAnimatedStyle(fn);
+  items1[1] = tmp(4492).useAnimatedStyle(fn);
   return items1;
 };

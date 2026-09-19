@@ -1,11 +1,11 @@
-// Module ID: 12633
-// Function ID: 12634
+// Module ID: 12642
+// Function ID: 12643
 // Name: useMentionAnchor
-// Dependencies: [32, 19, 10503, 2]
+// Dependencies: [32, 19, 10519, 2]
 // Exports: default
 
-// Module 12633 (useMentionAnchor)
-import autocompleter_AutocompleteUtils from "autocompleter/AutocompleteUtils" /* 10503 */;
+// Module 12642 (useMentionAnchor)
+import autocompleter_AutocompleteUtils from "autocompleter/AutocompleteUtils" /* 10519 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

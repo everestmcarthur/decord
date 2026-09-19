@@ -1,16 +1,16 @@
-// Module ID: 9781
-// Function ID: 9782
+// Module ID: 9636
+// Function ID: 9637
 // Name: handleJoinEmbeddedActivity
-// Dependencies: [5, 4950, 1958, 2012, 1372, 1957, 1921, 9782, 9752, 4351, 9783, 9785, 9787, 9776, 9793, 9794, 9795, 9742, 2]
+// Dependencies: [5, 4983, 2041, 2095, 1372, 2040, 2004, 9637, 9574, 4385, 9638, 9603, 9602, 9613, 9614, 9599, 13179, 9592, 2]
 // Exports: default
 
-// Module 9781 (handleJoinEmbeddedActivity)
+// Module 9636 (handleJoinEmbeddedActivity)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 4950 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
+import ApplicationStore from "ApplicationStore" /* 4983 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2095 */;
 import UserStore from "UserStore" /* 1372 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1957 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2040 */;
 
 const require = globalThis.__r;
 
@@ -218,7 +218,7 @@ let closure_10 = async function _handleJoinEmbeddedActivityInternal(arg0, value)
     }
   }
 };
-let closure_9 = fn(1921).SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES;
+let closure_9 = fn(2004).SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/handleJoinEmbeddedActivity.tsx");
 

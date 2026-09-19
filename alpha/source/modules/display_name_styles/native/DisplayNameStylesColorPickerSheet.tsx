@@ -1,16 +1,16 @@
-// Module ID: 15564
-// Function ID: 15565
+// Module ID: 15619
+// Function ID: 15620
 // Name: DisplayNameStylesColorPickerSheet
-// Dependencies: [32, 19, 17, 1390, 1074, 21, 4722, 576, 8400, 11150, 4690, 4689, 14811, 1241, 7346, 15554, 1115, 2870, 5144, 12, 1092, 1391, 15562, 2]
+// Dependencies: [32, 19, 17, 1390, 1074, 21, 4756, 576, 8438, 11163, 4724, 4723, 14865, 1241, 7390, 15609, 1115, 2872, 5186, 12, 1092, 1391, 15617, 2]
 // Exports: default
 
-// Module 15564 (DisplayNameStylesColorPickerSheet)
+// Module 15619 (DisplayNameStylesColorPickerSheet)
 import nativeDefault from "native" /* 576 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1092 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4689 */;
-import HapticUtils from "HapticUtils" /* 4690 */;
-import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 14811 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4723 */;
+import HapticUtils from "HapticUtils" /* 4724 */;
+import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 14865 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,7 +21,7 @@ const getColorPresetsForEffect = fn(1390).getColorPresetsForEffect;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { container: { flex: 1 }, contentContainer: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 }, presetGrid: null, presetRow: null, presetColor: null, presetColorSelected: null, buttonsContainer: null, button: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
 obj2.presetGrid = { gap: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_16 };

@@ -1,10 +1,10 @@
-// Module ID: 17657
-// Function ID: 17658
+// Module ID: 17737
+// Function ID: 17738
 // Name: AppInfoUtils
 // Dependencies: [1363, 2]
 // Exports: getAppMajorVersion
 
-// Module 17657 (AppInfoUtils)
+// Module 17737 (AppInfoUtils)
 import ClientInfoUtils from "ClientInfoUtils" /* 1363 */;
 import size from "module_2" /* 2 */;
 

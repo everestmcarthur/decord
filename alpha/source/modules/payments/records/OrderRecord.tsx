@@ -1,14 +1,14 @@
-// Module ID: 7621
-// Function ID: 7622
+// Module ID: 7665
+// Function ID: 7666
 // Name: OrderRecord
-// Dependencies: [1387, 4389, 7622, 7623, 1085, 2]
+// Dependencies: [1387, 4423, 7666, 7667, 1085, 2]
 
-// Module 7621 (OrderRecord)
+// Module 7665 (OrderRecord)
 import Record from "Record" /* 1387 */;
-import CheckoutContextRecord from "CheckoutContextRecord" /* 7622 */;
-import SubscriptionFacetRecord from "SubscriptionFacetRecord" /* 7623 */;
+import CheckoutContextRecord from "CheckoutContextRecord" /* 7666 */;
+import SubscriptionFacetRecord from "SubscriptionFacetRecord" /* 7667 */;
 
-const BaseInvoiceRecord = fn(4389).BaseInvoiceRecord;
+const BaseInvoiceRecord = fn(4423).BaseInvoiceRecord;
 const PaymentGateways = fn(1085).PaymentGateways;
 let BillingFacetRecord;
 class BillingFacetRecord extends tmp2 {

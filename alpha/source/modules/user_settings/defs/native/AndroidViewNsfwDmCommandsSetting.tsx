@@ -1,16 +1,16 @@
-// Module ID: 15058
-// Function ID: 15059
+// Module ID: 15112
+// Function ID: 15113
 // Name: AndroidViewNsfwDmCommandsSetting
-// Dependencies: [8194, 9534, 4933, 9535, 4935, 1364, 8643, 8645, 1936, 11714, 1115, 2]
+// Dependencies: [8232, 9409, 4966, 9410, 4968, 1364, 8681, 8683, 2019, 11723, 1115, 2]
 
-// Module 15058 (AndroidViewNsfwDmCommandsSetting)
+// Module 15112 (AndroidViewNsfwDmCommandsSetting)
 import util from "util" /* 1115 */;
-import AgeGateUtils from "AgeGateUtils" /* 4933 */;
-import SettingsConstants from "SettingsConstants" /* 8194 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8643 */;
-import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 9534 */;
-import useNSFWAllowed from "useNSFWAllowed" /* 9535 */;
-import SettingBuilders from "SettingBuilders" /* 11714 */;
+import AgeGateUtils from "AgeGateUtils" /* 4966 */;
+import SettingsConstants from "SettingsConstants" /* 8232 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8681 */;
+import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 9409 */;
+import useNSFWAllowed from "useNSFWAllowed" /* 9410 */;
+import SettingBuilders from "SettingBuilders" /* 11723 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({
@@ -29,11 +29,11 @@ const toggle = SettingBuilders.createToggle({
   onValueChange: function handleValueChange(arg0) {
     if (obj.shouldAgeVerifyForSettingsToggles()) {
       if (arg0) {
-        const obj3 = { entryPoint: tmp(8645).AgeVerificationModalEntryPoint.AGE_RESTRICTED_DM_COMMANDS_SETTINGS };
+        const obj3 = { entryPoint: tmp(8683).AgeVerificationModalEntryPoint.AGE_RESTRICTED_DM_COMMANDS_SETTINGS };
         const result = AgeVerificationActionCreatorsDefault.showAgeVerificationGetStartedModal(obj3);
       }
     }
-    const ViewNsfwCommands = tmp(1936).ViewNsfwCommands;
+    const ViewNsfwCommands = tmp(2019).ViewNsfwCommands;
     ViewNsfwCommands.updateSetting(arg0);
   },
   usePredicate() {

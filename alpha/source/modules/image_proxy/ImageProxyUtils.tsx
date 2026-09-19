@@ -1,13 +1,13 @@
-// Module ID: 1930
-// Function ID: 1931
+// Module ID: 2013
+// Function ID: 2014
 // Name: ImageProxyUtils
-// Dependencies: [1931, 1431, 1366, 2]
+// Dependencies: [2014, 1431, 1366, 2]
 // Exports: getSizedImageAssetURL, isImageProxyURL
 
-// Module 1930 (ImageProxyUtils)
+// Module 2013 (ImageProxyUtils)
 import URLUtilsDefault from "URLUtils" /* 1366 */;
 import ImageLoaderUtils from "ImageLoaderUtils" /* 1431 */;
-import UrlHostUtils from "UrlHostUtils" /* 1931 */;
+import UrlHostUtils from "UrlHostUtils" /* 2014 */;
 import size from "module_2" /* 2 */;
 
 function getSizedImageProxyURL(value, size) {

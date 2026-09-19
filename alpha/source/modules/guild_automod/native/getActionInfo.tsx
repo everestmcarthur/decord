@@ -1,12 +1,12 @@
-// Module ID: 17857
-// Function ID: 17858
+// Module ID: 17937
+// Function ID: 17938
 // Name: getActionInfo
-// Dependencies: [12106, 6809, 5249, 12097, 12708, 17858, 2]
+// Dependencies: [12115, 6853, 5291, 12106, 12717, 17938, 2]
 // Exports: getActionInfo
 
-// Module 17857 (getActionInfo)
-import Constants from "Constants" /* 12106 */;
-import BaseActionInfo from "BaseActionInfo" /* 17858 */;
+// Module 17937 (getActionInfo)
+import Constants from "Constants" /* 12115 */;
+import BaseActionInfo from "BaseActionInfo" /* 17938 */;
 import size from "module_2" /* 2 */;
 
 const AutomodActionType = Constants.AutomodActionType;
@@ -19,16 +19,16 @@ export const getActionInfo = function getActionInfo(actionType, action, triggerT
     const obj2 = {};
     const merged = Object.assign(baseActionInfo);
     if (AutomodActionType.BLOCK_MESSAGE === actionType) {
-      let CircleXIcon = tmp(6809).CircleXIcon;
+      let CircleXIcon = tmp(6853).CircleXIcon;
     } else if (tmp8.FLAG_TO_CHANNEL === actionType) {
-      CircleXIcon = tmp(5249).TextIcon;
+      CircleXIcon = tmp(5291).TextIcon;
     } else if (tmp8.USER_COMMUNICATION_DISABLED === actionType) {
-      CircleXIcon = tmp(12097).ClockWarningIcon;
+      CircleXIcon = tmp(12106).ClockWarningIcon;
     } else if (tmp8.QUARANTINE_USER === actionType) {
-      CircleXIcon = tmp(12708).ChatXIcon;
+      CircleXIcon = tmp(12717).ChatXIcon;
     }
     if (CircleXIcon == null) {
-      CircleXIcon = tmp(6809).CircleXIcon;
+      CircleXIcon = tmp(6853).CircleXIcon;
     }
     obj2.icon = CircleXIcon;
     tmp4 = obj2;

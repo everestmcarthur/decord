@@ -1,11 +1,11 @@
-// Module ID: 16114
-// Function ID: 16115
+// Module ID: 16190
+// Function ID: 16191
 // Name: useDMPermissionsOverrideCount
-// Dependencies: [1980, 1936, 16115, 504, 2]
+// Dependencies: [2063, 2019, 16191, 504, 2]
 // Exports: useDMPermissionsOverrideCount
 
-// Module 16114 (useDMPermissionsOverrideCount)
-import GuildStore from "GuildStore" /* 1980 */;
+// Module 16190 (useDMPermissionsOverrideCount)
+import GuildStore from "GuildStore" /* 2063 */;
 
 const require = fn;
 const size = fn(2);

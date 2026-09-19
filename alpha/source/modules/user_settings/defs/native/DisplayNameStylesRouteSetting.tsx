@@ -1,13 +1,13 @@
-// Module ID: 15544
-// Function ID: 15545
+// Module ID: 15599
+// Function ID: 15600
 // Name: DisplayNameStylesRouteSetting
-// Dependencies: [1074, 11714, 1115, 2870, 15545, 2]
+// Dependencies: [1074, 11723, 1115, 2872, 15600, 2]
 
-// Module 15544 (DisplayNameStylesRouteSetting)
+// Module 15599 (DisplayNameStylesRouteSetting)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1115 */;
-import _modDef2870 from "module_2870" /* 2870 */;
-import SettingBuilders from "SettingBuilders" /* 11714 */;
+import _modDef2872 from "module_2872" /* 2872 */;
+import SettingBuilders from "SettingBuilders" /* 11723 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -15,7 +15,7 @@ const require = globalThis.__r;
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2870.ZPMAlX);
+    return intl.string(_modDef2872.ZPMAlX);
   },
   parent: null,
   unsearchable: true,

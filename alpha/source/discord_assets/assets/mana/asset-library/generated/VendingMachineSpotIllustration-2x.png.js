@@ -1,8 +1,8 @@
-// Module ID: 6746
-// Function ID: 6747
+// Module ID: 6790
+// Function ID: 6791
 // Dependencies: [2]
 
-// Module 6746
+// Module 6790
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/VendingMachineSpotIllustration-2x.png.js");

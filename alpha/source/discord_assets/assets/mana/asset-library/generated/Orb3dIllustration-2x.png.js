@@ -1,8 +1,8 @@
-// Module ID: 6522
-// Function ID: 6523
+// Module ID: 6566
+// Function ID: 6567
 // Dependencies: [2]
 
-// Module 6522
+// Module 6566
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/Orb3dIllustration-2x.png.js");

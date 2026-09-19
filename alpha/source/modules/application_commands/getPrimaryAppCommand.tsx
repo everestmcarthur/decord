@@ -1,18 +1,18 @@
-// Module ID: 9819
-// Function ID: 9820
+// Module ID: 9600
+// Function ID: 9601
 // Name: getPrimaryAppCommand
-// Dependencies: [5, 19, 1958, 9528, 1895, 9536, 9532, 9483, 2]
+// Dependencies: [5, 19, 2041, 9403, 1978, 9411, 9407, 9317, 2]
 // Exports: default, isPrimaryAppCommandUsableInAppDM, useGetPrimaryAppCommand, useIsPrimaryAppCommandUsableInAppDM, useQueryForPrimaryAppCommand
 
-// Module 9819 (getPrimaryAppCommand)
-import Server from "Server" /* 1895 */;
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9483 */;
-import ApplicationCommandIndexActionCreators from "ApplicationCommandIndexActionCreators" /* 9532 */;
-import ApplicationCommandQueryTypes from "ApplicationCommandQueryTypes" /* 9536 */;
+// Module 9600 (getPrimaryAppCommand)
+import Server from "Server" /* 1978 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9317 */;
+import ApplicationCommandIndexActionCreators from "ApplicationCommandIndexActionCreators" /* 9407 */;
+import ApplicationCommandQueryTypes from "ApplicationCommandQueryTypes" /* 9411 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
-import ApplicationCommandIndexStore_mod from "ApplicationCommandIndexStore" /* 9528 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
+import ApplicationCommandIndexStore_mod from "ApplicationCommandIndexStore" /* 9403 */;
 
 const require = globalThis.__r;
 
@@ -97,11 +97,11 @@ function queryForPrimaryAppCommand(withAffinitySuggestions, id) {
   obj.commandTypes = items;
   return ApplicationCommandIndexStore.query(withAffinitySuggestions, obj, { placeholderCount: 1, scoreMethod: ApplicationCommandQueryTypes.ScoreMethod.COMMAND_ONLY, applicationId: id, allowFetch: false, allowApplicationState: true }).commands[0];
 }
-let ApplicationCommandIndexStore = fn(9528);
+let ApplicationCommandIndexStore = fn(9403);
 ({ getOrFetchApplicationCommandIndexForTarget: hasOwnProperty, useQueryState: metroRequire } = ApplicationCommandIndexStore);
 let ApplicationCommandIndexStore = ApplicationCommandIndexStore_mod;
 let c8 = "no primary app command for application";
-let items = [fn(1895).ApplicationCommandType.PRIMARY_ENTRY_POINT];
+let items = [fn(1978).ApplicationCommandType.PRIMARY_ENTRY_POINT];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_commands/getPrimaryAppCommand.tsx");
 

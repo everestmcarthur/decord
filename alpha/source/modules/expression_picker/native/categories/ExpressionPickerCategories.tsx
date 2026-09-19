@@ -1,18 +1,18 @@
-// Module ID: 10601
-// Function ID: 10602
+// Module ID: 10617
+// Function ID: 10618
 // Name: ExpressionPickerCategories
-// Dependencies: [19, 17, 21, 4722, 576, 4595, 2]
+// Dependencies: [19, 17, 21, 4756, 576, 4629, 2]
 // Exports: default
 
-// Module 10601 (ExpressionPickerCategories)
+// Module 10617 (ExpressionPickerCategories)
 import nativeDefault from "native" /* 576 */;
-import Portal from "Portal" /* 4595 */;
+import Portal from "Portal" /* 4629 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, paddingHorizontal: nativeDefault.space.PX_8, flexDirection: "row", alignItems: "center" }, containerRefresh: null };
 const obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, paddingHorizontal: nativeDefault.space.PX_8, flexDirection: "row", alignItems: "center" };
 obj2.containerRefresh = { borderTopWidth: 1, borderTopColor: nativeDefault.colors.BORDER_SUBTLE };

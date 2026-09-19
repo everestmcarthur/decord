@@ -1,9 +1,9 @@
-// Module ID: 10076
-// Function ID: 10077
+// Module ID: 10086
+// Function ID: 10087
 // Name: HubProgressBarConstants
 // Dependencies: [1186, 2]
 
-// Module 10076 (HubProgressBarConstants)
+// Module 10086 (HubProgressBarConstants)
 import preloaded_user_settings from "preloaded_user_settings" /* 1186 */;
 import size from "module_2" /* 2 */;
 

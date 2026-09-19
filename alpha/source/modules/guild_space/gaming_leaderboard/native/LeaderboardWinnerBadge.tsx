@@ -1,17 +1,17 @@
-// Module ID: 11155
-// Function ID: 11156
+// Module ID: 11168
+// Function ID: 11169
 // Name: LeaderboardWinnerBadge
-// Dependencies: [19, 17, 2022, 21, 4722, 504, 11156, 8951, 576, 2]
+// Dependencies: [19, 17, 2105, 21, 4756, 504, 11169, 8990, 576, 2]
 // Exports: default
 
-// Module 11155 (LeaderboardWinnerBadge)
+// Module 11168 (LeaderboardWinnerBadge)
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 2022 */;
+import GuildMemberStore from "GuildMemberStore" /* 2105 */;
 
 const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let closure_6 = createStyles.createStyles({ container: { marginLeft: 4 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_space/gaming_leaderboard/native/LeaderboardWinnerBadge.tsx");
@@ -32,11 +32,11 @@ export default function LeaderboardWinnerBadge(guildId) {
   }, items1);
   let tmp5 = null;
   if (null != stateFromStores) {
-    const obj2 = { style: tmp.container, accessible: true, accessibilityLabel: tmp2(11156).getLeaderboardWinnerBadgeText(stateFromStores), children: null };
+    const obj2 = { style: tmp.container, accessible: true, accessibilityLabel: tmp2(11169).getLeaderboardWinnerBadgeText(stateFromStores), children: null };
     const obj3 = { size: "xs", color: userId(576).colors.TEXT_FEEDBACK_WARNING };
-    obj2.children = jsx(tmp2(8951).TrophyIcon, { size: "xs", color: userId(576).colors.TEXT_FEEDBACK_WARNING });
-    tmp5 = <View style={tmp.container} accessible accessibilityLabel={tmp2(11156).getLeaderboardWinnerBadgeText(stateFromStores)}>{null}</View>;
-    const tmp2Result = tmp2(11156);
+    obj2.children = jsx(tmp2(8990).TrophyIcon, { size: "xs", color: userId(576).colors.TEXT_FEEDBACK_WARNING });
+    tmp5 = <View style={tmp.container} accessible accessibilityLabel={tmp2(11169).getLeaderboardWinnerBadgeText(stateFromStores)}>{null}</View>;
+    const tmp2Result = tmp2(11169);
   }
   return tmp5;
 };

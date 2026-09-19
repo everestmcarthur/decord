@@ -1,14 +1,14 @@
-// Module ID: 10636
-// Function ID: 10637
+// Module ID: 10652
+// Function ID: 10653
 // Name: openStickerPackDetailActionSheet
-// Dependencies: [1074, 1241, 4689, 10637, 1897, 2]
+// Dependencies: [1074, 1241, 4723, 10653, 1980, 2]
 // Exports: default
 
-// Module 10636 (openStickerPackDetailActionSheet)
+// Module 10652 (openStickerPackDetailActionSheet)
 import Constants from "Constants" /* 1074 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4689 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1980 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4723 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;
@@ -19,6 +19,6 @@ export default function openStickerPackDetailActionSheet(stickerPack) {
   ({ analyticsLocation, analyticsPopoutType } = stickerPack);
   AnalyticsUtilsDefault.track(AnalyticEvents.STICKER_PACK_VIEW_ALL, { location: analyticsLocation, sticker_pack_id: stickerPack.id });
   const obj2 = { location: analyticsLocation, sticker_pack_id: stickerPack.id };
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10637, dependencyMap.paths), "StickerPackDetailActionSheet", { stickerPack, analyticsPopoutType });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10653, dependencyMap.paths), "StickerPackDetailActionSheet", { stickerPack, analyticsPopoutType });
 };
 export const AnalyticsPopoutType = { EXPRESSION_SUGGESTIONS: "Sticker Pack Detail Sheet (Expression Suggestions Popout)", STICKER_PACK_DETAIL: "Sticker Pack Detail Sheet", STICKER_PACK_UPSELL: "Sticker Pack Detail Sheet (Sticker Upsell Popout)" };

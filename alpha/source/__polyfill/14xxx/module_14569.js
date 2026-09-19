@@ -1,7 +1,11 @@
 // Module ID: 14569
 // Function ID: 14570
-// Dependencies: []
+// Dependencies: [14570, 14635]
 
 // Module 14569
+import _mod14635 from "module_14635" /* 14635 */;
+import module_14570 from "module_14570" /* 14570 */;
 
-export const f = Object.getOwnPropertySymbols;
+const obj = { target: "Object", stat: true, arity: 2, forced: null };
+obj.forced = Object.assign !== _mod14635;
+module_14570(obj, { assign: _mod14635 });

@@ -1,8 +1,8 @@
-// Module ID: 6606
-// Function ID: 6607
+// Module ID: 6650
+// Function ID: 6651
 // Dependencies: [2]
 
-// Module 6606
+// Module 6650
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ServerBannerTheCrewExample-2x.png.js");

@@ -1,11 +1,11 @@
-// Module ID: 9881
-// Function ID: 9882
+// Module ID: 9723
+// Function ID: 9724
 // Name: doesOrientationMatchLockState
-// Dependencies: [1921, 2]
+// Dependencies: [2004, 2]
 // Exports: default
 
-// Module 9881 (doesOrientationMatchLockState)
-import Constants from "Constants" /* 1921 */;
+// Module 9723 (doesOrientationMatchLockState)
+import Constants from "Constants" /* 2004 */;
 import size from "module_2" /* 2 */;
 
 const OrientationLockState = Constants.OrientationLockState;

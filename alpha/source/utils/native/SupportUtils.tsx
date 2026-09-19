@@ -1,14 +1,14 @@
-// Module ID: 15751
-// Function ID: 15752
+// Module ID: 15806
+// Function ID: 15807
 // Name: SupportUtils
-// Dependencies: [5, 2026, 1363, 4701, 4417, 2025, 2]
+// Dependencies: [5, 2109, 1363, 4735, 4451, 2108, 2]
 // Exports: emailSupport
 
-// Module 15751 (SupportUtils)
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2025 */;
-import LinkingDefault from "Linking" /* 4417 */;
+// Module 15806 (SupportUtils)
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2108 */;
+import LinkingDefault from "Linking" /* 4451 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LocaleStore from "LocaleStore" /* 2026 */;
+import LocaleStore from "LocaleStore" /* 2109 */;
 
 const require = fn;
 let closure_6 = async function _emailSupport(arg0, value) {

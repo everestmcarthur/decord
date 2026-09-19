@@ -1,11 +1,10 @@
 // Module ID: 7051
 // Function ID: 7052
-// Dependencies: []
+// Dependencies: [17]
 
 // Module 7051
+import _mod17 from "module_17" /* 17 */;
 
-export default function _arrayWithHoles(arg0) {
-  if (Array.isArray(arg0)) {
-    return arg0;
-  }
-};
+const StyleSheet = _mod17.StyleSheet;
+
+export const styles = StyleSheet.create({ container: { flexDirection: "column-reverse", position: "absolute", top: 0, left: 0, right: 0 } });

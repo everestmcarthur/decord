@@ -1,9 +1,13 @@
 // Module ID: 5006
 // Function ID: 5007
-// Dependencies: [1454]
+// Dependencies: []
 
 // Module 5006
-import _mod1454 from "module_1454" /* 1454 */;
 
-
-export default _mod1454;
+export default function getIterator(arg0) {
+  if (null != arg0) {
+    if (undefined !== arg0[iterator]) {
+      return arg0[iterator]();
+    }
+  }
+};

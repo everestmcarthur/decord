@@ -1,9 +1,9 @@
-// Module ID: 6815
-// Function ID: 6816
+// Module ID: 6859
+// Function ID: 6860
 // Name: InputTypes
 // Dependencies: [2]
 
-// Module 6815 (InputTypes)
+// Module 6859 (InputTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("design/components/Input/native/InputTypes.native.tsx");

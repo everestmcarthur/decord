@@ -1,20 +1,20 @@
-// Module ID: 10382
-// Function ID: 10383
+// Module ID: 10394
+// Function ID: 10395
 // Name: InAppNotificationSettingsModal
-// Dependencies: [19, 1962, 1958, 4371, 4903, 1372, 1074, 21, 7315, 7310, 4875, 8831, 1115, 10383, 7578, 504, 5794, 7196, 2]
+// Dependencies: [19, 2045, 2041, 4405, 4937, 1372, 1074, 21, 7359, 7354, 4909, 8870, 1115, 10395, 7622, 504, 5836, 7240, 2]
 
-// Module 10382 (InAppNotificationSettingsModal)
+// Module 10394 (InAppNotificationSettingsModal)
 import util from "util" /* 1115 */;
-import useChannelName from "useChannelName" /* 4875 */;
-import NavigatorHeader from "NavigatorHeader" /* 5794 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7310 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7315 */;
-import Form from "Form" /* 8831 */;
-import ChannelSettingsNotificationsDefault from "ChannelSettingsNotifications" /* 10383 */;
+import useChannelName from "useChannelName" /* 4909 */;
+import NavigatorHeader from "NavigatorHeader" /* 5836 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7354 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7359 */;
+import Form from "Form" /* 8870 */;
+import ChannelSettingsNotificationsDefault from "ChannelSettingsNotifications" /* 10395 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
-import RelationshipStore from "RelationshipStore" /* 4371 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4903 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
+import RelationshipStore from "RelationshipStore" /* 4405 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4937 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -35,7 +35,7 @@ function ConnectedInAppNotificationSettingsScreen(channel) {
     })
   });
 }
-const isMultiUserDM = fn(1962).isMultiUserDM;
+const isMultiUserDM = fn(2045).isMultiUserDM;
 const Constants = fn(1074);
 ({ ChannelTypes: closure_9, UserSettingsSections: c10 } = Constants);
 const jsxProd = fn(21);
@@ -146,11 +146,11 @@ export default noop.memo((channelId) => {
         obj.title = intl.string(channelId(1115).t.h850Ss);
         let channelName = null;
         if (null != closure_0) {
-          const tmp3Result = channelId(4875);
+          const tmp3Result = channelId(4909);
           channelName = tmp3Result.computeChannelName(tmp, UserStore, RelationshipStore, true);
         }
         obj.subtitle = channelName;
-        return closure_2_11(channelId(5794).NavigatorHeader, obj);
+        return closure_2_11(channelId(5836).NavigatorHeader, obj);
       },
       headerLeft: NavigatorHeader.getHeaderCloseButton(onClose),
       render() {
@@ -160,5 +160,5 @@ export default noop.memo((channelId) => {
     obj.IN_APP_NOTIFICATION_SETTINGS = obj2;
     return obj;
   }, items);
-  return closure_11(channelId(7196).Navigator, { screens, initialRouteName: "IN_APP_NOTIFICATION_SETTINGS" });
+  return closure_11(channelId(7240).Navigator, { screens, initialRouteName: "IN_APP_NOTIFICATION_SETTINGS" });
 });

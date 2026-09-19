@@ -1,18 +1,18 @@
-// Module ID: 12780
-// Function ID: 12781
+// Module ID: 12789
+// Function ID: 12790
 // Name: useAvailableBoostCountForPowerup
-// Dependencies: [19, 1980, 4610, 4611, 504, 4630, 1370, 2]
+// Dependencies: [19, 2063, 4644, 4645, 504, 4664, 1370, 2]
 // Exports: default
 
-// Module 12780 (useAvailableBoostCountForPowerup)
+// Module 12789 (useAvailableBoostCountForPowerup)
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 1980 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 4610 */;
+import GuildStore from "GuildStore" /* 2063 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 4644 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const GuildPowerupsConstants = fn(4611);
+const GuildPowerupsConstants = fn(4645);
 ({ GuildPowerupType: metroRequire, POWERUPS_INCLUDED_IN_LEVEL: closure_7, LEVEL_SKU_ID_TO_BOOSTING_TIER: closure_8 } = GuildPowerupsConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useAvailableBoostCountForPowerup.tsx");

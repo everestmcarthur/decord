@@ -1,8 +1,8 @@
-// Module ID: 6468
-// Function ID: 6469
+// Module ID: 6512
+// Function ID: 6513
 // Dependencies: [2]
 
-// Module 6468
+// Module 6512
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/NitroLogoCardSpotIllustration-2x.png.js");

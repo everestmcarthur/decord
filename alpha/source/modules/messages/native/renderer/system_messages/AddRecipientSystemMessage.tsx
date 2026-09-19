@@ -1,16 +1,16 @@
-// Module ID: 8178
-// Function ID: 8179
+// Module ID: 8216
+// Function ID: 8217
 // Name: AddRecipientSystemMessage
-// Dependencies: [1962, 1958, 1372, 8179, 8181, 1115, 8183, 2]
+// Dependencies: [2045, 2041, 1372, 8217, 8219, 1115, 8221, 2]
 // Exports: createAddRecipientSystemMessage
 
-// Module 8178 (AddRecipientSystemMessage)
+// Module 8216 (AddRecipientSystemMessage)
 import util from "util" /* 1115 */;
-import ChannelRecord from "ChannelRecord" /* 1962 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8179 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8181 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8183 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
+import ChannelRecord from "ChannelRecord" /* 2045 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8217 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8219 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8221 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
 import UserStore from "UserStore" /* 1372 */;
 import size from "module_2" /* 2 */;
 

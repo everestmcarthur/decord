@@ -1,13 +1,13 @@
-// Module ID: 6141
-// Function ID: 6142
+// Module ID: 6185
+// Function ID: 6186
 // Name: EmojiGGsExample
-// Dependencies: [21, 5757, 6142, 2]
+// Dependencies: [21, 5799, 6186, 2]
 // Exports: EmojiGGsExample
 
-// Module 6141 (EmojiGGsExample)
+// Module 6185 (EmojiGGsExample)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5757 */;
-import _modDef6142 from "module_6142" /* 6142 */;
+import FastImageDefault from "FastImage" /* 5799 */;
+import _modDef6186 from "module_6186" /* 6186 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const EmojiGGsExample = function EmojiGGsExample(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6142 };
+  const obj2 = { uri: _modDef6186 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

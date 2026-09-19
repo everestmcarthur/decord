@@ -1,30 +1,30 @@
-// Module ID: 13459
-// Function ID: 13460
+// Module ID: 13515
+// Function ID: 13516
 // Name: GuildScheduledEventEmbed
-// Dependencies: [32, 17, 7722, 1976, 1958, 1980, 4371, 1372, 11561, 1964, 7938, 4712, 8164, 8165, 10018, 9913, 9910, 10027, 1115, 8168, 10102, 8155, 576, 9814, 9950, 4875, 10014, 10026, 13460, 9948, 1972, 2]
+// Dependencies: [32, 17, 7766, 2059, 2041, 2063, 4405, 1372, 11570, 2047, 7976, 4746, 8202, 8203, 9869, 9755, 9752, 9879, 1115, 8206, 10112, 8193, 576, 9620, 9789, 4909, 9865, 9878, 13516, 9787, 2055, 2]
 // Exports: createGuildScheduledEventInviteEmbed, createGuildScheduledEventLinkEmbed
 
-// Module 13459 (GuildScheduledEventEmbed)
+// Module 13515 (GuildScheduledEventEmbed)
 import util from "util" /* 1115 */;
-import GuildRecordUtils from "GuildRecordUtils" /* 1972 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8164 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8165 */;
-import ScheduleUtils from "ScheduleUtils" /* 9910 */;
-import useEventSchedule from "useEventSchedule" /* 9913 */;
-import GuildScheduledEventsActionCreatorsDefault from "GuildScheduledEventsActionCreators" /* 9948 */;
-import EntityUtils from "EntityUtils" /* 9950 */;
-import GuildEventUtils from "GuildEventUtils" /* 10014 */;
-import useCanInviteForGuildEvent from "useCanInviteForGuildEvent" /* 10018 */;
-import GuildScheduledEventManagerDefault from "GuildScheduledEventManager" /* 10026 */;
-import GuildScheduledEventHeaderUtils from "GuildScheduledEventHeaderUtils" /* 10027 */;
-import _modDef13460 from "module_13460" /* 13460 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 2055 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8202 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8203 */;
+import ScheduleUtils from "ScheduleUtils" /* 9752 */;
+import useEventSchedule from "useEventSchedule" /* 9755 */;
+import GuildScheduledEventsActionCreatorsDefault from "GuildScheduledEventsActionCreators" /* 9787 */;
+import EntityUtils from "EntityUtils" /* 9789 */;
+import GuildEventUtils from "GuildEventUtils" /* 9865 */;
+import useCanInviteForGuildEvent from "useCanInviteForGuildEvent" /* 9869 */;
+import GuildScheduledEventManagerDefault from "GuildScheduledEventManager" /* 9878 */;
+import GuildScheduledEventHeaderUtils from "GuildScheduledEventHeaderUtils" /* 9879 */;
+import _modDef13516 from "module_13516" /* 13516 */;
 import _slicedToArray from "module_32" /* 32 */;
-import GuildScheduledEventStore_mod from "GuildScheduledEventStore" /* 7722 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
-import GuildStore from "GuildStore" /* 1980 */;
-import RelationshipStore from "RelationshipStore" /* 4371 */;
+import GuildScheduledEventStore_mod from "GuildScheduledEventStore" /* 7766 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
+import GuildStore from "GuildStore" /* 2063 */;
+import RelationshipStore from "RelationshipStore" /* 4405 */;
 import UserStore from "UserStore" /* 1372 */;
-import MarkupUtils from "MarkupUtils" /* 4712 */;
+import MarkupUtils from "MarkupUtils" /* 4746 */;
 
 require = fn;
 function createGuildScheduledEventEmbed(type) {
@@ -60,9 +60,9 @@ function createGuildScheduledEventEmbed(type) {
   const stringResult = intl.string(util.t.DlcqlU);
   const obj5 = { titleColor: colors.titleColor, borderColor: colors.borderColor, backgroundColor: colors.backgroundColor, thumbnailCornerRadius: 15, embedCanBeTapped: null != guild };
   const tmp7Result = GuildScheduledEventHeaderUtils;
-  const assetUriForEmbed1 = renderer_EmbedUtils.getAssetUriForEmbed(tmp(8168));
+  const assetUriForEmbed1 = renderer_EmbedUtils.getAssetUriForEmbed(tmp(8206));
   const tmp7Result12 = renderer_EmbedUtils;
-  const assetUriForEmbed2 = renderer_EmbedUtils.getAssetUriForEmbed(tmp(10102));
+  const assetUriForEmbed2 = renderer_EmbedUtils.getAssetUriForEmbed(tmp(10112));
   if (null != guild) {
     if (tmp9) {
       if (guildEvent.entity_type === constants.EXTERNAL) {
@@ -76,12 +76,12 @@ function createGuildScheduledEventEmbed(type) {
       const acceptLabelActiveBackgroundColor2 = colors.acceptLabelActiveBackgroundColor;
     } else if (result1) {
       acceptLabelActiveBackgroundColor = colors.backgroundColor;
-      let assetUriForEmbed3 = tmp7(8165).getAssetUriForEmbed(tmp(9814));
+      let assetUriForEmbed3 = tmp7(8203).getAssetUriForEmbed(tmp(9620));
       acceptLabelGreenColor = colors.acceptLabelDisabledTextColor;
       let tmp21 = assetUriForEmbed2;
       let stringResult2 = stringResult;
       let flag2 = result1;
-      const tmp7Result14 = tmp7(8165);
+      const tmp7Result14 = tmp7(8203);
     } else {
       ({ acceptLabelActiveBackgroundColor, acceptLabelGreenColor } = colors);
       tmp21 = assetUriForEmbed2;
@@ -90,18 +90,18 @@ function createGuildScheduledEventEmbed(type) {
       flag2 = result1;
     }
   } else {
-    acceptLabelActiveBackgroundColor = tmp7(8155).processColorOrThrow(tmp(576).unsafe_rawColors.GREEN_360);
+    acceptLabelActiveBackgroundColor = tmp7(8193).processColorOrThrow(tmp(576).unsafe_rawColors.GREEN_360);
     const intl2 = tmp7(1115).intl;
     stringResult2 = intl2.string(tmp7(1115).t.XpeFYr);
     acceptLabelGreenColor = colors.acceptLabelGreenColor;
     flag2 = false;
-    const tmp7Result15 = tmp7(8155);
+    const tmp7Result15 = tmp7(8193);
   }
   let parseToASTResult;
   if (null != description) {
     const obj6 = { channelId: id, allowLinks: true, allowEmojiLinks: true, allowHeading: true, allowList: true };
-    parseToASTResult = tmp(4712).parseToAST(description, true, obj6);
-    const tmpResult = tmp(4712);
+    parseToASTResult = tmp(4746).parseToAST(description, true, obj6);
+    const tmpResult = tmp(4746);
   }
   const tmp7Result13 = renderer_EmbedUtils;
   const locationFromEvent = EntityUtils.getLocationFromEvent(guildEvent);
@@ -114,8 +114,8 @@ function createGuildScheduledEventEmbed(type) {
   if (locationFromEvent == null) {
     let channelName;
     if (null != channel) {
-      channelName = tmp7(4875).computeChannelName(channel, UserStore, RelationshipStore);
-      const tmp7Result17 = tmp7(4875);
+      channelName = tmp7(4909).computeChannelName(channel, UserStore, RelationshipStore);
+      const tmp7Result17 = tmp7(4909);
     }
     tmp30 = channelName;
   }
@@ -150,19 +150,19 @@ function createGuildScheduledEventEmbed(type) {
   }
   obj8.badgeCount = toLocaleStringResult;
   const tmpResult4 = GuildScheduledEventManagerDefault;
-  obj8.badgeIcon = renderer_EmbedUtils.getAssetUriForEmbed(_modDef13460);
+  obj8.badgeIcon = renderer_EmbedUtils.getAssetUriForEmbed(_modDef13516);
   let assetUriForEmbed4;
   if (null != eventLocationIconSource) {
-    assetUriForEmbed4 = tmp7(8165).getAssetUriForEmbed(eventLocationIconSource);
-    const tmp7Result20 = tmp7(8165);
+    assetUriForEmbed4 = tmp7(8203).getAssetUriForEmbed(eventLocationIconSource);
+    const tmp7Result20 = tmp7(8203);
   }
   obj8.channelIcon = assetUriForEmbed4;
   obj8.channelName = tmp30;
   obj8.content = parseToASTResult;
   let assetUriForEmbed5;
   if (null != user) {
-    assetUriForEmbed5 = tmp7(8165).getAssetUriForEmbed(user.getAvatarSource(guildEvent.guild_id));
-    const tmp7Result21 = tmp7(8165);
+    assetUriForEmbed5 = tmp7(8203).getAssetUriForEmbed(user.getAvatarSource(guildEvent.guild_id));
+    const tmp7Result21 = tmp7(8203);
   }
   obj8.creatorAvatar = assetUriForEmbed5;
   obj8.extendedType = CodedLinkExtendedType.GUILD_SCHEDULED_EVENT;
@@ -200,13 +200,13 @@ function createGuildScheduledEventEmbed(type) {
   return obj8;
 }
 const processColor = fn(17).processColor;
-let GuildScheduledEventStore = fn(7722);
+let GuildScheduledEventStore = fn(7766);
 ({ isGuildEventEnded: hasOwnProperty, isGuildScheduledEventActive: metroRequire } = GuildScheduledEventStore);
 let GuildScheduledEventStore = GuildScheduledEventStore_mod;
-const getGuildIconSource = fn(1976).getGuildIconSource;
-const CodedLinkExtendedType = fn(11561).CodedLinkExtendedType;
-const constants = fn(1964).GuildScheduledEventEntityTypes;
-const InviteTypes = fn(7938).InviteTypes;
+const getGuildIconSource = fn(2059).getGuildIconSource;
+const CodedLinkExtendedType = fn(11570).CodedLinkExtendedType;
+const constants = fn(2047).GuildScheduledEventEntityTypes;
+const InviteTypes = fn(7976).InviteTypes;
 let closure_16 = MarkupUtils.astParserFor(MarkupUtils.guildEventLocationRules);
 let closure_18 = {};
 const size = fn(2);
@@ -269,8 +269,8 @@ export const createGuildScheduledEventLinkEmbed = function createGuildScheduledE
   let nextRecurrenceIdInEvent = tmp[2];
   const guildScheduledEvent = GuildScheduledEventStore.getGuildScheduledEvent(tmp[1]);
   if (nextRecurrenceIdInEvent == null) {
-    nextRecurrenceIdInEvent = first(9910).getNextRecurrenceIdInEvent(guildScheduledEvent);
-    const obj2 = first(9910);
+    nextRecurrenceIdInEvent = first(9752).getNextRecurrenceIdInEvent(guildScheduledEvent);
+    const obj2 = first(9752);
   }
   if (null != guildScheduledEvent) {
     if (!closure_5(guildScheduledEvent)) {

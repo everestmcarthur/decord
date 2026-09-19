@@ -1,17 +1,17 @@
-// Module ID: 15707
-// Function ID: 15708
+// Module ID: 15762
+// Function ID: 15763
 // Name: AndroidMessageNotificationsSetting
-// Dependencies: [15695, 8194, 1364, 11714, 1115, 14669, 2806, 15701, 2]
+// Dependencies: [15750, 8232, 1364, 11723, 1115, 14724, 2808, 15756, 2]
 // Exports: useAndroidMessageNotificationsSettingValue, useHasAndroidMessageNotificationsSetting
 
-// Module 15707 (AndroidMessageNotificationsSetting)
+// Module 15762 (AndroidMessageNotificationsSetting)
 import util from "util" /* 1115 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import _modDef2806 from "module_2806" /* 2806 */;
-import SettingsConstants from "SettingsConstants" /* 8194 */;
-import MobileNotifSettings from "MobileNotifSettings" /* 15701 */;
-import AndroidNotificationSettingsStore from "AndroidNotificationSettingsStore" /* 15695 */;
-import SettingBuilders_mod from "SettingBuilders" /* 11714 */;
+import _modDef2808 from "module_2808" /* 2808 */;
+import SettingsConstants from "SettingsConstants" /* 8232 */;
+import MobileNotifSettings from "MobileNotifSettings" /* 15756 */;
+import AndroidNotificationSettingsStore from "AndroidNotificationSettingsStore" /* 15750 */;
+import SettingBuilders_mod from "SettingBuilders" /* 11723 */;
 import size from "module_2" /* 2 */;
 
 function useAndroidMessageNotificationsSettingValue() {
@@ -48,11 +48,11 @@ const obj3 = {};
 const merged1 = Object.assign(obj);
 obj3.useTitle = function useTitle() {
   const intl = util.intl;
-  return intl.string(_modDef2806.odJXYJ);
+  return intl.string(_modDef2808.odJXYJ);
 };
 obj3.useDescription = function useDescription() {
   const intl = util.intl;
-  return intl.string(_modDef2806["+jwUmI"]);
+  return intl.string(_modDef2808["+jwUmI"]);
 };
 obj3.parent = MobileNotifSettings.MobileNotifSettings.NOTIFICATIONS_REDESIGN;
 obj3.usePredicate = function usePredicate() {

@@ -1,13 +1,13 @@
-// Module ID: 17621
-// Function ID: 17622
+// Module ID: 17698
+// Function ID: 17699
 // Name: HcaptchaModal
-// Dependencies: [109, 19, 17, 2026, 1372, 1074, 21, 4722, 504, 1484, 1895, 1612, 1115, 11529, 5139, 5142, 576, 4718, 1364, 17620, 5292, 4674, 2]
+// Dependencies: [109, 19, 17, 2109, 1372, 1074, 21, 4756, 504, 1484, 1978, 1612, 1115, 5082, 5181, 5184, 576, 4752, 1364, 17697, 5334, 4708, 2]
 
-// Module 17621 (HcaptchaModal)
-import SharedCaptchaUtils from "SharedCaptchaUtils" /* 11529 */;
+// Module 17698 (HcaptchaModal)
+import SharedCaptchaUtils from "SharedCaptchaUtils" /* 5082 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2026 */;
+import LocaleStore from "LocaleStore" /* 2109 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -116,7 +116,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7, StyleSheet: closure_8 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 createStyles.createStyles({ container: { flex: 1, justifyContent: "center", alignItems: "center" }, title: { textAlign: "center" }, closeButtonContainer: { position: "absolute", top: 0, left: 0, zIndex: 2 }, closeButtonHitArea: { minWidth: 44, minHeight: 44, justifyContent: "center", alignItems: "center" } });
 HcaptchaModal.modalConfig = { animation: fn(1074).ModalAnimation.FADE };
 const size = fn(2);

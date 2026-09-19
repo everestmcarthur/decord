@@ -1,12 +1,12 @@
-// Module ID: 11447
-// Function ID: 11448
+// Module ID: 11459
+// Function ID: 11460
 // Name: BadgeDirectoryScreen
-// Dependencies: [19, 1372, 21, 504, 1115, 5794, 11446, 11448, 11451, 2]
+// Dependencies: [19, 1372, 21, 504, 1115, 5836, 11458, 11460, 11463, 2]
 // Exports: default
 
-// Module 11447 (BadgeDirectoryScreen)
-import NavigatorHeader from "NavigatorHeader" /* 5794 */;
-import openBadgeDirectoryScreen from "openBadgeDirectoryScreen" /* 11446 */;
+// Module 11459 (BadgeDirectoryScreen)
+import NavigatorHeader from "NavigatorHeader" /* 5836 */;
+import openBadgeDirectoryScreen from "openBadgeDirectoryScreen" /* 11458 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -64,7 +64,7 @@ export default function BadgeDirectoryScreen(targetUserId) {
         return obj;
       }, items2);
       const obj4 = { screens: memo, initialRouteName };
-      return jsx(tmp(11451).Modal, { screens: memo, initialRouteName });
+      return jsx(tmp(11463).Modal, { screens: memo, initialRouteName });
     }
   }
   const intl = tmp(1115).intl;

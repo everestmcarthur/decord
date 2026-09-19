@@ -1,25 +1,25 @@
-// Module ID: 14711
-// Function ID: 14712
+// Module ID: 14766
+// Function ID: 14767
 // Name: relationships
-// Dependencies: [32, 4371, 1372, 4626, 1074, 14696, 8571, 1086, 9802, 9807, 2]
+// Dependencies: [32, 4405, 1372, 4660, 1074, 14751, 8609, 1086, 9580, 9585, 2]
 
-// Module 14711 (relationships)
+// Module 14766 (relationships)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
-import RPCErrorDefault from "RPCError" /* 9802 */;
-import RPCHelpers from "RPCHelpers" /* 9807 */;
+import RPCErrorDefault from "RPCError" /* 9580 */;
+import RPCHelpers from "RPCHelpers" /* 9585 */;
 import _slicedToArray from "module_32" /* 32 */;
-import RelationshipStore from "RelationshipStore" /* 4371 */;
+import RelationshipStore from "RelationshipStore" /* 4405 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 const Constants = fn(1074);
 ({ ApplicationFlags: closure_7, RelationshipTypes: closure_8, RPCCommands, RPCErrors: closure_9 } = Constants);
 let obj = {};
-const CONTEXT_MENU_ICON_NAMES = fn(14696);
+const CONTEXT_MENU_ICON_NAMES = fn(14751);
 let obj3 = { scope: null, handler: null };
 let obj4 = {};
-let items = [fn(8571).OAuth2Scopes.RELATIONSHIPS_READ];
-obj4[fn(4626).RPC_SCOPE_CONFIG.ANY] = items;
+let items = [fn(8609).OAuth2Scopes.RELATIONSHIPS_READ];
+obj4[fn(4660).RPC_SCOPE_CONFIG.ANY] = items;
 obj3.scope = obj4;
 obj3.handler = function handler(socket) {
   const deserializer = BigFlagUtilsAll;

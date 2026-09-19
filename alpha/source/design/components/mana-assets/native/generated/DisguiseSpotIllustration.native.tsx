@@ -1,13 +1,13 @@
-// Module ID: 6109
-// Function ID: 6110
+// Module ID: 6153
+// Function ID: 6154
 // Name: DisguiseSpotIllustration
-// Dependencies: [21, 5757, 6110, 2]
+// Dependencies: [21, 5799, 6154, 2]
 // Exports: DisguiseSpotIllustration
 
-// Module 6109 (DisguiseSpotIllustration)
+// Module 6153 (DisguiseSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5757 */;
-import _modDef6110 from "module_6110" /* 6110 */;
+import FastImageDefault from "FastImage" /* 5799 */;
+import _modDef6154 from "module_6154" /* 6154 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const DisguiseSpotIllustration = function DisguiseSpotIllustration(width)
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6110 };
+  const obj2 = { uri: _modDef6154 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

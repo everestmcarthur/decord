@@ -1,13 +1,13 @@
-// Module ID: 11855
-// Function ID: 11856
+// Module ID: 11864
+// Function ID: 11865
 // Name: handleAcceptEventInstantInvite
-// Dependencies: [7722, 10535, 7937, 8610, 9943, 2]
+// Dependencies: [7766, 10551, 7975, 8648, 9782, 2]
 // Exports: default
 
-// Module 11855 (handleAcceptEventInstantInvite)
-import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8610 */;
-import GuildScheduledEventModalActionCreators from "GuildScheduledEventModalActionCreators" /* 9943 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7722 */;
+// Module 11864 (handleAcceptEventInstantInvite)
+import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8648 */;
+import GuildScheduledEventModalActionCreators from "GuildScheduledEventModalActionCreators" /* 9782 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7766 */;
 
 require = fn;
 const size = fn(2);
@@ -35,6 +35,6 @@ export default function handleAcceptEventInstantInvite(code) {
         }
       }
     }
-    tmpResult = guildScheduledEvent(7937);
+    tmpResult = guildScheduledEvent(7975);
   }
 };

@@ -1,18 +1,18 @@
-// Module ID: 8876
-// Function ID: 8877
+// Module ID: 8915
+// Function ID: 8916
 // Name: Arrow
-// Dependencies: [19, 21, 4722, 576, 1177, 8877, 2]
+// Dependencies: [19, 21, 4756, 576, 1177, 8916, 2]
 // Exports: default
 
-// Module 8876 (Arrow)
+// Module 8915 (Arrow)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
-import _modDef8877 from "module_8877" /* 8877 */;
+import _modDef8916 from "module_8916" /* 8916 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 const obj2 = { tintColor: { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT } };
 let closure_4 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -20,5 +20,5 @@ const result = size.fileFinishedImporting("modules/in_app_reports/native/compone
 
 export default function Arrow() {
   const tmp = closure_4();
-  return jsx(native.Icon, { source: _modDef8877, size: native.Icon.Sizes.MEDIUM, style: closure_4().tintColor });
+  return jsx(native.Icon, { source: _modDef8916, size: native.Icon.Sizes.MEDIUM, style: closure_4().tintColor });
 };

@@ -1,20 +1,20 @@
-// Module ID: 17747
-// Function ID: 17748
+// Module ID: 17827
+// Function ID: 17828
 // Name: AddAvatarModalActionCreators
-// Dependencies: [17748, 1074, 1241, 7180, 5066, 1115, 8394, 8396, 4925, 17749, 1897, 12946, 2]
+// Dependencies: [17828, 1074, 1241, 7224, 5108, 1115, 8432, 8434, 4959, 17829, 1980, 12955, 2]
 // Exports: handlePressNext, openAddAvatarModal, showSkipAvatarModal
 
-// Module 17747 (AddAvatarModalActionCreators)
+// Module 17827 (AddAvatarModalActionCreators)
 import Constants from "Constants" /* 1074 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4925 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5066 */;
-import UserSettingsAccountActionCreators from "UserSettingsAccountActionCreators" /* 7180 */;
-import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8394 */;
-import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8396 */;
-import NUFActionCreators from "NUFActionCreators" /* 12946 */;
-import AddAvatarModalConstants from "AddAvatarModalConstants" /* 17748 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1980 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4959 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5108 */;
+import UserSettingsAccountActionCreators from "UserSettingsAccountActionCreators" /* 7224 */;
+import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8432 */;
+import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8434 */;
+import NUFActionCreators from "NUFActionCreators" /* 12955 */;
+import AddAvatarModalConstants from "AddAvatarModalConstants" /* 17828 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -64,5 +64,5 @@ export const showSkipAvatarModal = function showSkipAvatarModal(arg0) {
   AlertActionCreatorsDefault.show(obj3);
 };
 export const openAddAvatarModal = function openAddAvatarModal() {
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(17749, dependencyMap.paths), {}, ADD_AVATAR_MODAL_KEY);
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(17829, dependencyMap.paths), {}, ADD_AVATAR_MODAL_KEY);
 };

@@ -1,8 +1,8 @@
-// Module ID: 6618
-// Function ID: 6619
+// Module ID: 6662
+// Function ID: 6663
 // Dependencies: [2]
 
-// Module 6618
+// Module 6662
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ServerIconDefaultExample-2x.png.js");

@@ -1,13 +1,13 @@
-// Module ID: 11743
-// Function ID: 11744
+// Module ID: 11750
+// Function ID: 11751
 // Name: AppStoreOverlayTelemetryManager
-// Dependencies: [1074, 7314, 1364, 1094, 2]
+// Dependencies: [1074, 7358, 1364, 1094, 2]
 // Exports: clearAppStoreOverlayOpen, setAppStoreOverlayOpen
 
-// Module 11743 (AppStoreOverlayTelemetryManager)
+// Module 11750 (AppStoreOverlayTelemetryManager)
 import Constants from "Constants" /* 1074 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7314 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7358 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;

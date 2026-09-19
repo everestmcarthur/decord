@@ -1,9 +1,9 @@
-// Module ID: 14339
-// Function ID: 14340
+// Module ID: 14394
+// Function ID: 14395
 // Name: MenuGroup
-// Dependencies: [19, 17, 21, 4722, 576, 2]
+// Dependencies: [19, 17, 21, 4756, 576, 2]
 
-// Module 14339 (MenuGroup)
+// Module 14394 (MenuGroup)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,7 +11,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: closure_1 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: c2, jsxs: c3 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj = { divider: { marginLeft: 0, height: StyleSheet.hairlineWidth, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginTop: -1 * StyleSheet.hairlineWidth } };
 let closure_4 = createStyles.createStyles(obj);
 const obj3 = { marginLeft: 0, height: StyleSheet.hairlineWidth, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginTop: -1 * StyleSheet.hairlineWidth };

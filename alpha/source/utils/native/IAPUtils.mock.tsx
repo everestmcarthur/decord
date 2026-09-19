@@ -1,10 +1,10 @@
-// Module ID: 11323
-// Function ID: 11324
+// Module ID: 11336
+// Function ID: 11337
 // Name: iapProducts
-// Dependencies: [11324, 2]
+// Dependencies: [11337, 2]
 
-// Module 11323 (iapProducts)
-import billing_iapProducts from "billing/iapProducts" /* 11324 */;
+// Module 11336 (iapProducts)
+import billing_iapProducts from "billing/iapProducts" /* 11337 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("utils/native/IAPUtils.mock.tsx");

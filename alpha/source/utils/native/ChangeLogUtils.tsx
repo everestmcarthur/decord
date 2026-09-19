@@ -1,14 +1,14 @@
-// Module ID: 8314
-// Function ID: 8315
+// Module ID: 8352
+// Function ID: 8353
 // Name: utils/ChangeLogUtils
-// Dependencies: [19, 17, 21, 4722, 576, 5611, 5164, 4718, 7176, 8315, 2075, 2]
+// Dependencies: [19, 17, 21, 4756, 576, 5653, 5206, 4752, 7220, 8353, 1929, 2]
 
-// Module 8314 (utils/ChangeLogUtils)
+// Module 8352 (utils/ChangeLogUtils)
 import nativeDefault from "native" /* 576 */;
-import _modDef2075 from "module_2075" /* 2075 */;
-import Text_Text from "Text/Text" /* 4718 */;
+import _modDef1929 from "module_1929" /* 1929 */;
+import Text_Text from "Text/Text" /* 4752 */;
 import noop from "module_19" /* 19 */;
-import CustomMarkup from "CustomMarkup" /* 5164 */;
+import CustomMarkup from "CustomMarkup" /* 5206 */;
 
 require = fn;
 function ChangeLogLink(arg0) {
@@ -88,9 +88,9 @@ function ChangeLogStrong(arg0) {
     if (str == null) {
       str = "text-default";
     }
-    const obj2 = { variant: "experimental/body-sm/semibold", color: str, children: tmp(8315).smartOutput(node, output, state) };
-    let reactResult = jsx(tmp(4718).Text, { variant: "experimental/body-sm/semibold", color: str, children: tmp(8315).smartOutput(node, output, state) });
-    const tmpResult = tmp(8315);
+    const obj2 = { variant: "experimental/body-sm/semibold", color: str, children: tmp(8353).smartOutput(node, output, state) };
+    let reactResult = jsx(tmp(4752).Text, { variant: "experimental/body-sm/semibold", color: str, children: tmp(8353).smartOutput(node, output, state) });
+    const tmpResult = tmp(8353);
   } else {
     const strong = rules.strong;
     reactResult = strong.react(node, output, state);
@@ -100,7 +100,7 @@ function ChangeLogStrong(arg0) {
 function ChangeLogImage(arg0) {
   ({ node, state } = arg0);
   const obj = { style: closure_6().image, source: null };
-  const obj2 = { uri: _modDef2075.sanitizeUrl(node.target) };
+  const obj2 = { uri: _modDef1929.sanitizeUrl(node.target) };
   obj.source = obj2;
   return <React4 key={state.key} style={closure_6().image} source={null} />;
 }
@@ -114,11 +114,11 @@ function ChangeLogBlockQuote(state) {
 get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { link: { color: nativeDefault.colors.TEXT_LINK }, list: { marginBottom: 10 }, image: { alignSelf: "center", flex: 1 }, container: null, text: null };
 const obj3 = { color: nativeDefault.colors.TEXT_LINK };
-obj2.container = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: fn(5611).DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
-const obj4 = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: fn(5611).DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
+obj2.container = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: fn(5653).DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
+const obj4 = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: fn(5653).DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
 obj2.text = { fontSize: 14, lineHeight: 18, marginBottom: 8, color: nativeDefault.colors.TEXT_MUTED };
 let closure_6 = createStyles.createStyles(obj2);
 const rules = CustomMarkup.createRules({});

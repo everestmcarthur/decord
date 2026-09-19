@@ -1,15 +1,15 @@
-// Module ID: 11824
-// Function ID: 11825
+// Module ID: 11833
+// Function ID: 11834
 // Name: showLongPressURLActionSheet
-// Dependencies: [4690, 1115, 4419, 7385, 4417, 8593, 11825, 7390, 2]
+// Dependencies: [4724, 1115, 4453, 7429, 4451, 8631, 11834, 7434, 2]
 // Exports: default
 
-// Module 11824 (showLongPressURLActionSheet)
-import LinkingDefault from "Linking" /* 4417 */;
-import ToastUtils from "ToastUtils" /* 4419 */;
-import ClipboardUtils from "ClipboardUtils" /* 7385 */;
-import showShareActionSheet from "showShareActionSheet" /* 8593 */;
-import handleContentLinkingDefault from "handleContentLinking" /* 11825 */;
+// Module 11833 (showLongPressURLActionSheet)
+import LinkingDefault from "Linking" /* 4451 */;
+import ToastUtils from "ToastUtils" /* 4453 */;
+import ClipboardUtils from "ClipboardUtils" /* 7429 */;
+import showShareActionSheet from "showShareActionSheet" /* 8631 */;
+import handleContentLinkingDefault from "handleContentLinking" /* 11834 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/links/native/showLongPressURLActionSheet.tsx");

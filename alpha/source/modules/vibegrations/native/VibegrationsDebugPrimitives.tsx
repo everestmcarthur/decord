@@ -1,16 +1,16 @@
-// Module ID: 16986
-// Function ID: 16987
+// Module ID: 17062
+// Function ID: 17063
 // Name: VibegrationsDebugPrimitives
-// Dependencies: [19, 17, 21, 4722, 576, 4718, 1115, 3676, 16983, 5144, 2]
+// Dependencies: [19, 17, 21, 4756, 576, 4752, 1115, 3678, 17059, 5186, 2]
 // Exports: DebugMeter, DebugNote, DebugSection, DebugSnapshotToolbar, DebugStatRow
 
-// Module 16986 (VibegrationsDebugPrimitives)
+// Module 17062 (VibegrationsDebugPrimitives)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import _modDef3676 from "module_3676" /* 3676 */;
-import Text_Text from "Text/Text" /* 4718 */;
-import components_Button_Button from "components/Button/Button" /* 5144 */;
-import VibegrationsDebugFormat from "VibegrationsDebugFormat" /* 16983 */;
+import _modDef3678 from "module_3678" /* 3678 */;
+import Text_Text from "Text/Text" /* 4752 */;
+import components_Button_Button from "components/Button/Button" /* 5186 */;
+import VibegrationsDebugFormat from "VibegrationsDebugFormat" /* 17059 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,7 +18,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { toolbar: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_12 }, toolbarStatus: { flex: 1 }, section: null, statRow: null, statRowHead: null, statLabel: null, statValue: null, meterTrack: null, meterFill: null, meterFillCritical: null };
 let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_12 };
 obj2.section = { gap: nativeDefault.space.PX_8 };
@@ -48,7 +48,7 @@ export const DebugSnapshotToolbar = function DebugSnapshotToolbar(onRefresh) {
   } else if ("failed" === fetchState) {
     const obj3 = { variant: "text-xs/normal", color: "text-feedback-critical", children: null };
     const intl2 = util.intl;
-    obj3.children = intl2.string(_modDef3676["K+FvtM"]);
+    obj3.children = intl2.string(_modDef3678["K+FvtM"]);
     tmp4Result = tmp4(Text_Text.Text, obj3);
   } else {
     tmp4Result = null;
@@ -56,7 +56,7 @@ export const DebugSnapshotToolbar = function DebugSnapshotToolbar(onRefresh) {
       const obj4 = { variant: "text-xs/normal", color: "text-muted", children: null };
       const intl = util.intl;
       const obj6 = { time: VibegrationsDebugFormat.formatObservedAt(generatedAt) };
-      obj4.children = intl.formatToPlainString(_modDef3676["4NpaEk"], obj6);
+      obj4.children = intl.formatToPlainString(_modDef3678["4NpaEk"], obj6);
       tmp4Result = tmp4(Text_Text.Text, obj4);
     }
   }
@@ -64,7 +64,7 @@ export const DebugSnapshotToolbar = function DebugSnapshotToolbar(onRefresh) {
   const items = [hasOwnProperty(React4, obj2), ];
   const obj7 = { variant: "secondary", size: "sm", text: null, onPress: null };
   const intl3 = util.intl;
-  obj7.text = intl3.string(_modDef3676.aw0IJm);
+  obj7.text = intl3.string(_modDef3678.aw0IJm);
   obj7.onPress = onRefresh.onRefresh;
   items[1] = hasOwnProperty(components_Button_Button.Button, obj7);
   obj.children = items;

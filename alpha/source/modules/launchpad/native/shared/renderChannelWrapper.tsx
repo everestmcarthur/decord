@@ -1,12 +1,12 @@
-// Module ID: 17047
-// Function ID: 17048
+// Module ID: 17123
+// Function ID: 17124
 // Name: renderChannelWrapper
-// Dependencies: [19, 17, 21, 17046, 17048, 2]
+// Dependencies: [19, 17, 21, 17122, 17124, 2]
 // Exports: default
 
-// Module 17047 (renderChannelWrapper)
-import getLayoutStylesDefault from "getLayoutStyles" /* 17046 */;
-import getScaledChannelRowHeightDefault from "getScaledChannelRowHeight" /* 17048 */;
+// Module 17123 (renderChannelWrapper)
+import getLayoutStylesDefault from "getLayoutStyles" /* 17122 */;
+import getScaledChannelRowHeightDefault from "getScaledChannelRowHeight" /* 17124 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;

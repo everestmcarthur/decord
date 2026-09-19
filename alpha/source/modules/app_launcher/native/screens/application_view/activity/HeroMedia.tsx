@@ -1,22 +1,22 @@
-// Module ID: 12326
-// Function ID: 12327
+// Module ID: 12335
+// Function ID: 12336
 // Name: HeroMedia
-// Dependencies: [19, 4714, 1483, 21, 4722, 11468, 9897, 504, 7364, 12300, 8539, 1115, 2]
+// Dependencies: [19, 4748, 1483, 21, 4756, 11480, 9739, 504, 7408, 12309, 8577, 1115, 2]
 // Exports: default, useHeroMediaDimensions
 
-// Module 12326 (HeroMedia)
+// Module 12335 (HeroMedia)
 import initialize from "initialize" /* 504 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7364 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 9897 */;
-import useDefaultAppLauncherWidth from "useDefaultAppLauncherWidth" /* 11468 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7408 */;
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 9739 */;
+import useDefaultAppLauncherWidth from "useDefaultAppLauncherWidth" /* 11480 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4714 */;
+import AccessibilityStore from "AccessibilityStore" /* 4748 */;
 
-const getPreviewVideoAssetUrlDefault = tmp6(12300);
+const getPreviewVideoAssetUrlDefault = tmp6(12309);
 require = fn;
 const DEFAULT_CONTENT_PADDING = fn(1483).DEFAULT_CONTENT_PADDING;
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let closure_6 = createStyles.createStyles({ mediaBackground: { backgroundColor: "black" } });
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/screens/application_view/activity/HeroMedia.tsx");

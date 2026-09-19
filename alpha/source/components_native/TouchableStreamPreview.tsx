@@ -1,26 +1,26 @@
-// Module ID: 10302
-// Function ID: 10303
+// Module ID: 10314
+// Function ID: 10315
 // Name: TouchableStreamPreview
-// Dependencies: [19, 17, 4739, 4744, 502, 1958, 1980, 4361, 4741, 1074, 21, 4722, 4571, 576, 4867, 504, 1115, 5581, 4864, 4924, 4923, 4774, 5161, 10303, 4718, 2]
+// Dependencies: [19, 17, 4773, 4778, 502, 2041, 2063, 4395, 4775, 1074, 21, 4756, 4605, 576, 4901, 504, 1115, 5623, 4898, 4958, 4957, 4808, 5203, 10315, 4752, 2]
 // Exports: default
 
-// Module 10302 (TouchableStreamPreview)
+// Module 10314 (TouchableStreamPreview)
 import nativeDefault from "native" /* 576 */;
-import StreamActionCreators from "StreamActionCreators" /* 4864 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4923 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5581 */;
+import StreamActionCreators from "StreamActionCreators" /* 4898 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4957 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5623 */;
 import noop from "module_19" /* 19 */;
-import GameConsoleStore from "GameConsoleStore" /* 4739 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4744 */;
+import GameConsoleStore from "GameConsoleStore" /* 4773 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4778 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
-import GuildStore from "GuildStore" /* 1980 */;
-import PermissionStore from "PermissionStore" /* 4361 */;
-import VoiceStateStore from "VoiceStateStore" /* 4741 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
+import GuildStore from "GuildStore" /* 2063 */;
+import PermissionStore from "PermissionStore" /* 4395 */;
+import VoiceStateStore from "VoiceStateStore" /* 4775 */;
 
 const require = globalThis.__r;
 
-const StreamKeyUtils = tmp5(4774);
+const StreamKeyUtils = tmp5(4808);
 require = fn;
 function StreamPreviewContainer(disableTransition) {
   disableTransition = disableTransition.disableTransition;
@@ -82,10 +82,10 @@ function StreamPreviewContainer(disableTransition) {
     const voiceChannel = SelectedChannelActionCreatorsDefault.selectVoiceChannel(stream.channelId);
     StreamActionCreators.watchStream(stream);
     if (disableTransition) {
-      const result = tmp(4923).rebuildRTCActiveChannels();
-      const tmpResult = tmp(4923);
+      const result = tmp(4957).rebuildRTCActiveChannels();
+      const tmpResult = tmp(4957);
     } else {
-      tmp(4924)(tmp3);
+      tmp(4958)(tmp3);
     }
     const tmpResult2 = ChannelRTCActionCreatorsDefault;
     const participant = tmpResult2.selectParticipant(tmp3.channelId, StreamKeyUtils.encodeStreamKey(tmp3));
@@ -113,13 +113,13 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const Permissions = fn(1074).Permissions;
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { touchable: { borderRadius: 5, overflow: "hidden" }, ctaWrapper: null, ctaBackground: null, ctaText: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
 obj3.alignItems = "center";
 obj3.justifyContent = "center";
-const ColorUtils = fn(4571);
+const ColorUtils = fn(4605);
 obj3.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_700, 0.7);
 obj2.ctaWrapper = obj3;
 obj2.ctaBackground = { height: 40, paddingHorizontal: 16, borderRadius: 20, backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_500, justifyContent: "center", alignItems: "center" };

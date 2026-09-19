@@ -1,10 +1,10 @@
-// Module ID: 5350
-// Function ID: 5351
+// Module ID: 5392
+// Function ID: 5393
 // Name: ImageAttachmentMezzanineV2Experiment
 // Dependencies: [1434, 2]
 // Exports: getImageAttachmentMezzanineV2Config
 
-// Module 5350 (ImageAttachmentMezzanineV2Experiment)
+// Module 5392 (ImageAttachmentMezzanineV2Experiment)
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

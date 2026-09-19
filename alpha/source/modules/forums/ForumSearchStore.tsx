@@ -1,12 +1,12 @@
-// Module ID: 7970
-// Function ID: 7971
+// Module ID: 8008
+// Function ID: 8009
 // Name: ForumSearchStore
-// Dependencies: [1958, 504, 573, 2]
+// Dependencies: [2041, 504, 573, 2]
 
-// Module 7970 (ForumSearchStore)
+// Module 8008 (ForumSearchStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
 
 const dependencyMap = {};
 const Store = initializeDefault.Store;

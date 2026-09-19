@@ -1,12 +1,12 @@
-// Module ID: 8158
-// Function ID: 8159
+// Module ID: 8196
+// Function ID: 8197
 // Name: AutomodErrorUtils
-// Dependencies: [1958, 1074, 1115, 8036, 2]
+// Dependencies: [2041, 1074, 1115, 8074, 2]
 // Exports: getAutomodErrorMessage
 
-// Module 8158 (AutomodErrorUtils)
+// Module 8196 (AutomodErrorUtils)
 import util from "util" /* 1115 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
 
 require = fn;
 function getAutomodErrorMessageFromErrorResponse(errorResponseBody, id) {

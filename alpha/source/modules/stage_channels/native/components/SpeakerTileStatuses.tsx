@@ -1,23 +1,23 @@
-// Module ID: 10294
-// Function ID: 10295
+// Module ID: 10306
+// Function ID: 10307
 // Name: SpeakerTileStatuses
-// Dependencies: [19, 17, 1909, 4741, 5591, 21, 4722, 576, 504, 10251, 9871, 9872, 1177, 10295, 10296, 7163, 2]
+// Dependencies: [19, 17, 1992, 4775, 5633, 21, 4756, 576, 504, 10263, 9713, 9714, 1177, 10307, 10308, 7207, 2]
 // Exports: BlockedStatus, IgnoredStatus
 
-// Module 10294 (SpeakerTileStatuses)
+// Module 10306 (SpeakerTileStatuses)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
-import _modDef7163 from "module_7163" /* 7163 */;
-import _modDef10296 from "module_10296" /* 10296 */;
+import _modDef7207 from "module_7207" /* 7207 */;
+import _modDef10308 from "module_10308" /* 10308 */;
 import noop from "module_19" /* 19 */;
-import MediaEngineStore from "MediaEngineStore" /* 1909 */;
-import VoiceStateStore from "VoiceStateStore" /* 4741 */;
-import StageChannelRoleStore from "StageChannelRoleStore" /* 5591 */;
+import MediaEngineStore from "MediaEngineStore" /* 1992 */;
+import VoiceStateStore from "VoiceStateStore" /* 4775 */;
+import StageChannelRoleStore from "StageChannelRoleStore" /* 5633 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj = { voiceStatusWrapper: null, moderatorStatusWrapper: null, restricted: null };
 let size = { position: "absolute", top: 4, left: 4, backgroundColor: nativeDefault.colors.WHITE, borderRadius: nativeDefault.radii.md, width: 24, height: 24, justifyContent: "center", alignItems: "center" };
 obj.voiceStatusWrapper = size;
@@ -52,15 +52,15 @@ const memoResult = noop.memo((userId) => {
     flag2 = false;
   }
   if (stateFromStores) {
-    let tmp5 = channelId(10251);
+    let tmp5 = channelId(10263);
     let flag3 = true;
   } else if (flag2) {
-    tmp5 = channelId(9871);
+    tmp5 = channelId(9713);
     flag3 = false;
   } else {
     flag3 = false;
     if (flag) {
-      tmp5 = channelId(9872);
+      tmp5 = channelId(9714);
       flag3 = false;
     }
   }
@@ -87,7 +87,7 @@ export const ModeratorStatus = noop.memo((userId) => {
   const items1 = [channelId, userId];
   let tmp4;
   if (obj.useStateFromStores(items, () => StageChannelRoleStore.isModerator(userId, channelId), items1)) {
-    tmp4 = channelId(10295);
+    tmp4 = channelId(10307);
   }
   let tmp6 = null;
   if (null != tmp4) {
@@ -102,9 +102,9 @@ export const ModeratorStatus = noop.memo((userId) => {
 });
 export const BlockedStatus = function BlockedStatus() {
   const tmp = closure_8();
-  return jsx(native.Icon, { style: closure_8().restricted, source: _modDef10296, size: native.Icon.Sizes.EXTRA_SMALL, color: nativeDefault.unsafe_rawColors.RED_400 });
+  return jsx(native.Icon, { style: closure_8().restricted, source: _modDef10308, size: native.Icon.Sizes.EXTRA_SMALL, color: nativeDefault.unsafe_rawColors.RED_400 });
 };
 export const IgnoredStatus = function IgnoredStatus() {
   const tmp = closure_8();
-  return jsx(native.Icon, { style: closure_8().restricted, source: _modDef7163, size: native.Icon.Sizes.EXTRA_SMALL });
+  return jsx(native.Icon, { style: closure_8().restricted, source: _modDef7207, size: native.Icon.Sizes.EXTRA_SMALL });
 };

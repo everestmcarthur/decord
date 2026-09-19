@@ -1,14 +1,14 @@
-// Module ID: 8078
-// Function ID: 8079
+// Module ID: 8116
+// Function ID: 8117
 // Name: useActiveTheme
-// Dependencies: [1184, 4541, 1227, 1185, 504, 4578, 2]
+// Dependencies: [1184, 4575, 1227, 1185, 504, 4612, 2]
 // Exports: useIsClientThemeOrCustomThemeActive, useIsCustomThemeActive
 
-// Module 8078 (useActiveTheme)
+// Module 8116 (useActiveTheme)
 import initialize from "initialize" /* 504 */;
-import useRoutedActiveGuildThemeDefault from "useRoutedActiveGuildTheme" /* 4578 */;
+import useRoutedActiveGuildThemeDefault from "useRoutedActiveGuildTheme" /* 4612 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1184 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4541 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4575 */;
 import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1227 */;
 
 require = fn;

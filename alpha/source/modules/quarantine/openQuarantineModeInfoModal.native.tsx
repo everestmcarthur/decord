@@ -1,12 +1,12 @@
-// Module ID: 5692
-// Function ID: 5693
+// Module ID: 5734
+// Function ID: 5735
 // Name: openQuarantineModeInfoModal
-// Dependencies: [19, 17, 21, 4588, 5067, 5693, 1897, 2]
+// Dependencies: [19, 17, 21, 4622, 5109, 5735, 1980, 2]
 // Exports: default
 
-// Module 5692 (openQuarantineModeInfoModal)
-import ChatInputUtils from "ChatInputUtils" /* 4588 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5067 */;
+// Module 5734 (openQuarantineModeInfoModal)
+import ChatInputUtils from "ChatInputUtils" /* 4622 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5109 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -32,6 +32,7 @@ export default function openQuarantineModeInfoModal() {
           return closure_2_4(closure_0, {});
         };
       });
-    }
+    },
+    isDismissable: false
   });
 };

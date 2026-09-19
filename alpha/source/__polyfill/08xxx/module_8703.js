@@ -1,118 +1,21 @@
 // Module ID: 8703
 // Function ID: 8704
-// Dependencies: [41, 42, 93, 95, 98, 19, 21, 8697, 8704, 8711, 8712, 8713]
+// Dependencies: [514, 8704, 8705, 584]
 
 // Module 8703
-import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import appendTransformPropsDefault from "appendTransformProps" /* 8697 */;
-import extractPropsDefault from "extractProps" /* 8704 */;
-import _modDef8713 from "module_8713" /* 8713 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
-import noop from "module_19" /* 19 */;
+import _mod514 from "module_514" /* 514 */;
+import baseIteratee from "baseIteratee" /* 584 */;
 
-const _modDef8712 = tmp4(8712);
-const G = fn;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
+
+export default function createAggregator(arg0, arg1) {
+  closure_0 = arg0;
+  closure_1 = arg1;
+  return (arg0, arg1) => {
+    if (_mod514(arg0)) {
+      let tmpResult = tmp(8704);
     } else {
-      callResult = call(constructResult);
+      tmpResult = tmp(8705);
     }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
-  }
-}
-_possibleConstructorReturnDefault;
-const jsx = fn(21).jsx;
-class G {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = closure_3(this, G);
-    items1 = [...items];
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(G);
-    tmp3 = closure_4;
-    if (closure_7()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.setNativeProps = (matrix) => {
-      matrix = matrix.matrix;
-      let tmp = !matrix;
-      if (!matrix) {
-        tmp = appendTransformPropsDefault(matrix);
-      }
-      if (tmp) {
-        matrix.matrix = tmp;
-      }
-      root = root.root;
-      if (root != null) {
-        root.setNativeProps(matrix);
-      }
-    };
-    return tmp3Result;
-  }
-}
-_inherits(G, _modDef8713);
-const entry = {
-  key: "render",
-  value: function render() {
-    const self = this;
-    const props = this.props;
-    const propsAndStylesResult = G(8704).propsAndStyles(props);
-    const tmp5 = extractPropsDefault(propsAndStylesResult, this);
-    const obj = G(8704);
-    const extractFontResult = G(8711).extractFont(propsAndStylesResult);
-    if (typeof hasProps === "function") {
-      const keys = Object.keys();
-      if (keys !== undefined) {
-        let flag = true;
-        if (flag) {
-          tmp5.font = extractFontResult;
-        }
-        const obj3 = {
-          ref(arg0) {
-                return self.refMethod(arg0);
-              }
-        };
-        const merged = Object.assign(tmp5);
-        obj3.children = props.children;
-        return jsx(_modDef8712, {
-          ref(arg0) {
-                return self.refMethod(arg0);
-              }
-        });
-      }
-      flag = false;
-    } else {
-      throw new TypeError("Trying to call a non-function");
-    }
-  }
+    return tmpResult(arg0, closure_0, baseIteratee(arg1, 2), closure_1 ? closure_1() : {});
+  };
 };
-let items = [entry];
-const importDefaultResultResult = _createClass(G, items);
-importDefaultResultResult.displayName = "G";
-function hasProps(arg0) {
-
-}
-
-export default importDefaultResultResult;

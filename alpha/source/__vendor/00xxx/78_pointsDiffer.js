@@ -5,7 +5,7 @@
 // Exports: default
 
 // Module 78 (pointsDiffer)
-let closure_0 = { x: "PX_16", y: "accessible" };
+let closure_0 = { x: "a", y: "isArray" };
 
 export default function pointsDiffer(arg0, arg1) {
   let point = arg0;

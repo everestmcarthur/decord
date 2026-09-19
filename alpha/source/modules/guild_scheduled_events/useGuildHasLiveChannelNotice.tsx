@@ -1,22 +1,22 @@
-// Module ID: 16441
-// Function ID: 16442
+// Module ID: 16517
+// Function ID: 16518
 // Name: useGuildHasLiveChannelNotice
-// Dependencies: [19, 5588, 1963, 4744, 1958, 4361, 4746, 16442, 1964, 1085, 16443, 504, 9907, 16444, 5601, 5595, 2]
+// Dependencies: [19, 5630, 2046, 4778, 2041, 4395, 4780, 16518, 2047, 1085, 16519, 504, 9749, 16520, 5643, 5637, 2]
 // Exports: useGuildHasLiveChannelNotice, useGuildLiveChannelNoticeInfo
 
-// Module 16441 (useGuildHasLiveChannelNotice)
-import StageChannelParticipants from "StageChannelParticipants" /* 5595 */;
+// Module 16517 (useGuildHasLiveChannelNotice)
+import StageChannelParticipants from "StageChannelParticipants" /* 5637 */;
 import noop from "module_19" /* 19 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5588 */;
-import StageInstanceStore from "StageInstanceStore" /* 1963 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4744 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
-import PermissionStore from "PermissionStore" /* 4361 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4746 */;
-import LiveChannelNoticesStore from "LiveChannelNoticesStore" /* 16442 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5630 */;
+import StageInstanceStore from "StageInstanceStore" /* 2046 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4778 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
+import PermissionStore from "PermissionStore" /* 4395 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4780 */;
+import LiveChannelNoticesStore from "LiveChannelNoticesStore" /* 16518 */;
 
 require = fn;
-let closure_11 = fn(1964).GuildScheduledEventEntityTypes;
+let closure_11 = fn(2047).GuildScheduledEventEntityTypes;
 const Permissions = fn(1085).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/useGuildHasLiveChannelNotice.tsx");

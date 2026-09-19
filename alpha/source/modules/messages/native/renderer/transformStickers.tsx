@@ -1,13 +1,13 @@
-// Module ID: 13487
-// Function ID: 13488
+// Module ID: 13543
+// Function ID: 13544
 // Name: transformStickers
-// Dependencies: [5061, 8218, 8170, 1115, 2]
+// Dependencies: [5103, 8256, 8208, 1115, 2]
 // Exports: default
 
-// Module 13487 (transformStickers)
+// Module 13543 (transformStickers)
 import util from "util" /* 1115 */;
-import StickersUtils from "StickersUtils" /* 5061 */;
-import getAccessibilityLabelOrCheapFallbackUnsafe from "getAccessibilityLabelOrCheapFallbackUnsafe" /* 8170 */;
+import StickersUtils from "StickersUtils" /* 5103 */;
+import getAccessibilityLabelOrCheapFallbackUnsafe from "getAccessibilityLabelOrCheapFallbackUnsafe" /* 8208 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/native/renderer/transformStickers.tsx");
@@ -32,7 +32,7 @@ export default function transformStickers(message) {
     obj2.url = str2;
     obj2.width = 160;
     obj2.height = 160;
-    const NativeLottieRenderMode = tmp(8218).NativeLottieRenderMode;
+    const NativeLottieRenderMode = tmp(8256).NativeLottieRenderMode;
     obj2.renderMode = shouldAnimateStickerResult ? NativeLottieRenderMode.LOOP : NativeLottieRenderMode.STILL;
     const obj3 = { isPreview: !shouldAnimateStickerResult };
     const tmpResult = StickersUtils;

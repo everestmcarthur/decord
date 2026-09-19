@@ -1,12 +1,12 @@
-// Module ID: 11471
-// Function ID: 11472
+// Module ID: 11483
+// Function ID: 11484
 // Name: ProfileFrameUserPreview
-// Dependencies: [19, 21, 11363, 1115, 2]
+// Dependencies: [19, 21, 11375, 1115, 2]
 // Exports: default
 
-// Module 11471 (ProfileFrameUserPreview)
+// Module 11483 (ProfileFrameUserPreview)
 import util from "util" /* 1115 */;
-import UserProfilePreviewDefault from "UserProfilePreview" /* 11363 */;
+import UserProfilePreviewDefault from "UserProfilePreview" /* 11375 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

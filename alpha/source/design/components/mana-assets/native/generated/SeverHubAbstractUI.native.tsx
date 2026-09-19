@@ -1,13 +1,13 @@
-// Module ID: 6639
-// Function ID: 6640
+// Module ID: 6683
+// Function ID: 6684
 // Name: SeverHubAbstractUI
-// Dependencies: [21, 5757, 6640, 2]
+// Dependencies: [21, 5799, 6684, 2]
 // Exports: SeverHubAbstractUI
 
-// Module 6639 (SeverHubAbstractUI)
+// Module 6683 (SeverHubAbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5757 */;
-import _modDef6640 from "module_6640" /* 6640 */;
+import FastImageDefault from "FastImage" /* 5799 */;
+import _modDef6684 from "module_6684" /* 6684 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const SeverHubAbstractUI = function SeverHubAbstractUI(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6640 };
+  const obj2 = { uri: _modDef6684 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

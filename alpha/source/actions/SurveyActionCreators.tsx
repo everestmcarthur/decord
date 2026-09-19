@@ -1,22 +1,22 @@
-// Module ID: 4914
-// Function ID: 4915
+// Module ID: 4948
+// Function ID: 4949
 // Name: SurveyActionCreators
-// Dependencies: [4913, 1074, 573, 1241, 4915, 1249, 1970, 1271, 2]
+// Dependencies: [4947, 1074, 573, 1241, 4949, 1249, 2053, 1271, 2]
 // Exports: overrideSurvey, surveyFetch, surveyHide, surveySeen
 
-// Module 4914 (SurveyActionCreators)
+// Module 4948 (SurveyActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1249 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
-import TypeUtils from "TypeUtils" /* 1970 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 4915 */;
-import SurveyStore from "SurveyStore" /* 4913 */;
+import TypeUtils from "TypeUtils" /* 2053 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 4949 */;
+import SurveyStore from "SurveyStore" /* 4947 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const SURVEY_REFETCH_INTERVAL = fn(4913).SURVEY_REFETCH_INTERVAL;
+const SURVEY_REFETCH_INTERVAL = fn(4947).SURVEY_REFETCH_INTERVAL;
 const Constants = fn(1074);
 ({ AnalyticEvents: hasOwnProperty, NoticeTypes: metroRequire, Endpoints: closure_7 } = Constants);
 const size = fn(2);

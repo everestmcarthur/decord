@@ -1,21 +1,21 @@
-// Module ID: 10479
-// Function ID: 10480
+// Module ID: 10495
+// Function ID: 10496
 // Name: FavoritesGuildIntroPopover
-// Dependencies: [32, 19, 1950, 1961, 1074, 560, 1944, 10465, 504, 10480, 7584, 2]
+// Dependencies: [32, 19, 2033, 2044, 1074, 560, 2027, 10481, 504, 10496, 7628, 2]
 // Exports: hasOfferedFavoritesGuildOnboarding, isFavoritesIntroPopoverShown, resetHasOfferedFavoritesGuildOnboarding, useFavoritesIntroPopover, useIsFavoritesIntroPopoverShown
 
-// Module 10479 (FavoritesGuildIntroPopover)
-import dismissible_content from "dismissible_content" /* 1944 */;
-import useCanShowFavoritesGuildOnboardingDefault from "useCanShowFavoritesGuildOnboarding" /* 10480 */;
+// Module 10495 (FavoritesGuildIntroPopover)
+import dismissible_content from "dismissible_content" /* 2027 */;
+import useCanShowFavoritesGuildOnboardingDefault from "useCanShowFavoritesGuildOnboarding" /* 10496 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import DismissibleContentShownStateStore_mod from "DismissibleContentShownStateStore" /* 1950 */;
-import FavoriteStore from "FavoriteStore" /* 1961 */;
+import DismissibleContentShownStateStore_mod from "DismissibleContentShownStateStore" /* 2033 */;
+import FavoriteStore from "FavoriteStore" /* 2044 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let DismissibleContentShownStateStore = fn(1950);
+let DismissibleContentShownStateStore = fn(2033);
 ({ isContentShown: hasOwnProperty, useIsContentShown: metroRequire } = DismissibleContentShownStateStore);
 let DismissibleContentShownStateStore = DismissibleContentShownStateStore_mod;
 const NOOP = fn(1074).NOOP;
@@ -39,17 +39,17 @@ export default noop.memo(function FavoritesGuildIntroPopover() {
       if (!stateFromStores) {
         if (tmp5) {
           if (tmp6) {
-            let items1 = [tmp(1944).DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO];
+            let items1 = [tmp(2027).DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO];
           }
           const tmp10 = _slicedToArray(tmp8(items1), 2);
           _require = tmp11;
-          if (tmp10[0] === tmp(1944).DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO) {
-            const items2 = [tmp(1944).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM];
+          if (tmp10[0] === tmp(2027).DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO) {
+            const items2 = [tmp(2027).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM];
             let items3 = items2;
           } else {
             items3 = [];
           }
-          const tmp12 = _slicedToArray(tmp(7584).useSelectedDismissibleContent(items3, undefined, true), 1)[0] === tmp(1944).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM;
+          const tmp12 = _slicedToArray(tmp(7628).useSelectedDismissibleContent(items3, undefined, true), 1)[0] === tmp(2027).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM;
           importDefault = tmp12;
           const items4 = [tmp12];
           const effect = noop.useEffect(() => {

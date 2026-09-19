@@ -1,10 +1,10 @@
-// Module ID: 5747
-// Function ID: 5748
+// Module ID: 5789
+// Function ID: 5790
 // Name: ActivityIndicator/ActivityIndicator
-// Dependencies: [17, 21, 4423, 576, 2]
+// Dependencies: [17, 21, 4457, 576, 2]
 // Exports: ActivityIndicator
 
-// Module 5747 (ActivityIndicator/ActivityIndicator)
+// Module 5789 (ActivityIndicator/ActivityIndicator)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 576 */;

@@ -1,11 +1,11 @@
-// Module ID: 5674
-// Function ID: 5675
+// Module ID: 5716
+// Function ID: 5717
 // Name: StickersPackStore
-// Dependencies: [32, 1974, 1981, 1091, 5438, 2]
+// Dependencies: [32, 2057, 2064, 1091, 5480, 2]
 
-// Module 5674 (StickersPackStore)
+// Module 5716 (StickersPackStore)
 import DurationsDefault from "Durations" /* 1091 */;
-import StickersTypes from "StickersTypes" /* 5438 */;
+import StickersTypes from "StickersTypes" /* 5480 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -40,8 +40,8 @@ function ingestStickerPack(item10017, packStickersDatabase, packsDatabase, premi
     return obj;
   })(item10017.stickers));
 }
-const TypeTag = fn(1974).TypeTag;
-const LibdiscoreStore = fn(1981).LibdiscoreStore;
+const TypeTag = fn(2057).TypeTag;
+const LibdiscoreStore = fn(2064).LibdiscoreStore;
 let c4 = false;
 let closure_5 = null;
 const HOUR = DurationsDefault.Millis.HOUR;

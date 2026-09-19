@@ -1,21 +1,21 @@
-// Module ID: 12251
-// Function ID: 12252
+// Module ID: 12260
+// Function ID: 12261
 // Name: ForumPostMedia
-// Dependencies: [32, 19, 17, 1182, 1181, 21, 4722, 576, 5757, 5132, 12252, 7796, 12253, 1364, 7492, 5292, 8643, 8645, 12254, 4573, 1936, 10460, 1477, 2]
+// Dependencies: [32, 19, 17, 1182, 1181, 21, 4756, 576, 5799, 5174, 12261, 7840, 12262, 1364, 7536, 5334, 8681, 8683, 12263, 4607, 2019, 10476, 1477, 2]
 // Exports: ForumPostGridMedia, ForumPostMediaThumbnail, useSharedMediaProps
 
-// Module 12251 (ForumPostMedia)
+// Module 12260 (ForumPostMedia)
 import nativeDefault from "native" /* 576 */;
 import utils_ImageUtils from "utils/ImageUtils" /* 1477 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5132 */;
-import FastImageDefault from "FastImage" /* 5757 */;
-import SpoilerIconDefault from "SpoilerIcon" /* 12252 */;
-import MessageAttachmentUtils from "MessageAttachmentUtils" /* 12254 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5174 */;
+import FastImageDefault from "FastImage" /* 5799 */;
+import SpoilerIconDefault from "SpoilerIcon" /* 12261 */;
+import MessageAttachmentUtils from "MessageAttachmentUtils" /* 12263 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1182 */;
 
-const UserSettings = tmp(1936);
+const UserSettings = tmp(2019);
 require = fn;
 function ForumPostMediaAndroid(blurTheme) {
   const shouldSpoiler = blurTheme.shouldSpoiler;
@@ -74,9 +74,9 @@ function ForumPostMedia(obscureReason) {
   if (obscureReason.isMediaPost) {
     const obj2 = {};
     const merged = Object.assign(obscureReason);
-    let tmp6Result = closure_10(ref(12253), obj2);
+    let tmp6Result = closure_10(ref(12262), obj2);
     let tmp12 = closure_10;
-    const tmp19 = ref(12253);
+    const tmp19 = ref(12262);
   } else {
     if (tmp3Result.isAndroid()) {
       const obj3 = {};
@@ -92,7 +92,7 @@ function ForumPostMedia(obscureReason) {
     tmp3Result = tmp3(1364);
   }
   if (null != obscureReason.obscureReason) {
-    const AGE_VERIFICATION_OBSCURABLE_REASONS = tmp3(7492).AGE_VERIFICATION_OBSCURABLE_REASONS;
+    const AGE_VERIFICATION_OBSCURABLE_REASONS = tmp3(7536).AGE_VERIFICATION_OBSCURABLE_REASONS;
     if (AGE_VERIFICATION_OBSCURABLE_REASONS.has(obscureReason.obscureReason)) {
       if (shouldAgeVerifyForReason) {
         const obj5 = { style: null, ref: null, children: null };
@@ -103,12 +103,12 @@ function ForumPostMedia(obscureReason) {
           androidRippleConfig: ANDROID_FOREGROUND_RIPPLE,
           activeOpacity: 0,
           onPress() {
-                  const obj = ref(8643);
-                  const result = obj.showAgeVerificationGetStartedModal({ entryPoint: obscureReason(8645).AgeVerificationModalEntryPoint.FORUM_POST_MEDIA_PREVIEW });
+                  const obj = ref(8681);
+                  const result = obj.showAgeVerificationGetStartedModal({ entryPoint: obscureReason(8683).AgeVerificationModalEntryPoint.FORUM_POST_MEDIA_PREVIEW });
                 },
           children: tmp6Result
         };
-        obj5.children = tmp12(tmp3(5292).PressableOpacity, obj6);
+        obj5.children = tmp12(tmp3(5334).PressableOpacity, obj6);
         let tmp12Result = tmp12(closure_5, obj5);
       }
       return tmp12Result;
@@ -132,7 +132,7 @@ function ForumPostMedia(obscureReason) {
         },
       children: tmp6Result
     };
-    obj7.children = tmp12(tmp3(5292).PressableOpacity, obj8);
+    obj7.children = tmp12(tmp3(5334).PressableOpacity, obj8);
     tmp12Result = tmp12(closure_5, obj7);
   } else {
     const obj9 = { style: null, ref: null, children: null };
@@ -150,7 +150,7 @@ const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
 let closure_13 = Math.min(PixelRatio.get(), 4);
 let closure_14 = Math.min(PixelRatio.get(), 4);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { mediaContainer: { position: "relative", overflow: "hidden" }, thumbnailBorder: { borderRadius: nativeDefault.radii.sm }, thumbnail: { height: 80, width: 80 }, spoilerIconContainer: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, justifyContent: "center" }, spoilerIcon: null, gridMediaContainer: null };
 let obj3 = { borderRadius: nativeDefault.radii.sm };
 obj2.spoilerIcon = { color: nativeDefault.unsafe_rawColors.PRIMARY_300, alignSelf: "center" };

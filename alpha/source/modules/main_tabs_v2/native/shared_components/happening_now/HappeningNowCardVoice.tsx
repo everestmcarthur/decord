@@ -1,20 +1,20 @@
-// Module ID: 16343
-// Function ID: 16344
+// Module ID: 16419
+// Function ID: 16420
 // Name: HappeningNowCardVoice
-// Dependencies: [19, 17, 7855, 1372, 4741, 15505, 1074, 21, 4722, 1241, 9784, 1897, 16326, 15506, 5270, 13285, 16336, 8292, 504, 12, 1370, 4874, 1115, 2]
+// Dependencies: [19, 17, 7893, 1372, 4775, 15560, 1074, 21, 4756, 1241, 13178, 1980, 16402, 15561, 5312, 13330, 16412, 8330, 504, 12, 1370, 4908, 1115, 2]
 // Exports: useVoiceChannelUsers
 
-// Module 16343 (HappeningNowCardVoice)
+// Module 16419 (HappeningNowCardVoice)
 import _modDef12 from "module_12" /* 12 */;
 import util from "util" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 4874 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1980 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 4908 */;
 import noop from "module_19" /* 19 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7855 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7893 */;
 import UserStore from "UserStore" /* 1372 */;
-import VoiceStateStore from "VoiceStateStore" /* 4741 */;
+import VoiceStateStore from "VoiceStateStore" /* 4775 */;
 
 const require = globalThis.__r;
 
@@ -38,11 +38,11 @@ function formatVoiceActivityTitle(stateFromStoresArray, guildId) {
   }
 }
 const View = fn(17).View;
-let closure_8 = fn(15505).HappeningNowCardTrackingType;
+let closure_8 = fn(15560).HappeningNowCardTrackingType;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let closure_12 = createStyles.createStyles({ content: { flexShrink: 1 }, avatars: { marginRight: 12 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardVoice.tsx");

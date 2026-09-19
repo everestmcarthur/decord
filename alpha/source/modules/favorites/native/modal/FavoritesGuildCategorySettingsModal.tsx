@@ -1,18 +1,18 @@
-// Module ID: 16369
-// Function ID: 16370
+// Module ID: 16445
+// Function ID: 16446
 // Name: FavoritesGuildCategorySettingsModal
-// Dependencies: [32, 19, 17, 1961, 1971, 21, 4722, 576, 1484, 504, 1983, 10464, 8067, 1115, 5066, 1177, 5142, 6799, 5857, 5775, 4679, 11172, 11174, 2]
+// Dependencies: [32, 19, 17, 2044, 2054, 21, 4756, 576, 1484, 504, 2066, 10480, 8105, 1115, 5108, 1177, 5184, 6843, 5899, 5817, 4713, 11185, 11187, 2]
 // Exports: default
 
-// Module 16369 (FavoritesGuildCategorySettingsModal)
+// Module 16445 (FavoritesGuildCategorySettingsModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5066 */;
-import FavoritesActionCreators from "FavoritesActionCreators" /* 10464 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5108 */;
+import FavoritesActionCreators from "FavoritesActionCreators" /* 10480 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FavoriteStore from "FavoriteStore" /* 1961 */;
+import FavoriteStore from "FavoriteStore" /* 2044 */;
 
 require = fn;
 function FavoritesGuildCategorySettings(categoryId) {
@@ -122,10 +122,10 @@ function FavoritesGuildCategorySettings(categoryId) {
   return ref(c5, obj6);
 }
 const ScrollView = fn(17).ScrollView;
-let maxLength = fn(1971).MAX_FAVORITE_CATEGORY_NAME_LENGTH;
+let maxLength = fn(2054).MAX_FAVORITE_CATEGORY_NAME_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, content: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.content = { padding: nativeDefault.space.PX_16 };
@@ -136,12 +136,12 @@ let result = size.fileFinishedImporting("modules/favorites/native/modal/Favorite
 export default function FavoritesGuildCategorySettingsModal(categoryId) {
   categoryId = categoryId.categoryId;
   let onGoBack;
-  onGoBack = onGoBack(11172)().onGoBack;
+  onGoBack = onGoBack(11185)().onGoBack;
   const obj = { screenKey: "favoritesGuildCategorySettings", title: null, render: null };
   const intl = categoryId(1115).intl;
   obj.title = intl.string(categoryId(1115).t["/uELTj"]);
   obj.render = function render() {
     return React6(FavoritesGuildCategorySettings, { categoryId, onGoBack });
   };
-  return closure_8(onGoBack(11174), obj);
+  return closure_8(onGoBack(11187), obj);
 };

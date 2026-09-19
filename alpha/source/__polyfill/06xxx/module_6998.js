@@ -1,49 +1,13 @@
 // Module ID: 6998
 // Function ID: 6999
-// Dependencies: [19, 1637]
-// Exports: useReactiveSharedValue
+// Dependencies: [6999, 7001, 7002]
 
 // Module 6998
-import noop from "module_19" /* 19 */;
+import _mod6999 from "module_6999" /* 6999 */;
+import _mod7001 from "module_7001" /* 7001 */;
+import _mod7002 from "module_7002" /* 7002 */;
 
-const require = globalThis.__r;
 
-({ useEffect: c2, useRef: c3 } = noop);
-
-export const useReactiveSharedValue = (current) => {
-  const tmp = closure_3(null);
-  const tmp2 = closure_3(null);
-  _require = tmp2;
-  let tmp3 = current;
-  if (current) {
-    tmp3 = typeof current === "object";
-  }
-  if (tmp3) {
-    tmp3 = "value" in current;
-  }
-  if (!tmp3) {
-    if (null === tmp2.current) {
-      tmp.current = current;
-      if (typeof current === "object") {
-        const obj2 = {};
-        const merged = Object.assign(current);
-        let mutable = require("cancelAnimation").makeMutable(obj2);
-        let obj = require("cancelAnimation");
-      } else {
-        mutable = require("cancelAnimation").makeMutable(current);
-        const obj3 = require("cancelAnimation");
-      }
-      tmp2.current = mutable;
-    } else if (tmp.current !== current) {
-      tmp2.current.value = current;
-    }
-  }
-  closure_2(() => () => {
-    if (ref.current) {
-      ref(dependencyMap[1]).cancelAnimation(tmp.current);
-      const obj = ref(dependencyMap[1]);
-    }
-  }, []);
-  current = tmp2.current;
-  return current;
-};
+export const useCompetingGestures = _mod6999.useCompetingGestures;
+export const useExclusiveGestures = _mod7001.useExclusiveGestures;
+export const useSimultaneousGestures = _mod7002.useSimultaneousGestures;

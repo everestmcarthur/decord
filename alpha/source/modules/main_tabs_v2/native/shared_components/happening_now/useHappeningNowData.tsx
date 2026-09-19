@@ -1,45 +1,45 @@
-// Module ID: 16317
-// Function ID: 16318
+// Module ID: 16393
+// Function ID: 16394
 // Name: useHappeningNowData
-// Dependencies: [32, 19, 1957, 5447, 13910, 7722, 1963, 7855, 4744, 502, 7475, 1958, 2013, 1980, 4361, 4762, 4371, 4903, 1372, 4741, 15505, 1074, 10093, 504, 16318, 16319, 7508, 7482, 573, 9926, 10, 12, 4933, 16320, 16321, 16322, 7509, 16323, 10068, 1370, 5756, 2]
+// Dependencies: [32, 19, 2040, 5489, 13965, 7766, 2046, 7893, 4778, 502, 7519, 2041, 2096, 2063, 4395, 4796, 4405, 4937, 1372, 4775, 15560, 1074, 10103, 504, 16394, 16395, 7552, 7526, 573, 9769, 10, 12, 4966, 16396, 16397, 16398, 7553, 16399, 10078, 1370, 5798, 2]
 // Exports: default
 
-// Module 16317 (useHappeningNowData)
+// Module 16393 (useHappeningNowData)
 import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 7482 */;
-import GuildSubscriptionsActionCreators from "GuildSubscriptionsActionCreators" /* 7508 */;
-import ActiveChannelsActionCreators from "ActiveChannelsActionCreators" /* 16318 */;
+import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 7526 */;
+import GuildSubscriptionsActionCreators from "GuildSubscriptionsActionCreators" /* 7552 */;
+import ActiveChannelsActionCreators from "ActiveChannelsActionCreators" /* 16394 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1957 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5447 */;
-import ActiveChannelsStore from "ActiveChannelsStore" /* 13910 */;
-import GuildScheduledEventStore_mod from "GuildScheduledEventStore" /* 7722 */;
-import StageInstanceStore from "StageInstanceStore" /* 1963 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7855 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4744 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2040 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5489 */;
+import ActiveChannelsStore from "ActiveChannelsStore" /* 13965 */;
+import GuildScheduledEventStore_mod from "GuildScheduledEventStore" /* 7766 */;
+import StageInstanceStore from "StageInstanceStore" /* 2046 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7893 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4778 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelMemberStore from "ChannelMemberStore" /* 7475 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
-import GuildChannelStore from "GuildChannelStore" /* 2013 */;
-import GuildStore from "GuildStore" /* 1980 */;
-import PermissionStore from "PermissionStore" /* 4361 */;
-import PresenceStore from "PresenceStore" /* 4762 */;
-import RelationshipStore from "RelationshipStore" /* 4371 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4903 */;
+import ChannelMemberStore from "ChannelMemberStore" /* 7519 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
+import GuildChannelStore from "GuildChannelStore" /* 2096 */;
+import GuildStore from "GuildStore" /* 2063 */;
+import PermissionStore from "PermissionStore" /* 4395 */;
+import PresenceStore from "PresenceStore" /* 4796 */;
+import RelationshipStore from "RelationshipStore" /* 4405 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4937 */;
 import UserStore from "UserStore" /* 1372 */;
-import VoiceStateStore from "VoiceStateStore" /* 4741 */;
+import VoiceStateStore from "VoiceStateStore" /* 4775 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let GuildScheduledEventStore = fn(7722);
+let GuildScheduledEventStore = fn(7766);
 ({ eventScheduledToStartWithin: closure_8, isEventUpcoming: closure_9, isGuildScheduledEventActive: c10 } = GuildScheduledEventStore);
 let GuildScheduledEventStore = GuildScheduledEventStore_mod;
-const MemberListRowTypes = fn(7475).MemberListRowTypes;
-let closure_20 = fn(2013).GUILD_SELECTABLE_CHANNELS_KEY;
-const HappeningNowItem = fn(15505).HappeningNowItem;
+const MemberListRowTypes = fn(7519).MemberListRowTypes;
+let closure_20 = fn(2096).GUILD_SELECTABLE_CHANNELS_KEY;
+const HappeningNowItem = fn(15560).HappeningNowItem;
 const Constants = fn(1074);
 ({ ActivityFlags: closure_29, GuildFeatures: closure_30, Permissions: items, StatusTypes: closure_32 } = Constants);
 items = [ChannelStore, ChannelMemberStore, VoiceStateStore, UserStore];
@@ -142,8 +142,8 @@ export default function useHappeningNowData(has, guildId) {
       const tmp8 = guildId;
       GuildSubscriptionsActionCreators.subscribeChannel(guildId, stateFromStores3.id, GuildChannelSubscriptions.DEFAULT_RANGES);
       if (tmp14) {
-        tmp6(7508).subscribeChannel(tmp8, tmp12, tmp6(7482).DEFAULT_RANGES);
-        const tmp6Result = tmp6(7508);
+        tmp6(7552).subscribeChannel(tmp8, tmp12, tmp6(7526).DEFAULT_RANGES);
+        const tmp6Result = tmp6(7552);
       }
       tmp14 = null != firstGloballyViewbleGuildChannelId && firstGloballyViewbleGuildChannelId !== stateFromStores3.id;
     }

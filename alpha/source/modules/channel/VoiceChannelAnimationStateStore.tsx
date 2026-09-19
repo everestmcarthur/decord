@@ -1,14 +1,14 @@
-// Module ID: 13889
-// Function ID: 13890
+// Module ID: 13944
+// Function ID: 13945
 // Name: VoiceChannelAnimationStateStore
-// Dependencies: [32, 4543, 4741, 504, 573, 2]
+// Dependencies: [32, 4577, 4775, 504, 573, 2]
 
-// Module 13889 (VoiceChannelAnimationStateStore)
+// Module 13944 (VoiceChannelAnimationStateStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import _slicedToArray from "module_32" /* 32 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4543 */;
-import VoiceStateStore from "VoiceStateStore" /* 4741 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4577 */;
+import VoiceStateStore from "VoiceStateStore" /* 4775 */;
 
 function resetAllState() {
   (function clearAllTimers() {

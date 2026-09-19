@@ -1,17 +1,17 @@
-// Module ID: 17576
-// Function ID: 17577
+// Module ID: 17653
+// Function ID: 17654
 // Name: VoicePanelScreenshareButton
-// Dependencies: [19, 1958, 1074, 21, 1609, 12775, 17577, 4722, 576, 12514, 17560, 504, 38, 10196, 13507, 5068, 13509, 1115, 1241, 17579, 17561, 5759, 2]
+// Dependencies: [19, 2041, 1074, 21, 1609, 12784, 17654, 4756, 576, 12523, 17637, 504, 38, 10208, 13562, 5110, 13564, 1115, 1241, 17656, 17638, 5801, 2]
 // Exports: default
 
-// Module 17576 (VoicePanelScreenshareButton)
+// Module 17653 (VoicePanelScreenshareButton)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import useAlertStore from "useAlertStore" /* 5068 */;
-import VoicePanelVideoGuardErrorAlert from "VoicePanelVideoGuardErrorAlert" /* 13509 */;
+import useAlertStore from "useAlertStore" /* 5110 */;
+import VoicePanelVideoGuardErrorAlert from "VoicePanelVideoGuardErrorAlert" /* 13564 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
 
 const VoicePanelVideoGuardErrorAlertDefault = VoicePanelVideoGuardErrorAlert;
 
@@ -21,11 +21,11 @@ const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const MetaQuestUtils = fn(1609);
 if (MetaQuestUtils.isMetaQuest()) {
-  let MobilePhoneShareIcon = fn(12775).ScreenArrowIcon;
+  let MobilePhoneShareIcon = fn(12784).ScreenArrowIcon;
 } else {
-  MobilePhoneShareIcon = fn(17577).MobilePhoneShareIcon;
+  MobilePhoneShareIcon = fn(17654).MobilePhoneShareIcon;
 }
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj3 = { circle: null, iconContainer: null };
 let size = { width: "100%", height: "100%", borderRadius: nativeDefault.radii.round };
 obj3.circle = size;

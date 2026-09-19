@@ -1,17 +1,17 @@
-// Module ID: 9712
-// Function ID: 9713
+// Module ID: 9647
+// Function ID: 9648
 // Name: RevealProvider
-// Dependencies: [19, 4413, 4739, 9705, 21, 504, 9707, 9713, 1364, 4656, 4573, 9719, 9721, 2]
+// Dependencies: [19, 4447, 4773, 9639, 21, 504, 9641, 9648, 1364, 4690, 4607, 9649, 9651, 2]
 // Exports: default
 
-// Module 9712 (RevealProvider)
-import useIsPrivateAudioOnlyCallDefault from "useIsPrivateAudioOnlyCall" /* 9707 */;
-import useIsActivityFocusedDefault from "useIsActivityFocused" /* 9713 */;
-import StatusBarDefault from "StatusBar" /* 9719 */;
-import HomeIndicatorDefault from "HomeIndicator" /* 9721 */;
+// Module 9647 (RevealProvider)
+import useIsPrivateAudioOnlyCallDefault from "useIsPrivateAudioOnlyCall" /* 9641 */;
+import useIsActivityFocusedDefault from "useIsActivityFocused" /* 9648 */;
+import StatusBarDefault from "StatusBar" /* 9649 */;
+import HomeIndicatorDefault from "HomeIndicator" /* 9651 */;
 import noop from "module_19" /* 19 */;
-import ActionSheetStore from "ActionSheetStore" /* 4413 */;
-import GameConsoleStore from "GameConsoleStore" /* 4739 */;
+import ActionSheetStore from "ActionSheetStore" /* 4447 */;
+import GameConsoleStore from "GameConsoleStore" /* 4773 */;
 
 const require = globalThis.__r;
 
@@ -49,7 +49,7 @@ function useRevealProviderValue(arg0, channel) {
   const items2 = [tmp, tmp10];
   return noop.useMemo(() => ({ reveal: stateFromStores1, prefersDeferringSystemGestures }), items2);
 }
-const ChannelCallStore = fn(9705);
+const ChannelCallStore = fn(9639);
 ({ useChannelCallStore: metroRequire, focusTimeout: closure_7, resetFocusTimer: closure_8, useIsVoiceChatFocused: closure_9 } = ChannelCallStore);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);

@@ -1,18 +1,18 @@
-// Module ID: 13356
-// Function ID: 13357
+// Module ID: 13412
+// Function ID: 13413
 // Name: GuildInviteRow
-// Dependencies: [19, 17, 13352, 7938, 21, 13351, 10141, 5754, 4718, 1115, 5775, 2]
+// Dependencies: [19, 17, 13408, 7976, 21, 13407, 10151, 5796, 4752, 1115, 5817, 2]
 
-// Module 13356 (GuildInviteRow)
-import GuildInviteUtils from "GuildInviteUtils" /* 13351 */;
+// Module 13412 (GuildInviteRow)
+import GuildInviteUtils from "GuildInviteUtils" /* 13407 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const useGuildInviteSendStates = fn(13352).useGuildInviteSendStates;
-const InviteSendStates = fn(7938).InviteSendStates;
+const useGuildInviteSendStates = fn(13408).useGuildInviteSendStates;
+const InviteSendStates = fn(7976).InviteSendStates;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/instant_invite/native/action_sheet/invite_to_guilds/GuildInviteRow.tsx");

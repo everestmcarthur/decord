@@ -1,13 +1,13 @@
-// Module ID: 6279
-// Function ID: 6280
+// Module ID: 6323
+// Function ID: 6324
 // Name: GamePresenceIllocon
-// Dependencies: [21, 5757, 6280, 2]
+// Dependencies: [21, 5799, 6324, 2]
 // Exports: GamePresenceIllocon
 
-// Module 6279 (GamePresenceIllocon)
+// Module 6323 (GamePresenceIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5757 */;
-import _modDef6280 from "module_6280" /* 6280 */;
+import FastImageDefault from "FastImage" /* 5799 */;
+import _modDef6324 from "module_6324" /* 6324 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -20,7 +20,7 @@ export const GamePresenceIllocon = function GamePresenceIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6280 };
+  const obj2 = { uri: _modDef6324 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

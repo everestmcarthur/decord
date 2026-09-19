@@ -1,24 +1,24 @@
-// Module ID: 17505
-// Function ID: 17506
+// Module ID: 17582
+// Function ID: 17583
 // Name: VoicePanelHeaderChatButton
-// Dependencies: [19, 1074, 21, 4722, 576, 1110, 17506, 5759, 17410, 5240, 1115, 2]
+// Dependencies: [19, 1074, 21, 4756, 576, 1110, 17583, 5801, 17487, 5282, 1115, 2]
 // Exports: default
 
-// Module 17505 (VoicePanelHeaderChatButton)
+// Module 17582 (VoicePanelHeaderChatButton)
 import nativeDefault from "native" /* 576 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1110 */;
 import util from "util" /* 1115 */;
-import ChatIcon from "ChatIcon" /* 5240 */;
-import NativeViewDefault from "NativeView" /* 5759 */;
-import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 17410 */;
-import useChatBadgeDefault from "useChatBadge" /* 17506 */;
+import ChatIcon from "ChatIcon" /* 5282 */;
+import NativeViewDefault from "NativeView" /* 5801 */;
+import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 17487 */;
+import useChatBadgeDefault from "useChatBadge" /* 17583 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const ComponentActions = fn(1074).ComponentActions;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 const obj2 = { badgeContainer: { position: "absolute", top: -2, right: -2 }, badge: null, notificationBadge: null };
 let size = { width: 8, height: 8, borderRadius: nativeDefault.radii.round };
 obj2.badge = size;
@@ -50,9 +50,9 @@ export default function VoicePanelHeaderChatButton(channelId) {
     const items1 = [, ];
     ({ badge: arr2[0], notificationBadge: arr2[1] } = tmp);
     obj4.style = items1;
-    obj3.children = tmp8(tmp3(5759), obj4);
-    tmp8Result = tmp8(tmp3(5759), obj3);
-    const tmp3Result = tmp3(5759);
+    obj3.children = tmp8(tmp3(5801), obj4);
+    tmp8Result = tmp8(tmp3(5801), obj3);
+    const tmp3Result = tmp3(5801);
   }
   children[1] = tmp8Result;
   return tmp6(tmp7, { children });

@@ -1,14 +1,14 @@
-// Module ID: 13710
-// Function ID: 13711
+// Module ID: 13765
+// Function ID: 13766
 // Name: BoostedGuildTierProgressCircle
-// Dependencies: [19, 17, 1074, 21, 4722, 576, 13711, 13715, 13716, 13717, 4630, 4615, 12833, 4718, 2]
+// Dependencies: [19, 17, 1074, 21, 4756, 576, 13766, 13770, 13771, 13772, 4664, 4649, 12842, 4752, 2]
 // Exports: default
 
-// Module 13710 (BoostedGuildTierProgressCircle)
+// Module 13765 (BoostedGuildTierProgressCircle)
 import nativeDefault from "native" /* 576 */;
-import GuildBoostingUtils from "GuildBoostingUtils" /* 4615 */;
-import useGuildPowerupsBoostCountDefault from "useGuildPowerupsBoostCount" /* 4630 */;
-import Tier048Px from "Tier048Px" /* 13711 */;
+import GuildBoostingUtils from "GuildBoostingUtils" /* 4649 */;
+import useGuildPowerupsBoostCountDefault from "useGuildPowerupsBoostCount" /* 4664 */;
+import Tier048Px from "Tier048Px" /* 13766 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,7 +18,7 @@ const Constants = fn(1074);
 ({ AppliedGuildBoostsRequiredForBoostedGuildTier: hasOwnProperty, BoostedGuildTiers: metroRequire } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { guildTierProgressCircle: { position: "relative", width: 70, height: 70 }, guildTierBackground: null, guildTierNoneIcon: null, guildTierIcon: null, guildTierName: null };
 let size = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, width: 64, height: 64, alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.xxl };
 obj2.guildTierBackground = size;
@@ -60,17 +60,17 @@ export default function BoostedGuildTierProgressCircle(arg0) {
       if (guild.premiumTier !== constants.NONE) {
         const premiumTier = guild.premiumTier;
         if (tmp13.TIER_1 === premiumTier) {
-          let tier048PxSource = tmp2(13715);
+          let tier048PxSource = tmp2(13770);
         } else if (tmp13.TIER_2 === premiumTier) {
-          tier048PxSource = tmp2(13716);
+          tier048PxSource = tmp2(13771);
         } else if (tmp13.TIER_3 === premiumTier) {
-          tier048PxSource = tmp2(13717);
+          tier048PxSource = tmp2(13772);
         }
       }
       const obj5 = { source: tier048PxSource, style: tmp.guildTierIcon, accessibilityElementsHidden: true, importantForAccessibility: "no" };
       const items = [tmp8(tmp12, obj5), ];
-      const obj6 = { style: tmp.guildTierName, variant: "text-xs/semibold", color: "interactive-text-active", children: tmp19(4615).getTierName(guild.premiumTier) };
-      items[1] = tmp8(tmp19(4718).Text, obj6);
+      const obj6 = { style: tmp.guildTierName, variant: "text-xs/semibold", color: "interactive-text-active", children: tmp19(4649).getTierName(guild.premiumTier) };
+      items[1] = tmp8(tmp19(4752).Text, obj6);
       obj4.children = items;
       obj.children = tmp10(tmp11, obj4);
       return tmp8(tmp9, obj);

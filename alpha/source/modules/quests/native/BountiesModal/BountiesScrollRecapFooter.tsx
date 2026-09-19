@@ -1,25 +1,25 @@
-// Module ID: 15263
-// Function ID: 15264
+// Module ID: 15318
+// Function ID: 15319
 // Name: BountiesScrollRecapFooter
-// Dependencies: [19, 17, 4714, 21, 4722, 576, 1364, 7175, 1115, 4718, 9076, 504, 4432, 2]
+// Dependencies: [19, 17, 4748, 21, 4756, 576, 1364, 7219, 1115, 4752, 9115, 504, 4466, 2]
 // Exports: BountiesScrollRecapFooter, BountiesScrollRecapFooterGradient
 
-// Module 15263 (BountiesScrollRecapFooter)
+// Module 15318 (BountiesScrollRecapFooter)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import native from "native" /* 4432 */;
-import Text_Text from "Text/Text" /* 4718 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7175 */;
-import OrbsIcon from "OrbsIcon" /* 9076 */;
+import native from "native" /* 4466 */;
+import Text_Text from "Text/Text" /* 4752 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7219 */;
+import OrbsIcon from "OrbsIcon" /* 9115 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4714 */;
+import AccessibilityStore from "AccessibilityStore" /* 4748 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let closure_7 = createStyles.createStyles(() => {
   const obj = { container: { flex: 1, alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_4 }, headerLabel: { textTransform: "uppercase" }, orbRow: null, rive: null, orbAmount: null };
   const obj2 = { flex: 1, alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_4 };

@@ -1,15 +1,15 @@
-// Module ID: 17240
-// Function ID: 17241
+// Module ID: 17317
+// Function ID: 17318
 // Name: SearchNavigatorPreviewHeader
-// Dependencies: [19, 17, 21, 4722, 13510, 2]
+// Dependencies: [19, 17, 21, 4756, 13565, 2]
 
-// Module 17240 (SearchNavigatorPreviewHeader)
-import ChannelHeaderDefault from "ChannelHeader" /* 13510 */;
+// Module 17317 (SearchNavigatorPreviewHeader)
+import ChannelHeaderDefault from "ChannelHeader" /* 13565 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let closure_4 = createStyles.createStyles({ container: { flexShrink: 1, paddingRight: 12, flexDirection: "row", alignItems: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/navigator/SearchNavigatorPreviewHeader.tsx");

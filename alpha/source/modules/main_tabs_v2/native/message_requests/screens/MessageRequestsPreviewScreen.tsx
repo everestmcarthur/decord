@@ -1,13 +1,13 @@
-// Module ID: 17275
-// Function ID: 17276
+// Module ID: 17352
+// Function ID: 17353
 // Name: MessageRequestsPreviewScreen
-// Dependencies: [19, 4737, 1074, 21, 12683, 10186, 10321, 17276, 11592, 2]
+// Dependencies: [19, 4771, 1074, 21, 12692, 10198, 10333, 17353, 11601, 2]
 // Exports: default
 
-// Module 17275 (MessageRequestsPreviewScreen)
-import MessageManagerDefault from "MessageManager" /* 10186 */;
+// Module 17352 (MessageRequestsPreviewScreen)
+import MessageManagerDefault from "MessageManager" /* 10198 */;
 import noop from "module_19" /* 19 */;
-import ReadStateStore from "ReadStateStore" /* 4737 */;
+import ReadStateStore from "ReadStateStore" /* 4771 */;
 
 const require = fn;
 const ME = fn(1074).ME;
@@ -19,7 +19,7 @@ export default function MessageRequestsScreen(route) {
   const channelId = route.route.params.channelId;
   const ref = noop.useRef(null);
   const items = [channelId];
-  const isMessageRequestRestrictedViewer = channelId(12683).useIsMessageRequestRestrictedViewer("MessageRequestsPreviewScreen");
+  const isMessageRequestRestrictedViewer = channelId(12692).useIsMessageRequestRestrictedViewer("MessageRequestsPreviewScreen");
   const effect = noop.useEffect(() => {
     const obj = MessageManagerDefault;
     const messages = obj.fetchMessages({ channelId, messageId: ReadStateStore.lastMessageId(channelId) });
@@ -27,11 +27,11 @@ export default function MessageRequestsScreen(route) {
   const obj2 = { guildId: ME, channelId, children: null };
   if (isMessageRequestRestrictedViewer) {
     const obj3 = { channelId };
-    let tmp5Result = tmp5(tmp7(17276), obj3);
+    let tmp5Result = tmp5(tmp7(17353), obj3);
   } else {
     const obj4 = { guildId: tmp6, channelId, chatInputRef: ref, HACK_fixModalInteraction: true, screenIndex: "message-request" };
-    tmp5Result = tmp5(tmp7(11592), obj4);
+    tmp5Result = tmp5(tmp7(11601), obj4);
   }
   obj2.children = tmp5Result;
-  return jsx(channelId(10321).ChannelContainer, { guildId: ME, channelId, children: null });
+  return jsx(channelId(10333).ChannelContainer, { guildId: ME, channelId, children: null });
 };

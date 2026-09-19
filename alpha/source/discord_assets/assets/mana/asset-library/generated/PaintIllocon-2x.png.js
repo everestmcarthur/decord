@@ -1,8 +1,8 @@
-// Module ID: 6530
-// Function ID: 6531
+// Module ID: 6574
+// Function ID: 6575
 // Dependencies: [2]
 
-// Module 6530
+// Module 6574
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/PaintIllocon-2x.png.js");

@@ -1,12 +1,12 @@
-// Module ID: 14136
-// Function ID: 14137
+// Module ID: 14190
+// Function ID: 14191
 // Name: GuildBadgeCompass
-// Dependencies: [19, 21, 14126, 8689, 2]
+// Dependencies: [19, 21, 14180, 8727, 2]
 // Exports: GuildBadgeCompass
 
-// Module 14136 (GuildBadgeCompass)
-import inlineStyles from "inlineStyles" /* 8689 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 14126 */;
+// Module 14190 (GuildBadgeCompass)
+import inlineStyles from "inlineStyles" /* 8727 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 14180 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

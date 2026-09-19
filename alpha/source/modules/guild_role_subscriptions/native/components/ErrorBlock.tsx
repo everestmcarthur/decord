@@ -1,11 +1,11 @@
-// Module ID: 12465
-// Function ID: 12466
+// Module ID: 12474
+// Function ID: 12475
 // Name: ErrorBlock
-// Dependencies: [19, 21, 12466, 2]
+// Dependencies: [19, 21, 12475, 2]
 // Exports: default
 
-// Module 12465 (ErrorBlock)
-import MessageBlock from "MessageBlock" /* 12466 */;
+// Module 12474 (ErrorBlock)
+import MessageBlock from "MessageBlock" /* 12475 */;
 import noop from "module_19" /* 19 */;
 
 const MessageBlockDefault = MessageBlock;

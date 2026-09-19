@@ -1,14 +1,14 @@
-// Module ID: 10499
-// Function ID: 10500
+// Module ID: 10515
+// Function ID: 10516
 // Name: MentionGuardUtils
-// Dependencies: [32, 7475, 4361, 1074, 38, 7878, 2]
+// Dependencies: [32, 7519, 4395, 1074, 38, 7916, 2]
 
-// Module 10499 (MentionGuardUtils)
+// Module 10515 (MentionGuardUtils)
 import _modDef38 from "module_38" /* 38 */;
-import MessageParserDefault from "MessageParser" /* 7878 */;
+import MessageParserDefault from "MessageParser" /* 7916 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ChannelMemberStore from "ChannelMemberStore" /* 7475 */;
-import PermissionStore from "PermissionStore" /* 4361 */;
+import ChannelMemberStore from "ChannelMemberStore" /* 7519 */;
+import PermissionStore from "PermissionStore" /* 4395 */;
 
 function parsedItemUsesEveryoneRole(content) {
   if (typeof content.content === "string") {

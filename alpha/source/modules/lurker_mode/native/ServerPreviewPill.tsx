@@ -1,19 +1,19 @@
-// Module ID: 16436
-// Function ID: 16437
+// Module ID: 16512
+// Function ID: 16513
 // Name: ServerPreviewPill
-// Dependencies: [19, 17, 21, 4722, 576, 4718, 1115, 2]
+// Dependencies: [19, 17, 21, 4756, 576, 4752, 1115, 2]
 // Exports: default
 
-// Module 16436 (ServerPreviewPill)
+// Module 16512 (ServerPreviewPill)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4718 */;
+import Text_Text from "Text/Text" /* 4752 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { pill: { paddingHorizontal: 10, paddingVertical: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.WHITE }, text: null };
 const obj3 = { paddingHorizontal: 10, paddingVertical: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.WHITE };
 obj2.text = { color: nativeDefault.colors.BLACK, textTransform: "uppercase", letterSpacing: 0.5 };

@@ -1,20 +1,20 @@
-// Module ID: 7381
-// Function ID: 7382
+// Module ID: 7425
+// Function ID: 7426
 // Name: UserProfileRolesCard
-// Dependencies: [19, 17, 2022, 2016, 1074, 21, 4722, 576, 7382, 1936, 7384, 7385, 4419, 1115, 7383, 7390, 7399, 4718, 7401, 5292, 504, 7402, 7403, 2]
+// Dependencies: [19, 17, 2105, 2099, 1074, 21, 4756, 576, 7426, 2019, 7428, 7429, 4453, 1115, 7427, 7434, 7443, 4752, 7445, 5334, 504, 7446, 7447, 2]
 // Exports: default
 
-// Module 7381 (UserProfileRolesCard)
+// Module 7425 (UserProfileRolesCard)
 import nativeDefault from "native" /* 576 */;
-import ToastUtils from "ToastUtils" /* 4419 */;
-import Text_Text from "Text/Text" /* 4718 */;
-import ClipboardUtils from "ClipboardUtils" /* 7385 */;
-import VerifiedRoleIconDefault from "VerifiedRoleIcon" /* 7399 */;
-import RoleIconDefault from "RoleIcon" /* 7401 */;
-import UserProfileRoleUtils from "UserProfileRoleUtils" /* 7402 */;
+import ToastUtils from "ToastUtils" /* 4453 */;
+import Text_Text from "Text/Text" /* 4752 */;
+import ClipboardUtils from "ClipboardUtils" /* 7429 */;
+import VerifiedRoleIconDefault from "VerifiedRoleIcon" /* 7443 */;
+import RoleIconDefault from "RoleIcon" /* 7445 */;
+import UserProfileRoleUtils from "UserProfileRoleUtils" /* 7446 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 2022 */;
-import GuildRoleStore from "GuildRoleStore" /* 2016 */;
+import GuildMemberStore from "GuildMemberStore" /* 2105 */;
+import GuildRoleStore from "GuildRoleStore" /* 2099 */;
 
 require = fn;
 function RoleDot(color) {
@@ -153,7 +153,7 @@ const Constants = fn(1074);
 ({ DEFAULT_ROLE_COLOR_HEX: closure_7, MAX_VISUAL_ROLE_LENGTH: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { roleContainer: { flexDirection: "row", gap: 8, flexWrap: "wrap" }, role: { flexDirection: "row", alignItems: "center", columnGap: 4, padding: 6, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: nativeDefault.radii.sm }, roleDot: null };
 let size = { borderRadius: nativeDefault.radii.round, height: 12, width: 12 };
 obj2.roleDot = size;
@@ -182,8 +182,8 @@ export default function UserProfileRolesCard(userId) {
     obj2.style = userId.style;
     const obj3 = { guildId, guildMemberRoleIds: roles };
     obj2.children = closure_9(RolesList, obj3);
-    tmp4 = closure_9(guildId(7403), obj2);
-    const tmp7 = guildId(7403);
+    tmp4 = closure_9(guildId(7447), obj2);
+    const tmp7 = guildId(7447);
   }
   return tmp4;
 };

@@ -1,23 +1,24 @@
-// Module ID: 9649
-// Function ID: 9650
+// Module ID: 9524
+// Function ID: 9525
 // Name: executeCommand
-// Dependencies: [5, 5629, 2026, 1980, 5062, 1372, 7982, 1074, 4715, 7719, 573, 7967, 7717, 1895, 9650, 9652, 38, 9653, 4902, 7980, 9545, 4375, 1370, 7955, 8347, 8036, 8346, 9654, 8411, 7954, 7652, 5303, 5298, 1115, 8045, 2]
+// Dependencies: [5, 5671, 2109, 2063, 5104, 1372, 8020, 1074, 4749, 7763, 573, 8005, 7761, 1978, 9525, 9527, 38, 9528, 4936, 8018, 9420, 4409, 1370, 7993, 8385, 8074, 8384, 9529, 8449, 7992, 7696, 5373, 5345, 5340, 1115, 8083, 2]
 // Exports: default, retryCommandMessage
 
-// Module 9649 (executeCommand)
-import UploadUtils from "UploadUtils" /* 5298 */;
-import FileUtils from "FileUtils" /* 5303 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7719 */;
-import MessageQueue from "MessageQueue" /* 8036 */;
-import InteractionActionCreatorsAll from "InteractionActionCreators" /* 8347 */;
-import ApplicationCommandQueryApiAll from "ApplicationCommandQueryApi" /* 9654 */;
+// Module 9524 (executeCommand)
+import UploadUtils from "UploadUtils" /* 5340 */;
+import FileUtils from "FileUtils" /* 5345 */;
+import UploadLimits from "UploadLimits" /* 5373 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7763 */;
+import MessageQueue from "MessageQueue" /* 8074 */;
+import InteractionActionCreatorsAll from "InteractionActionCreators" /* 8385 */;
+import ApplicationCommandQueryApiAll from "ApplicationCommandQueryApi" /* 9529 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import EmojiStore from "EmojiStore" /* 5629 */;
-import LocaleStore from "LocaleStore" /* 2026 */;
-import GuildStore from "GuildStore" /* 1980 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 5062 */;
+import EmojiStore from "EmojiStore" /* 5671 */;
+import LocaleStore from "LocaleStore" /* 2109 */;
+import GuildStore from "GuildStore" /* 2063 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 5104 */;
 import UserStore from "UserStore" /* 1372 */;
-import ApplicationCommandStore from "ApplicationCommandStore" /* 7982 */;
+import ApplicationCommandStore from "ApplicationCommandStore" /* 8020 */;
 
 const MessageQueueDefault = MessageQueue;
 
@@ -719,8 +720,8 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
     message = { applicationId, channelId: id, guildId: id1, data: tmp, nonce: null, attachments: null, maxSizeCallback: null, analytics_location: null, sectionName: null, source: null };
     let nonce = interactionLifecycleOptions.nonce;
     if (nonce == null) {
-      nonce = onMessageSuccess(7955).createNonce();
-      let obj2 = onMessageSuccess(7955);
+      nonce = onMessageSuccess(7993).createNonce();
+      let obj2 = onMessageSuccess(7993);
     }
     message.nonce = nonce;
     message.attachments = attachments;
@@ -730,7 +731,7 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
     message.source = tmp4;
     const obj5 = { messageId: null, onCreate: null, onSuccess: null, onFailure: null, data: null };
     ({ messageId: obj4.messageId, onCreate: obj4.onCreate, onSuccess: obj4.onSuccess, onFailure: obj4.onFailure } = interactionLifecycleOptions);
-    const obj7 = { interactionType: onMessageSuccess(1895).InteractionTypes.APPLICATION_COMMAND, applicationId, channelId: id };
+    const obj7 = { interactionType: onMessageSuccess(1978).InteractionTypes.APPLICATION_COMMAND, applicationId, channelId: id };
     obj5.data = obj7;
     InteractionActionCreatorsAll.addQueued(message.nonce, obj5);
     if (null != attachments) {
@@ -781,8 +782,8 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
     closure_129_0 = message;
     closure_129_1 = onMessageSuccess;
     const tmp10 = onMessageSuccess;
-    const obj10 = { type: tmp10(8036).MessageDataType.COMMAND, message };
-    message(8036).enqueue(obj10, (ok) => {
+    const obj10 = { type: tmp10(8074).MessageDataType.COMMAND, message };
+    message(8074).enqueue(obj10, (ok) => {
       ({ nonce, applicationId, channelId, guildId } = closure_0);
       if (guildId == null) {
         guildId = null;
@@ -796,7 +797,7 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
         closure_1();
       }
     });
-    const obj6 = message(8036);
+    const obj6 = message(8074);
   }
 }
 function displayInteractionLifecycleInChat() {
@@ -873,7 +874,7 @@ let closure_20 = async function _displayInteractionLifecycleInChat(arg0, arg1, a
                     c6 = 1;
                     c7 = 2;
                     c8 = 1;
-                    const obj9 = { value: tmp65(8411).getUser(cachedApplicationSection.botId), done: false };
+                    const obj9 = { value: tmp65(8449).getUser(cachedApplicationSection.botId), done: false };
                     return obj9;
                   }
                 }
@@ -963,25 +964,25 @@ let closure_20 = async function _displayInteractionLifecycleInChat(arg0, arg1, a
 };
 function getAnalyticsLocationFromCommandOrigin(arg0) {
   if (ApplicationCommandTypes.CommandOrigin.APPLICATION_LAUNCHER === arg0) {
-    return tmp(7719).ApplicationCommandTriggerLocations.APP_LAUNCHER;
-  } else if (tmp(7719).CommandOrigin.APP_LAUNCHER_APPLICATION_VIEW === arg0) {
-    return tmp(7719).ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW;
-  } else if (tmp(7719).CommandOrigin.IMAGE_RECS_MENU === arg0) {
-    return tmp(7719).ApplicationCommandTriggerLocations.IMAGE_RECS_MENU;
-  } else if (tmp(7719).CommandOrigin.IMAGE_RECS_SUBMENU === arg0) {
-    return tmp(7719).ApplicationCommandTriggerLocations.IMAGE_RECS_SUBMENU;
-  } else if (tmp(7719).CommandOrigin.ACTIVITY_INSTANCE_EMBED === arg0) {
-    return tmp(7719).ApplicationCommandTriggerLocations.ACTIVITY_INSTANCE_EMBED;
-  } else if (tmp(7719).CommandOrigin.ACTIVITY_BOOKMARK_EMBED === arg0) {
-    return tmp(7719).ApplicationCommandTriggerLocations.ACTIVITY_BOOKMARK_EMBED;
-  } else if (tmp(7719).CommandOrigin.MINI_SHELF === arg0) {
-    return tmp(7719).ApplicationCommandTriggerLocations.ACTIVITIES_MINI_SHELF;
-  } else if (tmp(7719).CommandOrigin.VOICE_TILE_ACTIVITY_SUGGESTIONS === arg0) {
-    return tmp(7719).ApplicationCommandTriggerLocations.VC_TILE_ACTIVITY_SUGGESTION;
-  } else if (tmp(7719).CommandOrigin.APP_DMS_ENTRY_POINT_COMMAND_BUTTON === arg0) {
-    return tmp(7719).ApplicationCommandTriggerLocations.APP_DMS_ENTRY_POINT_COMMAND_BUTTON;
+    return tmp(7763).ApplicationCommandTriggerLocations.APP_LAUNCHER;
+  } else if (tmp(7763).CommandOrigin.APP_LAUNCHER_APPLICATION_VIEW === arg0) {
+    return tmp(7763).ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW;
+  } else if (tmp(7763).CommandOrigin.IMAGE_RECS_MENU === arg0) {
+    return tmp(7763).ApplicationCommandTriggerLocations.IMAGE_RECS_MENU;
+  } else if (tmp(7763).CommandOrigin.IMAGE_RECS_SUBMENU === arg0) {
+    return tmp(7763).ApplicationCommandTriggerLocations.IMAGE_RECS_SUBMENU;
+  } else if (tmp(7763).CommandOrigin.ACTIVITY_INSTANCE_EMBED === arg0) {
+    return tmp(7763).ApplicationCommandTriggerLocations.ACTIVITY_INSTANCE_EMBED;
+  } else if (tmp(7763).CommandOrigin.ACTIVITY_BOOKMARK_EMBED === arg0) {
+    return tmp(7763).ApplicationCommandTriggerLocations.ACTIVITY_BOOKMARK_EMBED;
+  } else if (tmp(7763).CommandOrigin.MINI_SHELF === arg0) {
+    return tmp(7763).ApplicationCommandTriggerLocations.ACTIVITIES_MINI_SHELF;
+  } else if (tmp(7763).CommandOrigin.VOICE_TILE_ACTIVITY_SUGGESTIONS === arg0) {
+    return tmp(7763).ApplicationCommandTriggerLocations.VC_TILE_ACTIVITY_SUGGESTION;
+  } else if (tmp(7763).CommandOrigin.APP_DMS_ENTRY_POINT_COMMAND_BUTTON === arg0) {
+    return tmp(7763).ApplicationCommandTriggerLocations.APP_DMS_ENTRY_POINT_COMMAND_BUTTON;
   } else {
-    return tmp(7719).ApplicationCommandTriggerLocations.SLASH_UI;
+    return tmp(7763).ApplicationCommandTriggerLocations.SLASH_UI;
   }
 }
 function getMaxAndTotalFileSize() {
@@ -1115,7 +1116,7 @@ let closure_24 = async function _stageAttachments(arg0, value) {
           closure_132_0 = closure_0;
           closure_132_1 = closure_1;
           closure_132_2 = dependencyMap;
-          closure_132_3 = undefined;
+          let effectiveUploadLimit;
           let maxTotalAttachmentSize;
           closure_132_6 = undefined;
           let totalSize;
@@ -1127,11 +1128,12 @@ let closure_24 = async function _stageAttachments(arg0, value) {
             }
             const intl = closure_0(1115).intl;
             const obj2 = { maxSize: null };
-            const obj = closure_2(8347);
-            obj2.maxSize = closure_0(5303).sizeString(dependencyMap);
+            const obj = closure_2(8385);
+            obj2.maxSize = closure_0(5345).sizeString(dependencyMap);
             obj.setFailed(closure_1_1, constants.ENTITY_TOO_LARGE, intl.formatToPlainString(closure_0(1115).t.fxEKdS, obj2));
           };
-          closure_132_3 = FileUtils.maxFileSize(closure_2);
+          const obj11 = UploadLimits;
+          effectiveUploadLimit = obj11.getEffectiveUploadLimit(FileUtils.maxFileSize(closure_2));
           maxTotalAttachmentSize = UploadUtils.getMaxTotalAttachmentSize({ location: "executeCommand.stageAttachments" });
           c7 = 1;
           c8 = 1;
@@ -1151,12 +1153,12 @@ let closure_24 = async function _stageAttachments(arg0, value) {
           totalSize = closure_132_6.totalSize;
           closure_132_8 = closure_132_6.largestUploadedFileSize;
           const _Math = Math;
-          if (closure_132_8 <= Math.max(closure_132_3, closure_133_15)) {
+          if (closure_132_8 <= Math.max(effectiveUploadLimit, closure_133_15)) {
             if (totalSize <= maxTotalAttachmentSize) {
               c6 = 1;
               c7 = 4;
               c8 = 1;
-              const obj7 = { value: closure_133_1(closure_133_3[34])(closure_132_0), done: false };
+              const obj7 = { value: closure_133_1(closure_133_3[35])(closure_132_0), done: false };
               return obj7;
             }
           }
@@ -1167,9 +1169,9 @@ let closure_24 = async function _stageAttachments(arg0, value) {
       } else {
         if (2 === tmp8) {
           c6 = 0;
-          let intl = closure_133_0(closure_133_3[33]).intl;
+          let intl = closure_133_0(closure_133_3[34]).intl;
           const obj8 = { count: closure_132_0.length };
-          closure_133_2(closure_133_3[24]).setFailed(closure_132_1, undefined, intl.formatToPlainString(closure_133_0(closure_133_3[33]).t["9h1/1p"], obj8));
+          closure_133_2(closure_133_3[24]).setFailed(closure_132_1, undefined, intl.formatToPlainString(closure_133_0(closure_133_3[34]).t["9h1/1p"], obj8));
           closure_133_22(closure_132_0, true);
           c7 = 3;
           c8 = 1;
@@ -1222,7 +1224,7 @@ let closure_24 = async function _stageAttachments(arg0, value) {
 };
 const Constants = fn(1074);
 ({ AbortCodes: closure_11, AnalyticEvents: closure_12, MessageTypes: map1, NON_USER_BOT_DISCRIMINATOR: closure_14 } = Constants);
-let closure_15 = fn(4715).DEFAULT_MOBILE_PRE_COMPRESSION_MAX_ATTACHMENT_SIZE;
+let closure_15 = fn(4749).DEFAULT_MOBILE_PRE_COMPRESSION_MAX_ATTACHMENT_SIZE;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/application_commands/executeCommand.tsx");
 

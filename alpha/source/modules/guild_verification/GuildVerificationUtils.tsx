@@ -1,14 +1,14 @@
-// Module ID: 13178
-// Function ID: 13179
+// Module ID: 13226
+// Function ID: 13227
 // Name: GuildVerificationUtils
-// Dependencies: [4544, 1074, 4546, 5695, 5739, 2]
+// Dependencies: [4578, 1074, 4580, 5737, 5781, 2]
 // Exports: inviteGuildHasPendingMemberDisabledVerification, openVerificationModalOrTransitionToApplication
 
-// Module 13178 (GuildVerificationUtils)
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4546 */;
-import transitionToMemberVerification from "transitionToMemberVerification" /* 5695 */;
-import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 5739 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4544 */;
+// Module 13226 (GuildVerificationUtils)
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4580 */;
+import transitionToMemberVerification from "transitionToMemberVerification" /* 5737 */;
+import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 5781 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4578 */;
 
 require = fn;
 const GuildFeatures = fn(1074).GuildFeatures;

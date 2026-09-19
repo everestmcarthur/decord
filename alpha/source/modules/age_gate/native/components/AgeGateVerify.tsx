@@ -1,24 +1,24 @@
-// Module ID: 17641
-// Function ID: 17642
+// Module ID: 17718
+// Function ID: 17719
 // Name: AgeGateVerify
-// Dependencies: [19, 17, 21, 4722, 576, 4933, 7319, 4718, 5144, 8643, 8645, 2]
+// Dependencies: [19, 17, 21, 4756, 576, 4966, 7363, 4752, 5186, 8681, 8683, 2]
 // Exports: default
 
-// Module 17641 (AgeGateVerify)
+// Module 17718 (AgeGateVerify)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4718 */;
-import AgeGateUtils from "AgeGateUtils" /* 4933 */;
-import components_Button_Button from "components/Button/Button" /* 5144 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7319 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8643 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8645 */;
+import Text_Text from "Text/Text" /* 4752 */;
+import AgeGateUtils from "AgeGateUtils" /* 4966 */;
+import components_Button_Button from "components/Button/Button" /* 5186 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7363 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8681 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8683 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { container: { padding: nativeDefault.space.PX_16, flex: 1, alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_16 }, header: { textAlign: "center" }, body: { textAlign: "center" }, buttonWrapper: { width: "100%" } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);

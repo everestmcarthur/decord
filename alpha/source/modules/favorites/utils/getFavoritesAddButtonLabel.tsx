@@ -1,12 +1,12 @@
-// Module ID: 11249
-// Function ID: 11250
+// Module ID: 11262
+// Function ID: 11263
 // Name: getFavoritesAddButtonLabel
-// Dependencies: [1115, 3322, 2]
+// Dependencies: [1115, 3324, 2]
 // Exports: getFavoritesAddButtonLabel
 
-// Module 11249 (getFavoritesAddButtonLabel)
+// Module 11262 (getFavoritesAddButtonLabel)
 import util from "util" /* 1115 */;
-import _modDef3322 from "module_3322" /* 3322 */;
+import _modDef3324 from "module_3324" /* 3324 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/favorites/utils/getFavoritesAddButtonLabel.tsx");
@@ -15,10 +15,10 @@ export const getFavoritesAddButtonLabel = function getFavoritesAddButtonLabel(le
   if (length >= 2) {
     const intl2 = util.intl;
     const obj = { count: length };
-    let formatToPlainStringResult = intl2.formatToPlainString(_modDef3322.LbCa8x, obj);
+    let formatToPlainStringResult = intl2.formatToPlainString(_modDef3324.LbCa8x, obj);
   } else {
     const intl = util.intl;
-    formatToPlainStringResult = intl.string(_modDef3322.xKXcSu);
+    formatToPlainStringResult = intl.string(_modDef3324.xKXcSu);
   }
   return formatToPlainStringResult;
 };

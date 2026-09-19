@@ -1,12 +1,12 @@
-// Module ID: 1963
-// Function ID: 1964
+// Module ID: 2046
+// Function ID: 2047
 // Name: StageInstanceStore
-// Dependencies: [1964, 504, 573, 2]
+// Dependencies: [2047, 504, 573, 2]
 
-// Module 1963 (StageInstanceStore)
+// Module 2046 (StageInstanceStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 1964 */;
+import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 2047 */;
 import size from "module_2" /* 2 */;
 
 function handleStageInstanceCreateOrUpdate(instance) {

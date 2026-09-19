@@ -1,11 +1,11 @@
-// Module ID: 4438
-// Function ID: 4439
+// Module ID: 4472
+// Function ID: 4473
 // Name: useBadgeTextVariant
-// Dependencies: [4439, 2]
+// Dependencies: [4473, 2]
 // Exports: useBadgeTextVariant
 
-// Module 4438 (useBadgeTextVariant)
-import ThemeContext from "ThemeContext" /* 4439 */;
+// Module 4472 (useBadgeTextVariant)
+import ThemeContext from "ThemeContext" /* 4473 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/design/hooks/useBadgeTextVariant.native.tsx");

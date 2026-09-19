@@ -1,12 +1,12 @@
-// Module ID: 7879
-// Function ID: 7880
+// Module ID: 7917
+// Function ID: 7918
 // Name: AutocompleteBoundaryUtils
-// Dependencies: [5169, 1074, 2]
+// Dependencies: [5211, 1074, 2]
 // Exports: boundAutocompleteWord
 
-// Module 7879 (AutocompleteBoundaryUtils)
+// Module 7917 (AutocompleteBoundaryUtils)
 import Constants from "Constants" /* 1074 */;
-import ChannelAutocompleteConstants from "ChannelAutocompleteConstants" /* 5169 */;
+import ChannelAutocompleteConstants from "ChannelAutocompleteConstants" /* 5211 */;
 import size from "module_2" /* 2 */;
 
 function isAutocompleteSeparatingBoundary(c22, selectionStart) {

@@ -1,21 +1,21 @@
-// Module ID: 13799
-// Function ID: 13800
+// Module ID: 13854
+// Function ID: 13855
 // Name: GuildBoostingMarketingBoosterRecognitionCards
-// Dependencies: [19, 17, 21, 4722, 576, 4718, 1115, 13800, 9613, 13801, 13728, 13802, 9997, 13803, 9014, 2]
+// Dependencies: [19, 17, 21, 4756, 576, 4752, 1115, 13855, 9488, 13856, 13783, 13857, 9839, 13858, 9053, 2]
 // Exports: default
 
-// Module 13799 (GuildBoostingMarketingBoosterRecognitionCards)
+// Module 13854 (GuildBoostingMarketingBoosterRecognitionCards)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4718 */;
-import HeartIcon from "HeartIcon" /* 9014 */;
-import BoostGemIcon from "BoostGemIcon" /* 9613 */;
-import ShieldUserIcon from "ShieldUserIcon" /* 9997 */;
-import BoostTier3Icon from "BoostTier3Icon" /* 13728 */;
-import _modDef13800 from "module_13800" /* 13800 */;
-import _modDef13801 from "module_13801" /* 13801 */;
-import _modDef13802 from "module_13802" /* 13802 */;
-import _modDef13803 from "module_13803" /* 13803 */;
+import Text_Text from "Text/Text" /* 4752 */;
+import HeartIcon from "HeartIcon" /* 9053 */;
+import BoostGemIcon from "BoostGemIcon" /* 9488 */;
+import ShieldUserIcon from "ShieldUserIcon" /* 9839 */;
+import BoostTier3Icon from "BoostTier3Icon" /* 13783 */;
+import _modDef13855 from "module_13855" /* 13855 */;
+import _modDef13856 from "module_13856" /* 13856 */;
+import _modDef13857 from "module_13857" /* 13857 */;
+import _modDef13858 from "module_13858" /* 13858 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -31,10 +31,10 @@ function Card(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let createStyles = fn(4722);
+let createStyles = fn(4756);
 let obj2 = { card: { minHeight: 124, width: 172, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, display: "flex", flexDirection: "column", alignItems: "center", margin: 5, borderRadius: nativeDefault.radii.sm, paddingHorizontal: 13, paddingVertical: 16 }, description: { textAlign: "center" }, iconContainer: { height: 30, marginBottom: 10 } };
 let closure_6 = createStyles.createStyles(obj2);
-createStyles = fn(4722);
+createStyles = fn(4756);
 let closure_8 = createStyles.createStyles({ container: { marginTop: 50, display: "flex", flexDirection: "column", alignItems: "center" }, title: { textAlign: "center", marginHorizontal: 34 }, recognitionCardsContainer: { marginTop: 15, display: "flex", flexDirection: "row", justifyContent: "center", flexWrap: "wrap" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingBoosterRecognitionCards.tsx");
@@ -47,19 +47,19 @@ export default function GuildBoostingMarketingBoosterRecognitionCards() {
   obj2.children = intl.string(util.t.IzKs3o);
   const items = [React4(Text_Text.Heading, obj2), ];
   const obj3 = { style: tmp.recognitionCardsContainer, children: null };
-  const obj4 = { icon: _modDef13800, IconComponent: BoostGemIcon.BoostGemIcon, children: null };
+  const obj4 = { icon: _modDef13855, IconComponent: BoostGemIcon.BoostGemIcon, children: null };
   const intl2 = util.intl;
   obj4.children = intl2.string(util.t.TZigSO);
   const items1 = [React4(Card, obj4), , , ];
-  const obj5 = { icon: _modDef13801, IconComponent: BoostTier3Icon.BoostTier3Icon, children: null };
+  const obj5 = { icon: _modDef13856, IconComponent: BoostTier3Icon.BoostTier3Icon, children: null };
   const intl3 = util.intl;
   obj5.children = intl3.string(util.t.hjQuV2);
   items1[1] = React4(Card, obj5);
-  const obj6 = { icon: _modDef13802, IconComponent: ShieldUserIcon.ShieldUserIcon, children: null };
+  const obj6 = { icon: _modDef13857, IconComponent: ShieldUserIcon.ShieldUserIcon, children: null };
   const intl4 = util.intl;
   obj6.children = intl4.string(util.t["2RUcaM"]);
   items1[2] = React4(Card, obj6);
-  const obj7 = { icon: _modDef13803, IconComponent: HeartIcon.HeartIcon, children: null };
+  const obj7 = { icon: _modDef13858, IconComponent: HeartIcon.HeartIcon, children: null };
   const intl5 = util.intl;
   obj7.children = intl5.string(util.t.bJoZKV);
   items1[3] = React4(Card, obj7);

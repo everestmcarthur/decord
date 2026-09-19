@@ -1,15 +1,16 @@
 // Module ID: 10723
 // Function ID: 10724
-// Dependencies: [41, 42, 93, 95, 98, 10693]
+// Dependencies: [41, 42, 93, 95, 98, 10690, 10693, 10694, 10710]
 
 // Module 10723
-import _mod10693 from "module_10693" /* 10693 */;
-import _classCallCheck_mod from "_classCallCheck" /* 41 */;
+import Filter from "Filter" /* 10710 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
+const ENMergeRelativeFollowByDateRefiner = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,30 +30,14 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-let _classCallCheck = _classCallCheck_mod;
-let fn = this;
-if (this) {
-  fn = this.__importDefault;
-}
-if (!fn) {
-  fn = (__esModule) => {
-    if (!__esModule) {
-      const obj = { default: __esModule };
-      let tmp = obj;
-    } else {
-      tmp = __esModule;
-    }
-    return tmp;
-  };
-}
-class DEMergeDateRangeRefiner {
+class ENMergeRelativeFollowByDateRefiner {
   constructor() {
     self = this;
-    tmp = closure_0(this, DEMergeDateRangeRefiner);
-    tmp2 = c2;
-    obj = c2(DEMergeDateRangeRefiner);
-    tmp3 = closure_1;
-    if (closure_3()) {
+    tmp = c2(this, ENMergeRelativeFollowByDateRefiner);
+    tmp2 = closure_4;
+    obj = closure_4(ENMergeRelativeFollowByDateRefiner);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -65,14 +50,60 @@ class DEMergeDateRangeRefiner {
     return tmp3(self, constructResult);
   }
 }
-_classCallCheck = DEMergeDateRangeRefiner;
-_inherits(DEMergeDateRangeRefiner, fn(_mod10693).default);
+_inherits(ENMergeRelativeFollowByDateRefiner, Filter.MergingRefiner);
 const entry = {
   key: "patternBetween",
   value: function patternBetween() {
-    return /^\s*(bis(?:\s*(?:am|zum))?|-)\s*$/i;
+    return /^\s*$/i;
   }
 };
-const items = [entry];
+const items = [
+  entry,
+  {
+    key: "shouldMergeResults",
+    value: function shouldMergeResults(str, text, start) {
+      let match = str.match(this.patternBetween());
+      if (match) {
+        const tmp4 = null != text.text.match(/\s+(before|from)$/i);
+        let tmp5 = !tmp4;
+        if (!tmp4) {
+          tmp5 = null == text.text.match(/\s+(after|since)$/i);
+        }
+        let tmp6 = !tmp5;
+        if (!tmp5) {
+          start = start.start;
+          value = start.get("day");
+          if (value) {
+            const start2 = start.start;
+            value = start2.get("month");
+          }
+          if (value) {
+            const start3 = start.start;
+            value = start3.get("year");
+          }
+          tmp6 = value;
+        }
+        match = tmp6;
+        str = text.text;
+      }
+      return match;
+    }
+  },
+  {
+    key: "mergeResults",
+    value: function mergeResults(arg0, text, start) {
+      const parseDurationResult = ENMergeRelativeFollowByDateRefiner(10690).parseDuration(text.text);
+      let reverseDurationResult = parseDurationResult;
+      if (null != str.match(/\s+(before|from)$/i)) {
+        reverseDurationResult = tmp(10693).reverseDuration(parseDurationResult);
+      }
+      const ParsingComponents = tmp(10694).ParsingComponents;
+      const ReferenceWithTimezone = tmp(10694).ReferenceWithTimezone;
+      start = start.start;
+      const relativeFromReference = ParsingComponents.createRelativeFromReference(ReferenceWithTimezone.fromDate(start.date()), reverseDurationResult);
+      return new ENMergeRelativeFollowByDateRefiner(10694).ParsingResult(start.reference, text.index, "" + text.text + arg0 + start.text, relativeFromReference);
+    }
+  }
+];
 
-export default _createClass(DEMergeDateRangeRefiner, items);
+export default _createClass(ENMergeRelativeFollowByDateRefiner, items);

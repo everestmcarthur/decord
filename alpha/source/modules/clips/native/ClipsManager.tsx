@@ -1,13 +1,13 @@
-// Module ID: 18171
-// Function ID: 18172
+// Module ID: 18250
+// Function ID: 18251
 // Name: ClipsManager
-// Dependencies: [5301, 18172, 4420, 1115, 2]
+// Dependencies: [5343, 18251, 4454, 1115, 2]
 
-// Module 18171 (ClipsManager)
+// Module 18250 (ClipsManager)
 import util from "util" /* 1115 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4420 */;
-import ClipsConstants from "ClipsConstants" /* 5301 */;
-import ClipsManager from "clips/ClipsManager" /* 18172 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4454 */;
+import ClipsConstants from "ClipsConstants" /* 5343 */;
+import ClipsManager from "clips/ClipsManager" /* 18251 */;
 import size from "module_2" /* 2 */;
 
 const CLIPS_TOAST_DURATION = ClipsConstants.CLIPS_TOAST_DURATION;

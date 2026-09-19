@@ -1,30 +1,30 @@
-// Module ID: 11828
-// Function ID: 11829
+// Module ID: 11837
+// Function ID: 11838
 // Name: GuildChannelUserList
-// Dependencies: [32, 19, 17, 7475, 1958, 2022, 1980, 2012, 1372, 1074, 21, 10080, 5689, 550, 7508, 7358, 504, 7245, 4366, 11829, 9983, 4874, 4566, 1115, 8409, 576, 7246, 11114, 2]
+// Dependencies: [32, 19, 17, 7519, 2041, 2105, 2063, 2095, 1372, 1074, 21, 10090, 5731, 550, 7552, 7402, 504, 7289, 4400, 11838, 9822, 4908, 4600, 1115, 8447, 576, 7290, 11127, 2]
 
-// Module 11828 (GuildChannelUserList)
+// Module 11837 (GuildChannelUserList)
 import throttleDefault from "throttle" /* 550 */;
 import util from "util" /* 1115 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4366 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 4874 */;
-import GuildUtilsDefault from "GuildUtils" /* 5689 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8409 */;
-import sortByMatchScore from "sortByMatchScore" /* 10080 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4400 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 4908 */;
+import GuildUtilsDefault from "GuildUtils" /* 5731 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8447 */;
+import sortByMatchScore from "sortByMatchScore" /* 10090 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelMemberStore_mod from "ChannelMemberStore" /* 7475 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
-import GuildMemberStore from "GuildMemberStore" /* 2022 */;
-import GuildStore from "GuildStore" /* 1980 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
+import ChannelMemberStore_mod from "ChannelMemberStore" /* 7519 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
+import GuildMemberStore from "GuildMemberStore" /* 2105 */;
+import GuildStore from "GuildStore" /* 2063 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2095 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const sortByMatchScoreDefault = sortByMatchScore;
 
 require = fn;
 const View = fn(17).View;
-let ChannelMemberStore = fn(7475);
+let ChannelMemberStore = fn(7519);
 ({ EVERYONE_CHANNEL_ID: closure_7, MemberListRowTypes: closure_8 } = ChannelMemberStore);
 let ChannelMemberStore = ChannelMemberStore_mod;
 const Constants = fn(1074);
@@ -259,15 +259,15 @@ export default noop.memo(function GuildChannelUserList(searchable) {
           const user1 = UserStore.getUser(userId2.userId);
           let str = NicknameUtilsDefault.getNickname(guildId, closure_0, user);
           if (str == null) {
-            str = tmp3(4566).getGlobalName(user);
-            const tmp3Result = tmp3(4566);
+            str = tmp3(4600).getGlobalName(user);
+            const tmp3Result = tmp3(4600);
           }
           const tmp5 = guildId;
           const tmp6 = closure_0;
           let str2 = NicknameUtilsDefault.getNickname(tmp5, tmp6, user1);
           if (str2 == null) {
-            str2 = tmp3(4566).getGlobalName(user1);
-            const tmp3Result4 = tmp3(4566);
+            str2 = tmp3(4600).getGlobalName(user1);
+            const tmp3Result4 = tmp3(4600);
           }
           if (str == null) {
             str = "";

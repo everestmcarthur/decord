@@ -1,15 +1,15 @@
-// Module ID: 12301
-// Function ID: 12302
+// Module ID: 12310
+// Function ID: 12311
 // Name: useEmbeddedAppsForChannel
-// Dependencies: [19, 4762, 1372, 1957, 504, 4351, 7364, 1370, 2]
+// Dependencies: [19, 4796, 1372, 2040, 504, 4385, 7408, 1370, 2]
 // Exports: default, useEmbeddedAppsByChannel, useEmbeddedAppsWithPresence
 
-// Module 12301 (useEmbeddedAppsForChannel)
-import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7364 */;
+// Module 12310 (useEmbeddedAppsForChannel)
+import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7408 */;
 import noop from "module_19" /* 19 */;
-import PresenceStore from "PresenceStore" /* 4762 */;
+import PresenceStore from "PresenceStore" /* 4796 */;
 import UserStore from "UserStore" /* 1372 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1957 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2040 */;
 
 const require = globalThis.__r;
 
@@ -72,7 +72,7 @@ function useEmbeddedApps(arr, arg1) {
     return mapped.filter(closure_0(closure_2[7]).isNotNullish);
   }, items2);
 }
-const NO_ACTIVITIES = fn(1957).NO_ACTIVITIES;
+const NO_ACTIVITIES = fn(2040).NO_ACTIVITIES;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/useEmbeddedAppsForChannel.tsx");
 

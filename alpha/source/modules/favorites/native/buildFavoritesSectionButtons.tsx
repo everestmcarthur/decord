@@ -1,18 +1,18 @@
-// Module ID: 10463
-// Function ID: 10464
+// Module ID: 10479
+// Function ID: 10480
 // Name: buildFavoritesSectionButtons
-// Dependencies: [5, 21, 10464, 1897, 4689, 10469, 10468, 1115, 3322, 8900, 10476, 10482, 1177, 2]
+// Dependencies: [5, 21, 10480, 1980, 4723, 10485, 10484, 1115, 3324, 8939, 10492, 10498, 1177, 2]
 // Exports: default
 
-// Module 10463 (buildFavoritesSectionButtons)
+// Module 10479 (buildFavoritesSectionButtons)
 import util from "util" /* 1115 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
-import _modDef3322 from "module_3322" /* 3322 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4689 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8900 */;
-import openFavoritesGuildLimitUpsell from "openFavoritesGuildLimitUpsell" /* 10468 */;
-import StarIcon from "StarIcon" /* 10476 */;
-import StarOutlineIcon from "StarOutlineIcon" /* 10482 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1980 */;
+import _modDef3324 from "module_3324" /* 3324 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4723 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 8939 */;
+import openFavoritesGuildLimitUpsell from "openFavoritesGuildLimitUpsell" /* 10484 */;
+import StarIcon from "StarIcon" /* 10492 */;
+import StarOutlineIcon from "StarOutlineIcon" /* 10498 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -121,7 +121,7 @@ let closure_6 = async function _removeChannelFromFavorites(arg0, value) {
 };
 function openNoAccessUpsell() {
   const obj = ActionSheetActionCreatorsDefault;
-  obj.openLazy(asyncRequireImpl(10469, dependencyMap.paths), openFavoritesGuildLimitUpsell.FAVORITES_UPSELL_SHEET_KEY, { source: "channel_context_menu" });
+  obj.openLazy(asyncRequireImpl(10485, dependencyMap.paths), openFavoritesGuildLimitUpsell.FAVORITES_UPSELL_SHEET_KEY, { source: "channel_context_menu" });
 }
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -136,14 +136,14 @@ export default function buildFavoritesSectionButtons(isExperimentEnabled) {
       if (!tmp) {
         const obj = { label: null, IconComponent: null, onPress: null };
         const intl = util.intl;
-        obj.label = intl.string(_modDef3322.G9fGlP);
+        obj.label = intl.string(_modDef3324.G9fGlP);
         obj.IconComponent = NitroWheelIcon.NitroWheelIcon;
         obj.onPress = openNoAccessUpsell;
       }
       if (tmp3) {
         const obj2 = { label: null, IconComponent: null, isDestructive: true, onPress: null };
         const intl3 = util.intl;
-        obj2.label = intl3.string(_modDef3322.TN4nAX);
+        obj2.label = intl3.string(_modDef3324.TN4nAX);
         obj2.IconComponent = StarIcon.StarIcon;
         obj2.onPress = function onPress() {
           return (function removeChannelFromFavorites() {
@@ -160,7 +160,7 @@ export default function buildFavoritesSectionButtons(isExperimentEnabled) {
       } else if (!tmp4) {
         const obj3 = { label: null, IconComponent: null, trailing: null, onPress: null };
         const intl2 = util.intl;
-        obj3.label = intl2.string(_modDef3322.G9fGlP);
+        obj3.label = intl2.string(_modDef3324.G9fGlP);
         obj3.IconComponent = StarOutlineIcon.StarOutlineIcon;
         let tmp15;
         if (tmp5) {

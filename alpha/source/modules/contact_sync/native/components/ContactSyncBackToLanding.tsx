@@ -1,11 +1,11 @@
-// Module ID: 12944
-// Function ID: 12945
+// Module ID: 12953
+// Function ID: 12954
 // Name: ContactSyncBackToLanding
-// Dependencies: [1484, 5794, 12918, 2]
+// Dependencies: [1484, 5836, 12927, 2]
 // Exports: default
 
-// Module 12944 (ContactSyncBackToLanding)
-import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 12918 */;
+// Module 12953 (ContactSyncBackToLanding)
+import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 12927 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

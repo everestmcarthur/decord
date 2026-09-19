@@ -1,9 +1,9 @@
-// Module ID: 1920
-// Function ID: 1921
+// Module ID: 2003
+// Function ID: 2004
 // Name: CompanyRecord
 // Dependencies: [1387, 2]
 
-// Module 1920 (CompanyRecord)
+// Module 2003 (CompanyRecord)
 import Record from "Record" /* 1387 */;
 
 const prototype = function CompanyRecord(arg0) {

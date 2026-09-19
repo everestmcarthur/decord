@@ -1,8 +1,8 @@
-// Module ID: 6544
-// Function ID: 6545
+// Module ID: 6588
+// Function ID: 6589
 // Dependencies: [2]
 
-// Module 6544
+// Module 6588
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/PotionBookGemSpotIllustration-2x.png.js");

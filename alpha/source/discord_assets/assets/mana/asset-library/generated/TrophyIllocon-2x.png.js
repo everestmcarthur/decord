@@ -1,8 +1,8 @@
-// Module ID: 6744
-// Function ID: 6745
+// Module ID: 6788
+// Function ID: 6789
 // Dependencies: [2]
 
-// Module 6744
+// Module 6788
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/TrophyIllocon-2x.png.js");

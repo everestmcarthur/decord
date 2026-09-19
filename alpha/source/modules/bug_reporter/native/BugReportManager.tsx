@@ -1,12 +1,12 @@
-// Module ID: 10455
-// Function ID: 10456
+// Module ID: 10471
+// Function ID: 10472
 // Name: BugReportManager
-// Dependencies: [5, 17, 1346, 1074, 4932, 1364, 10338, 10340, 1255, 7314, 10456, 2]
+// Dependencies: [5, 17, 1346, 1074, 4965, 1364, 10350, 10352, 1255, 7358, 10472, 2]
 
-// Module 10455 (BugReportManager)
+// Module 10471 (BugReportManager)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1346 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7314 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7358 */;
 
 const require = fn;
 function showNotification(uri) {
@@ -130,10 +130,10 @@ function showNotification(uri) {
             }
             closure_128_0 = tmp7;
             BUG_REPORTER = constants.BUG_REPORTER;
-            notificationDuration = tmp2(10338).getNotificationDuration(BUG_REPORTER);
-            const obj5 = tmp2(10338);
+            notificationDuration = tmp2(10350).getNotificationDuration(BUG_REPORTER);
+            const obj5 = tmp2(10350);
             const obj11 = { type: BUG_REPORTER, duration: notificationDuration, key: null, image: null, imageUri: null, onDismiss: null, inAppNotificationId: null };
-            const obj6 = tmp3(10340);
+            const obj6 = tmp3(10352);
             obj11.key = tmp2(1255).v4();
             obj11.image = closure_128_0;
             uri = undefined;
@@ -171,7 +171,7 @@ function showNotification(uri) {
 get_ActivityIndicator = fn(17);
 const NativeModules = get_ActivityIndicator.NativeModules;
 const InAppNotificationTypes = fn(1074).InAppNotificationTypes;
-const NativePermissionStatus = fn(4932).NativePermissionStatus;
+const NativePermissionStatus = fn(4965).NativePermissionStatus;
 const nativeEventEmitter = new get_ActivityIndicator.NativeEventEmitter(NativeModules.ScreenshotHelper);
 class BugReportManager extends tmp4 {
 }

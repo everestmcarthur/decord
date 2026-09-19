@@ -1,13 +1,13 @@
-// Module ID: 11669
-// Function ID: 11670
+// Module ID: 11678
+// Function ID: 11679
 // Name: UnreadSettingNotice
-// Dependencies: [19, 17, 1084, 21, 4722, 576, 11670, 4718, 1115, 5292, 11671, 2]
+// Dependencies: [19, 17, 1084, 21, 4756, 576, 11679, 4752, 1115, 5334, 11680, 2]
 // Exports: default
 
-// Module 11669 (UnreadSettingNotice)
+// Module 11678 (UnreadSettingNotice)
 import nativeDefault from "native" /* 576 */;
-import UnreadSettingNoticeImpressionTrackingDefault from "UnreadSettingNoticeImpressionTracking" /* 11670 */;
-import updateChannelUnreadSettingsDefault from "updateChannelUnreadSettings" /* 11671 */;
+import UnreadSettingNoticeImpressionTrackingDefault from "UnreadSettingNoticeImpressionTracking" /* 11679 */;
+import updateChannelUnreadSettingsDefault from "updateChannelUnreadSettings" /* 11680 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -17,7 +17,7 @@ const View = fn(17).View;
 let closure_4 = fn(1084).ChannelNotificationSettingsFlags;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 const obj2 = { content: null, informations: null, actions: null, inlineTextWithIcon: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
 obj2.content = { display: "flex", flexDirection: "row", paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16, borderBottomWidth: 1, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };

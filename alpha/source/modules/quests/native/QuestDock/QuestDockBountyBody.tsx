@@ -1,24 +1,24 @@
-// Module ID: 15410
-// Function ID: 15411
+// Module ID: 15465
+// Function ID: 15466
 // Name: QuestDockBountyBody
-// Dependencies: [19, 5614, 21, 15388, 15308, 15298, 15305, 11732, 1115, 11759, 7920, 7926, 7936, 5621, 7924, 5617, 15220, 15222, 11742, 15406, 11549, 15411, 8140, 9317, 2]
+// Dependencies: [19, 5656, 21, 15443, 15363, 15353, 15360, 11739, 1115, 11766, 7958, 7964, 7974, 5663, 7962, 5659, 15274, 15276, 11749, 15461, 11558, 15466, 8178, 13214, 2]
 
-// Module 15410 (QuestDockBountyBody)
+// Module 15465 (QuestDockBountyBody)
 import util from "util" /* 1115 */;
-import QuestTypes from "QuestTypes" /* 5617 */;
-import AdCreativeType from "AdCreativeType" /* 5621 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 7920 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7924 */;
-import captureAdUserAction from "captureAdUserAction" /* 7926 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 7936 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 11742 */;
-import MobileQuestVideoWatchCtaCopy from "MobileQuestVideoWatchCtaCopy" /* 11759 */;
-import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 15220 */;
-import BountiesModalTypes from "BountiesModalTypes" /* 15222 */;
+import QuestTypes from "QuestTypes" /* 5659 */;
+import AdCreativeType from "AdCreativeType" /* 5663 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 7958 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7962 */;
+import captureAdUserAction from "captureAdUserAction" /* 7964 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 7974 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 11749 */;
+import MobileQuestVideoWatchCtaCopy from "MobileQuestVideoWatchCtaCopy" /* 11766 */;
+import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 15274 */;
+import BountiesModalTypes from "BountiesModalTypes" /* 15276 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const QuestDockMode = fn(5614).QuestDockMode;
+const QuestDockMode = fn(5656).QuestDockMode;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockBountyBody.tsx");
@@ -44,7 +44,7 @@ export default noop.memo(function QuestDockBountyBody() {
     } else {
       const obj = MobileQuestVideoWatchCtaCopy;
       const obj3 = { progressSeconds: 0, targetSeconds: num };
-      stringResult = obj.getVideoQuestWatchCtaText(QuestTaskUtils.getWatchVideoTaskDetailsFromProgress(obj3));
+      stringResult = obj.getBountyWatchCtaText(QuestTaskUtils.getWatchVideoTaskDetailsFromProgress(obj3));
     }
     return stringResult;
   }, items);

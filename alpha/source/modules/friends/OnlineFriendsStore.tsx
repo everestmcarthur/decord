@@ -1,14 +1,14 @@
-// Module ID: 13906
-// Function ID: 13907
+// Module ID: 13961
+// Function ID: 13962
 // Name: OnlineFriendsStore
-// Dependencies: [4762, 4371, 1074, 1975, 504, 573, 2]
+// Dependencies: [4796, 4405, 1074, 2058, 504, 573, 2]
 
-// Module 13906 (OnlineFriendsStore)
+// Module 13961 (OnlineFriendsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import SetUtils from "SetUtils" /* 1975 */;
-import PresenceStore from "PresenceStore" /* 4762 */;
-import RelationshipStore from "RelationshipStore" /* 4371 */;
+import SetUtils from "SetUtils" /* 2058 */;
+import PresenceStore from "PresenceStore" /* 4796 */;
+import RelationshipStore from "RelationshipStore" /* 4405 */;
 
 require = fn;
 function upsert(id) {

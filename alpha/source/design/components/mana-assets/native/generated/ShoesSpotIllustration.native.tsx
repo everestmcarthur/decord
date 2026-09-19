@@ -1,13 +1,13 @@
-// Module ID: 6647
-// Function ID: 6648
+// Module ID: 6691
+// Function ID: 6692
 // Name: ShoesSpotIllustration
-// Dependencies: [21, 5757, 6648, 2]
+// Dependencies: [21, 5799, 6692, 2]
 // Exports: ShoesSpotIllustration
 
-// Module 6647 (ShoesSpotIllustration)
+// Module 6691 (ShoesSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5757 */;
-import _modDef6648 from "module_6648" /* 6648 */;
+import FastImageDefault from "FastImage" /* 5799 */;
+import _modDef6692 from "module_6692" /* 6692 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const ShoesSpotIllustration = function ShoesSpotIllustration(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6648 };
+  const obj2 = { uri: _modDef6692 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

@@ -1,48 +1,29 @@
 // Module ID: 14573
 // Function ID: 14574
-// Dependencies: [14542, 14574, 14517, 14570]
+// Dependencies: [14574, 14576, 14583, 14606, 14594, 14608, 14604, 14609]
 
 // Module 14573
-import _mod14542 from "module_14542" /* 14542 */;
+import _mod14574 from "module_14574" /* 14574 */;
+import _mod14576 from "module_14576" /* 14576 */;
+import text from "text" /* 14583 */;
+import _mod14606 from "module_14606" /* 14606 */;
 
-
-export default (arg0, arg1, value, arg3) => {
-  let obj = arg3;
-  if (!arg3) {
-    obj = {};
-  }
-  let flag = obj.enumerable;
-  let name = arg1;
-  if (undefined !== obj.name) {
-    name = obj.name;
-  }
-  if (_mod14542(value)) {
-    tmp3(14574)(value, name, obj);
-  }
-  if (obj.global) {
-    if (flag) {
-      arg0[arg1] = value;
+if (!_mod14574) {
+  getOwnPropertyDescriptor = function getOwnPropertyDescriptor(arg0, arg1) {
+    const tmp3 = _mod14576(arg0);
+    const tmp4 = text(arg1);
+    if (!_mod14606) {
+      if (tmp(14594)(tmp3, tmp4)) {
+        const tmpResult = tmp(14608);
+        return tmpResult(!tmp(14604)(tmp(14609).f, tmp3, tmp4), tmp3[tmp4]);
+      }
     } else {
-      tmp3(14517)(arg1, value);
-    }
-  } else {
-    try {
-      if (obj.unsafe) {
-        if (arg0[arg1]) {
-          flag = true;
-        }
-      } else {
-        delete tmp[tmp2];
+      try {
+        return getOwnPropertyDescriptor(tmp3, tmp4);
+      } catch (err) {
       }
-      if (flag) {
-        arg0[arg1] = value;
-      } else {
-        const obj2 = { value, enumerable: false, configurable: !obj.nonConfigurable, writable: !obj.nonWritable };
-        tmp3(14570).f(arg0, arg1, obj2);
-        const tmp3Result = tmp3(14570);
-      }
-    } catch (err) {
     }
-  }
-  return arg0;
-};
+  };
+}
+
+export const f = getOwnPropertyDescriptor;

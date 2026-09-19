@@ -1,9 +1,9 @@
-// Module ID: 9337
-// Function ID: 9338
+// Module ID: 9920
+// Function ID: 9921
 // Name: VideoFilterImageError
 // Dependencies: [1271, 1115, 2]
 
-// Module 9337 (VideoFilterImageError)
+// Module 9920 (VideoFilterImageError)
 import util from "util" /* 1115 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import size from "module_2" /* 2 */;

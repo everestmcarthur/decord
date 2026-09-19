@@ -1,20 +1,20 @@
-// Module ID: 13392
-// Function ID: 13393
+// Module ID: 13448
+// Function ID: 13449
 // Name: OrbBadgePreview
-// Dependencies: [19, 17, 21, 4722, 8408, 11363, 9087, 1115, 2]
+// Dependencies: [19, 17, 21, 4756, 8446, 11375, 9126, 1115, 2]
 // Exports: OrbBadgePreview
 
-// Module 13392 (OrbBadgePreview)
+// Module 13448 (OrbBadgePreview)
 import util from "util" /* 1115 */;
-import useCurrentUser from "useCurrentUser" /* 8408 */;
-import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 9087 */;
-import UserProfilePreviewDefault from "UserProfilePreview" /* 11363 */;
+import useCurrentUser from "useCurrentUser" /* 8446 */;
+import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 9126 */;
+import UserProfilePreviewDefault from "UserProfilePreview" /* 11375 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let closure_5 = createStyles.createStyles({ container: { flex: 1, justifyContent: "center", alignItems: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/OrbBadgePreview.tsx");

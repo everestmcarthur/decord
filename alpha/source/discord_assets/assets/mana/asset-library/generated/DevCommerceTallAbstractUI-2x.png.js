@@ -1,8 +1,8 @@
-// Module ID: 6078
-// Function ID: 6079
+// Module ID: 6122
+// Function ID: 6123
 // Dependencies: [2]
 
-// Module 6078
+// Module 6122
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/DevCommerceTallAbstractUI-2x.png.js");

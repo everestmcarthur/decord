@@ -1,15 +1,15 @@
-// Module ID: 18049
-// Function ID: 18050
+// Module ID: 18128
+// Function ID: 18129
 // Name: Placeholder
-// Dependencies: [19, 17, 21, 4722, 2]
+// Dependencies: [19, 17, 21, 4756, 2]
 // Exports: default
 
-// Module 18049 (Placeholder)
+// Module 18128 (Placeholder)
 import noop from "module_19" /* 19 */;
 
 const ActivityIndicator = fn(17).ActivityIndicator;
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let closure_2 = createStyles.createStyles({ spinner: { marginTop: 12 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/Placeholder.tsx");

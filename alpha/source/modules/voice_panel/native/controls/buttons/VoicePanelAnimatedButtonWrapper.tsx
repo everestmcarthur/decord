@@ -1,19 +1,19 @@
-// Module ID: 17561
-// Function ID: 17562
+// Module ID: 17638
+// Function ID: 17639
 // Name: VoicePanelAnimatedButtonWrapper
-// Dependencies: [19, 17, 12515, 21, 4722, 576, 4458, 17471, 1364, 5143, 4723, 2]
+// Dependencies: [19, 17, 12524, 21, 4756, 576, 4492, 17548, 1364, 5185, 4757, 2]
 // Exports: default
 
-// Module 17561 (VoicePanelAnimatedButtonWrapper)
+// Module 17638 (VoicePanelAnimatedButtonWrapper)
 import nativeDefault from "native" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import noop from "module_19" /* 19 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4458 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4492 */;
 
 require = fn;
-const MODE_CHANGE_PHYSICS = fn(12515).MODE_CHANGE_PHYSICS;
+const MODE_CHANGE_PHYSICS = fn(12524).MODE_CHANGE_PHYSICS;
 let jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { pressableWrapper: { justifyContent: "center", alignItems: "center", borderRadius: nativeDefault.modules.button.BORDER_RADIUS_LG } };
 let closure_6 = createStyles.createStyles(obj2);
 let closure_7 = ReanimatedRexport.createAnimatedComponent(fn(17).Pressable);
@@ -86,7 +86,7 @@ export default function AnimatedButtonWrapper(onPressOut) {
         obj.animations = obj3;
         return obj;
       };
-      let obj2 = { offsetFromCenter: sharedValue, withSpring: tmp(5143).withSpring, MODE_CHANGE_PHYSICS, withTiming: tmp(4723).withTiming };
+      let obj2 = { offsetFromCenter: sharedValue, withSpring: tmp(5185).withSpring, MODE_CHANGE_PHYSICS, withTiming: tmp(4757).withTiming };
       fn.__closure = obj2;
       fn.__workletHash = 16238937246135;
       fn.__initData = __initData;
@@ -114,7 +114,7 @@ export default function AnimatedButtonWrapper(onPressOut) {
         obj.animations = obj3;
         return obj;
       };
-      let obj2 = { withSpring: tmp(5143).withSpring, offsetFromCenter: sharedValue, MODE_CHANGE_PHYSICS, withTiming: tmp(4723).withTiming };
+      let obj2 = { withSpring: tmp(5185).withSpring, offsetFromCenter: sharedValue, MODE_CHANGE_PHYSICS, withTiming: tmp(4757).withTiming };
       fn.__closure = obj2;
       fn.__workletHash = 17504057367727;
       fn.__initData = __initData2;

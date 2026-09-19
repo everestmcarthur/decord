@@ -1,31 +1,31 @@
-// Module ID: 12904
-// Function ID: 12905
+// Module ID: 12913
+// Function ID: 12914
 // Name: GuildDirectoryNicknameUpsellModal
-// Dependencies: [5, 32, 19, 17, 1980, 12893, 21, 4722, 5852, 576, 504, 7177, 7316, 4622, 5754, 4718, 1115, 6798, 1177, 5144, 12894, 12903, 5794, 7196, 5768, 2]
+// Dependencies: [5, 32, 19, 17, 2063, 12902, 21, 4756, 5894, 576, 504, 7221, 7360, 4656, 5796, 4752, 1115, 6842, 1177, 5186, 12903, 12912, 5836, 7240, 5810, 2]
 // Exports: default
 
-// Module 12904 (GuildDirectoryNicknameUpsellModal)
+// Module 12913 (GuildDirectoryNicknameUpsellModal)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import Text_Text from "Text/Text" /* 4718 */;
-import components_Button_Button from "components/Button/Button" /* 5144 */;
-import GuildIcon from "GuildIcon" /* 5754 */;
-import useInitialValueDefault from "useInitialValue" /* 5768 */;
-import NavigatorHeader from "NavigatorHeader" /* 5794 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7177 */;
-import GuildPromptsActionCreatorsDefault from "GuildPromptsActionCreators" /* 12894 */;
-import GuildDirectoryNicknameUpsellModalActionCreatorsDefault from "GuildDirectoryNicknameUpsellModalActionCreators" /* 12903 */;
+import Text_Text from "Text/Text" /* 4752 */;
+import components_Button_Button from "components/Button/Button" /* 5186 */;
+import GuildIcon from "GuildIcon" /* 5796 */;
+import useInitialValueDefault from "useInitialValue" /* 5810 */;
+import NavigatorHeader from "NavigatorHeader" /* 5836 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7221 */;
+import GuildPromptsActionCreatorsDefault from "GuildPromptsActionCreators" /* 12903 */;
+import GuildDirectoryNicknameUpsellModalActionCreatorsDefault from "GuildDirectoryNicknameUpsellModalActionCreators" /* 12912 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 1980 */;
+import GuildStore from "GuildStore" /* 2063 */;
 
 const require = globalThis.__r;
 const GuildIconDefault = GuildIcon;
 
-const FreeFormInputGroupDefault = tmp5(6798);
+const FreeFormInputGroupDefault = tmp5(6842);
 require = fn;
 function GuildDirectoryNicknameUpsell(arg0) {
   ({ guildId: require, handleClose: importDefault } = arg0);
@@ -136,12 +136,12 @@ function GuildDirectoryNicknameUpsell(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const GuildPrompts = fn(12893).GuildPrompts;
+const GuildPrompts = fn(12902).GuildPrompts;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4722);
-let obj2 = { container: { flex: 1, flexGrow: 2, marginTop: fn(5852).NAV_BAR_HEIGHT }, guildIcon: { alignSelf: "center", marginTop: 16 }, title: { marginBottom: 8, textAlign: "center" }, description: { textAlign: "center" }, header: { alignItems: "center", justifyContent: "center", padding: 16 }, input: { marginHorizontal: 16 }, redesignTextInput: null, redesignGrowSpacing: null, redesignButtonContainer: null };
-let obj3 = { flex: 1, flexGrow: 2, marginTop: fn(5852).NAV_BAR_HEIGHT };
+const createStyles = fn(4756);
+let obj2 = { container: { flex: 1, flexGrow: 2, marginTop: fn(5894).NAV_BAR_HEIGHT }, guildIcon: { alignSelf: "center", marginTop: 16 }, title: { marginBottom: 8, textAlign: "center" }, description: { textAlign: "center" }, header: { alignItems: "center", justifyContent: "center", padding: 16 }, input: { marginHorizontal: 16 }, redesignTextInput: null, redesignGrowSpacing: null, redesignButtonContainer: null };
+let obj3 = { flex: 1, flexGrow: 2, marginTop: fn(5894).NAV_BAR_HEIGHT };
 obj2.redesignTextInput = { borderRadius: nativeDefault.radii.lg };
 let obj4 = { borderRadius: nativeDefault.radii.lg };
 obj2.redesignGrowSpacing = { flexGrow: 2, minHeight: nativeDefault.space.PX_24 };

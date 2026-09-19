@@ -1,10 +1,10 @@
-// Module ID: 9797
-// Function ID: 9798
+// Module ID: 11772
+// Function ID: 11773
 // Name: DeveloperActivityShelfActionCreators
 // Dependencies: [573, 2]
 // Exports: markActivityUsed, setActivityUrlOverride, toggleUseActivityUrlOverride, updateFilter
 
-// Module 9797 (DeveloperActivityShelfActionCreators)
+// Module 11772 (DeveloperActivityShelfActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import size from "module_2" /* 2 */;
 

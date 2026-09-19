@@ -1,9 +1,9 @@
-// Module ID: 1961
-// Function ID: 1962
+// Module ID: 2044
+// Function ID: 2045
 // Name: FavoriteStore
-// Dependencies: [1220, 1962, 1971, 1074, 1186, 12, 504, 573, 2]
+// Dependencies: [1220, 2045, 2054, 1074, 1186, 12, 504, 573, 2]
 
-// Module 1961 (FavoriteStore)
+// Module 2044 (FavoriteStore)
 import _mod12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
@@ -97,8 +97,8 @@ function initializeFromUserSettings() {
   }
   return flag3;
 }
-const createChannelRecord = fn(1962).createChannelRecord;
-let closure_5 = fn(1971).FAVORITES_UNCATEGORIZED_PARENT_ID;
+const createChannelRecord = fn(2045).createChannelRecord;
+let closure_5 = fn(2054).FAVORITES_UNCATEGORIZED_PARENT_ID;
 const Constants = fn(1074);
 ({ ChannelTypes: metroRequire, FAVORITES: closure_7 } = Constants);
 let closure_12 = false;

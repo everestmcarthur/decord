@@ -1,13 +1,13 @@
-// Module ID: 10492
-// Function ID: 10493
+// Module ID: 10508
+// Function ID: 10509
 // Name: ForumComposerModalActionCreators
-// Dependencies: [7969, 4925, 10493, 1897, 2]
+// Dependencies: [8007, 4959, 10509, 1980, 2]
 // Exports: closeCreateForumPostModal, openCreateForumPostModal
 
-// Module 10492 (ForumComposerModalActionCreators)
-import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4925 */;
-import tracking_Tracking from "tracking/Tracking" /* 7969 */;
+// Module 10508 (ForumComposerModalActionCreators)
+import asyncRequireImpl from "asyncRequireImpl" /* 1980 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4959 */;
+import tracking_Tracking from "tracking/Tracking" /* 8007 */;
 import size from "module_2" /* 2 */;
 
 let c3 = "create-forum-post";
@@ -17,14 +17,14 @@ export const openCreateForumPostModal = function openCreateForumPostModal(guildI
   const result = tracking_Tracking.trackMobileForumComposerOpened({ guildId: guildId.guildId, channelId: guildId.parentChannelId, location: guildId.analyticsLocationObject });
   if (!tmp4) {
     ({ guildId: obj4.guildId, parentChannelId: obj4.channelId } = guildId);
-    const result1 = tmp(7969).trackForumCreateNewPostStarted({ guildId: null, channelId: null });
+    const result1 = tmp(8007).trackForumCreateNewPostStarted({ guildId: null, channelId: null });
     const obj3 = { guildId: null, channelId: null };
-    const tmpResult = tmp(7969);
+    const tmpResult = tmp(8007);
   }
   const obj2 = { guildId: guildId.guildId, channelId: guildId.parentChannelId, location: guildId.analyticsLocationObject };
   const tmp2 = dependencyMap;
   tmp4 = null != guildId.isEdit && guildId.isEdit;
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10493, tmp2.paths), guildId, c3);
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10509, tmp2.paths), guildId, c3);
 };
 export const closeCreateForumPostModal = function closeCreateForumPostModal() {
   let flag = arg0;

@@ -1,10 +1,10 @@
-// Module ID: 1911
-// Function ID: 1912
+// Module ID: 1994
+// Function ID: 1995
 // Name: inject
 // Dependencies: [2]
 // Exports: getOpenH264LibraryPath, getVoiceEngine, inject, setProcessPriority, supported, supportsFeature
 
-// Module 1911 (inject)
+// Module 1994 (inject)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/media-engine/native/inject.tsx");

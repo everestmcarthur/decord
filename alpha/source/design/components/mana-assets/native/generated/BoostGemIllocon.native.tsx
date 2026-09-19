@@ -1,13 +1,13 @@
-// Module ID: 5991
-// Function ID: 5992
+// Module ID: 6035
+// Function ID: 6036
 // Name: BoostGemIllocon
-// Dependencies: [21, 5757, 5992, 2]
+// Dependencies: [21, 5799, 6036, 2]
 // Exports: BoostGemIllocon
 
-// Module 5991 (BoostGemIllocon)
+// Module 6035 (BoostGemIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5757 */;
-import _modDef5992 from "module_5992" /* 5992 */;
+import FastImageDefault from "FastImage" /* 5799 */;
+import _modDef6036 from "module_6036" /* 6036 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -20,7 +20,7 @@ export const BoostGemIllocon = function BoostGemIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5992 };
+  const obj2 = { uri: _modDef6036 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

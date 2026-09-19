@@ -1,17 +1,17 @@
-// Module ID: 17883
-// Function ID: 17884
+// Module ID: 17963
+// Function ID: 17964
 // Name: ExemptChannelsActionSheet
-// Dependencies: [19, 7307, 1980, 4371, 1372, 21, 504, 7308, 4875, 5197, 5775, 17882, 1115, 2]
+// Dependencies: [19, 7351, 2063, 4405, 1372, 21, 504, 7352, 4909, 5239, 5817, 17962, 1115, 2]
 // Exports: default
 
-// Module 17883 (ExemptChannelsActionSheet)
-import utils_ChannelUtils from "utils/ChannelUtils" /* 5197 */;
-import TableRow from "TableRow" /* 5775 */;
-import getFlattedChannelListDefault from "getFlattedChannelList" /* 7308 */;
+// Module 17963 (ExemptChannelsActionSheet)
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5239 */;
+import TableRow from "TableRow" /* 5817 */;
+import getFlattedChannelListDefault from "getFlattedChannelList" /* 7352 */;
 import noop from "module_19" /* 19 */;
-import GuildCategoryStore from "GuildCategoryStore" /* 7307 */;
-import GuildStore from "GuildStore" /* 1980 */;
-import RelationshipStore from "RelationshipStore" /* 4371 */;
+import GuildCategoryStore from "GuildCategoryStore" /* 7351 */;
+import GuildStore from "GuildStore" /* 2063 */;
+import RelationshipStore from "RelationshipStore" /* 4405 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -69,5 +69,5 @@ export default function ExemptChannelsActionSheet(guildId) {
   obj3.renderLabel = getChannelOptionName;
   obj3.renderIcon = callback;
   obj3.onSave = onSave;
-  return jsx(stateFromStores(17882), { title: null, searchPlaceholder: null, listId: "automod-exempt-channels", items: null, initialSelected: null, getId: null, getSearchText: null, renderLabel: null, renderIcon: null, onSave: null });
+  return jsx(stateFromStores(17962), { title: null, searchPlaceholder: null, listId: "automod-exempt-channels", items: null, initialSelected: null, getId: null, getSearchText: null, renderLabel: null, renderIcon: null, onSave: null });
 };

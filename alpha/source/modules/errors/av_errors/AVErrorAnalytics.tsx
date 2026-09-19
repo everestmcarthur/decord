@@ -1,24 +1,24 @@
-// Module ID: 18220
-// Function ID: 18221
+// Module ID: 18299
+// Function ID: 18300
 // Name: AVErrorAnalytics
-// Dependencies: [32, 4760, 4767, 4768, 1958, 1909, 4745, 4772, 2012, 4761, 1074, 4747, 9348, 4774, 4851, 12, 7943, 9854, 1358, 4716, 1241, 2]
+// Dependencies: [32, 4794, 4801, 4802, 2041, 1992, 4779, 4806, 2095, 4795, 1074, 4781, 9685, 4808, 4885, 12, 7981, 9695, 1358, 4750, 1241, 2]
 // Exports: sendAVErrorAnalyticsEvent
 
-// Module 18220 (AVErrorAnalytics)
+// Module 18299 (AVErrorAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import ProcessUtilsDefault from "ProcessUtils" /* 1358 */;
-import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 4716 */;
-import VideoQualityStats from "VideoQualityStats" /* 7943 */;
-import WindowVisibilityVideoManager2 from "WindowVisibilityVideoManager" /* 9854 */;
+import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 4750 */;
+import VideoQualityStats from "VideoQualityStats" /* 7981 */;
+import WindowVisibilityVideoManager2 from "WindowVisibilityVideoManager" /* 9695 */;
 import _slicedToArray from "module_32" /* 32 */;
-import MediaEngineStatsStore from "MediaEngineStatsStore" /* 4760 */;
-import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 4768 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
-import MediaEngineStore from "MediaEngineStore" /* 1909 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4745 */;
-import RTCRegionStore from "RTCRegionStore" /* 4772 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4761 */;
+import MediaEngineStatsStore from "MediaEngineStatsStore" /* 4794 */;
+import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 4802 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
+import MediaEngineStore from "MediaEngineStore" /* 1992 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4779 */;
+import RTCRegionStore from "RTCRegionStore" /* 4806 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2095 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4795 */;
 
 const require = globalThis.__r;
 
@@ -76,9 +76,9 @@ function getCurrentScreenshareCaptureMethod(mediaEngineConnectionId) {
   }
   return null;
 }
-const getSystemAnalyticsInfo = fn(4767).getSystemAnalyticsInfo;
+const getSystemAnalyticsInfo = fn(4801).getSystemAnalyticsInfo;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const Constants = fn(4747);
+const Constants = fn(4781);
 ({ MediaEngineContextTypes: closure_14, SIMULCAST_HQ_QUALITY: closure_15 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/errors/av_errors/AVErrorAnalytics.tsx");

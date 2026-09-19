@@ -1,10 +1,10 @@
-// Module ID: 12384
-// Function ID: 12385
+// Module ID: 12393
+// Function ID: 12394
 // Name: useDelayedSwapToActivityActionLeave
-// Dependencies: [32, 19, 12299, 2]
+// Dependencies: [32, 19, 12308, 2]
 // Exports: useDelayedSwapToActivityActionLeave
 
-// Module 12384 (useDelayedSwapToActivityActionLeave)
+// Module 12393 (useDelayedSwapToActivityActionLeave)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,7 +17,7 @@ export const useDelayedSwapToActivityActionLeave = function useDelayedSwapToActi
   dependencyMap = tmp[1];
   const items = [activityAction];
   const layoutEffect = noop.useLayoutEffect(() => {
-    if (activityAction === activityAction(12299).ActivityAction.LEAVE) {
+    if (activityAction === activityAction(12308).ActivityAction.LEAVE) {
       const _setTimeout = setTimeout;
       activityAction = setTimeout(() => dependencyMap(closure_0), 100);
       return () => clearTimeout(closure_0);

@@ -1,32 +1,32 @@
-// Module ID: 16748
-// Function ID: 16749
+// Module ID: 16824
+// Function ID: 16825
 // Name: ICYMIShared
-// Dependencies: [19, 17, 7502, 1958, 2022, 4361, 1372, 1074, 21, 8580, 9436, 5256, 8954, 16677, 7306, 7443, 7234, 7652, 4652, 16709, 1364, 576, 1177, 9054, 5754, 5151, 5292, 4718, 7837, 16749, 8142, 504, 4874, 8583, 8409, 5263, 8582, 16345, 10030, 1115, 16710, 4656, 4423, 4571, 4458, 4723, 4735, 5240, 7405, 4712, 2]
+// Dependencies: [19, 17, 7546, 2041, 2105, 4395, 1372, 1074, 21, 8618, 10024, 5298, 8993, 16753, 7350, 7487, 7278, 7696, 4686, 16785, 1364, 576, 1177, 9093, 5796, 5193, 5334, 4752, 7875, 16825, 8180, 504, 4908, 8621, 8447, 5305, 8620, 16421, 9882, 1115, 16786, 4690, 4457, 4605, 4492, 4757, 4769, 5282, 7449, 4746, 2]
 // Exports: AnnouncementContentPost, GuildEventPost, MessageContentPost, SimplePost, ThreadAsComments, navigateToPost, truncateUsername
 
-// Module 16748 (ICYMIShared)
+// Module 16824 (ICYMIShared)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4458 */;
-import Client from "Client" /* 4652 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 4712 */;
-import timing from "timing" /* 4723 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4735 */;
-import GuildIcon from "GuildIcon" /* 5754 */;
-import ReadStateActionCreators from "ReadStateActionCreators" /* 7306 */;
-import safeTransitionToDefault from "safeTransitionTo" /* 7443 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7652 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8409 */;
-import ICYMIUtils from "ICYMIUtils" /* 8582 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8583 */;
-import ClipView from "ClipView" /* 9054 */;
-import openDetailsActionSheet from "openDetailsActionSheet" /* 16749 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4492 */;
+import Client from "Client" /* 4686 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 4746 */;
+import timing from "timing" /* 4757 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4769 */;
+import GuildIcon from "GuildIcon" /* 5796 */;
+import ReadStateActionCreators from "ReadStateActionCreators" /* 7350 */;
+import safeTransitionToDefault from "safeTransitionTo" /* 7487 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7696 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8447 */;
+import ICYMIUtils from "ICYMIUtils" /* 8620 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8621 */;
+import ClipView from "ClipView" /* 9093 */;
+import openDetailsActionSheet from "openDetailsActionSheet" /* 16825 */;
 import noop from "module_19" /* 19 */;
-import ThreadMessageStore from "ThreadMessageStore" /* 7502 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
-import GuildMemberStore from "GuildMemberStore" /* 2022 */;
-import PermissionStore from "PermissionStore" /* 4361 */;
+import ThreadMessageStore from "ThreadMessageStore" /* 7546 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
+import GuildMemberStore from "GuildMemberStore" /* 2105 */;
+import PermissionStore from "PermissionStore" /* 4395 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const require = globalThis.__r;
@@ -152,7 +152,7 @@ const Constants = fn(1074);
 ({ AnalyticsObjects: c10, AnalyticsObjectTypes: closure_11, AnalyticsPages: closure_12, DEFAULT_ROLE_COLOR_HEX: map1, MAX_MESSAGES_FOR_JUMP: closure_14, MessageFlags: closure_15, Permissions: closure_16, Routes: closure_17 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19, Fragment: closure_20 } = jsxProd);
-const createICYMIStyles = fn(16709);
+const createICYMIStyles = fn(16785);
 createICYMIStyles.createICYMIStyles((paddingBottom) => {
   let num = 0;
   if (obj.isAndroid()) {
@@ -473,22 +473,22 @@ export const SimplePost = function SimplePost(arg0) {
   let token;
   const tmp = closure_21();
   const tmp2 = token;
-  const tmp4 = token(4656)();
-  token = highlight(4423).useToken(token(576).colors.MESSAGE_HIGHLIGHT_BACKGROUND_DEFAULT, tmp4);
-  let obj = highlight(4423);
-  const hexWithOpacityResult = highlight(4571).hexWithOpacity(token(576).unsafe_rawColors.BRAND_360, 0.25);
+  const tmp4 = token(4690)();
+  token = highlight(4457).useToken(token(576).colors.MESSAGE_HIGHLIGHT_BACKGROUND_DEFAULT, tmp4);
+  let obj = highlight(4457);
+  const hexWithOpacityResult = highlight(4605).hexWithOpacity(token(576).unsafe_rawColors.BRAND_360, 0.25);
   dependencyMap = hexWithOpacityResult;
-  let obj2 = highlight(4571);
-  const sharedValue = highlight(4458).useSharedValue(0);
-  let obj3 = highlight(4458);
+  let obj2 = highlight(4605);
+  const sharedValue = highlight(4492).useSharedValue(0);
+  let obj3 = highlight(4492);
   const fn = function c() {
     const obj = { backgroundColor: null };
     const items = [token, c2];
     obj.backgroundColor = ReanimatedRexport.interpolateColor(sharedValue.get(), [0, 1], items);
     return obj;
   };
-  let obj4 = highlight(4458);
-  fn.__closure = { interpolateColor: highlight(4458).interpolateColor, progress: sharedValue, bgColor: token, bgColorHighlighted: hexWithOpacityResult };
+  let obj4 = highlight(4492);
+  fn.__closure = { interpolateColor: highlight(4492).interpolateColor, progress: sharedValue, bgColor: token, bgColorHighlighted: hexWithOpacityResult };
   fn.__workletHash = 11116019021445;
   fn.__initData = __initData;
   let items = [highlight, sharedValue];
@@ -507,7 +507,7 @@ export const SimplePost = function SimplePost(arg0) {
     const items1 = [tmp.simplePostContent, animatedStyle];
     obj7.style = items1;
     obj7.children = children;
-    const items2 = [tmp12(tmp2(4458).View, obj7), ];
+    const items2 = [tmp12(tmp2(4492).View, obj7), ];
     let tmp12Result = null;
     if (!hideDivider) {
       tmp12Result = tmp12(Separator, {});
@@ -589,18 +589,18 @@ export const ThreadAsComments = function ThreadAsComments(arg0) {
           parseInlineReplyResult = intl.string(tmp2(1115).t["6kp9H2"]);
         }
         obj5.children = parseInlineReplyResult;
-        items4[1] = closure_18(tmp2(4718).Text, obj5);
+        items4[1] = closure_18(tmp2(4752).Text, obj5);
         const obj7 = { style: tmp.commentCount, children: null };
         const obj8 = { style: tmp.commentsIcon };
-        const items5 = [closure_18(tmp2(5240).ChatIcon, obj8), , ];
+        const items5 = [closure_18(tmp2(5282).ChatIcon, obj8), , ];
         const obj9 = { variant: "text-sm/bold", color: "interactive-text-default", children: str };
-        items5[1] = closure_18(tmp2(4718).Text, obj9);
+        items5[1] = closure_18(tmp2(4752).Text, obj9);
         const obj10 = { style: tmp.chevron, size: "xxs" };
-        items5[2] = closure_18(tmp2(7405).ChevronSmallRightIcon, obj10);
+        items5[2] = closure_18(tmp2(7449).ChevronSmallRightIcon, obj10);
         obj7.children = items5;
         items4[2] = closure_19(View, obj7);
         obj3.children = items4;
-        return closure_19(tmp2(5292).PressableHighlight, obj3);
+        return closure_19(tmp2(5334).PressableHighlight, obj3);
       }
     }
     const obj11 = { style: null, onPress: null, children: null };
@@ -610,16 +610,16 @@ export const ThreadAsComments = function ThreadAsComments(arg0) {
     const obj12 = { variant: "text-md/semibold", color: "text-muted", lineClamp: 1, style: tmp.recentCommentText, children: null };
     const intl2 = tmp2(1115).intl;
     obj12.children = intl2.string(tmp2(1115).t.VMWjXW);
-    const items7 = [closure_18(tmp2(4718).Text, obj12), ];
+    const items7 = [closure_18(tmp2(4752).Text, obj12), ];
     const obj13 = { style: tmp.commentCount, children: null };
     const obj14 = { style: tmp.commentsIcon };
-    const items8 = [closure_18(tmp2(5240).ChatIcon, obj14), ];
+    const items8 = [closure_18(tmp2(5282).ChatIcon, obj14), ];
     const obj15 = { style: tmp.chevron, size: "xxs" };
-    items8[1] = closure_18(tmp2(7405).ChevronSmallRightIcon, obj15);
+    items8[1] = closure_18(tmp2(7449).ChevronSmallRightIcon, obj15);
     obj13.children = items8;
     items7[1] = closure_19(View, obj13);
     obj11.children = items7;
-    return closure_19(tmp2(5292).PressableHighlight, obj11);
+    return closure_19(tmp2(5334).PressableHighlight, obj11);
   } else {
     return null;
   }

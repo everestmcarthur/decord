@@ -1,12 +1,12 @@
-// Module ID: 9022
-// Function ID: 9023
+// Module ID: 9061
+// Function ID: 9062
 // Name: SKUWishlistItemRecord
-// Dependencies: [5681, 9019, 2]
+// Dependencies: [5723, 9058, 2]
 // Exports: isSKUWishlistItemRecord
 
-// Module 9022 (SKUWishlistItemRecord)
-import SKURecord from "SKURecord" /* 5681 */;
-import BaseWishlistItemRecord from "BaseWishlistItemRecord" /* 9019 */;
+// Module 9061 (SKUWishlistItemRecord)
+import SKURecord from "SKURecord" /* 5723 */;
+import BaseWishlistItemRecord from "BaseWishlistItemRecord" /* 9058 */;
 
 const prototype = function SKUWishlistItemRecord(sku) {
   const tmp = new prototype(sku, new.target);

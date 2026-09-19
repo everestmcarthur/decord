@@ -1,8 +1,8 @@
-// Module ID: 8382
-// Function ID: 8383
+// Module ID: 8420
+// Function ID: 8421
 // Dependencies: [2]
 
-// Module 8382
+// Module 8420
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/card-cat.png.js");

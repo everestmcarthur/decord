@@ -1,29 +1,17 @@
 // Module ID: 4833
 // Function ID: 4834
-// Dependencies: [523, 514, 533]
+// Dependencies: [545, 4834, 4835]
 
 // Module 4833
-import _mod514 from "module_514" /* 514 */;
-import _mod523 from "module_523" /* 523 */;
-import baseIsArguments from "baseIsArguments" /* 533 */;
+import _mod545 from "module_545" /* 545 */;
 
-let isConcatSpreadable;
-if (_mod523) {
-  isConcatSpreadable = _mod523.isConcatSpreadable;
-}
 
-export default function isFlattenable(arg0) {
-  let tmp3 = _mod514(arg0) || baseIsArguments(arg0);
-  if (!tmp3) {
-    let tmp5 = isConcatSpreadable;
-    if (isConcatSpreadable) {
-      tmp5 = arg0;
+export default function initCloneObject(arg0) {
+  if (typeof arg0.constructor === "function") {
+    if (!_mod545(arg0)) {
+      tmp3(4834)(tmp3(4835)(arg0));
+      const tmp = tmp3(4834);
     }
-    if (tmp5) {
-      tmp5 = arg0[tmp4];
-    }
-    tmp3 = tmp5;
-    tmp4 = isConcatSpreadable;
+    return {};
   }
-  return tmp3;
 };

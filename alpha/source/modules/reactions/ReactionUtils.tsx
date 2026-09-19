@@ -1,21 +1,21 @@
-// Module ID: 4373
-// Function ID: 4374
+// Module ID: 4407
+// Function ID: 4408
 // Name: ReactionUtils
-// Dependencies: [502, 1074, 4374, 4375, 1115, 7965, 1936, 1241, 2]
+// Dependencies: [502, 1074, 4408, 4409, 1115, 8003, 2019, 1241, 2]
 // Exports: emojiEquals, getAccessibleEmojiDisplayName, getBurstAnalyticsSection, getReactionEmojiName, isCustomReactionEmojiId, isMeReaction, shouldApplyReaction, toReactionEmoji, updateReactionNotificationsSetting
 
-// Module 4373 (ReactionUtils)
+// Module 4407 (ReactionUtils)
 import util from "util" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import UserSettings from "UserSettings" /* 1936 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4375 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 7965 */;
+import UserSettings from "UserSettings" /* 2019 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4409 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 8003 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
 const Constants = fn(1074);
 ({ AnalyticsSections: closure_4, AnalyticEvents: hasOwnProperty } = Constants);
-const constants3 = fn(4374).NotificationSettingsUpdateType;
+const constants3 = fn(4408).NotificationSettingsUpdateType;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/reactions/ReactionUtils.tsx");
 

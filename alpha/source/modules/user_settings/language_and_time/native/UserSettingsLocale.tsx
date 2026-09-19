@@ -1,16 +1,16 @@
-// Module ID: 15635
-// Function ID: 15636
+// Module ID: 15690
+// Function ID: 15691
 // Name: UserSettingsLocale
-// Dependencies: [5, 19, 17, 2027, 2026, 21, 4722, 576, 9596, 504, 7319, 5855, 1115, 5858, 15636, 2]
+// Dependencies: [5, 19, 17, 2110, 2109, 21, 4756, 576, 9471, 504, 7363, 5897, 1115, 5900, 15691, 2]
 
-// Module 15635 (UserSettingsLocale)
+// Module 15690 (UserSettingsLocale)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import TableRadioRow from "TableRadioRow" /* 5858 */;
-import flags from "flags" /* 15636 */;
+import TableRadioRow from "TableRadioRow" /* 5900 */;
+import flags from "flags" /* 15691 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2026 */;
+import LocaleStore from "LocaleStore" /* 2109 */;
 
 const require = globalThis.__r;
 
@@ -78,9 +78,9 @@ let closure_11 = async function _handleLanguageChange(arg0, value) {
 };
 get_ActivityIndicator = fn(17);
 ({ Image: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const setAppLocale = fn(2027).setAppLocale;
+const setAppLocale = fn(2110).setAppLocale;
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj = { content: { padding: nativeDefault.space.PX_16 }, flagImage: { width: 27, height: 18 } };
 let closure_9 = createStyles.createStyles(obj);
 let obj3 = { padding: nativeDefault.space.PX_16 };

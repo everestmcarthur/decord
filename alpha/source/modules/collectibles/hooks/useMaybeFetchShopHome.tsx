@@ -1,16 +1,16 @@
-// Module ID: 16047
-// Function ID: 16048
+// Module ID: 16123
+// Function ID: 16124
 // Name: useMaybeFetchShopHome
-// Dependencies: [32, 19, 4637, 7738, 7781, 1076, 504, 7784, 7737, 16048, 2]
+// Dependencies: [32, 19, 4671, 7782, 7825, 1076, 504, 7828, 7781, 16124, 2]
 // Exports: useMaybeFetchCollectiblesShopHome
 
-// Module 16047 (useMaybeFetchShopHome)
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7737 */;
-import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7784 */;
+// Module 16123 (useMaybeFetchShopHome)
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7781 */;
+import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7828 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ExperimentStore from "ExperimentStore" /* 4637 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7738 */;
-import CollectiblesShopHomeStore from "CollectiblesShopHomeStore" /* 7781 */;
+import ExperimentStore from "ExperimentStore" /* 4671 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7782 */;
+import CollectiblesShopHomeStore from "CollectiblesShopHomeStore" /* 7825 */;
 
 const require = globalThis.__r;
 

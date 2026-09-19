@@ -1,9 +1,15 @@
 // Module ID: 7123
 // Function ID: 7124
-// Dependencies: [7124]
+// Dependencies: []
 
 // Module 7123
-import _modDef7124 from "module_7124" /* 7124 */;
 
-
-export default _modDef7124;
+export default function _assertThisInitialized(arg0) {
+  if (undefined === arg0) {
+    const _ReferenceError = ReferenceError;
+    const referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    throw referenceError;
+  } else {
+    return arg0;
+  }
+};

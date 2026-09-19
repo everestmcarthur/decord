@@ -1,23 +1,23 @@
-// Module ID: 13434
-// Function ID: 13435
+// Module ID: 13490
+// Function ID: 13491
 // Name: ExecutedCommand
-// Dependencies: [17, 1386, 1958, 1372, 1074, 1400, 1397, 4955, 11859, 576, 7717, 1895, 8180, 8182, 9794, 1115, 9527, 2]
+// Dependencies: [17, 1386, 2041, 1372, 1074, 1400, 1397, 4988, 11868, 576, 7761, 1978, 8218, 8220, 9599, 1115, 9402, 2]
 // Exports: createExecutedCommand
 
-// Module 13434 (ExecutedCommand)
+// Module 13490 (ExecutedCommand)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
 import Constants from "Constants" /* 1074 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
 import utils_AvatarUtils from "utils/AvatarUtils" /* 1400 */;
-import Server from "Server" /* 1895 */;
-import useMessageAuthor from "useMessageAuthor" /* 4955 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7717 */;
-import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 8180 */;
-import createDisplayNameStylesMobile from "createDisplayNameStylesMobile" /* 8182 */;
-import ApplicationInteractionInfoUtils from "ApplicationInteractionInfoUtils" /* 11859 */;
+import Server from "Server" /* 1978 */;
+import useMessageAuthor from "useMessageAuthor" /* 4988 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7761 */;
+import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 8218 */;
+import createDisplayNameStylesMobile from "createDisplayNameStylesMobile" /* 8220 */;
+import ApplicationInteractionInfoUtils from "ApplicationInteractionInfoUtils" /* 11868 */;
 import UserRecord from "UserRecord" /* 1386 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
 import UserStore from "UserStore" /* 1372 */;
 import size from "module_2" /* 2 */;
 
@@ -94,13 +94,13 @@ export const createExecutedCommand = function createExecutedCommand(message, cha
       let processColorStringsResult = null;
       const result2 = enhanced_role_colors_EnhancedRoleColorUtils.isNativeMessageEligibleForEnhancedRoleColors(guildId, id2);
       if (result1) {
-        processColorStringsResult = tmp16(8180).processColorStrings(userAuthor.colorStrings);
-        const tmp16Result13 = tmp16(8180);
+        processColorStringsResult = tmp16(8218).processColorStrings(userAuthor.colorStrings);
+        const tmp16Result13 = tmp16(8218);
       }
       let processColorStringsResult1 = null;
       if (result2) {
-        processColorStringsResult1 = tmp16(8180).processColorStrings(userAuthor1.colorStrings);
-        const tmp16Result14 = tmp16(8180);
+        processColorStringsResult1 = tmp16(8218).processColorStrings(userAuthor1.colorStrings);
+        const tmp16Result14 = tmp16(8218);
       }
       let user = obj.getUser(id);
       if (user == null) {
@@ -113,8 +113,8 @@ export const createExecutedCommand = function createExecutedCommand(message, cha
         if (user3 == null) {
           user3 = tmp24;
         }
-        const displayNameFontIdForMobileUser1 = tmp16(8182).getDisplayNameFontIdForMobileUser(user3, guildId);
-        const tmp16Result16 = tmp16(8182);
+        const displayNameFontIdForMobileUser1 = tmp16(8220).getDisplayNameFontIdForMobileUser(user3, guildId);
+        const tmp16Result16 = tmp16(8220);
       }
       const obj2 = { username: null, usernameOnClick: null };
       const tmp16Result15 = createDisplayNameStylesMobile;
@@ -136,7 +136,7 @@ export const createExecutedCommand = function createExecutedCommand(message, cha
       obj2.usernameOnClick = obj3;
       if (tmp) {
         if (!result) {
-          const result3 = tmp16(9794).isActivitiesInTextEnabled(channel);
+          const result3 = tmp16(9599).isActivitiesInTextEnabled(channel);
           const intl = tmp16(1115).intl;
           const formatToParts = intl.formatToParts;
           const t = tmp16(1115).t;
@@ -151,7 +151,7 @@ export const createExecutedCommand = function createExecutedCommand(message, cha
             const merged1 = Object.assign(obj2);
             formatToPartsResult = formatToParts(t.k964Wm, obj11);
           }
-          const tmp16Result18 = tmp16(9794);
+          const tmp16Result18 = tmp16(9599);
         }
         const obj12 = { userId: message.interaction.user.id, username: obj2.username, usernameColor: tmp37, avatarURL: undefined, targetUsernameColor: tmp33, content: formatToPartsResult, commandNameBackgroundStyles: null, showAppsIcon: true };
         const obj13 = { color: tmp51(semanticColor), borderRadius: 4, spaceAround: true };
@@ -160,8 +160,8 @@ export const createExecutedCommand = function createExecutedCommand(message, cha
       }
       let result4 = displayName;
       if (result) {
-        result4 = tmp16(9527).formatPrimaryEntryPointCommandName(displayName);
-        const tmp16Result19 = tmp16(9527);
+        result4 = tmp16(9402).formatPrimaryEntryPointCommandName(displayName);
+        const tmp16Result19 = tmp16(9402);
       }
       const intl2 = tmp16(1115).intl;
       const obj14 = {};
@@ -182,7 +182,7 @@ export const createExecutedCommand = function createExecutedCommand(message, cha
         const merged3 = Object.assign(obj2);
         obj17.commandName = result4;
         obj17.commandNameOnClick = {};
-        obj17.targetUsername = tmp16(4955).getUserAuthor(tmp24, channel).nick;
+        obj17.targetUsername = tmp16(4988).getUserAuthor(tmp24, channel).nick;
         let id3;
         if (tmp24 != null) {
           id3 = tmp24.id;
@@ -201,7 +201,7 @@ export const createExecutedCommand = function createExecutedCommand(message, cha
         obj18.fontId = displayNameFontIdForMobileUser1;
         obj17.targetUsernameOnClick = obj18;
         formatToPartsResult = intl3.formatToParts(tmp16(1115).t.mqKdCM, obj17);
-        const tmp16Result20 = tmp16(4955);
+        const tmp16Result20 = tmp16(4988);
       }
       const tmp16Result17 = useMessageAuthor;
     } else {

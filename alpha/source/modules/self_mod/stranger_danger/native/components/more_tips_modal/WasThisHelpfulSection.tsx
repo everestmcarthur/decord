@@ -1,29 +1,29 @@
-// Module ID: 11629
-// Function ID: 11630
+// Module ID: 11638
+// Function ID: 11639
 // Name: WasThisHelpfulSection
-// Dependencies: [19, 17, 11165, 11615, 21, 4722, 576, 563, 11623, 4420, 1115, 9639, 9640, 11622, 4718, 1177, 11630, 11631, 2]
+// Dependencies: [19, 17, 11178, 11624, 21, 4756, 576, 563, 11632, 4454, 1115, 9514, 9515, 11631, 4752, 1177, 11639, 11640, 2]
 // Exports: default
 
-// Module 11629 (WasThisHelpfulSection)
+// Module 11638 (WasThisHelpfulSection)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4420 */;
-import ShieldIcon from "ShieldIcon" /* 9640 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 11622 */;
-import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 11623 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4454 */;
+import ShieldIcon from "ShieldIcon" /* 9515 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 11631 */;
+import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 11632 */;
 import noop from "module_19" /* 19 */;
-import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 11165 */;
+import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 11178 */;
 
-const _modDef9639 = tmp6(9639);
+const _modDef9514 = tmp6(9514);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-let closure_7 = fn(11165).SafetyWarningFeedbackTypes;
-const Constants = fn(11615);
+let closure_7 = fn(11178).SafetyWarningFeedbackTypes;
+const Constants = fn(11624);
 ({ DOWNVOTE_FEEDBACK_CONFIRMATION_TOAST_KEY: closure_8, TOAST_SHIELD_ICON_COLOR: closure_9, UPVOTE_FEEDBACK_CONFIRMATION_TOAST_KEY: c10, FEEDBACK_BUTTON_ACTIVE_BACKGROUND_COLOR } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { container: { flexDirection: "column", alignItems: "center" }, buttonsContainer: { flexDirection: "row", marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 }, buttonsBackground: null, buttonsBackgroundInactive: null, buttonsBackgroundActive: null, buttonIconInactive: null, buttonIconActive: null, toastContainer: null };
 let size = { width: nativeDefault.space.PX_32, height: nativeDefault.space.PX_32, borderRadius: nativeDefault.radii.round, alignItems: "center", justifyContent: "center" };
 obj2.buttonsBackground = size;
@@ -72,7 +72,7 @@ export default function WasThisHelpfulSection(channelId) {
     const obj3 = { key: feedbackType === constants.UPVOTE ? closure_2_10 : React6, content: null, icon: null, IconComponent: null, iconColor: null, containerStyle: null, recolorLegacyIcon: true };
     const intl = tmp(1115).intl;
     obj3.content = intl.string(util.t["gd/Yqs"]);
-    obj3.icon = _modDef9639;
+    obj3.icon = _modDef9514;
     obj3.IconComponent = ShieldIcon.ShieldIcon;
     obj3.iconColor = iconColor;
     obj3.containerStyle = toastContainer.toastContainer;

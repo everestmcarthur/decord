@@ -1,10 +1,10 @@
-// Module ID: 17247
-// Function ID: 17248
+// Module ID: 17324
+// Function ID: 17325
 // Name: useSearchLayoutInsetTop
 // Dependencies: [1612, 2]
 // Exports: default
 
-// Module 17247 (useSearchLayoutInsetTop)
+// Module 17324 (useSearchLayoutInsetTop)
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
 import size from "module_2" /* 2 */;
 

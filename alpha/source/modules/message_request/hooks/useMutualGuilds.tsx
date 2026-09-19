@@ -1,13 +1,13 @@
-// Module ID: 17261
-// Function ID: 17262
+// Module ID: 17338
+// Function ID: 17339
 // Name: useMutualGuilds
-// Dependencies: [19, 7817, 1372, 504, 573, 8417, 2]
+// Dependencies: [19, 7855, 1372, 504, 573, 8455, 2]
 // Exports: useMutualGuildsForMessageRequests
 
-// Module 17261 (useMutualGuilds)
+// Module 17338 (useMutualGuilds)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import noop from "module_19" /* 19 */;
-import UserProfileStore from "UserProfileStore" /* 7817 */;
+import UserProfileStore from "UserProfileStore" /* 7855 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const require = globalThis.__r;

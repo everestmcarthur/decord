@@ -1,15 +1,15 @@
-// Module ID: 9336
-// Function ID: 9337
+// Module ID: 9919
+// Function ID: 9920
 // Name: VideoBackgroundActionCreators
-// Dependencies: [5, 1909, 1372, 1074, 1271, 573, 9337, 9338, 9335, 1941, 2]
+// Dependencies: [5, 1992, 1372, 1074, 1271, 573, 9920, 9921, 9918, 2024, 2]
 // Exports: applyMediaFilterSettings, deleteVideoFilterAsset, errorApplyingMediaFilterSettings, fetchVideoFilterAssets, startApplyMediaFilterSettings, uploadVideoFilterAsset
 
-// Module 9336 (VideoBackgroundActionCreators)
+// Module 9919 (VideoBackgroundActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
-import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 1941 */;
+import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 2024 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import MediaEngineStore from "MediaEngineStore" /* 1909 */;
+import MediaEngineStore from "MediaEngineStore" /* 1992 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;

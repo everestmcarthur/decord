@@ -1,11 +1,11 @@
-// Module ID: 14809
-// Function ID: 14810
+// Module ID: 14863
+// Function ID: 14864
 // Name: ProfilePendingImageUtils
-// Dependencies: [7185, 1370, 2]
+// Dependencies: [7229, 1370, 2]
 // Exports: createPendingImage
 
-// Module 14809 (ProfilePendingImageUtils)
-import ProfilePendingImageTypes from "ProfilePendingImageTypes" /* 7185 */;
+// Module 14863 (ProfilePendingImageUtils)
+import ProfilePendingImageTypes from "ProfilePendingImageTypes" /* 7229 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/profile_customization/ProfilePendingImageUtils.tsx");
@@ -19,10 +19,10 @@ export const createPendingImage = function createPendingImage(assetOrigin) {
   if (ProfilePendingImageTypes.AssetOriginTypes.NEW_ASSET === NEW_ASSET) {
     const obj = { assetOrigin: NEW_ASSET, imageUri, staticImageUri, description, originalAsset: "Array", originalMd5 };
     return obj;
-  } else if (tmp3(7185).AssetOriginTypes.EDITED_ARCHIVED_ASSET === NEW_ASSET) {
+  } else if (tmp3(7229).AssetOriginTypes.EDITED_ARCHIVED_ASSET === NEW_ASSET) {
     const obj2 = { assetOrigin: NEW_ASSET, imageUri, staticImageUri, description, originalAsset, originalMd5 };
     return obj2;
-  } else if (tmp3(7185).AssetOriginTypes.ARCHIVED_ASSET === NEW_ASSET) {
+  } else if (tmp3(7229).AssetOriginTypes.ARCHIVED_ASSET === NEW_ASSET) {
     const obj3 = { assetOrigin: NEW_ASSET, imageUri, description: "Array", originalAsset };
     return obj3;
   } else {

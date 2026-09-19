@@ -1,23 +1,23 @@
-// Module ID: 10054
-// Function ID: 10055
+// Module ID: 10064
+// Function ID: 10065
 // Name: StartEventModal
-// Dependencies: [5, 32, 19, 17, 1958, 1980, 1964, 9944, 21, 4722, 576, 4925, 5292, 1115, 1177, 7285, 4718, 10053, 504, 9916, 10055, 7319, 8642, 10058, 5144, 2]
+// Dependencies: [5, 32, 19, 17, 2041, 2063, 2047, 9783, 21, 4756, 576, 4959, 5334, 1115, 1177, 7329, 4752, 10063, 504, 9758, 10065, 7363, 8680, 10068, 5186, 2]
 // Exports: default
 
-// Module 10054 (StartEventModal)
+// Module 10064 (StartEventModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import Text_Text from "Text/Text" /* 4718 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4925 */;
-import Pressables from "Pressables" /* 5292 */;
-import _modDef7285 from "module_7285" /* 7285 */;
-import GuildEventCardDefault from "GuildEventCard" /* 10053 */;
+import Text_Text from "Text/Text" /* 4752 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4959 */;
+import Pressables from "Pressables" /* 5334 */;
+import _modDef7329 from "module_7329" /* 7329 */;
+import GuildEventCardDefault from "GuildEventCard" /* 10063 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
-import GuildStore from "GuildStore" /* 1980 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
+import GuildStore from "GuildStore" /* 2063 */;
 
 require = fn;
 function NavigationBar(onClose) {
@@ -29,7 +29,7 @@ function NavigationBar(onClose) {
   obj2.onPress = function onPress() {
     return onClose();
   };
-  obj2.children = closure_1_12(native.Icon, { source: _modDef7285 });
+  obj2.children = closure_1_12(native.Icon, { source: _modDef7329 });
   obj.children = closure_1_12(Pressables.PressableOpacity, obj2);
   return closure_1_12(View, obj);
 }
@@ -51,12 +51,12 @@ class PreviewEventCard {
   }
 }
 const View = fn(17).View;
-const GuildScheduledEventsConstants = fn(1964);
+const GuildScheduledEventsConstants = fn(2047);
 ({ AGE_VERIFICATION_STAGE_CHANNEL_TYPES: closure_9, GuildScheduledEventEntityTypes: c10 } = GuildScheduledEventsConstants);
-const START_EVENT_MODAL_KEY = fn(9944).START_EVENT_MODAL_KEY;
+const START_EVENT_MODAL_KEY = fn(9783).START_EVENT_MODAL_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { mainContainer: { flex: 1, padding: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, container: { flex: 1, flexDirection: "column", justifyContent: "space-between", alignContent: "center" }, headerContainer: null, footerContainer: null, header: null, headerTitle: null, buttonContainer: null, previewCard: null, headerPrivacyLevel: null };
 let obj3 = { flex: 1, padding: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.headerContainer = { display: "flex", flexDirection: "column", gap: nativeDefault.space.PX_24 };

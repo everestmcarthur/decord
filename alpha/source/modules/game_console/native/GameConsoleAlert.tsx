@@ -1,18 +1,18 @@
-// Module ID: 9691
-// Function ID: 9692
+// Module ID: 10048
+// Function ID: 10049
 // Name: GameConsoleAlert
-// Dependencies: [19, 17, 4739, 21, 4722, 504, 4718, 2]
+// Dependencies: [19, 17, 4773, 21, 4756, 504, 4752, 2]
 // Exports: SelfDismissibleAlertBody
 
-// Module 9691 (GameConsoleAlert)
+// Module 10048 (GameConsoleAlert)
 import noop from "module_19" /* 19 */;
-import GameConsoleStore from "GameConsoleStore" /* 4739 */;
+import GameConsoleStore from "GameConsoleStore" /* 4773 */;
 
 const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let closure_7 = createStyles.createStyles({ errorCodeText: { marginTop: 16 }, alertBody: { marginTop: 0 }, container: { flex: 1 }, body: { marginTop: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_console/native/GameConsoleAlert.tsx");

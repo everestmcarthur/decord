@@ -1,30 +1,30 @@
-// Module ID: 11267
-// Function ID: 11268
+// Module ID: 11280
+// Function ID: 11281
 // Name: CollectiblesShopGiftPurchaseSection
-// Dependencies: [5, 32, 19, 17, 8422, 7620, 1074, 1374, 21, 4722, 576, 7177, 10986, 504, 8414, 10990, 7358, 11258, 1241, 11268, 573, 4925, 5067, 11269, 1897, 1364, 11004, 4718, 1115, 5144, 2]
+// Dependencies: [5, 32, 19, 17, 8460, 7664, 1074, 1374, 21, 4756, 576, 7221, 10999, 504, 8452, 11003, 7402, 11271, 1241, 11281, 573, 4959, 5109, 11282, 1980, 1364, 11017, 4752, 1115, 5186, 2]
 // Exports: default
 
-// Module 11267 (CollectiblesShopGiftPurchaseSection)
+// Module 11280 (CollectiblesShopGiftPurchaseSection)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4925 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5067 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4959 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8422 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8460 */;
 
 let require = fn;
 const View = fn(17).View;
-const useNativeCheckoutStore = fn(7620).useNativeCheckoutStore;
+const useNativeCheckoutStore = fn(7664).useNativeCheckoutStore;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_9, MarketingURLs: c10 } = Constants);
 const PremiumConstants = fn(1374);
 ({ GiftingOrigin: closure_11, PremiumGiftStyles: closure_12 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let closure_15 = createStyles.createStyles((arg0) => {
   const obj = { container: null, disclaimer: null };
   const merged = Object.assign(nativeDefault.shadows.SHADOW_TOP_HIGH);
@@ -125,7 +125,8 @@ export default function CollectiblesShopGiftPurchaseSection(disabled) {
             return closure_3_13(closure_0, { giftStyle: STANDARD_BOX, giftBadgeProgress });
           };
         });
-      }
+      },
+      isDismissable: false
     });
     const obj4 = {
       importer() {
@@ -140,7 +141,8 @@ export default function CollectiblesShopGiftPurchaseSection(disabled) {
             return closure_3_13(closure_0, { giftStyle: STANDARD_BOX, giftBadgeProgress });
           };
         });
-      }
+      },
+      isDismissable: false
     };
     if (obj5.isIOS()) {
       AnalyticsUtilsDefault.track(constants.PAYMENT_FLOW_SUCCEEDED, closure_6);

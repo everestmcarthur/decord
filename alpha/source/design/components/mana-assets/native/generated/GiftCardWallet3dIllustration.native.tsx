@@ -1,13 +1,13 @@
-// Module ID: 6339
-// Function ID: 6340
+// Module ID: 6383
+// Function ID: 6384
 // Name: GiftCardWallet3dIllustration
-// Dependencies: [21, 5757, 6340, 2]
+// Dependencies: [21, 5799, 6384, 2]
 // Exports: GiftCardWallet3dIllustration
 
-// Module 6339 (GiftCardWallet3dIllustration)
+// Module 6383 (GiftCardWallet3dIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5757 */;
-import _modDef6340 from "module_6340" /* 6340 */;
+import FastImageDefault from "FastImage" /* 5799 */;
+import _modDef6384 from "module_6384" /* 6384 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const GiftCardWallet3dIllustration = function GiftCardWallet3dIllustratio
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6340 };
+  const obj2 = { uri: _modDef6384 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

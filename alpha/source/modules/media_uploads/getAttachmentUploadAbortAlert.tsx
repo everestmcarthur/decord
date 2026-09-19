@@ -1,10 +1,10 @@
-// Module ID: 9631
-// Function ID: 9632
+// Module ID: 9506
+// Function ID: 9507
 // Name: getAttachmentUploadAbortAlert
-// Dependencies: [1074, 1115, 5298, 2]
+// Dependencies: [1074, 1115, 5340, 2]
 // Exports: getAttachmentUploadAbortAlertContent
 
-// Module 9631 (getAttachmentUploadAbortAlert)
+// Module 9506 (getAttachmentUploadAbortAlert)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1115 */;
 import size from "module_2" /* 2 */;
@@ -18,7 +18,7 @@ export const getAttachmentUploadAbortAlertContent = function getAttachmentUpload
   if (AbortCodes.TOTAL_ATTACHMENT_SIZE_TOO_LARGE === code) {
     const obj2 = { title: stringResult, body: null };
     const intl4 = tmp(1115).intl;
-    const obj3 = { maxSizeMb: tmp(5298).MAX_TOTAL_ATTACHMENT_SIZE_MB };
+    const obj3 = { maxSizeMb: tmp(5340).MAX_TOTAL_ATTACHMENT_SIZE_MB };
     obj2.body = intl4.formatToPlainString(tmp(1115).t.DYFPg2, obj3);
     return obj2;
   } else if (tmp4.CLOUD_UPLOAD_NOT_FOUND === code) {

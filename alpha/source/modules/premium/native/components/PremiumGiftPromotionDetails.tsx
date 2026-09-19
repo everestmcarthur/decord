@@ -1,18 +1,18 @@
-// Module ID: 11001
-// Function ID: 11002
+// Module ID: 11014
+// Function ID: 11015
 // Name: PremiumGiftPromotionDetails
-// Dependencies: [32, 19, 17, 4714, 21, 576, 4722, 4718, 504, 9049, 1365, 11002, 5757, 1890, 9012, 2]
+// Dependencies: [32, 19, 17, 4748, 21, 576, 4756, 4752, 504, 9088, 1365, 11015, 5799, 1973, 9051, 2]
 // Exports: PremiumGiftPromotionCollectibleRewardDetails, default
 
-// Module 11001 (PremiumGiftPromotionDetails)
+// Module 11014 (PremiumGiftPromotionDetails)
 import nativeDefault from "native" /* 576 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1365 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1890 */;
-import Text_Text from "Text/Text" /* 4718 */;
-import SKUPreview from "SKUPreview" /* 9012 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1973 */;
+import Text_Text from "Text/Text" /* 4752 */;
+import SKUPreview from "SKUPreview" /* 9051 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4714 */;
+import AccessibilityStore from "AccessibilityStore" /* 4748 */;
 
 require = fn;
 function PremiumGiftPromotionDetailsBase(arg0) {
@@ -107,7 +107,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const PX_40 = nativeDefault.space.PX_40;
-let createStyles = fn(4722);
+let createStyles = fn(4756);
 let closure_10 = createStyles.createStyles(() => {
   const obj = { container: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 }, image: null, textContainer: null };
   const size = { width: PX_40, height: PX_40, borderRadius: nativeDefault.radii.xs };
@@ -115,7 +115,7 @@ let closure_10 = createStyles.createStyles(() => {
   obj.textContainer = { flex: 1 };
   return obj;
 });
-createStyles = fn(4722);
+createStyles = fn(4756);
 let obj3 = { preview: null };
 let size = { width: PX_40, height: PX_40, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, border: { borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1 }, overflow: "hidden" };
 obj3.preview = size;
@@ -165,7 +165,7 @@ export const PremiumGiftPromotionCollectibleRewardDetails = function PremiumGift
       let rounded = Math.floor(1.2 * tmp10);
     } else {
       rounded = tmp10;
-      if (memo.item.type === tmp8(1890).CollectiblesItemType.AVATAR_DECORATION) {
+      if (memo.item.type === tmp8(1973).CollectiblesItemType.AVATAR_DECORATION) {
         const _Math = Math;
         rounded = Math.floor(1.5 * tmp10);
       }

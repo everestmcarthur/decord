@@ -1,8 +1,8 @@
-// Module ID: 8377
-// Function ID: 8378
+// Module ID: 8415
+// Function ID: 8416
 // Dependencies: [2]
 
-// Module 8377
+// Module 8415
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/card-disco.png.js");

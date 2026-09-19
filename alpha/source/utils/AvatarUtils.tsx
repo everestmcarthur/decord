@@ -1,7 +1,7 @@
 // Module ID: 1397
 // Function ID: 1398
 // Name: AvatarUtils
-// Dependencies: [1074, 1398, 1400, 1364, 1431, 1472, 1880, 1881, 14, 1882, 1884, 1885, 11, 1368, 2]
+// Dependencies: [1074, 1398, 1400, 1364, 1431, 1472, 1880, 1881, 14, 1965, 1967, 1968, 11, 1368, 2]
 // Exports: getAvatarDecorationURL, getEmojiURL, getGuildMemberAvatarSource, getGuildMemberAvatarURL, getGuildMemberBannerURL, getGuildTemplateIconURL, getNewMemberActionIconURL, getResourceChannelIconURL, getUserBannerURL, getVideoFilterAssetURL, hasAnimatedGuildIcon, isAnimatedIconHash, isAnimatedImageURL, isDataUri, isVideoAssetHash, isVideoURL, makeSource
 
 // Module 1397 (AvatarUtils)
@@ -13,8 +13,8 @@ import utils_AvatarUtils from "utils/AvatarUtils" /* 1400 */;
 import ImageLoaderUtils from "ImageLoaderUtils" /* 1431 */;
 import _modDef1472 from "module_1472" /* 1472 */;
 import NumberUtils from "NumberUtils" /* 1881 */;
-import AvatarDecorationUtils from "AvatarDecorationUtils" /* 1882 */;
-import _modDef1885 from "module_1885" /* 1885 */;
+import AvatarDecorationUtils from "AvatarDecorationUtils" /* 1965 */;
+import _modDef1968 from "module_1968" /* 1968 */;
 import Constants from "Constants" /* 1074 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import size from "module_2" /* 2 */;
@@ -411,7 +411,7 @@ function getApplicationIconURL(guildMember) {
     }
     let tmp18;
     if (fallbackAvatar) {
-      tmp18 = _modDef1885;
+      tmp18 = _modDef1968;
     }
     return tmp18;
   }
@@ -609,7 +609,7 @@ function getAvatarDecorationURL(canAnimate) {
   if (null != avatarDecoration) {
     if (!obj4.isAvatarDecorationExpired(avatarDecoration)) {
       try {
-        ({ CollectiblesItemAssetFormat, getCollectiblesItemAssetUrl } = tmp13(1884));
+        ({ CollectiblesItemAssetFormat, getCollectiblesItemAssetUrl } = tmp13(1967));
         if (flag) {
           let STATIC = CollectiblesItemAssetFormat.ANIMATED;
         } else {
@@ -647,7 +647,7 @@ function getAvatarDecorationURL(canAnimate) {
             return str2.toString();
           }
         }
-        const tmp13Result = tmp13(1884);
+        const tmp13Result = tmp13(1967);
       } catch (err) {
         return tmp;
       }

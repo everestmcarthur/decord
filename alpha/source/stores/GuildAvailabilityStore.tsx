@@ -1,13 +1,13 @@
-// Module ID: 5064
-// Function ID: 5065
+// Module ID: 5106
+// Function ID: 5107
 // Name: GuildAvailabilityStore
-// Dependencies: [1980, 3, 504, 573, 2]
+// Dependencies: [2063, 3, 504, 573, 2]
 
-// Module 5064 (GuildAvailabilityStore)
+// Module 5106 (GuildAvailabilityStore)
 import LoggerDefault from "Logger" /* 3 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import GuildStore from "GuildStore" /* 1980 */;
+import GuildStore from "GuildStore" /* 2063 */;
 
 function handleConnectionOpen(unavailableGuilds) {
   set = new Set(unavailableGuilds.unavailableGuilds);

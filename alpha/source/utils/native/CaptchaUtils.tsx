@@ -1,19 +1,19 @@
-// Module ID: 17619
-// Function ID: 17620
+// Module ID: 17696
+// Function ID: 17697
 // Name: CaptchaUtils
-// Dependencies: [19, 17, 2026, 1182, 1074, 21, 1241, 7798, 7803, 504, 1255, 1325, 17620, 11529, 4925, 17621, 1897, 2]
+// Dependencies: [19, 17, 2109, 1182, 1074, 21, 1241, 5084, 5089, 504, 1255, 1325, 17697, 5082, 4959, 17698, 1980, 2]
 // Exports: InlineHcaptcha
 
-// Module 17619 (CaptchaUtils)
+// Module 17696 (CaptchaUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import V8APIError from "V8APIError" /* 1325 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4925 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 7798 */;
-import MetricEvents from "MetricEvents" /* 7803 */;
-import SharedCaptchaUtils from "SharedCaptchaUtils" /* 11529 */;
-import siteKeyDefault from "siteKey" /* 17620 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4959 */;
+import SharedCaptchaUtils from "SharedCaptchaUtils" /* 5082 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 5084 */;
+import MetricEvents from "MetricEvents" /* 5089 */;
+import siteKeyDefault from "siteKey" /* 17697 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2026 */;
+import LocaleStore from "LocaleStore" /* 2109 */;
 import ThemeStore from "ThemeStore" /* 1182 */;
 
 require = fn;
@@ -73,12 +73,12 @@ export default {
           if (null != data1) {
             const data = nativeEvent.nativeEvent.data;
             if (data !== SharedCaptchaUtils.CaptchaError.CANCEL) {
-              if (data !== tmp17(11529).CaptchaError.ERROR) {
-                if (data !== tmp17(11529).CaptchaError.EXPIRED) {
+              if (data !== tmp17(5082).CaptchaError.ERROR) {
+                if (data !== tmp17(5082).CaptchaError.EXPIRED) {
                   const HCAPTCHA2 = tmp17(1325).CaptchaTypes.HCAPTCHA;
                   const obj2 = { captcha_event_name: "verify", captcha_service: HCAPTCHA2, sitekey, captcha_flow_key: v4Result };
                   AnalyticsUtilsDefault.track(constants.CAPTCHA_EVENT, obj2);
-                  const obj4 = { name: tmp17(7803).MetricEvents.CAPTCHA_EVENT, tags: null };
+                  const obj4 = { name: tmp17(5089).MetricEvents.CAPTCHA_EVENT, tags: null };
                   const _HermesInternal3 = HermesInternal;
                   const items = ["event_name:" + "verify", ];
                   const _HermesInternal4 = HermesInternal;
@@ -120,7 +120,7 @@ export default {
       let obj = self(1255);
       AnalyticsUtilsDefault.track(constants2.CAPTCHA_EVENT, { captcha_event_name: "initial-load", captcha_service: HCAPTCHA, sitekey, captcha_flow_key: v4Result });
       let obj3 = { captcha_event_name: "initial-load", captcha_service: HCAPTCHA, sitekey, captcha_flow_key: v4Result };
-      const obj5 = { name: self(7803).MetricEvents.CAPTCHA_EVENT, tags: null };
+      const obj5 = { name: self(5089).MetricEvents.CAPTCHA_EVENT, tags: null };
       let items = ["event_name:" + "initial-load", "captcha_service:" + HCAPTCHA];
       obj5.tags = items;
       MonitoringAgentDefault.increment(obj5);
@@ -178,12 +178,12 @@ export const InlineHcaptcha = function InlineHcaptcha(siteKey) {
       if (null != nativeEvent.nativeEvent.data) {
         const data = nativeEvent.nativeEvent.data;
         if (data !== SharedCaptchaUtils.CaptchaError.CANCEL) {
-          if (data !== tmp10(11529).CaptchaError.ERROR) {
-            if (data !== tmp10(11529).CaptchaError.EXPIRED) {
+          if (data !== tmp10(5082).CaptchaError.ERROR) {
+            if (data !== tmp10(5082).CaptchaError.EXPIRED) {
               const HCAPTCHA2 = tmp10(1325).CaptchaTypes.HCAPTCHA;
               const obj2 = { captcha_event_name: "verify", captcha_service: HCAPTCHA2, sitekey: siteKey, captcha_flow_key };
               AnalyticsUtilsDefault.track(constants.CAPTCHA_EVENT, obj2);
-              const obj4 = { name: tmp10(7803).MetricEvents.CAPTCHA_EVENT, tags: null };
+              const obj4 = { name: tmp10(5089).MetricEvents.CAPTCHA_EVENT, tags: null };
               const _HermesInternal3 = HermesInternal;
               const items = ["event_name:" + "verify", ];
               const _HermesInternal4 = HermesInternal;
@@ -220,12 +220,12 @@ export const InlineHcaptcha = function InlineHcaptcha(siteKey) {
       if (null != nativeEvent.nativeEvent.data) {
         const data = nativeEvent.nativeEvent.data;
         if (data !== SharedCaptchaUtils.CaptchaError.CANCEL) {
-          if (data !== tmp10(11529).CaptchaError.ERROR) {
-            if (data !== tmp10(11529).CaptchaError.EXPIRED) {
+          if (data !== tmp10(5082).CaptchaError.ERROR) {
+            if (data !== tmp10(5082).CaptchaError.EXPIRED) {
               const HCAPTCHA2 = tmp10(1325).CaptchaTypes.HCAPTCHA;
               const obj2 = { captcha_event_name: "verify", captcha_service: HCAPTCHA2, sitekey: siteKey, captcha_flow_key };
               AnalyticsUtilsDefault.track(constants.CAPTCHA_EVENT, obj2);
-              const obj4 = { name: tmp10(7803).MetricEvents.CAPTCHA_EVENT, tags: null };
+              const obj4 = { name: tmp10(5089).MetricEvents.CAPTCHA_EVENT, tags: null };
               const _HermesInternal3 = HermesInternal;
               const items = ["event_name:" + "verify", ];
               const _HermesInternal4 = HermesInternal;

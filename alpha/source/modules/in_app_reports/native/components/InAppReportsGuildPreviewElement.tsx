@@ -1,15 +1,15 @@
-// Module ID: 9274
-// Function ID: 9275
+// Module ID: 13197
+// Function ID: 13198
 // Name: InAppReportsGuildPreviewElement
-// Dependencies: [19, 17, 21, 4722, 576, 7175, 4571, 4718, 1115, 5754, 2]
+// Dependencies: [19, 17, 21, 4756, 576, 7219, 4605, 4752, 1115, 5796, 2]
 // Exports: default
 
-// Module 9274 (InAppReportsGuildPreviewElement)
+// Module 13197 (InAppReportsGuildPreviewElement)
 import nativeDefault from "native" /* 576 */;
-import ColorUtils from "ColorUtils" /* 4571 */;
-import Text_Text from "Text/Text" /* 4718 */;
-import GuildIcon from "GuildIcon" /* 5754 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7175 */;
+import ColorUtils from "ColorUtils" /* 4605 */;
+import Text_Text from "Text/Text" /* 4752 */;
+import GuildIcon from "GuildIcon" /* 5796 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7219 */;
 import noop from "module_19" /* 19 */;
 
 const GuildIconDefault = GuildIcon;
@@ -18,7 +18,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { container: { alignSelf: "stretch", marginHorizontal: 16, marginBottom: 16 }, borderColor: { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY }, title: { lineHeight: 16, marginBottom: 8 }, guildContainer: null, guildInfo: null };
 let obj3 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 obj2.guildContainer = { flexDirection: "row", alignItems: "center", justifyContent: "flex-start", minHeight: 40, borderRadius: nativeDefault.radii.sm, borderWidth: 1, padding: 12 };

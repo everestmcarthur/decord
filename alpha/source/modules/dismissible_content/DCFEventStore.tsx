@@ -1,9 +1,9 @@
-// Module ID: 1947
-// Function ID: 1948
+// Module ID: 2030
+// Function ID: 2031
 // Name: DCFEventStore
 // Dependencies: [504, 573, 2]
 
-// Module 1947 (DCFEventStore)
+// Module 2030 (DCFEventStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 

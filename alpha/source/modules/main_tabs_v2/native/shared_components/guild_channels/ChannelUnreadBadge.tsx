@@ -1,20 +1,20 @@
-// Module ID: 16290
-// Function ID: 16291
+// Module ID: 16366
+// Function ID: 16367
 // Name: ChannelUnreadBadge
-// Dependencies: [19, 17, 10361, 4904, 21, 4722, 10364, 5151, 8073, 2]
+// Dependencies: [19, 17, 10373, 4938, 21, 4756, 10376, 5193, 8111, 2]
 
-// Module 16290 (ChannelUnreadBadge)
-import useFontScale from "useFontScale" /* 5151 */;
-import BadgeDefault from "Badge" /* 8073 */;
-import ChannelListLayout from "ChannelListLayout" /* 10364 */;
+// Module 16366 (ChannelUnreadBadge)
+import useFontScale from "useFontScale" /* 5193 */;
+import BadgeDefault from "Badge" /* 8111 */;
+import ChannelListLayout from "ChannelListLayout" /* 10376 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const MUTED_OPACITY_CONTENT = fn(10361).MUTED_OPACITY_CONTENT;
-const UnreadSetting = fn(4904).UnreadSetting;
+const MUTED_OPACITY_CONTENT = fn(10373).MUTED_OPACITY_CONTENT;
+const UnreadSetting = fn(4938).UnreadSetting;
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let closure_7 = createStyles.createStyles({ unreadBadge: { flexGrow: 0, flexShrink: 0, position: "absolute" }, unreadBadgePanel: { marginLeft: -16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/ChannelUnreadBadge.tsx");
@@ -39,13 +39,13 @@ export default noop.memo(function ChannelUnreadBadge(panelVariant) {
     const unreadBadge = layoutStyles.unreadBadge;
     const obj2 = { style: null, children: null };
     items[2] = isThread ? unreadBadge.positionThread : unreadBadge.position;
-    items[3] = tmp2(10364).makeSizeStyle(layoutStyles.unreadBadge.size);
+    items[3] = tmp2(10376).makeSizeStyle(layoutStyles.unreadBadge.size);
     obj2.style = items;
     const obj3 = { classic: flag, size: null, badgeStyle: null };
-    const tmp2Result = tmp2(10364);
+    const tmp2Result = tmp2(10376);
     const tmp9 = View;
     const _Math = Math;
-    obj3.size = tmp2(8073).CHANNEL_BADGE_SIZE * Math.max(tmp6, 1);
+    obj3.size = tmp2(8111).CHANNEL_BADGE_SIZE * Math.max(tmp6, 1);
     if (resolvedUnreadSetting !== UnreadSetting.ALL_MESSAGES) {
       let num2 = MUTED_OPACITY_CONTENT;
     } else {

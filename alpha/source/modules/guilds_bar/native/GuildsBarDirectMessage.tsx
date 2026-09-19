@@ -1,24 +1,24 @@
-// Module ID: 16599
-// Function ID: 16600
+// Module ID: 16675
+// Function ID: 16676
 // Name: GuildsBarDirectMessage
-// Dependencies: [19, 502, 5448, 1958, 7832, 4371, 1372, 1074, 21, 4722, 576, 16551, 504, 10015, 1115, 16554, 4733, 11163, 16600, 11160, 1177, 5757, 2]
+// Dependencies: [19, 502, 5490, 2041, 7870, 4405, 1372, 1074, 21, 4756, 576, 16627, 504, 9866, 1115, 16630, 4767, 11176, 16676, 11173, 1177, 5799, 2]
 
-// Module 16599 (GuildsBarDirectMessage)
+// Module 16675 (GuildsBarDirectMessage)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 10015 */;
+import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9866 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import CallStore from "CallStore" /* 5448 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 7832 */;
-import RelationshipStore from "RelationshipStore" /* 4371 */;
+import CallStore from "CallStore" /* 5490 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 7870 */;
+import RelationshipStore from "RelationshipStore" /* 4405 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 const ChannelTypes = fn(1074).ChannelTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj = { dm: null };
 let size = { width: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE, height: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE };
 obj.dm = size;

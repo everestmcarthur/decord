@@ -1,10 +1,10 @@
-// Module ID: 1978
-// Function ID: 1979
+// Module ID: 2061
+// Function ID: 2062
 // Name: guildIncidentsSerialization
 // Dependencies: [2]
 // Exports: fromServerGuildIncidentsData, toServerGuildIncidentsData
 
-// Module 1978 (guildIncidentsSerialization)
+// Module 2061 (guildIncidentsSerialization)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_antiraid/guildIncidentsSerialization.tsx");

@@ -1,41 +1,41 @@
-// Module ID: 9473
-// Function ID: 9474
+// Module ID: 9326
+// Function ID: 9327
 // Name: useOAuth2AuthorizeForm
-// Dependencies: [5, 32, 19, 17, 4376, 4714, 1919, 5451, 1372, 9474, 1074, 21, 4722, 4366, 504, 5129, 4458, 4723, 7359, 9475, 9476, 1086, 9477, 1271, 1255, 9478, 9480, 9482, 9483, 7366, 1231, 9484, 9485, 4902, 9486, 5139, 9487, 5144, 1115, 5747, 5453, 9489, 9523, 8571, 9481, 9658, 9662, 9661, 9663, 9665, 9666, 9668, 9675, 7326, 2]
+// Dependencies: [5, 32, 19, 17, 4410, 4748, 2002, 5493, 1372, 9327, 1074, 21, 4756, 4400, 504, 5171, 4492, 4757, 7403, 9328, 9329, 1086, 9330, 1271, 1255, 9331, 9333, 9335, 9317, 7410, 1231, 9336, 9337, 4936, 9338, 5181, 9321, 5186, 1115, 5789, 5495, 9339, 9398, 8609, 9334, 9533, 9537, 9536, 9538, 9540, 9541, 9543, 9550, 7370, 2]
 // Exports: default
 
-// Module 9473 (useOAuth2AuthorizeForm)
+// Module 9326 (useOAuth2AuthorizeForm)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4366 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4458 */;
-import timing from "timing" /* 4723 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4902 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5747 */;
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 7359 */;
-import Authorize from "Authorize" /* 9475 */;
-import scopes2 from "scopes" /* 9476 */;
-import SamsungManagerDefault from "SamsungManager" /* 9477 */;
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9483 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4400 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4492 */;
+import timing from "timing" /* 4757 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4936 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5789 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 7403 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9317 */;
+import Authorize from "Authorize" /* 9328 */;
+import scopes2 from "scopes" /* 9329 */;
+import SamsungManagerDefault from "SamsungManager" /* 9330 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import defaultImageSrcGenerator from "defaultImageSrcGenerator" /* 4376 */;
-import AccessibilityStore from "AccessibilityStore" /* 4714 */;
-import ApplicationRecord from "ApplicationRecord" /* 1919 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5451 */;
+import defaultImageSrcGenerator from "defaultImageSrcGenerator" /* 4410 */;
+import AccessibilityStore from "AccessibilityStore" /* 4748 */;
+import ApplicationRecord from "ApplicationRecord" /* 2002 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5493 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-let Constants = fn(9474);
+let Constants = fn(9327);
 ({ EMOJI_POINTING_DOWN_CODE_POINT: map1, OAuth2Steps: closure_14 } = Constants);
 Constants = fn(1074);
 ({ AnalyticEvents: closure_15, Endpoints: closure_16 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_17, Fragment: closure_18, jsxs: closure_19 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let closure_20 = createStyles.createStyles({ loading: { flex: 1, alignSelf: "center", justifyContent: "center" } });
 let __initData = { code: "function useOAuth2AuthorizeFormTsx1(){const{shouldReduceMotion,withSequence,withTiming,Easing,withRepeat}=this.__closure;const TOTAL=500;if(shouldReduceMotion)return{};return{transform:[{translateY:withSequence(withTiming(-5,{duration:TOTAL/2,easing:Easing.inOut(Easing.quad)}),withRepeat(withTiming(5,{duration:TOTAL,easing:Easing.inOut(Easing.quad)}),-1,true))}]};}" };
 const size = fn(2);
@@ -724,13 +724,13 @@ export default function useOAuth2AuthorizeForm(clientId) {
     if (first9) {
       const result = responseType(codeChallenge[22]).showConnectionDisclaimer();
       const obj2 = responseType(codeChallenge[22]);
-      const nextPromise = result.then(() => responseType(9477).getAccountUrlAndAuthCode());
-      const nextPromise1 = result.then(() => responseType(9477).getAccountUrlAndAuthCode()).then((result) => {
+      const nextPromise = result.then(() => responseType(9330).getAccountUrlAndAuthCode());
+      const nextPromise1 = result.then(() => responseType(9330).getAccountUrlAndAuthCode()).then((result) => {
         [tmp, tmp2] = result;
         const items = [tmp2, isAuthorized(codeChallenge[27]).startSamsungAuthorization(isAuthorized, requestedScopes, responseType, tmp, text1)];
         return Promise.all(items);
       });
-      const nextPromise2 = result.then(() => responseType(9477).getAccountUrlAndAuthCode()).then((result) => {
+      const nextPromise2 = result.then(() => responseType(9330).getAccountUrlAndAuthCode()).then((result) => {
         [tmp, tmp2] = result;
         const items = [tmp2, isAuthorized(codeChallenge[27]).startSamsungAuthorization(isAuthorized, requestedScopes, responseType, tmp, text1)];
         return Promise.all(items);
@@ -739,7 +739,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
         const items = [tmp, callback2(closure_0)];
         return Promise.all(items);
       });
-      const nextPromise3 = result.then(() => responseType(9477).getAccountUrlAndAuthCode()).then((result) => {
+      const nextPromise3 = result.then(() => responseType(9330).getAccountUrlAndAuthCode()).then((result) => {
         [tmp, tmp2] = result;
         const items = [tmp2, isAuthorized(codeChallenge[27]).startSamsungAuthorization(isAuthorized, requestedScopes, responseType, tmp, text1)];
         return Promise.all(items);
@@ -751,7 +751,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
         [tmp, tmp2] = result;
         return responseType(codeChallenge[22]).finishSamsungAuthorization(tmp, tmp2, text1);
       });
-      result.then(() => responseType(9477).getAccountUrlAndAuthCode()).then((result) => {
+      result.then(() => responseType(9330).getAccountUrlAndAuthCode()).then((result) => {
         [tmp, tmp2] = result;
         const items = [tmp2, isAuthorized(codeChallenge[27]).startSamsungAuthorization(isAuthorized, requestedScopes, responseType, tmp, text1)];
         return Promise.all(items);
@@ -771,7 +771,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
       }).catch((error) => {
         responseType(1231).captureException(error);
       });
-      const nextPromise4 = result.then(() => responseType(9477).getAccountUrlAndAuthCode()).then((result) => {
+      const nextPromise4 = result.then(() => responseType(9330).getAccountUrlAndAuthCode()).then((result) => {
         [tmp, tmp2] = result;
         const items = [tmp2, isAuthorized(codeChallenge[27]).startSamsungAuthorization(isAuthorized, requestedScopes, responseType, tmp, text1)];
         return Promise.all(items);
@@ -1016,7 +1016,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
             } else {
               callback3();
             }
-            tmp33Result = tmp33(9486);
+            tmp33Result = tmp33(9338);
           }
           tmp33 = require;
         }

@@ -1,12 +1,12 @@
-// Module ID: 5728
-// Function ID: 5729
+// Module ID: 5770
+// Function ID: 5771
 // Name: PostConnectionCallbackStore
-// Dependencies: [5729, 5447, 573, 2]
+// Dependencies: [5771, 5489, 573, 2]
 // Exports: addPostConnectionCallback
 
-// Module 5728 (PostConnectionCallbackStore)
-import NewUserStore from "NewUserStore" /* 5729 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5447 */;
+// Module 5770 (PostConnectionCallbackStore)
+import NewUserStore from "NewUserStore" /* 5771 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5489 */;
 import Dispatcher_mod from "Dispatcher" /* 573 */;
 
 function processCallbacks() {

@@ -1,11 +1,11 @@
-// Module ID: 16889
-// Function ID: 16890
+// Module ID: 16956
+// Function ID: 16957
 // Name: VibegrationsInstallTarget
-// Dependencies: [5, 16859, 2]
+// Dependencies: [5, 9309, 2]
 // Exports: repairVibegrationsGuildHints, vibegrationsInstallGuildId
 
-// Module 16889 (VibegrationsInstallTarget)
-import VibegrationsActionCreators from "VibegrationsActionCreators" /* 16859 */;
+// Module 16956 (VibegrationsInstallTarget)
+import VibegrationsActionCreators from "VibegrationsActionCreators" /* 9309 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

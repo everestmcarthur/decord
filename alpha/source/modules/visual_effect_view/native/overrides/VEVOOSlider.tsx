@@ -1,16 +1,16 @@
-// Module ID: 16177
-// Function ID: 16178
+// Module ID: 16253
+// Function ID: 16254
 // Name: VEVOOSlider
-// Dependencies: [19, 21, 4722, 1364, 576, 8510, 2]
+// Dependencies: [19, 21, 4756, 1364, 576, 8548, 2]
 
-// Module 16177 (VEVOOSlider)
+// Module 16253 (VEVOOSlider)
 import nativeDefault from "native" /* 576 */;
-import _modDef8510 from "module_8510" /* 8510 */;
+import _modDef8548 from "module_8548" /* 8548 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 const PlatformUtils = fn(1364);
 let num = 0;
 if (PlatformUtils.isAndroid()) {
@@ -37,7 +37,7 @@ export default noop.memo(function VEVOOSlider(disabled) {
   items[1] = { opacity: num };
   const current = initialValue.current;
   obj.value = current;
-  const tmp5 = _modDef8510;
+  const tmp5 = _modDef8548;
   let fn;
   if (obj2.isAndroid()) {
     fn = () => true;

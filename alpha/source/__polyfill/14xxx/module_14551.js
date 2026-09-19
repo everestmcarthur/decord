@@ -1,19 +1,10 @@
 // Module ID: 14551
 // Function ID: 14552
-// Dependencies: [14519, 14520, 14552]
+// Dependencies: []
+// Exports: shouldPolyfill
 
 // Module 14551
-import _mod14520 from "module_14520" /* 14520 */;
-import element from "element" /* 14552 */;
-import getOwnPropertyDescriptor from "module_14519" /* 14519 */;
 
-let tmp2 = !getOwnPropertyDescriptor;
-if (!getOwnPropertyDescriptor) {
-  tmp2 = !_mod14520(() => 7 !== Object.defineProperty(element("div"), "a", {
-    get() {
-      return 7;
-    }
-  }).a);
-}
-
-export default tmp2;
+export const shouldPolyfill = function shouldPolyfill() {
+  return !("supportedValuesOf" in Intl);
+};

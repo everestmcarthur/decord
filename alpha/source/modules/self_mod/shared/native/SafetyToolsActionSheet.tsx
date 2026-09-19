@@ -1,36 +1,36 @@
-// Module ID: 11644
-// Function ID: 11645
+// Module ID: 11653
+// Function ID: 11654
 // Name: SafetyToolsActionSheet
-// Dependencies: [19, 17, 4371, 11615, 21, 4722, 576, 11642, 11645, 11646, 504, 11622, 7405, 1115, 9015, 9014, 4689, 11650, 1897, 4417, 7165, 7163, 7164, 7162, 9280, 11653, 6809, 8636, 5067, 11640, 8903, 8902, 8867, 10157, 10156, 4925, 11654, 11658, 11659, 11660, 9639, 9640, 11661, 11651, 5857, 5775, 5781, 2]
+// Dependencies: [19, 17, 4405, 11624, 21, 4756, 576, 11651, 11654, 11655, 504, 11631, 7449, 1115, 9054, 9053, 4723, 11659, 1980, 4451, 7209, 7207, 7208, 7206, 10002, 11662, 6853, 8674, 5109, 11649, 8942, 8941, 8906, 10167, 10166, 4959, 11663, 11667, 11668, 11669, 9514, 9515, 11670, 11660, 5899, 5817, 5823, 2]
 // Exports: default
 
-// Module 11644 (SafetyToolsActionSheet)
+// Module 11653 (SafetyToolsActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import TableRowGroup from "TableRowGroup" /* 5857 */;
-import CircleXIcon from "CircleXIcon" /* 6809 */;
-import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7405 */;
-import FlagIcon from "FlagIcon" /* 8902 */;
-import _modDef8903 from "module_8903" /* 8903 */;
-import HeartIcon from "HeartIcon" /* 9014 */;
-import _modDef9015 from "module_9015" /* 9015 */;
-import _modDef9639 from "module_9639" /* 9639 */;
-import ShieldIcon from "ShieldIcon" /* 9640 */;
-import MusicIcon from "MusicIcon" /* 10156 */;
-import _modDef10157 from "module_10157" /* 10157 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 11622 */;
-import _modDef11653 from "module_11653" /* 11653 */;
-import _modDef11658 from "module_11658" /* 11658 */;
-import EducationIcon from "EducationIcon" /* 11659 */;
+import TableRowGroup from "TableRowGroup" /* 5899 */;
+import CircleXIcon from "CircleXIcon" /* 6853 */;
+import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7449 */;
+import FlagIcon from "FlagIcon" /* 8941 */;
+import _modDef8942 from "module_8942" /* 8942 */;
+import HeartIcon from "HeartIcon" /* 9053 */;
+import _modDef9054 from "module_9054" /* 9054 */;
+import _modDef9514 from "module_9514" /* 9514 */;
+import ShieldIcon from "ShieldIcon" /* 9515 */;
+import MusicIcon from "MusicIcon" /* 10166 */;
+import _modDef10167 from "module_10167" /* 10167 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 11631 */;
+import _modDef11662 from "module_11662" /* 11662 */;
+import _modDef11667 from "module_11667" /* 11667 */;
+import EducationIcon from "EducationIcon" /* 11668 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4371 */;
+import RelationshipStore from "RelationshipStore" /* 4405 */;
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(11615);
+const Constants = fn(11624);
 ({ ACTION_SHEET_CONTEXT_MOBILE: metroRequire, getSafetyToolsActionSheetKey: closure_7, THROUGHLINE_URL: closure_8, NOFILTR_URL: closure_9, VIBING_WUMPUS_MODAL_KEY: c10 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { container: { flex: 1 }, actionRowGroup: { marginHorizontal: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_24 } };
 let closure_12 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -73,7 +73,7 @@ export default function SafetyToolsActionSheet(channelId) {
     obj2.label = intl.string(util.t.ZSbbMJ);
     const intl2 = util.intl;
     obj2.subLabel = intl2.string(util.t.iNcsrW);
-    obj2.icon = _modDef9015;
+    obj2.icon = _modDef9054;
     obj2.IconComponent = HeartIcon.HeartIcon;
     obj2.trailing = tmp4;
     obj2.onPress = function onPress() {
@@ -96,7 +96,7 @@ export default function SafetyToolsActionSheet(channelId) {
     obj3.label = intl3.string(util.t.ZSbbMJ);
     const intl4 = util.intl;
     obj3.subLabel = intl4.string(util.t.S9O1ZZ);
-    obj3.icon = _modDef9015;
+    obj3.icon = _modDef9054;
     obj3.IconComponent = HeartIcon.HeartIcon;
     obj3.onPress = function onPress() {
       warningId(warningType[19]).openURL(shouldShowThroughlineLink);
@@ -107,7 +107,7 @@ export default function SafetyToolsActionSheet(channelId) {
     obj4.label = intl5.string(util.t.ZSbbMJ);
     const intl6 = util.intl;
     obj4.subLabel = intl6.string(util.t.g5uwC5);
-    obj4.icon = _modDef9015;
+    obj4.icon = _modDef9054;
     obj4.IconComponent = HeartIcon.HeartIcon;
     obj4.onPress = function onPress() {
       warningId(warningType[19]).openURL(closure_9);
@@ -128,11 +128,11 @@ export default function SafetyToolsActionSheet(channelId) {
       stringResult1 = intl8.string(tmp(1115).t.fCfp49);
     }
     obj5.subLabel = stringResult1;
-    obj5.icon = importDefault(stateFromStores1 ? 7165 : 7163);
+    obj5.icon = importDefault(stateFromStores1 ? 7209 : 7207);
     if (stateFromStores1) {
-      let EyeSlashIcon = tmp(7164).EyeIcon;
+      let EyeSlashIcon = tmp(7208).EyeIcon;
     } else {
-      EyeSlashIcon = tmp(7162).EyeSlashIcon;
+      EyeSlashIcon = tmp(7206).EyeSlashIcon;
     }
     obj5.IconComponent = EyeSlashIcon;
     obj5.disabled = stateFromStores;
@@ -159,7 +159,7 @@ export default function SafetyToolsActionSheet(channelId) {
     const obj7 = { label: string2Result, subLabel: null, icon: null, IconComponent: null, onPress: null };
     const intl10 = tmp(1115).intl;
     obj7.subLabel = intl10.string(util.t.Lj37az);
-    obj7.icon = _modDef11653;
+    obj7.icon = _modDef11662;
     obj7.IconComponent = CircleXIcon.CircleXIcon;
     obj7.onPress = function onPress() {
       if (stateFromStores) {
@@ -176,7 +176,8 @@ export default function SafetyToolsActionSheet(channelId) {
                 closure_0 = result.default;
                 return () => { ... };
               });
-            }
+            },
+          isDismissable: false
         };
         tmp(tmp2[28]).openLazy(obj2);
         const tmpResult2 = tmp(tmp2[28]);
@@ -188,7 +189,7 @@ export default function SafetyToolsActionSheet(channelId) {
     obj8.label = intl11.string(util.t.X27yhD);
     const intl12 = tmp(1115).intl;
     obj8.subLabel = intl12.string(util.t["0tydOa"]);
-    obj8.icon = _modDef8903;
+    obj8.icon = _modDef8942;
     obj8.IconComponent = FlagIcon.FlagIcon;
     obj8.onPress = function onPress() {
       onClose();
@@ -203,7 +204,7 @@ export default function SafetyToolsActionSheet(channelId) {
     obj9.label = intl13.string(util.t.syuaPI);
     const intl14 = tmp(1115).intl;
     obj9.subLabel = intl14.string(util.t.LLBnNk);
-    obj9.icon = _modDef10157;
+    obj9.icon = _modDef10167;
     obj9.IconComponent = MusicIcon.MusicIcon;
     obj9.trailing = tmp4;
     obj9.onPress = function onPress() {
@@ -222,7 +223,7 @@ export default function SafetyToolsActionSheet(channelId) {
     obj10.label = intl15.string(util.t["7LgVmt"]);
     const intl16 = tmp(1115).intl;
     obj10.subLabel = intl16.string(util.t.pwoRjc);
-    obj10.icon = _modDef11658;
+    obj10.icon = _modDef11667;
     obj10.IconComponent = EducationIcon.EducationIcon;
     obj10.trailing = tmp4;
     obj10.onPress = function onPress() {
@@ -252,7 +253,7 @@ export default function SafetyToolsActionSheet(channelId) {
     const obj12 = { label: null, icon: null, IconComponent: null, trailing: null, onPress: null };
     const intl17 = tmp(1115).intl;
     obj12.label = intl17.string(util.t.otdt24);
-    obj12.icon = _modDef9639;
+    obj12.icon = _modDef9514;
     obj12.IconComponent = ShieldIcon.ShieldIcon;
     obj12.trailing = tmp4;
     obj12.onPress = function onPress() {
@@ -292,7 +293,7 @@ export default function SafetyToolsActionSheet(channelId) {
       buttons = buttons.buttons;
       obj2.children = buttons.map((item, index) => {
         ({ label, subLabel, IconComponent, icon, trailing, onPress, disabled } = item);
-        return stateFromStores1(channelId(5775).TableRow, { label, subLabel, onPress, trailing, disabled, icon: stateFromStores1(channelId(5781).TableRowIcon, { source: icon, IconComponent }) }, index);
+        return stateFromStores1(channelId(5817).TableRow, { label, subLabel, onPress, trailing, disabled, icon: stateFromStores1(channelId(5823).TableRowIcon, { source: icon, IconComponent }) }, index);
       });
       obj.children = jsx(TableRowGroup.TableRowGroup, { hasIcons: true, children: null });
       return <View key={arg0.sectionKey} style={actionRowGroup.actionRowGroup}>{null}</View>;

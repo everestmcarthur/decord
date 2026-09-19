@@ -1,13 +1,13 @@
-// Module ID: 8972
-// Function ID: 8973
+// Module ID: 9011
+// Function ID: 9012
 // Name: GameProfileSection
-// Dependencies: [19, 17, 21, 4722, 576, 8973, 4718, 5144, 1115, 7405, 2]
+// Dependencies: [19, 17, 21, 4756, 576, 9012, 4752, 5186, 1115, 7449, 2]
 // Exports: GameProfileSectionSkeleton, default
 
-// Module 8972 (GameProfileSection)
+// Module 9011 (GameProfileSection)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4718 */;
-import GameProfileSkeleton from "GameProfileSkeleton" /* 8973 */;
+import Text_Text from "Text/Text" /* 4752 */;
+import GameProfileSkeleton from "GameProfileSkeleton" /* 9012 */;
 import noop from "module_19" /* 19 */;
 
 const GameProfileSkeletonDefault = GameProfileSkeleton;
@@ -16,7 +16,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { container: { gap: nativeDefault.space.PX_8 }, header: null, skeletonTitle: null };
 let obj3 = { gap: nativeDefault.space.PX_8 };
 obj2.header = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_8, minHeight: nativeDefault.space.PX_32, paddingHorizontal: nativeDefault.space.PX_8 };
@@ -42,9 +42,9 @@ export default function GameProfileSection(onPressViewAll) {
     const obj3 = { text: null, variant: "tertiary", size: "sm", icon: null, iconPosition: "end", onPress: null };
     const intl = tmp5(1115).intl;
     obj3.text = intl.string(tmp5(1115).t.budhsM);
-    obj3.icon = tmp4(tmp5(7405).ChevronSmallRightIcon, { size: "sm" });
+    obj3.icon = tmp4(tmp5(7449).ChevronSmallRightIcon, { size: "sm" });
     obj3.onPress = onPressViewAll;
-    tmp4Result = tmp4(tmp5(5144).Button, obj3);
+    tmp4Result = tmp4(tmp5(5186).Button, obj3);
   }
   items2[1] = tmp4Result;
   obj2.children = items2;

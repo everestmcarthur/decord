@@ -1,15 +1,15 @@
-// Module ID: 11522
-// Function ID: 11523
+// Module ID: 11534
+// Function ID: 11535
 // Name: computeScrollData
-// Dependencies: [4714, 8152, 11523, 4652, 2]
+// Dependencies: [4748, 8190, 11535, 4686, 2]
 // Exports: default, findMessageRowIndex
 
-// Module 11522 (computeScrollData)
-import NativeChatUtils from "NativeChatUtils" /* 11523 */;
-import AccessibilityStore from "AccessibilityStore" /* 4714 */;
+// Module 11534 (computeScrollData)
+import NativeChatUtils from "NativeChatUtils" /* 11535 */;
+import AccessibilityStore from "AccessibilityStore" /* 4748 */;
 
 require = fn;
-const RowGeneratorConstants = fn(8152);
+const RowGeneratorConstants = fn(8190);
 ({ RowType: c3, SeparatorType: closure_4 } = RowGeneratorConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat/native/computeScrollData.tsx");
@@ -59,12 +59,12 @@ export default function computeScrollData(shouldInitialScroll) {
       const useReducedMotion = AccessibilityStore.useReducedMotion;
       let tmp10 = !useReducedMotion;
       if (!useReducedMotion) {
-        tmp10 = jumpType !== tmp7(4652).JumpType.INSTANT;
+        tmp10 = jumpType !== tmp7(4686).JumpType.INSTANT;
       }
       obj.animate = tmp10;
       obj.highlight = scrollToMessageId === jumpTargetId;
       if (scrollPosition == null) {
-        scrollPosition = tmp7(11523).ChatScrollPosition.TOP;
+        scrollPosition = tmp7(11535).ChatScrollPosition.TOP;
       }
       obj.position = scrollPosition;
       tmp4 = obj;

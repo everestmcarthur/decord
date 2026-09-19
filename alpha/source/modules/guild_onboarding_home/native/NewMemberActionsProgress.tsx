@@ -1,16 +1,16 @@
-// Module ID: 16467
-// Function ID: 16468
+// Module ID: 16543
+// Function ID: 16544
 // Name: NewMemberActionsProgress
-// Dependencies: [19, 17, 2022, 4909, 4910, 1965, 4348, 21, 4722, 576, 5156, 563, 1385, 5292, 1101, 4718, 1115, 1177, 10184, 2]
+// Dependencies: [19, 17, 2105, 4943, 4944, 2048, 4382, 21, 4756, 576, 5198, 563, 1385, 5334, 1101, 4752, 1115, 1177, 10196, 2]
 // Exports: NewMemberActionsProgress
 
-// Module 16467 (NewMemberActionsProgress)
+// Module 16543 (NewMemberActionsProgress)
 import nativeDefault from "native" /* 576 */;
-import LinearGradientDefault from "LinearGradient" /* 5156 */;
+import LinearGradientDefault from "LinearGradient" /* 5198 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 2022 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 4909 */;
-import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 4910 */;
+import GuildMemberStore from "GuildMemberStore" /* 2105 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 4943 */;
+import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 4944 */;
 
 const require = fn;
 function ProgressBar(percent) {
@@ -26,11 +26,11 @@ function ProgressBar(percent) {
   return closure_1_10(View, obj);
 }
 const View = fn(17).View;
-const StaticChannelRoute = fn(1965).StaticChannelRoute;
-const GuildMemberFlags = fn(4348).GuildMemberFlags;
+const StaticChannelRoute = fn(2048).StaticChannelRoute;
+const GuildMemberFlags = fn(4382).GuildMemberFlags;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { container: { padding: 16 }, horizontal: { flexDirection: "row", alignItems: "center" }, spaceBetween: { justifyContent: "space-between" }, spaceBelow: { marginBottom: 8 }, progressBackground: { borderRadius: nativeDefault.radii.round, height: 8, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL }, progressForeground: null };
 let obj3 = { borderRadius: nativeDefault.radii.round, height: 8, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
 obj2.progressForeground = { backgroundColor: nativeDefault.colors.STATUS_POSITIVE_BACKGROUND, borderRadius: nativeDefault.radii.round, height: 8 };

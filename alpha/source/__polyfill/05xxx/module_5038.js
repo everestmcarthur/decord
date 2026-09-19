@@ -1,19 +1,16 @@
 // Module ID: 5038
 // Function ID: 5039
-// Dependencies: [4970]
+// Dependencies: [1307]
 
 // Module 5038
-import _mod4970 from "module_4970" /* 4970 */;
+import _mod1307 from "module_1307" /* 1307 */;
 
 
-export default function Type(arg0) {
-  let str = "Symbol";
-  if (typeof arg0 !== "symbol") {
-    let str2 = "BigInt";
-    if (typeof arg0 !== "bigint") {
-      str2 = _mod4970(arg0);
-    }
-    str = str2;
+export default function mod(arg0, arg1) {
+  const result = arg0 % arg1;
+  let sum = result;
+  if (result < 0) {
+    sum = result + arg1;
   }
-  return str;
+  return _mod1307(sum);
 };

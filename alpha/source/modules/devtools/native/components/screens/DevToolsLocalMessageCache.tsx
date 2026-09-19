@@ -1,20 +1,20 @@
-// Module ID: 15805
-// Function ID: 15806
+// Module ID: 15860
+// Function ID: 15861
 // Name: DevToolsLocalMessageCache
-// Dependencies: [17, 1958, 21, 4722, 576, 5775, 5142, 5857, 7684, 4718, 2]
+// Dependencies: [17, 2041, 21, 4756, 576, 5817, 5184, 5899, 7728, 4752, 2]
 // Exports: default
 
-// Module 15805 (DevToolsLocalMessageCache)
+// Module 15860 (DevToolsLocalMessageCache)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4718 */;
-import Stack_Stack from "Stack/Stack" /* 5142 */;
-import TableRow from "TableRow" /* 5775 */;
-import TableRowGroup from "TableRowGroup" /* 5857 */;
-import MessageCacheStatsDefault from "MessageCacheStats" /* 7684 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
+import Text_Text from "Text/Text" /* 4752 */;
+import Stack_Stack from "Stack/Stack" /* 5184 */;
+import TableRow from "TableRow" /* 5817 */;
+import TableRowGroup from "TableRowGroup" /* 5899 */;
+import MessageCacheStatsDefault from "MessageCacheStats" /* 7728 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4722 */;
+import createStyles from "createStyles" /* 4756 */;
 import size from "module_2" /* 2 */;
 
 function CacheLogEntry(entry) {

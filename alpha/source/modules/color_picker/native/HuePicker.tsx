@@ -1,13 +1,13 @@
-// Module ID: 14817
-// Function ID: 14818
+// Module ID: 14871
+// Function ID: 14872
 // Name: HuePicker
-// Dependencies: [32, 19, 17, 21, 4722, 576, 6848, 14814, 4458, 5156, 2]
+// Dependencies: [32, 19, 17, 21, 4756, 576, 6892, 14868, 4492, 5198, 2]
 // Exports: default
 
-// Module 14817 (HuePicker)
+// Module 14871 (HuePicker)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4458 */;
-import ColorPickerUtils from "ColorPickerUtils" /* 14814 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4492 */;
+import ColorPickerUtils from "ColorPickerUtils" /* 14868 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,7 +16,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let closure_8 = [0, 60, 120, 180, 240, 300, 360];
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { container: { justifyContent: "center", alignItems: "center" }, containerFullWidth: { alignSelf: "stretch", overflow: "visible" }, slider: null, colorBar: null, colorBarFullWidth: null, colorBarInner: null, colorBarInnerFullWidth: null };
 let size = { left: 0, position: "absolute", borderColor: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, width: 24, height: 36, borderRadius: nativeDefault.radii.sm, borderWidth: 2 };
 obj2.slider = size;

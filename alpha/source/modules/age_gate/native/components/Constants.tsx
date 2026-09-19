@@ -1,9 +1,9 @@
-// Module ID: 10537
-// Function ID: 10538
+// Module ID: 10553
+// Function ID: 10554
 // Name: Constants
 // Dependencies: [2]
 
-// Module 10537 (Constants)
+// Module 10553 (Constants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/age_gate/native/components/Constants.tsx");

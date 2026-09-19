@@ -1,17 +1,17 @@
-// Module ID: 14173
-// Function ID: 14174
+// Module ID: 14227
+// Function ID: 14228
 // Name: GuildAntiRaidReportModal
-// Dependencies: [5, 32, 19, 17, 14174, 21, 4722, 576, 1612, 4718, 4417, 1115, 5857, 5774, 5144, 5794, 11177, 7158, 12074, 7196, 2]
+// Dependencies: [5, 32, 19, 17, 14228, 21, 4756, 576, 1612, 4752, 4451, 1115, 5899, 5816, 5186, 5836, 11190, 7202, 12083, 7240, 2]
 // Exports: default
 
-// Module 14173 (GuildAntiRaidReportModal)
+// Module 14227 (GuildAntiRaidReportModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
-import Text_Text from "Text/Text" /* 4718 */;
-import components_Button_Button from "components/Button/Button" /* 5144 */;
-import NavigatorHeader from "NavigatorHeader" /* 5794 */;
-import TableRowGroup from "TableRowGroup" /* 5857 */;
+import Text_Text from "Text/Text" /* 4752 */;
+import components_Button_Button from "components/Button/Button" /* 5186 */;
+import NavigatorHeader from "NavigatorHeader" /* 5836 */;
+import TableRowGroup from "TableRowGroup" /* 5899 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -79,12 +79,12 @@ function ReportModal(onSubmit) {
   return closure_11(View, obj);
 }
 const View = fn(17).View;
-const GuildReportRaidModalConstants = fn(14174);
+const GuildReportRaidModalConstants = fn(14228);
 ({ getReportRaidHelpArticleURL: closure_7, getReportRaidTypeLabel: closure_8, REPORT_RAID_OPTIONS: closure_9 } = GuildReportRaidModalConstants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const REPORT_RAID = "REPORT_RAID";
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { container: { flex: 1, paddingHorizontal: 16, paddingVertical: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "column", height: "100%", paddingTop: 8 }, headerSubtitle: { textAlign: "center", marginTop: 8 }, formBody: { marginTop: 24 }, formRow: { paddingVertical: 2 }, submitButtonContainer: null };
 const rect = { position: "absolute", bottom: 0, left: 0, right: 0, paddingHorizontal: 16, paddingVertical: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.submitButtonContainer = rect;
@@ -129,9 +129,9 @@ export default function GuildAntiRaidReportModal(onCloseModal) {
             dependencyMap = 3;
           } else {
             tmp21.current = true;
-            const result = tmp2(12074).trackReportRaidViewed(guildId, first);
-            const obj2 = tmp2(12074);
-            tmp2(12074).handleReportRaid(guildId);
+            const result = tmp2(12083).trackReportRaidViewed(guildId, first);
+            const obj2 = tmp2(12083);
+            tmp2(12083).handleReportRaid(guildId);
             const intl = tmp2(1115).intl;
             c1 = 1;
             dependencyMap = 1;

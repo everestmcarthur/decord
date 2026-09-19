@@ -1,23 +1,23 @@
-// Module ID: 13514
-// Function ID: 13515
+// Module ID: 13569
+// Function ID: 13570
 // Name: useActivityStatusLabel
-// Dependencies: [4744, 1958, 4361, 4762, 4371, 4741, 1074, 504, 11128, 11126, 11127, 11134, 1115, 11136, 11140, 2]
+// Dependencies: [4778, 2041, 4395, 4796, 4405, 4775, 1074, 504, 11141, 11139, 11140, 11147, 1115, 11149, 11153, 2]
 // Exports: default
 
-// Module 13514 (useActivityStatusLabel)
-import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 11126 */;
-import useUserVoiceActivity from "useUserVoiceActivity" /* 11127 */;
-import isGameActivityDefault from "isGameActivity" /* 11134 */;
-import getActivityStatusTextDefault from "getActivityStatusText" /* 11136 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4744 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
-import PermissionStore from "PermissionStore" /* 4361 */;
-import PresenceStore from "PresenceStore" /* 4762 */;
-import RelationshipStore from "RelationshipStore" /* 4371 */;
-import VoiceStateStore from "VoiceStateStore" /* 4741 */;
+// Module 13569 (useActivityStatusLabel)
+import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 11139 */;
+import useUserVoiceActivity from "useUserVoiceActivity" /* 11140 */;
+import isGameActivityDefault from "isGameActivity" /* 11147 */;
+import getActivityStatusTextDefault from "getActivityStatusText" /* 11149 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4778 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
+import PermissionStore from "PermissionStore" /* 4395 */;
+import PresenceStore from "PresenceStore" /* 4796 */;
+import RelationshipStore from "RelationshipStore" /* 4405 */;
+import VoiceStateStore from "VoiceStateStore" /* 4775 */;
 
 const util = v0wJXSh(1115);
-const VoiceActivityStatus = v0wJXSh(11140);
+const VoiceActivityStatus = v0wJXSh(11153);
 require = fn;
 const ActivityTypes = fn(1074).ActivityTypes;
 const size = fn(2);

@@ -1,12 +1,12 @@
-// Module ID: 8027
-// Function ID: 8028
+// Module ID: 8065
+// Function ID: 8066
 // Name: BurstReactionAnimationPreview
-// Dependencies: [19, 21, 7965, 8028, 2]
+// Dependencies: [19, 21, 8003, 8066, 2]
 // Exports: default
 
-// Module 8027 (BurstReactionAnimationPreview)
-import MessageReactionsTypes from "MessageReactionsTypes" /* 7965 */;
-import BurstReactionAnimationDefault from "BurstReactionAnimation" /* 8028 */;
+// Module 8065 (BurstReactionAnimationPreview)
+import MessageReactionsTypes from "MessageReactionsTypes" /* 8003 */;
+import BurstReactionAnimationDefault from "BurstReactionAnimation" /* 8066 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

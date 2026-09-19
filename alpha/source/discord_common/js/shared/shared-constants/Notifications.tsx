@@ -1,9 +1,9 @@
-// Module ID: 4765
-// Function ID: 4766
+// Module ID: 4799
+// Function ID: 4800
 // Name: Notifications
 // Dependencies: [2]
 
-// Module 4765 (Notifications)
+// Module 4799 (Notifications)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/Notifications.tsx");

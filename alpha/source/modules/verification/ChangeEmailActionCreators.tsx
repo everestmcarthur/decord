@@ -1,12 +1,12 @@
-// Module ID: 6794
-// Function ID: 6795
+// Module ID: 6838
+// Function ID: 6839
 // Name: ChangeEmailActionCreators
-// Dependencies: [5, 1074, 4915, 1249, 2]
+// Dependencies: [5, 1074, 4949, 1249, 2]
 // Exports: confirmEmailChange, sendConfirmationCode
 
-// Module 6794 (ChangeEmailActionCreators)
+// Module 6838 (ChangeEmailActionCreators)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1249 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 4915 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 4949 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

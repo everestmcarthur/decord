@@ -1,14 +1,14 @@
-// Module ID: 14283
-// Function ID: 14284
+// Module ID: 14338
+// Function ID: 14339
 // Name: InputWatcher
-// Dependencies: [32, 5, 4764, 4, 1953, 4777, 1365, 14222, 4343, 5735, 573, 2]
+// Dependencies: [32, 5, 4798, 4, 2036, 4811, 1365, 14277, 4377, 5777, 573, 2]
 
-// Module 14283 (InputWatcher)
+// Module 14338 (InputWatcher)
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
-let closure_5 = fn(4764).WINDOWS_SETTINGS_SOUND_DEVICE_DEEPLINK_SEMVER;
+let closure_5 = fn(4798).WINDOWS_SETTINGS_SOUND_DEVICE_DEEPLINK_SEMVER;
 const logger = new fn(4).Logger("InputWatcher");
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_engine/InputWatcher.tsx");

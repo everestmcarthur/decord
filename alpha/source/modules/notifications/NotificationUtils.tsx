@@ -1,16 +1,16 @@
-// Module ID: 10387
-// Function ID: 10388
+// Module ID: 10401
+// Function ID: 10402
 // Name: notifications/NotificationUtils
-// Dependencies: [4903, 1074, 1084, 1115, 11, 1385, 4364, 504, 2]
+// Dependencies: [4937, 1074, 1084, 1115, 11, 1385, 4398, 504, 2]
 // Exports: filterOverrides, getMuteTimeOptions, shouldShowUseNewNotificationSystem, useShouldUseNewNotificationSystem
 
-// Module 10387 (notifications/NotificationUtils)
+// Module 10401 (notifications/NotificationUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
 import FlagUtilsAll from "FlagUtils" /* 1385 */;
-import MuteTimers from "MuteTimers" /* 4364 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4903 */;
+import MuteTimers from "MuteTimers" /* 4398 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4937 */;
 
 require = fn;
 const UserNotificationSettings = fn(1074).UserNotificationSettings;

@@ -1,9 +1,9 @@
-// Module ID: 7520
-// Function ID: 7521
+// Module ID: 7564
+// Function ID: 7565
 // Name: GuildTemplateActionCreators
-// Dependencies: [1074, 573, 1271, 1241, 7521, 2]
+// Dependencies: [1074, 573, 1271, 1241, 7565, 2]
 
-// Module 7520 (GuildTemplateActionCreators)
+// Module 7564 (GuildTemplateActionCreators)
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;

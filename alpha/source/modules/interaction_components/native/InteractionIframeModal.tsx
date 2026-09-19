@@ -1,14 +1,14 @@
-// Module ID: 17717
-// Function ID: 17718
+// Module ID: 17797
+// Function ID: 17798
 // Name: InteractionIframeModal
-// Dependencies: [32, 19, 17, 1349, 21, 4722, 576, 17705, 7177, 8564, 17718, 5139, 4420, 1115, 9887, 9895, 5292, 4674, 4718, 9676, 2]
+// Dependencies: [32, 19, 17, 1349, 21, 4756, 576, 17785, 7221, 8602, 17798, 5181, 4454, 1115, 9729, 9737, 5334, 4708, 4752, 9551, 2]
 // Exports: default
 
-// Module 17717 (InteractionIframeModal)
+// Module 17797 (InteractionIframeModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4420 */;
-import closeIFrameModalDefault from "closeIFrameModal" /* 17718 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4454 */;
+import closeIFrameModalDefault from "closeIFrameModal" /* 17798 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,7 +19,7 @@ const View = fn(17).View;
 const BotTagTypes = fn(1349).BotTagTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { wrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, flex: 1 }, header: { flexDirection: "row", padding: 16, justifyContent: "space-between", alignItems: "center" }, headerCenterContainer: { flexDirection: "column", alignItems: "center" }, headerTitleContainer: { flexDirection: "row", marginBottom: 2 }, closeButton: { marginEnd: 8 }, spacerView: { marginStart: 8, width: 32 }, botTag: { marginStart: 4 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);

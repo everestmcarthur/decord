@@ -1,15 +1,15 @@
-// Module ID: 17664
-// Function ID: 17665
+// Module ID: 17744
+// Function ID: 17745
 // Name: VoiceCallTriggerPoint
-// Dependencies: [4638, 11057, 9413, 17665, 17212, 17666, 17667, 13429, 2]
+// Dependencies: [4672, 11070, 9994, 17745, 17289, 17746, 17747, 13485, 2]
 
-// Module 17664 (VoiceCallTriggerPoint)
-import GuildVoiceRingingExperimentDefault from "GuildVoiceRingingExperiment" /* 9413 */;
-import PastVcActivityMessagesExperimentDefault from "PastVcActivityMessagesExperiment" /* 17666 */;
-import VoiceCallTriggerPointExperimentDefault from "VoiceCallTriggerPointExperiment" /* 17667 */;
+// Module 17744 (VoiceCallTriggerPoint)
+import GuildVoiceRingingExperimentDefault from "GuildVoiceRingingExperiment" /* 9994 */;
+import PastVcActivityMessagesExperimentDefault from "PastVcActivityMessagesExperiment" /* 17746 */;
+import VoiceCallTriggerPointExperimentDefault from "VoiceCallTriggerPointExperiment" /* 17747 */;
 
-const items = [GuildVoiceRingingExperimentDefault, fn(17665).VoiceChannelHoistingExperiment, fn(17212).HangoutWindowExperiment, PastVcActivityMessagesExperimentDefault, VoiceCallTriggerPointExperimentDefault, fn(13429).VoiceChannelBadgeExperiment];
-const commonTriggerPointConfiguration = new fn(11057).CommonTriggerPointConfiguration(items, fn(4638).CommonTriggerPoints.VOICE_CALL, { location: "voice call initiated" });
+const items = [GuildVoiceRingingExperimentDefault, fn(17745).VoiceChannelHoistingExperiment, fn(17289).HangoutWindowExperiment, PastVcActivityMessagesExperimentDefault, VoiceCallTriggerPointExperimentDefault, fn(13485).VoiceChannelBadgeExperiment];
+const commonTriggerPointConfiguration = new fn(11070).CommonTriggerPointConfiguration(items, fn(4672).CommonTriggerPoints.VOICE_CALL, { location: "voice call initiated" });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/experiments/trigger_points/VoiceCallTriggerPoint.tsx");
 

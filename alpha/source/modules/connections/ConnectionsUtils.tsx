@@ -1,22 +1,22 @@
-// Module ID: 5577
-// Function ID: 5578
+// Module ID: 5619
+// Function ID: 5620
 // Name: ConnectionsUtils
-// Dependencies: [2016, 1980, 5578, 1074, 1366, 38, 1115, 12, 5579, 2]
+// Dependencies: [2099, 2063, 5620, 1074, 1366, 38, 1115, 12, 5621, 2]
 // Exports: getCallbackParamsFromURL, getConnectionsCheckText, getCreatedAtDate, getVisibleConnectionsRole, isVerifiedRolesChannelVisible
 
-// Module 5577 (ConnectionsUtils)
+// Module 5619 (ConnectionsUtils)
 import _modDef12 from "module_12" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import util from "util" /* 1115 */;
 import URLUtilsDefault from "URLUtils" /* 1366 */;
-import getConnectionsRolesDefault from "getConnectionsRoles" /* 5579 */;
-import GuildRoleStore from "GuildRoleStore" /* 2016 */;
-import GuildStore from "GuildStore" /* 1980 */;
+import getConnectionsRolesDefault from "getConnectionsRoles" /* 5621 */;
+import GuildRoleStore from "GuildRoleStore" /* 2099 */;
+import GuildStore from "GuildStore" /* 2063 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const Constants = fn(5578);
+const Constants = fn(5620);
 ({ MetadataFields: hasOwnProperty, OperatorTypes: metroRequire } = Constants);
 const PlatformTypes = fn(1074).PlatformTypes;
 const size = fn(2);

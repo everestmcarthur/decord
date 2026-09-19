@@ -1,11 +1,11 @@
-// Module ID: 8043
-// Function ID: 8044
+// Module ID: 8081
+// Function ID: 8082
 // Name: getPreCompressionFileSize
-// Dependencies: [5, 5307, 2]
+// Dependencies: [5, 5349, 2]
 // Exports: getPreCompressionFileSize
 
-// Module 8043 (getPreCompressionFileSize)
-import utils_UploadUtils from "utils/UploadUtils" /* 5307 */;
+// Module 8081 (getPreCompressionFileSize)
+import utils_UploadUtils from "utils/UploadUtils" /* 5349 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

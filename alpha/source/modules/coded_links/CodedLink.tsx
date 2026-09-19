@@ -1,9 +1,9 @@
-// Module ID: 4710
-// Function ID: 4711
+// Module ID: 4744
+// Function ID: 4745
 // Name: CodedLink
 // Dependencies: [2]
 
-// Module 4710 (CodedLink)
+// Module 4744 (CodedLink)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/coded_links/CodedLink.tsx");

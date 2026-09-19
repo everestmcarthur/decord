@@ -1,13 +1,13 @@
-// Module ID: 11106
-// Function ID: 11107
+// Module ID: 11119
+// Function ID: 11120
 // Name: PremiumGiftCustomMessage
-// Dependencies: [19, 17, 1374, 21, 4722, 576, 1115, 7281, 10942, 2]
+// Dependencies: [19, 17, 1374, 21, 4756, 576, 1115, 7325, 10958, 2]
 
-// Module 11106 (PremiumGiftCustomMessage)
+// Module 11119 (PremiumGiftCustomMessage)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import TextArea from "TextArea" /* 7281 */;
-import NativeGiftContext from "NativeGiftContext" /* 10942 */;
+import TextArea from "TextArea" /* 7325 */;
+import NativeGiftContext from "NativeGiftContext" /* 10958 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -45,7 +45,7 @@ class GiftCustomMessage {
 const View = fn(17).View;
 const React4 = fn(1374).CUSTOM_GIFT_MESSAGE_MAX_LENGTH;
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj = { container: { marginTop: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_16 } };
 const timestampProducer = createStyles.createStyles(obj);
 const obj3 = { marginTop: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_16 };

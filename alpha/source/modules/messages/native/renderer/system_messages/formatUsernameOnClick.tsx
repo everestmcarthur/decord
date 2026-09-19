@@ -1,12 +1,12 @@
-// Module ID: 8181
-// Function ID: 8182
+// Module ID: 8219
+// Function ID: 8220
 // Name: formatUsernameOnClick
-// Dependencies: [1372, 8180, 8182, 2]
+// Dependencies: [1372, 8218, 8220, 2]
 // Exports: default
 
-// Module 8181 (formatUsernameOnClick)
-import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 8180 */;
-import createDisplayNameStylesMobile from "createDisplayNameStylesMobile" /* 8182 */;
+// Module 8219 (formatUsernameOnClick)
+import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 8218 */;
+import createDisplayNameStylesMobile from "createDisplayNameStylesMobile" /* 8220 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;

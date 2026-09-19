@@ -1,17 +1,17 @@
-// Module ID: 17784
-// Function ID: 17785
+// Module ID: 17864
+// Function ID: 17865
 // Name: ProximitySensorManager
-// Dependencies: [17, 1957, 4744, 4745, 9321, 1364, 17785, 9322, 7314, 2]
+// Dependencies: [17, 2040, 4778, 4779, 9904, 1364, 17865, 9905, 7358, 2]
 
-// Module 17784 (ProximitySensorManager)
+// Module 17864 (ProximitySensorManager)
 import PlatformUtils2 from "PlatformUtils" /* 1364 */;
-import VoiceCallTypes from "VoiceCallTypes" /* 9322 */;
-import NativeProximitySensorManagerModuleDefault from "NativeProximitySensorManagerModule" /* 17785 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1957 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4744 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4745 */;
-import AudioRouteStore from "AudioRouteStore" /* 9321 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7314 */;
+import VoiceCallTypes from "VoiceCallTypes" /* 9905 */;
+import NativeProximitySensorManagerModuleDefault from "NativeProximitySensorManagerModule" /* 17865 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2040 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4778 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4779 */;
+import AudioRouteStore from "AudioRouteStore" /* 9904 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7358 */;
 
 require = fn;
 function handleChange() {

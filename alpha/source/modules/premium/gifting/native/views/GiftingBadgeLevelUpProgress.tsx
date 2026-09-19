@@ -1,23 +1,23 @@
-// Module ID: 11286
-// Function ID: 11287
+// Module ID: 11299
+// Function ID: 11300
 // Name: GiftingBadgeLevelUpProgress
-// Dependencies: [19, 17, 8422, 21, 4722, 576, 10990, 10995, 4718, 1115, 2576, 2]
+// Dependencies: [19, 17, 8460, 21, 4756, 576, 11003, 11008, 4752, 1115, 2578, 2]
 // Exports: default
 
-// Module 11286 (GiftingBadgeLevelUpProgress)
+// Module 11299 (GiftingBadgeLevelUpProgress)
 import nativeDefault from "native" /* 576 */;
-import _modDef2576 from "module_2576" /* 2576 */;
-import Text_Text from "Text/Text" /* 4718 */;
-import GiftingBadgesUtils from "GiftingBadgesUtils" /* 10990 */;
-import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10995 */;
+import _modDef2578 from "module_2578" /* 2578 */;
+import Text_Text from "Text/Text" /* 4752 */;
+import GiftingBadgesUtils from "GiftingBadgesUtils" /* 11003 */;
+import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 11008 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(8422).getSingleRequirementThreshold;
+let closure_4 = fn(8460).getSingleRequirementThreshold;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { container: { gap: nativeDefault.space.PX_4, width: "100%" }, barRow: null, progressBarTrack: null, progressBarFill: null, labels: null };
 let obj3 = { gap: nativeDefault.space.PX_4, width: "100%" };
 obj2.barRow = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
@@ -72,7 +72,7 @@ export default function GiftingBadgeLevelUpProgress(style) {
   const obj10 = { style: tmp.labels, children: null };
   const obj11 = { variant: "text-xs/normal", color: "text-muted", children: null };
   const intl = tmp2(1115).intl;
-  obj11.children = intl.format(_modDef2576.iIpfQe, { count: progress, threshold: tmp7 });
+  obj11.children = intl.format(_modDef2578.iIpfQe, { count: progress, threshold: tmp7 });
   obj10.children = hasOwnProperty(Text_Text.Text, obj11);
   items3[1] = hasOwnProperty(View, obj10);
   obj3.children = items3;

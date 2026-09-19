@@ -1,25 +1,25 @@
-// Module ID: 12723
-// Function ID: 12724
+// Module ID: 12732
+// Function ID: 12733
 // Name: GuildPowerupsModal
-// Dependencies: [19, 17, 4611, 21, 4722, 576, 4634, 12724, 12734, 12754, 1612, 7358, 12759, 12760, 12789, 4925, 4630, 5801, 1115, 2512, 8067, 5794, 12796, 12798, 12806, 12812, 12822, 12830, 2]
+// Dependencies: [19, 17, 4645, 21, 4756, 576, 4668, 12733, 12743, 12763, 1612, 7402, 12768, 12769, 12798, 4959, 4664, 5843, 1115, 2514, 8105, 5836, 12805, 12807, 12815, 12821, 12831, 12839, 2]
 // Exports: default
 
-// Module 12723 (GuildPowerupsModal)
+// Module 12732 (GuildPowerupsModal)
 import nativeDefault from "native" /* 576 */;
-import openGuildPowerupsBottomSheetDefault from "openGuildPowerupsBottomSheet" /* 12760 */;
-import openGuildPowerupsMultiPerkBottomSheetDefault from "openGuildPowerupsMultiPerkBottomSheet" /* 12789 */;
-import GuildPowerupsLevelsSectionDefault from "GuildPowerupsLevelsSection" /* 12806 */;
-import GuildPowerupsPerksSectionDefault from "GuildPowerupsPerksSection" /* 12812 */;
+import openGuildPowerupsBottomSheetDefault from "openGuildPowerupsBottomSheet" /* 12769 */;
+import openGuildPowerupsMultiPerkBottomSheetDefault from "openGuildPowerupsMultiPerkBottomSheet" /* 12798 */;
+import GuildPowerupsLevelsSectionDefault from "GuildPowerupsLevelsSection" /* 12815 */;
+import GuildPowerupsPerksSectionDefault from "GuildPowerupsPerksSection" /* 12821 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const GuildPowerupsConstants = fn(4611);
+const GuildPowerupsConstants = fn(4645);
 ({ BoostInfoType: metroRequire, GuildPowerupType: closure_7 } = GuildPowerupsConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, headerLeftContainer: null, headerRightContainer: null, boostInfoContainer: null, boostInfoSeparator: null, scrollView: null, boostButtonContainer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.headerLeftContainer = { paddingLeft: nativeDefault.space.PX_16 };

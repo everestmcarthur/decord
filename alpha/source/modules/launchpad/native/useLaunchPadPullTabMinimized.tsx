@@ -1,10 +1,10 @@
-// Module ID: 17348
-// Function ID: 17349
+// Module ID: 17425
+// Function ID: 17426
 // Name: useLaunchPadPullTabMinimized
-// Dependencies: [19, 17, 4458, 9926, 2]
+// Dependencies: [19, 17, 4492, 9769, 2]
 // Exports: default
 
-// Module 17348 (useLaunchPadPullTabMinimized)
+// Module 17425 (useLaunchPadPullTabMinimized)
 import noop from "module_19" /* 19 */;
 
 const require = fn;

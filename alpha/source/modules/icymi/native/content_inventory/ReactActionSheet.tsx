@@ -1,16 +1,16 @@
-// Module ID: 16764
-// Function ID: 16765
+// Module ID: 16840
+// Function ID: 16841
 // Name: ReactActionSheet
-// Dependencies: [5, 32, 19, 17, 7347, 1375, 21, 1115, 4722, 576, 11374, 7965, 5292, 8997, 8360, 8583, 10526, 4575, 8076, 1478, 7393, 4718, 16761, 5294, 4540, 4432, 16757, 5757, 1397, 6799, 4566, 8140, 4666, 15424, 16710, 2]
+// Dependencies: [5, 32, 19, 17, 7391, 1375, 21, 1115, 4756, 576, 11386, 8003, 5334, 9036, 8398, 8621, 10542, 4609, 8114, 1478, 7437, 4752, 16837, 5336, 4574, 4466, 16833, 5799, 1397, 6843, 4600, 8178, 4700, 15479, 16786, 2]
 // Exports: default, getStatusReplyContent
 
-// Module 16764 (ReactActionSheet)
+// Module 16840 (ReactActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 7965 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8583 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11374 */;
-import ICYMIContext from "ICYMIContext" /* 16710 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 8003 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8621 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11386 */;
+import ICYMIContext from "ICYMIContext" /* 16786 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -114,10 +114,10 @@ function ReactActionSheetBase(content) {
               return obj3;
             } else {
               closure_5(true);
-              v1(8583).itemInteracted(tmp4.id, hotwheels_gaming_activity, "press_reply_send");
-              const obj5 = v1(8583);
+              v1(8621).itemInteracted(tmp4.id, hotwheels_gaming_activity, "press_reply_send");
+              const obj5 = v1(8621);
               const obj4 = { itemId: tmp4.id, itemType: hotwheels_gaming_activity, actionParameters: { actionGestureType: "press", actionTargetElement: "reply_button", actionIntentType: "reply", actionDestinationType: null } };
-              v1(8583).feedItemActioned(obj4);
+              v1(8621).feedItemActioned(obj4);
               v1 = 1;
               dependencyMap = 1;
               const obj7 = { value: sendMessage(first1), done: false };
@@ -361,11 +361,11 @@ function ReactActionSheetBase(content) {
   str = "hotwheels_gaming_activity";
 }
 const View = fn(17).View;
-const ACTION_SHEET_MAX_WIDTH = fn(7347).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(7391).ACTION_SHEET_MAX_WIDTH;
 const EmojiIntention = fn(1375).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { header: { width: "100%", display: "flex", alignItems: "center", padding: 8 }, container: { gap: 12 }, preview: { borderRadius: nativeDefault.radii.md, overflow: "hidden", borderWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG }, loading: { opacity: 0.5 }, base: { position: "relative" }, contentContainer: null, inputRow: null, input: null, emojis: null, submitting: null, emoji: null, defaultEmoji: null, emojiImage: null, emojiText: null };
 let obj3 = { borderRadius: nativeDefault.radii.md, overflow: "hidden", borderWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG };
 obj2.contentContainer = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };

@@ -1,13 +1,13 @@
-// Module ID: 8662
-// Function ID: 8663
+// Module ID: 8700
+// Function ID: 8701
 // Name: ExpressiveModalV2Experiment
-// Dependencies: [8663, 1434, 8651, 504, 2]
+// Dependencies: [8701, 1434, 8689, 504, 2]
 // Exports: isExpressiveModalV2Enabled, useIsExpressiveModalV2Enabled
 
-// Module 8662 (ExpressiveModalV2Experiment)
+// Module 8700 (ExpressiveModalV2Experiment)
 import initialize from "initialize" /* 504 */;
-import SafetyHubUtils from "SafetyHubUtils" /* 8651 */;
-import SafetyHubStore from "SafetyHubStore" /* 8663 */;
+import SafetyHubUtils from "SafetyHubUtils" /* 8689 */;
+import SafetyHubStore from "SafetyHubStore" /* 8701 */;
 
 require = fn;
 const ApexExperiment = fn(1434);

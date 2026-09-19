@@ -1,17 +1,17 @@
-// Module ID: 5681
-// Function ID: 5682
+// Module ID: 5723
+// Function ID: 5724
 // Name: SKURecord
-// Dependencies: [1387, 1919, 5682, 1074, 4314, 5683, 5684, 1385, 2]
+// Dependencies: [1387, 2002, 5724, 1074, 4348, 5725, 5726, 1385, 2]
 
-// Module 5681 (SKURecord)
-import _modDef4314 from "module_4314" /* 4314 */;
-import getPricesFromServerDefault from "getPricesFromServer" /* 5683 */;
-import transformSKUTenantMetadataDefault from "transformSKUTenantMetadata" /* 5684 */;
+// Module 5723 (SKURecord)
+import _modDef4348 from "module_4348" /* 4348 */;
+import getPricesFromServerDefault from "getPricesFromServer" /* 5725 */;
+import transformSKUTenantMetadataDefault from "transformSKUTenantMetadata" /* 5726 */;
 import Record from "Record" /* 1387 */;
-import ApplicationRecord from "ApplicationRecord" /* 1919 */;
+import ApplicationRecord from "ApplicationRecord" /* 2002 */;
 
 const require = fn;
-fn(5682).THE_GAME_AWARD_WINNER_SKUS;
+fn(5724).THE_GAME_AWARD_WINNER_SKUS;
 const Constants = fn(1074);
 ({ GIFTABLE_CURRENCIES: hasOwnProperty, OperatingSystems: metroRequire, SKUFlags: closure_7, SKUTypes: closure_8 } = Constants);
 let SKURecord;
@@ -50,12 +50,12 @@ SKURecord["createFromServer"] = function createFromServer(id) {
   obj.name = name;
   let tmp6 = null;
   if (null != id.release_date) {
-    tmp6 = _modDef4314(id.release_date);
+    tmp6 = _modDef4348(id.release_date);
   }
   obj.releaseDate = tmp6;
   let tmp9 = null;
   if (null != id.preorder_release_at) {
-    tmp9 = _modDef4314(id.preorder_release_at);
+    tmp9 = _modDef4348(id.preorder_release_at);
   }
   obj.preorderReleaseAt = tmp9;
   ({ preorder_approximate_release_date: obj.preorderApproximateReleaseDate, summary: obj.summary } = id);

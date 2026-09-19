@@ -1,42 +1,42 @@
-// Module ID: 10017
-// Function ID: 10018
+// Module ID: 9868
+// Function ID: 9869
 // Name: GuildEventCardComponents
-// Dependencies: [5, 32, 19, 17, 502, 1958, 2022, 1980, 4361, 1372, 7722, 1964, 1074, 1085, 21, 4722, 576, 10018, 10020, 8140, 1115, 9943, 7385, 4419, 9292, 4665, 504, 9916, 8143, 4672, 10021, 10022, 9910, 5690, 7538, 10023, 5067, 9948, 5163, 4929, 1370, 1478, 1397, 10024, 10025, 1177, 5258, 4656, 9914, 9913, 10027, 5292, 4718, 10030, 10016, 4875, 9950, 10014, 10015, 5754, 2]
+// Dependencies: [5, 32, 19, 17, 502, 2041, 2105, 2063, 4395, 1372, 7766, 2047, 1074, 1085, 21, 4756, 576, 9869, 9871, 8178, 1115, 9782, 7429, 4453, 9872, 4699, 504, 9758, 8181, 4706, 9873, 9874, 9752, 5732, 7582, 9875, 5109, 9787, 5205, 4963, 1370, 1478, 1397, 9876, 9877, 1177, 5300, 4690, 9756, 9755, 9879, 5334, 4752, 9882, 9867, 4909, 9789, 9865, 9866, 5796, 2]
 // Exports: GuildEventCardGuildInfo, GuildEventCardHeader, GuildEventCardImageHeader, GuildEventCardMetaInfo, GuildEventCardSimpleGuildInfo, GuildEventIndicateInterestAction, GuildEventModeratorAction, GuildEventShareAction, GuildEventSimpleLocation, useEventRsvpState
 
-// Module 10017 (GuildEventCardComponents)
+// Module 9868 (GuildEventCardComponents)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import AvatarUtils from "AvatarUtils" /* 1397 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1478 */;
-import ToastUtils from "ToastUtils" /* 4419 */;
-import Text_Text from "Text/Text" /* 4718 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 4929 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5067 */;
-import common_AlertDefault from "common/Alert" /* 5163 */;
-import GroupIcon from "GroupIcon" /* 5258 */;
-import GuildIconDefault from "GuildIcon" /* 5754 */;
-import ScheduleUtils from "ScheduleUtils" /* 9910 */;
-import GuildScheduledEventModalActionCreators from "GuildScheduledEventModalActionCreators" /* 9943 */;
-import guildEventDetailsParser from "guildEventDetailsParser" /* 10016 */;
-import useCanInviteForGuildEventDefault from "useCanInviteForGuildEvent" /* 10018 */;
-import ThrottledButtonDefault from "ThrottledButton" /* 10022 */;
-import useGuildScheduledEventUserCountDefault from "useGuildScheduledEventUserCount" /* 10025 */;
+import ToastUtils from "ToastUtils" /* 4453 */;
+import Text_Text from "Text/Text" /* 4752 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 4963 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5109 */;
+import common_AlertDefault from "common/Alert" /* 5205 */;
+import GroupIcon from "GroupIcon" /* 5300 */;
+import GuildIconDefault from "GuildIcon" /* 5796 */;
+import ScheduleUtils from "ScheduleUtils" /* 9752 */;
+import GuildScheduledEventModalActionCreators from "GuildScheduledEventModalActionCreators" /* 9782 */;
+import guildEventDetailsParser from "guildEventDetailsParser" /* 9867 */;
+import useCanInviteForGuildEventDefault from "useCanInviteForGuildEvent" /* 9869 */;
+import ThrottledButtonDefault from "ThrottledButton" /* 9874 */;
+import useGuildScheduledEventUserCountDefault from "useGuildScheduledEventUserCount" /* 9877 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
-import GuildMemberStore from "GuildMemberStore" /* 2022 */;
-import GuildStore from "GuildStore" /* 1980 */;
-import PermissionStore from "PermissionStore" /* 4361 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
+import GuildMemberStore from "GuildMemberStore" /* 2105 */;
+import GuildStore from "GuildStore" /* 2063 */;
+import PermissionStore from "PermissionStore" /* 4395 */;
 import UserStore from "UserStore" /* 1372 */;
-import GuildScheduledEventStore_mod from "GuildScheduledEventStore" /* 7722 */;
+import GuildScheduledEventStore_mod from "GuildScheduledEventStore" /* 7766 */;
 
 const require = globalThis.__r;
 
-const getGuildEventImageDefault = tmp2(10024);
+const getGuildEventImageDefault = tmp2(9876);
 require = fn;
 function usePrimaryActionButtonType(event, isConnected) {
   _require = event;
@@ -321,17 +321,17 @@ class GuildEventCardDescription {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, Image: closure_7, Pressable: closure_8 } = get_ActivityIndicator);
-let GuildScheduledEventStore = fn(7722);
+let GuildScheduledEventStore = fn(7766);
 ({ isGuildEventEnded: closure_15, isGuildScheduledEventActive: closure_16 } = GuildScheduledEventStore);
 let GuildScheduledEventStore = GuildScheduledEventStore_mod;
-const constants = fn(1964).GuildScheduledEventEntityTypes;
+const constants = fn(2047).GuildScheduledEventEntityTypes;
 let Constants = fn(1074);
 ({ Permissions: closure_19, JoinGuildSources: closure_20 } = Constants);
 Constants = fn(1085);
 ({ Fonts, NOOP: closure_21 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_22, jsxs: closure_23, Fragment: closure_24 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj = { imageHeaderContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, imageHeaderBanner: { width: "100%", aspectRatio: 2.5 }, headerContainer: { flexDirection: "row", alignItems: "center" }, dateContainer: { flexDirection: "row", alignItems: "center", flex: 1 }, dateIcon: null, newBadge: null, topicContainer: null, detailsContainer: null, channelContainer: null, channelIcon: null, channelText: null, guildInfoContainer: null, guildIcon: null, guildInfo: null, guildInfoChannelContainer: null, guildInfoChannelText: null, creatorAvatar: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj.dateIcon = { marginRight: nativeDefault.space.PX_8 };
@@ -368,22 +368,22 @@ export const GuildEventShareAction = function GuildEventShareAction(event) {
   event = event.event;
   const tmp3 = useCanInviteForGuildEventDefault(event);
   importDefault = tmp3;
-  dependencyMap = event(10020).SHARE_EVENT_DETAILS_LINK({ guildId: event.guild_id, guildEventId: event.id });
+  dependencyMap = event(9871).SHARE_EVENT_DETAILS_LINK({ guildId: event.guild_id, guildEventId: event.id });
   const obj3 = { accessibilityLabel: null, onPress: null, icon: null, variant: "secondary" };
   const intl = event(1115).intl;
   obj3.accessibilityLabel = "" + intl.string(event(1115).t.RDE0Sc) + ", " + event.name;
   obj3.onPress = function onPress() {
     if (closure_1) {
-      tmp(9943).openShareEvent(event);
-      const tmpResult = tmp(9943);
+      tmp(9782).openShareEvent(event);
+      const tmpResult = tmp(9782);
     } else {
-      tmp(7385).copy(closure_2);
-      const tmpResult2 = tmp(7385);
+      tmp(7429).copy(closure_2);
+      const tmpResult2 = tmp(7429);
       ToastUtils.presentLinkCopied();
     }
   };
-  obj3.icon = importDefault(tmp3 ? 9292 : 4665);
-  return closure_22(event(8140).IconButton, obj3);
+  obj3.icon = importDefault(tmp3 ? 9872 : 4699);
+  return closure_22(event(8178).IconButton, obj3);
 };
 export const GuildEventModeratorAction = function GuildEventModeratorAction(event) {
   event = event.event;
@@ -440,9 +440,9 @@ export const GuildEventIndicateInterestAction = function GuildEventIndicateInter
     str = "tertiary";
   }
   if (first) {
-    let BellIcon = tmp(4672).CheckmarkLargeIcon;
+    let BellIcon = tmp(4706).CheckmarkLargeIcon;
   } else {
-    BellIcon = tmp(10021).BellIcon;
+    BellIcon = tmp(9873).BellIcon;
   }
   const obj2 = { accessibilityRole: "togglebutton", accessibilityState: { checked: first }, accessibilityLabel: null, variant: null, icon: null, text: null, onPress: null, grow: true };
   const obj = event(504);
@@ -789,17 +789,17 @@ export const GuildEventSimpleLocation = function GuildEventSimpleLocation(event)
     }
     return GuildMemberStore.isMember(guild_id, id);
   }, items3);
-  let tmp7 = stateFromStores(4875)(stateFromStores);
+  let tmp7 = stateFromStores(4909)(stateFromStores);
   const obj2 = channel_id(504);
   const tmp6 = stateFromStores;
-  const locationFromEvent = channel_id(9950).getLocationFromEvent(event);
+  const locationFromEvent = channel_id(9789).getLocationFromEvent(event);
   if (null == stateFromStores) {
     if (null == locationFromEvent) {
       return null;
     }
   }
-  const obj3 = channel_id(9950);
-  const eventLocationIconComponent = channel_id(10014).getEventLocationIconComponent(event, stateFromStores, stateFromStores1);
+  const obj3 = channel_id(9789);
+  const eventLocationIconComponent = channel_id(9865).getEventLocationIconComponent(event, stateFromStores, stateFromStores1);
   const obj4 = { style: tmp.channelContainer, children: null };
   let tmp12 = null != eventLocationIconComponent;
   if (tmp12) {
@@ -810,7 +810,7 @@ export const GuildEventSimpleLocation = function GuildEventSimpleLocation(event)
   const obj6 = { style: tmp.channelText, accessibilityLabel: null, variant: "text-sm/medium", color: "text-default", children: null };
   if (null != stateFromStores) {
     const obj7 = { channel: stateFromStores };
-    let combined = tmp6(10015)(obj7);
+    let combined = tmp6(9866)(obj7);
   } else if (null != locationFromEvent) {
     const intl = tmp2(1115).intl;
     const _HermesInternal = HermesInternal;
@@ -821,13 +821,13 @@ export const GuildEventSimpleLocation = function GuildEventSimpleLocation(event)
     let result = null;
     if (null != locationFromEvent) {
       const obj8 = { guildId: event.guild_id };
-      result = tmp2(10016).guildEventLocationParser(locationFromEvent, true, obj8);
-      const tmp2Result2 = tmp2(10016);
+      result = tmp2(9867).guildEventLocationParser(locationFromEvent, true, obj8);
+      const tmp2Result2 = tmp2(9867);
     }
     tmp7 = result;
   }
   obj6.children = tmp7;
-  items4[1] = closure_22(channel_id(4718).Text, obj6);
+  items4[1] = closure_22(channel_id(4752).Text, obj6);
   obj4.children = items4;
   return closure_23(closure_6, obj4);
 };
@@ -843,11 +843,11 @@ export const GuildEventCardSimpleGuildInfo = function GuildEventCardSimpleGuildI
     const obj2 = { style: null, children: null };
     const items2 = [tmp.guildInfoContainer, style];
     obj2.style = items2;
-    const obj3 = { guild: stateFromStores, size: tmp2(5754).GuildIconSizes.XSMALL_20, style: tmp.guildIcon };
+    const obj3 = { guild: stateFromStores, size: tmp2(5796).GuildIconSizes.XSMALL_20, style: tmp.guildIcon };
     const items3 = [closure_22(GuildIconDefault, obj3), ];
     const obj4 = { style: tmp.guildInfo, children: null };
     const obj5 = { variant: "text-sm/semibold", style: textStyle, children: stateFromStores.name };
-    obj4.children = closure_22(tmp2(4718).Text, obj5);
+    obj4.children = closure_22(tmp2(4752).Text, obj5);
     items3[1] = closure_22(closure_6, obj4);
     obj2.children = items3;
     tmp5 = closure_23(closure_6, obj2);

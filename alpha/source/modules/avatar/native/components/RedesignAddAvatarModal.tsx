@@ -1,16 +1,16 @@
-// Module ID: 17765
-// Function ID: 17766
+// Module ID: 17845
+// Function ID: 17846
 // Name: RedesignAddAvatarModal
-// Dependencies: [5, 32, 19, 17, 8390, 1074, 21, 4722, 576, 1612, 504, 14809, 17750, 8399, 8478, 5307, 8394, 8396, 4718, 1115, 17759, 5144, 17747, 2]
+// Dependencies: [5, 32, 19, 17, 8428, 1074, 21, 4756, 576, 1612, 504, 14863, 17830, 8437, 8516, 5349, 8432, 8434, 4752, 1115, 17839, 5186, 17827, 2]
 // Exports: default
 
-// Module 17765 (RedesignAddAvatarModal)
+// Module 17845 (RedesignAddAvatarModal)
 import nativeDefault from "native" /* 576 */;
-import AddAvatarModalActionCreators from "AddAvatarModalActionCreators" /* 17747 */;
+import AddAvatarModalActionCreators from "AddAvatarModalActionCreators" /* 17827 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8390 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8428 */;
 
 const require = globalThis.__r;
 
@@ -20,7 +20,7 @@ get_ActivityIndicator = fn(17);
 const UPLOAD_MEDIUM_SIZE = fn(1074).UPLOAD_MEDIUM_SIZE;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, contentContainer: { flexGrow: 2, alignItems: "center" }, growContainer: null, headerContainer: null, buttonContainer: null, title: null, subtitle: null, errorContainer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.growContainer = { flexGrow: 2, minHeight: nativeDefault.space.PX_24 };
@@ -71,7 +71,7 @@ export default function RedesignAddAvatarModal(route) {
             const obj7 = { size };
             dependencyMap = 1;
             c3 = 1;
-            const obj9 = { value: tmp2(5307).openImagePicker(obj7), done: false };
+            const obj9 = { value: tmp2(5349).openImagePicker(obj7), done: false };
             return obj9;
           }
         } else if (arg0 === 1) {
@@ -87,23 +87,23 @@ export default function RedesignAddAvatarModal(route) {
             pendingImage = undefined;
             if (null != base64) {
               const obj11 = { imageUri: base64, description: null };
-              const obj = tmp2(14809);
-              obj11.description = tmp2(8399).generateAvatarDescription();
+              const obj = tmp2(14863);
+              obj11.description = tmp2(8437).generateAvatarDescription();
               pendingImage = obj.createPendingImage(obj11);
-              const obj3 = tmp2(8399);
+              const obj3 = tmp2(8437);
             }
             closure_128_1 = pendingImage;
             const obj12 = { avatar: closure_128_1 };
-            tmp2(8394).setPendingChanges(obj12);
-            const obj4 = tmp2(8394);
+            tmp2(8432).setPendingChanges(obj12);
+            const obj4 = tmp2(8432);
             let str = "set";
             if (null == closure_128_1) {
               str = "remove";
             }
-            const result = tmp2(8396).announcePendingAvatarChange(str);
+            const result = tmp2(8434).announcePendingAvatarChange(str);
             closure_129_3(undefined);
             c3 = 3;
-            const obj6 = tmp2(8396);
+            const obj6 = tmp2(8434);
           }
           closure_129_1(true);
         }

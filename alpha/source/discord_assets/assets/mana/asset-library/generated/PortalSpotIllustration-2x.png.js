@@ -1,8 +1,8 @@
-// Module ID: 6542
-// Function ID: 6543
+// Module ID: 6586
+// Function ID: 6587
 // Dependencies: [2]
 
-// Module 6542
+// Module 6586
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/PortalSpotIllustration-2x.png.js");

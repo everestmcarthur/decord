@@ -1,12 +1,19 @@
 // Module ID: 6870
 // Function ID: 6871
-// Dependencies: []
-// Exports: getNextHandlerTag
+// Dependencies: [19, 6871]
+// Exports: useBottomSheet
 
 // Module 6870
-let closure_0 = 1;
+import _mod19 from "module_19" /* 19 */;
+import _mod6871 from "module_6871" /* 6871 */;
 
-export const getNextHandlerTag = function getNextHandlerTag() {
-  closure_0 = tmp + 1;
-  return +closure_0;
+const useContext = _mod19.useContext;
+
+export const useBottomSheet = () => {
+  const tmp = useContext(_mod6871.BottomSheetContext);
+  if (null === tmp) {
+    throw "'useBottomSheet' cannot be used out of the BottomSheet!";
+  } else {
+    return tmp;
+  }
 };

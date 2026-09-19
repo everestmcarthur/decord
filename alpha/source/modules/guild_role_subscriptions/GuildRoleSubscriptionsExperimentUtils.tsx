@@ -1,11 +1,11 @@
-// Module ID: 14101
-// Function ID: 14102
+// Module ID: 14155
+// Function ID: 14156
 // Name: GuildRoleSubscriptionsExperimentUtils
-// Dependencies: [1980, 1074, 563, 2]
+// Dependencies: [2063, 1074, 563, 2]
 // Exports: hasEnabledMonetization, isGuildEligibleForTierTemplates, useGuildEligibleForTierTemplates
 
-// Module 14101 (GuildRoleSubscriptionsExperimentUtils)
-import GuildStore from "GuildStore" /* 1980 */;
+// Module 14155 (GuildRoleSubscriptionsExperimentUtils)
+import GuildStore from "GuildStore" /* 2063 */;
 
 const require = globalThis.__r;
 

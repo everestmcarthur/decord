@@ -1,25 +1,25 @@
-// Module ID: 9422
-// Function ID: 9423
+// Module ID: 10012
+// Function ID: 10013
 // Name: GuildTag
-// Dependencies: [19, 17, 1372, 8163, 21, 4722, 576, 1364, 1115, 4718, 5292, 504, 8395, 4689, 9423, 1897, 2]
+// Dependencies: [19, 17, 1372, 8201, 21, 4756, 576, 1364, 1115, 4752, 5334, 504, 8433, 4723, 10013, 1980, 2]
 
-// Module 9422 (GuildTag)
+// Module 10012 (GuildTag)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4689 */;
-import Text_Text from "Text/Text" /* 4718 */;
-import GuildTagUtils from "GuildTagUtils" /* 8395 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1980 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4723 */;
+import Text_Text from "Text/Text" /* 4752 */;
+import GuildTagUtils from "GuildTagUtils" /* 8433 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const GuildTagBadgeSize = fn(8163).GuildTagBadgeSize;
+const GuildTagBadgeSize = fn(8201).GuildTagBadgeSize;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj = { container: { flexDirection: "row", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: 4, paddingHorizontal: 4, paddingVertical: 1, columnGap: 2 }, tag: null };
 let PlatformUtils = fn(1364);
 let num = 16;

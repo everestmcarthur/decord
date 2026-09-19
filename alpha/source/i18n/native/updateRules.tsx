@@ -1,13 +1,13 @@
-// Module ID: 17608
-// Function ID: 17609
+// Module ID: 17685
+// Function ID: 17686
 // Name: updateRules
-// Dependencies: [19, 1074, 21, 4442, 4423, 576, 4417, 2075, 1177, 2]
+// Dependencies: [19, 1074, 21, 4476, 4457, 576, 4451, 1929, 1177, 2]
 // Exports: default
 
-// Module 17608 (updateRules)
+// Module 17685 (updateRules)
 import native from "native" /* 1177 */;
-import _modDef2075 from "module_2075" /* 2075 */;
-import LinkingDefault from "Linking" /* 4417 */;
+import _modDef1929 from "module_1929" /* 1929 */;
+import LinkingDefault from "Linking" /* 4451 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -48,7 +48,7 @@ class I18nLink {
     if (null == obj.onClick) {
       obj.onClick = () => {
         const obj = LinkingDefault;
-        return obj.openURL(_modDef2075.sanitizeUrl(node.target));
+        return obj.openURL(_modDef1929.sanitizeUrl(node.target));
       };
     }
     obj1 = { accessible: true, accessibilityRole: "link", onPress: obj.onClick, style: memo, children: output(node.content, state) };

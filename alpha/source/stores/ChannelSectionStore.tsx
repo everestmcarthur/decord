@@ -1,24 +1,24 @@
-// Module ID: 7476
-// Function ID: 7477
+// Module ID: 7520
+// Function ID: 7521
 // Name: ChannelSectionStore
-// Dependencies: [4637, 7477, 1962, 1958, 1980, 4361, 2012, 4543, 1372, 1074, 1965, 1085, 7478, 7479, 1110, 11, 4963, 504, 1434, 573, 2]
+// Dependencies: [4671, 7521, 2045, 2041, 2063, 4395, 2095, 4577, 1372, 1074, 2048, 1085, 7522, 7523, 1110, 11, 4996, 504, 1434, 573, 2]
 // Exports: isViewChannelSidebar
 
-// Module 7476 (ChannelSectionStore)
+// Module 7520 (ChannelSectionStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1110 */;
 import ApexExperiment from "ApexExperiment" /* 1434 */;
-import SidebarActionTypes from "SidebarActionTypes" /* 7478 */;
-import FriendsSidebarExperimentDefault from "FriendsSidebarExperiment" /* 7479 */;
-import ExperimentStore from "ExperimentStore" /* 4637 */;
-import SearchMessageStore from "SearchMessageStore" /* 7477 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
-import GuildStore from "GuildStore" /* 1980 */;
-import PermissionStore from "PermissionStore" /* 4361 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4543 */;
+import SidebarActionTypes from "SidebarActionTypes" /* 7522 */;
+import FriendsSidebarExperimentDefault from "FriendsSidebarExperiment" /* 7523 */;
+import ExperimentStore from "ExperimentStore" /* 4671 */;
+import SearchMessageStore from "SearchMessageStore" /* 7521 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
+import GuildStore from "GuildStore" /* 2063 */;
+import PermissionStore from "PermissionStore" /* 4395 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2095 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4577 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -119,10 +119,10 @@ function setIsSearchSidebarOpen() {
     c25 = hasSearchStateResult;
   }
 }
-const isChannelChatInSidebar = fn(1962).isChannelChatInSidebar;
+const isChannelChatInSidebar = fn(2045).isChannelChatInSidebar;
 const Constants = fn(1074);
 ({ ChannelSections: closure_12, ComponentActions: map1 } = Constants);
-const ChannelConstants = fn(1965);
+const ChannelConstants = fn(2048);
 ({ isStaticChannelRoute: closure_14, buildGuildStaticChannelId: closure_15 } = ChannelConstants);
 const Permissions = fn(1085).Permissions;
 let c17 = false;
@@ -588,7 +588,7 @@ const channelSectionStore = new ChannelSectionStore(DispatcherDefault, {
         if (sidebars[channelId] != null) {
           type = tmp10.type;
         }
-        if (type === tmp(7478).SidebarType.VIEW_CHANNEL) {
+        if (type === tmp(7522).SidebarType.VIEW_CHANNEL) {
           if (tmp10.channelId === channelId) {
             return flag;
           }
@@ -598,8 +598,8 @@ const channelSectionStore = new ChannelSectionStore(DispatcherDefault, {
         if (null != channel) {
           flag2 = flag;
           if (isChannelChatInSidebar(channel.type)) {
-            const obj = { type: tmp(7478).SidebarType.VIEW_CHANNEL, channelId, details: null };
-            const obj2 = { type: tmp(7478).ViewChannelDetailType.CHAT, initialMessageId: messageId };
+            const obj = { type: tmp(7522).SidebarType.VIEW_CHANNEL, channelId, details: null };
+            const obj2 = { type: tmp(7522).ViewChannelDetailType.CHAT, initialMessageId: messageId };
             obj.details = obj2;
             sidebars[channelId] = obj;
             flag2 = true;

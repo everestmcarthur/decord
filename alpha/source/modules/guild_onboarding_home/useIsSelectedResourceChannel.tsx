@@ -1,21 +1,21 @@
-// Module ID: 11594
-// Function ID: 11595
+// Module ID: 11603
+// Function ID: 11604
 // Name: useIsSelectedResourceChannel
-// Dependencies: [7476, 1958, 2012, 1074, 1965, 563, 1385, 11595, 7418, 2]
+// Dependencies: [7520, 2041, 2095, 1074, 2048, 563, 1385, 11604, 7462, 2]
 // Exports: default
 
-// Module 11594 (useIsSelectedResourceChannel)
+// Module 11603 (useIsSelectedResourceChannel)
 import FlagUtils from "FlagUtils" /* 1385 */;
-import isSelectedFromHomeChannelDefault from "isSelectedFromHomeChannel" /* 11595 */;
-import ChannelSectionStore from "ChannelSectionStore" /* 7476 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
+import isSelectedFromHomeChannelDefault from "isSelectedFromHomeChannel" /* 11604 */;
+import ChannelSectionStore from "ChannelSectionStore" /* 7520 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2095 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1074).EMPTY_STRING_SNOWFLAKE_ID;
-const ChannelFlags = fn(1965).ChannelFlags;
+const ChannelFlags = fn(2048).ChannelFlags;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/useIsSelectedResourceChannel.tsx");
 

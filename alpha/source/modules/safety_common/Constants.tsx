@@ -1,9 +1,9 @@
-// Module ID: 8631
-// Function ID: 8632
+// Module ID: 8669
+// Function ID: 8670
 // Name: Constants
 // Dependencies: [2]
 
-// Module 8631 (Constants)
+// Module 8669 (Constants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/safety_common/Constants.tsx");

@@ -1,10 +1,10 @@
-// Module ID: 10016
-// Function ID: 10017
+// Module ID: 9867
+// Function ID: 9868
 // Name: guildEventDetailsParser
-// Dependencies: [4712, 2]
+// Dependencies: [4746, 2]
 
-// Module 10016 (guildEventDetailsParser)
-import MarkupUtils from "MarkupUtils" /* 4712 */;
+// Module 9867 (guildEventDetailsParser)
+import MarkupUtils from "MarkupUtils" /* 4746 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/guildEventDetailsParser.native.tsx");

@@ -1,28 +1,28 @@
-// Module ID: 16045
-// Function ID: 16046
+// Module ID: 16121
+// Function ID: 16122
 // Name: CollectiblesShopV2
-// Dependencies: [32, 19, 17, 4721, 1182, 1372, 7738, 1076, 1074, 1955, 21, 4722, 7378, 13661, 16046, 504, 5768, 1255, 10977, 16047, 1364, 7749, 9604, 8408, 9016, 4573, 7358, 1484, 9087, 4393, 16049, 4542, 1944, 4380, 16050, 1241, 7785, 8417, 16051, 16053, 16055, 16080, 1231, 9007, 11070, 16083, 16084, 16058, 16085, 7799, 2]
+// Dependencies: [32, 19, 17, 4755, 1182, 1372, 7782, 1076, 1074, 2038, 21, 4756, 7422, 13716, 16122, 504, 5810, 1255, 10993, 16123, 1364, 7793, 9479, 8446, 9055, 4607, 7402, 1484, 9126, 4427, 16125, 4576, 2027, 4414, 16126, 1241, 7829, 8455, 16127, 16129, 16131, 16156, 1231, 9046, 11083, 16159, 16160, 16134, 16161, 5085, 2]
 
-// Module 16045 (CollectiblesShopV2)
+// Module 16121 (CollectiblesShopV2)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import dismissible_content from "dismissible_content" /* 1944 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4380 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4542 */;
-import CollectiblesPerfLogging from "CollectiblesPerfLogging" /* 7785 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8417 */;
-import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 9087 */;
-import NativePaymentHooksDefault from "NativePaymentHooks" /* 9604 */;
-import MobileNitroUpsellInShopFeedExperimentDefault from "MobileNitroUpsellInShopFeedExperiment" /* 16050 */;
-import ShopNitroUpsellBanner from "ShopNitroUpsellBanner" /* 16051 */;
-import ShopCategory from "ShopCategory" /* 16053 */;
-import CollectiblesShopFeaturedPageDefault from "CollectiblesShopFeaturedPage" /* 16055 */;
+import dismissible_content from "dismissible_content" /* 2027 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4414 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4576 */;
+import CollectiblesPerfLogging from "CollectiblesPerfLogging" /* 7829 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8455 */;
+import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 9126 */;
+import NativePaymentHooksDefault from "NativePaymentHooks" /* 9479 */;
+import MobileNitroUpsellInShopFeedExperimentDefault from "MobileNitroUpsellInShopFeedExperiment" /* 16126 */;
+import ShopNitroUpsellBanner from "ShopNitroUpsellBanner" /* 16127 */;
+import ShopCategory from "ShopCategory" /* 16129 */;
+import CollectiblesShopFeaturedPageDefault from "CollectiblesShopFeaturedPage" /* 16131 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import DevSettingsStore from "DevSettingsStore" /* 4721 */;
+import DevSettingsStore from "DevSettingsStore" /* 4755 */;
 import ThemeStore from "ThemeStore" /* 1182 */;
 import UserStore from "UserStore" /* 1372 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7738 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7782 */;
 
 const SentryUtilsDefault = tmp(1231);
 require = fn;
@@ -102,10 +102,10 @@ const CollectiblesShopConstants = fn(1076);
 ({ COLLECTIBLES_SHOP_CACHE_DURATION_MS: closure_11, CollectiblesMobileShopScreen: closure_12, CollectibleShopTab: map1 } = CollectiblesShopConstants);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_14, PaymentGateways: closure_15 } = Constants);
-const ContentDismissActionType = fn(1955).ContentDismissActionType;
+const ContentDismissActionType = fn(2038).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let closure_19 = createStyles.createStyles({ rootContainer: { height: "100%", width: "100%" }, spinner: { position: "absolute", top: "50%", left: "50%", marginTop: -8, marginLeft: -8 } });
 let closure_20 = { CATEGORY: "category", NITRO_UPSELL: "nitro_upsell" };
 function CollectiblesShopInternal(analyticsSource) {

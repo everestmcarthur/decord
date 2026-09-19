@@ -1,11 +1,11 @@
-// Module ID: 15203
-// Function ID: 15204
+// Module ID: 15257
+// Function ID: 15258
 // Name: PremiumManagePlanScreen
-// Dependencies: [19, 21, 13700, 2]
+// Dependencies: [19, 21, 13755, 2]
 // Exports: default
 
-// Module 15203 (PremiumManagePlanScreen)
-import PremiumManagePlanDefault from "PremiumManagePlan" /* 13700 */;
+// Module 15257 (PremiumManagePlanScreen)
+import PremiumManagePlanDefault from "PremiumManagePlan" /* 13755 */;
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;

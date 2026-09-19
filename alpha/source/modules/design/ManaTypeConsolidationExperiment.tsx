@@ -1,10 +1,10 @@
-// Module ID: 7176
-// Function ID: 7177
+// Module ID: 7220
+// Function ID: 7221
 // Name: ManaTypeConsolidationExperiment
 // Dependencies: [1434, 2]
 // Exports: useManaTypeConsolidationExperiment
 
-// Module 7176 (ManaTypeConsolidationExperiment)
+// Module 7220 (ManaTypeConsolidationExperiment)
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

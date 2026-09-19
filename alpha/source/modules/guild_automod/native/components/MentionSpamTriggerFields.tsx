@@ -1,20 +1,20 @@
-// Module ID: 17867
-// Function ID: 17868
+// Module ID: 17947
+// Function ID: 17948
 // Name: MentionSpamTriggerFields
-// Dependencies: [32, 19, 17, 12106, 21, 4722, 10343, 1115, 5857, 4718, 5775, 6806, 5774, 2]
+// Dependencies: [32, 19, 17, 12115, 21, 4756, 10355, 1115, 5899, 4752, 5817, 6850, 5816, 2]
 // Exports: default
 
-// Module 17867 (MentionSpamTriggerFields)
+// Module 17947 (MentionSpamTriggerFields)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const View = fn(17).View;
-const Constants = fn(12106);
+const Constants = fn(12115);
 ({ MAX_MENTION_SPAM_LIMIT: hasOwnProperty, MIN_MENTION_SPAM_LIMIT: metroRequire } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let closure_9 = createStyles.createStyles({ limitField: { width: 52 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_automod/native/components/MentionSpamTriggerFields.tsx");

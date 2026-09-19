@@ -1,22 +1,22 @@
-// Module ID: 17943
-// Function ID: 17944
+// Module ID: 18023
+// Function ID: 18024
 // Name: GuildSettingsModalIntegrationPlatform
-// Dependencies: [19, 17, 9302, 1074, 21, 4722, 576, 17904, 17874, 5453, 1397, 4573, 5857, 5775, 7396, 1115, 9301, 5067, 5163, 4423, 1484, 504, 4656, 5794, 7573, 7578, 2025, 8831, 5142, 4718, 7236, 2]
+// Dependencies: [19, 17, 9855, 1074, 21, 4756, 576, 17984, 17954, 5495, 1397, 4607, 5899, 5817, 7440, 1115, 9854, 5109, 5205, 4457, 1484, 504, 4690, 5836, 7617, 7622, 2108, 8870, 5184, 4752, 7280, 2]
 // Exports: default
 
-// Module 17943 (GuildSettingsModalIntegrationPlatform)
+// Module 18023 (GuildSettingsModalIntegrationPlatform)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5067 */;
-import common_AlertDefault from "common/Alert" /* 5163 */;
-import PlatformsDefault from "Platforms" /* 5453 */;
-import NavigatorHeader from "NavigatorHeader" /* 5794 */;
-import HeaderActionButton from "HeaderActionButton" /* 7573 */;
-import openUserSettings from "openUserSettings" /* 7578 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9301 */;
-import GuildSettingsModalIntegrations from "GuildSettingsModalIntegrations" /* 17904 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5109 */;
+import common_AlertDefault from "common/Alert" /* 5205 */;
+import PlatformsDefault from "Platforms" /* 5495 */;
+import NavigatorHeader from "NavigatorHeader" /* 5836 */;
+import HeaderActionButton from "HeaderActionButton" /* 7617 */;
+import openUserSettings from "openUserSettings" /* 7622 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9854 */;
+import GuildSettingsModalIntegrations from "GuildSettingsModalIntegrations" /* 17984 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9302 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9855 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -25,7 +25,7 @@ const Constants = fn(1074);
 ({ GuildSettingsSections: closure_7, HelpdeskArticles: closure_8, PlatformTypes: closure_9, UserSettingsSections: c10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { form: { paddingTop: nativeDefault.space.PX_16 }, trailingWrapper: { flexDirection: "row", alignItems: "center" }, platformIcon: { width: 24, height: 24 } };
 let closure_14 = createStyles.createStyles(obj2);
 const Component = noop.Component;
@@ -42,7 +42,7 @@ class IntegrationItem extends Component {
         const setState = guild.setState;
         if (integration.enabled) {
           setState({ enabled: false });
-          let obj3 = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null, confirmColor: null };
+          let obj3 = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null, confirmColor: null, isDismissable: false };
           const intl = applyArgumentsResult(1115).intl;
           obj3.title = intl.string(applyArgumentsResult(1115).t.emx3lN);
           if ("youtube" === integration.type) {
@@ -98,14 +98,14 @@ IntegrationItem.prototype["render"] = function render() {
   const SUPPORTED_SETTINGS_INTEGRATION_PLATFORMS = GuildSettingsModalIntegrations.SUPPORTED_SETTINGS_INTEGRATION_PLATFORMS;
   if (SUPPORTED_SETTINGS_INTEGRATION_PLATFORMS.includes(integration.type)) {
     const type = integration.type;
-    if (tmp(17874).IntegrationTypes.YOUTUBE === type) {
+    if (tmp(17954).IntegrationTypes.YOUTUBE === type) {
       const account = integration.account;
       let name;
       if (account != null) {
         name = account.name;
       }
       let combined = name;
-    } else if (tmp(17874).IntegrationTypes.TWITCH === type) {
+    } else if (tmp(17954).IntegrationTypes.TWITCH === type) {
       const _HermesInternal = HermesInternal;
       combined = "twitch.tv/" + integration.name;
     }
@@ -139,7 +139,7 @@ IntegrationItem.prototype["render"] = function render() {
         }
         return enabled;
       };
-      const items = [closure_1_11(tmp(5775).TableRow, obj2), ];
+      const items = [closure_1_11(tmp(5817).TableRow, obj2), ];
       const obj5 = { value: null, disabled: null, onValueChange: null, label: null };
       const _Boolean = Boolean;
       obj5.value = Boolean(self.state.enabled);
@@ -147,19 +147,19 @@ IntegrationItem.prototype["render"] = function render() {
       obj5.onValueChange = self.handleToggleEnabled;
       const intl = tmp(1115).intl;
       obj5.label = intl.string(tmp(1115).t.vQC6vR);
-      items[1] = closure_1_11(tmp(7396).TableSwitchRow, obj5);
+      items[1] = closure_1_11(tmp(7440).TableSwitchRow, obj5);
       obj4.children = items;
-      return closure_1_12(tmp(5857).TableRowGroup, obj4);
+      return closure_1_12(tmp(5899).TableRowGroup, obj4);
     } else {
       const tmp12 = closure_1_11;
       const tmp13 = React4;
       const tmpResult = tmp(1397);
-      const tmpResult2 = tmp(4573);
+      const tmpResult2 = tmp(4607);
       const icon = { source: null, style: null };
-      icon.source = tmpResult.makeSource(tmp(4573).isThemeDark(props.theme) ? icon.darkPNG : icon.lightPNG);
+      icon.source = tmpResult.makeSource(tmp(4607).isThemeDark(props.theme) ? icon.darkPNG : icon.lightPNG);
       icon.style = styles.platformIcon;
       tmp12(tmp13, icon);
-      const tmp14 = tmp(4573).isThemeDark(props.theme) ? icon.darkPNG : icon.lightPNG;
+      const tmp14 = tmp(4607).isThemeDark(props.theme) ? icon.darkPNG : icon.lightPNG;
     }
   } else {
     return null;
@@ -179,17 +179,17 @@ export default function GuildSettingsModalIntegrationPlatform(platformType) {
       GuildSettingsActionCreatorsDefault.saveGuild(tmp.id, obj2);
     }
   }
-  const token = platformType(4423).useToken(closeGuildSettings(576).modules.mobile.TABLE_ROW_PADDING);
+  const token = platformType(4457).useToken(closeGuildSettings(576).modules.mobile.TABLE_ROW_PADDING);
   const tmp5 = closure_14();
   dependencyMap = tmp5;
-  let obj = platformType(4423);
+  let obj = platformType(4457);
   const navigation = platformType(1484).useNavigation();
   let obj2 = platformType(1484);
   const items = [guild];
   const stateFromStoresObject = platformType(504).useStateFromStoresObject(items, () => ({ guild: guild.getGuild(), submitting: guild.isSubmitting(), hasChanges: guild.hasChanges() }));
   const submitting = stateFromStoresObject.submitting;
   ({ hasChanges: c5, guild } = stateFromStoresObject);
-  const theme = closeGuildSettings(4656)();
+  const theme = closeGuildSettings(4690)();
   const obj4 = platformType(504);
   const items1 = [guild];
   const stateFromStores = platformType(504).useStateFromStores(items1, () => guild.getProps().integrations);
@@ -204,7 +204,7 @@ export default function GuildSettingsModalIntegrationPlatform(platformType) {
       fn = () => null;
     }
     const obj3 = { headerLeft: fn, title: null, headerRight: null };
-    value = tmp3(5453).get(platformType);
+    value = tmp3(5495).get(platformType);
     let name;
     if (value != null) {
       name = value.name;
@@ -232,14 +232,14 @@ export default function GuildSettingsModalIntegrationPlatform(platformType) {
     navigation.setOptions(obj3);
     if (constants2.YOUTUBE === platformType) {
       let intl = tmp(1115).intl;
-      const obj6 = { connectAction: onConectTap, helpdeskArticle: tmp3(2025).getArticleURL(onSave.YOUTUBE_INTEGRATION) };
+      const obj6 = { connectAction: onConectTap, helpdeskArticle: tmp3(2108).getArticleURL(onSave.YOUTUBE_INTEGRATION) };
       let formatResult = intl.format(tmp(1115).t["4OSAQ9"], obj6);
-      const tmp3Result3 = tmp3(2025);
+      const tmp3Result3 = tmp3(2108);
     } else if (tmp10.TWITCH === platformType) {
       const intl2 = tmp(1115).intl;
-      const obj7 = { connectAction: onConectTap, helpdeskArticle: tmp3(2025).getArticleURL(onSave.TWITCH_INTEGRATION) };
+      const obj7 = { connectAction: onConectTap, helpdeskArticle: tmp3(2108).getArticleURL(onSave.TWITCH_INTEGRATION) };
       formatResult = intl2.format(tmp(1115).t.ro1jEN, obj7);
-      const tmp3Result4 = tmp3(2025);
+      const tmp3Result4 = tmp3(2108);
     }
     const obj8 = { style: tmp5.form, contentContainerStyle: platformType.contentContainerStyle, children: null };
     const obj9 = { style: null, spacing: null, children: null };
@@ -264,10 +264,10 @@ export default function GuildSettingsModalIntegrationPlatform(platformType) {
     const obj11 = { children: null };
     const items2 = [mapped, ];
     const obj12 = { variant: "text-sm/medium", color: "text-muted", children: formatResult };
-    items2[1] = closure_11(tmp(4718).Text, obj12);
+    items2[1] = closure_11(tmp(4752).Text, obj12);
     obj9.children = items2;
-    obj8.children = closure_12(tmp(5142).Stack, obj9);
-    const items3 = [closure_11(tmp(8831).Form, obj8), closure_11(tmp(7236).NavScrim, {})];
+    obj8.children = closure_12(tmp(5184).Stack, obj9);
+    const items3 = [closure_11(tmp(8870).Form, obj8), closure_11(tmp(7280).NavScrim, {})];
     obj11.children = items3;
     return closure_12(closure_13, obj11);
   }

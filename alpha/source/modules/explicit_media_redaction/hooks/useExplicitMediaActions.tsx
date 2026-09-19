@@ -1,10 +1,10 @@
-// Module ID: 9637
-// Function ID: 9638
+// Module ID: 9512
+// Function ID: 9513
 // Name: useExplicitMediaActions
-// Dependencies: [5, 32, 19, 4622, 2]
+// Dependencies: [5, 32, 19, 4656, 2]
 // Exports: useExplicitMediaActions
 
-// Module 9637 (useExplicitMediaActions)
+// Module 9512 (useExplicitMediaActions)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

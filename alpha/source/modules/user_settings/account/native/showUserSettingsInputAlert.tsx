@@ -1,14 +1,14 @@
-// Module ID: 15013
-// Function ID: 15014
+// Module ID: 15067
+// Function ID: 15068
 // Name: showUserSettingsInputAlert
-// Dependencies: [19, 21, 5067, 15014, 1897, 1115, 5163, 2]
+// Dependencies: [19, 21, 5109, 15068, 1980, 1115, 5205, 2]
 // Exports: default
 
-// Module 15013 (showUserSettingsInputAlert)
+// Module 15067 (showUserSettingsInputAlert)
 import util from "util" /* 1115 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5067 */;
-import common_AlertDefault from "common/Alert" /* 5163 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1980 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5109 */;
+import common_AlertDefault from "common/Alert" /* 5205 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,7 +21,7 @@ export default function showUserSettingsInputAlert(arg0) {
   closure_3 = Object.assign(arg0, Object.assign({ onSubmit: 0, onSuccess: 0, onError: 0 }));
   actions_AlertActionCreatorsDefault.openLazy({
     importer() {
-      return asyncRequireImpl(15014, dependencyMap.paths).then((result) => {
+      return asyncRequireImpl(15068, dependencyMap.paths).then((result) => {
         closure_0 = result.default;
         return (arg0) => {
           const obj = {};
@@ -43,6 +43,7 @@ export default function showUserSettingsInputAlert(arg0) {
           return closure_3(closure_0, obj);
         };
       });
-    }
+    },
+    isDismissable: false
   });
 };

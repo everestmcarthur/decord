@@ -1,16 +1,16 @@
-// Module ID: 2023
-// Function ID: 2024
+// Module ID: 2106
+// Function ID: 2107
 // Name: useCommunicationDisabledNoticeStore
-// Dependencies: [32, 2024, 510, 561, 1248, 1243, 4345, 2]
+// Dependencies: [32, 2107, 510, 561, 1248, 1243, 4379, 2]
 // Exports: clearCommunicationDisabledNotice, useCommunicationDisabledNoticeStore
 
-// Module 2023 (useCommunicationDisabledNoticeStore)
+// Module 2106 (useCommunicationDisabledNoticeStore)
 import _mod1243 from "module_1243" /* 1243 */;
-import _mod4345 from "module_4345" /* 4345 */;
+import _mod4379 from "module_4379" /* 4379 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
-const DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY = fn(2024).DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY;
+const DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY = fn(2107).DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY;
 const module_561 = fn(561);
 let state = module_561.createStore((arg0, arg1) => {
   _require = arg0;
@@ -58,7 +58,7 @@ export const useCommunicationDisabledNoticeStore = function useCommunicationDisa
     const items = [, ];
     ({ notificationDismissedInGuilds: arr[0], dismissNotification: arr[1] } = arg0);
     return items;
-  }, _mod4345.shallow), 2);
+  }, _mod4379.shallow), 2);
   const first = tmp[0];
   let items = [!first.has(arg0), tmp[1]];
   return items;

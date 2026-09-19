@@ -1,19 +1,19 @@
-// Module ID: 15700
-// Function ID: 15701
+// Module ID: 15755
+// Function ID: 15756
 // Name: InAppNotificationsSetting
-// Dependencies: [8194, 1074, 1936, 10334, 1115, 2806, 1241, 11714, 14669, 15701, 2]
+// Dependencies: [8232, 1074, 2019, 10346, 1115, 2808, 1241, 11723, 14724, 15756, 2]
 
-// Module 15700 (InAppNotificationsSetting)
+// Module 15755 (InAppNotificationsSetting)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import UserSettings from "UserSettings" /* 1936 */;
-import _modDef2806 from "module_2806" /* 2806 */;
-import SettingsConstants from "SettingsConstants" /* 8194 */;
-import FocusModeUtils from "FocusModeUtils" /* 10334 */;
-import notifications_NotificationSettingsUtils from "notifications/NotificationSettingsUtils" /* 14669 */;
-import MobileNotifSettings from "MobileNotifSettings" /* 15701 */;
-import SettingBuilders_mod from "SettingBuilders" /* 11714 */;
+import UserSettings from "UserSettings" /* 2019 */;
+import _modDef2808 from "module_2808" /* 2808 */;
+import SettingsConstants from "SettingsConstants" /* 8232 */;
+import FocusModeUtils from "FocusModeUtils" /* 10346 */;
+import notifications_NotificationSettingsUtils from "notifications/NotificationSettingsUtils" /* 14724 */;
+import MobileNotifSettings from "MobileNotifSettings" /* 15756 */;
+import SettingBuilders_mod from "SettingBuilders" /* 11723 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;
@@ -60,7 +60,7 @@ const obj3 = {};
 const merged1 = Object.assign(obj);
 obj3.useTitle = function useTitle() {
   const intl = util.intl;
-  return intl.string(_modDef2806.sH5mu9);
+  return intl.string(_modDef2808.sH5mu9);
 };
 obj3.useDescription = function useRedesignInAppNotificationsDescription() {
   const focusModeEnabled = FocusModeUtils.useFocusModeEnabled();
@@ -69,7 +69,7 @@ obj3.useDescription = function useRedesignInAppNotificationsDescription() {
   if (focusModeEnabled) {
     let stringResult = string(util.t.cIRG0s);
   } else {
-    stringResult = string(_modDef2806["T/zMdV"]);
+    stringResult = string(_modDef2808["T/zMdV"]);
   }
   return stringResult;
 };

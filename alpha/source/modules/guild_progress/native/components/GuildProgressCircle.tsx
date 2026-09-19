@@ -1,20 +1,20 @@
-// Module ID: 12832
-// Function ID: 12833
+// Module ID: 12841
+// Function ID: 12842
 // Name: GuildProgressCircle
-// Dependencies: [19, 17, 21, 4722, 576, 12833, 12717, 2]
+// Dependencies: [19, 17, 21, 4756, 576, 12842, 12726, 2]
 // Exports: default
 
-// Module 12832 (GuildProgressCircle)
+// Module 12841 (GuildProgressCircle)
 import nativeDefault from "native" /* 576 */;
-import GuildProgressUtils from "GuildProgressUtils" /* 12717 */;
-import ProgressCircleDefault from "ProgressCircle" /* 12833 */;
+import GuildProgressUtils from "GuildProgressUtils" /* 12726 */;
+import ProgressCircleDefault from "ProgressCircle" /* 12842 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { wrapper: { position: "relative" }, circle: { position: "absolute" }, progressCircle: { color: nativeDefault.colors.BACKGROUND_BRAND } };
 let closure_6 = createStyles.createStyles(obj2);
 let size = fn(2);

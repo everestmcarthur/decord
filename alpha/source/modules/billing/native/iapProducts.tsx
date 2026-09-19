@@ -1,9 +1,9 @@
-// Module ID: 11324
-// Function ID: 11325
+// Module ID: 11337
+// Function ID: 11338
 // Name: billing/iapProducts
 // Dependencies: [2]
 
-// Module 11324 (billing/iapProducts)
+// Module 11337 (billing/iapProducts)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/billing/native/iapProducts.tsx");

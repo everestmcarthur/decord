@@ -1,13 +1,13 @@
-// Module ID: 13500
-// Function ID: 13501
+// Module ID: 13185
+// Function ID: 13186
 // Name: restartVibegrationsAppFrames
-// Dependencies: [9748, 9816, 9745, 2]
+// Dependencies: [9312, 9561, 9570, 2]
 // Exports: default
 
-// Module 13500 (restartVibegrationsAppFrames)
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 9745 */;
-import FramesNativeManagerDefault from "FramesNativeManager" /* 9816 */;
-import FramesStore from "FramesStore" /* 9748 */;
+// Module 13185 (restartVibegrationsAppFrames)
+import FramesNativeManagerDefault from "FramesNativeManager" /* 9561 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 9570 */;
+import FramesStore from "FramesStore" /* 9312 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/vibegrations/native/restartVibegrationsAppFrames.tsx");
@@ -18,15 +18,28 @@ export default function restartVibegrationsAppFrames(applicationId) {
     const items = [];
     HermesBuiltin.arraySpread(FramesStore.getAllFrames(), 0);
     const found = items.filter((applicationId) => applicationId.applicationId === closure_0);
-    for (const item10003 of found) {
+    for (const item10006 of found) {
+      let tmp2 = item10006;
+      let surface = item10006.surface;
+      let mainFrame = FramesStore.getMainFrame();
+      let id;
+      if (mainFrame != null) {
+        id = mainFrame.id;
+      }
+      let tmp7 = importDefault;
       let obj = FramesNativeManagerDefault;
-      let leaveFrameResult = obj.leaveFrame(item10003.id);
+      let leaveFrameResult = obj.leaveFrame(tmp2.id);
       let obj2 = FramesActionCreatorsDefault;
-      let obj3 = { applicationId: arg0, surface: item10003.surface };
+      let obj3 = { applicationId: arg0, surface: null };
+      obj3.surface = surface;
       let launchFrameResult = obj2.launchFrame(obj3);
       let catchPromise = launchFrameResult.catch(() => {
 
       });
+      if (id !== tmp2.id) {
+        let tmp7Result = tmp7(9570);
+        let demoteMainFrameResult = tmp7Result.demoteMainFrame(tmp2.id);
+      }
       continue;
     }
   }

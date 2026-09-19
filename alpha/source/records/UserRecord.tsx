@@ -1,14 +1,14 @@
 // Module ID: 1386
 // Function ID: 1387
 // Name: UserRecord
-// Dependencies: [1387, 1074, 1374, 1388, 1389, 1393, 1394, 1378, 1395, 1396, 1086, 11, 1397, 1385, 1886, 1380, 1882, 1887, 2]
+// Dependencies: [1387, 1074, 1374, 1388, 1389, 1393, 1394, 1378, 1395, 1396, 1086, 11, 1397, 1385, 1969, 1380, 1965, 1970, 2]
 
 // Module 1386 (UserRecord)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
 import FlagUtils from "FlagUtils" /* 1385 */;
 import AvatarUtils from "AvatarUtils" /* 1397 */;
-import AvatarDecorationUtils from "AvatarDecorationUtils" /* 1882 */;
-import PremiumTypeUtils from "PremiumTypeUtils" /* 1886 */;
+import AvatarDecorationUtils from "AvatarDecorationUtils" /* 1965 */;
+import PremiumTypeUtils from "PremiumTypeUtils" /* 1969 */;
 import Record from "Record" /* 1387 */;
 
 const AvatarUtilsDefault = AvatarUtils;

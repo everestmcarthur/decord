@@ -1,19 +1,19 @@
-// Module ID: 4879
-// Function ID: 4880
+// Module ID: 4913
+// Function ID: 4914
 // Name: _guildRoomConnect
-// Dependencies: [5, 502, 4880, 1074, 4882, 1271, 4883, 573, 4901, 4912, 4920, 11, 4881, 4921, 4922, 2]
+// Dependencies: [5, 502, 4914, 1074, 4916, 1271, 4917, 573, 4935, 4946, 4954, 11, 4915, 4955, 4956, 2]
 // Exports: clearGuildRoomPendingPosition, createGuildRoomNote, deleteGuildRoomNote, fetchGuildRoom, guildRoomConnect, guildRoomDisconnect, guildRoomLocalDisconnect, guildRoomObjectUpdate, guildRoomToggleLayout, guildRoomUpdate, maybeSetGuildRoomVideoOverlay, placePendingGuildRoomNote, selectGuildRoomLocalPosition, setGuildRoomRememberVideoOverlayVisibility, setGuildRoomVideoOverlayVisibility, startPendingGuildRoomNote
 
-// Module 4879 (_guildRoomConnect)
+// Module 4913 (_guildRoomConnect)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
-import GuildRoomTypes from "GuildRoomTypes" /* 4881 */;
-import GuildRoomSeats from "GuildRoomSeats" /* 4882 */;
-import GuildRoomAnalytics from "GuildRoomAnalytics" /* 4901 */;
+import GuildRoomTypes from "GuildRoomTypes" /* 4915 */;
+import GuildRoomSeats from "GuildRoomSeats" /* 4916 */;
+import GuildRoomAnalytics from "GuildRoomAnalytics" /* 4935 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildRoomStore from "GuildRoomStore" /* 4880 */;
+import GuildRoomStore from "GuildRoomStore" /* 4914 */;
 
 require = fn;
 let closure_8 = async function _guildRoomConnect(arg0, value) {

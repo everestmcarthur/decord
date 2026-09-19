@@ -1,12 +1,12 @@
-// Module ID: 9780
-// Function ID: 9781
+// Module ID: 9612
+// Function ID: 9613
 // Name: showActivitiesInvalidPermissionsAlert
-// Dependencies: [5066, 1115, 2]
+// Dependencies: [5108, 1115, 2]
 // Exports: showActivitiesInvalidPermissionsAlert
 
-// Module 9780 (showActivitiesInvalidPermissionsAlert)
+// Module 9612 (showActivitiesInvalidPermissionsAlert)
 import util from "util" /* 1115 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5066 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5108 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/voice_calls/showActivitiesInvalidPermissionsAlert.tsx");

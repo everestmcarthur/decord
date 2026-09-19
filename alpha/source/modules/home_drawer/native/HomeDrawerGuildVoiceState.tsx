@@ -1,22 +1,22 @@
-// Module ID: 16577
-// Function ID: 16578
+// Module ID: 16653
+// Function ID: 16654
 // Name: HomeDrawerGuildVoiceState
-// Dependencies: [19, 17, 2013, 4371, 4903, 4746, 1074, 21, 4722, 576, 13273, 1177, 4718, 1115, 10306, 5757, 5156, 16576, 504, 12, 13914, 2]
+// Dependencies: [19, 17, 2096, 4405, 4937, 4780, 1074, 21, 4756, 576, 13318, 1177, 4752, 1115, 10318, 5799, 5198, 16652, 504, 12, 13969, 2]
 // Exports: GuildVoiceState, useVoiceUsers
 
-// Module 16577 (HomeDrawerGuildVoiceState)
+// Module 16653 (HomeDrawerGuildVoiceState)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import Text_Text from "Text/Text" /* 4718 */;
-import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 10306 */;
-import AvatarPile from "AvatarPile" /* 13273 */;
+import Text_Text from "Text/Text" /* 4752 */;
+import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 10318 */;
+import AvatarPile from "AvatarPile" /* 13318 */;
 import noop from "module_19" /* 19 */;
-import GuildChannelStore from "GuildChannelStore" /* 2013 */;
-import RelationshipStore from "RelationshipStore" /* 4371 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4903 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4746 */;
+import GuildChannelStore from "GuildChannelStore" /* 2096 */;
+import RelationshipStore from "RelationshipStore" /* 4405 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4937 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4780 */;
 
 const require = globalThis.__r;
 
@@ -46,11 +46,11 @@ function LiveTag() {
   return closure_1_11(View, obj);
 }
 const View = fn(17).View;
-const GUILD_VOCAL_CHANNELS_KEY = fn(2013).GUILD_VOCAL_CHANNELS_KEY;
+const GUILD_VOCAL_CHANNELS_KEY = fn(2096).GUILD_VOCAL_CHANNELS_KEY;
 const ChannelTypes = fn(1074).ChannelTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-let createStyles = fn(4722);
+let createStyles = fn(4756);
 let obj2 = { voiceContainer: { paddingRight: 8, height: 40, gap: 4, justifyContent: "center" }, streamPreviewShadow: null, streamPreview: null, streamPreviewDarkGradient: null, streamPreviewGradient: null, streamPreviewBorder: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_MEDIUM);
 obj2.streamPreviewShadow = { borderRadius: nativeDefault.radii.sm };
@@ -61,7 +61,7 @@ obj2.streamPreviewGradient = { position: "absolute", top: 0, left: 0, right: 0, 
 const rect = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.sm };
 obj2.streamPreviewBorder = rect;
 let closure_13 = createStyles.createStyles(obj2);
-createStyles = fn(4722);
+createStyles = fn(4756);
 let obj4 = { tag: null, tagText: null };
 const rect1 = { paddingHorizontal: 4, paddingVertical: 1, borderBottomRightRadius: nativeDefault.radii.xs, overflow: "hidden", justifyContent: "center", alignItems: "center", backgroundColor: nativeDefault.unsafe_rawColors.RED_400, position: "absolute", top: 0, left: 0 };
 obj4.tag = rect1;
@@ -100,11 +100,11 @@ export const GuildVoiceState = function GuildVoiceState(arg0) {
       const obj6 = { style: tmp.streamPreview, source: null };
       const obj7 = { uri: previewUrl };
       obj6.source = obj7;
-      const items1 = [tmp7(tmp3(5757), obj6), , , , ];
+      const items1 = [tmp7(tmp3(5799), obj6), , , , ];
       const obj8 = { colors: ["rgba(0, 0, 0, 1)", "rgba(0, 0, 0, 0)"], start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, style: tmp.streamPreviewDarkGradient, pointerEvents: "none" };
-      items1[1] = tmp7(tmp3(5156), obj8);
+      items1[1] = tmp7(tmp3(5198), obj8);
       const obj9 = { colors: ["rgba(255, 255, 255, 1)", "rgba(255, 255, 255, 0)"], start: { x: 0, y: 0 }, end: { x: 1, y: 1 }, style: tmp.streamPreviewGradient, pointerEvents: "none" };
-      items1[2] = tmp7(tmp3(5156), obj9);
+      items1[2] = tmp7(tmp3(5198), obj9);
       const obj10 = { style: tmp.streamPreviewBorder, pointerEvents: "none" };
       items1[3] = tmp7(tmp8, obj10);
       items1[4] = tmp7(LiveTag, {});

@@ -1,11 +1,11 @@
-// Module ID: 9851
-// Function ID: 9852
+// Module ID: 9692
+// Function ID: 9693
 // Name: useVideoSpinnerTimer
-// Dependencies: [32, 19, 9852, 2]
+// Dependencies: [32, 19, 9693, 2]
 // Exports: default
 
-// Module 9851 (useVideoSpinnerTimer)
-import VideoSpinnerTimer from "VideoSpinnerTimer" /* 9852 */;
+// Module 9692 (useVideoSpinnerTimer)
+import VideoSpinnerTimer from "VideoSpinnerTimer" /* 9693 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,13 +1,13 @@
-// Module ID: 10529
-// Function ID: 10530
+// Module ID: 10545
+// Function ID: 10546
 // Name: useEmojiPickerSearchState
-// Dependencies: [32, 19, 5629, 1248, 1941, 2]
+// Dependencies: [32, 19, 5671, 1248, 2024, 2]
 // Exports: default
 
-// Module 10529 (useEmojiPickerSearchState)
+// Module 10545 (useEmojiPickerSearchState)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 5629 */;
+import EmojiStore from "EmojiStore" /* 5671 */;
 
 const require = fn;
 const size = fn(2);
@@ -29,7 +29,7 @@ export default function useEmojiPickerSearchState(channel, arg1, intention, bypa
       if (":" === arr[0]) {
         substr = arr.slice(1);
       }
-      const FrecencyUserSettingsActionCreators = channel(1941).FrecencyUserSettingsActionCreators;
+      const FrecencyUserSettingsActionCreators = channel(2024).FrecencyUserSettingsActionCreators;
       const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
       const obj2 = { channel, query: substr, count: 0, intention, bypassPremiumEmojiEntitlement };
       dependencyMap = ref.searchWithoutFetchingLatest(obj2);

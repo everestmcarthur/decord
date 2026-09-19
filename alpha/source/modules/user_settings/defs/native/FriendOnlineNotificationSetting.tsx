@@ -1,14 +1,14 @@
-// Module ID: 15717
-// Function ID: 15718
+// Module ID: 15772
+// Function ID: 15773
 // Name: FriendOnlineNotificationSetting
-// Dependencies: [8194, 11714, 1115, 1936, 15718, 2]
+// Dependencies: [8232, 11723, 1115, 2019, 15773, 2]
 
-// Module 15717 (FriendOnlineNotificationSetting)
+// Module 15772 (FriendOnlineNotificationSetting)
 import util from "util" /* 1115 */;
-import UserSettings from "UserSettings" /* 1936 */;
-import SettingsConstants from "SettingsConstants" /* 8194 */;
-import FriendOnlineNotificationUtils from "FriendOnlineNotificationUtils" /* 15718 */;
-import SettingBuilders from "SettingBuilders" /* 11714 */;
+import UserSettings from "UserSettings" /* 2019 */;
+import SettingsConstants from "SettingsConstants" /* 8232 */;
+import FriendOnlineNotificationUtils from "FriendOnlineNotificationUtils" /* 15773 */;
+import SettingBuilders from "SettingBuilders" /* 11723 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({

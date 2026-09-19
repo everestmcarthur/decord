@@ -1,18 +1,18 @@
-// Module ID: 13327
-// Function ID: 13328
+// Module ID: 13383
+// Function ID: 13384
 // Name: UserProfilePrivacyNotice
-// Dependencies: [32, 19, 17, 1074, 1955, 21, 4722, 576, 1186, 1115, 13328, 8882, 1936, 1944, 7584, 4718, 7578, 4676, 5292, 5850, 2]
+// Dependencies: [32, 19, 17, 1074, 2038, 21, 4756, 576, 1186, 1115, 13384, 8921, 2019, 2027, 7628, 4752, 7622, 4710, 5334, 5892, 2]
 // Exports: default, useIsPrivacyNoticeVisible
 
-// Module 13327 (UserProfilePrivacyNotice)
+// Module 13383 (UserProfilePrivacyNotice)
 import nativeDefault from "native" /* 576 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1186 */;
-import UserSettings from "UserSettings" /* 1936 */;
-import dismissible_content from "dismissible_content" /* 1944 */;
-import Text_Text from "Text/Text" /* 4718 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7584 */;
-import useUserIsTeen from "useUserIsTeen" /* 8882 */;
-import PrivateProfilesExperiment from "PrivateProfilesExperiment" /* 13328 */;
+import UserSettings from "UserSettings" /* 2019 */;
+import dismissible_content from "dismissible_content" /* 2027 */;
+import Text_Text from "Text/Text" /* 4752 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7628 */;
+import useUserIsTeen from "useUserIsTeen" /* 8921 */;
+import PrivateProfilesExperiment from "PrivateProfilesExperiment" /* 13384 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,10 +21,10 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const UserSettingsSections = fn(1074).UserSettingsSections;
-const ContentDismissActionType = fn(1955).ContentDismissActionType;
+const ContentDismissActionType = fn(2038).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO, borderWidth: 1, borderColor: nativeDefault.colors.ICON_FEEDBACK_INFO, borderRadius: nativeDefault.radii.sm, padding: nativeDefault.space.PX_12, flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_8 }, icon: { flexShrink: 0, marginTop: 2 }, text: { flex: 1 }, closeButton: { flexShrink: 0 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -73,13 +73,13 @@ export default function UserProfilePrivacyNotice() {
       dqQ7AN = tmp2(1115).t.dqQ7AN;
     }
     const obj4 = { style: tmp.container, children: null };
-    const obj5 = { style: tmp.icon, children: closure_7(tmp2(4676).CircleInformationIcon, { size: "xs", color: "icon-feedback-info" }) };
+    const obj5 = { style: tmp.icon, children: closure_7(tmp2(4710).CircleInformationIcon, { size: "xs", color: "icon-feedback-info" }) };
     const items1 = [closure_7(View, obj5), , ];
     const obj6 = { style: tmp.text, variant: "text-sm/normal", color: "text-default", children: null };
     const intl = tmp2(1115).intl;
     const obj7 = { privacySettingsLink: callback };
     obj6.children = intl.format(dqQ7AN, obj7);
-    items1[1] = closure_7(tmp2(4718).Text, obj6);
+    items1[1] = closure_7(tmp2(4752).Text, obj6);
     const obj8 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
     const intl2 = tmp2(1115).intl;
     obj8.accessibilityLabel = intl2.string(tmp2(1115).t.WAI6xu);
@@ -87,8 +87,8 @@ export default function UserProfilePrivacyNotice() {
       return require(ContentDismissActionType.USER_DISMISS);
     };
     obj8.style = tmp.closeButton;
-    obj8.children = closure_7(tmp2(5850).XSmallIcon, { size: "xs", color: "icon-feedback-info" });
-    items1[2] = closure_7(tmp2(5292).PressableOpacity, obj8);
+    obj8.children = closure_7(tmp2(5892).XSmallIcon, { size: "xs", color: "icon-feedback-info" });
+    items1[2] = closure_7(tmp2(5334).PressableOpacity, obj8);
     obj4.children = items1;
     return closure_8(View, obj4);
   }

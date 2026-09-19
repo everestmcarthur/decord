@@ -1,10 +1,10 @@
-// Module ID: 1910
-// Function ID: 1911
+// Module ID: 1993
+// Function ID: 1994
 // Name: injectMediaEngine
-// Dependencies: [1911, 1912, 2]
+// Dependencies: [1994, 1995, 2]
 
-// Module 1910 (injectMediaEngine)
-import inject from "inject" /* 1911 */;
+// Module 1993 (injectMediaEngine)
+import inject from "inject" /* 1994 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

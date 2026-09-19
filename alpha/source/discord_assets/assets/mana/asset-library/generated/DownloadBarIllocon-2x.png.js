@@ -1,8 +1,8 @@
-// Module ID: 6128
-// Function ID: 6129
+// Module ID: 6172
+// Function ID: 6173
 // Dependencies: [2]
 
-// Module 6128
+// Module 6172
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/DownloadBarIllocon-2x.png.js");

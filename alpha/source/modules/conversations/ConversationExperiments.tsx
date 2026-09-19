@@ -1,11 +1,11 @@
-// Module ID: 8110
-// Function ID: 8111
+// Module ID: 8148
+// Function ID: 8149
 // Name: ConversationExperiments
-// Dependencies: [1980, 1074, 1434, 504, 2]
+// Dependencies: [2063, 1074, 1434, 504, 2]
 // Exports: isConversationDebugUXEnabled, isTopicalNavEnabled, useIsConversationDebugUXEnabled, useIsTopicalNavEnabled
 
-// Module 8110 (ConversationExperiments)
-import GuildStore from "GuildStore" /* 1980 */;
+// Module 8148 (ConversationExperiments)
+import GuildStore from "GuildStore" /* 2063 */;
 
 const require = globalThis.__r;
 

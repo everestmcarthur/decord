@@ -1,9 +1,9 @@
-// Module ID: 9457
-// Function ID: 9458
+// Module ID: 9343
+// Function ID: 9344
 // Name: XboxLinkConstants
 // Dependencies: [2]
 
-// Module 9457 (XboxLinkConstants)
+// Module 9343 (XboxLinkConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/xbox/XboxLinkConstants.tsx");

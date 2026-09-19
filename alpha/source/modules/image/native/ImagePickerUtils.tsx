@@ -1,10 +1,10 @@
-// Module ID: 5320
-// Function ID: 5321
+// Module ID: 5362
+// Function ID: 5363
 // Name: ImagePickerUtils
 // Dependencies: [1609, 2]
 // Exports: isActionPickSupported, isImageCaptureIntentSupported
 
-// Module 5320 (ImagePickerUtils)
+// Module 5362 (ImagePickerUtils)
 import MetaQuestUtils from "MetaQuestUtils" /* 1609 */;
 import size from "module_2" /* 2 */;
 

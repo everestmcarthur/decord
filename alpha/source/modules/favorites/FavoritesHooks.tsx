@@ -1,23 +1,23 @@
-// Module ID: 10465
-// Function ID: 10466
+// Module ID: 10481
+// Function ID: 10482
 // Name: FavoritesHooks
-// Dependencies: [4543, 1372, 1961, 1971, 1374, 10466, 10467, 504, 1886, 11, 1186, 1983, 2]
+// Dependencies: [4577, 1372, 2044, 2054, 1374, 10482, 10483, 504, 1969, 11, 1186, 2066, 2]
 // Exports: getFavoritesAccess, getFavoritesCategories, useFavorite, useFavoritedChannelIds, useFavorites, useFavoritesAwareChannel, useFavoritesLimitUpsell, useIsFavoritesGuildSelected
 
-// Module 10465 (FavoritesHooks)
+// Module 10481 (FavoritesHooks)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initialize from "initialize" /* 504 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1186 */;
-import PremiumTypeUtilsDefault from "PremiumTypeUtils" /* 1886 */;
-import FavoritesUtils from "FavoritesUtils" /* 1983 */;
-import FavoritesGuildExperiment from "FavoritesGuildExperiment" /* 10467 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4543 */;
+import PremiumTypeUtilsDefault from "PremiumTypeUtils" /* 1969 */;
+import FavoritesUtils from "FavoritesUtils" /* 2066 */;
+import FavoritesGuildExperiment from "FavoritesGuildExperiment" /* 10483 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4577 */;
 import UserStore from "UserStore" /* 1372 */;
-import FavoriteStore from "FavoriteStore" /* 1961 */;
+import FavoriteStore from "FavoriteStore" /* 2044 */;
 
 const require = globalThis.__r;
 
-const FavoritesLimits = tmp(10466);
+const FavoritesLimits = tmp(10482);
 require = fn;
 function useFavoritesAccess(FavoritesGuildActionSheet) {
   let str = FavoritesGuildActionSheet;
@@ -50,7 +50,7 @@ function useFavoritesAccess(FavoritesGuildActionSheet) {
   } else if (isPremiumExactlyResult) {
   }
 }
-const MAX_FAVORITE_CHANNELS = fn(1971).MAX_FAVORITE_CHANNELS;
+const MAX_FAVORITE_CHANNELS = fn(2054).MAX_FAVORITE_CHANNELS;
 const PremiumTypes = fn(1374).PremiumTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/favorites/FavoritesHooks.tsx");

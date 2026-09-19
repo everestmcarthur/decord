@@ -1,12 +1,12 @@
-// Module ID: 8059
-// Function ID: 8060
+// Module ID: 8097
+// Function ID: 8098
 // Name: hasForLaterPremiumType
-// Dependencies: [1372, 1374, 1886, 504, 2]
+// Dependencies: [1372, 1374, 1969, 504, 2]
 // Exports: default, useHasForLaterPremiumType
 
-// Module 8059 (hasForLaterPremiumType)
+// Module 8097 (hasForLaterPremiumType)
 import initialize from "initialize" /* 504 */;
-import PremiumTypeUtils from "PremiumTypeUtils" /* 1886 */;
+import PremiumTypeUtils from "PremiumTypeUtils" /* 1969 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;

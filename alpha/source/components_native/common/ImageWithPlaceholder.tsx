@@ -1,13 +1,13 @@
-// Module ID: 8995
-// Function ID: 8996
+// Module ID: 9034
+// Function ID: 9035
 // Name: ImageWithPlaceholder
-// Dependencies: [17, 21, 1364, 8996, 5757, 2]
+// Dependencies: [17, 21, 1364, 9035, 5799, 2]
 // Exports: ImageWithPlaceholder
 
-// Module 8995 (ImageWithPlaceholder)
+// Module 9034 (ImageWithPlaceholder)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5757 */;
-import ImageWithThumbhashPlaceholderNativeComponentDefault from "ImageWithThumbhashPlaceholderNativeComponent" /* 8996 */;
+import FastImageDefault from "FastImage" /* 5799 */;
+import ImageWithThumbhashPlaceholderNativeComponentDefault from "ImageWithThumbhashPlaceholderNativeComponent" /* 9035 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import size from "module_2" /* 2 */;

@@ -1,18 +1,18 @@
-// Module ID: 12074
-// Function ID: 12075
+// Module ID: 12083
+// Function ID: 12084
 // Name: GuildAntiRaidActionCreators
-// Dependencies: [5, 1980, 8235, 1074, 1241, 4902, 9301, 4314, 1271, 10345, 2]
+// Dependencies: [5, 2063, 8273, 1074, 1241, 4936, 9854, 4348, 1271, 10357, 2]
 // Exports: handleReportRaid, handleResolveRaid, setGuildIncidentActions, setGuildRaidAlerts, trackReportRaidViewed
 
-// Module 12074 (GuildAntiRaidActionCreators)
+// Module 12083 (GuildAntiRaidActionCreators)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
-import _modDef4314 from "module_4314" /* 4314 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4902 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9301 */;
-import getGuildSafetyAlertsChannelIdDefault from "getGuildSafetyAlertsChannelId" /* 10345 */;
+import _modDef4348 from "module_4348" /* 4348 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4936 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9854 */;
+import getGuildSafetyAlertsChannelIdDefault from "getGuildSafetyAlertsChannelId" /* 10357 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildStore from "GuildStore" /* 1980 */;
+import GuildStore from "GuildStore" /* 2063 */;
 
 require = fn;
 let closure_9 = async function _setGuildRaidAlerts(arg0, arg1) {
@@ -95,9 +95,9 @@ let closure_10 = async function _setGuildIncidentActions() {
   }
   let toISOStringResult = null;
   if (tmp5) {
-    _modDef4314();
-    toISOStringResult = _modDef4314().add(tmp8, "hours").toISOString();
-    _modDef4314().add(tmp8, "hours");
+    _modDef4348();
+    toISOStringResult = _modDef4348().add(tmp8, "hours").toISOString();
+    _modDef4348().add(tmp8, "hours");
   }
   let tmp12 = null;
   if (closure_1) {
@@ -246,7 +246,7 @@ let closure_12 = async function _handleReportRaid(arg0, value) {
     }
   }
 };
-const DEFAULT_LOCKDOWN_DURATION = fn(8235).DEFAULT_LOCKDOWN_DURATION;
+const DEFAULT_LOCKDOWN_DURATION = fn(8273).DEFAULT_LOCKDOWN_DURATION;
 const Constants = fn(1074);
 ({ AnalyticEvents: metroRequire, Endpoints: closure_7, GuildFeatures: closure_8 } = Constants);
 const size = fn(2);

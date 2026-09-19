@@ -1,10 +1,10 @@
-// Module ID: 5444
-// Function ID: 5445
+// Module ID: 5486
+// Function ID: 5487
 // Name: SortedArrayUtils
 // Dependencies: [2]
 // Exports: insert, insertionIndex
 
-// Module 5444 (SortedArrayUtils)
+// Module 5486 (SortedArrayUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("utils/SortedArrayUtils.tsx");

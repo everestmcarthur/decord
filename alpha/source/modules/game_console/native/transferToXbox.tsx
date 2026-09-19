@@ -1,11 +1,11 @@
-// Module ID: 9698
-// Function ID: 9699
+// Module ID: 10055
+// Function ID: 10056
 // Name: transferToXbox
-// Dependencies: [5, 19, 17, 1074, 21, 9689, 9686, 9699, 5067, 9700, 1897, 9692, 4864, 2]
+// Dependencies: [5, 19, 17, 1074, 21, 10046, 10043, 10056, 5109, 10057, 1980, 10049, 4898, 2]
 // Exports: default
 
-// Module 9698 (transferToXbox)
-import GameConsoleAlertUtilsDefault from "GameConsoleAlertUtils" /* 9689 */;
+// Module 10055 (transferToXbox)
+import GameConsoleAlertUtilsDefault from "GameConsoleAlertUtils" /* 10046 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -115,7 +115,8 @@ let closure_8 = async function _transferToXbox(arg0, value) {
                       return closure_2_7(closure_0, {});
                     };
                   });
-                }
+                },
+          isDismissable: false
         };
         c4 = 3;
         const obj18 = { value: tmp46(tmp47[8]).openLazy(obj17), done: true };

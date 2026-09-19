@@ -1,9 +1,9 @@
-// Module ID: 7795
-// Function ID: 7796
+// Module ID: 7839
+// Function ID: 7840
 // Name: ConversationVisibilityStore
 // Dependencies: [504, 573, 2]
 
-// Module 7795 (ConversationVisibilityStore)
+// Module 7839 (ConversationVisibilityStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 

@@ -1,18 +1,18 @@
-// Module ID: 8157
-// Function ID: 8158
+// Module ID: 8195
+// Function ID: 8196
 // Name: GuildAutomodMessageStore
-// Dependencies: [1958, 4943, 1074, 8036, 8158, 4945, 7704, 11, 504, 573, 2]
+// Dependencies: [2041, 4976, 1074, 8074, 8196, 4978, 7748, 11, 504, 573, 2]
 
-// Module 8157 (GuildAutomodMessageStore)
+// Module 8195 (GuildAutomodMessageStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 4945 */;
-import AutomodMessageUtils from "AutomodMessageUtils" /* 7704 */;
-import MessageQueue from "MessageQueue" /* 8036 */;
-import AutomodErrorUtils from "AutomodErrorUtils" /* 8158 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
-import MessageStore from "MessageStore" /* 4943 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 4978 */;
+import AutomodMessageUtils from "AutomodMessageUtils" /* 7748 */;
+import MessageQueue from "MessageQueue" /* 8074 */;
+import AutomodErrorUtils from "AutomodErrorUtils" /* 8196 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
+import MessageStore from "MessageStore" /* 4976 */;
 
 require = fn;
 function handleMessageSendFailedAutomod(messageData) {
@@ -135,19 +135,30 @@ const guildAutomodMessageStore = new GuildAutomodMessageStore(DispatcherDefault,
       const tmp = require;
       let result = AutomodMessageUtils.isAutomodMessageRecord(messageRecord);
       if (result) {
-        let flag = tmp(7704).isAutomodNotification(messageRecord);
+        let flag = tmp(7748).isAutomodNotification(messageRecord);
         if (flag) {
           closure_11[guildId] = messageRecord.id;
           flag = true;
         }
         result = flag;
-        const tmpResult = tmp(7704);
+        const tmpResult = tmp(7748);
       }
       return result;
     }
   },
   MESSAGE_SEND_FAILED_AUTOMOD: handleMessageSendFailedAutomod,
   MESSAGE_EDIT_FAILED_AUTOMOD: handleMessageSendFailedAutomod,
+  AUTO_MODERATION_CONTENT_DELETED: function handleAutomodContentDeleted(message) {
+    message = message.message;
+    let flag = null != message;
+    if (flag) {
+      const obj = { id: message.id, messageData: "PX_16", isBlockedEdit: null, errorMessage: tmp };
+      closure_8[message.id] = obj;
+      closure_9 = closure_9 + 1;
+      flag = true;
+    }
+    return flag;
+  },
   REMOVE_AUTOMOD_MESSAGE_NOTICE: function handleMessageNoticeRemove(arg0) {
     if (null != automodFailedMessages[arg0.messageId]) {
       delete tmp[tmp2];

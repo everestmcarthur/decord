@@ -1,13 +1,13 @@
-// Module ID: 7247
-// Function ID: 7248
+// Module ID: 7291
+// Function ID: 7292
 // Name: MagnifyingGlassIcon
-// Dependencies: [19, 21, 576, 4422, 7248, 2]
+// Dependencies: [19, 21, 576, 4456, 7292, 2]
 // Exports: MagnifyingGlassIcon
 
-// Module 7247 (MagnifyingGlassIcon)
+// Module 7291 (MagnifyingGlassIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4422 */;
-import _mod7248 from "module_7248" /* 7248 */;
+import BaseIconImage from "BaseIconImage" /* 4456 */;
+import _mod7292 from "module_7292" /* 7292 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const MagnifyingGlassIcon = function MagnifyingGlassIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod7248, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod7292, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

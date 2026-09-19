@@ -1,9 +1,9 @@
-// Module ID: 1938
-// Function ID: 1939
+// Module ID: 2021
+// Function ID: 2022
 // Name: DMSafetyConstants
 // Dependencies: [1186, 2]
 
-// Module 1938 (DMSafetyConstants)
+// Module 2021 (DMSafetyConstants)
 import preloaded_user_settings from "preloaded_user_settings" /* 1186 */;
 import size from "module_2" /* 2 */;
 

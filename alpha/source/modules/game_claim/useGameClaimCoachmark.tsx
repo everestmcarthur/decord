@@ -1,11 +1,11 @@
-// Module ID: 16518
-// Function ID: 16519
+// Module ID: 16594
+// Function ID: 16595
 // Name: useGameClaimCoachmark
-// Dependencies: [4361, 1074, 16519, 504, 16449, 2]
+// Dependencies: [4395, 1074, 16595, 504, 16525, 2]
 // Exports: useCanShowGameClaimCoachmark
 
-// Module 16518 (useGameClaimCoachmark)
-import PermissionStore from "PermissionStore" /* 4361 */;
+// Module 16594 (useGameClaimCoachmark)
+import PermissionStore from "PermissionStore" /* 4395 */;
 
 const require = globalThis.__r;
 

@@ -1,12 +1,12 @@
-// Module ID: 5140
-// Function ID: 5141
+// Module ID: 5182
+// Function ID: 5183
 // Name: KeyCommands
-// Dependencies: [19, 5141, 2]
+// Dependencies: [19, 5183, 2]
 // Exports: subscribeKeyCommand, useKeyCommands
 
-// Module 5140 (KeyCommands)
+// Module 5182 (KeyCommands)
 import noop from "module_19" /* 19 */;
-import NativeKeyCommandsModule_mod from "NativeKeyCommandsModule" /* 5141 */;
+import NativeKeyCommandsModule_mod from "NativeKeyCommandsModule" /* 5183 */;
 
 function toNativeKeyCommand(eventName) {
   return { eventName: eventName.eventName, input: eventName.input, modifierFlags: eventName.modifierFlags, discoverabilityTitle: eventName.discoverabilityTitle };

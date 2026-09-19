@@ -1,11 +1,11 @@
-// Module ID: 14865
-// Function ID: 14866
+// Module ID: 14919
+// Function ID: 14920
 // Name: GuildProfileEmptyStateSvg
-// Dependencies: [19, 21, 8689, 2]
+// Dependencies: [19, 21, 8727, 2]
 // Exports: default
 
-// Module 14865 (GuildProfileEmptyStateSvg)
-import inlineStyles from "inlineStyles" /* 8689 */;
+// Module 14919 (GuildProfileEmptyStateSvg)
+import inlineStyles from "inlineStyles" /* 8727 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;

@@ -1,21 +1,21 @@
-// Module ID: 16607
-// Function ID: 16608
+// Module ID: 16683
+// Function ID: 16684
 // Name: GuildsBarItemUnavailableGuilds
-// Dependencies: [19, 17, 5064, 21, 4722, 576, 5066, 1115, 504, 16598, 2]
+// Dependencies: [19, 17, 5106, 21, 4756, 576, 5108, 1115, 504, 16674, 2]
 
-// Module 16607 (GuildsBarItemUnavailableGuilds)
+// Module 16683 (GuildsBarItemUnavailableGuilds)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5066 */;
-import _modDef16598 from "module_16598" /* 16598 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5108 */;
+import _modDef16674 from "module_16674" /* 16674 */;
 import noop from "module_19" /* 19 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 5064 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 5106 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: c3, Pressable: closure_4 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 const obj = { unavailableGuilds: { marginTop: nativeDefault.modules.mobile.GUILD_BAR_ITEM_PADDING, justifyContent: "center", alignItems: "center" }, unavailableGuildsIcon: null };
 let size = { width: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE, height: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE };
 obj.unavailableGuildsIcon = size;
@@ -43,8 +43,8 @@ export default noop.memo(function GuildsBarItemUnavailableGuilds() {
       AlertActionCreatorsDefault.show(obj2);
     };
     obj2.style = tmp.unavailableGuilds;
-    const obj4 = { style: tmp.unavailableGuildsIcon, source: _modDef16598 };
-    obj2.children = <closure_3 style={tmp.unavailableGuildsIcon} source={_modDef16598} />;
+    const obj4 = { style: tmp.unavailableGuildsIcon, source: _modDef16674 };
+    obj2.children = <closure_3 style={tmp.unavailableGuildsIcon} source={_modDef16674} />;
     tmp5 = <closure_4 accessibilityRole="button" accessibilityLabel={null} onPress={null} style={null}>{null}</closure_4>;
   }
   return tmp5;

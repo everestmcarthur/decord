@@ -1,13 +1,13 @@
-// Module ID: 18255
-// Function ID: 18256
+// Module ID: 18334
+// Function ID: 18335
 // Name: LocalMessageCacheStatsManager
-// Dependencies: [1074, 7684, 1241, 7314, 2]
+// Dependencies: [1074, 7728, 1241, 7358, 2]
 
-// Module 18255 (LocalMessageCacheStatsManager)
+// Module 18334 (LocalMessageCacheStatsManager)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import MessageCacheStatsDefault from "MessageCacheStats" /* 7684 */;
+import MessageCacheStatsDefault from "MessageCacheStats" /* 7728 */;
 import Constants from "Constants" /* 1074 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7314 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7358 */;
 import size from "module_2" /* 2 */;
 
 function makeLogLine(channelId) {

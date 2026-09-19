@@ -1,10 +1,11 @@
 // Module ID: 6878
 // Function ID: 6879
-// Dependencies: [17]
+// Dependencies: [19]
 
 // Module 6878
-import _mod17 from "module_17" /* 17 */;
+import _mod19 from "module_19" /* 19 */;
 
-const TurboModuleRegistry = _mod17.TurboModuleRegistry;
+const context = _mod19.createContext(null);
 
-export default TurboModuleRegistry.getEnforcing("RNGestureHandlerModule");
+export const BottomSheetModalInternalContext = context;
+export const BottomSheetModalInternalProvider = context.Provider;

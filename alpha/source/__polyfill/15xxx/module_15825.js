@@ -1,9 +1,11 @@
 // Module ID: 15825
 // Function ID: 15826
-// Dependencies: [1121]
+// Dependencies: [8568]
 
 // Module 15825
-import registerAsset from "module_1121" /* 1121 */;
+const require = globalThis.__r;
 
+const require = arg1;
+const dependencyMap = arg6;
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "c6597e29df99a6319981970d49c96987", name: "MagicDoorIcon", type: "png" });
+export const WebView = require("WebView").WebView;

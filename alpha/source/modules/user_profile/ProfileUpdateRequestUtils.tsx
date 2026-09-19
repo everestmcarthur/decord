@@ -1,13 +1,13 @@
-// Module ID: 11340
-// Function ID: 11341
+// Module ID: 11352
+// Function ID: 11353
 // Name: ProfileUpdateRequestUtils
-// Dependencies: [7185, 11341, 1890, 2]
+// Dependencies: [7229, 11353, 1973, 2]
 // Exports: getAccountUpdateForUpdateRequest, getGuildMemberChangesForUpdateRequest, getPrimaryGuildChangesForUpdateRequest, getProfileChangesForUpdateRequest
 
-// Module 11340 (ProfileUpdateRequestUtils)
-import CollectiblesItemType from "CollectiblesItemType" /* 1890 */;
-import ProfilePendingImageTypes from "ProfilePendingImageTypes" /* 7185 */;
-import getCurrentUserProfileDefault from "getCurrentUserProfile" /* 11341 */;
+// Module 11352 (ProfileUpdateRequestUtils)
+import CollectiblesItemType from "CollectiblesItemType" /* 1973 */;
+import ProfilePendingImageTypes from "ProfilePendingImageTypes" /* 7229 */;
+import getCurrentUserProfileDefault from "getCurrentUserProfile" /* 11353 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_profile/ProfileUpdateRequestUtils.tsx");

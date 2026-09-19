@@ -1,22 +1,22 @@
-// Module ID: 16804
-// Function ID: 16805
+// Module ID: 16884
+// Function ID: 16885
 // Name: Elements
-// Dependencies: [32, 19, 17, 4385, 21, 4722, 576, 4718, 1115, 5292, 1177, 16805, 9604, 15436, 563, 9607, 7430, 2]
+// Dependencies: [32, 19, 17, 4419, 21, 4756, 576, 4752, 1115, 5334, 1177, 16885, 9479, 15491, 563, 9482, 7474, 2]
 // Exports: ArrowButton, TruncatedText, useFormattedSubscriptionPlan
 
-// Module 16804 (Elements)
+// Module 16884 (Elements)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import Text_Text from "Text/Text" /* 4718 */;
-import Pressables from "Pressables" /* 5292 */;
-import NativePaymentHooksDefault from "NativePaymentHooks" /* 9604 */;
-import useStoreFrontPriceDefault from "useStoreFrontPrice" /* 9607 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15436 */;
-import _modDef16805 from "module_16805" /* 16805 */;
+import Text_Text from "Text/Text" /* 4752 */;
+import Pressables from "Pressables" /* 5334 */;
+import NativePaymentHooksDefault from "NativePaymentHooks" /* 9479 */;
+import useStoreFrontPriceDefault from "useStoreFrontPrice" /* 9482 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15491 */;
+import _modDef16885 from "module_16885" /* 16885 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SubscriptionPlanStore from "SubscriptionPlanStore" /* 4385 */;
+import SubscriptionPlanStore from "SubscriptionPlanStore" /* 4419 */;
 
 const require = globalThis.__r;
 
@@ -25,7 +25,7 @@ get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: metroRequire, View: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { toggleTruncateButton: { alignSelf: "flex-start", borderBottomWidth: 0.8, borderColor: nativeDefault.colors.TEXT_DEFAULT, marginTop: 2 }, arrowButton: null, arrowButtonText: null, arrowButtonIcon: null };
 let obj3 = { alignSelf: "flex-start", borderBottomWidth: 0.8, borderColor: nativeDefault.colors.TEXT_DEFAULT, marginTop: 2 };
 obj2.arrowButton = { flexDirection: "row", alignItems: "center", paddingHorizontal: 16, height: 40, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
@@ -105,7 +105,7 @@ export const ArrowButton = function ArrowButton(arg0) {
   ({ text, onPress } = arg0);
   const tmp = closure_11();
   const obj = { accessibilityRole: "button", style: tmp.arrowButton, onPress, children: null };
-  const items = [React7(Text_Text.Text, { variant: "text-md/semibold", color: "text-default", style: tmp.arrowButtonText, children: text }), React7(native.Icon, { size: native.Icon.Sizes.SMALL, source: _modDef16805, style: tmp.arrowButtonIcon })];
+  const items = [React7(Text_Text.Text, { variant: "text-md/semibold", color: "text-default", style: tmp.arrowButtonText, children: text }), React7(native.Icon, { size: native.Icon.Sizes.SMALL, source: _modDef16885, style: tmp.arrowButtonIcon })];
   obj.children = items;
   return closure_1_10(Pressables.PressableOpacity, obj);
 };
@@ -119,8 +119,8 @@ export const useFormattedSubscriptionPlan = function useFormattedSubscriptionPla
   let str = "No Price Available";
   if (null != price) {
     const _HermesInternal = HermesInternal;
-    str = "" + tmp3(7430).formatPrice(price.amount, price.currency) + "/mo.";
-    const tmp3Result = tmp3(7430);
+    str = "" + tmp3(7474).formatPrice(price.amount, price.currency) + "/mo.";
+    const tmp3Result = tmp3(7474);
   }
   return str;
 };

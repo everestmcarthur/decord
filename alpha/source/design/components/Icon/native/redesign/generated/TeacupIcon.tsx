@@ -1,13 +1,13 @@
-// Module ID: 15818
-// Function ID: 15819
+// Module ID: 15873
+// Function ID: 15874
 // Name: TeacupIcon
-// Dependencies: [19, 21, 576, 4422, 15819, 2]
+// Dependencies: [19, 21, 576, 4456, 15874, 2]
 // Exports: TeacupIcon
 
-// Module 15818 (TeacupIcon)
+// Module 15873 (TeacupIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4422 */;
-import _mod15819 from "module_15819" /* 15819 */;
+import BaseIconImage from "BaseIconImage" /* 4456 */;
+import _mod15874 from "module_15874" /* 15874 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const TeacupIcon = function TeacupIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15819, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15874, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

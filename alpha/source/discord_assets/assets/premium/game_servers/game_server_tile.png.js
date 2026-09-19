@@ -1,8 +1,8 @@
-// Module ID: 12821
-// Function ID: 12822
+// Module ID: 12830
+// Function ID: 12831
 // Dependencies: [2]
 
-// Module 12821
+// Module 12830
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/premium/game_servers/game_server_tile.png.js");

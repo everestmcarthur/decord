@@ -1,8 +1,8 @@
-// Module ID: 6518
-// Function ID: 6519
+// Module ID: 6562
+// Function ID: 6563
 // Dependencies: [2]
 
-// Module 6518
+// Module 6562
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/NitroWumpusPinkSpotIllustration-2x.png.js");

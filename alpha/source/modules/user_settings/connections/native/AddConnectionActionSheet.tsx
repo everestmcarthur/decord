@@ -1,18 +1,18 @@
-// Module ID: 15175
-// Function ID: 15176
+// Module ID: 15229
+// Function ID: 15230
 // Name: AddConnectionActionSheet
-// Dependencies: [1074, 1922, 21, 4722, 1177, 4656, 1612, 7699, 7364, 7346, 7345, 1115, 6820, 5775, 4689, 9490, 1397, 4573, 7361, 7358, 7378, 2]
+// Dependencies: [1074, 2005, 21, 4756, 1177, 4690, 1612, 7743, 7408, 7390, 7389, 1115, 6864, 5817, 4723, 9340, 1397, 4607, 7405, 7402, 7422, 2]
 // Exports: default
 
-// Module 15175 (AddConnectionActionSheet)
+// Module 15229 (AddConnectionActionSheet)
 import Constants from "Constants" /* 1074 */;
 import AvatarUtils from "AvatarUtils" /* 1397 */;
-import UserApplicationIdentityConstants from "UserApplicationIdentityConstants" /* 1922 */;
-import shared from "shared" /* 4573 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4689 */;
-import TableRow from "TableRow" /* 5775 */;
+import UserApplicationIdentityConstants from "UserApplicationIdentityConstants" /* 2005 */;
+import shared from "shared" /* 4607 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4723 */;
+import TableRow from "TableRow" /* 5817 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4722 */;
+import createStyles from "createStyles" /* 4756 */;
 import native from "native" /* 1177 */;
 import size from "module_2" /* 2 */;
 
@@ -23,10 +23,10 @@ function AddApplicationIdentityTableRow(application) {
   _require = undefined;
   let analyticsLocations;
   ({ start, end } = application);
-  ({ startAuthorization: c0, canStartAuthorization } = analyticsLocations(7361)(application));
-  const tmp2 = analyticsLocations(7361)(application);
-  analyticsLocations = analyticsLocations(7358)(analyticsLocations(7378).ACTION_SHEET).analyticsLocations;
-  const tmp3 = analyticsLocations(7358);
+  ({ startAuthorization: c0, canStartAuthorization } = analyticsLocations(7405)(application));
+  const tmp2 = analyticsLocations(7405)(application);
+  analyticsLocations = analyticsLocations(7402)(analyticsLocations(7422).ACTION_SHEET).analyticsLocations;
+  const tmp3 = analyticsLocations(7402);
   const tmp4 = closure_7();
   const iconSource = application.getIconSource(require("native").getIconSize(require("native").IconSizes.LARGE));
   const obj2 = {

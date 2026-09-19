@@ -1,13 +1,13 @@
-// Module ID: 6753
-// Function ID: 6754
+// Module ID: 6797
+// Function ID: 6798
 // Name: VoiceFiltersSpotIllustration
-// Dependencies: [21, 5757, 6754, 2]
+// Dependencies: [21, 5799, 6798, 2]
 // Exports: VoiceFiltersSpotIllustration
 
-// Module 6753 (VoiceFiltersSpotIllustration)
+// Module 6797 (VoiceFiltersSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5757 */;
-import _modDef6754 from "module_6754" /* 6754 */;
+import FastImageDefault from "FastImage" /* 5799 */;
+import _modDef6798 from "module_6798" /* 6798 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const VoiceFiltersSpotIllustration = function VoiceFiltersSpotIllustratio
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6754 };
+  const obj2 = { uri: _modDef6798 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

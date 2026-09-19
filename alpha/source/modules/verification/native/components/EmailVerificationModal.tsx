@@ -1,13 +1,13 @@
-// Module ID: 5792
-// Function ID: 5793
+// Module ID: 5834
+// Function ID: 5835
 // Name: EmailVerificationModal
-// Dependencies: [32, 19, 1372, 5793, 1074, 21, 5791, 1249, 5794, 5853, 5861, 6783, 6793, 6796, 7178, 7189, 7195, 504, 5768, 7196, 1115, 2]
+// Dependencies: [32, 19, 1372, 5835, 1074, 21, 5833, 1249, 5836, 5895, 5903, 6827, 6837, 6840, 7222, 7233, 7239, 504, 5810, 7240, 1115, 2]
 // Exports: default
 
-// Module 5792 (EmailVerificationModal)
+// Module 5834 (EmailVerificationModal)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1249 */;
-import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 5791 */;
-import NavigatorHeader from "NavigatorHeader" /* 5794 */;
+import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 5833 */;
+import NavigatorHeader from "NavigatorHeader" /* 5836 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
@@ -19,7 +19,7 @@ function closeModal() {
   resetChangeEmailStore();
   EmailVerificationModalActionCreatorsDefault.close();
 }
-const resetChangeEmailStore = fn(5793).resetChangeEmailStore;
+const resetChangeEmailStore = fn(5835).resetChangeEmailStore;
 const VerificationModalScenes = fn(1074).VerificationModalScenes;
 const jsx = fn(21).jsx;
 const size = fn(2);

@@ -1,8 +1,8 @@
-// Module ID: 6532
-// Function ID: 6533
+// Module ID: 6576
+// Function ID: 6577
 // Dependencies: [2]
 
-// Module 6532
+// Module 6576
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/PaintPaletteSpotIllustration-2x.png.js");

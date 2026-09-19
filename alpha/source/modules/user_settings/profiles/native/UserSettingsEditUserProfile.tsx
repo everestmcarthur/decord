@@ -1,17 +1,17 @@
-// Module ID: 14804
-// Function ID: 14805
+// Module ID: 14858
+// Function ID: 14859
 // Name: UserSettingsEditUserProfile
-// Dependencies: [19, 1372, 21, 7358, 7378, 504, 8417, 14805, 2]
+// Dependencies: [19, 1372, 21, 7402, 7422, 504, 8455, 14859, 2]
 // Exports: default
 
-// Module 14804 (UserSettingsEditUserProfile)
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7358 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7378 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8417 */;
+// Module 14858 (UserSettingsEditUserProfile)
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7402 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7422 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8455 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 
-const UserProfileEditFormDefault = tmp(14805);
+const UserProfileEditFormDefault = tmp(14859);
 const require = fn;
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -34,7 +34,7 @@ export default function UserSettingsEditUserProfile(arg0) {
     const obj3 = { currentUser: stateFromStores };
     const merged = Object.assign(arg0);
     obj2.children = jsx(UserProfileEditFormDefault, { currentUser: stateFromStores });
-    tmp7 = jsx(tmp4(7358).AnalyticsLocationProvider, { value: tmp3(AnalyticsLocationDefault.USER_SETTINGS_USER_PROFILE).analyticsLocations, children: null });
+    tmp7 = jsx(tmp4(7402).AnalyticsLocationProvider, { value: tmp3(AnalyticsLocationDefault.USER_SETTINGS_USER_PROFILE).analyticsLocations, children: null });
     const tmpResult = UserProfileEditFormDefault;
   }
   return tmp7;

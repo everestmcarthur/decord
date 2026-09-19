@@ -1,96 +1,22 @@
 // Module ID: 13077
 // Function ID: 13078
-// Dependencies: [13067, 13044, 13039]
-// Exports: logSpanEnd, logSpanStart
+// Dependencies: [13054]
+// Exports: getCapturedScopesOnSpan, setCapturedScopesOnSpan
 
 // Module 13077
-import _mod13067 from "module_13067" /* 13067 */;
+import _mod13054 from "module_13054" /* 13054 */;
 
 require = arg1;
 const dependencyMap = arg6;
+const _sentryScope = "_sentryScope";
+const _sentryIsolationScope = "_sentryIsolationScope";
 
-export const logSpanEnd = function logSpanEnd(spanContext) {
-  if (_mod13067.DEBUG_BUILD) {
-    const spanToJSONResult = tmp(13044).spanToJSON(spanContext);
-    const description = spanToJSONResult.description;
-    let str = "< unknown name >";
-    if (undefined !== description) {
-      str = description;
-    }
-    const op = spanToJSONResult.op;
-    let str2 = "< unknown op >";
-    if (undefined !== op) {
-      str2 = op;
-    }
-    const spanId = spanContext.spanContext().spanId;
-    const tmpResult = tmp(13044);
-    let str3 = "";
-    if (tmpResult2.getRootSpan(spanContext) === spanContext) {
-      str3 = "root ";
-    }
-    const _HermesInternal = HermesInternal;
-    const combined = "[Tracing] Finishing \"" + str2 + "\" " + str3 + "span \"" + str + "\" with ID " + spanId;
-    const logger = tmp(13039).logger;
-    logger.log(combined);
-    tmpResult2 = tmp(13044);
-  }
+export const getCapturedScopesOnSpan = function getCapturedScopesOnSpan(scope) {
+  return { scope: scope[_sentryScope], isolationScope: scope[_sentryIsolationScope] };
 };
-export const logSpanStart = function logSpanStart(spanContext) {
-  if (_mod13067.DEBUG_BUILD) {
-    const spanToJSONResult = tmp(13044).spanToJSON(spanContext);
-    const description = spanToJSONResult.description;
-    let str = "< unknown name >";
-    if (undefined !== description) {
-      str = description;
-    }
-    const op = spanToJSONResult.op;
-    let str2 = "< unknown op >";
-    if (undefined !== op) {
-      str2 = op;
-    }
-    const parent_span_id = spanToJSONResult.parent_span_id;
-    const tmpResult = tmp(13044);
-    const tmpResult4 = tmp(13044);
-    const spanIsSampledResult = tmp(13044).spanIsSampled(spanContext);
-    const rootSpan = tmp(13044).getRootSpan(spanContext);
-    let str3 = "unsampled";
-    if (spanIsSampledResult) {
-      str3 = "sampled";
-    }
-    let str5 = "";
-    if (rootSpan === spanContext) {
-      str5 = "root ";
-    }
-    const _HermesInternal = HermesInternal;
-    const _HermesInternal2 = HermesInternal;
-    const combined = "[Tracing] Starting " + str3 + " " + str5 + "span";
-    const items = ["op: " + str2, , ];
-    const _HermesInternal3 = HermesInternal;
-    items[1] = "name: " + str;
-    const _HermesInternal4 = HermesInternal;
-    items[2] = "ID: " + spanContext.spanContext().spanId;
-    if (parent_span_id) {
-      const _HermesInternal5 = HermesInternal;
-      items.push("parent ID: " + parent_span_id);
-    }
-    if (rootSpan !== spanContext) {
-      const tmpResult6 = tmp(13044);
-      ({ op: op2, description: description2 } = tmp(13044).spanToJSON(rootSpan));
-      const _HermesInternal6 = HermesInternal;
-      items.push("root ID: " + rootSpan.spanContext().spanId);
-      if (op2) {
-        const _HermesInternal7 = HermesInternal;
-        items.push("root op: " + op2);
-      }
-      if (description2) {
-        const _HermesInternal8 = HermesInternal;
-        items.push("root description: " + description2);
-      }
-      const spanToJSONResult1 = tmp(13044).spanToJSON(rootSpan);
-    }
-    const logger = tmp(13039).logger;
-    const _HermesInternal9 = HermesInternal;
-    logger.log("" + combined + "\n  " + items.join("\n  "));
-    const tmpResult5 = tmp(13044);
+export const setCapturedScopesOnSpan = function setCapturedScopesOnSpan(arg0, arg1, arg2) {
+  if (arg0) {
+    const result = _mod13054.addNonEnumerableProperty(arg0, _sentryIsolationScope, arg2);
+    const result1 = _mod13054.addNonEnumerableProperty(arg0, _sentryScope, arg1);
   }
 };

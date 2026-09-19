@@ -1,8 +1,8 @@
-// Module ID: 5906
-// Function ID: 5907
+// Module ID: 5948
+// Function ID: 5949
 // Dependencies: [2]
 
-// Module 5906
+// Module 5948
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ActivitiesIllocon-2x.png.js");

@@ -1,9 +1,9 @@
-// Module ID: 5776
-// Function ID: 5777
+// Module ID: 5818
+// Function ID: 5819
 // Name: TableRowGroupContext
 // Dependencies: [19, 2]
 
-// Module 5776 (TableRowGroupContext)
+// Module 5818 (TableRowGroupContext)
 import _mod19 from "module_19" /* 19 */;
 import size from "module_2" /* 2 */;
 

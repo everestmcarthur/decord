@@ -1,13 +1,13 @@
-// Module ID: 6081
-// Function ID: 6082
+// Module ID: 6125
+// Function ID: 6126
 // Name: DevIdentityTallAbstractUI
-// Dependencies: [21, 5757, 6082, 2]
+// Dependencies: [21, 5799, 6126, 2]
 // Exports: DevIdentityTallAbstractUI
 
-// Module 6081 (DevIdentityTallAbstractUI)
+// Module 6125 (DevIdentityTallAbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5757 */;
-import _modDef6082 from "module_6082" /* 6082 */;
+import FastImageDefault from "FastImage" /* 5799 */;
+import _modDef6126 from "module_6126" /* 6126 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const DevIdentityTallAbstractUI = function DevIdentityTallAbstractUI(widt
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6082 };
+  const obj2 = { uri: _modDef6126 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

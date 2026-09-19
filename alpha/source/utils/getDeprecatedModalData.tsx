@@ -1,11 +1,11 @@
-// Module ID: 4927
-// Function ID: 4928
+// Module ID: 4961
+// Function ID: 4962
 // Name: getDeprecatedModalData
-// Dependencies: [4714, 1074, 2]
+// Dependencies: [4748, 1074, 2]
 // Exports: default
 
-// Module 4927 (getDeprecatedModalData)
-import AccessibilityStore from "AccessibilityStore" /* 4714 */;
+// Module 4961 (getDeprecatedModalData)
+import AccessibilityStore from "AccessibilityStore" /* 4748 */;
 
 const ModalAnimation = fn(1074).ModalAnimation;
 const size = fn(2);

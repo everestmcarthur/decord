@@ -1,15 +1,15 @@
-// Module ID: 14970
-// Function ID: 14971
+// Module ID: 15024
+// Function ID: 15025
 // Name: AccountAgeGroupAdultSetting
-// Dependencies: [8194, 4935, 5593, 14897, 11714, 1115, 2]
+// Dependencies: [8232, 4968, 5635, 14951, 11723, 1115, 2]
 
-// Module 14970 (AccountAgeGroupAdultSetting)
+// Module 15024 (AccountAgeGroupAdultSetting)
 import util from "util" /* 1115 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 4935 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5593 */;
-import SettingsConstants from "SettingsConstants" /* 8194 */;
-import TinyBroncoSettingsPredicate from "TinyBroncoSettingsPredicate" /* 14897 */;
-import SettingBuilders from "SettingBuilders" /* 11714 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 4968 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5635 */;
+import SettingsConstants from "SettingsConstants" /* 8232 */;
+import TinyBroncoSettingsPredicate from "TinyBroncoSettingsPredicate" /* 14951 */;
+import SettingBuilders from "SettingBuilders" /* 11723 */;
 import size from "module_2" /* 2 */;
 
 let obj = {

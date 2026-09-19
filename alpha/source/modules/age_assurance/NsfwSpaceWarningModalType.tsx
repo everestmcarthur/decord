@@ -1,9 +1,9 @@
-// Module ID: 8646
-// Function ID: 8647
+// Module ID: 8684
+// Function ID: 8685
 // Name: NsfwSpaceWarningModalType
 // Dependencies: [2]
 
-// Module 8646 (NsfwSpaceWarningModalType)
+// Module 8684 (NsfwSpaceWarningModalType)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/age_assurance/NsfwSpaceWarningModalType.tsx");

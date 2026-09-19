@@ -1,73 +1,64 @@
-// Module ID: 17517
-// Function ID: 17518
+// Module ID: 17594
+// Function ID: 17595
 // Name: UserVideoFailed
-// Dependencies: [17, 1074, 21, 4722, 576, 9348, 13221, 4718, 1115, 5144, 9857, 4777, 9327, 2]
+// Dependencies: [17, 1074, 21, 4756, 576, 9685, 4752, 1115, 5186, 9698, 4811, 9910, 2]
 // Exports: default
 
-// Module 17517 (UserVideoFailed)
+// Module 17594 (UserVideoFailed)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4718 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4777 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 9327 */;
-import AVError from "AVError" /* 9348 */;
-import VideoStreamReadyActionCreators from "VideoStreamReadyActionCreators" /* 9857 */;
+import Text_Text from "Text/Text" /* 4752 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4811 */;
+import AVError from "AVError" /* 9685 */;
+import VideoStreamReadyActionCreators from "VideoStreamReadyActionCreators" /* 9698 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 9910 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4722 */;
+import createStyles from "createStyles" /* 4756 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;
 const VideoToggleState = Constants.VideoToggleState;
-({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-let obj = { container: { alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_700, padding: 8 }, placeholderImage: { marginBottom: 8, width: "100%", resizeMode: "contain" }, button: { marginTop: 16, alignSelf: "center" } };
-let closure_8 = createStyles.createStyles(obj);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+let obj = { container: { alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_700, padding: 8 }, text: { textAlign: "center" }, button: { marginTop: 16, alignSelf: "center" } };
+let closure_7 = createStyles.createStyles(obj);
 let result = size.fileFinishedImporting("modules/video_calls/native/components/UserVideoFailed.tsx");
 
 export default function UserVideoFailed(arg0) {
-  ({ userId: require, removeRetryButton, removeSplashImage } = arg0);
+  ({ userId: require, removeRetryButton } = arg0);
   ({ style, avError } = arg0);
-  const merged = Object.assign(arg0, Object.assign({ userId: 0, style: 0, avError: 0, removeRetryButton: 0, removeSplashImage: 0 }));
-  const tmp2 = closure_8();
+  const merged = Object.assign(arg0, Object.assign({ userId: 0, style: 0, avError: 0, removeRetryButton: 0 }));
+  const tmp2 = closure_7();
   const obj2 = {};
   const merged1 = Object.assign(merged);
   const items = [tmp2.container, style];
   obj2.style = items;
-  let tmp9 = !removeSplashImage;
-  if (!removeSplashImage) {
-    const obj3 = { style: tmp2.placeholderImage };
-    tmp9 = closure_5(tmp3(13221).StreamFailed, obj3);
-  }
-  const obj4 = { children: null };
-  const items1 = [tmp9, ];
-  const obj5 = { variant: "text-md/semibold", color: "text-strong", children: null };
-  const intl = tmp3(1115).intl;
-  obj5.children = intl.string(util.t["z+mxvo"]);
-  items1[1] = closure_5(Text_Text.Text, obj5);
-  obj4.children = items1;
-  const items2 = [closure_7(closure_6, obj4), , ];
-  const obj6 = { variant: "text-sm/semibold", color: "text-muted", selectable: true, children: null };
-  const intl2 = tmp3(1115).intl;
-  obj6.children = intl2.formatToPlainString(util.t.ejOT95, { errorCode: AVError.getErrorInfo(avError).errorCode });
-  items2[1] = closure_5(Text_Text.Text, obj6);
-  const obj7 = { style: tmp2.button, children: null };
-  let tmp11Result = !removeRetryButton;
+  const obj3 = { variant: "text-md/semibold", color: "text-strong", style: tmp2.text, children: null };
+  const intl = util.intl;
+  obj3.children = intl.string(util.t["z+mxvo"]);
+  const items1 = [closure_5(Text_Text.Text, obj3), , ];
+  const obj4 = { variant: "text-sm/semibold", color: "text-muted", style: tmp2.text, selectable: true, children: null };
+  const intl2 = util.intl;
+  obj4.children = intl2.formatToPlainString(util.t.ejOT95, { errorCode: AVError.getErrorInfo(avError).errorCode });
+  items1[1] = closure_5(Text_Text.Text, obj4);
+  const obj5 = { style: tmp2.button, children: null };
+  let tmp8Result = !removeRetryButton;
   if (!removeRetryButton) {
-    const obj8 = { variant: "secondary", text: null, onPress: null };
+    const obj6 = { variant: "secondary", size: "md", text: null, onPress: null };
     const intl3 = tmp3(1115).intl;
-    obj8.text = intl3.string(tmp3(1115).t["hxmQ/e"]);
-    obj8.onPress = function onPress() {
+    obj6.text = intl3.string(tmp3(1115).t["hxmQ/e"]);
+    obj6.onPress = function onPress() {
       const result = VideoStreamReadyActionCreators.clearVideoStreamTimeout(BaseConnectionEvent.MediaEngineContextTypes.DEFAULT, closure_1_0);
       AudioActionCreatorsDefault.setDisableLocalVideo(closure_1_0, VideoToggleState.DISABLED, BaseConnectionEvent.MediaEngineContextTypes.DEFAULT, false);
       const timerId = setTimeout(() => {
         AudioActionCreatorsDefault.setDisableLocalVideo(closure_1_0, constants.MANUAL_ENABLED, BaseConnectionEvent.MediaEngineContextTypes.DEFAULT, false);
       }, 1000);
     };
-    tmp11Result = tmp11(tmp3(5144).Button, obj8);
+    tmp8Result = tmp8(tmp3(5186).Button, obj6);
   }
-  obj7.children = tmp11Result;
-  items2[2] = closure_5(View, obj7);
-  obj2.children = items2;
-  return closure_7(View, obj2);
+  obj5.children = tmp8Result;
+  items1[2] = closure_5(View, obj5);
+  obj2.children = items1;
+  return closure_6(View, obj2);
 };

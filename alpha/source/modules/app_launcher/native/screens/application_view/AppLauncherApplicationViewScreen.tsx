@@ -1,14 +1,14 @@
-// Module ID: 12369
-// Function ID: 12370
+// Module ID: 12378
+// Function ID: 12379
 // Name: AppLauncherApplicationViewScreen
-// Dependencies: [19, 17, 9528, 1483, 5168, 21, 4722, 11467, 12370, 9527, 1610, 12371, 7364, 4458, 12372, 2]
+// Dependencies: [19, 17, 9403, 1483, 5210, 21, 4756, 11479, 12379, 9402, 1610, 12380, 7408, 4492, 12381, 2]
 // Exports: default
 
-// Module 12369 (AppLauncherApplicationViewScreen)
+// Module 12378 (AppLauncherApplicationViewScreen)
 import KeyboardTypes from "KeyboardTypes" /* 1610 */;
-import AppLauncherContext from "AppLauncherContext" /* 11467 */;
+import AppLauncherContext from "AppLauncherContext" /* 11479 */;
 import noop from "module_19" /* 19 */;
-import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9528 */;
+import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9403 */;
 
 const require = globalThis.__r;
 
@@ -53,9 +53,9 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const AppLauncherNativeConstants = fn(1483);
 ({ AppLauncherRouteName: closure_7, SCREEN_BACKGROUND_COLOR } = AppLauncherNativeConstants);
-const BuiltInSectionId = fn(5168).BuiltInSectionId;
+const BuiltInSectionId = fn(5210).BuiltInSectionId;
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let closure_10 = createStyles.createStyles({ container: { backgroundColor: SCREEN_BACKGROUND_COLOR, flex: 1 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/native/screens/application_view/AppLauncherApplicationViewScreen.tsx");

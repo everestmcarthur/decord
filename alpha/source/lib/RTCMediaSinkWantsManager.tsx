@@ -1,20 +1,20 @@
-// Module ID: 14013
-// Function ID: 14014
+// Module ID: 14067
+// Function ID: 14068
 // Name: RTCMediaSinkWantsManager
-// Dependencies: [32, 502, 1074, 4747, 1091, 5044, 14014, 4780, 4791, 1953, 9854, 11, 12, 1364, 558, 4777, 2]
+// Dependencies: [32, 502, 1074, 4781, 1091, 5077, 14068, 4814, 4825, 2036, 9695, 11, 12, 1364, 558, 4811, 2]
 
-// Module 14013 (RTCMediaSinkWantsManager)
+// Module 14067 (RTCMediaSinkWantsManager)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import DurationsDefault from "Durations" /* 1091 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4777 */;
-import WindowVisibilityVideoManager2 from "WindowVisibilityVideoManager" /* 9854 */;
-import BrowserInvertedWantsExperiment from "BrowserInvertedWantsExperiment" /* 14014 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4811 */;
+import WindowVisibilityVideoManager2 from "WindowVisibilityVideoManager" /* 9695 */;
+import BrowserInvertedWantsExperiment from "BrowserInvertedWantsExperiment" /* 14068 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import TypedEventEmitter from "TypedEventEmitter" /* 4780 */;
+import TypedEventEmitter from "TypedEventEmitter" /* 4814 */;
 
 require = fn;
 function getDefaultWants(wantsLevel) {
@@ -29,12 +29,12 @@ function getDefaultWants(wantsLevel) {
   return obj3;
 }
 const VideoToggleState = fn(1074).VideoToggleState;
-const SimulcastOverrideQuality = fn(4747).SimulcastOverrideQuality;
+const SimulcastOverrideQuality = fn(4781).SimulcastOverrideQuality;
 let c7 = 100;
 const DEFAULT_WANTS_DISABLED = { any: 0 };
 let closure_9 = 30 * DurationsDefault.Millis.SECOND;
 let closure_10 = 120 * DurationsDefault.Millis.SECOND;
-const BrowserUtils = fn(5044);
+const BrowserUtils = fn(5077);
 let closure_11 = -1 !== BrowserUtils.getFirefoxVersion();
 let obj3 = { UserSSRCUpdate: "user-ssrc-update", Update: "update" };
 class RTCMediaSinkWantsManager extends tmp2 {
@@ -578,7 +578,7 @@ prototype["reset"] = function reset() {
     obj3 = { any };
   }
   self.latestWants = obj3;
-  const WindowVisibilityVideoManager = tmp3(9854).WindowVisibilityVideoManager;
+  const WindowVisibilityVideoManager = tmp3(9695).WindowVisibilityVideoManager;
   WindowVisibilityVideoManager.off(WindowVisibilityVideoManager2.WindowVisibilityEvent.IncomingVideoEnabledChanged, self.incomingVideoEnabledChanged);
 };
 prototype["setSelectedParticipant"] = function setSelectedParticipant(selectedParticipantId) {

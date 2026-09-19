@@ -1,13 +1,13 @@
-// Module ID: 6405
-// Function ID: 6406
+// Module ID: 6449
+// Function ID: 6450
 // Name: LanternSpotIllustration
-// Dependencies: [21, 5757, 6406, 2]
+// Dependencies: [21, 5799, 6450, 2]
 // Exports: LanternSpotIllustration
 
-// Module 6405 (LanternSpotIllustration)
+// Module 6449 (LanternSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5757 */;
-import _modDef6406 from "module_6406" /* 6406 */;
+import FastImageDefault from "FastImage" /* 5799 */;
+import _modDef6450 from "module_6450" /* 6450 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const LanternSpotIllustration = function LanternSpotIllustration(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6406 };
+  const obj2 = { uri: _modDef6450 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

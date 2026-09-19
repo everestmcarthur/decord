@@ -1,21 +1,21 @@
-// Module ID: 12240
-// Function ID: 12241
+// Module ID: 12249
+// Function ID: 12250
 // Name: AddMediaToOriginalForumPostActionSheet
-// Dependencies: [32, 5, 19, 17, 1958, 5063, 1980, 4943, 1074, 21, 4722, 576, 8041, 5349, 5303, 4689, 9548, 9545, 11, 5298, 9547, 7967, 1271, 12241, 7652, 7796, 5067, 1115, 504, 7358, 7969, 5307, 7346, 12242, 4718, 5145, 2]
+// Dependencies: [32, 5, 19, 17, 2041, 5105, 2063, 4976, 1074, 21, 4756, 576, 8079, 5345, 5373, 4723, 9423, 9420, 11, 5340, 9422, 8005, 1271, 12250, 7696, 7840, 5109, 1115, 504, 7402, 8007, 5349, 7390, 12251, 4752, 5187, 2]
 // Exports: default
 
-// Module 12240 (AddMediaToOriginalForumPostActionSheet)
+// Module 12249 (AddMediaToOriginalForumPostActionSheet)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4689 */;
-import utils_UploadUtils from "utils/UploadUtils" /* 5307 */;
-import tracking_Tracking from "tracking/Tracking" /* 7969 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4723 */;
+import utils_UploadUtils from "utils/UploadUtils" /* 5349 */;
+import tracking_Tracking from "tracking/Tracking" /* 8007 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
-import GuildStore from "GuildStore" /* 1980 */;
-import MessageStore from "MessageStore" /* 4943 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
+import GuildStore from "GuildStore" /* 2063 */;
+import MessageStore from "MessageStore" /* 4976 */;
 
 require = fn;
 let closure_16 = async function _upload2(arg0, value) {
@@ -26,7 +26,7 @@ let closure_16 = async function _upload2(arg0, value) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj2 = { value, done: true };
+      const obj2 = { value, done: true };
       return obj2;
     } else {
       return { value: "HermesInternal", done: null };
@@ -40,7 +40,7 @@ let closure_16 = async function _upload2(arg0, value) {
           throw value;
         } else if (arg0 === 2) {
           c9 = 3;
-          const obj3 = { value, done: true };
+          let obj3 = { value, done: true };
           return obj3;
         } else {
           closure_5 = tmp4;
@@ -76,30 +76,28 @@ let closure_16 = async function _upload2(arg0, value) {
             dependencyMap(true);
           });
           closure_132_5.on("progress", (currentSize) => {
-            const kestrelConfig = closure_0(5349).getKestrelConfig({ location: "native.AddMediaToOriginalForumPostActionSheet" });
-            const obj = closure_0(5349);
-            const maxFileSizeResult = closure_0(5303).maxFileSize(id.id);
-            const obj2 = closure_0(5303);
-            const tmp3 = id;
-            const effectiveKestrelLimit = closure_0(5349).getEffectiveKestrelLimit(kestrelConfig, maxFileSizeResult);
-            if (currentSize.currentSize > effectiveKestrelLimit) {
+            const maxFileSizeResult = closure_0(5345).maxFileSize(id.id);
+            const obj = closure_0(5345);
+            const tmp2 = id;
+            const effectiveUploadLimit = closure_0(5373).getEffectiveUploadLimit(maxFileSizeResult);
+            if (currentSize.currentSize > effectiveUploadLimit) {
               closure_1_5.cancel();
               dependencyMap(false);
-              closure_1(4689).hideActionSheet();
-              const obj5 = { file: currentSize, maxSize: effectiveKestrelLimit, baseMaxSize: maxFileSizeResult, guildId: tmp3.id, analyticsLocations };
-              closure_1(9548)(obj5);
-              const obj4 = closure_1(4689);
+              closure_1(4723).hideActionSheet();
+              const obj4 = { file: currentSize, maxSize: effectiveUploadLimit, baseMaxSize: maxFileSizeResult, guildId: tmp2.id, analyticsLocations };
+              closure_1(9423)(obj4);
+              const obj3 = closure_1(4723);
             }
           });
           closure_132_5.on("error", () => {
             dependencyMap(false);
-            closure_1(4689).hideActionSheet();
+            closure_1(4723).hideActionSheet();
           });
           closure_132_5.on("complete", () => {
             dependencyMap(false);
-            closure_1(9545).clearAll(closure_1_0, ChannelMessage.ChannelMessage);
-            const obj = closure_1(9545);
-            closure_1(4689).hideActionSheet();
+            closure_1(9420).clearAll(closure_1_0, ChannelMessage.ChannelMessage);
+            const obj = closure_1(9420);
+            closure_1(4723).hideActionSheet();
           });
           const messages = closure_133_10.getMessages(closure_132_0);
           closure_132_7 = messages.get(closure_133_1(closure_133_2[18]).castChannelIdAsMessageId(closure_132_0));
@@ -147,7 +145,7 @@ let closure_16 = async function _upload2(arg0, value) {
           closure_1 = 0;
           const items = [];
           closure_1 = HermesBuiltin.arraySpread(closure_132_8, 0);
-          const mapped = closure_132_9.map((item, index) => closure_1_0(5298).getAttachmentPayload(item, index));
+          const mapped = closure_132_9.map((item, index) => closure_1_0(5340).getAttachmentPayload(item, index));
           dependencyMap = mapped;
           if (mapped == null) {
             dependencyMap = [];
@@ -170,7 +168,7 @@ let closure_16 = async function _upload2(arg0, value) {
           closure_132_10 = tmp24;
           if (closure_132_10.code === closure_133_11.EXPLICIT_CONTENT) {
             const result1 = closure_133_1(closure_133_2[24]).sendExplicitMediaClydeError(closure_132_0, closure_132_10.attachments, closure_133_0(closure_133_2[25]).TrackMediaRedactionContext.EXPLICIT_MEDIA_ADD_MEDIA_TO_FORUM_POST_BLOCKED);
-            let obj5 = closure_133_1(closure_133_2[24]);
+            const obj5 = closure_133_1(closure_133_2[24]);
           } else {
             const obj16 = { title: null, body: null };
             const intl = closure_133_0(closure_133_2[27]).intl;
@@ -233,12 +231,12 @@ let closure_16 = async function _upload2(arg0, value) {
   }
 };
 const View = fn(17).View;
-const DraftType = fn(5063).DraftType;
+const DraftType = fn(5105).DraftType;
 const Constants = fn(1074);
 ({ AbortCodes: closure_11, Endpoints: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { container: { paddingHorizontal: 16, paddingTop: 24 }, post: { borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.md, marginBottom: 32, shadowColor: nativeDefault.colors.BLACK, shadowOffset: { width: 0, height: 1 }, shadowOpacity: 0.25, shadowRadius: 4, elevation: 4 }, postContent: { marginBottom: 0, padding: 8 }, title: { textAlign: "center", marginBottom: 8 }, description: { textAlign: "center", marginBottom: 32 }, button: null, buttonMargin: null };
 let obj3 = { borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.md, marginBottom: 32, shadowColor: nativeDefault.colors.BLACK, shadowOffset: { width: 0, height: 1 }, shadowOpacity: 0.25, shadowRadius: 4, elevation: 4 };
 obj2.button = { borderRadius: nativeDefault.radii.sm };

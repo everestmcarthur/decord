@@ -1,32 +1,32 @@
-// Module ID: 9302
-// Function ID: 9303
+// Module ID: 9855
+// Function ID: 9856
 // Name: GuildSettingsStore
-// Dependencies: [1973, 9303, 1962, 1976, 8612, 1386, 1980, 1372, 1074, 9304, 8255, 11, 9305, 1271, 573, 9307, 1972, 9308, 4314, 9309, 504, 12, 510, 2]
+// Dependencies: [2056, 9834, 2045, 2059, 8650, 1386, 2063, 1372, 1074, 9856, 8293, 11, 9857, 1271, 573, 9859, 2055, 9860, 4348, 9861, 504, 12, 510, 2]
 
-// Module 9302 (GuildSettingsStore)
+// Module 9855 (GuildSettingsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
-import ChannelRecord from "ChannelRecord" /* 1962 */;
-import GuildRecordUtils from "GuildRecordUtils" /* 1972 */;
-import PlainRecord from "PlainRecord" /* 1973 */;
-import GuildRecord from "GuildRecord" /* 1976 */;
-import _modDef4314 from "module_4314" /* 4314 */;
-import GlobalDiscoveryServersConstants from "GlobalDiscoveryServersConstants" /* 9304 */;
-import GuildSettingsServerTagUtils from "GuildSettingsServerTagUtils" /* 9305 */;
-import GuildSettingsVanityURLActionCreators from "GuildSettingsVanityURLActionCreators" /* 9307 */;
-import getDefaultGuildSettingsSection from "getDefaultGuildSettingsSection" /* 9308 */;
-import GuildSettingsFetchActionCreators from "GuildSettingsFetchActionCreators" /* 9309 */;
-import GuildProfileStore from "GuildProfileStore" /* 9303 */;
-import InviteRecord from "InviteRecord" /* 8612 */;
+import ChannelRecord from "ChannelRecord" /* 2045 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 2055 */;
+import PlainRecord from "PlainRecord" /* 2056 */;
+import GuildRecord from "GuildRecord" /* 2059 */;
+import _modDef4348 from "module_4348" /* 4348 */;
+import GlobalDiscoveryServersConstants from "GlobalDiscoveryServersConstants" /* 9856 */;
+import GuildSettingsServerTagUtils from "GuildSettingsServerTagUtils" /* 9857 */;
+import GuildSettingsVanityURLActionCreators from "GuildSettingsVanityURLActionCreators" /* 9859 */;
+import getDefaultGuildSettingsSection from "getDefaultGuildSettingsSection" /* 9860 */;
+import GuildSettingsFetchActionCreators from "GuildSettingsFetchActionCreators" /* 9861 */;
+import GuildProfileStore from "GuildProfileStore" /* 9834 */;
+import InviteRecord from "InviteRecord" /* 8650 */;
 import UserRecord from "UserRecord" /* 1386 */;
-import GuildStore from "GuildStore" /* 1980 */;
+import GuildStore from "GuildStore" /* 2063 */;
 import UserStore from "UserStore" /* 1372 */;
 import Constants from "Constants" /* 1074 */;
-import PublicGuildsConstants from "PublicGuildsConstants" /* 8255 */;
+import PublicGuildsConstants from "PublicGuildsConstants" /* 8293 */;
 import size from "module_2" /* 2 */;
 
 function handleFormInit(location) {
@@ -99,7 +99,7 @@ function _createInvite(code) {
   obj.guild = fromInviteGuildResult;
   ({ uses: obj.uses, max_uses: obj.maxUses, max_age: obj.maxAge } = code);
   const created_at = code.created_at;
-  obj.createdAt = _modDef4314(created_at);
+  obj.createdAt = _modDef4348(created_at);
   ({ flags: obj.flags, roles: obj.roles } = code);
   return new InviteRecord(obj);
 }

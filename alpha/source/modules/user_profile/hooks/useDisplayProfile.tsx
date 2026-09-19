@@ -1,20 +1,20 @@
-// Module ID: 8416
-// Function ID: 8417
+// Module ID: 8454
+// Function ID: 8455
 // Name: useDisplayProfile
-// Dependencies: [19, 1372, 7817, 504, 8417, 1934, 8419, 2]
+// Dependencies: [19, 1372, 7855, 504, 8455, 2017, 8457, 2]
 // Exports: default, getDisplayProfile, useDisplayProfileWithFetchEffect
 
-// Module 8416 (useDisplayProfile)
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8417 */;
-import DisplayProfileDefault from "DisplayProfile" /* 8419 */;
+// Module 8454 (useDisplayProfile)
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8455 */;
+import DisplayProfileDefault from "DisplayProfile" /* 8457 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
-import UserProfileStore from "UserProfileStore" /* 7817 */;
+import UserProfileStore from "UserProfileStore" /* 7855 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const FunctionUtils = fn(1934);
+const FunctionUtils = fn(2017);
 let closure_6 = FunctionUtils.cachedFunction((arg0, arg1) => new DisplayProfileDefault(arg0, arg1));
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/useDisplayProfile.tsx");

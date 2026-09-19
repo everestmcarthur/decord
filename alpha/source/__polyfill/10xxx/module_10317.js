@@ -1,0 +1,9 @@
+// Module ID: 10317
+// Function ID: 10318
+// Dependencies: [1121]
+
+// Module 10317
+import registerAsset from "module_1121" /* 1121 */;
+
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/application_streaming", width: 310, height: 124, scales: [2, 3], hash: "727e4438447317963db343e286b23476", name: "img_preview_not_available_light", type: "png" });

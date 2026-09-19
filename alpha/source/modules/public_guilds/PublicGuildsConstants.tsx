@@ -1,9 +1,9 @@
-// Module ID: 8255
-// Function ID: 8256
+// Module ID: 8293
+// Function ID: 8294
 // Name: PublicGuildsConstants
 // Dependencies: [1074, 1086, 2]
 
-// Module 8255 (PublicGuildsConstants)
+// Module 8293 (PublicGuildsConstants)
 import Constants from "Constants" /* 1074 */;
 import BigFlagUtils from "BigFlagUtils" /* 1086 */;
 import size from "module_2" /* 2 */;

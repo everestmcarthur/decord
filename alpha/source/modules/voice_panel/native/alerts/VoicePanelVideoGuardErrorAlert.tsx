@@ -1,14 +1,14 @@
-// Module ID: 13509
-// Function ID: 13510
+// Module ID: 13564
+// Function ID: 13565
 // Name: VoicePanelVideoGuardErrorAlert
-// Dependencies: [19, 21, 5072, 5072, 1115, 4718, 13507, 2]
+// Dependencies: [19, 21, 5114, 5114, 1115, 4752, 13562, 2]
 // Exports: default
 
-// Module 13509 (VoicePanelVideoGuardErrorAlert)
+// Module 13564 (VoicePanelVideoGuardErrorAlert)
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4718 */;
-import AlertModal from "AlertModal" /* 5072 */;
-import VideoGuardExperiment from "VideoGuardExperiment" /* 13507 */;
+import Text_Text from "Text/Text" /* 4752 */;
+import AlertModal from "AlertModal" /* 5114 */;
+import VideoGuardExperiment from "VideoGuardExperiment" /* 13562 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

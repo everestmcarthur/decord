@@ -1,20 +1,20 @@
-// Module ID: 9654
-// Function ID: 9655
+// Module ID: 9529
+// Function ID: 9530
 // Name: ApplicationCommandQueryApi
-// Dependencies: [32, 19, 1980, 9528, 5168, 1074, 7717, 9536, 504, 9538, 1370, 1895, 9533, 9643, 7719, 2]
+// Dependencies: [32, 19, 2063, 9403, 5210, 1074, 7761, 9411, 504, 9413, 1370, 1978, 9408, 9518, 7763, 2]
 // Exports: executeQuery, getCachedApplicationSection, getCachedCommand, getCachedResults, getChangeKeys, useAccessibleCommandsForApplication, useCachedResults, useCommand, useCommandsForApplication, useDiscovery, useQuery
 
-// Module 9654 (ApplicationCommandQueryApi)
+// Module 9529 (ApplicationCommandQueryApi)
 import GlobalUtils from "GlobalUtils" /* 1370 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7717 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7719 */;
-import ApplicationCommandQueryTypes from "ApplicationCommandQueryTypes" /* 9536 */;
-import ApplicationCommandBuiltIns from "ApplicationCommandBuiltIns" /* 9538 */;
-import CommandPermissionUtils from "CommandPermissionUtils" /* 9643 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7761 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7763 */;
+import ApplicationCommandQueryTypes from "ApplicationCommandQueryTypes" /* 9411 */;
+import ApplicationCommandBuiltIns from "ApplicationCommandBuiltIns" /* 9413 */;
+import CommandPermissionUtils from "CommandPermissionUtils" /* 9518 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 1980 */;
-import ApplicationCommandIndexStore_mod from "ApplicationCommandIndexStore" /* 9528 */;
+import GuildStore from "GuildStore" /* 2063 */;
+import ApplicationCommandIndexStore_mod from "ApplicationCommandIndexStore" /* 9403 */;
 
 const require = globalThis.__r;
 const CommandPermissionUtilsAll = CommandPermissionUtils;
@@ -58,20 +58,20 @@ function findCommandInSection(found, commandId) {
     }
   }
 }
-let ApplicationCommandIndexStore = fn(9528);
+let ApplicationCommandIndexStore = fn(9403);
 ({ useContextIndexState: metroRequire, useDiscoveryState: closure_7, useQueryState: closure_8, useUserIndexState: closure_9 } = ApplicationCommandIndexStore);
 let ApplicationCommandIndexStore = ApplicationCommandIndexStore_mod;
-const BuiltInSectionId = fn(5168).BuiltInSectionId;
+const BuiltInSectionId = fn(5210).BuiltInSectionId;
 const NOOP = fn(1074).NOOP;
-let items = [fn(1895).ApplicationCommandType.CHAT];
-let section = { id: "placeholder-section", type: fn(7719).ApplicationCommandSectionType.APPLICATION, name: "" };
+let items = [fn(1978).ApplicationCommandType.CHAT];
+let section = { id: "placeholder-section", type: fn(7763).ApplicationCommandSectionType.APPLICATION, name: "" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandQueryApi.tsx");
 
 export const getCachedCommand = function getCachedCommand(type, commandId, applicationId) {
   closure_0 = applicationId;
   if (null == commandId) {
-    return { application: "isArray", command: "accessible", section: "ty" };
+    return { application: "getChannel", command: "call", section: "right" };
   } else {
     const userState = ApplicationCommandIndexStore.getUserState();
     const result2 = userState.result;
@@ -118,7 +118,7 @@ export const getCachedCommand = function getCachedCommand(type, commandId, appli
         }
       }
     }
-    return { application: "isArray", command: "accessible", section: "ty" };
+    return { application: "getChannel", command: "call", section: "right" };
   }
 };
 export const getCachedApplicationSection = function getCachedApplicationSection(type, CHAT, applicationId) {
@@ -426,7 +426,7 @@ export const useCommand = function useCommand(arg0, commandId) {
         }
       }
     }
-    return { command: "PX_16", application: "accessible" };
+    return { command: "a", application: "isArray" };
   }, items);
 };
 export const useCommandsForApplication = function useCommandsForApplication(arg0, arg1, arg2) {

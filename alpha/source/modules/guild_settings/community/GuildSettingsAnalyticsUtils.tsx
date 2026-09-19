@@ -1,17 +1,17 @@
-// Module ID: 18024
-// Function ID: 18025
+// Module ID: 18104
+// Function ID: 18105
 // Name: GuildSettingsAnalyticsUtils
-// Dependencies: [19, 4641, 1980, 18025, 1074, 504, 1115, 18043, 18044, 2]
+// Dependencies: [19, 4675, 2063, 18105, 1074, 504, 1115, 18123, 1881, 2]
 // Exports: getGuildAnalyticsCardProps, useGuildAnalyticsOverview
 
-// Module 18024 (GuildSettingsAnalyticsUtils)
+// Module 18104 (GuildSettingsAnalyticsUtils)
 import util from "util" /* 1115 */;
-import GuildSettingsAnalyticsActionCreators from "GuildSettingsAnalyticsActionCreators" /* 18043 */;
-import utils_NumberUtils from "utils/NumberUtils" /* 18044 */;
+import NumberUtils from "NumberUtils" /* 1881 */;
+import GuildSettingsAnalyticsActionCreators from "GuildSettingsAnalyticsActionCreators" /* 18123 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 4641 */;
-import GuildStore from "GuildStore" /* 1980 */;
-import GuildSettingsAnalyticsStore from "GuildSettingsAnalyticsStore" /* 18025 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 4675 */;
+import GuildStore from "GuildStore" /* 2063 */;
+import GuildSettingsAnalyticsStore from "GuildSettingsAnalyticsStore" /* 18105 */;
 
 const require = globalThis.__r;
 
@@ -96,13 +96,13 @@ export const getGuildAnalyticsCardProps = function getGuildAnalyticsCardProps(co
       const intl = util.intl;
       const obj = { percentage: null };
       const _Math = Math;
-      obj.percentage = utils_NumberUtils.truncateAndLocalizeNumber(Math.abs(communicatorsChange), stateFromStores);
+      obj.percentage = NumberUtils.truncateAndLocalizeNumber(Math.abs(communicatorsChange), stateFromStores);
       let formatToPlainStringResult = intl.formatToPlainString(util.t.nskeMw, obj);
     }
     let combined = null;
     if (null != communicators) {
       let str2 = "";
-      const result = utils_NumberUtils.truncateAndLocalizeNumber(communicators, stateFromStores);
+      const result = NumberUtils.truncateAndLocalizeNumber(communicators, stateFromStores);
       if (flag) {
         str2 = "%";
       }

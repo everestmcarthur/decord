@@ -1,11 +1,11 @@
-// Module ID: 4634
-// Function ID: 4635
+// Module ID: 4668
+// Function ID: 4669
 // Name: GameServerExperiment
-// Dependencies: [4635, 2]
+// Dependencies: [4669, 2]
 // Exports: getGameServerEnabled, useGameServerEnabled
 
-// Module 4634 (GameServerExperiment)
-import createExperiment from "module_4635" /* 4635 */;
+// Module 4668 (GameServerExperiment)
+import createExperiment from "module_4669" /* 4669 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "guild", id: "2025-08_portkey_enabled", label: "GameServer Enabled", defaultConfig: { enabled: false }, treatments: null };

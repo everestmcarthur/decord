@@ -1,19 +1,19 @@
-// Module ID: 15941
-// Function ID: 15942
+// Module ID: 16017
+// Function ID: 16018
 // Name: DevToolsAgeVerificationScreen
-// Dependencies: [5, 19, 17, 21, 4722, 576, 8650, 8643, 4420, 8645, 1612, 5857, 5775, 7152, 5782, 2]
+// Dependencies: [5, 19, 17, 21, 4756, 576, 8688, 8681, 4454, 8683, 1612, 5899, 5817, 7196, 5824, 2]
 // Exports: default
 
-// Module 15941 (DevToolsAgeVerificationScreen)
+// Module 16017 (DevToolsAgeVerificationScreen)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
-import TableRow from "TableRow" /* 5775 */;
-import TableRowArrow from "TableRowArrow" /* 5782 */;
-import TableRowGroup from "TableRowGroup" /* 5857 */;
-import KeyIcon from "KeyIcon" /* 7152 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8643 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8645 */;
-import AgeVerificationURLActionCreators from "AgeVerificationURLActionCreators" /* 8650 */;
+import TableRow from "TableRow" /* 5817 */;
+import TableRowArrow from "TableRowArrow" /* 5824 */;
+import TableRowGroup from "TableRowGroup" /* 5899 */;
+import KeyIcon from "KeyIcon" /* 7196 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8681 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8683 */;
+import AgeVerificationURLActionCreators from "AgeVerificationURLActionCreators" /* 8688 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -69,7 +69,7 @@ let closure_9 = async function _showAgeVerificationTestModal() {
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, content: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.content = { padding: nativeDefault.space.PX_16 };

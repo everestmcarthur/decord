@@ -1,13 +1,13 @@
-// Module ID: 11530
-// Function ID: 11531
+// Module ID: 5083
+// Function ID: 5084
 // Name: CaptchaStore
-// Dependencies: [32, 560, 1248, 7798, 7803, 2]
+// Dependencies: [32, 560, 1248, 5084, 5089, 2]
 // Exports: flushCaptchaServeVolume, incrementCaptchaServeVolume, isCaptchaStoreVolumeEmpty
 
-// Module 11530 (CaptchaStore)
+// Module 5083 (CaptchaStore)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1248 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 7798 */;
-import MetricEvents from "MetricEvents" /* 7803 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 5084 */;
+import MetricEvents from "MetricEvents" /* 5089 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 const require = globalThis.__r;

@@ -1,11 +1,11 @@
-// Module ID: 4528
-// Function ID: 4529
+// Module ID: 4562
+// Function ID: 4563
 // Name: MicrophoneRive
-// Dependencies: [109, 19, 21, 4452, 4529, 4507, 2]
+// Dependencies: [109, 19, 21, 4486, 4563, 4541, 2]
 
-// Module 4528 (MicrophoneRive)
-import BaseRive from "BaseRive" /* 4452 */;
-import RiveErrorBoundary from "RiveErrorBoundary" /* 4507 */;
+// Module 4562 (MicrophoneRive)
+import BaseRive from "BaseRive" /* 4486 */;
+import RiveErrorBoundary from "RiveErrorBoundary" /* 4541 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

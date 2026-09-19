@@ -1,8 +1,8 @@
-// Module ID: 6752
-// Function ID: 6753
+// Module ID: 6796
+// Function ID: 6797
 // Dependencies: [2]
 
-// Module 6752
+// Module 6796
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/VoiceChannelsAbstractUI-2x.png.js");

@@ -1,12 +1,12 @@
-// Module ID: 18141
-// Function ID: 18142
+// Module ID: 18220
+// Function ID: 18221
 // Name: GuildRoleSubscriptionGroupSetupModal
-// Dependencies: [32, 5, 19, 18098, 15414, 1074, 21, 15421, 15436, 4419, 1115, 1249, 4902, 18110, 18093, 18111, 2]
+// Dependencies: [32, 5, 19, 18177, 15469, 1074, 21, 15476, 15491, 4453, 1115, 1249, 4936, 18189, 18172, 18190, 2]
 
-// Module 18141 (GuildRoleSubscriptionGroupSetupModal)
-import ToastUtils from "ToastUtils" /* 4419 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4902 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15436 */;
+// Module 18220 (GuildRoleSubscriptionGroupSetupModal)
+import ToastUtils from "ToastUtils" /* 4453 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4936 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15491 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -172,8 +172,8 @@ class GuildRoleSubscriptionGroupSetupModal {
                       const intl = merged(1115).intl;
                       closure_1 = intl.string(merged(1115).t.ZUEGFn);
                     }
-                    merged(4419).presentError(closure_1);
-                    const obj8 = merged(4419);
+                    merged(4453).presentError(closure_1);
+                    const obj8 = merged(4453);
                   }
                   const obj5 = {
                     guildId: closure_131_1,
@@ -299,8 +299,8 @@ class GuildRoleSubscriptionGroupSetupModal {
     return closure_11(tmp3(tmp4[13]).EditStateContextProvider, obj1);
   }
 }
-const useRoleTierEditStore = fn(18098).useRoleTierEditStore;
-const GuildRoleSubscriptionsConstants = fn(15414);
+const useRoleTierEditStore = fn(18177).useRoleTierEditStore;
+const GuildRoleSubscriptionsConstants = fn(15469);
 ({ GuildRoleSubscriptionsTierScenes: closure_8, GUILD_ROLE_SUBSCRIPTION_GROUP_SETUP_KEY: closure_9 } = GuildRoleSubscriptionsConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsx = fn(21).jsx;

@@ -1,14 +1,14 @@
-// Module ID: 10053
-// Function ID: 10054
+// Module ID: 10063
+// Function ID: 10064
 // Name: GuildEventCard
-// Dependencies: [19, 17, 4745, 7722, 1964, 21, 4722, 576, 10017, 5603, 504, 9949, 5777, 8642, 10041, 2]
+// Dependencies: [19, 17, 4779, 7766, 2047, 21, 4756, 576, 9868, 5645, 504, 9788, 5819, 8680, 9893, 2]
 
-// Module 10053 (GuildEventCard)
+// Module 10063 (GuildEventCard)
 import nativeDefault from "native" /* 576 */;
-import ButtonGroup from "ButtonGroup" /* 5603 */;
-import GuildEventCardComponents from "GuildEventCardComponents" /* 10017 */;
+import ButtonGroup from "ButtonGroup" /* 5645 */;
+import GuildEventCardComponents from "GuildEventCardComponents" /* 9868 */;
 import noop from "module_19" /* 19 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4745 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4779 */;
 
 const require = globalThis.__r;
 
@@ -22,7 +22,7 @@ function GuildEventCardControls(onCloseAction) {
   let tmp6Result = primaryActionButtonType === GuildEventCardComponents.PrimaryActionType.START;
   if (tmp6Result) {
     const obj3 = { event };
-    tmp6Result = tmp6(tmp2(10017).GuildEventCardRSVPAction, obj3);
+    tmp6Result = tmp6(tmp2(9868).GuildEventCardRSVPAction, obj3);
   }
   items[1] = tmp6Result;
   items[2] = React5(GuildEventCardComponents.GuildEventShareAction, { event });
@@ -30,11 +30,11 @@ function GuildEventCardControls(onCloseAction) {
   return React6(ButtonGroup.ButtonGroup, obj2);
 }
 const View = fn(17).View;
-let closure_5 = fn(7722).isGuildScheduledEventActive;
-fn(1964).AGE_VERIFICATION_STAGE_CHANNEL_TYPES;
+let closure_5 = fn(7766).isGuildScheduledEventActive;
+fn(2047).AGE_VERIFICATION_STAGE_CHANNEL_TYPES;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj = { actionContainer: { paddingTop: nativeDefault.space.PX_16, paddingBottom: 0 } };
 const styles = createStyles.createStyles(obj);
 let obj3 = { paddingTop: nativeDefault.space.PX_16, paddingBottom: 0 };

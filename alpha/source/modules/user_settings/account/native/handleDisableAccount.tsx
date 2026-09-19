@@ -1,14 +1,14 @@
-// Module ID: 15028
-// Function ID: 15029
+// Module ID: 15082
+// Function ID: 15083
 // Name: handleDisableAccount
-// Dependencies: [1980, 1372, 1115, 7180, 15013, 5066, 2]
+// Dependencies: [2063, 1372, 1115, 7224, 15067, 5108, 2]
 // Exports: default
 
-// Module 15028 (handleDisableAccount)
+// Module 15082 (handleDisableAccount)
 import util from "util" /* 1115 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5066 */;
-import showUserSettingsInputAlertDefault from "showUserSettingsInputAlert" /* 15013 */;
-import GuildStore from "GuildStore" /* 1980 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5108 */;
+import showUserSettingsInputAlertDefault from "showUserSettingsInputAlert" /* 15067 */;
+import GuildStore from "GuildStore" /* 2063 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -40,7 +40,7 @@ export default function handleDisableAccount() {
     const obj2 = { onSubmit: null, title: null, placeholder: null, closeOnSuccess: true };
     if (flag) {
       obj2.onSubmit = function onSubmit(password) {
-        return currentUser(7180).disableAccount(password, true);
+        return currentUser(7224).disableAccount(password, true);
       };
       const intl3 = tmp4(1115).intl;
       obj2.title = intl3.string(tmp4(1115).t["8lQ2rR"]).toUpperCase();
@@ -49,7 +49,7 @@ export default function handleDisableAccount() {
       const str3 = intl3.string(tmp4(1115).t["8lQ2rR"]);
     } else {
       obj2.onSubmit = function onSubmit(password) {
-        return currentUser(7180).disableAccount(password, false);
+        return currentUser(7224).disableAccount(password, false);
       };
       const intl2 = tmp4(1115).intl;
       obj2.title = intl2.string(tmp4(1115).t.jf5GGb).toUpperCase();

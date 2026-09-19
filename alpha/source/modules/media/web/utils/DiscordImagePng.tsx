@@ -1,10 +1,10 @@
-// Module ID: 5380
-// Function ID: 5381
+// Module ID: 5422
+// Function ID: 5423
 // Name: DiscordImagePng
-// Dependencies: [5, 1893, 5381, 2]
+// Dependencies: [5, 1976, 5423, 2]
 
-// Module 5380 (DiscordImagePng)
-import decodeImageDefault from "decodeImage" /* 1893 */;
+// Module 5422 (DiscordImagePng)
+import decodeImageDefault from "decodeImage" /* 1976 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;

@@ -1,24 +1,24 @@
-// Module ID: 1958
-// Function ID: 1959
+// Module ID: 2041
+// Function ID: 2042
 // Name: ChannelStore
-// Dependencies: [32, 5, 1959, 1961, 1962, 502, 1980, 1372, 1074, 3, 1370, 1987, 2007, 2008, 573, 2009, 10, 11, 2010, 12, 504, 2]
+// Dependencies: [32, 5, 2042, 2044, 2045, 502, 2063, 1372, 1074, 3, 1370, 2070, 2090, 2091, 573, 2092, 10, 11, 2093, 12, 504, 2]
 
-// Module 1958 (ChannelStore)
+// Module 2041 (ChannelStore)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 1987 */;
-import ChannelReaderDefault from "ChannelReader" /* 2008 */;
-import deserializeChannels from "deserializeChannels" /* 2009 */;
-import isChangelogUserDefault from "isChangelogUser" /* 2010 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 2070 */;
+import ChannelReaderDefault from "ChannelReader" /* 2091 */;
+import deserializeChannels from "deserializeChannels" /* 2092 */;
+import isChangelogUserDefault from "isChangelogUser" /* 2093 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import BasicChannelCacheStore from "BasicChannelCacheStore" /* 1959 */;
-import FavoriteStore from "FavoriteStore" /* 1961 */;
+import BasicChannelCacheStore from "BasicChannelCacheStore" /* 2042 */;
+import FavoriteStore from "FavoriteStore" /* 2044 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildStore from "GuildStore" /* 1980 */;
+import GuildStore from "GuildStore" /* 2063 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const deserializeChannelsDefault = deserializeChannels;
@@ -44,7 +44,7 @@ function ensureGuildLoaded(guild_id, Full, getBasicChannel) {
               obj3.log("load returned null; early returning (guild: " + guild_id + ", database: " + databaseResult + ")");
             } else {
               [arr, tmp41] = result;
-              tmp4(2009)(arr);
+              tmp4(2092)(arr);
               if (Full !== tmp2.Basic) {
                 closure_34 = closure_34 + 1;
               }
@@ -499,7 +499,7 @@ function guildChannelCount(id) {
   }
   return length;
 }
-const ChannelRecord = fn(1962);
+const ChannelRecord = fn(2045);
 ({ createChannelRecordFromServer: closure_7, isPrivate: closure_8, GUILD_CHANNEL_TYPES: closure_9, THREAD_CHANNEL_TYPES: c10, ALL_CHANNEL_TYPES: closure_11, castChannelRecord: closure_12 } = ChannelRecord);
 const ChannelTypes = fn(1074).ChannelTypes;
 let closure_17 = new LoggerDefault("ChannelStore");
@@ -551,7 +551,7 @@ prototype["loadGuildIds"] = function loadGuildIds(items) {
       return null;
     } else if (found.some((item) => !set.has(item))) {
       dependencyMap = closure_31;
-      return tmp(2007).tryLoadOrResetCacheGatewayAsync("loadChannels", asyncGeneratorStep(async (arg0, value) => {
+      return tmp(2090).tryLoadOrResetCacheGatewayAsync("loadChannels", asyncGeneratorStep(async (arg0, value) => {
         if (c7 === 2) {
           c7 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");

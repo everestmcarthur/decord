@@ -1,14 +1,14 @@
-// Module ID: 16059
-// Function ID: 16060
+// Module ID: 16135
+// Function ID: 16136
 // Name: useTrackProductCardImpression
-// Dependencies: [19, 7738, 1074, 9007, 504, 8408, 4380, 7750, 1241, 2]
+// Dependencies: [19, 7782, 1074, 9046, 504, 8446, 4414, 7794, 1241, 2]
 // Exports: useTrackProductCardImpression
 
-// Module 16059 (useTrackProductCardImpression)
+// Module 16135 (useTrackProductCardImpression)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7750 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7794 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7738 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7782 */;
 
 const require = globalThis.__r;
 

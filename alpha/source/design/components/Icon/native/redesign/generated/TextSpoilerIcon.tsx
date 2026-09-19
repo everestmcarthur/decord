@@ -1,13 +1,13 @@
-// Module ID: 5246
-// Function ID: 5247
+// Module ID: 5288
+// Function ID: 5289
 // Name: TextSpoilerIcon
-// Dependencies: [19, 21, 576, 4422, 5214, 2]
+// Dependencies: [19, 21, 576, 4456, 5256, 2]
 // Exports: TextSpoilerIcon
 
-// Module 5246 (TextSpoilerIcon)
+// Module 5288 (TextSpoilerIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4422 */;
-import _mod5214 from "module_5214" /* 5214 */;
+import BaseIconImage from "BaseIconImage" /* 4456 */;
+import _mod5256 from "module_5256" /* 5256 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const TextSpoilerIcon = function TextSpoilerIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod5214, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod5256, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

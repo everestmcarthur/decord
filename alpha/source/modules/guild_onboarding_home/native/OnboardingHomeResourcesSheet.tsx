@@ -1,29 +1,29 @@
-// Module ID: 16823
-// Function ID: 16824
+// Module ID: 16903
+// Function ID: 16904
 // Name: OnboardingHomeResourcesSheet
-// Dependencies: [19, 16821, 21, 4423, 576, 16822, 12527, 4689, 7393, 7395, 1397, 5757, 2]
+// Dependencies: [19, 16901, 21, 4457, 576, 16902, 12536, 4723, 7437, 7439, 1397, 5799, 2]
 // Exports: default
 
-// Module 16823 (OnboardingHomeResourcesSheet)
+// Module 16903 (OnboardingHomeResourcesSheet)
 import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4689 */;
-import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 12527 */;
-import useResourceChannelsDefault from "useResourceChannels" /* 16822 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4723 */;
+import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 12536 */;
+import useResourceChannelsDefault from "useResourceChannels" /* 16902 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let closure_3 = fn(16821).ONBOARDING_HOME_RESOURCES_SHEET_KEY;
+let closure_3 = fn(16901).ONBOARDING_HOME_RESOURCES_SHEET_KEY;
 const jsx = fn(21).jsx;
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/native/OnboardingHomeResourcesSheet.tsx");
 
 export default function OnboardingHomeResourcesSheet(guildId) {
   guildId = guildId.guildId;
-  importDefault = guildId(4423).useToken(nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE);
-  let obj = guildId(4423);
+  importDefault = guildId(4457).useToken(nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE);
+  let obj = guildId(4457);
   let obj2 = { children: null };
   const arr = useResourceChannelsDefault(guildId);
-  obj2.children = jsx(guildId(7395).ActionSheetRow.Group, {
+  obj2.children = jsx(guildId(7439).ActionSheetRow.Group, {
     hasIcons: true,
     children: useResourceChannelsDefault(guildId).map((label) => {
       const resourceChannelIconURL = height(dependencyMap[10]).getResourceChannelIconURL(label);
@@ -45,5 +45,5 @@ export default function OnboardingHomeResourcesSheet(guildId) {
       return jsx(guildId(dependencyMap[9]).ActionSheetRow, { label: label.title, icon: null, onPress: null, arrow: true }, label.channelId);
     })
   });
-  return jsx(guildId(7393).ActionSheet, { children: null });
+  return jsx(guildId(7437).ActionSheet, { children: null });
 };

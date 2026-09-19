@@ -1,83 +1,90 @@
 // Module ID: 5427
 // Function ID: 5428
-// Dependencies: [5388, 5403, 5404, 5383]
+// Dependencies: [5428, 5429, 5431, 5432, 5433, 5437, 5438, 5439, 5440, 5425]
 
 // Module 5427
-import _mod5383 from "module_5383" /* 5383 */;
-import _modDef5388 from "module_5388" /* 5388 */;
-import get0thIfdOffset from "get0thIfdOffset" /* 5403 */;
-import IFD_TYPE_0TH from "IFD_TYPE_0TH" /* 5404 */;
+import _mod5425 from "module_5425" /* 5425 */;
+import _modDef5428 from "module_5428" /* 5428 */;
 
 require = arg1;
 importDefault = arg2;
 const dependencyMap = arg6;
-const MODEL_ID = { K3_III: 78420 };
-let obj2 = { CAMERA_ORIENTATION: 1, ROLL_ANGLE: 3, PITCH_ANGLE: 5 };
 
 export default {
-  read(byteLength, arg1, arg2, arg3) {
-    const obj = _modDef5388;
-    const byteOrder = obj.getByteOrder(byteLength, arg1 + arg2 + 8);
-    const sum = arg1 + arg2;
-    obj2 = get0thIfdOffset;
-    const ifd = obj2.readIfd(byteLength, IFD_TYPE_0TH.IFD_TYPE_PENTAX, sum, sum + 10, byteOrder, arg3, true);
-    let LevelInfo = ifd.PentaxModelID;
-    if (LevelInfo) {
-      LevelInfo = ifd.PentaxModelID.value === obj.K3_III;
-    }
-    if (LevelInfo) {
-      LevelInfo = ifd.LevelInfo;
-    }
-    let tmp10 = ifd;
-    if (LevelInfo) {
-      const sum1 = sum + ifd.LevelInfo.__offset;
-      const obj3 = {};
-      if (sum1 + 7 <= byteLength.byteLength) {
-        const int8 = byteLength.getInt8(sum1 + obj2.CAMERA_ORIENTATION);
-        const obj4 = { value: int8, description: null };
-        let str6 = "Horizontal (normal)";
-        if (0 !== int8) {
-          let str = "Rotate 270 CW";
-          if (1 !== int8) {
-            let str2 = "Rotate 180";
-            if (2 !== int8) {
-              let str3 = "Rotate 90 CW";
-              if (3 !== int8) {
-                let str4 = "Upwards";
-                if (4 !== int8) {
-                  let str5 = "Unknown";
-                  if (5 === int8) {
-                    str5 = "Downwards";
-                  }
-                  str4 = str5;
-                }
-                str3 = str4;
-              }
-              str2 = str3;
-            }
-            str = str2;
-          }
-          str6 = str;
-        }
-        obj4.description = str6;
-        obj3.CameraOrientation = obj4;
-        const sum2 = sum1 + tmp17.ROLL_ANGLE;
-        const int16 = byteLength.getInt16(sum2, byteOrder === tmp3(5388).LITTLE_ENDIAN);
-        const obj5 = { value: int16, description: "" + -0.5 * int16 };
-        obj3.RollAngle = obj5;
-        const sum3 = sum1 + tmp17.PITCH_ANGLE;
-        const int161 = byteLength.getInt16(sum3, byteOrder === tmp3(5388).LITTLE_ENDIAN);
-        const obj6 = { value: int161, description: "" + -0.5 * int161 };
-        obj3.PitchAngle = obj6;
+  parseAppMarkers(byteLength, flag2) {
+    if (_modDef5428.USE_TIFF) {
+      if (tmpResult.isTiffFile(byteLength)) {
+        const tmpResult16 = tmp(5429);
+        const findTiffOffsetsResult = tmp(5429).findTiffOffsets();
+        const obj = { fileType: { value: "tiff", description: "TIFF" } };
+        return _mod5425.objectAssign({}, findTiffOffsetsResult, obj);
       }
-      const tmp7Result = _mod5383;
-      delete tmp[tmp2];
-      tmp10 = _mod5383.objectAssign({}, ifd, obj3);
-      const objectAssignResult = _mod5383.objectAssign({}, ifd, obj3);
+      tmpResult = tmp(5429);
     }
-    return tmp10;
-  },
-  PENTAX_IFD_OFFSET: 10,
-  MODEL_ID,
-  LIK3III: obj2
+    if (_modDef5428.USE_JPEG) {
+      if (tmpResult17.isJpegFile(byteLength)) {
+        const tmpResult18 = tmp(5431);
+        const findJpegOffsetsResult = tmp(5431).findJpegOffsets(byteLength);
+        const obj2 = { fileType: { value: "jpeg", description: "JPEG" } };
+        return _mod5425.objectAssign({}, findJpegOffsetsResult, obj2);
+      }
+      tmpResult17 = tmp(5431);
+    }
+    if (_modDef5428.USE_PNG) {
+      if (tmpResult19.isPngFile(byteLength)) {
+        const tmpResult20 = tmp(5432);
+        const findPngOffsetsResult = tmp(5432).findPngOffsets(byteLength, flag2);
+        const obj3 = { fileType: { value: "png", description: "PNG" } };
+        return _mod5425.objectAssign({}, findPngOffsetsResult, obj3);
+      }
+      tmpResult19 = tmp(5432);
+    }
+    if (_modDef5428.USE_HEIC) {
+      if (tmpResult21.isHeicFile(byteLength)) {
+        const tmpResult22 = tmp(5433);
+        const findHeicOffsetsResult = tmp(5433).findHeicOffsets(byteLength);
+        const obj4 = { fileType: { value: "heic", description: "HEIC" } };
+        return _mod5425.objectAssign({}, findHeicOffsetsResult, obj4);
+      }
+      tmpResult21 = tmp(5433);
+    }
+    if (_modDef5428.USE_AVIF) {
+      if (tmpResult23.isAvifFile(byteLength)) {
+        const tmpResult24 = tmp(5437);
+        const findAvifOffsetsResult = tmp(5437).findAvifOffsets(byteLength);
+        const obj5 = { fileType: { value: "avif", description: "AVIF" } };
+        return _mod5425.objectAssign({}, findAvifOffsetsResult, obj5);
+      }
+      tmpResult23 = tmp(5437);
+    }
+    if (_modDef5428.USE_WEBP) {
+      if (tmpResult25.isWebpFile(byteLength)) {
+        const tmpResult26 = tmp(5438);
+        const findOffsetsResult = tmp(5438).findOffsets(byteLength);
+        const obj6 = { fileType: { value: "webp", description: "WebP" } };
+        return _mod5425.objectAssign({}, findOffsetsResult, obj6);
+      }
+      tmpResult25 = tmp(5438);
+    }
+    if (_modDef5428.USE_GIF) {
+      if (tmpResult27.isGifFile(byteLength)) {
+        const tmpResult28 = tmp(5439);
+        const findOffsetsResult1 = tmp(5439).findOffsets(byteLength);
+        const obj7 = { fileType: { value: "gif", description: "GIF" } };
+        return _mod5425.objectAssign({}, findOffsetsResult1, obj7);
+      }
+      tmpResult27 = tmp(5439);
+    }
+    if (_modDef5428.USE_XMP) {
+      if (tmpResult29.isXMLFile(byteLength)) {
+        const tmpResult30 = tmp(5440);
+        const findOffsetsResult2 = tmp(5440).findOffsets(byteLength);
+        const obj8 = { fileType: { value: "xml", description: "XML" } };
+        return _mod5425.objectAssign({}, findOffsetsResult2, obj8);
+      }
+      tmpResult29 = tmp(5440);
+    }
+    const error = new Error("Invalid image format");
+    throw error;
+  }
 };

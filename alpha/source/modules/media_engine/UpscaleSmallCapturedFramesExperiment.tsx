@@ -1,9 +1,9 @@
-// Module ID: 14217
-// Function ID: 14218
+// Module ID: 14272
+// Function ID: 14273
 // Name: UpscaleSmallCapturedFramesExperiment
 // Dependencies: [1434, 2]
 
-// Module 14217 (UpscaleSmallCapturedFramesExperiment)
+// Module 14272 (UpscaleSmallCapturedFramesExperiment)
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

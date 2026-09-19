@@ -1,16 +1,16 @@
-// Module ID: 12841
-// Function ID: 12842
+// Module ID: 12850
+// Function ID: 12851
 // Name: MuteAppDmActionSheet
-// Dependencies: [19, 17, 21, 4722, 576, 7346, 10021, 4718, 1115, 5144, 7315, 7310, 4689, 4420, 1177, 8168, 2]
+// Dependencies: [19, 17, 21, 4756, 576, 7390, 9873, 4752, 1115, 5186, 7359, 7354, 4723, 4454, 1177, 8206, 2]
 // Exports: default
 
-// Module 12841 (MuteAppDmActionSheet)
+// Module 12850 (MuteAppDmActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4420 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4689 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7310 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7315 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4454 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4723 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7354 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7359 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -19,7 +19,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { iconContainer: { alignItems: "center", marginBottom: 8 }, iconBackground: null, content: null, headerText: null, infoText: null, dismissButtonContainer: null, mutedNotificationContainer: null, mutedNotification: null };
 let size = { width: 48, height: 48, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, alignItems: "center", justifyContent: "center" };
 obj2.iconBackground = size;
@@ -60,7 +60,7 @@ export default function MuteAppDMActionSheet(channel) {
     const intl = util.intl;
     obj4.content = intl.string(util.t.EgGpkx);
     obj4.icon = function icon() {
-      const obj = { style: closure_1_0.mutedNotificationContainer, children: closure_2_4(closure_0(1177).Icon, { source: channel(8168), color: channel(576).unsafe_rawColors.WHITE, style: closure_1_0.mutedNotification }) };
+      const obj = { style: closure_1_0.mutedNotificationContainer, children: closure_2_4(closure_0(1177).Icon, { source: channel(8206), color: channel(576).unsafe_rawColors.WHITE, style: closure_1_0.mutedNotification }) };
       return closure_2_4(View, obj);
     };
     ToastActionCreatorsDefault.open(obj4);
@@ -71,7 +71,7 @@ export default function MuteAppDMActionSheet(channel) {
   const intl4 = require("util").intl;
   obj9.text = intl4.string(require("util").t.WAI6xu);
   obj9.onPress = function onPress() {
-    channel(4689).hideActionSheet();
+    channel(4723).hideActionSheet();
   };
   obj8.children = closure_4(require("components/Button/Button").Button, obj9);
   items[4] = closure_4(View, obj8);

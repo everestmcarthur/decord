@@ -1,27 +1,27 @@
-// Module ID: 18128
-// Function ID: 18129
+// Module ID: 18207
+// Function ID: 18208
 // Name: GuildRoleSubscriptionEmojiEditorModal
-// Dependencies: [5, 32, 19, 17, 5630, 21, 4722, 576, 18119, 504, 5757, 1397, 18125, 1115, 5066, 5163, 8831, 18115, 4718, 2]
+// Dependencies: [5, 32, 19, 17, 5672, 21, 4756, 576, 18198, 504, 5799, 1397, 18204, 1115, 5108, 5205, 8870, 18194, 4752, 2]
 // Exports: default
 
-// Module 18128 (GuildRoleSubscriptionEmojiEditorModal)
+// Module 18207 (GuildRoleSubscriptionEmojiEditorModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4718 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5066 */;
-import common_AlertDefault from "common/Alert" /* 5163 */;
-import EmojiAliasDefault from "EmojiAlias" /* 18115 */;
+import Text_Text from "Text/Text" /* 4752 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5108 */;
+import common_AlertDefault from "common/Alert" /* 5205 */;
+import EmojiAliasDefault from "EmojiAlias" /* 18194 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SubscriptionRoleStore from "SubscriptionRoleStore" /* 5630 */;
+import SubscriptionRoleStore from "SubscriptionRoleStore" /* 5672 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, SectionList: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, display: "flex", flexDirection: "column", justifyContent: "flex-start", height: "100%" }, emojiList: null, row: null, emojiImage: null, emojiAlias: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, display: "flex", flexDirection: "column", justifyContent: "flex-start", height: "100%" };
 obj2.emojiList = { flexGrow: 0, marginVertical: 24, marginHorizontal: 16, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };

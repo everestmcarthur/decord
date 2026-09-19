@@ -1,11 +1,11 @@
-// Module ID: 2077
-// Function ID: 2078
+// Module ID: 1931
+// Function ID: 1932
 // Name: i18n/updateRules
-// Dependencies: [19, 21, 2075, 2]
+// Dependencies: [19, 21, 1929, 2]
 // Exports: default
 
-// Module 2077 (i18n/updateRules)
-import _mod2075 from "module_2075" /* 2075 */;
+// Module 1931 (i18n/updateRules)
+import _mod1929 from "module_1929" /* 1929 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,9 +14,9 @@ const size = fn(2);
 const result = size.fileFinishedImporting("../discord_common/js/packages/i18n/updateRules.web.tsx");
 
 export default function updateRules(paragraph) {
-  paragraph.heading = _mod2075.defaultRules.heading;
-  paragraph.lheading = _mod2075.defaultRules.lheading;
-  paragraph.list = _mod2075.defaultRules.list;
+  paragraph.heading = _mod1929.defaultRules.heading;
+  paragraph.lheading = _mod1929.defaultRules.lheading;
+  paragraph.list = _mod1929.defaultRules.list;
   let obj = {};
   let merged = Object.assign(paragraph.paragraph);
   obj.react = function react(content, fn, key) {
@@ -36,7 +36,7 @@ export default function updateRules(paragraph) {
       obj.onClick = context.context[context.target];
     }
     if (null == obj.onClick) {
-      const sanitizeUrlResult = _mod2075.sanitizeUrl(context.target);
+      const sanitizeUrlResult = _mod1929.sanitizeUrl(context.target);
       obj.href = sanitizeUrlResult;
       obj.target = "_blank";
     }

@@ -1,11 +1,11 @@
-// Module ID: 12280
-// Function ID: 12281
+// Module ID: 12289
+// Function ID: 12290
 // Name: useActivityApplications
-// Dependencies: [19, 12281, 9742, 2]
+// Dependencies: [19, 12290, 9592, 2]
 // Exports: useActivityApplications
 
-// Module 12280 (useActivityApplications)
-import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 9742 */;
+// Module 12289 (useActivityApplications)
+import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 9592 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ export const useActivityApplications = function useActivityApplications(guildId)
   guildId = guildId.guildId;
   const fetchesShelf = guildId.fetchesShelf;
   const items = [fetchesShelf, guildId];
-  const mapped = fetchesShelf(12281)({ guildId }).map((application) => application.application);
+  const mapped = fetchesShelf(12290)({ guildId }).map((application) => application.application);
   const effect = noop.useEffect(() => {
     if (fetchesShelf) {
       const obj2 = { guildId };

@@ -1,16 +1,16 @@
-// Module ID: 9150
-// Function ID: 9151
+// Module ID: 9189
+// Function ID: 9190
 // Name: CollapsibleFloatingActionButton
-// Dependencies: [19, 21, 5149, 4722, 4458, 5143, 5147, 5145, 9151, 576, 2]
+// Dependencies: [19, 21, 5191, 4756, 4492, 5185, 5189, 5187, 9190, 576, 2]
 // Exports: CollapsibleFloatingActionButton
 
-// Module 9150 (CollapsibleFloatingActionButton)
+// Module 9189 (CollapsibleFloatingActionButton)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4458 */;
-import spring from "spring" /* 5143 */;
-import springPresets from "springPresets" /* 5147 */;
-import ButtonConstants2 from "ButtonConstants" /* 5149 */;
-import FloatingActionButton from "FloatingActionButton" /* 9151 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4492 */;
+import spring from "spring" /* 5185 */;
+import springPresets from "springPresets" /* 5189 */;
+import ButtonConstants2 from "ButtonConstants" /* 5191 */;
+import FloatingActionButton from "FloatingActionButton" /* 9190 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -31,8 +31,8 @@ function CollapsableButton(arg0) {
       return obj;
     }
   }
-  let obj = collapseText(4458);
-  B.__closure = { FAB_BUTTON_SIZE: collapseText(5149).FAB_BUTTON_SIZE, withSpring: collapseText(5143).withSpring, interpolate: collapseText(4458).interpolate, collapseText, FAB_PADDING_HORIZONTAL: 20, FAB_PADDING_VERTICAL: buttonPadding, SUBTLE_SPRING: collapseText(5147).SUBTLE_SPRING };
+  let obj = collapseText(4492);
+  B.__closure = { FAB_BUTTON_SIZE: collapseText(5191).FAB_BUTTON_SIZE, withSpring: collapseText(5185).withSpring, interpolate: collapseText(4492).interpolate, collapseText, FAB_PADDING_HORIZONTAL: 20, FAB_PADDING_VERTICAL: buttonPadding, SUBTLE_SPRING: collapseText(5189).SUBTLE_SPRING };
   B.__workletHash = 5958377845220;
   B.__initData = __initData;
   const animatedStyle = obj.useAnimatedStyle(B);
@@ -44,12 +44,12 @@ function CollapsableButton(arg0) {
   obj3.collapseText = collapseText;
   obj3.style = style;
   obj3.pillStyle = animatedStyle;
-  return jsx(collapseText(5145).BaseTextButton, {});
+  return jsx(collapseText(5187).BaseTextButton, {});
 }
 const jsx = fn(21).jsx;
-const ButtonConstants = fn(5149);
-const buttonPadding = ButtonConstants.getButtonPadding(fn(5149).FAB_BUTTON_SIZE, fn(5149).FAB_BUTTON_ICON_SIZE);
-const createStyles = fn(4722);
+const ButtonConstants = fn(5191);
+const buttonPadding = ButtonConstants.getButtonPadding(fn(5191).FAB_BUTTON_SIZE, fn(5191).FAB_BUTTON_ICON_SIZE);
+const createStyles = fn(4756);
 let closure_6 = createStyles.createStyles({ textButtonPill: { paddingHorizontal: 20, paddingVertical: buttonPadding } });
 const __initData = { code: "function CollapsibleFloatingActionButtonNativeTsx1(){const{FAB_BUTTON_SIZE,withSpring,interpolate,collapseText,FAB_PADDING_HORIZONTAL,FAB_PADDING_VERTICAL,SUBTLE_SPRING}=this.__closure;return{minWidth:FAB_BUTTON_SIZE,minHeight:FAB_BUTTON_SIZE,paddingHorizontal:withSpring(interpolate(collapseText.get(),[0,1],[FAB_PADDING_HORIZONTAL,FAB_PADDING_VERTICAL]),SUBTLE_SPRING,'animate-always'),paddingVertical:FAB_PADDING_VERTICAL};}" };
 const size = fn(2);
@@ -67,11 +67,11 @@ export const CollapsibleFloatingActionButton = function CollapsibleFloatingActio
   }
   const items = [styles.button, ];
   if (positionRight == null) {
-    positionRight = tmp3(9151).DEFAULT_POSITION_OFFSET;
+    positionRight = tmp3(9190).DEFAULT_POSITION_OFFSET;
   }
   const rect = { position: "absolute", right: positionRight, bottom: null };
   if (positionBottom == null) {
-    positionBottom = tmp3(9151).DEFAULT_POSITION_OFFSET;
+    positionBottom = tmp3(9190).DEFAULT_POSITION_OFFSET;
   }
   rect.bottom = positionBottom;
   items[1] = rect;
@@ -93,7 +93,7 @@ export const CollapsibleFloatingActionButton = function CollapsibleFloatingActio
     obj5.icon = cloneElementResult;
     obj5.style = items;
     obj5.pillStyle = tmp2.textButtonPill;
-    tmp12 = jsx(tmp3(5145).BaseTextButton, {});
+    tmp12 = jsx(tmp3(5187).BaseTextButton, {});
   }
   return tmp12;
 };

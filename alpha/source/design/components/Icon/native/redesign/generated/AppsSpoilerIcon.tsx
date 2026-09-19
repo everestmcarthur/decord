@@ -1,13 +1,13 @@
-// Module ID: 5273
-// Function ID: 5274
+// Module ID: 5315
+// Function ID: 5316
 // Name: AppsSpoilerIcon
-// Dependencies: [19, 21, 576, 4422, 5225, 2]
+// Dependencies: [19, 21, 576, 4456, 5267, 2]
 // Exports: AppsSpoilerIcon
 
-// Module 5273 (AppsSpoilerIcon)
+// Module 5315 (AppsSpoilerIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4422 */;
-import _mod5225 from "module_5225" /* 5225 */;
+import BaseIconImage from "BaseIconImage" /* 4456 */;
+import _mod5267 from "module_5267" /* 5267 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const AppsSpoilerIcon = function AppsSpoilerIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod5225, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod5267, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

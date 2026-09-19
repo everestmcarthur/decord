@@ -1,12 +1,12 @@
-// Module ID: 15503
-// Function ID: 15504
+// Module ID: 15558
+// Function ID: 15559
 // Name: SettingsAppearanceActivityCardsItem
-// Dependencies: [19, 21, 8957, 576, 15504, 2]
+// Dependencies: [19, 21, 8996, 576, 15559, 2]
 // Exports: default
 
-// Module 15503 (SettingsAppearanceActivityCardsItem)
+// Module 15558 (SettingsAppearanceActivityCardsItem)
 import nativeDefault from "native" /* 576 */;
-import SettingsAppearanceActivityCardItemDefault from "SettingsAppearanceActivityCardItem" /* 15504 */;
+import SettingsAppearanceActivityCardItemDefault from "SettingsAppearanceActivityCardItem" /* 15559 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -29,7 +29,7 @@ export default function ActivityCardsItem(animatedStyles) {
     showsHorizontalScrollIndicator: false,
     horizontal: true
   };
-  return jsx(animatedStyles(8957).FlashList, {
+  return jsx(animatedStyles(8996).FlashList, {
     contentContainerStyle: { paddingVertical: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 },
     data: animatedStyles.cards,
     renderItem(item) {

@@ -1,14 +1,14 @@
-// Module ID: 4363
-// Function ID: 4364
+// Module ID: 4397
+// Function ID: 4398
 // Name: JoinedThreadsStore
-// Dependencies: [1962, 502, 4364, 12, 504, 573, 2]
+// Dependencies: [2045, 502, 4398, 12, 504, 573, 2]
 
-// Module 4363 (JoinedThreadsStore)
+// Module 4397 (JoinedThreadsStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import ChannelRecord from "ChannelRecord" /* 1962 */;
-import MuteTimersDefault from "MuteTimers" /* 4364 */;
+import ChannelRecord from "ChannelRecord" /* 2045 */;
+import MuteTimersDefault from "MuteTimers" /* 4398 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import size from "module_2" /* 2 */;
 
@@ -271,7 +271,7 @@ obj = {
       if (null === guildId) {
         tmp3 = tmp5;
       } else if (isJoining) {
-        obj = { threadId: id, guildId, flags: 0, muted: true, muteConfig: { end_time: "r" }, joinTimestamp: null };
+        obj = { threadId: id, guildId, flags: 0, muted: true, muteConfig: { end_time: "Array" }, joinTimestamp: null };
         const _Date = Date;
         const date = new Date();
         guildId = date;

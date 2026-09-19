@@ -1,16 +1,16 @@
-// Module ID: 9994
-// Function ID: 9995
+// Module ID: 9833
+// Function ID: 9834
 // Name: CreateChannelTypeDescription
-// Dependencies: [19, 17, 9303, 1074, 21, 9425, 5721, 4718, 1115, 2]
+// Dependencies: [19, 17, 9834, 1074, 21, 9835, 5763, 4752, 1115, 2]
 // Exports: default
 
-// Module 9994 (CreateChannelTypeDescription)
-import useGuildProfile from "useGuildProfile" /* 9425 */;
+// Module 9833 (CreateChannelTypeDescription)
+import useGuildProfile from "useGuildProfile" /* 9835 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const GuildProfileFetchStatus = fn(9303).GuildProfileFetchStatus;
+const GuildProfileFetchStatus = fn(9834).GuildProfileFetchStatus;
 const ChannelTypes = fn(1074).ChannelTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -23,7 +23,7 @@ export default function CreateChannelTypeDescription(guildId) {
   ({ guildProfile, fetchGuildProfile } = guildProfile1);
   let hasItem = null != guildProfile;
   if (hasItem) {
-    const VISIBLE = tmp(5721).GuildProfileVisibilitySets.VISIBLE;
+    const VISIBLE = tmp(5763).GuildProfileVisibilitySets.VISIBLE;
     hasItem = VISIBLE.has(guildProfile.visibility);
   }
   let tmp6 = !tmp5;
@@ -43,7 +43,7 @@ export default function CreateChannelTypeDescription(guildId) {
     const obj3 = { variant: "text-sm/normal", color: "text-subtle", children: null };
     const intl = tmp(1115).intl;
     obj3.children = intl.string(tmp(1115).t["2Ab4Id"]);
-    obj2.children = jsx(tmp(4718).Text, { variant: "text-sm/normal", color: "text-subtle", children: null });
+    obj2.children = jsx(tmp(4752).Text, { variant: "text-sm/normal", color: "text-subtle", children: null });
     tmp9 = <View>{null}</View>;
   }
   return tmp9;

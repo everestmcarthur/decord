@@ -1,15 +1,16 @@
-// Module ID: 5344
-// Function ID: 5345
+// Module ID: 5387
+// Function ID: 5388
 // Name: UploadTargets
-// Dependencies: [1958, 1074, 5303, 5298, 5345, 5347, 2]
+// Dependencies: [2041, 1074, 5373, 5345, 5340, 5388, 5390, 2]
 // Exports: getUploadTarget
 
-// Module 5344 (UploadTargets)
-import UploadUtils from "UploadUtils" /* 5298 */;
-import FileUtilsAll from "FileUtils" /* 5303 */;
-import GuildProductAttachmentUploadTargetDefault from "GuildProductAttachmentUploadTarget" /* 5345 */;
-import ICYMIAttachmentUploadTargetDefault from "ICYMIAttachmentUploadTarget" /* 5347 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
+// Module 5387 (UploadTargets)
+import UploadUtils from "UploadUtils" /* 5340 */;
+import FileUtilsAll from "FileUtils" /* 5345 */;
+import UploadLimits from "UploadLimits" /* 5373 */;
+import GuildProductAttachmentUploadTargetDefault from "GuildProductAttachmentUploadTarget" /* 5388 */;
+import ICYMIAttachmentUploadTargetDefault from "ICYMIAttachmentUploadTarget" /* 5390 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
 
 require = fn;
 const Constants = fn(1074);
@@ -25,11 +26,12 @@ prototype["getDeleteUploadURL"] = function getDeleteUploadURL(arg0) {
 };
 prototype["getMaxFileSize"] = function getMaxFileSize(arg0) {
   const basicChannel = ChannelStore.getBasicChannel(arg0);
+  const obj = UploadLimits;
   let guild_id;
   if (basicChannel != null) {
     guild_id = basicChannel.guild_id;
   }
-  return FileUtilsAll.maxFileSize(guild_id);
+  return obj.getEffectiveUploadLimit(FileUtilsAll.maxFileSize(guild_id));
 };
 prototype["getMaxAttachmentsCount"] = function getMaxAttachmentsCount() {
   return timestampProducer;

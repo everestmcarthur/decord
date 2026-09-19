@@ -1,22 +1,22 @@
-// Module ID: 17659
-// Function ID: 17660
+// Module ID: 17739
+// Function ID: 17740
 // Name: ChannelCallManager
-// Dependencies: [10148, 5448, 1958, 10325, 2012, 4567, 4741, 4746, 4738, 10147, 7314, 2]
+// Dependencies: [10158, 5490, 2041, 10337, 2095, 4601, 4775, 4780, 4772, 10157, 7358, 2]
 
-// Module 17659 (ChannelCallManager)
-import SoundpackStore from "SoundpackStore" /* 10148 */;
-import CallStore from "CallStore" /* 5448 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
-import NotificationSettingsStore from "NotificationSettingsStore" /* 10325 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
-import StreamerModeStore from "StreamerModeStore" /* 4567 */;
-import VoiceStateStore from "VoiceStateStore" /* 4741 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4746 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4738 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7314 */;
+// Module 17739 (ChannelCallManager)
+import SoundpackStore from "SoundpackStore" /* 10158 */;
+import CallStore from "CallStore" /* 5490 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
+import NotificationSettingsStore from "NotificationSettingsStore" /* 10337 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2095 */;
+import StreamerModeStore from "StreamerModeStore" /* 4601 */;
+import VoiceStateStore from "VoiceStateStore" /* 4775 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4780 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4772 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7358 */;
 
 let require = fn;
-const SoundUtils = fn(10147);
+const SoundUtils = fn(10157);
 let closure_11 = SoundUtils.createSoundForPack("call_calling", SoundpackStore.getSoundpack());
 class ChannelCallManager extends tmp2 {
   constructor() {

@@ -1,18 +1,18 @@
-// Module ID: 8346
-// Function ID: 8347
+// Module ID: 8384
+// Function ID: 8385
 // Name: InteractionUtils
-// Dependencies: [5, 502, 8160, 1074, 11, 7967, 8347, 1895, 1271, 7652, 8348, 573, 4952, 2, 4949]
+// Dependencies: [5, 502, 8198, 1074, 11, 8005, 8385, 1978, 1271, 7696, 8386, 573, 4985, 2, 4982]
 // Exports: canRetryInteractionData, executeMessageComponentInteraction, getInteractionInitialResponseDeadlineTimestamp, getInteractionStatusViewState, getInteractionTimeoutTimestamp
 
-// Module 8346 (InteractionUtils)
+// Module 8384 (InteractionUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import Server from "Server" /* 1895 */;
-import InteractionActionCreators from "InteractionActionCreators" /* 8347 */;
-import SkemaUtils from "SkemaUtils" /* 8348 */;
+import Server from "Server" /* 1978 */;
+import InteractionActionCreators from "InteractionActionCreators" /* 8385 */;
+import SkemaUtils from "SkemaUtils" /* 8386 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import InteractionStore from "InteractionStore" /* 8160 */;
+import InteractionStore from "InteractionStore" /* 8198 */;
 
 require = fn;
 let closure_10 = async function _executeMessageComponentInteraction(arg0, value) {
@@ -101,17 +101,17 @@ function mapMessageComponentLocalStateForAPI(type) {
   } else {
     type = type.type;
     if (Server.ComponentType.TEXT_INPUT !== type) {
-      if (tmp(1895).ComponentType.FILE_UPLOAD !== type) {
-        if (tmp(1895).ComponentType.RADIO_GROUP !== type) {
-          if (tmp(1895).ComponentType.CHECKBOX_GROUP !== type) {
-            if (tmp(1895).ComponentType.CHECKBOX !== type) {
-              if (tmp(1895).ComponentType.STRING_SELECT === type) {
+      if (tmp(1978).ComponentType.FILE_UPLOAD !== type) {
+        if (tmp(1978).ComponentType.RADIO_GROUP !== type) {
+          if (tmp(1978).ComponentType.CHECKBOX_GROUP !== type) {
+            if (tmp(1978).ComponentType.CHECKBOX !== type) {
+              if (tmp(1978).ComponentType.STRING_SELECT === type) {
                 return type;
               } else {
-                if (tmp(1895).ComponentType.USER_SELECT !== type) {
-                  if (tmp(1895).ComponentType.ROLE_SELECT !== type) {
-                    if (tmp(1895).ComponentType.MENTIONABLE_SELECT !== type) {
-                      if (tmp(1895).ComponentType.CHANNEL_SELECT !== type) {
+                if (tmp(1978).ComponentType.USER_SELECT !== type) {
+                  if (tmp(1978).ComponentType.ROLE_SELECT !== type) {
+                    if (tmp(1978).ComponentType.MENTIONABLE_SELECT !== type) {
+                      if (tmp(1978).ComponentType.CHANNEL_SELECT !== type) {
                         return null;
                       }
                     }
@@ -327,7 +327,7 @@ export const canRetryInteractionData = function canRetryInteractionData(interact
           } else {
             tmp4 = options1;
             items = options1;
-            if (options1[0].type !== tmp7(1895).ApplicationCommandOptionType.SUB_COMMAND) {
+            if (options1[0].type !== tmp7(1978).ApplicationCommandOptionType.SUB_COMMAND) {
               break;
             }
           }
@@ -351,4 +351,4 @@ export const canRetryInteractionData = function canRetryInteractionData(interact
   }
   return true;
 };
-export const interactionCallbackErrorReason = fn(4949).interactionCallbackErrorReason;
+export const interactionCallbackErrorReason = fn(4982).interactionCallbackErrorReason;

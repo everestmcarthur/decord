@@ -1,25 +1,25 @@
-// Module ID: 9653
-// Function ID: 9654
+// Module ID: 9528
+// Function ID: 9529
 // Name: PlaintextResolvers
-// Dependencies: [32, 5629, 5676, 1958, 2013, 2022, 2016, 1980, 4361, 4371, 1372, 1074, 1375, 7882, 4875, 11, 5612, 4375, 4379, 2]
+// Dependencies: [32, 5671, 5718, 2041, 2096, 2105, 2099, 2063, 4395, 4405, 1372, 1074, 1375, 7920, 4909, 11, 5654, 4409, 4413, 2]
 // Exports: resolveApplicationCommandOption
 
-// Module 9653 (PlaintextResolvers)
+// Module 9528 (PlaintextResolvers)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4375 */;
-import EmojiUtilsDefault from "EmojiUtils" /* 4379 */;
-import useChannelName from "useChannelName" /* 4875 */;
-import SlateUtils from "SlateUtils" /* 7882 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4409 */;
+import EmojiUtilsDefault from "EmojiUtils" /* 4413 */;
+import useChannelName from "useChannelName" /* 4909 */;
+import SlateUtils from "SlateUtils" /* 7920 */;
 import _slicedToArray from "module_32" /* 32 */;
-import EmojiStore from "EmojiStore" /* 5629 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5676 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
-import GuildChannelStore from "GuildChannelStore" /* 2013 */;
-import GuildMemberStore from "GuildMemberStore" /* 2022 */;
-import GuildRoleStore from "GuildRoleStore" /* 2016 */;
-import GuildStore from "GuildStore" /* 1980 */;
-import PermissionStore from "PermissionStore" /* 4361 */;
-import RelationshipStore from "RelationshipStore" /* 4371 */;
+import EmojiStore from "EmojiStore" /* 5671 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5718 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
+import GuildChannelStore from "GuildChannelStore" /* 2096 */;
+import GuildMemberStore from "GuildMemberStore" /* 2105 */;
+import GuildRoleStore from "GuildRoleStore" /* 2099 */;
+import GuildStore from "GuildStore" /* 2063 */;
+import PermissionStore from "PermissionStore" /* 4395 */;
+import RelationshipStore from "RelationshipStore" /* 4405 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -191,7 +191,7 @@ function matchesUser(arg0, arg1, username, requireExact) {
   }
   return tmp;
 }
-let closure_8 = fn(2013).GUILD_SELECTABLE_CHANNELS_KEY;
+let closure_8 = fn(2096).GUILD_SELECTABLE_CHANNELS_KEY;
 const Permissions = fn(1074).Permissions;
 const EmojiIntention = fn(1375).EmojiIntention;
 const size = fn(2);

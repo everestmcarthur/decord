@@ -1,13 +1,12 @@
-// Module ID: 4930
-// Function ID: 4931
+// Module ID: 4964
+// Function ID: 4965
 // Name: VoicePanelStore
-// Dependencies: [1958, 1243, 4931, 1248, 2]
+// Dependencies: [1243, 1248, 2]
 
-// Module 4930 (VoicePanelStore)
-import ChannelStore from "ChannelStore" /* 1958 */;
+// Module 4964 (VoicePanelStore)
+import identity from "module_1243" /* 1243 */;
+import size from "module_2" /* 2 */;
 
-const require = fn;
-const identity = fn(1243);
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   closure_0 = arg0;
   dependencyMap = arg1;
@@ -40,32 +39,21 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   obj.voicePanelsPIP = new Set();
   obj.openChannel = function openChannel(arg0) {
     closure_0 = arg0;
-    let result = closure_0(4931).isStageVoicePanelEnabled("voice_panel_store");
-    if (!result) {
-      channel = channel.getChannel(arg0);
-      let isGuildStageVoiceResult;
-      if (channel != null) {
-        isGuildStageVoiceResult = channel.isGuildStageVoice();
-      }
-      result = true !== isGuildStageVoiceResult;
-    }
-    if (result) {
-      const channels = dependencyMap().channels;
-      if (!channels.has(arg0)) {
-        closure_0(1248).batchUpdates(() => {
-          closure_0((channels) => {
-            const obj = {};
-            const merged = Object.assign(channels);
-            const items = [closure_1_0, ...Array.from(channels.channels)];
-            obj.channels = new Set(items);
-            const items1 = [closure_1_0, ...Array.from(channels.voicePanelsOpened)];
-            const set = new Set(items);
-            obj.voicePanelsOpened = new Set(items1);
-            return obj;
-          });
+    const channels = dependencyMap().channels;
+    if (!channels.has(arg0)) {
+      closure_0(1248).batchUpdates(() => {
+        closure_0((channels) => {
+          const obj = {};
+          const merged = Object.assign(channels);
+          const items = [closure_1_0, ...Array.from(channels.channels)];
+          obj.channels = new Set(items);
+          const items1 = [closure_1_0, ...Array.from(channels.voicePanelsOpened)];
+          const set = new Set(items);
+          obj.voicePanelsOpened = new Set(items1);
+          return obj;
         });
-        const tmpResult = closure_0(1248);
-      }
+      });
+      let obj = closure_0(1248);
     }
   };
   obj.closeChannel = function closeChannel(channelId) {
@@ -210,7 +198,6 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   };
   return obj;
 });
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/voice_panel/VoicePanelStore.tsx");
+const result = size.fileFinishedImporting("modules/voice_panel/VoicePanelStore.tsx");
 
 export default withEqualityFn;

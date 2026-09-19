@@ -1,13 +1,13 @@
-// Module ID: 12383
-// Function ID: 12384
+// Module ID: 12392
+// Function ID: 12393
 // Name: useLaunchingActivityButtonState
-// Dependencies: [19, 1957, 9748, 7364, 504, 9744, 8504, 2]
+// Dependencies: [19, 2040, 9312, 7408, 504, 9593, 8542, 2]
 // Exports: default
 
-// Module 12383 (useLaunchingActivityButtonState)
+// Module 12392 (useLaunchingActivityButtonState)
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1957 */;
-import FramesStore from "FramesStore" /* 9748 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2040 */;
+import FramesStore from "FramesStore" /* 9312 */;
 
 const require = globalThis.__r;
 

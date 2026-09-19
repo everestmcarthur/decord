@@ -1,20 +1,20 @@
-// Module ID: 14008
-// Function ID: 14009
+// Module ID: 14062
+// Function ID: 14063
 // Name: ProvisionalAccountNoCallAllowed
-// Dependencies: [19, 1074, 21, 4722, 5072, 6803, 1115, 2025, 5072, 2]
+// Dependencies: [19, 1074, 21, 4756, 5114, 6847, 1115, 2108, 5114, 2]
 // Exports: default
 
-// Module 14008 (ProvisionalAccountNoCallAllowed)
+// Module 14062 (ProvisionalAccountNoCallAllowed)
 import util from "util" /* 1115 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2025 */;
-import AlertModal from "AlertModal" /* 5072 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 6803 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2108 */;
+import AlertModal from "AlertModal" /* 5114 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 6847 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let closure_5 = createStyles.createStyles({ header: { alignSelf: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/provisional_accounts/native/ProvisionalAccountNoCallAllowed.tsx");

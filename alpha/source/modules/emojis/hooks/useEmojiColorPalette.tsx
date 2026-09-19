@@ -1,14 +1,14 @@
-// Module ID: 11511
-// Function ID: 11512
+// Module ID: 11523
+// Function ID: 11524
 // Name: useEmojiColorPalette
-// Dependencies: [4714, 1182, 504, 4573, 8176, 2]
+// Dependencies: [4748, 1182, 504, 4607, 8214, 2]
 // Exports: useEmojiColorPalette
 
-// Module 11511 (useEmojiColorPalette)
+// Module 11523 (useEmojiColorPalette)
 import initialize from "initialize" /* 504 */;
-import shared from "shared" /* 4573 */;
-import EmojiColorUtils from "EmojiColorUtils" /* 8176 */;
-import AccessibilityStore from "AccessibilityStore" /* 4714 */;
+import shared from "shared" /* 4607 */;
+import EmojiColorUtils from "EmojiColorUtils" /* 8214 */;
+import AccessibilityStore from "AccessibilityStore" /* 4748 */;
 import ThemeStore from "ThemeStore" /* 1182 */;
 
 require = fn;

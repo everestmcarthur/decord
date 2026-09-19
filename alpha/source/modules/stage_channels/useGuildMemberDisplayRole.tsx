@@ -1,13 +1,13 @@
-// Module ID: 5599
-// Function ID: 5600
+// Module ID: 5641
+// Function ID: 5642
 // Name: useGuildMemberDisplayRole
-// Dependencies: [2022, 1980, 4366, 504, 2]
+// Dependencies: [2105, 2063, 4400, 504, 2]
 // Exports: default
 
-// Module 5599 (useGuildMemberDisplayRole)
-import PermissionUtilsAll from "PermissionUtils" /* 4366 */;
-import GuildMemberStore from "GuildMemberStore" /* 2022 */;
-import GuildStore from "GuildStore" /* 1980 */;
+// Module 5641 (useGuildMemberDisplayRole)
+import PermissionUtilsAll from "PermissionUtils" /* 4400 */;
+import GuildMemberStore from "GuildMemberStore" /* 2105 */;
+import GuildStore from "GuildStore" /* 2063 */;
 
 const require = globalThis.__r;
 

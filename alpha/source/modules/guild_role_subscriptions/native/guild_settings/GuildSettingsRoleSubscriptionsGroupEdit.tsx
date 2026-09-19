@@ -1,12 +1,12 @@
-// Module ID: 18088
-// Function ID: 18089
+// Module ID: 18167
+// Function ID: 18168
 // Name: GuildSettingsRoleSubscriptionsGroupEdit
-// Dependencies: [5, 32, 19, 17, 1349, 21, 1484, 15421, 18089, 18048, 7177, 18090, 12, 5794, 7573, 1115, 4419, 576, 18092, 18097, 18103, 2]
+// Dependencies: [5, 32, 19, 17, 1349, 21, 1484, 15476, 18168, 18127, 7221, 18169, 12, 5836, 7617, 1115, 4453, 576, 18171, 18176, 18182, 2]
 // Exports: default
 
-// Module 18088 (GuildSettingsRoleSubscriptionsGroupEdit)
-import ToastUtils from "ToastUtils" /* 4419 */;
-import GuildSettingsRoleSubscriptionContainerDefault from "GuildSettingsRoleSubscriptionContainer" /* 18103 */;
+// Module 18167 (GuildSettingsRoleSubscriptionsGroupEdit)
+import ToastUtils from "ToastUtils" /* 4453 */;
+import GuildSettingsRoleSubscriptionContainerDefault from "GuildSettingsRoleSubscriptionContainer" /* 18182 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

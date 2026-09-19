@@ -82,7 +82,7 @@ fn = function n(userConfig, callback) {
       initialVelocity: 0,
       current: "disabled",
       lastTimestamp: null,
-      startTimestamp: "B_e_found",
+      startTimestamp: "EMBEDDED_ACTIVITY_CLOSE",
       reduceMotion: null
     };
     let num = obj.velocity;

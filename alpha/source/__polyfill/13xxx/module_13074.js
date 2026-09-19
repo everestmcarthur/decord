@@ -1,43 +1,24 @@
 // Module ID: 13074
 // Function ID: 13075
-// Dependencies: [13046]
-// Exports: handleCallbackErrors
+// Dependencies: [13049, 13069]
+// Exports: getDefaultCurrentScope, getDefaultIsolationScope
 
 // Module 13074
-import _mod13046 from "module_13046" /* 13046 */;
+import _mod13049 from "module_13049" /* 13049 */;
+import ScopeClass from "ScopeClass" /* 13069 */;
 
 require = arg1;
 const dependencyMap = arg6;
 
-export const handleCallbackErrors = function handleCallbackErrors(fn, arg1) {
-  fn = arg2;
-  if (arg2 === undefined) {
-    fn = function t() {
-
-    };
-  }
-  try {
-    return (function maybeHandlePromiseRejection(promise, arg1, fn) {
-      closure_0 = arg1;
-      closure_1 = fn;
-      if (obj.isThenable(promise)) {
-        return promise.then((result) => {
-          closure_1();
-          return result;
-        }, (arg0) => {
-          closure_0(arg0);
-          closure_1();
-          throw arg0;
-        });
-      } else {
-        fn();
-        return promise;
-      }
-      obj = _mod13046;
-    })(fn(), arg1, fn);
-  } catch (tmp5) {
-    tmp3(tmp5);
-    tmp2();
-    throw tmp5;
-  }
+export const getDefaultCurrentScope = function getDefaultCurrentScope() {
+  return _mod13049.getGlobalSingleton("defaultCurrentScope", () => {
+    const scope = new ScopeClass.Scope();
+    return scope;
+  });
+};
+export const getDefaultIsolationScope = function getDefaultIsolationScope() {
+  return _mod13049.getGlobalSingleton("defaultIsolationScope", () => {
+    const scope = new ScopeClass.Scope();
+    return scope;
+  });
 };

@@ -1,11 +1,11 @@
-// Module ID: 17506
-// Function ID: 17507
+// Module ID: 17583
+// Function ID: 17584
 // Name: useChatBadge
-// Dependencies: [4737, 504, 2]
+// Dependencies: [4771, 504, 2]
 // Exports: default
 
-// Module 17506 (useChatBadge)
-import ReadStateStore from "ReadStateStore" /* 4737 */;
+// Module 17583 (useChatBadge)
+import ReadStateStore from "ReadStateStore" /* 4771 */;
 
 const require = globalThis.__r;
 

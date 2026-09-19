@@ -1,23 +1,23 @@
-// Module ID: 13973
-// Function ID: 13974
+// Module ID: 14027
+// Function ID: 14028
 // Name: VoiceActionSheet
-// Dependencies: [19, 17, 4746, 21, 4722, 7358, 7378, 504, 4579, 4929, 13974, 13975, 7393, 13985, 13988, 13989, 5132, 13992, 2]
+// Dependencies: [19, 17, 4780, 21, 4756, 7402, 7422, 504, 4613, 4963, 14028, 14029, 7437, 14039, 14042, 14043, 5174, 14046, 2]
 // Exports: default
 
-// Module 13973 (VoiceActionSheet)
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4579 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7358 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7378 */;
-import VoiceActionSheetManagerDefault from "VoiceActionSheetManager" /* 13974 */;
+// Module 14027 (VoiceActionSheet)
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4613 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7402 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7422 */;
+import VoiceActionSheetManagerDefault from "VoiceActionSheetManager" /* 14028 */;
 import noop from "module_19" /* 19 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4746 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4780 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 const obj2 = { container: { flex: 1 }, visualEffectView: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -47,29 +47,29 @@ export default function VoiceActionSheet(channel) {
   if (obj2.requiresVoiceChannelsOnboard()) {
     let obj3 = { children: null };
     const obj4 = { channel };
-    obj3.children = closure_6(tmp2(13985), obj4);
-    let children = closure_6(tmp5(7393).ActionSheet, obj3);
+    obj3.children = closure_6(tmp2(14039), obj4);
+    let children = closure_6(tmp5(7437).ActionSheet, obj3);
     let tmp8 = closure_6;
   } else if (stateFromStores) {
     const obj5 = { children: null };
     const obj6 = { channel };
-    const items2 = [closure_6(tmp2(13988), obj6), ];
+    const items2 = [closure_6(tmp2(14042), obj6), ];
     const obj7 = { channel };
-    items2[1] = closure_6(tmp2(13989), obj7);
+    items2[1] = closure_6(tmp2(14043), obj7);
     obj5.children = items2;
-    children = closure_7(tmp5(7393).ActionSheet, obj5);
+    children = closure_7(tmp5(7437).ActionSheet, obj5);
     tmp8 = closure_6;
   } else {
     tmp8 = closure_6;
     const obj8 = { scrollable: true, startExpanded: true, children: null };
     const obj9 = { style: tmp.container, children: null };
     const obj10 = { blurTheme: "dark", style: tmp.visualEffectView };
-    const items3 = [closure_6(tmp2(5132), obj10), ];
+    const items3 = [closure_6(tmp2(5174), obj10), ];
     const obj11 = { channel };
-    items3[1] = closure_6(tmp2(13992), obj11);
+    items3[1] = closure_6(tmp2(14046), obj11);
     obj9.children = items3;
     obj8.children = closure_7(closure_4, obj9);
-    children = closure_6(tmp5(7393).ActionSheet, obj8);
+    children = closure_6(tmp5(7437).ActionSheet, obj8);
   }
-  return tmp8(channel(7358).AnalyticsLocationProvider, { value: tmp4(AnalyticsLocationDefault.VOICE_ACTION_SHEET).analyticsLocations, children });
+  return tmp8(channel(7402).AnalyticsLocationProvider, { value: tmp4(AnalyticsLocationDefault.VOICE_ACTION_SHEET).analyticsLocations, children });
 };

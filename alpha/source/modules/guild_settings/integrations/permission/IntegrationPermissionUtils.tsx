@@ -1,12 +1,12 @@
-// Module ID: 7718
-// Function ID: 7719
+// Module ID: 7762
+// Function ID: 7763
 // Name: IntegrationPermissionUtils
-// Dependencies: [32, 1895, 7719, 2]
+// Dependencies: [32, 1978, 7763, 2]
 // Exports: commandName, commandPermissionChannels, commandPermissionMembersRoles, keyPermissions, toPermissionKey
 
-// Module 7718 (IntegrationPermissionUtils)
-import Server from "Server" /* 1895 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7719 */;
+// Module 7762 (IntegrationPermissionUtils)
+import Server from "Server" /* 1978 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7763 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

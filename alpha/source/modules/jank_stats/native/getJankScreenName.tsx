@@ -1,13 +1,13 @@
-// Module ID: 16262
-// Function ID: 16263
+// Module ID: 16338
+// Function ID: 16339
 // Name: getJankScreenName
-// Dependencies: [16263, 4580, 16264, 2]
+// Dependencies: [16339, 4614, 16340, 2]
 // Exports: default, getBaseScreenName, getChatPanelScreenName, getComponentDisplayName, getPanelListScreenName, getWideViewScreenName, isModalScreenName
 
-// Module 16262 (getJankScreenName)
-import RootNavigationRef from "RootNavigationRef" /* 4580 */;
-import getScreenAnalyticsName from "getScreenAnalyticsName" /* 16264 */;
-import JankScreenConstants from "JankScreenConstants" /* 16263 */;
+// Module 16338 (getJankScreenName)
+import RootNavigationRef from "RootNavigationRef" /* 4614 */;
+import getScreenAnalyticsName from "getScreenAnalyticsName" /* 16340 */;
+import JankScreenConstants from "JankScreenConstants" /* 16339 */;
 import size from "module_2" /* 2 */;
 
 function resolveScreenName(items) {

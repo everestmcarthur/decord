@@ -1,9 +1,9 @@
-// Module ID: 12139
-// Function ID: 12140
+// Module ID: 12148
+// Function ID: 12149
 // Name: ChatListNativeComponent
 // Dependencies: [65, 2]
 
-// Module 12139 (ChatListNativeComponent)
+// Module 12148 (ChatListNativeComponent)
 import module_65 from "module_65" /* 65 */;
 import size from "module_2" /* 2 */;
 

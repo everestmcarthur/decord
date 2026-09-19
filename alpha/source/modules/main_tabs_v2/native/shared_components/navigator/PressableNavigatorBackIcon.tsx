@@ -1,22 +1,22 @@
-// Module ID: 8069
-// Function ID: 8070
+// Module ID: 8107
+// Function ID: 8108
 // Name: PressableNavigatorBackIcon
-// Dependencies: [19, 17, 1958, 7832, 2012, 21, 4722, 1177, 576, 504, 4423, 4540, 8070, 5292, 1115, 8071, 8072, 2]
+// Dependencies: [19, 17, 2041, 7870, 2095, 21, 4756, 1177, 576, 504, 4457, 4574, 8108, 5334, 1115, 8109, 8110, 2]
 
-// Module 8069 (PressableNavigatorBackIcon)
+// Module 8107 (PressableNavigatorBackIcon)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 7832 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 7870 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2095 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let closure_11 = createStyles.createStyles(() => {
   const obj = { maskWrapper: null, maskStroke: null, actionButtonPressable: null, actionButtonIcon: null };
   const rect = { position: "absolute", minWidth: native.BADGE_SIZE, height: native.BADGE_SIZE, top: 10, left: 8, flexShrink: 0, flexGrow: 1, zIndex: 100 };

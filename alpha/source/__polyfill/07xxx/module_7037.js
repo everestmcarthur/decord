@@ -1,9 +1,19 @@
 // Module ID: 7037
 // Function ID: 7038
-// Dependencies: [7038]
+// Dependencies: [19, 6876]
+// Exports: useBottomSheetGestureHandlers
 
 // Module 7037
-import _modDef7038 from "module_7038" /* 7038 */;
+import _mod19 from "module_19" /* 19 */;
+import _mod6876 from "module_6876" /* 6876 */;
 
+const useContext = _mod19.useContext;
 
-export default _modDef7038;
+export const useBottomSheetGestureHandlers = () => {
+  const tmp = useContext(_mod6876.BottomSheetGestureHandlersContext);
+  if (null === tmp) {
+    throw "'useBottomSheetGestureHandlers' cannot be used out of the BottomSheet!";
+  } else {
+    return tmp;
+  }
+};

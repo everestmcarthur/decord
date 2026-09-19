@@ -1,17 +1,10 @@
 // Module ID: 7054
 // Function ID: 7055
-// Dependencies: []
+// Dependencies: [17]
 
 // Module 7054
+import _mod17 from "module_17" /* 17 */;
 
-export default function _arrayLikeToArray(arg0, arg1) {
-  let length = arg1;
-  if (tmp) {
-    length = arg0.length;
-  }
-  const ArrayResult = Array(length);
-  for (let num = 0; num < length; num = num + 1) {
-    ArrayResult[num] = arg0[num];
-  }
-  return ArrayResult;
-};
+const StyleSheet = _mod17.StyleSheet;
+
+export const styles = StyleSheet.create({ container: StyleSheet.absoluteFillObject, background: { backgroundColor: "white", borderRadius: 15 } });

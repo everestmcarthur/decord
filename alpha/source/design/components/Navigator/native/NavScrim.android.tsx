@@ -1,17 +1,17 @@
-// Module ID: 7236
-// Function ID: 7237
+// Module ID: 7280
+// Function ID: 7281
 // Name: NavScrim
-// Dependencies: [19, 17, 21, 4722, 576, 7177, 2]
+// Dependencies: [19, 17, 21, 4756, 576, 7221, 2]
 
-// Module 7236 (NavScrim)
+// Module 7280 (NavScrim)
 import nativeDefault from "native" /* 576 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7177 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7221 */;
 import noop from "module_19" /* 19 */;
 
 get_ActivityIndicator = fn(17);
 ({ View: c2, StyleSheet } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj = { androidNavScrim: null };
 const obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);

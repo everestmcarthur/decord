@@ -1,12 +1,12 @@
-// Module ID: 13501
-// Function ID: 13502
+// Module ID: 13556
+// Function ID: 13557
 // Name: VibegrationsAppChannelActionCreators
-// Dependencies: [8080, 573, 2]
+// Dependencies: [8118, 573, 2]
 // Exports: markAppChannelChatAutoOpened, setAppChannelChatOpen
 
-// Module 13501 (VibegrationsAppChannelActionCreators)
+// Module 13556 (VibegrationsAppChannelActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import VibegrationsAppChannelsStore from "VibegrationsAppChannelsStore" /* 8080 */;
+import VibegrationsAppChannelsStore from "VibegrationsAppChannelsStore" /* 8118 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/vibegrations/actions/VibegrationsAppChannelActionCreators.tsx");

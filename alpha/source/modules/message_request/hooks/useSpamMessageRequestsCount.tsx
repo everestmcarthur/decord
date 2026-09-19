@@ -1,12 +1,12 @@
-// Module ID: 17266
-// Function ID: 17267
+// Module ID: 17343
+// Function ID: 17344
 // Name: useSpamMessageRequestsCount
-// Dependencies: [7416, 504, 2]
+// Dependencies: [7460, 504, 2]
 // Exports: useSpamMessageRequestCount
 
-// Module 17266 (useSpamMessageRequestsCount)
+// Module 17343 (useSpamMessageRequestsCount)
 import initialize from "initialize" /* 504 */;
-import SpamMessageRequestStore from "SpamMessageRequestStore" /* 7416 */;
+import SpamMessageRequestStore from "SpamMessageRequestStore" /* 7460 */;
 
 require = fn;
 const size = fn(2);

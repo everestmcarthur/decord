@@ -1,75 +1,80 @@
 // Module ID: 14570
 // Function ID: 14571
-// Dependencies: [14519, 14571, 14568, 14528, 14551]
+// Dependencies: [14571, 14572, 14573, 14610, 14611, 14627, 14628]
 
 // Module 14570
-import _mod14519 from "module_14519" /* 14519 */;
-import text from "text" /* 14528 */;
-import _mod14551 from "module_14551" /* 14551 */;
-import _mod14568 from "module_14568" /* 14568 */;
 import _mod14571 from "module_14571" /* 14571 */;
+import _mod14573 from "module_14573" /* 14573 */;
+import _mod14610 from "module_14610" /* 14610 */;
 
-const enumerable = "enumerable";
-const configurable = "configurable";
-const writable = "writable";
-if (_mod14519) {
-  if (_mod14571) {
-    defineProperty = function defineProperty(fn, arg1, value) {
-      _mod14568(fn);
-      const tmp2 = text(arg1);
-      _mod14568(value);
-      let tmp4 = value;
-      if (typeof fn === "function") {
-        tmp4 = value;
-        if ("prototype" === tmp2) {
-          tmp4 = value;
-          if ("value" in value) {
-            tmp4 = value;
-            if (writable in value) {
-              tmp4 = value;
-              if (!value[tmp5]) {
-                const tmp7 = getOwnPropertyDescriptor(fn, tmp2);
-                let tmp8 = tmp7;
-                if (tmp7) {
-                  tmp8 = tmp7[tmp5];
-                }
-                tmp4 = value;
-                if (tmp8) {
-                  fn[tmp2] = value.value;
-                  const obj = { configurable: configurable in value ? value[configurable] : tmp7[configurable], enumerable: enumerable in value ? value[enumerable] : tmp7[enumerable], writable: false };
-                }
-              }
-            }
-          }
-        }
+
+export default (dontCallGetSet, obj) => {
+  ({ target, global: _global, stat } = dontCallGetSet);
+  const tmp3 = _mod14571;
+  if (_global) {
+    let prototype = tmp3;
+  } else {
+    let tmp4 = tmp3[target];
+    if (stat) {
+      if (!tmp4) {
+        tmp4 = tmp(14572)(target, {});
       }
-      return defineProperty(fn, tmp2, tmp4);
-    };
-  }
-  let defineProperty2 = defineProperty;
-} else {
-  defineProperty2 = function defineProperty(arg0, arg1, value) {
-    _mod14568(arg0);
-    const tmp2 = text(arg1);
-    _mod14568(value);
-    if (!_mod14551) {
-      if (!("get" in value)) {
-        if (!("set" in value)) {
-          if ("value" in value) {
-            arg0[tmp2] = value.value;
-          }
-          return arg0;
-        }
-      }
-      const tmp8 = new TypeError("Accessors not supported");
-      throw tmp8;
+      prototype = tmp4;
     } else {
-      try {
-        return defineProperty(arg0, tmp2, value);
-      } catch (err) {
+      prototype = tmp4;
+      if (tmp4) {
+        prototype = tmp(14571)[target].prototype;
       }
     }
-  };
-}
-
-export const f = defineProperty2;
+  }
+  if (prototype) {
+    for (const key10024 in arg1) {
+      let tmp21 = arg1[key10024];
+      let tmp20 = key10024;
+      if (arg0.dontCallGetSet) {
+        obj = _mod14573;
+        let iter = obj.f(prototype, key10024);
+        value = iter;
+        if (iter) {
+          value = iter.value;
+        }
+        let tmp7 = value;
+      } else {
+        tmp7 = prototype[key10024];
+      }
+      let tmp10 = require;
+      let sum = key10024;
+      let tmp12 = _mod14610;
+      if (!_global) {
+        let str4 = "#";
+        if (stat) {
+          str4 = ".";
+        }
+        sum = target + str4 + key10024;
+      }
+      if (!tmp12(sum, arg0.forced)) {
+        if (undefined !== tmp7) {
+          if (typeof tmp21 === typeof tmp7) {
+            continue;
+          } else {
+            let tmp22 = tmp10(14611)(tmp21, tmp7);
+          }
+        }
+        continue;
+      }
+      let sham = arg0.sham;
+      if (!sham) {
+        let sham2 = tmp7;
+        if (tmp7) {
+          sham2 = tmp7.sham;
+        }
+        sham = sham2;
+      }
+      if (sham) {
+        let tmp14 = tmp10(14627)(tmp21, "sham", true);
+      }
+      let tmp19 = tmp10(14628)(prototype, tmp20, tmp21, arg0);
+      continue;
+    }
+  }
+};

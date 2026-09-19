@@ -1,23 +1,23 @@
-// Module ID: 12468
-// Function ID: 12469
+// Module ID: 12477
+// Function ID: 12478
 // Name: useRenderPollAnswerImage
-// Dependencies: [32, 19, 17, 5063, 5062, 1375, 21, 504, 12448, 5757, 7326, 4378, 1397, 2]
+// Dependencies: [32, 19, 17, 5105, 5104, 1375, 21, 504, 12457, 5799, 7370, 4412, 1397, 2]
 // Exports: default
 
-// Module 12468 (useRenderPollAnswerImage)
+// Module 12477 (useRenderPollAnswerImage)
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
-import EmojiTypes from "EmojiTypes" /* 4378 */;
-import FastImageDefault from "FastImage" /* 5757 */;
-import EmojiDefault from "Emoji" /* 7326 */;
+import EmojiTypes from "EmojiTypes" /* 4412 */;
+import FastImageDefault from "FastImage" /* 5799 */;
+import EmojiDefault from "Emoji" /* 7370 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 5062 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 5104 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const ActivityIndicator = fn(17).ActivityIndicator;
-const DraftType = fn(5063).DraftType;
+const DraftType = fn(5105).DraftType;
 const EMOJI_URL_BASE_SIZE = fn(1375).EMOJI_URL_BASE_SIZE;
 const jsx = fn(21).jsx;
 let size = fn(2);

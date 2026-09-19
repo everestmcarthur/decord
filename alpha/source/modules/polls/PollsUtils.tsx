@@ -1,28 +1,28 @@
-// Module ID: 7963
-// Function ID: 7964
+// Module ID: 8001
+// Function ID: 8002
 // Name: PollsUtils
-// Dependencies: [1958, 7964, 4943, 4361, 4371, 8031, 1074, 1255, 504, 7417, 1091, 1927, 4955, 1115, 7965, 12, 4874, 2]
+// Dependencies: [2041, 8002, 4976, 4395, 4405, 8069, 1074, 1255, 504, 7461, 1091, 2010, 4988, 1115, 8003, 12, 4908, 2]
 // Exports: createPollExpiryTimestamp, createPollServerDataFromCreateRequest, filterOutUUID, formatPollResultNotificationCenterText, generateEmptyPollAnswer, generateLocalCreationAnswerId, getPollAnswerVotesTooltipText, getPollReplyPreview, getPollResultsReplyPreview, getPollResultsReplyPreviewMobile, getTotalVotes, hasNonVoteReactions, isAnswerFilled, isIncompleteAnswer, isPollCreationEmpty, useCanPostPollsInChannel
 
-// Module 7963 (PollsUtils)
+// Module 8001 (PollsUtils)
 import DurationsDefault from "Durations" /* 1091 */;
 import util from "util" /* 1115 */;
 import v1 from "v1" /* 1255 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 4874 */;
-import useMessageAuthor from "useMessageAuthor" /* 4955 */;
-import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 7417 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
-import MessageReactionsStore from "MessageReactionsStore" /* 7964 */;
-import MessageStore from "MessageStore" /* 4943 */;
-import PermissionStore from "PermissionStore" /* 4361 */;
-import RelationshipStore from "RelationshipStore" /* 4371 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 4908 */;
+import useMessageAuthor from "useMessageAuthor" /* 4988 */;
+import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 7461 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
+import MessageReactionsStore from "MessageReactionsStore" /* 8002 */;
+import MessageStore from "MessageStore" /* 4976 */;
+import PermissionStore from "PermissionStore" /* 4395 */;
+import RelationshipStore from "RelationshipStore" /* 4405 */;
 
 const require = globalThis.__r;
 
 require = fn;
 function getSampleOfVoterUsernamesForAnswer(message, id) {
   const channelId = message.getChannelId();
-  const reactions = MessageReactionsStore.getReactions(channelId, message.id, { id, name: "", animated: false }, closure_9, channel(7965).ReactionTypes.VOTE);
+  const reactions = MessageReactionsStore.getReactions(channelId, message.id, { id, name: "", animated: false }, closure_9, channel(8003).ReactionTypes.VOTE);
   channel = ChannelStore.getChannel(channelId);
   let guildId = null;
   if (null != channel) {
@@ -98,7 +98,7 @@ function formatVoterTooltipText(arr, arg1) {
     return intl.formatToPlainString(util.t.yVX6kE, obj);
   }
 }
-const PollsConstants = fn(8031);
+const PollsConstants = fn(8069);
 ({ POLL_RESULT_MESSAGE_POLL_TITLE_MAX_VISIBLE_CHARS: closure_8, VOTES_TOOLTIP_MAX_USERS: closure_9 } = PollsConstants);
 const Constants = fn(1074);
 ({ ChannelTypesSets: c10, Permissions: closure_11 } = Constants);
@@ -106,7 +106,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/polls/PollsUtils.tsx");
 
 export const generateEmptyPollAnswer = function generateEmptyPollAnswer() {
-  const obj = { text: "Array", image: "isArray", localCreationAnswerId: v1.v4() };
+  const obj = { text: "Array", image: "accessible", localCreationAnswerId: v1.v4() };
   return obj;
 };
 export const generateLocalCreationAnswerId = function generateLocalCreationAnswerId() {
@@ -280,8 +280,8 @@ export const getPollResultsReplyPreview = function getPollResultsReplyPreview(me
   }
   let truncateTextResult = str;
   if (null != React6) {
-    truncateTextResult = tmp(1927).truncateText(str, tmp4);
-    const tmpResult = tmp(1927);
+    truncateTextResult = tmp(2010).truncateText(str, tmp4);
+    const tmpResult = tmp(2010);
   }
   const intl = tmp(1115).intl;
   return intl.format(util.t.Vn97Ka, { username: messageAuthor.nick, title: truncateTextResult });
@@ -305,8 +305,8 @@ export const getPollResultsReplyPreviewMobile = function getPollResultsReplyPrev
     }
     let truncateTextResult = str;
     if (null != React6) {
-      truncateTextResult = tmp2(1927).truncateText(str, tmp5);
-      const tmp2Result = tmp2(1927);
+      truncateTextResult = tmp2(2010).truncateText(str, tmp5);
+      const tmp2Result = tmp2(2010);
     }
     const intl = tmp2(1115).intl;
     const obj2 = { username: messageAuthor.nick, title: truncateTextResult };

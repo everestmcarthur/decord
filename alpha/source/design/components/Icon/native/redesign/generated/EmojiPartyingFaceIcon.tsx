@@ -1,13 +1,13 @@
-// Module ID: 15595
-// Function ID: 15596
+// Module ID: 15650
+// Function ID: 15651
 // Name: EmojiPartyingFaceIcon
-// Dependencies: [19, 21, 576, 4422, 15596, 2]
+// Dependencies: [19, 21, 576, 4456, 15651, 2]
 // Exports: EmojiPartyingFaceIcon
 
-// Module 15595 (EmojiPartyingFaceIcon)
+// Module 15650 (EmojiPartyingFaceIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4422 */;
-import _mod15596 from "module_15596" /* 15596 */;
+import BaseIconImage from "BaseIconImage" /* 4456 */;
+import _mod15651 from "module_15651" /* 15651 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const EmojiPartyingFaceIcon = function EmojiPartyingFaceIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15596, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15651, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

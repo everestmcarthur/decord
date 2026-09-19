@@ -1,10 +1,10 @@
-// Module ID: 16218
-// Function ID: 16219
+// Module ID: 16294
+// Function ID: 16295
 // Name: usePasswordRegistrationStep
-// Dependencies: [5, 32, 19, 16195, 7151, 16219, 1115, 16206, 2]
+// Dependencies: [5, 32, 19, 16271, 7195, 16295, 1115, 16282, 2]
 // Exports: usePasswordRegistrationStep
 
-// Module 16218 (usePasswordRegistrationStep)
+// Module 16294 (usePasswordRegistrationStep)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -12,7 +12,7 @@ import noop from "module_19" /* 19 */;
 const require = globalThis.__r;
 
 const require = fn;
-const useRegistrationUIStore = fn(16195).useRegistrationUIStore;
+const useRegistrationUIStore = fn(16271).useRegistrationUIStore;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/utils/usePasswordRegistrationStep.tsx");
 

@@ -1,13 +1,13 @@
-// Module ID: 12083
-// Function ID: 12084
+// Module ID: 12092
+// Function ID: 12093
 // Name: GuildDisableCommunicationActionCreators
-// Dependencies: [19, 1372, 21, 4925, 12084, 1897, 5067, 12087, 2]
+// Dependencies: [19, 1372, 21, 4959, 12093, 1980, 5109, 12096, 2]
 // Exports: openDisableCommunication, openEnableCommunication
 
-// Module 12083 (GuildDisableCommunicationActionCreators)
-import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4925 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5067 */;
+// Module 12092 (GuildDisableCommunicationActionCreators)
+import asyncRequireImpl from "asyncRequireImpl" /* 1980 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4959 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5109 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -21,14 +21,14 @@ export const openDisableCommunication = function openDisableCommunication(userId
   const user = UserStore.getUser(userId.userId);
   if (null != user) {
     const obj2 = { guildId, user, cancelButtonCallback };
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12084, dependencyMap.paths), obj2);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12093, dependencyMap.paths), obj2);
   }
 };
 export const openEnableCommunication = function openEnableCommunication(arg0) {
   ({ guildId: require, userId: importDefault, cancelButtonCallback: dependencyMap } = arg0);
   actions_AlertActionCreatorsDefault.openLazy({
     importer() {
-      return asyncRequireImpl(12087, dependencyMap.paths).then((result) => {
+      return asyncRequireImpl(12096, dependencyMap.paths).then((result) => {
         closure_0 = result.default;
         return (arg0) => {
           const obj = {};
@@ -39,6 +39,7 @@ export const openEnableCommunication = function openEnableCommunication(arg0) {
           return <closure_0 />;
         };
       });
-    }
+    },
+    isDismissable: false
   });
 };

@@ -1,18 +1,18 @@
-// Module ID: 1918
-// Function ID: 1919
+// Module ID: 2001
+// Function ID: 2002
 // Name: GameRecord
-// Dependencies: [1387, 1919, 1895, 1925, 1397, 1370, 2]
+// Dependencies: [1387, 2002, 1978, 2008, 1397, 1370, 2]
 
-// Module 1918 (GameRecord)
+// Module 2001 (GameRecord)
 import GlobalUtils from "GlobalUtils" /* 1370 */;
 import AvatarUtils from "AvatarUtils" /* 1397 */;
-import Server from "Server" /* 1895 */;
-import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 1925 */;
+import Server from "Server" /* 1978 */;
+import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 2008 */;
 import Record from "Record" /* 1387 */;
-import ApplicationRecord from "ApplicationRecord" /* 1919 */;
+import ApplicationRecord from "ApplicationRecord" /* 2002 */;
 
 require = fn;
-const createExecutable = fn(1919).createExecutable;
+const createExecutable = fn(2002).createExecutable;
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/games/GameRecord.tsx");
 class GameRecord extends tmp2 {

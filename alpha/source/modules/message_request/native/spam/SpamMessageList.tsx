@@ -1,22 +1,22 @@
-// Module ID: 17272
-// Function ID: 17273
+// Module ID: 17349
+// Function ID: 17350
 // Name: SpamMessageList
-// Dependencies: [19, 17, 1074, 21, 4722, 576, 1115, 12693, 4420, 5767, 4733, 4925, 12685, 1241, 5292, 17257, 1177, 9814, 15141, 8831, 1612, 17266, 17273, 17264, 5161, 7798, 7803, 17267, 1364, 4718, 2]
+// Dependencies: [19, 17, 1074, 21, 4756, 576, 1115, 12702, 4454, 5809, 4767, 4959, 12694, 1241, 5334, 17334, 1177, 9620, 15195, 8870, 1612, 17343, 17350, 17341, 5203, 5084, 5089, 17344, 1364, 4752, 2]
 // Exports: default
 
-// Module 17272 (SpamMessageList)
+// Module 17349 (SpamMessageList)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
-import transitionToChannel from "transitionToChannel" /* 4733 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4925 */;
-import useMountEffectDefault from "useMountEffect" /* 5161 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 7798 */;
-import MetricEvents from "MetricEvents" /* 7803 */;
-import useSortedSpamMessageRequestsDefault from "useSortedSpamMessageRequests" /* 17273 */;
+import transitionToChannel from "transitionToChannel" /* 4767 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4959 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 5084 */;
+import MetricEvents from "MetricEvents" /* 5089 */;
+import useMountEffectDefault from "useMountEffect" /* 5203 */;
+import useSortedSpamMessageRequestsDefault from "useSortedSpamMessageRequests" /* 17350 */;
 import noop from "module_19" /* 19 */;
 
-const MessageRequestEmptyDefault = tmp2(17267);
+const MessageRequestEmptyDefault = tmp2(17344);
 require = fn;
 function PendingSpamMessageRequestRow(isLastRow) {
   ({ messageRequest, goToMessageRequestPreview: require, hasSingleMessageRequest } = isLastRow);
@@ -156,7 +156,7 @@ get_ActivityIndicator = fn(17);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { sectionContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "row", justifyContent: "space-between", marginTop: 6, marginBottom: 10 }, rowContainer: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginTop: 14, marginBottom: 12 }, actionContainer: { flexDirection: "row", alignItems: "flex-start", height: "100%" }, actionButton: null, acceptButton: null, pressableRow: null, activityIndicator: null, list: null };
 let size = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, borderRadius: nativeDefault.radii.lg, alignItems: "center", justifyContent: "center", height: 32, width: 32 };
 obj2.actionButton = size;
@@ -176,10 +176,10 @@ export default function SpamMessageList(goToMessageRequestPreview) {
   const tmp = closure_10();
   importDefault = tmp;
   const bottom = useSafeAreaInsetsDefault().bottom;
-  dependencyMap = goToMessageRequestPreview(17266).useSpamMessageRequestCount();
+  dependencyMap = goToMessageRequestPreview(17343).useSpamMessageRequestCount();
   const arr = useSortedSpamMessageRequestsDefault();
-  let obj = goToMessageRequestPreview(17266);
-  const hasSingleMessageRequest = goToMessageRequestPreview(17264).useListHasSingleSpamMessageRequest();
+  let obj = goToMessageRequestPreview(17343);
+  const hasSingleMessageRequest = goToMessageRequestPreview(17341).useListHasSingleSpamMessageRequest();
   useMountEffectDefault(() => {
     AnalyticsUtilsDefault.track(AnalyticEvents.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests });
     const obj2 = { num_spam_message_requests };
@@ -238,5 +238,5 @@ export default function SpamMessageList(goToMessageRequestPreview) {
     obj4.data = items;
     return closure_8(closure_6, obj4);
   }
-  let obj2 = goToMessageRequestPreview(17264);
+  let obj2 = goToMessageRequestPreview(17341);
 };

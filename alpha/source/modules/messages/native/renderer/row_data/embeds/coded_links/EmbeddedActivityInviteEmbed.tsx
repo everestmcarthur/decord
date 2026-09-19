@@ -1,30 +1,30 @@
-// Module ID: 13461
-// Function ID: 13462
+// Module ID: 13517
+// Function ID: 13518
 // Name: EmbeddedActivityInviteEmbed
-// Dependencies: [32, 17, 1957, 8370, 4950, 502, 1958, 4706, 4371, 1372, 11561, 7938, 573, 8369, 8164, 5197, 1115, 4875, 13462, 2]
+// Dependencies: [32, 17, 2040, 8408, 4983, 502, 2041, 4740, 4405, 1372, 11570, 7976, 573, 8407, 8202, 5239, 1115, 4909, 13518, 2]
 // Exports: createEmbeddedActivityInviteEmbed
 
-// Module 13461 (EmbeddedActivityInviteEmbed)
+// Module 13517 (EmbeddedActivityInviteEmbed)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1115 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 5197 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8164 */;
-import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8369 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5239 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8202 */;
+import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8407 */;
 import _slicedToArray from "module_32" /* 32 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1957 */;
-import ApplicationAssetsStore from "ApplicationAssetsStore" /* 8370 */;
-import ApplicationStore from "ApplicationStore" /* 4950 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2040 */;
+import ApplicationAssetsStore from "ApplicationAssetsStore" /* 8408 */;
+import ApplicationStore from "ApplicationStore" /* 4983 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
-import InviteStore from "InviteStore" /* 4706 */;
-import RelationshipStore from "RelationshipStore" /* 4371 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
+import InviteStore from "InviteStore" /* 4740 */;
+import RelationshipStore from "RelationshipStore" /* 4405 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 const Image = fn(17).Image;
-const FetchState = fn(8370).FetchState;
-const CodedLinkExtendedType = fn(11561).CodedLinkExtendedType;
-const InviteTargetTypes = fn(7938).InviteTargetTypes;
+const FetchState = fn(8408).FetchState;
+const CodedLinkExtendedType = fn(11570).CodedLinkExtendedType;
+const InviteTargetTypes = fn(7976).InviteTargetTypes;
 let closure_16 = ["embedded_cover"];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/EmbeddedActivityInviteEmbed.tsx");
@@ -89,9 +89,9 @@ export const createEmbeddedActivityInviteEmbed = function createEmbeddedActivity
         if (null != channel1) {
           if (null != name) {
             const intl2 = tmp25(1115).intl;
-            const obj5 = { channelName: tmp25(4875).computeChannelName(channel1, UserStore, RelationshipStore), guildName: name };
+            const obj5 = { channelName: tmp25(4909).computeChannelName(channel1, UserStore, RelationshipStore), guildName: name };
             let formatToPartsResult = intl2.formatToParts(tmp25(1115).t.omZR7L, obj5);
-            const tmp25Result = tmp25(4875);
+            const tmp25Result = tmp25(4909);
           }
           let tmp30 = null != id1;
           if (tmp30) {
@@ -109,8 +109,8 @@ export const createEmbeddedActivityInviteEmbed = function createEmbeddedActivity
           if (null != id1) {
             if (null != id2) {
               const obj6 = { channelId: id1, guildId: id2, applicationId: id };
-              let embeddedActivityParticipantAvatarUris = tmp25(13462).getEmbeddedActivityParticipantAvatarUris(obj6);
-              const tmp25Result4 = tmp25(13462);
+              let embeddedActivityParticipantAvatarUris = tmp25(13518).getEmbeddedActivityParticipantAvatarUris(obj6);
+              const tmp25Result4 = tmp25(13518);
             }
             const string2 = tmp25(1115).intl.string;
             if (0 === embeddedActivityParticipantAvatarUris.length) {
@@ -123,15 +123,15 @@ export const createEmbeddedActivityInviteEmbed = function createEmbeddedActivity
                 stringResult = intl3.string(tmp25(1115).t.KC26NR);
               }
             }
-            let assetIds1 = tmp25(8369).getAssetIds(id, closure_16);
+            let assetIds1 = tmp25(8407).getAssetIds(id, closure_16);
             if (assetIds1 == null) {
               assetIds1 = [];
             }
             const first = _slicedToArray(assetIds1, 1)[0];
             let assetImage;
             if (null != first) {
-              assetImage = tmp25(8369).getAssetImage(id, first, 1024);
-              const tmp25Result6 = tmp25(8369);
+              assetImage = tmp25(8407).getAssetImage(id, first, 1024);
+              const tmp25Result6 = tmp25(8407);
             }
             const obj7 = {};
             const merged = Object.assign(baseColors);

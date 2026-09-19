@@ -1,12 +1,12 @@
-// Module ID: 18268
-// Function ID: 18269
+// Module ID: 18347
+// Function ID: 18348
 // Name: i18nMessagesProvider
-// Dependencies: [17, 1364, 18269, 1154, 1115, 2]
+// Dependencies: [17, 1364, 18348, 1154, 1115, 2]
 // Exports: default
 
-// Module 18268 (i18nMessagesProvider)
+// Module 18347 (i18nMessagesProvider)
 import _mod17 from "module_17" /* 17 */;
-import NativeI18nModuleDefault from "NativeI18nModule" /* 18269 */;
+import NativeI18nModuleDefault from "NativeI18nModule" /* 18348 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import size from "module_2" /* 2 */;
 

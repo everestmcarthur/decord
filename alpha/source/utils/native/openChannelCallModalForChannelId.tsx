@@ -1,13 +1,13 @@
-// Module ID: 9784
-// Function ID: 9785
+// Module ID: 13178
+// Function ID: 13179
 // Name: openChannelCallModalForChannelId
-// Dependencies: [1958, 8625, 4929, 2]
+// Dependencies: [2041, 8663, 4963, 2]
 // Exports: default
 
-// Module 9784 (openChannelCallModalForChannelId)
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 4929 */;
-import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 8625 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
+// Module 13178 (openChannelCallModalForChannelId)
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 4963 */;
+import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 8663 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
 
 require = fn;
 const size = fn(2);

@@ -1,16 +1,29 @@
 // Module ID: 14578
 // Function ID: 14579
-// Dependencies: [14542, 14516]
+// Dependencies: [14579]
 
 // Module 14578
-import _mod14516 from "module_14516" /* 14516 */;
-import all from "module_14542" /* 14542 */;
+import module_14579_mod from "module_14579" /* 14579 */;
 
-let _moduleResult = all(_mod14516.WeakMap);
-if (_moduleResult) {
-  const _String = String;
-  _moduleResult = /native code/.test(String(_mod14516.WeakMap));
-  const obj = /native code/;
+const call = prototype.call;
+let module_14579 = module_14579_mod;
+if (module_14579) {
+  const bind = prototype.bind;
+  module_14579 = bind.bind(call, call);
+}
+if (!module_14579) {
+  module_14579 = (arg0) => {
+    closure_0 = arg0;
+    return () => {
+      const apply = call.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(tmp2);
+      } else {
+        applyArgumentsResult = apply(tmp2, arguments);
+      }
+      return applyArgumentsResult;
+    };
+  };
 }
 
-export default _moduleResult;
+export default module_14579;

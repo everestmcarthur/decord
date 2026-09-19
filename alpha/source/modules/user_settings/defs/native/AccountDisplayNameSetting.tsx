@@ -1,21 +1,21 @@
-// Module ID: 14927
-// Function ID: 14928
+// Module ID: 14981
+// Function ID: 14982
 // Name: AccountDisplayNameSetting
-// Dependencies: [1372, 8194, 1074, 504, 11714, 1115, 14803, 2]
+// Dependencies: [1372, 8232, 1074, 504, 11723, 1115, 14857, 2]
 
-// Module 14927 (AccountDisplayNameSetting)
+// Module 14981 (AccountDisplayNameSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
-const SettingBuilders = fn(11714);
+const SettingBuilders = fn(11723);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["9AjdkD"]);
   },
-  parent: fn(8194).MobileUserSettings.ACCOUNT,
+  parent: fn(8232).MobileUserSettings.ACCOUNT,
   useTrailing: function useAccountDisplayNameSettingTrailing() {
     const items = [UserStore];
     return initialize.useStateFromStores(items, () => {

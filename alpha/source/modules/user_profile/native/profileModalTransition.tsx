@@ -1,10 +1,10 @@
-// Module ID: 17163
-// Function ID: 17164
+// Module ID: 17240
+// Function ID: 17241
 // Name: profileModalTransition
 // Dependencies: [19, 1484, 2]
 // Exports: useIsProfileModalTransitioning, useReportProfileModalTransition
 
-// Module 17163 (profileModalTransition)
+// Module 17240 (profileModalTransition)
 import noop from "module_19" /* 19 */;
 
 const require = fn;

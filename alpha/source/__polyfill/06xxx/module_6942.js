@@ -1,22 +1,26 @@
 // Module ID: 6942
 // Function ID: 6943
-// Dependencies: [6916, 6931, 6907]
-// Exports: useNativeGesture
+// Dependencies: [19, 6927]
+// Exports: useViewRefHandler
 
 // Module 6942
-import ComposedGestureName from "ComposedGestureName" /* 6907 */;
-import DEFAULT_PROPS_TRANSFORMER from "DEFAULT_PROPS_TRANSFORMER" /* 6916 */;
-import _mod6931 from "module_6931" /* 6931 */;
+import _mod19 from "module_19" /* 19 */;
+import _modDef6927 from "module_6927" /* 6927 */;
 
-require = arg1;
-const dependencyMap = arg6;
-let closure_2 = {};
+_mod19.useCallback;
 
-export const useNativeGesture = function useNativeGesture(gestureHandlerProps) {
-  let tmp = gestureHandlerProps;
-  if (gestureHandlerProps === undefined) {
-    tmp = closure_2;
-  }
-  const clonedAndRemappedConfig = DEFAULT_PROPS_TRANSFORMER.useClonedAndRemappedConfig(tmp);
-  return _mod6931.useGesture(ComposedGestureName.SingleGestureName.Native, clonedAndRemappedConfig);
+export const useViewRefHandler = function useViewRefHandler(current, detectorUpdater) {
+  const previousViewTag = current;
+  const items = [current, detectorUpdater];
+  return useCallback((viewRef) => {
+    if (null !== viewRef) {
+      previousViewTag.viewRef = viewRef;
+      if (-1 === previousViewTag.previousViewTag) {
+        tmp.previousViewTag = _modDef6927(tmp.viewRef);
+      }
+      if (!previousViewTag.firstRender) {
+        detectorUpdater(true);
+      }
+    }
+  }, items);
 };

@@ -1,15 +1,15 @@
-// Module ID: 8154
-// Function ID: 8155
+// Module ID: 8192
+// Function ID: 8193
 // Name: BlockedGroup
-// Dependencies: [8152, 1085, 12, 4573, 576, 4571, 8155, 2]
+// Dependencies: [8190, 1085, 12, 4607, 576, 4605, 8193, 2]
 // Exports: generateBlockedGroupRowData
 
-// Module 8154 (BlockedGroup)
+// Module 8192 (BlockedGroup)
 import nativeDefault from "native" /* 576 */;
 import Constants from "Constants" /* 1085 */;
-import shared from "shared" /* 4573 */;
-import RowGeneratorConstants from "RowGeneratorConstants" /* 8152 */;
-import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 8155 */;
+import shared from "shared" /* 4607 */;
+import RowGeneratorConstants from "RowGeneratorConstants" /* 8190 */;
+import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 8193 */;
 import apply from "module_12" /* 12 */;
 import size from "module_2" /* 2 */;
 
@@ -27,8 +27,8 @@ let closure_5 = apply.memoize((arg0) => {
   }
   tmpResult = shared;
   if (tmpResult6.isThemeDark(arg0)) {
-    let GREY1 = tmp(4571).hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_300, 0.6);
-    const tmpResult7 = tmp(4571);
+    let GREY1 = tmp(4605).hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_300, 0.6);
+    const tmpResult7 = tmp(4605);
   } else {
     GREY1 = UNSAFE_Colors.GREY1;
   }

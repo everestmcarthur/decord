@@ -1,9 +1,9 @@
-// Module ID: 7677
-// Function ID: 7678
+// Module ID: 7721
+// Function ID: 7722
 // Name: Lru
 // Dependencies: [2]
 
-// Module 7677 (Lru)
+// Module 7721 (Lru)
 import size from "module_2" /* 2 */;
 
 class Lru {

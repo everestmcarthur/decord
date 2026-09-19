@@ -1,17 +1,17 @@
-// Module ID: 7172
-// Function ID: 7173
+// Module ID: 7216
+// Function ID: 7217
 // Name: AuthNavbarPlaceholder
-// Dependencies: [19, 21, 4722, 576, 5794, 2]
+// Dependencies: [19, 21, 4756, 576, 5836, 2]
 // Exports: default
 
-// Module 7172 (AuthNavbarPlaceholder)
+// Module 7216 (AuthNavbarPlaceholder)
 import nativeDefault from "native" /* 576 */;
-import NavigatorHeader from "NavigatorHeader" /* 5794 */;
+import NavigatorHeader from "NavigatorHeader" /* 5836 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 const obj2 = { navBar: { backgroundColor: nativeDefault.unsafe_rawColors.TRANSPARENT, borderBottomWidth: 0 } };
 let closure_3 = createStyles.createStyles(obj2);
 const size = fn(2);

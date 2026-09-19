@@ -1,11 +1,11 @@
-// Module ID: 10522
-// Function ID: 10523
+// Module ID: 10538
+// Function ID: 10539
 // Name: useTopAndNewlyAddedEmojis
-// Dependencies: [5629, 1375, 563, 2]
+// Dependencies: [5671, 1375, 563, 2]
 // Exports: default, getTopAndNewlyAddedEmojis
 
-// Module 10522 (useTopAndNewlyAddedEmojis)
-import EmojiStore from "EmojiStore" /* 5629 */;
+// Module 10538 (useTopAndNewlyAddedEmojis)
+import EmojiStore from "EmojiStore" /* 5671 */;
 
 const require = globalThis.__r;
 

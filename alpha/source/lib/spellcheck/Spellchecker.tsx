@@ -1,18 +1,18 @@
-// Module ID: 5730
-// Function ID: 5731
+// Module ID: 5772
+// Function ID: 5773
 // Name: Spellchecker
-// Dependencies: [5, 32, 2026, 3, 4343, 5731, 5732, 5733, 5734, 1370, 12, 1929, 2]
+// Dependencies: [5, 32, 2109, 3, 4377, 5773, 5774, 5775, 5776, 1370, 12, 2012, 2]
 // Exports: install
 
-// Module 5730 (Spellchecker)
+// Module 5772 (Spellchecker)
 import LoggerDefault from "Logger" /* 3 */;
-import DOMUtils from "DOMUtils" /* 1929 */;
-import fallbackLocalesDefault from "fallbackLocales" /* 5731 */;
-import _mod5732 from "module_5732" /* 5732 */;
+import DOMUtils from "DOMUtils" /* 2012 */;
+import fallbackLocalesDefault from "fallbackLocales" /* 5773 */;
+import _mod5774 from "module_5774" /* 5774 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
-import LocaleStore from "LocaleStore" /* 2026 */;
-import DiscordNative from "DiscordNative" /* 4343 */;
+import LocaleStore from "LocaleStore" /* 2109 */;
+import DiscordNative from "DiscordNative" /* 4377 */;
 import apply from "module_12" /* 12 */;
 
 require = fn;
@@ -62,7 +62,7 @@ class Spellchecker {
       if (str2 == null) {
         str2 = str;
       }
-      obj = _mod5732;
+      obj = _mod5774;
       const parsed = obj.parse(str2.replace(/[_-]/g, "-"));
       if (null != parsed) {
         if (null != parsed.langtag.language) {
@@ -225,7 +225,7 @@ prototype["applyLanguages"] = function applyLanguages(locale) {
     if (str2 == null) {
       str2 = str;
     }
-    const parsed = _mod5732.parse(str2.replace(/[_-]/g, "-"));
+    const parsed = _mod5774.parse(str2.replace(/[_-]/g, "-"));
     if (null != parsed) {
       if (null != parsed.langtag.language) {
         if (null != parsed.langtag.region) {
@@ -307,9 +307,9 @@ let closure_9 = apply.debounce((detectLanguage, hasAttribute) => {
             textContent = hasAttribute.textContent;
           }
         }
-        tmp2Result2 = tmp2(1929);
+        tmp2Result2 = tmp2(2012);
       }
-      tmp2Result = tmp2(1929);
+      tmp2Result = tmp2(2012);
     }
     textContent = hasAttribute.value;
     obj = DOMUtils;

@@ -1,8 +1,8 @@
-// Module ID: 4523
-// Function ID: 4524
+// Module ID: 4557
+// Function ID: 4558
 // Dependencies: [2]
 
-// Module 4523
+// Module 4557
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/rive/native/CheckpointKnickKnacks.riv.js");

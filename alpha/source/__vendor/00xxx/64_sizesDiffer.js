@@ -5,7 +5,7 @@
 // Exports: default
 
 // Module 64 (sizesDiffer)
-let closure_0 = { width: "PX_16", height: "accessible" };
+let closure_0 = { width: "a", height: "isArray" };
 
 export default function sizesDiffer(arg0, arg1) {
   let size = arg0;

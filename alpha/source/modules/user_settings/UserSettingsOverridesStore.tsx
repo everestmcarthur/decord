@@ -1,9 +1,9 @@
-// Module ID: 1937
-// Function ID: 1938
+// Module ID: 2020
+// Function ID: 2021
 // Name: UserSettingsOverridesStore
 // Dependencies: [1220, 504, 510, 573, 2]
 
-// Module 1937 (UserSettingsOverridesStore)
+// Module 2020 (UserSettingsOverridesStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage3 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;

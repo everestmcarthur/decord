@@ -1,19 +1,19 @@
-// Module ID: 15057
-// Function ID: 15058
+// Module ID: 15111
+// Function ID: 15112
 // Name: useDerivedDMSpamFilterSetting
-// Dependencies: [1372, 1938, 1936, 504, 5593, 7495, 1186, 2]
+// Dependencies: [1372, 2021, 2019, 504, 5635, 7539, 1186, 2]
 // Exports: useDerivedDmSpamFilterSettingValue
 
-// Module 15057 (useDerivedDMSpamFilterSetting)
+// Module 15111 (useDerivedDMSpamFilterSetting)
 import initialize from "initialize" /* 504 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1186 */;
-import UserSettings from "UserSettings" /* 1936 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5593 */;
-import SettingsDefaultFeature from "SettingsDefaultFeature" /* 7495 */;
+import UserSettings from "UserSettings" /* 2019 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5635 */;
+import SettingsDefaultFeature from "SettingsDefaultFeature" /* 7539 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
-let closure_3 = fn(1938).ExplicitContentFilterToDmSpamFilterV2;
+let closure_3 = fn(2021).ExplicitContentFilterToDmSpamFilterV2;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/content_and_social/useDerivedDMSpamFilterSetting.tsx");
 

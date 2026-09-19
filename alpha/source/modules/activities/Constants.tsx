@@ -1,12 +1,12 @@
-// Module ID: 1921
-// Function ID: 1922
+// Module ID: 2004
+// Function ID: 2005
 // Name: Constants
-// Dependencies: [1074, 1895, 2]
+// Dependencies: [1074, 1978, 2]
 // Exports: getAppIntentScheme
 
-// Module 1921 (Constants)
+// Module 2004 (Constants)
 import Constants from "Constants" /* 1074 */;
-import Server from "Server" /* 1895 */;
+import Server from "Server" /* 1978 */;
 import size from "module_2" /* 2 */;
 
 const ChannelTypes = Constants.ChannelTypes;

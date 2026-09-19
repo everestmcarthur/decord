@@ -1,31 +1,31 @@
-// Module ID: 11528
-// Function ID: 11529
+// Module ID: 11540
+// Function ID: 11541
 // Name: QuestActionCreators
-// Dependencies: [5, 7896, 7929, 5609, 4771, 5608, 7899, 7901, 5614, 1074, 5617, 1271, 573, 4623, 1115, 7906, 1231, 4915, 1249, 11529, 7925, 7926, 7936, 5621, 7914, 11532, 7895, 4912, 4920, 11533, 7657, 7917, 11534, 4561, 11535, 11536, 11551, 1241, 7873, 11553, 11537, 1091, 11554, 2]
+// Dependencies: [5, 7934, 7967, 5651, 4805, 5650, 7937, 7939, 5656, 1074, 5659, 1271, 573, 4657, 1115, 7944, 1231, 4949, 1249, 5082, 7963, 7964, 7974, 5663, 7952, 11541, 7933, 4946, 4954, 11542, 7701, 7955, 11543, 4595, 11544, 11545, 11560, 1241, 7911, 11562, 11546, 1091, 11563, 2]
 // Exports: claimQuestReward, clearQuestAdDecision, completeQuestPreview, dismissProgressTrackingFailureNotice, dismissQuestActivityModal, dismissQuestContent, enrollInQuest, fetchClaimedQuests, fetchCurrentQuests, fetchEarnedQuestToDeliver, fetchQuest, fetchQuestHomeHero, fetchQuestHomeHeroPreview, fetchQuestPreview, fetchQuestRewardCode, fetchQuestToDeliver, fetchVideoTranscript, manualStopConsoleQuest, manuallyStartConsoleQuest, markAdContentSeen, markAdContentUnseen, markQuestDiscovered, overrideQuestForPlacement, questsVisibleMobileMessagesChanged, resetOptimisticProgress, resetQuestDismissibilityStatus, resetQuestPreviewStatus, resetRecentQuestCompletions, selectTaskPlatform, sendHeartbeat, setAutoEnroll, updateOptimisticProgress, updatePrevRestingQuestDockMode, updateQuestDockVisibilityEligibility, updateVideoProgress
 
-// Module 11528 (QuestActionCreators)
+// Module 11540 (QuestActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1091 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1249 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 4915 */;
-import QuestTypes from "QuestTypes" /* 5617 */;
-import AdCreativeType from "AdCreativeType" /* 5621 */;
-import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 7657 */;
-import QuestDataUtils from "QuestDataUtils" /* 7895 */;
-import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 7925 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 7936 */;
-import VirtualCurrencyUtils from "VirtualCurrencyUtils" /* 11532 */;
-import QuestDecisionRoundtripTrackerDefault from "QuestDecisionRoundtripTracker" /* 11533 */;
-import EarnedDecisionRoundtripTrackerDefault from "EarnedDecisionRoundtripTracker" /* 11553 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 4949 */;
+import QuestTypes from "QuestTypes" /* 5659 */;
+import AdCreativeType from "AdCreativeType" /* 5663 */;
+import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 7701 */;
+import QuestDataUtils from "QuestDataUtils" /* 7933 */;
+import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 7963 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 7974 */;
+import VirtualCurrencyUtils from "VirtualCurrencyUtils" /* 11541 */;
+import QuestDecisionRoundtripTrackerDefault from "QuestDecisionRoundtripTracker" /* 11542 */;
+import EarnedDecisionRoundtripTrackerDefault from "EarnedDecisionRoundtripTracker" /* 11562 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import AdDeliveryStore from "AdDeliveryStore" /* 7896 */;
-import ExpandedGuildFolderStore from "ExpandedGuildFolderStore" /* 5609 */;
-import NetworkStore from "NetworkStore" /* 4771 */;
-import SortedGuildStore from "SortedGuildStore" /* 5608 */;
-import QuestStore from "QuestStore" /* 7899 */;
-import VideoQuestUIStore from "VideoQuestUIStore" /* 7901 */;
+import AdDeliveryStore from "AdDeliveryStore" /* 7934 */;
+import ExpandedGuildFolderStore from "ExpandedGuildFolderStore" /* 5651 */;
+import NetworkStore from "NetworkStore" /* 4805 */;
+import SortedGuildStore from "SortedGuildStore" /* 5650 */;
+import QuestStore from "QuestStore" /* 7937 */;
+import VideoQuestUIStore from "VideoQuestUIStore" /* 7939 */;
 
 require = fn;
 let closure_16 = async function _manuallyStartConsoleQuest(arg0, value) {
@@ -335,8 +335,8 @@ let closure_19 = async function _fetchCurrentQuests(arg0, value) {
         } else if (arg0 !== 2) {
           closure_129_1 = value;
           quests2 = closure_129_1.body.quests;
-          const found = quests2.filter((item) => closure_1_0(7906).isQuestWithKnownConfigVersion(item));
-          closure_129_3 = found.map((item) => closure_1_0(7906).questWithUserStatusFromServer(item));
+          const found = quests2.filter((item) => closure_1_0(7944).isQuestWithKnownConfigVersion(item));
+          closure_129_3 = found.map((item) => closure_1_0(7944).questWithUserStatusFromServer(item));
           closure_129_4 = closure_129_1.body.quest_enrollment_blocked_until;
           closure_129_5 = closure_129_1.body.quest_access_suspended_until;
           closure_129_6 = closure_129_3.filter((userStatus) => {
@@ -362,7 +362,7 @@ let closure_19 = async function _fetchCurrentQuests(arg0, value) {
           obj10.data = obj11;
           closure_130_1(closure_130_2[16]).addBreadcrumb(obj10);
           const excluded_quests = closure_129_1.body.excluded_quests;
-          closure_129_13 = excluded_quests.map((item) => closure_1_0(7906).excludedQuestFromServer(item));
+          closure_129_13 = excluded_quests.map((item) => closure_1_0(7944).excludedQuestFromServer(item));
           const obj9 = closure_130_1(closure_130_2[16]);
           const obj13 = { type: "QUESTS_FETCH_CURRENT_QUESTS_SUCCESS", quests: closure_129_6, excludedQuests: closure_129_13, questEnrollmentBlockedUntil: closure_129_4, questAccessSuspendedUntil: closure_129_5 };
           closure_130_1(closure_130_2[12]).dispatch(obj13);
@@ -542,13 +542,13 @@ let closure_22 = async function _enrollInQuest(arg0, arg1) {
               if (obj27.shouldMigrateToAdAnalyticsInterface(AdAnalyticsInterfaceExperiment.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "enroll_in_quest")) {
                 const obj5 = { type: captureAdUserActionTypes.AdUserActionType.CLICK_INTERNAL, adCreativeType: AdCreativeType.AdCreativeType.QUEST, adCreativeId: tmp67, questContentCTA, surfaceId: null, sourceQuestContent: null, questContentPosition: null, questContentRowIndex: null };
                 ({ questContent: obj9.surfaceId, sourceQuestContent: obj9.sourceQuestContent, questContentPosition: obj9.questContentPosition, questContentRowIndex: obj9.questContentRowIndex } = tmp68);
-                tmp73(7926).captureAdUserAction(obj5);
-                const tmp73Result = tmp73(7926);
+                tmp73(7964).captureAdUserAction(obj5);
+                const tmp73Result = tmp73(7964);
               } else {
                 const obj6 = { questId: tmp67, questContent: tmp68.questContent, questContentCTA, questContentPosition: null, questContentRowIndex: null, sourceQuestContent: null };
                 ({ questContentPosition: obj7.questContentPosition, questContentRowIndex: obj7.questContentRowIndex, sourceQuestContent: obj7.sourceQuestContent } = tmp68);
-                const result = tmp73(7914).trackQuestContentClicked(obj6);
-                const tmp73Result2 = tmp73(7914);
+                const result = tmp73(7952).trackQuestContentClicked(obj6);
+                const tmp73Result2 = tmp73(7952);
               }
               obj27 = AdAnalyticsInterfaceExperiment;
             }
@@ -1557,7 +1557,7 @@ let closure_31 = async function _fetchEarnedQuestToDeliver(arg0, value) {
               if (closure_1_1 != null) {
                 value = closure_1_1.get(item);
               }
-              return !closure_0(7895).earnedDecisionIsValid(value);
+              return !closure_0(7933).earnedDecisionIsValid(value);
             });
             closure_132_2 = found;
             if (0 !== found.length) {
@@ -1633,7 +1633,7 @@ let closure_31 = async function _fetchEarnedQuestToDeliver(arg0, value) {
               if (obj.isQuestWithKnownConfigVersion(tmp)) {
                 tmp2 = tmp;
               }
-              obj = closure_0(7906);
+              obj = closure_0(7944);
             }
             items[1] = tmp2;
             return items;
@@ -2364,12 +2364,12 @@ let closure_38 = async function _fetchQuestHomeHeroPreview(arg0, value) {
     }
   }
 };
-const getVisibleGuildIdsMethod = fn(7929).getVisibleGuildIdsMethod;
-const FetchStatus = fn(7901).FetchStatus;
-const ORBS_INTRO_QUEST_ID = fn(5614).ORBS_INTRO_QUEST_ID;
+const getVisibleGuildIdsMethod = fn(7967).getVisibleGuildIdsMethod;
+const FetchStatus = fn(7939).FetchStatus;
+const ORBS_INTRO_QUEST_ID = fn(5656).ORBS_INTRO_QUEST_ID;
 const Constants = fn(1074);
 ({ AnalyticEvents: map1, Endpoints: closure_14 } = Constants);
-let items = [fn(5617).QuestContent.QUEST_BAR, fn(5617).QuestContent.QUEST_BAR_V2, fn(5617).QuestContent.QUEST_BAR_MOBILE];
+let items = [fn(5659).QuestContent.QUEST_BAR, fn(5659).QuestContent.QUEST_BAR_V2, fn(5659).QuestContent.QUEST_BAR_MOBILE];
 const set = new Set(items);
 const QuestEnrollmentResultType = { SUCCESS: "success", CAPTCHA_FAILED: "captcha_failed", UNKNOWN_ERROR: "unknown_error", PREVIOUS_IN_FLIGHT_REQUEST: "previous_in_flight_request" };
 let closure_36 = 5 * DurationsDefault.Millis.MINUTE;

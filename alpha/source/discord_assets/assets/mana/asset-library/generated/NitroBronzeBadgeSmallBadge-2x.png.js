@@ -1,8 +1,8 @@
-// Module ID: 6448
-// Function ID: 6449
+// Module ID: 6492
+// Function ID: 6493
 // Dependencies: [2]
 
-// Module 6448
+// Module 6492
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/NitroBronzeBadgeSmallBadge-2x.png.js");

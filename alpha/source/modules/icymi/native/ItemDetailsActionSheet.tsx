@@ -1,27 +1,27 @@
-// Module ID: 16715
-// Function ID: 16716
+// Module ID: 16791
+// Function ID: 16792
 // Name: ItemDetailsActionSheet
-// Dependencies: [19, 17, 1958, 1980, 8567, 21, 4722, 576, 504, 4875, 5796, 5754, 1177, 8582, 7393, 11252, 16716, 5857, 5775, 2]
+// Dependencies: [19, 17, 2041, 2063, 8605, 21, 4756, 576, 504, 4909, 5838, 5796, 1177, 8620, 7437, 11265, 16792, 5899, 5817, 2]
 // Exports: default
 
-// Module 16715 (ItemDetailsActionSheet)
+// Module 16791 (ItemDetailsActionSheet)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
-import useChannelNameDefault from "useChannelName" /* 4875 */;
-import useDesignToggleDefault from "useDesignToggle" /* 5796 */;
-import ActionSheet from "ActionSheet" /* 7393 */;
-import ActionSheetIconHeader from "ActionSheetIconHeader" /* 11252 */;
+import useChannelNameDefault from "useChannelName" /* 4909 */;
+import useDesignToggleDefault from "useDesignToggle" /* 5838 */;
+import ActionSheet from "ActionSheet" /* 7437 */;
+import ActionSheetIconHeader from "ActionSheetIconHeader" /* 11265 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
-import GuildStore from "GuildStore" /* 1980 */;
-import ICYMIStore from "ICYMIStore" /* 8567 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
+import GuildStore from "GuildStore" /* 2063 */;
+import ICYMIStore from "ICYMIStore" /* 8605 */;
 
-const GuildIconDefault = tmp5(5754);
+const GuildIconDefault = tmp5(5796);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { divider: { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE } };
 let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -43,7 +43,7 @@ export default function ItemDetailsActionSheet(arg0) {
     return dehydratedItem;
   });
   if (null != stateFromStores1) {
-    const obj4 = { guild: stateFromStores1, size: tmp(5754).GuildIconSizes.LARGE };
+    const obj4 = { guild: stateFromStores1, size: tmp(5796).GuildIconSizes.LARGE };
     let tmp9 = closure_7(GuildIconDefault, obj4);
     const tmp5Result = GuildIconDefault;
   } else if (null != stateFromStores) {
@@ -56,8 +56,8 @@ export default function ItemDetailsActionSheet(arg0) {
     result = null != stateFromStores1;
   }
   if (result) {
-    result = tmp(8582).isChannelCustomScoreEligible(stateFromStores);
-    const tmpResult = tmp(8582);
+    result = tmp(8620).isChannelCustomScoreEligible(stateFromStores);
+    const tmpResult = tmp(8620);
   }
   const obj6 = { icon: tmp9, title: tmp6, subtitle: null };
   let str;
@@ -72,7 +72,7 @@ export default function ItemDetailsActionSheet(arg0) {
   let tmp16Result = result;
   if (result) {
     const obj8 = { channel: stateFromStores, guild: stateFromStores1 };
-    tmp16Result = tmp16(tmp(16716).ChannelScoreSettings, obj8);
+    tmp16Result = tmp16(tmp(16792).ChannelScoreSettings, obj8);
   }
   const items3 = [tmp16Result, , ];
   let tmp15Result = null != stateFromStores2 && null != stateFromStores1;
@@ -84,7 +84,7 @@ export default function ItemDetailsActionSheet(arg0) {
     const obj10 = { children: null };
     const items4 = [result, ];
     const obj11 = { guild: stateFromStores1 };
-    items4[1] = tmp16(tmp(16716).GuildScoreSettings, obj11);
+    items4[1] = tmp16(tmp(16792).GuildScoreSettings, obj11);
     obj10.children = items4;
     tmp15Result = tmp15(closure_8, obj10);
   }
@@ -97,8 +97,8 @@ export default function ItemDetailsActionSheet(arg0) {
       const obj13 = { label: `Total Score: ${tmp7.score}`, subLabel: null };
       const _JSON = JSON;
       obj13.subLabel = JSON.stringify(stateFromStores2.score_components);
-      obj12.children = tmp16(tmp(5775).TableRow, obj13);
-      tmp16Result2 = tmp16(tmp(5857).TableRowGroup, obj12);
+      obj12.children = tmp16(tmp(5817).TableRow, obj13);
+      tmp16Result2 = tmp16(tmp(5899).TableRowGroup, obj12);
     }
   }
   items3[2] = tmp16Result2;
