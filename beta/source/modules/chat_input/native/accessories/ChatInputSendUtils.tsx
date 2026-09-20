@@ -334,7 +334,7 @@ export const chatInputHandleSendText = function chatInputHandleSendText(text) {
             let intl2 = util.intl;
             obj3.confirmText = intl2.string(util.t.KJnHq3);
             obj3.onConfirm = function onConfirm() {
-              const obj = { text, parsedMessage, tts: "accessible", source: "Array", params };
+              const obj = { text, parsedMessage, tts: "accessible", source: true, params };
               chatInputSendMessage(obj);
             };
             let intl3 = util.intl;
@@ -350,7 +350,7 @@ export const chatInputHandleSendText = function chatInputHandleSendText(text) {
               threadId: channel.id,
               attachments: uploads,
               sendMessage() {
-                          const obj = { text, parsedMessage, tts: "accessible", source: false, params };
+                          const obj = { text, parsedMessage, tts: "accessible", source: "tal", params };
                           chatInputSendMessage(obj);
                         }
             };
@@ -361,7 +361,7 @@ export const chatInputHandleSendText = function chatInputHandleSendText(text) {
           tmp19 = require;
           tmp20 = dependencyMap;
         }
-        const obj7 = { text, parsedMessage: tmp2, tts: "accessible", source: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000198065503953281, params };
+        const obj7 = { text, parsedMessage: tmp2, tts: "accessible", source: false, params };
         chatInputSendMessage(obj7);
       }
     }

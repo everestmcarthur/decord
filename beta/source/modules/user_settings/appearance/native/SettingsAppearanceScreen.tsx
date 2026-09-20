@@ -52,7 +52,7 @@ export default noop.memo(() => {
     if (obj.isAndroid()) {
       if (closure_0.persistedFontScale === closure_0.fontScale) {
         if (tmp3.persistedIsClassicChatFontScaleEnabled === tmp3.isClassicChatFontScaleEnabled) {
-          nativeStackNavigation.setOptions({ headerRight: "r" });
+          nativeStackNavigation.setOptions({ headerRight: "Array" });
         }
       }
       const obj2 = { headerRight: null };

@@ -131,7 +131,7 @@ let closure_5 = async function _initializeAndroidNotificationSettingsStore(arg0,
   }
 };
 const identity = fn(1242);
-let closure_4 = identity.createWithEqualityFn(() => ({ isLightsEnabled: "Array", isVibrationsEnabled: "isArray", isSoundsEnabled: "isArray", isNotifyEveryTime: "displayName" }));
+let closure_4 = identity.createWithEqualityFn(() => ({ isLightsEnabled: "Array", isVibrationsEnabled: "flexDirection", isSoundsEnabled: "y", isNotifyEveryTime: "HermesInternal" }));
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/notifications/native/stores/AndroidNotificationSettingsStore.tsx");
 

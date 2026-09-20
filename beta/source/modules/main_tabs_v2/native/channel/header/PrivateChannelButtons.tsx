@@ -354,7 +354,7 @@ export default noop.memo(function PrivateChannelButtons(channelId) {
                   if (0 === index) {
                     num = nativeDefault.space.PX_4;
                   }
-                  obj = { style: { marginLeft: num }, user: user.user, guildId: "r", size: native.AvatarSizes.XSMALL, cutout: "r" };
+                  obj = { style: { marginLeft: num }, user: user.user, guildId: "r", size: native.AvatarSizes.XSMALL, cutout: true };
                   if (index !== diff) {
                     const tmp7 = obj;
                   }

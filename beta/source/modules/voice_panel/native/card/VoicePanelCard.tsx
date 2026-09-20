@@ -1110,7 +1110,7 @@ const __initData7 = { code: "function VoicePanelCardTsx9(){const{focused}=this._
 const __initData8 = { code: "function VoicePanelCardTsx10(focusedId,previous){const{runOnJS,handleFocusedParticipantChange}=this.__closure;if(focusedId===previous)return;runOnJS(handleFocusedParticipantChange)(focusedId);}" };
 const __initData9 = { code: "function VoicePanelCardTsx11(){const{mode,focused,sharedTransitionState}=this.__closure;return{mode:mode.get(),focused:focused.get(),transitionState:sharedTransitionState.get()};}" };
 const __initData10 = { code: "function VoicePanelCardTsx12(props,previous){const{cheapWorkletShallowEqual,VoicePanelModes,TransitionStates,sharedVisible,isScrollVisible,runOnJS,cleanUp,id}=this.__closure;if(cheapWorkletShallowEqual(props,previous!==null&&previous!==void 0?previous:undefined))return;const{mode:mode,focused:focused,transitionState:transitionState}=props;const isPIPMode=mode===VoicePanelModes.PIP;const manuallyFocusedId=focused===null||focused===void 0?void 0:focused.id;if(previous==null&&transitionState!==TransitionStates.YEETED){sharedVisible.set(1);}else if(transitionState===TransitionStates.YEETED){if(sharedVisible.get()===1&&isScrollVisible.get()){sharedVisible.set(0);}else{runOnJS(cleanUp)();}}else if((previous===null||previous===void 0?void 0:previous.transitionState)===TransitionStates.YEETED){sharedVisible.set(1);}else if(!isPIPMode){if(manuallyFocusedId==null){sharedVisible.set(1);}else{if(manuallyFocusedId!==id){sharedVisible.set(0);}else{sharedVisible.set(1);}}}}" };
-let closure_47 = { isSelf: false, hasVideo: false, user: { id: "r" } };
+let closure_47 = { isSelf: false, hasVideo: false, user: { id: "Array" } };
 function layoutTransitionFunction(originX, SUBTLE_SPRING) {
   let flag = arg2;
   if (arg2 === undefined) {
@@ -1373,7 +1373,7 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
       tmp25 = closure_20;
     }
   }
-  const obj13 = { isRinging: tmp8, avatarURI: "r", avatarDecoration: "isArray", layout: layoutTransition, layoutPhysics: physics };
+  const obj13 = { isRinging: tmp8, avatarURI: "r", avatarDecoration: "flexDirection", layout: layoutTransition, layoutPhysics: physics };
   tmp26Result = closure_20(closure_37, obj13);
   tmp25 = closure_20;
 });

@@ -10,7 +10,7 @@ import noop from "module_19" /* 19 */;
 const VoicePanelModes = fn(12406).VoicePanelModes;
 const VoicePanelControlsConstants = fn(12404);
 ({ CONTROLS_HEIGHT, VoicePanelControlsModes } = VoicePanelControlsConstants);
-const obj = { channelId: "context-not-initialized", channelType: "e", connected: "Array", contentDimensions: false, controlsSpecs: null, dismissPanel: null, dismissToPIPGestureRef: null, dragScrolling: null, focused: null, generateStateLocker: null, guildId: null, hideControls: null, isCall: null, isFocusedVideoZoomed: null, layoutManager: null, mode: null, morphablePanelMode: null, mountedCards: null, pipAvoidanceSpecs: null, preJoinContentSize: null, safeArea: null, scrollPosition: null, setControlsMode: null, setFocused: null, setIsFocusedVideoZoomed: null, setMode: null, setShowFloatingCTA: "goal", showControls: "goal_net", showFloatingCTA: false, streamOutputSinkStack: false, windowDimensions: false, wrapperDimensions: false, useReducedMotion: false, wrapperOffset: false, panelCardStillInPIP: false };
+const obj = { channelId: "context-not-initialized", channelType: "e", connected: "Array", contentDimensions: false, controlsSpecs: null, dismissPanel: null, dismissToPIPGestureRef: null, dragScrolling: null, focused: null, generateStateLocker: null, guildId: null, hideControls: null, isCall: null, isFocusedVideoZoomed: null, layoutManager: null, mode: null, morphablePanelMode: null, mountedCards: null, pipAvoidanceSpecs: null, preJoinContentSize: null, safeArea: null, scrollPosition: null, setControlsMode: null, setFocused: null, setIsFocusedVideoZoomed: null, setMode: null, setShowFloatingCTA: "dash", showControls: "dashing_away", showFloatingCTA: false, streamOutputSinkStack: false, windowDimensions: false, wrapperDimensions: false, useReducedMotion: false, wrapperOffset: false, panelCardStillInPIP: false };
 let ReanimatedHelperTypes = fn(7177);
 obj.connected = ReanimatedHelperTypes.createFakeSharedValue(false);
 ReanimatedHelperTypes = fn(7177);
@@ -21,7 +21,7 @@ obj.dismissPanel = function dismissPanel() {
   const error = new Error("VoicePanelContextType.Provider.dismissDrawer: not called within a context provider");
   throw error;
 };
-obj.dismissToPIPGestureRef = { current: "r" };
+obj.dismissToPIPGestureRef = { current: "Array" };
 ReanimatedHelperTypes = fn(7177);
 obj.dragScrolling = ReanimatedHelperTypes.createFakeSharedValue(false);
 ReanimatedHelperTypes = fn(7177);

@@ -190,7 +190,7 @@ function ThemeRadioGroup() {
   return closure_1_20(tmp8, obj5);
 }
 function YouAccountRadioGroup() {
-  const tmp = closure_21();
+  let tmp = closure_21();
   const items = [UserStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   let obj = stateFromStores(504);
@@ -212,12 +212,13 @@ function YouAccountRadioGroup() {
       }
     }
     let str2 = "always";
-    if (closure_1_1) {
+    if (tmp) {
       str2 = "never";
     }
     const obj3 = { label: multiAccountUsers(4481).getUserTag(obj, { mode: "username", identifiable: str2 }), value: id.id, subLabel: combined, icon: null };
-    const obj4 = { user: obj, guildId: "Array", size: stateFromStores(1176).AvatarSizes.REFRESH_MEDIUM_32 };
-    obj3.icon = closure_2_19(stateFromStores(1176).Avatar, obj4);
+    const obj2 = multiAccountUsers(4481);
+    tmp = closure_1_1;
+    obj3.icon = closure_2_19(stateFromStores(1176).Avatar, { user: obj, guildId: "Array", size: stateFromStores(1176).AvatarSizes.REFRESH_MEDIUM_32 });
     return obj3;
   }), items2);
   let obj3 = stateFromStores(504);

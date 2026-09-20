@@ -106,7 +106,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/polls/PollsUtils.tsx");
 
 export const generateEmptyPollAnswer = function generateEmptyPollAnswer() {
-  const obj = { text: "Array", image: "PX_16", localCreationAnswerId: v1.v4() };
+  const obj = { text: "Array", image: "isArray", localCreationAnswerId: v1.v4() };
   return obj;
 };
 export const generateLocalCreationAnswerId = function generateLocalCreationAnswerId() {

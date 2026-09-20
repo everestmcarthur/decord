@@ -15,9 +15,7 @@ function BlockedUserRow(userRecord) {
   userRecord = userRecord.userRecord;
   let analyticsLocations;
   analyticsLocations = analyticsLocations(7265)().analyticsLocations;
-  const obj = { icon: null, label: null, subLabel: null, labelLineClamp: 1, subLabelLineClamp: 1, accessibilityRole: "button", accessibilityActions: null, onAccessibilityAction: null, onPress: null, trailing: null };
-  const obj2 = { user: userRecord, guildId: "Array", size: userRecord(1176).AvatarSizes.REFRESH_MEDIUM_32 };
-  obj.icon = jsx(userRecord(1176).Avatar, { user: userRecord, guildId: "Array", size: userRecord(1176).AvatarSizes.REFRESH_MEDIUM_32 });
+  const obj = { icon: jsx(userRecord(1176).Avatar, { user: userRecord, guildId: "Array", size: userRecord(1176).AvatarSizes.REFRESH_MEDIUM_32 }), label: null, subLabel: null, labelLineClamp: 1, subLabelLineClamp: 1, accessibilityRole: "button", accessibilityActions: null, onAccessibilityAction: null, onPress: null, trailing: null };
   let tmp4 = null != userRecord;
   if (tmp4) {
     let username = userRecord.globalName;
@@ -60,7 +58,7 @@ function BlockedUserRow(userRecord) {
     RelationshipActionCreatorsDefault.unblockUser(userRecord.id, { location: "blocked-users-list-mobile-v2" });
   };
   obj.trailing = jsx(userRecord(5056).Button, { size: "sm", variant: "secondary", text: null, onPress: null });
-  return jsx(userRecord(5686).TableRow, { icon: null, label: null, subLabel: null, labelLineClamp: 1, subLabelLineClamp: 1, accessibilityRole: "button", accessibilityActions: null, onAccessibilityAction: null, onPress: null, trailing: null });
+  return jsx(userRecord(5686).TableRow, { icon: jsx(userRecord(1176).Avatar, { user: userRecord, guildId: "Array", size: userRecord(1176).AvatarSizes.REFRESH_MEDIUM_32 }), label: null, subLabel: null, labelLineClamp: 1, subLabelLineClamp: 1, accessibilityRole: "button", accessibilityActions: null, onAccessibilityAction: null, onPress: null, trailing: null });
 }
 const jsx = fn(21).jsx;
 const size = fn(2);

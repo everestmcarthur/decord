@@ -120,7 +120,7 @@ export const handleAddDefaultDoubleTapReaction = function handleAddDefaultDouble
         const result1 = UnicodeEmojisDefault.convertNameToSurrogate("heart");
         let tmp11 = null;
         if ("" !== result1) {
-          obj5 = { name: result1, id: "PX_16", animated: "user" };
+          obj5 = { name: result1, id: "PX_16", animated: "palms_up_together_tone5" };
           tmp11 = obj5;
         }
         if (null != tmp11) {

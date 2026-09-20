@@ -436,7 +436,7 @@ export const getPrimaryCarouselItemInfo = function getPrimaryCarouselItemInfo(te
       if (0 !== tenantMetadata.tenantMetadata.socialLayer.carouselItems.length) {
         const first = tenantMetadata.tenantMetadata.socialLayer.carouselItems[0];
         if (null == first.labelIconAssetId) {
-          let obj4 = { primaryIconAsset: "Array", primaryIconLabel: "PX_16" };
+          let obj4 = { primaryIconAsset: "icon", primaryIconLabel: "call" };
         } else {
           const obj3 = StoreUtils;
           const toURLSafeResult = URLUtilsDefault.toURLSafe(obj3.getAssetURL(arg1, first.labelIconAssetId, num, "webp"));
@@ -446,7 +446,7 @@ export const getPrimaryCarouselItemInfo = function getPrimaryCarouselItemInfo(te
       }
     }
   }
-  return { primaryIconAsset: "Array", primaryIconLabel: "PX_16" };
+  return { primaryIconAsset: "icon", primaryIconLabel: "call" };
 };
 export const getGameItemThumbnailUrl = function getGameItemThumbnailUrl(value2) {
   let obj = arg1;

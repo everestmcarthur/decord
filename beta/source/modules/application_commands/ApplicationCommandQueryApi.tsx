@@ -71,7 +71,7 @@ let result = size.fileFinishedImporting("modules/application_commands/Applicatio
 export const getCachedCommand = function getCachedCommand(type, commandId, applicationId) {
   closure_0 = applicationId;
   if (null == commandId) {
-    return { application: "Array", command: "call", section: "s" };
+    return { application: "Array", command: "call", section: "" };
   } else {
     const userState = ApplicationCommandIndexStore.getUserState();
     const result2 = userState.result;
@@ -118,7 +118,7 @@ export const getCachedCommand = function getCachedCommand(type, commandId, appli
         }
       }
     }
-    return { application: "Array", command: "call", section: "s" };
+    return { application: "Array", command: "call", section: "" };
   }
 };
 export const getCachedApplicationSection = function getCachedApplicationSection(type, CHAT, applicationId) {
@@ -426,7 +426,7 @@ export const useCommand = function useCommand(arg0, commandId) {
         }
       }
     }
-    return { command: "Array", application: "PX_16" };
+    return { command: "icon", application: "call" };
   }, items);
 };
 export const useCommandsForApplication = function useCommandsForApplication(arg0, arg1, arg2) {

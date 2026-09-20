@@ -319,14 +319,14 @@ export default {
     return showAgeVerification({
       webviewUrl: verification_webview_url,
       verificationVendorName: constants.K_ID,
-      entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.SYSTEM_DM_MANUAL_REVIEW,
+      entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.MANUAL_REVIEW,
       onComplete() {
 
       }
     });
   },
-  showManualReviewDecidedTeenModal() {
-    useAlertStore.openAlert(React6, jsx(ManualReviewDecidedTeenAlertModalDefault, {}));
+  showManualReviewDecidedTeenModal(teen_age_range) {
+    useAlertStore.openAlert(React6, jsx(ManualReviewDecidedTeenAlertModalDefault, { teenAgeRange: teen_age_range }));
   },
   showManualReviewFallbackModal,
   openUrl(arg0) {

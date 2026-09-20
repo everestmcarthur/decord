@@ -21,13 +21,13 @@ function useOnLoad(arg0, arg1) {
     }
     if (isFirstLayoutComplete) {
       ref.current = true;
-      f81296();
+      f81297();
     }
   });
 }
 
 export const useOnListLoad = (getDataLength, arg1) => {
-  let f81296 = arg1;
+  let f81297 = arg1;
   hasOwnProperty(Date.now());
   [tmp3, closure_3] = timestampProducer(false);
   const dataLength = getDataLength.getDataLength();
@@ -39,11 +39,11 @@ export const useOnListLoad = (getDataLength, arg1) => {
     closure_2.current = Date.now();
   }, items);
   if (typeof useOnLoad === "function") {
-    f81296 = () => {
+    f81297 = () => {
       const elapsedTimeInMs = Date.now() - ref.current;
       requestAnimationFrame(() => {
         elapsedTimeInMs.isFirstPaintOnUiComplete = true;
-        if (f81296 != null) {
+        if (f81297 != null) {
           const obj = { elapsedTimeInMs };
           tmp(obj);
         }
@@ -58,7 +58,7 @@ export const useOnListLoad = (getDataLength, arg1) => {
       }
       if (isFirstLayoutComplete) {
         ref.current = true;
-        f81296();
+        f81297();
       }
     });
     const obj2 = { isLoaded: tmp3 };

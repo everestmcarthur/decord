@@ -24,7 +24,7 @@ function LeftSlot(state) {
   obj2.style = items;
   const tmp = useChatInputFloatingBounceDefault({ visible: state !== native.TransitionStates.YEETED, initiallyVisible: state !== native.TransitionStates.ENTERED, enterDelayMs, onExitComplete: cleanup });
   const merged = Object.assign(ChatInputActionButtonTransitionItem.interactivityProps(isInteractive));
-  obj2.children = React5(ChatInputActionButtonGiftOrThreadDefault, { canStartThreads: false, channel, onPress, styleButton: "PX_16", shouldShowThread: "Force explicit content obscure blur effect on for message media and embeds" });
+  obj2.children = React5(ChatInputActionButtonGiftOrThreadDefault, { canStartThreads: false, channel, onPress, styleButton: "PX_16", shouldShowThread: "DigitalZoomRatio" });
   return React5(ReanimatedRexportDefault.View, obj2);
 }
 const View = fn(17).View;

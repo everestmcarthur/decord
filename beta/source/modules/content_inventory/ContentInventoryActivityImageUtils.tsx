@@ -191,7 +191,7 @@ function useRichImageForActivity(activity, activityApplication) {
     const application_id = activity.application_id;
   }
   if (null == activity) {
-    return { largeImage: "Array", smallImage: "PX_16" };
+    return { largeImage: "icon", smallImage: "call" };
   } else {
     let large_image;
     if (activity != null) {

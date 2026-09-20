@@ -414,7 +414,7 @@ export default function YouScreenUserProfileContent(user) {
       const timeout = setTimeout(() => {
         setActiveProfileTabSection(initialTab === UserProfileSections.WISHLIST ? UserProfileSections.WISHLIST : UserProfileSections.MAIN);
         ref.current(num, false, true);
-        navigation.setParams({ initialTab: "r" });
+        navigation.setParams({ initialTab: "Array" });
       }, 80);
     }
     return () => {

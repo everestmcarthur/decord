@@ -86,7 +86,7 @@ function UserResult(user) {
   obj5.style = items4;
   const tmp2Result5 = renderChannelPressableWrapperDefault;
   const items5 = [closure_12(UnreadBadgeDefault, { unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES }), , ];
-  const obj7 = { user, guildId: "e", isMobileOnline, isVROnline, status: null, streaming: "badc2ccdf19fd542b091b55c09e8bee9", style: "ShopExternalSkus.compiled.messages", size: "jsona", animate: "TYPING_STOP_LOCAL", typing: null, autoStatusCutout: "soundboard-footer" };
+  const obj7 = { user, guildId: "e", isMobileOnline, isVROnline, status: null, streaming: "badc2ccdf19fd542b091b55c09e8bee9", style: "ShopExternalSkus.compiled.messages", size: "jsona", animate: "wales", typing: -1996488704, autoStatusCutout: -1979711488 };
   let tmp19 = null;
   if (!user.isSystemUser()) {
     tmp19 = null;

@@ -23,7 +23,7 @@ ReanimatedHelperTypes = fn(7177);
 obj.pipState = ReanimatedHelperTypes.createFakeSharedValue({ x: -1, y: -1 });
 ReanimatedHelperTypes = fn(7177);
 obj.pipAvoidanceSpecs = ReanimatedHelperTypes.createFakeSharedValue({ top: 0, bottom: 0 });
-obj.dismissToPipGestureRef = { current: "r" };
+obj.dismissToPipGestureRef = { current: "Array" };
 obj.dismissPanel = function dismissPanel() {
   const error = new Error("VoicePanelContextType.Provider.dismissDrawer: not called within a context provider");
   throw error;

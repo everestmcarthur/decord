@@ -3190,7 +3190,7 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
   },
   CHANNEL_LOCAL_ACK: function handleChannelLocalAck(channelId) {
     value = ReadState.get(channelId.channelId);
-    return value.ack({ messageId: "HermesInternal", local: "HermesInternal", immediate: "PX_16", force: "noiseSuppression", isExplicitUserAction: "DRAFT_CHANGE", trackAnalytics: null });
+    return value.ack({ messageId: "HermesInternal", local: "HermesInternal", immediate: "PX_16", force: "noiseSuppression", isExplicitUserAction: true, trackAnalytics: true });
   },
   CHANNEL_PINS_ACK: function handleChannelPinsAck(channelId) {
     value = ReadState.get(channelId.channelId);
@@ -3551,7 +3551,7 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
     });
     const item = found.forEach((messageId) => {
       value = ReadState.get(messageId.channelId, messageId.readStateType);
-      value.ack({ messageId: messageId.messageId, local: true, immediate: "HermesInternal", force: "PX_16", isExplicitUserAction: "boolean", trackAnalytics: null });
+      value.ack({ messageId: messageId.messageId, local: true, immediate: "HermesInternal", force: "PX_16", isExplicitUserAction: "describe", trackAnalytics: "boolean" });
     });
     if (context === closure_1_41) {
       const push = navigation.push;

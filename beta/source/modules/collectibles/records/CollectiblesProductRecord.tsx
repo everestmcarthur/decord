@@ -177,7 +177,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
               }
               ({ items, item } = obj);
               first = _slicedToArray(tenantMetadata.selectedOptions, 1)[0];
-              const obj3 = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "Button", type: "Array", premiumType: "call", items: false, categorySkuId: false, isCategoryReward: false, prices: false, previewAssets: false, googleSkuIds: false, eligibleOffers: false, variants: false, bundledProducts: false, isFirstParty: false };
+              const obj3 = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "Button", type: "Array", premiumType: "w", items: "storage", categorySkuId: "FlipOutData", isCategoryReward: "man_swimming", prices: "avatarURI", previewAssets: "isArray", googleSkuIds: "isArray", eligibleOffers: "MY", variants: "baseSetting", bundledProducts: "right_fist_tone3", isFirstParty: "e" };
               let str;
               if (first != null) {
                 str = first.optionValue;

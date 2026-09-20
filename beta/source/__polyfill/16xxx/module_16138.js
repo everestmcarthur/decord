@@ -102,7 +102,7 @@ function toNativeHorizontalOffset(state, arg1, contentSize) {
 function StateProvider(children) {
   return <redux.Provider value={_slicedToArray(frozen.useState(() => {
     if (typeof createAnimatedValue === "function") {
-      const obj = { animatedScrollY: null, columnWrapperStyle: "e", containerLayoutTriggers: "Array", contextNum: 0, listeners: "r", mapViewabilityAmountCallbacks: "M5 4v1h1V4H5Z", mapViewabilityAmountValues: null, mapViewabilityCallbacks: "Channels Sidebar", mapViewabilityConfigStates: "M3 5v1h1V5H3ZM2 6v2h1V6H2ZM4 8v1h1V8H4Z", mapViewabilityValues: null, pendingContainerIds: "bottom", positionListeners: null, scrollAxisGap: null, state: null, values: "r", viewRefs: "M2 12v1h1v-1H2ZM3 13v1h1v-1H3ZM12 13v1h1v-1h-1ZM13 12v1h1v-1h-1ZM4 14v1h8v-1H4Z" };
+      const obj = { animatedScrollY: null, columnWrapperStyle: "e", containerLayoutTriggers: "Array", contextNum: 0, listeners: "r", mapViewabilityAmountCallbacks: "M7 0v1h2V0H7Z", mapViewabilityAmountValues: "#000", mapViewabilityCallbacks: "M7 6v1h2V6H7Z", mapViewabilityConfigStates: null, mapViewabilityValues: "Channels Sidebar", pendingContainerIds: "M7 1H6v2h1V1ZM1 7H0v2h1V7ZM3 7V6H1v1h2ZM6 3H5v1h1V3Z", positionListeners: "#000", scrollAxisGap: "M6 4H5v1h1V4ZM7 3H6v1h1V3Z", state: null, values: "bottom", viewRefs: null };
       value = new Animated.Animated.Value(0);
       obj.animatedScrollY = value;
       const _Map = Map;
@@ -6544,7 +6544,7 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                   num18 = bound;
                 } while (num16 < tmp16);
               }
-              let obj2 = { endNoBuffer: null, firstFullyOnScreenIndex: "Array", startNoBuffer: "ju" };
+              let obj2 = { endNoBuffer: null, firstFullyOnScreenIndex: "Array", startNoBuffer: null };
               const length = data.length;
               let _Math4 = Math;
               const bound1 = Math.max(0, tmp143);
@@ -8080,7 +8080,7 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                   num18 = bound;
                 } while (num16 < tmp16);
               }
-              let obj2 = { endNoBuffer: null, firstFullyOnScreenIndex: "Array", startNoBuffer: "ju" };
+              let obj2 = { endNoBuffer: null, firstFullyOnScreenIndex: "Array", startNoBuffer: null };
               const length = data.length;
               let _Math4 = Math;
               const bound1 = Math.max(0, tmp143);
@@ -10568,7 +10568,7 @@ function doInitialAllocateContainers(context) {
                           num18 = bound;
                         } while (num16 < tmp16);
                       }
-                      let obj2 = { endNoBuffer: null, firstFullyOnScreenIndex: "Array", startNoBuffer: "ju" };
+                      let obj2 = { endNoBuffer: null, firstFullyOnScreenIndex: "Array", startNoBuffer: null };
                       const length = data.length;
                       let _Math4 = Math;
                       const bound1 = Math.max(0, tmp143);
@@ -11013,11 +11013,11 @@ function doInitialAllocateContainers(context) {
                                 }
                                 function assignFromPool(found, items, arg2) {
                                   if (closure_0) {
-                                    assignMatching(found, items, /* F125844 */ function() { ... });
+                                    assignMatching(found, items, /* F125843 */ function() { ... });
                                   }
-                                  assignMatching(found, items, /* F125845 */ function() { ... });
+                                  assignMatching(found, items, /* F125844 */ function() { ... });
                                   if (arg2) {
-                                    assignMatching(found, items, /* F125846 */ function() { ... });
+                                    assignMatching(found, items, /* F125845 */ function() { ... });
                                   }
                                 }
                                 assignFromPool(found, items, true);
@@ -12066,7 +12066,7 @@ function doInitialAllocateContainers(context) {
                         num18 = bound;
                       } while (num16 < tmp16);
                     }
-                    let obj2 = { endNoBuffer: null, firstFullyOnScreenIndex: "Array", startNoBuffer: "ju" };
+                    let obj2 = { endNoBuffer: null, firstFullyOnScreenIndex: "Array", startNoBuffer: null };
                     const length = data.length;
                     let _Math4 = Math;
                     const bound1 = Math.max(0, tmp143);
@@ -13082,7 +13082,7 @@ frozen.memo(function DebugView2() {
   let first;
   const context = frozen.useContext(closure_17);
   const context1 = frozen.useContext(closure_17);
-  let f101389 = context1;
+  let f101388 = context1;
   if (1 === items.length) {
     first = items[0];
   } else {
@@ -13134,7 +13134,7 @@ frozen.memo(function DebugView2() {
     };
   }, items1);
   const get = memo.get;
-  const tmp6 = _slicedToArray(f101389(first[6]).useSyncExternalStore(memo.subscribe, get, get), 7);
+  const tmp6 = _slicedToArray(f101388(first[6]).useSyncExternalStore(memo.subscribe, get, get), 7);
   const first1 = tmp6[0];
   let num = 0;
   if (undefined !== first1) {
@@ -13152,16 +13152,16 @@ frozen.memo(function DebugView2() {
   if (undefined !== tmp6[3]) {
     num4 = tmp10;
   }
-  const obj2 = f101389(first[6]);
+  const obj2 = f101388(first[6]);
   const tmp12 = undefined !== tmp6[6] && tmp6[6];
   const tmp5 = _slicedToArray;
   tmp5(noop.useReducer((arg0) => arg0 + 1, 0), 2)[1];
-  f101389 = () => {
-    f101389();
+  f101388 = () => {
+    f101388();
   };
   const items2 = [100];
   const effect = noop.useEffect(() => {
-    const interval = setInterval(f101389, 100);
+    const interval = setInterval(f101388, 100);
     return () => clearInterval(closure_0);
   }, items2);
   ({ createElement, createElement: createElement2 } = frozen);
@@ -13912,7 +13912,7 @@ let closure_121 = memo(function Container2(id) {
   const callback = num6.useCallback((arg0) => {
     current = onLayoutChange.current;
     closure_1 = measureInLayoutEffect;
-    let f124152;
+    let f124151;
     const itemKey = current.itemKey;
     current.didLayout = true;
     let size = arg0;
@@ -13927,7 +13927,7 @@ let closure_121 = memo(function Container2(id) {
     }
     const sizesKnown = measureInLayoutEffect.state.sizesKnown;
     value = sizesKnown.get(itemKey);
-    f124152 = () => {
+    f124151 = () => {
 
     };
     if (!closure_27) {
@@ -13941,7 +13941,7 @@ let closure_121 = memo(function Container2(id) {
           const call = measure.call;
           const fn = (arg0, arg1, width, height) => {
             size = { height, width };
-            if (typeof f124152 === "function") {
+            if (typeof f124151 === "function") {
               current.lastSize = size;
               const obj = { containerId, itemKey, size };
               const items = [obj];
@@ -14013,10 +14013,10 @@ let closure_121 = memo(function Container2(id) {
     const layoutEffect2 = obj3.useLayoutEffect(() => {
       current = measureInLayoutEffect;
       if (measureInLayoutEffect) {
-        current = f101435.current;
+        current = f101434.current;
       }
       if (current) {
-        const current2 = f101435.current;
+        const current2 = f101434.current;
         current2.measure((x, y, width, height) => {
           const size = { height, width, x, y };
           onLayoutChange(size, true);
@@ -14520,10 +14520,10 @@ function LayoutView(onLayoutChange) {
     const layoutEffect = obj.useLayoutEffect(() => {
       current = measureInLayoutEffect;
       if (measureInLayoutEffect) {
-        current = f101435.current;
+        current = f101434.current;
       }
       if (current) {
-        const current2 = f101435.current;
+        const current2 = f101434.current;
         current2.measure((x, y, width, height) => {
           const size = { height, width, x, y };
           onLayoutChange(size, true);
@@ -15779,7 +15779,7 @@ let items = [
                     num18 = bound;
                   } while (num16 < tmp16);
                 }
-                let obj2 = { endNoBuffer: null, firstFullyOnScreenIndex: "Array", startNoBuffer: "ju" };
+                let obj2 = { endNoBuffer: null, firstFullyOnScreenIndex: "Array", startNoBuffer: null };
                 const length = data.length;
                 let _Math4 = Math;
                 const bound1 = Math.max(0, tmp143);
@@ -16901,7 +16901,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
   }
   const alignItemsAtEnd = recycleItems.alignItemsAtEnd;
   let anchoredEndSpace = recycleItems.anchoredEndSpace;
-  f101435 = anchoredEndSpace;
+  f101434 = anchoredEndSpace;
   const alwaysRender = recycleItems.alwaysRender;
   measureInLayoutEffect = alwaysRender;
   ({ columnWrapperStyle, contentInset, data, contentContainerStyle } = recycleItems);
@@ -17202,8 +17202,8 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
         items[8] = finishCalculateItemsInView;
         const memo = obj.useMemo(() => {
           let anchorIndex;
-          if (null != f101435) {
-            anchorIndex = f101435.anchorIndex;
+          if (null != f101434) {
+            anchorIndex = f101434.anchorIndex;
           }
           let tmp5 = (function getAlwaysRenderIndices(measureInLayoutEffect, onLayoutProp, fn, anchorIndex) {
             let bound;
@@ -17343,7 +17343,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                 str16 = initialMode;
               }
               let result = values.set("adaptiveRender", str16);
-              const obj15 = { averageSizes: {}, columnSpans: [], columns: [], containerItemGenerations: [], containerItemKeys: null, containerItemMetadata: null, contentInsetOverride: "ip", dataChangeEpoch: false, dataChangeNeedsScrollUpdate: false, didColumnsChange: false, didDataChange: false, didLoad: true, enableScrollForNextCalculateItemsInView: -1, endBuffered: -1, endNoBuffer: "ip", endReachedSnapshot: 285736959, firstFullyOnScreenIndex: 7430402, hasHadNonEmptyData: 16777216, idCache: 113, idsInView: 7430400, indexByKey: 1644167168, initialScroll: 28930, initialScrollSession: 23134208, isEndReached: 113, isFirst: 39911680, isStartReached: 115, lastBatchingAction: 0, lastLayout: 0, lastScrollDelta: 7409920, loadStartTime: 33554432, minIndexSizeChanged: -142, nativeContentInset: -1, nativeMarginTop: 1627546111, pendingDataComparison: 28929, pendingNativeMVCPAdjust: 1365311488, positions: 1359307015, props: 1129427950, queuedCalculateItemsInView: 240178, queuedFullDrawDistancePrewarm: 241639, refScroller: 241334, scroll: 1366205009, scrollAdjustHandler: -263080977, scrollForNextCalculateItemsInView: 1856197043, scrollHistory: 1370747217, scrollLength: -346967065, scrollPending: -1276358221, scrollPrev: 1370744913, scrollPrevTime: 1565635565, scrollProcessingEnabled: -1894871280, scrollTime: -1280920663, sizes: -2090411345, sizesKnown: 1380418407, startBuffered: 956696839, startNoBuffer: 1849923493, startReachedSnapshot: -2058263908, stickyContainerPool: 226906381, stickyContainers: 1360027217, timeoutAdaptiveRender: -95313016, timeouts: -1677831781, totalSize: 1369177937, viewabilityConfigCallbackPairs: 860986363 };
+              const obj15 = { averageSizes: {}, columnSpans: [], columns: [], containerItemGenerations: [], containerItemKeys: null, containerItemMetadata: null, contentInsetOverride: "ip", dataChangeEpoch: false, dataChangeNeedsScrollUpdate: false, didColumnsChange: false, didDataChange: false, didLoad: true, enableScrollForNextCalculateItemsInView: -1, endBuffered: -1, endNoBuffer: "ip", endReachedSnapshot: 285736959, firstFullyOnScreenIndex: 7430402, hasHadNonEmptyData: 16777216, idCache: 113, idsInView: 7430400, indexByKey: 1644167168, initialScroll: 28930, initialScrollSession: 23134208, isEndReached: 113, isFirst: 39911680, isStartReached: 115, lastBatchingAction: 0, lastLayout: 0, lastScrollDelta: 7409920, loadStartTime: 33554432, minIndexSizeChanged: -142, nativeContentInset: -1, nativeMarginTop: 1627546111, pendingDataComparison: 28929, pendingNativeMVCPAdjust: 1096876032, positions: 91929, props: 16799057, queuedCalculateItemsInView: 301451089, queuedFullDrawDistancePrewarm: 815361, refScroller: -1856962560, scroll: 1749090821, scrollAdjustHandler: 1358954981, scrollForNextCalculateItemsInView: 1359068815, scrollHistory: 1359348332, scrollLength: -2058249519, scrollPending: 1011941664, scrollPrev: -1219428093, scrollPrevTime: 822153717, scrollProcessingEnabled: 858993459, scrollTime: 1076507443, sizes: 23019857, sizesKnown: 100735569, startBuffered: -1185803999, startNoBuffer: 1372201984, startReachedSnapshot: 1359078793, stickyContainerPool: 285606626, stickyContainers: 29297, timeoutAdaptiveRender: 17825792, timeouts: -145686528, totalSize: 609288567, viewabilityConfigCallbackPairs: 7407112 };
               const _Map = Map;
               map = new Map();
               obj15.containerItemKeys = map;
@@ -18046,7 +18046,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                             num18 = bound;
                           } while (num16 < tmp16);
                         }
-                        let obj2 = { endNoBuffer: null, firstFullyOnScreenIndex: "Array", startNoBuffer: "ju" };
+                        let obj2 = { endNoBuffer: null, firstFullyOnScreenIndex: "Array", startNoBuffer: null };
                         const length = data.length;
                         let _Math4 = Math;
                         const bound1 = Math.max(0, tmp143);
@@ -18491,11 +18491,11 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                   }
                                   function assignFromPool(found, items, arg2) {
                                     if (closure_0) {
-                                      assignMatching(found, items, /* F125844 */ function() { ... });
+                                      assignMatching(found, items, /* F125843 */ function() { ... });
                                     }
-                                    assignMatching(found, items, /* F125845 */ function() { ... });
+                                    assignMatching(found, items, /* F125844 */ function() { ... });
                                     if (arg2) {
-                                      assignMatching(found, items, /* F125846 */ function() { ... });
+                                      assignMatching(found, items, /* F125845 */ function() { ... });
                                     }
                                   }
                                   assignFromPool(found, items, true);
@@ -19063,7 +19063,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
           current.didDataChange = true;
           current.previousData = current.props.data;
         }
-        f101435 = snapToIndices.useRef(null);
+        f101434 = snapToIndices.useRef(null);
         measureInLayoutEffect = snapToIndices.useRef(0);
         snapToIndices.useRef(null);
         onLayoutChange = function clearTimeoutRef() {
@@ -19102,7 +19102,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                 const items = [];
                 HermesBuiltin.arraySpread(tmp.current, 0);
                 HermesBuiltin.apply(items, undefined);
-                f101435.current = null;
+                f101434.current = null;
                 tmp.current = null;
               }
             }, arg1 - (timestamp - tmp3.current));
@@ -19114,7 +19114,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
         if (scrollEventThrottle) {
           fn2 = onScroll;
           if (onScroll) {
-            fn2 = (nativeEvent) => onLayoutProp(f101435, measureInLayoutEffect, { nativeEvent: nativeEvent.nativeEvent });
+            fn2 = (nativeEvent) => onLayoutProp(f101434, measureInLayoutEffect, { nativeEvent: nativeEvent.nativeEvent });
           }
         }
         let tmp156 = !isFirst;
@@ -19134,7 +19134,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
           tmp156 = anchorIndex1 !== anchorIndex2;
         }
         closure_33 = tmp156;
-        const obj22 = { adaptiveRender: experimental_adaptiveRender, alignItemsAtEnd: tmp8, alignItemsAtEndPaddingEnabled: tmp15, alwaysRender, alwaysRenderIndicesArr: null, alwaysRenderIndicesSet: null, anchoredEndSpace: null, animatedProps: null, contentContainerAlignItems: null, contentInset: null, contentInsetEndAdjustment: "fill", data: false, dataKey: false, dataVersion: false, drawDistance: false, estimatedItemSize: false, getFixedItemSize: false, getItemType: false, horizontal: "AGE_GATE_MODAL_OPEN", itemsAreEqual: null, keyExtractor: "CONTEXT_CLICK", maintainScrollAtEnd: "HOTSPOT_OVERRIDE_CLEAR", maintainScrollAtEndThreshold: null, maintainVisibleContentPosition: "KEYBOARD_PRESS", numColumns: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR", onEndReached: null, onEndReachedThreshold: "fetched", onFirstVisibleItemChanged: null, onItemSizeChanged: "KEYBOARD_TAP", onLoad: "sku", onMomentumScrollEnd: null, onScroll: "LONG_PRESS", onScrollBeginDrag: "skus", onStartReached: null, onStartReachedThreshold: "VIRTUAL_KEY", onStickyHeaderChange: "currency", overrideItemLayout: null, positionComponentInternal: "VIRTUAL_KEY_RELEASE", recycleItems: "GUILD_SUBSCRIPTIONS_FLUSH", renderItem: null, rtl: "EFFECT_CLICK", snapToIndices: "GAME_FETCH", stickyHeaderIndicesArr: null, stickyHeaderIndicesSet: "EFFECT_HEAVY_CLICK", stickyPositionComponentInternal: "Error", stylePaddingBottom: "OO.OO", stylePaddingLeft: "error", stylePaddingRight: null, stylePaddingTop: null, useWindowScroll: "HermesInternal" };
+        const obj22 = { adaptiveRender: experimental_adaptiveRender, alignItemsAtEnd: tmp8, alignItemsAtEndPaddingEnabled: tmp15, alwaysRender, alwaysRenderIndicesArr: null, alwaysRenderIndicesSet: null, anchoredEndSpace: null, animatedProps: null, contentContainerAlignItems: null, contentInset: null, contentInsetEndAdjustment: "fill", data: false, dataKey: false, dataVersion: false, drawDistance: false, estimatedItemSize: false, getFixedItemSize: false, getItemType: false, horizontal: "Togo", itemsAreEqual: "TG", keyExtractor: "+228", maintainScrollAtEnd: null, maintainScrollAtEndThreshold: "\u27BF", maintainVisibleContentPosition: 6, numColumns: 1237, onEndReached: "Tokelau", onEndReachedThreshold: "TK", onFirstVisibleItemChanged: "+690", onItemSizeChanged: null, onLoad: "\u{1F51A}", onMomentumScrollEnd: 6, onScroll: 1238, onScrollBeginDrag: "end", onStartReached: "end_arrow", onStartReachedThreshold: "Tonga", onStickyHeaderChange: "TO", overrideItemLayout: "+676", positionComponentInternal: null, recycleItems: "\u{1F519}", renderItem: 6, rtl: 1239, snapToIndices: "back", stickyHeaderIndicesArr: "back_arrow", stickyHeaderIndicesSet: "Trinidad and Tobago", stickyPositionComponentInternal: "TT", stylePaddingBottom: "+1 868", stylePaddingLeft: null, stylePaddingRight: "\u{1F51B}", stylePaddingTop: 6, useWindowScroll: 1240 };
         ({ arr: obj24.alwaysRenderIndicesArr, set: obj24.alwaysRenderIndicesSet } = memo);
         obj22.anchoredEndSpace = anchoredEndSpace;
         obj22.animatedProps = animatedPropsInternal;
@@ -19148,7 +19148,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
         const items3 = [getFixedItemSize];
         obj22.getFixedItemSize = snapToIndices.useMemo(() => {
           let fn;
-          if (f101435) {
+          if (f101434) {
             fn = (arg0, arg1, arg2) => {
               let tmp;
               if (undefined !== arg0) {
@@ -19164,7 +19164,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
         const items4 = [getItemType];
         obj22.getItemType = snapToIndices.useMemo(() => {
           let fn;
-          if (f101435) {
+          if (f101434) {
             fn = (arg0, arg1, arg2) => {
               let tmp;
               if (undefined !== arg0) {
@@ -19179,11 +19179,11 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
         }, items4);
         obj22.horizontal = horizontal;
         obj22.itemsAreEqual = itemsAreEqual;
-        f101435 = finishCalculateItemsInView;
+        f101434 = finishCalculateItemsInView;
         const items5 = [finishCalculateItemsInView];
         obj22.keyExtractor = snapToIndices.useMemo(() => {
           let fn;
-          if (f101435) {
+          if (f101434) {
             fn = (arg0, arg1, arg2) => {
               let tmp;
               if (undefined !== arg0) {
@@ -20927,7 +20927,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                   num18 = bound;
                                 } while (num16 < tmp16);
                               }
-                              let obj2 = { endNoBuffer: null, firstFullyOnScreenIndex: "Array", startNoBuffer: "ju" };
+                              let obj2 = { endNoBuffer: null, firstFullyOnScreenIndex: "Array", startNoBuffer: null };
                               const length = data.length;
                               let _Math4 = Math;
                               const bound1 = Math.max(0, tmp143);
@@ -21372,11 +21372,11 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                         }
                                         function assignFromPool(found, items, arg2) {
                                           if (closure_0) {
-                                            assignMatching(found, items, /* F125844 */ function() { ... });
+                                            assignMatching(found, items, /* F125843 */ function() { ... });
                                           }
-                                          assignMatching(found, items, /* F125845 */ function() { ... });
+                                          assignMatching(found, items, /* F125844 */ function() { ... });
                                           if (arg2) {
-                                            assignMatching(found, items, /* F125846 */ function() { ... });
+                                            assignMatching(found, items, /* F125845 */ function() { ... });
                                           }
                                         }
                                         assignFromPool(found, items, true);
@@ -22042,11 +22042,11 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
           onLayoutProp: onLayout,
           ref
         };
-        f101435 = undefined;
+        f101434 = undefined;
         measureInLayoutEffect = undefined;
         onLayoutProp = undefined;
         onLayoutChange = undefined;
-        ({ ref: f101435, measureInLayoutEffect } = obj25);
+        ({ ref: f101434, measureInLayoutEffect } = obj25);
         if (measureInLayoutEffect === undefined) {
           measureInLayoutEffect = true;
         }
@@ -22065,10 +22065,10 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
           const layoutEffect4 = obj23.useLayoutEffect(() => {
             current = measureInLayoutEffect;
             if (measureInLayoutEffect) {
-              current = f101435.current;
+              current = f101434.current;
             }
             if (current) {
-              const current2 = f101435.current;
+              const current2 = f101434.current;
               current2.measure((x, y, width, height) => {
                 const size = { height, width, x, y };
                 onLayoutChange(size, true);
@@ -22797,7 +22797,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                         num18 = bound;
                       } while (num16 < tmp16);
                     }
-                    let obj2 = { endNoBuffer: null, firstFullyOnScreenIndex: "Array", startNoBuffer: "ju" };
+                    let obj2 = { endNoBuffer: null, firstFullyOnScreenIndex: "Array", startNoBuffer: null };
                     const length = data.length;
                     let _Math4 = Math;
                     const bound1 = Math.max(0, tmp143);
@@ -23242,11 +23242,11 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                               }
                               function assignFromPool(found, items, arg2) {
                                 if (closure_0) {
-                                  assignMatching(found, items, /* F125844 */ function() { ... });
+                                  assignMatching(found, items, /* F125843 */ function() { ... });
                                 }
-                                assignMatching(found, items, /* F125845 */ function() { ... });
+                                assignMatching(found, items, /* F125844 */ function() { ... });
                                 if (arg2) {
-                                  assignMatching(found, items, /* F125846 */ function() { ... });
+                                  assignMatching(found, items, /* F125845 */ function() { ... });
                                 }
                               }
                               assignFromPool(found, items, true);
@@ -23804,12 +23804,12 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
             tmp8.scrollForNextCalculateItemsInView = undefined;
           }
         }, items22);
-        f101435 = () => {
+        f101434 = () => {
           if (!closure_27) {
             doInitialAllocateContainers(context);
           }
         };
-        const state1 = obj23.useState(() => f101448());
+        const state1 = obj23.useState(() => f101447());
         const imperativeHandle = obj.useImperativeHandle(ref, () => {
           closure_0 = context;
           closure_1 = closure_21;
@@ -25067,8 +25067,8 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
         const obj26 = {};
         const memo4 = obj23.useMemo(() => {
           let length;
-          if (null != f101435) {
-            length = f101435.length;
+          if (null != f101434) {
+            length = f101434.length;
           }
           if (length) {
             if (horizontal) {
@@ -25400,7 +25400,7 @@ export const useRecyclingState = function useRecyclingState(fn) {
       if (typeof closure_0 !== "function") {
         return tmp;
       } else if (hasItemInfo) {
-        const obj = { index: itemIndex, item, prevIndex: "r", prevItem: "isArray" };
+        const obj = { index: itemIndex, item, prevIndex: "r", prevItem: "HermesInternal" };
         let tmpResult = tmp(obj);
       } else {
         tmpResult = tmp();
@@ -25424,7 +25424,7 @@ export const useRecyclingState = function useRecyclingState(fn) {
     if (typeof fn !== "function") {
       tmp4(fn);
     } else if (hasItemInfo) {
-      const obj2 = { index: itemIndex, item, prevIndex: "r", prevItem: "isArray" };
+      const obj2 = { index: itemIndex, item, prevIndex: "r", prevItem: "HermesInternal" };
       let tmp9 = fn(obj2);
     } else {
       tmp9 = fn();
@@ -25465,7 +25465,7 @@ export const useViewability = function useViewability(arg0, arg1) {
   closure_1 = arg1;
   const context = frozen.useContext(closure_17);
   const context1 = noop.useContext(closure_115);
-  let f101446 = () => {
+  let f101445 = () => {
     if (context1) {
       let str = "";
       if (null != closure_1) {
@@ -25474,11 +25474,11 @@ export const useViewability = function useViewability(arg0, arg1) {
       const mapViewabilityValues = context.mapViewabilityValues;
       value = mapViewabilityValues.get(context1.containerId + str);
       if (value) {
-        f101446(value);
+        f101445(value);
       }
     }
   };
-  const state = noop.useState(() => f101448());
+  const state = noop.useState(() => f101447());
   const items = [context, arg0, arg1, context1];
   const effect = noop.useEffect(() => {
     if (context1) {
@@ -25487,8 +25487,8 @@ export const useViewability = function useViewability(arg0, arg1) {
         str = closure_1;
       }
       const sum = context1.containerId + str;
-      f101446 = sum;
-      const result = context.mapViewabilityCallbacks.set(sum, f101446);
+      f101445 = sum;
+      const result = context.mapViewabilityCallbacks.set(sum, f101445);
       return () => {
         context.mapViewabilityCallbacks.delete(sum);
       };
@@ -25498,16 +25498,16 @@ export const useViewability = function useViewability(arg0, arg1) {
 export const useViewabilityAmount = function useViewabilityAmount(arg0) {
   const context = frozen.useContext(closure_17);
   const context1 = noop.useContext(closure_115);
-  const f101448 = () => {
+  const f101447 = () => {
     if (context1) {
       const mapViewabilityAmountValues = context.mapViewabilityAmountValues;
       value = mapViewabilityAmountValues.get(context1.containerId);
       if (value) {
-        f101448(value);
+        f101447(value);
       }
     }
   };
-  const state = noop.useState(() => f101448());
+  const state = noop.useState(() => f101447());
   const items = [context, arg0, context1];
   const effect = noop.useEffect(() => {
     if (context1) {

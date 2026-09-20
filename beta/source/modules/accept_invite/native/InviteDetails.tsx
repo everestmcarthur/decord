@@ -67,7 +67,7 @@ function InviteDestinationIcon(invite) {
     if (null != invite.inviter) {
       let tmp2Result = null;
       if (null != invite.inviter) {
-        const obj3 = { avatarStyle: tmp.avatar, user: null, guildId: "Array", size: 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001234533346031771 };
+        const obj3 = { avatarStyle: tmp.avatar, user: null, guildId: "Array", size: true };
         const tmp14 = new UserRecord(invite.inviter);
         obj3.user = tmp14;
         obj3.size = tmp4(1176).AvatarSizes.XLARGE;

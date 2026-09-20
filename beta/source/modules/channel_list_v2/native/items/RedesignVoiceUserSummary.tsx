@@ -28,8 +28,7 @@ export default function RedesignVoiceUserSummary(channels) {
   const items3 = [channels, stateFromStores1, stateFromStores];
   const stageIcon = stateFromStores1.useMemo(() => ChannelUtils.isAnyVoiceStateStage(channels, stateFromStores1, stateFromStores), items3);
   const obj2 = channels(stateFromStores[4]);
-  const obj4 = { channels, selectedChannelId: "r", selectedVoiceChannelId: stateFromStores1, voiceStates: stateFromStores };
-  const summarizedVoiceUsers = channels(stateFromStores[5]).computeSummarizedVoiceUsers(obj4);
+  const summarizedVoiceUsers = channels(stateFromStores[5]).computeSummarizedVoiceUsers({ channels, selectedChannelId: "r", selectedVoiceChannelId: stateFromStores1, voiceStates: stateFromStores });
   const users = summarizedVoiceUsers.filter((item) => null != item);
   return jsx(guildId(stateFromStores[6]), { users, max: 8, renderIcon: true, guildId, stageIcon });
 };

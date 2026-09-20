@@ -75,7 +75,7 @@ export default noop.memo(function MessagesItemChannelBase(channel) {
       const obj2 = { status: PresenceStore.getStatus(obj.getRecipientId()), activities };
       let obj3 = obj2;
     } else {
-      obj3 = { status: "Array", activities: "PX_16" };
+      obj3 = { status: "icon", activities: "call" };
     }
     return obj3;
   });

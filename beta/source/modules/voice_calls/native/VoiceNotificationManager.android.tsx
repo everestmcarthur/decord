@@ -28,7 +28,7 @@ class VoiceNotificationManager {
     obj = Object.create(new.target.prototype);
     closure_0 = obj;
     obj.voiceServiceHandlerId = 9000;
-    obj.state = { channelId: "flexDirection", connectionState: "content", selfMute: false, deafened: null, isPushToTalk: "braintreeunionpayhostedfields", embeddedActivity: "sunrise_over_mountains", isStreaming: 0 };
+    obj.state = { channelId: "flexDirection", connectionState: "content", selfMute: false, deafened: "womans_clothes", isPushToTalk: "shirt", embeddedActivity: "t_shirt", isStreaming: "bekl\u00E6dning" };
     obj.handleVoiceStateChange = function handleVoiceStateChange() {
       const channelId = RTCConnectionStore.getChannelId();
       const state = RTCConnectionStore.getState();
@@ -219,7 +219,7 @@ prototype["terminate"] = function terminate() {
 };
 obj2 = Object.create(VoiceNotificationManager.prototype);
 obj2.voiceServiceHandlerId = 9000;
-obj2.state = { channelId: "flexDirection", connectionState: "content", selfMute: false, deafened: null, isPushToTalk: "braintreeunionpayhostedfields", embeddedActivity: "sunrise_over_mountains", isStreaming: 0 };
+obj2.state = { channelId: "flexDirection", connectionState: "content", selfMute: false, deafened: "womans_clothes", isPushToTalk: "shirt", embeddedActivity: "t_shirt", isStreaming: "bekl\u00E6dning" };
 obj2.handleVoiceStateChange = function handleVoiceStateChange() {
   const channelId = RTCConnectionStore.getChannelId();
   const state = RTCConnectionStore.getState();

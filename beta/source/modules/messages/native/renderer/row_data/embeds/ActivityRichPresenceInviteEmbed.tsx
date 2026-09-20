@@ -430,7 +430,7 @@ export const createActivityRichPresenceInviteEmbed = function createActivityRich
                       obj12.label = intl11.string(intl(1114).t.KC26NR);
                       obj16 = obj12;
                     } else if (isAskToJoin) {
-                      const obj13 = { label: "PX_16", disabled: null, footerLabel: "braintreeunionpayhostedfields" };
+                      const obj13 = { label: "PX_16", disabled: null, footerLabel: true };
                       const intl10 = intl(1114).intl;
                       const obj14 = { username: message.author.globalName, appName: name_override };
                       obj13.footerLabel = intl10.formatToPlainString(intl(1114).t.gYVkSW, obj14);
@@ -444,7 +444,7 @@ export const createActivityRichPresenceInviteEmbed = function createActivityRich
                           obj16 = obj15;
                         }
                       }
-                      obj16 = { label: "PX_16", disabled: null, footerLabel: "braintreeunionpayhostedfields" };
+                      obj16 = { label: "PX_16", disabled: null, footerLabel: true };
                       const intl8 = intl(1114).intl;
                       obj16.footerLabel = intl8.string(intl(1114).t.OAB5TK);
                     }
@@ -574,7 +574,7 @@ export const createActivityRichPresenceInviteEmbed = function createActivityRich
               return null;
             }
           }
-          const obj20 = { displayType: obj.BLOCKED, headerText: null, subtitle: null, ctaButtonEnabled: false, ctaButtonText: "PX_16", ctaButtonIsLoading: "Array", footerLabel: "flex", gradientColors: 0, iconSrc: null, isPlatformSupported: "Array", isSpotifyParty: "accessible", maxPartySize: "raw", partyMemberAvatarURIs: "set", partySizeText: null, platformIconKeys: "user", coverImageUrl: null, detailsText: null, title: 147 };
+          const obj20 = { displayType: obj.BLOCKED, headerText: null, subtitle: null, ctaButtonEnabled: false, ctaButtonText: "PX_16", ctaButtonIsLoading: "Array", footerLabel: "flex", gradientColors: 0, iconSrc: null, isPlatformSupported: "Array", isSpotifyParty: "WireType", maxPartySize: "useRef", partyMemberAvatarURIs: "window", partySizeText: "RightPanel", platformIconKeys: "getPreferredSystemLanguages", coverImageUrl: "oyster", detailsText: "TOP_GAME", title: "defaultOriginWhitelist" };
           const intl2 = intl(1114).intl;
           obj20.headerText = intl2.string(intl(1114).t.pkq6Vq);
           if (contentClassificationVisibility === intl(12074).ContentClassificationVisibility.BLOCK_UNDERAGE) {

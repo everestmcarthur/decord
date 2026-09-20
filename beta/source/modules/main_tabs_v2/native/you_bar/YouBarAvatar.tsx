@@ -172,7 +172,7 @@ function YouBarAvatarLarge(transitionState) {
     obj6.style = size2;
     obj5.children = closure_22(sharedValue1, obj6);
     const items6 = [closure_22(tmp23(tmp3[17]), obj5), , , ];
-    const obj7 = { user: stateFromStores, guildId: "Array", size, animate: true, needsOffscreenAlphaCompositing: null, status: null, statusSizeOverride: null, cutout: null, statusStyle: "Message Too Long Alert iOS" };
+    const obj7 = { user: stateFromStores, guildId: "Array", size, animate: true, needsOffscreenAlphaCompositing: null, status: null, statusSizeOverride: null, cutout: null, statusStyle: "PUSH_FEEDBACK_RECEIVED_NOTIFICATION" };
     if (OFFLINE === StatusTypes.UNKNOWN) {
       OFFLINE = StatusTypes.OFFLINE;
     }

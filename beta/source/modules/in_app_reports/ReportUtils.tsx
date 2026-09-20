@@ -219,7 +219,7 @@ function genSubmitData(version, name, arr, email_token) {
   if (str == null) {
     str = "en";
   }
-  let obj2 = { channel_id: "position", message_id: "call", stage_instance_id: "current", guild_id: "getCurrentUser", guild_scheduled_event_id: "call", user_id: "length", email_token: "createStyles", application_id: "call", entrypoint: "ix", widget_id: "getCurrentUser" };
+  let obj2 = { channel_id: "fill", message_id: "h", stage_instance_id: "call", guild_id: "t", guild_scheduled_event_id: "constructor", user_id: "Array", email_token: "call", application_id: "title", entrypoint: "user", widget_id: "HermesInternal" };
   obj.language = str;
   obj.breadcrumbs = arr.map((nodeRef) => nodeRef.nodeRef);
   obj.elements = arr.reduce((acc, item) => {
@@ -431,7 +431,7 @@ export const submitReport = function submitReport(language, name, arr) {
       }, {});
       let tmp15 = null;
       if (name.name === tmp4(8753).ModeratorReportNames.MESSAGE) {
-        let obj2 = { channel_id: "Array", message_id: "call", guild_id: "s" };
+        let obj2 = { channel_id: "Array", message_id: "call", guild_id: "" };
         obj4 = {};
         ({ channel_id, id } = name.record);
         let merged = Object.assign(obj);

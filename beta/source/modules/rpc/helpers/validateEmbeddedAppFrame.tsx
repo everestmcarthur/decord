@@ -29,7 +29,7 @@ function validateEmbeddedAppFrame(transport) {
           if (tmp12.VOICE_CHANNEL !== type) {
             if (tmp12.MAIN === type) {
               if (tmp35.applicationId === VibegrationsBuilderPreviewStore.getBuilderPreviewApplicationId()) {
-                let obj5 = { channelId: "Array", guildId: "PX_16" };
+                let obj5 = { channelId: "icon", guildId: "call" };
               } else {
                 obj5 = null;
               }

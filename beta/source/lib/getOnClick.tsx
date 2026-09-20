@@ -306,7 +306,7 @@ export default function getOnClick(url) {
         if (_undefined.type !== tmp3(4624).CodedLinkType.APP_DIRECTORY_STOREFRONT) {
           let result = tmp3(7793).parseStorefrontSkuCodedLink(code);
           if (result == null) {
-            result = { applicationId: "Array", skuId: "PX_16" };
+            result = { applicationId: "icon", skuId: "call" };
           }
           const tmp3Result = tmp3(7793);
         }

@@ -168,8 +168,8 @@ export default function TransferOwnership(guild) {
   const obj9 = { source: toUser(11982), style: tmp5.arrow };
   const items2 = [closure_13(guild(1176).Avatar, { user: stateFromStores, guildId: guild.id, size: guild(1176).AvatarSizes.XXLARGE }), ];
   const obj12 = { style: tmp5.avatarFauxBorder, children: null };
-  const obj13 = { user: toUser, guildId: "r", size: guild(1176).AvatarSizes.XXLARGE, style: tmp5.otherUserAvatar };
-  obj12.children = closure_13(guild(1176).Avatar, obj13);
+  const obj11 = { user: stateFromStores, guildId: guild.id, size: guild(1176).AvatarSizes.XXLARGE };
+  obj12.children = closure_13(guild(1176).Avatar, { user: toUser, guildId: "r", size: guild(1176).AvatarSizes.XXLARGE, style: tmp5.otherUserAvatar });
   items2[1] = closure_13(nickname, obj12);
   obj10.children = items2;
   items1[1] = closure_15(nickname, obj10);
@@ -250,7 +250,7 @@ export default function TransferOwnership(guild) {
   }
   const intl2 = tmp(1114).intl;
   const obj21 = { GuildHook: GuildWithSmallIcon, user: null, AKAHook: null };
-  const obj11 = { user: stateFromStores, guildId: guild.id, size: guild(1176).AvatarSizes.XXLARGE };
+  const obj13 = { user: toUser, guildId: "r", size: guild(1176).AvatarSizes.XXLARGE, style: tmp5.otherUserAvatar };
   const obj14 = { variant: "text-xs/medium", color: "text-default", children: guild.name };
   obj21.user = toUser(4481).getUserTag(toUser);
   obj21.AKAHook = function NicknameAKA() {

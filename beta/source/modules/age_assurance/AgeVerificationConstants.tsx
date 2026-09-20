@@ -56,6 +56,7 @@ export const getAgeVerificationGetStartedSteps = function getAgeVerificationGetS
   return items;
 };
 export const TRUSTED_PROVIDERS_URL = "https://discord.com/safety/age-assurance-on-discord-vendors-methods-and-your-data";
+export const FALLBACK_TEEN_AGE_RANGE = "13-17";
 export const AGE_VERIFICATION_MODAL_KEY = "AGE_VERIFICATION_MODAL_KEY";
 export const AGE_VERIFICATION_GET_STARTED_MODAL_KEY = "AGE_VERIFICATION_GET_STARTED_MODAL_KEY";
 export const AGE_VERIFICATION_QUEST_UNSUPPORTED_ALERT_KEY = "AGE_VERIFICATION_QUEST_UNSUPPORTED_ALERT_KEY";

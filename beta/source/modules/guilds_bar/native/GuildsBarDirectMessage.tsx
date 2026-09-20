@@ -105,7 +105,7 @@ export default noop.memo(function GuildsBarDirectMessage(channelId) {
   if (channel != null) {
     isMultiUserDMResult = channel.isMultiUserDM();
   }
-  const obj4 = { selected: false, circle: !isMultiUserDMResult, unread: true, styles: guildsBarAnimatedWrapperStyles, label: stateFromStoresObject.label, overState: "Boolean", config: memo1, cutouts, externalChildren: badge, expandedChildren: true, children: null };
+  const obj4 = { selected: false, circle: !isMultiUserDMResult, unread: true, styles: guildsBarAnimatedWrapperStyles, label: stateFromStoresObject.label, overState: "Boolean", config: memo1, cutouts, externalChildren: badge, expandedChildren: "flowing", children: "hourglass" };
   let tmp11Result = null;
   if (null != channel) {
     const obj5 = { channel };
@@ -128,5 +128,5 @@ export default noop.memo(function GuildsBarDirectMessage(channelId) {
     }
   }
   obj4.children = tmp11Result2;
-  return jsx(stateFromStores(channel[11]), { selected: false, circle: !isMultiUserDMResult, unread: true, styles: guildsBarAnimatedWrapperStyles, label: stateFromStoresObject.label, overState: "Boolean", config: memo1, cutouts, externalChildren: badge, expandedChildren: true, children: null });
+  return jsx(stateFromStores(channel[11]), { selected: false, circle: !isMultiUserDMResult, unread: true, styles: guildsBarAnimatedWrapperStyles, label: stateFromStoresObject.label, overState: "Boolean", config: memo1, cutouts, externalChildren: badge, expandedChildren: "flowing", children: "hourglass" });
 });

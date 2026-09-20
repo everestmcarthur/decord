@@ -92,7 +92,7 @@ export default function UserProfileYourFriendsCard(arg0) {
           const items = [{ translateX: 4 * (first.length - 1 - index) }];
           obj2.transform = items;
           obj.style = obj2;
-          const obj4 = { user, guildId: "r", size: closure_0(1176).AvatarSizes.XSMALL, cutout: true };
+          const obj4 = { user, guildId: "r", size: closure_0(1176).AvatarSizes.XSMALL, cutout: null };
           let tmp3;
           if (index < first.length - 1) {
             tmp3 = closure_2_12;

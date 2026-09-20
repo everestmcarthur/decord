@@ -44,12 +44,12 @@ const useMediaPlayerManagerStore = module_560.create((arg0) => {
     wasPipClosedByUser: null,
     progress: null,
     rate: "PX_16",
-    showPip: "Force explicit content obscure blur effect on for message media and embeds",
+    showPip: "DigitalZoomRatio",
     closePip() {
       ReactBatchUpdates.batchUpdates(() => closure_1_0({ showPip: false }));
     },
     displayedMediaItemIdsPerChannel: {},
-    currentlyDisplayedChannelId: 7
+    currentlyDisplayedChannelId: 6
   };
   return obj;
 });

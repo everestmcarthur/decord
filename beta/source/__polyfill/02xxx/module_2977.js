@@ -6,4 +6,4 @@
 import registerAsset from "module_1120" /* 1120 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/age_assurance", scales: [1], hash: "a445839f6a4fd33b4fdbd5f9fd27987c", name: "AgeAssurance.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/age_assurance", scales: [1], hash: "f1d2efc284f55130f22601f3717bc097", name: "AgeAssurance.compiled.messages", type: "jsona" });

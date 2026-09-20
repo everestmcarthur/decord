@@ -1103,7 +1103,7 @@ function createMessageContent(message) {
       applicationIconSource = author.getAvatarSource(undefined);
       tmp13Result69 = tmp13(tmp3[53]);
     }
-    parseMessageMarkupResult = { content: "flex", hasSpoilerEmbeds: "Keywords", hasBailedAst: true };
+    parseMessageMarkupResult = { content: "flex", hasSpoilerEmbeds: "none", hasBailedAst: "URL" };
     const tmp13Result63 = tmp13(tmp3[42]);
   }
 }

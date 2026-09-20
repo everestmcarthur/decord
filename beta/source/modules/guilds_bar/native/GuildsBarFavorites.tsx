@@ -68,7 +68,7 @@ export default noop.memo(function GuildsBarFavorites() {
     return obj;
   }, []);
   ({ accessibilityActions, onAccessibilityAction } = memo1);
-  const obj5 = { selected: isFavoritesGuildSelected, circle: false, unread, styles: guildsBarAnimatedWrapperStyles, cutouts, overState: "l", config: memo, accessibilityActions, onAccessibilityAction, label: "MEDIA_ENGINE_RESET_SETTINGS", externalChildren: null, expandedChildren: "heading-lg/semibold", children: "mobile-text-heading-primary" };
+  const obj5 = { selected: isFavoritesGuildSelected, circle: false, unread, styles: guildsBarAnimatedWrapperStyles, cutouts, overState: "l", config: memo, accessibilityActions, onAccessibilityAction, label: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_START", externalChildren: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_ERROR", expandedChildren: "isVideoBackgroundSupported", children: "REPORT_AV_ERROR" };
   const obj4 = shouldShowPopover(10367);
   const tmp13 = closure_9;
   let intl = shouldShowPopover(1114).intl;

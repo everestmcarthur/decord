@@ -53,7 +53,7 @@ export default function usePowerupActiveStatus(arg0, arg1) {
         if (hasItem) {
           let INACTIVE = constants.POWERUP_ACTIVATED;
         }
-        const obj2 = { type: INACTIVE, powerup: skuId, sourceEntitlement: "r", sourcePowerup: "isArray" };
+        const obj2 = { type: INACTIVE, powerup: skuId, sourceEntitlement: "r", sourcePowerup: "HermesInternal" };
       }
       INACTIVE = constants.INACTIVE;
     } else {
@@ -100,7 +100,7 @@ export default function usePowerupActiveStatus(arg0, arg1) {
           if (tmp10 == null) {
             tmp10 = null;
           }
-          let obj3 = { type: constants.INACTIVE, powerup: skuId, sourceEntitlement: "r", sourcePowerup: "isArray" };
+          let obj3 = { type: constants.INACTIVE, powerup: skuId, sourceEntitlement: "r", sourcePowerup: "HermesInternal" };
           if (isActiveFromLevel) {
             const obj4 = { type: tmp11.LEVEL_ACTIVATED, powerup: skuId, sourceEntitlement: levelEntitlement, sourcePowerup: levelPowerup };
             obj3 = obj4;
@@ -158,7 +158,7 @@ export const usePowerupsActiveStatuses = function usePowerupsActiveStatuses(guil
         if (hasItem) {
           let INACTIVE = constants.POWERUP_ACTIVATED;
         }
-        const obj2 = { type: INACTIVE, powerup: skuId, sourceEntitlement: "r", sourcePowerup: "isArray" };
+        const obj2 = { type: INACTIVE, powerup: skuId, sourceEntitlement: "r", sourcePowerup: "HermesInternal" };
       }
       INACTIVE = constants.INACTIVE;
     } else {
@@ -205,7 +205,7 @@ export const usePowerupsActiveStatuses = function usePowerupsActiveStatuses(guil
           if (tmp10 == null) {
             tmp10 = null;
           }
-          let obj3 = { type: constants.INACTIVE, powerup: skuId, sourceEntitlement: "r", sourcePowerup: "isArray" };
+          let obj3 = { type: constants.INACTIVE, powerup: skuId, sourceEntitlement: "r", sourcePowerup: "HermesInternal" };
           if (isActiveFromLevel) {
             const obj4 = { type: tmp11.LEVEL_ACTIVATED, powerup: skuId, sourceEntitlement: levelEntitlement, sourcePowerup: levelPowerup };
             obj3 = obj4;

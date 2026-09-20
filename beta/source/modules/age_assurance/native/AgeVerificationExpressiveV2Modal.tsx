@@ -256,7 +256,10 @@ function MethodsScreen(onClose) {
     items9[1] = tmp19Result6;
     let tmp20Result = !loading;
     if (!loading) {
-      let tmp19Result7 = null != outageBannerMessage;
+      let tmp19Result7 = tmp6;
+      if (tmp6) {
+        tmp19Result7 = null != outageBannerMessage;
+      }
       if (tmp19Result7) {
         const obj16 = { messageType: tmp2(tmp3[30]).HelpMessageTypes.WARNING, children: outageBannerMessage };
         tmp19Result7 = tmp19(tmp2(tmp3[30]).HelpMessage, obj16);
@@ -330,7 +333,7 @@ function MethodsScreen(onClose) {
       } else {
         const obj19 = { style: tmp.emptyContainer, children: null };
         let obj20 = { messageType: tmp2(tmp3[30]).HelpMessageTypes.ERROR, button: null, children: null };
-        const obj21 = { variant: "primary", size: "sm", text: null, onPress: null };
+        const obj21 = { variant: "secondary", size: "sm", text: null, onPress: null };
         const intl = tmp2(tmp3[32]).intl;
         obj21.text = intl.string(onClose(tmp3[33]).hDvmYP);
         obj21.onPress = refetch;

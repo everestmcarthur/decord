@@ -10,7 +10,6 @@ import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1176 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import user from "user" /* 1379 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import _modDef2978 from "module_2978" /* 2978 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
@@ -59,77 +58,65 @@ function AgeCheckLoadingBanner() {
   obj2.children = intl.string(stateFromStores ? t.PU8nMu : t["nhhy/R"]);
   return closure_1_12(native.HelpMessage, obj2);
 }
-function ManualReviewBanner() {
-  const obj = { messageType: native.HelpMessageTypes.ERROR, button: null, children: null };
-  const obj2 = { variant: "secondary", size: "sm", text: null, onPress: null };
-  const intl = util.intl;
-  obj2.text = intl.string(util.t.NkTGsC);
-  obj2.onPress = handleManualReviewClick;
-  obj.button = closure_1_12(components_Button_Button.Button, obj2);
-  const intl2 = util.intl;
-  obj.children = intl2.string(util.t.VTgFYh);
-  return closure_1_12(native.HelpMessage, obj);
-}
 function ManualOrAutomatedReviewBanner() {
-  const obj = { messageType: native.HelpMessageTypes.ERROR, button: null, children: null };
+  _require = closure_22();
+  const obj = { messageType: require("native").HelpMessageTypes.ERROR, button: null, children: null };
   const obj2 = { variant: "secondary", size: "sm", text: null, onPress: null };
-  const intl = util.intl;
-  obj2.text = intl.string(util.t.IcA9iD);
+  const intl = require("util").intl;
+  obj2.text = intl.string(require("util").t.IcA9iD);
   obj2.onPress = handleRetryClick;
-  obj.button = closure_1_12(components_Button_Button.Button, obj2);
-  const intl2 = util.intl;
+  obj.button = closure_12(require("components/Button/Button").Button, obj2);
+  const intl2 = require("util").intl;
   obj.children = intl2.format(_modDef2978.vPoM8y, {
     manualReviewHook(children, arg1) {
-      return closure_1_12(Text_Text.Text, { onPress, variant: "text-sm/normal", color: "text-link", children }, arg1);
+      return closure_2_12(Text_Text.Text, { onPress: handleManualReviewClick, style: link.link, variant: "text-sm/normal", color: "text-default", children }, arg1);
     }
   });
-  return closure_1_12(native.HelpMessage, obj);
+  return closure_12(require("native").HelpMessage, obj);
 }
-function AgeCheckFailureBanner(status) {
+function ManualReviewBanner() {
   const availableAgeVerificationMethods = useAvailableAgeVerificationMethods.useAvailableAgeVerificationMethods();
   const methods = availableAgeVerificationMethods.methods;
   if (availableAgeVerificationMethods.loading) {
-    let tmp6Result = closure_1_12(AgeCheckLoadingBanner, {});
+    let tmp5Result = closure_1_12(AgeCheckLoadingBanner, {});
   } else {
-    if (null == methods) {
-      let tmp3 = status.status === AgeCheckStatus.UNDERAGE_MANUAL_REVIEW;
-    } else {
-      tmp3 = 0 === methods.length;
-    }
-    if (tmp3) {
-      tmp6Result = closure_1_12(ManualReviewBanner, {});
-    } else {
-      let everyResult;
-      if (methods != null) {
-        everyResult = methods.every((method) => method.method === user.AgeAssuranceMethod.GOOGLE_WALLET);
-      }
-      if (everyResult) {
-        tmp6Result = tmp6(ManualOrAutomatedReviewBanner, {});
-      } else {
-        tmp6Result = tmp6(RetryBanner, {});
+    if (null != methods) {
+      if (0 !== methods.length) {
+        if (methods.every((method) => method.method === require("user").AgeAssuranceMethod.GOOGLE_WALLET)) {
+          tmp5Result = tmp5(ManualOrAutomatedReviewBanner, {});
+        } else {
+          tmp5Result = tmp5(RetryBanner, {});
+        }
       }
     }
+    const obj2 = { messageType: tmp(1176).HelpMessageTypes.ERROR, button: null, children: null };
+    const obj3 = { variant: "secondary", size: "sm", text: null, onPress: null };
+    const intl = tmp(1114).intl;
+    obj3.text = intl.string(tmp(1114).t.NkTGsC);
+    obj3.onPress = handleManualReviewClick;
+    obj2.button = closure_1_12(tmp(5056).Button, obj3);
+    const intl2 = tmp(1114).intl;
+    obj2.children = intl2.string(tmp(1114).t.VTgFYh);
+    tmp5Result = closure_1_12(tmp(1176).HelpMessage, obj2);
   }
-  return tmp6Result;
+  return tmp5Result;
 }
 function AutomatedUnderageAppealStatus() {
   const items = [SafetyHubStore];
-  const stateFromStores = initialize.useStateFromStores(items, () => SafetyHubStore.getAgeCheckStatus());
-  const items1 = [SafetyHubStore];
-  const stateFromStores1 = initialize.useStateFromStores(items1, () => SafetyHubStore.getIsManualReviewFallbackEnabled());
+  const stateFromStores = initialize.useStateFromStores(items, () => ageCheckStatus.getAgeCheckStatus());
   useShouldShowInitialGoogleWalletBanner;
   if (stateFromStores === AgeCheckStatus.NONE) {
-    let tmp22 = null;
-    if (tmp6) {
-      tmp22 = closure_1_12(ManualOrAutomatedReviewBanner, {});
+    let tmp20 = null;
+    if (tmp5) {
+      tmp20 = closure_1_12(ManualOrAutomatedReviewBanner, {});
     }
-    let tmp10 = tmp22;
-  } else if (stateFromStores === tmp7.SUCCESS) {
-    const obj3 = { messageType: tmp(1176).HelpMessageTypes.SUCCESS, children: null };
+    let tmp9 = tmp20;
+  } else if (stateFromStores === tmp6.SUCCESS) {
+    const obj2 = { messageType: tmp(1176).HelpMessageTypes.SUCCESS, children: null };
     const intl6 = tmp(1114).intl;
-    const obj4 = {
+    const obj3 = {
       loginHook(children) {
-          return closure_1_12(Text_Text.Text, {
+          return closure_1_12(require("Text/Text").Text, {
             variant: "text-sm/medium",
             color: "text-link",
             onPress() {
@@ -139,47 +126,41 @@ function AutomatedUnderageAppealStatus() {
           });
         }
     };
-    obj3.children = intl6.format(tmp(1114).t.hyh4ls, obj4);
-    tmp10 = closure_1_12(tmp(1176).HelpMessage, obj3);
-  } else if (stateFromStores === tmp7.VERIFIED) {
-    const obj5 = { messageType: tmp(1176).HelpMessageTypes.SUCCESS, button: null, children: null };
-    const obj6 = { variant: "secondary", size: "sm", text: null, onPress: null };
+    obj2.children = intl6.format(tmp(1114).t.hyh4ls, obj3);
+    tmp9 = closure_1_12(tmp(1176).HelpMessage, obj2);
+  } else if (stateFromStores === tmp6.VERIFIED) {
+    const obj4 = { messageType: tmp(1176).HelpMessageTypes.SUCCESS, button: null, children: null };
+    const obj5 = { variant: "secondary", size: "sm", text: null, onPress: null };
     const intl4 = tmp(1114).intl;
-    obj6.text = intl4.string(tmp(1114).t["2jvQ6K"]);
-    obj6.onPress = handleLogInClick;
-    obj5.button = closure_1_12(tmp(5056).Button, obj6);
+    obj5.text = intl4.string(tmp(1114).t["2jvQ6K"]);
+    obj5.onPress = handleLogInClick;
+    obj4.button = closure_1_12(tmp(5056).Button, obj5);
     const intl5 = tmp(1114).intl;
-    obj5.children = intl5.string(tmp(1114).t["2Qe65J"]);
-    tmp10 = closure_1_12(tmp(1176).HelpMessage, obj5);
-  } else if (stateFromStores === tmp7.VERIFIED_OTHER_VIOLATIONS_REMAIN) {
-    const obj7 = { messageType: tmp(1176).HelpMessageTypes.SUCCESS, children: null };
+    obj4.children = intl5.string(tmp(1114).t["2Qe65J"]);
+    tmp9 = closure_1_12(tmp(1176).HelpMessage, obj4);
+  } else if (stateFromStores === tmp6.VERIFIED_OTHER_VIOLATIONS_REMAIN) {
+    const obj6 = { messageType: tmp(1176).HelpMessageTypes.SUCCESS, children: null };
     const intl3 = tmp(1114).intl;
-    obj7.children = intl3.string(tmp(1114).t.Ie7p1Q);
-    tmp10 = closure_1_12(tmp(1176).HelpMessage, obj7);
-  } else if (stateFromStores === tmp7.ERROR) {
-    const obj8 = { messageType: tmp(1176).HelpMessageTypes.ERROR, children: null };
+    obj6.children = intl3.string(tmp(1114).t.Ie7p1Q);
+    tmp9 = closure_1_12(tmp(1176).HelpMessage, obj6);
+  } else if (stateFromStores === tmp6.ERROR) {
+    const obj7 = { messageType: tmp(1176).HelpMessageTypes.ERROR, children: null };
     const intl2 = tmp(1114).intl;
-    obj8.children = intl2.string(tmp(1114).t["4sILBU"]);
-    tmp10 = closure_1_12(tmp(1176).HelpMessage, obj8);
-  } else if (stateFromStores === tmp7.FAILURE) {
-    const obj9 = { messageType: tmp(1176).HelpMessageTypes.ERROR, children: null };
+    obj7.children = intl2.string(tmp(1114).t["4sILBU"]);
+    tmp9 = closure_1_12(tmp(1176).HelpMessage, obj7);
+  } else if (stateFromStores === tmp6.FAILURE) {
+    const obj8 = { messageType: tmp(1176).HelpMessageTypes.ERROR, children: null };
     const intl = tmp(1114).intl;
-    obj9.children = intl.string(tmp(1114).t["40R63o"]);
-    tmp10 = closure_1_12(tmp(1176).HelpMessage, obj9);
+    obj8.children = intl.string(tmp(1114).t["40R63o"]);
+    tmp9 = closure_1_12(tmp(1176).HelpMessage, obj8);
+  } else if (stateFromStores === tmp6.UNDERAGE) {
+    tmp9 = closure_1_12(RetryBanner, {});
+  } else if (stateFromStores === tmp6.UNDERAGE_MANUAL_REVIEW) {
+    tmp9 = closure_1_12(ManualReviewBanner, {});
   } else {
-    if (stateFromStores !== tmp7.UNDERAGE) {
-      if (stateFromStores !== tmp7.UNDERAGE_MANUAL_REVIEW) {
-        tmp10 = closure_1_12(AgeCheckLoadingBanner, {});
-      }
-    }
-    if (stateFromStores1) {
-      const obj10 = { status: stateFromStores };
-      let tmp11Result = tmp11(AgeCheckFailureBanner, obj10);
-    } else {
-      tmp11Result = tmp11(RetryBanner, {});
-    }
+    tmp9 = closure_1_12(AgeCheckLoadingBanner, {});
   }
-  return tmp10;
+  return tmp9;
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
@@ -189,10 +170,11 @@ const Constants = fn(1074);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 const createStyles = fn(4636);
-let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_12 }, loadingIndicator: { display: "flex", justifyContent: "center", alignItems: "center" }, body: null };
+let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_12 }, loadingIndicator: { display: "flex", justifyContent: "center", alignItems: "center" }, body: null, link: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_12 };
 obj2.body = { gap: nativeDefault.space.PX_8 };
-let closure_23 = createStyles.createStyles(obj2);
+obj2.link = { textDecorationLine: "underline" };
+let closure_22 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/safety_hub/native/SafetyHubPage.tsx");
 
@@ -200,7 +182,7 @@ export default function SafetyHubPage(visible) {
   visible = visible.visible;
   importDefault = undefined;
   let safetyHubFetchError;
-  const tmp = closure_23();
+  const tmp = closure_22();
   const tmp2 = importDefault;
   const tmp4 = require("useSafetyHubLoading")();
   const tmp5 = visible;

@@ -198,7 +198,7 @@ export default noop.memo((listRef) => {
   let callback2;
   let tmp = closure_13();
   const isFocused1 = listRef(children[14]).useIsFocused();
-  const obj2 = { withoutUserCards: "HermesInternal", guildId: "Array", showMultipleActivitiesPerChannel: "r", isFocused: isFocused1 };
+  const obj2 = { withoutUserCards: "HermesInternal", guildId: "Array", showMultipleActivitiesPerChannel: -1787559935, isFocused: isFocused1 };
   const tmp7 = _slicedToArray(isFocused1(children[15])(listRef.cards, obj2), 2);
   children = tmp7[0];
   _slicedToArray = tmp8;

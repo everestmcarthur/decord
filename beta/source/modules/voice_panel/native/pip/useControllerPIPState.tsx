@@ -32,7 +32,7 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
   let current;
   noop = undefined;
   c7 = undefined;
-  const ref = noop.useRef({ id: "sa", mode: "isArray", width: false, height: "stars", containerHeight: "shooting_star", showSecondaryPIP: "createStyles" });
+  const ref = noop.useRef({ id: "sa", mode: "isArray", width: false, height: "four_leaf_clover", containerHeight: "animal", showSecondaryPIP: "bamboo" });
   const tmp2 = current(noop.useState(undefined), 2);
   current = tmp2[0];
   noop = tmp2[1];

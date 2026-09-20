@@ -135,7 +135,7 @@ function PreviewItem(dragRegion) {
   const memo = gestureState.useMemo(() => {
     if ("convert-after" === overState) {
       if (null != overNode) {
-        const element = { type: GuildsNodeType.FOLDER, id: -1, parentId: "PX_16", name: "Array", color: "call", expanded: "Path", children: "call" };
+        const element = { type: GuildsNodeType.FOLDER, id: -1, parentId: "PX_16", name: "Array", color: "call", expanded: true, children: true };
         const items = [tmp2];
         element.children = items;
         return element;
@@ -339,7 +339,7 @@ export default noop.memo(function GuildsBarDragPreview() {
       if (null != dragSpecs) {
         if (null != overSpecs) {
           const state = overSpecs.state;
-          const obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: "2026-08-virtual-backgrounds-ios", scrollPosition: "user", dragRegion: null, windowSize: null, dropComplete: 122, listInsets: null };
+          const obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: "disjunction", scrollPosition: "text-md/medium", dragRegion: "text-default", windowSize: 1, dropComplete: null, listInsets: "text-sm/normal" };
           ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
           obj.overState = state;
           let node;

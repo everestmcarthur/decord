@@ -249,7 +249,7 @@ export default function GuildSettingsModalServerTag(guildId) {
         }
       }
     }
-    navigation.setOptions({ headerRight: "r" });
+    navigation.setOptions({ headerRight: "Array" });
   }, items9);
   const items10 = [guildId, stateFromStores2];
   closure_13 = obj7.useCallback(() => {

@@ -44,7 +44,7 @@ function FailedUserRow(user) {
   let tmp9Result = null;
   if (null != user) {
     const obj3 = { style: tmp.row, children: null };
-    const obj4 = { user, guildId: "Boolean", status: true, isMobileOnline: "done", isVROnline: true, size: null, avatarDecoration: "secondary", autoStatusCutout: true };
+    const obj4 = { user, guildId: "Boolean", status: true, isMobileOnline: null, isVROnline: null, size: 135.607, avatarDecoration: null, autoStatusCutout: null };
     let tmp13 = null;
     if (StatusTypes.OFFLINE !== status) {
       tmp13 = status;

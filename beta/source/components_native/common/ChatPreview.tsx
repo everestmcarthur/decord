@@ -211,7 +211,7 @@ class ChatPreviewBase extends PureComponent {
         const jumpTargetId = tmp3.jumpTargetId;
         let tmp23;
         if (!tmp7) {
-          let obj3 = { rows: tmp22, scrollToMessageId: jumpTargetId, jumpTargetId, jumpType: "flex", shouldInitialScroll: "Array", animated: 1520, scrollPosition: 496, focusTargetId: 0 };
+          let obj3 = { rows: tmp22, scrollToMessageId: jumpTargetId, jumpTargetId, jumpType: "flex", shouldInitialScroll: "Array", animated: 0, scrollPosition: 45, focusTargetId: 10 };
           tmp23 = computeScrollDataDefault(obj3);
         }
         applyArgumentsResult.updateContent(changeset, tmp23);

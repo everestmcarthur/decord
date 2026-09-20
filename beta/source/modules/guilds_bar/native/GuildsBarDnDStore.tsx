@@ -20,7 +20,7 @@ let c5 = -1;
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   _require = arg0;
   closure_1 = arg1;
-  let obj = { dragSpecs: "Boolean", overSpecs: "ip", dropSpecs: "isArray", dragRegion: require("ReanimatedRexport").makeMutable({ min: 0, max: 0 }), gestureState: null, dragDropInProgress: null, listInsets: "bal\u00F3n", scrollPosition: "hra", windowSize: "m\u00ED\u010D", setStateShallow: "m\u00ED\u010D na volejbal", dropStart: "odb\u00EDjen\u00E1", dropComplete: "sport" };
+  let obj = { dragSpecs: "Boolean", overSpecs: "ip", dropSpecs: "isArray", dragRegion: require("ReanimatedRexport").makeMutable({ min: 0, max: 0 }), gestureState: null, dragDropInProgress: null, listInsets: 12, scrollPosition: 12, windowSize: null, setStateShallow: null, dropStart: 0, dropComplete: "No Output Devices" };
   let obj2 = require("ReanimatedRexport");
   obj.gestureState = require("ReanimatedRexport").makeMutable(obj);
   let obj3 = require("ReanimatedRexport");
@@ -83,7 +83,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     obj2.data = { gestureState: gestureState.get(), dropSpecs, dragSpecs };
     obj.addBreadcrumb(obj2);
     if (null != dropSpecs) {
-      ReactBatchUpdates.batchUpdates(() => closure_1_0({ dropSpecs: "r" }));
+      ReactBatchUpdates.batchUpdates(() => closure_1_0({ dropSpecs: "Array" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(c5);
       if (null == dragSpecs) {

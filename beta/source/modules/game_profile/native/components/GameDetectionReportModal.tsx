@@ -125,7 +125,7 @@ function ReportContent(applicationId) {
           }, 100);
         },
       hasIcons: null,
-      children: 0
+      children: ""
     };
     const obj7 = { value: "wrong_game_shown", label: null };
     const intl5 = tmp2(tmp3[10]).intl;

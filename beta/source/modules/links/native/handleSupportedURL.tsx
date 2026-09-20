@@ -194,7 +194,7 @@ export default function handleSupportedURL(payload) {
     }
     if (flag2) {
       payload(inviteCode[28]).startDiceRoll(channelId2, diceCount, diceSides);
-      const obj22 = { guildId: guildId2, channelId: channelId2, messageId: "Array", navigationSettings: 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001234533346031771 };
+      const obj22 = { guildId: guildId2, channelId: channelId2, messageId: "Array", navigationSettings: true };
       const obj23 = { safe, navigationReplace, waitForConnection, skipMessageFetch };
       obj22.navigationSettings = obj23;
       rootNavigationRef1(inviteCode[29])(obj22);

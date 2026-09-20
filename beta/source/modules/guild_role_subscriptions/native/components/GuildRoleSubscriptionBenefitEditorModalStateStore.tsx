@@ -10,7 +10,7 @@ import _mod4259 from "module_4259" /* 4259 */;
 import identity from "module_1242" /* 1242 */;
 import size from "module_2" /* 2 */;
 
-let closure_2 = Object.freeze({ name: "", emojiId: "paddingHorizontal", emojiName: "call", description: "d", refId: "Array" });
+let closure_2 = Object.freeze({ name: "", emojiId: "paddingHorizontal", emojiName: "accessible", description: "d", refId: "Array" });
 let closure_3 = identity.createWithEqualityFn((arg0) => {
   closure_0 = arg0;
   const obj = {};
