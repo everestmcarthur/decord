@@ -223,9 +223,10 @@ export async function webhook(diffs: Differs) {
 	const iconsWh = process.env.icons_webhook || defaultWebhook;
 	const codeWh = process.env.code_webhook || defaultWebhook;
 
-	const colorRole = process.env.color_role;
-	const iconsRole = process.env.icons_role;
-	const codeRole = process.env.code_role;
+	const defaultRole = process.env.role_id || "1481923706396872775";
+	const colorRole = process.env.color_role || defaultRole;
+	const iconsRole = process.env.icons_role || defaultRole;
+	const codeRole = process.env.code_role || defaultRole;
 
 	if (diffs.raw.size || diffs.semantic.size) {
 		if (!colorWh) {
