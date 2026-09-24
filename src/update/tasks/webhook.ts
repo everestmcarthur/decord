@@ -103,7 +103,7 @@ interface WebhookEmbed {
 	key: string;
 }
 
-async function sendWebhook(webhook: string, role: string, embeds: WebhookEmbed[], color?: number) {
+async function sendWebhook(webhook: string, role: string | undefined, embeds: WebhookEmbed[], color?: number) {
 	const body = new FormData();
 	const images = new Map<number, string>(),
 		diffs = new Map<number, string>();
@@ -132,10 +132,14 @@ async function sendWebhook(webhook: string, role: string, embeds: WebhookEmbed[]
 		JSON.stringify({
 			flags: MessageFlags.IsComponentsV2,
 			components: [
-				{
-					type: ComponentType.TextDisplay,
-					content: `<@&${role}>`,
-				},
+				...(role
+					? [
+							{
+								type: ComponentType.TextDisplay,
+								content: `<@&${role}>`,
+							},
+						]
+					: []),
 				...embeds.map(
 					({ title, body, image, footer }, i) =>
 						({
@@ -177,7 +181,7 @@ async function sendWebhook(webhook: string, role: string, embeds: WebhookEmbed[]
 						}) as APIMessageTopLevelComponent,
 				),
 			],
-			allowed_mentions: process.env.NODE_ENV === "test" ? { parse: [] } : { roles: [role] },
+			allowed_mentions: role && process.env.NODE_ENV !== "test" ? { roles: [role] } : { parse: [] },
 		} as RESTPostAPIWebhookWithTokenJSONBody),
 	);
 
@@ -199,26 +203,37 @@ async function sendWebhook(webhook: string, role: string, embeds: WebhookEmbed[]
 
 	try {
 		const message = JSON.parse(data);
+		const targetChannelId = process.env.channel_id || message.channel_id || "1532999192601952266";
+		const messageId = message.id;
+		if (!targetChannelId || !messageId) return;
 
-		const route = `${RouteBases.api}/${Routes.channelMessageCrosspost(message.channel_id, message.id)}`;
+		const route = `${RouteBases.api}/${Routes.channelMessageCrosspost(targetChannelId, messageId)}`;
 		await fetch(route, {
 			method: "POST",
 			headers: {
-				Authorization: discordToken,
+				Authorization: discordToken.startsWith("Bot ") ? discordToken : `Bot ${discordToken}`,
 			},
 		});
 	} catch {}
 }
 
 export async function webhook(diffs: Differs) {
+	const defaultWebhook = process.env.code_webhook || process.env.color_webhook || process.env.icons_webhook;
+	const colorWh = process.env.color_webhook || defaultWebhook;
+	const iconsWh = process.env.icons_webhook || defaultWebhook;
+	const codeWh = process.env.code_webhook || defaultWebhook;
+
+	const colorRole = process.env.color_role;
+	const iconsRole = process.env.icons_role;
+	const codeRole = process.env.code_role;
+
 	if (diffs.raw.size || diffs.semantic.size) {
-		const wh = process.env.color_webhook;
-		if (!wh) {
+		if (!colorWh) {
 			console.warn("Missing color_webhook, skipping color webhook");
 		} else {
 			await sendWebhook(
-				wh,
-				"1227327297795657850",
+				colorWh,
+				colorRole,
 				[
 					diffs.raw.size && {
 						title: "Raw colors",
@@ -241,13 +256,12 @@ export async function webhook(diffs: Differs) {
 	}
 
 	if (diffs.icons.size) {
-		const wh = process.env.icons_webhook;
-		if (!wh) {
+		if (!iconsWh) {
 			console.warn("Missing icons_webhook, skipping");
 		} else {
 			await sendWebhook(
-				wh,
-				"1227327765079003217",
+				iconsWh,
+				iconsRole,
 				[
 					{
 						title: "Icons",
@@ -263,14 +277,13 @@ export async function webhook(diffs: Differs) {
 	}
 
 	if (diffs.code.size) {
-		const wh = process.env.code_webhook;
-		if (!wh) {
+		if (!codeWh) {
 			console.warn("Missing code_webhook, skipping");
 			return;
 		}
 		await sendWebhook(
-			wh,
-			"1233861867059941387",
+			codeWh,
+			codeRole,
 			[
 				{
 					title: "Code",

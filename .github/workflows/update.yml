@@ -54,10 +54,13 @@ jobs:
             - name: Update
               env:
                   code_webhook: ${{ secrets.CODE_WEBHOOK }}
+                  color_webhook: ${{ secrets.COLOR_WEBHOOK }}
+                  icons_webhook: ${{ secrets.ICONS_WEBHOOK }}
                   bot_token: ${{ secrets.BOT_TOKEN }}
+                  channel_id: "1532999192601952266"
               working-directory: main
               run: |
-                  bun run src/update/index.ts ${{ github.event.inputs.force == 'true' && '--force' || '' }} ${{ github.event.inputs.quiet == 'true' && '--quiet' || '' }}
+                  bun run src/update/index.ts ${{ (inputs.force || github.event.inputs.force == 'true') && '--force' || '' }} ${{ (inputs.quiet || github.event.inputs.quiet == 'true') && '--quiet' || '' }}
 
             - name: Publish changes
               working-directory: data
