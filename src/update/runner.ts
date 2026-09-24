@@ -6,6 +6,7 @@ import { log, makeProgress, wrapPromise } from "./progress";
 import { isMock, isQuiet, oprevFiles, prevFiles } from "./shared";
 import codeTask from "./tasks/code";
 import colorsTask from "./tasks/colors";
+import iconsTask from "./tasks/icons";
 import decompile from "./tasks/decompile";
 import diffs from "./tasks/diffs";
 import { formatError, join } from "./utils";
@@ -84,20 +85,12 @@ export async function runTasks(channel: ChannelContext) {
 
 		const code = (await Bun.file(channel.codePath).text()).replace(/\r/g, "").split("\n");
 
-		await wrapPromise(codeTask(channel, progress, code), progress, "code");
+		await Promise.allSettled([
+			wrapPromise(codeTask(channel, progress, code), progress, "code"),
+			wrapPromise(colorsTask(channel, code), progress, "colors"),
+			wrapPromise(iconsTask(channel, progress, code), progress, "icons"),
+		]);
 		if (progress.someFailed("code")) throw new Error(`Failed at parser tasks!\n${progress.prettyErrors("code")}`);
-		// colors is non-critical, run in background
-		wrapPromise(colorsTask(channel, code), progress, "colors").catch((e) => {
-			progress.update("colors", false, String(e));
-			console.warn("Colors task failed (non-critical):", e);
-		});
-		// icons disabled for now (6h hang due to parseAssets), will be fixed separately
-		// wrapPromise(iconsTask(progress, code), progress, "icons").catch((e) => {
-		// 	progress.update("icons", false, String(e));
-		// 	console.warn("Icons task failed (non-critical):", e);
-		// });
-		progress.update("icons", null);
-		progress.update("diff_icons", null);
 
 		if (gzipDone) {
 			try {

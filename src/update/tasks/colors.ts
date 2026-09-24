@@ -1,4 +1,3 @@
-import { runInNewContext } from "node:vm";
 import Color, { type ColorInstance } from "color";
 import type { RawColors, SemanticColors } from "../../types";
 import type { ChannelContext } from "../channel";
@@ -9,56 +8,66 @@ function hex(color: ColorInstance) {
 	return (color.alpha() === 1 ? color.hex() : color.hexa()).toLowerCase();
 }
 
-// Support both old python decompiler (rX[rY] bug) and new Rust
-function fixHermesDecIndex(code: string) {
-	return code.replace(/r(\d+)\[(\d+)\] =/g, "r$1[r$2] =");
-}
-
-function findModuleSnippet(code: string[], importPath: string): string | null {
-	const text = code.join("\n");
-	const parts = text.split(/(?=\/\/ === Module \d+:)/);
-	for (const part of parts) if (part.includes(importPath)) return part;
-	return null;
+function findModuleSnippet(code: string[] | string, importPath: string): string | null {
+	const text = Array.isArray(code) ? code.join("\n") : code;
+	const targetIdx = text.indexOf(importPath);
+	if (targetIdx === -1) return null;
+	const startIdx = text.lastIndexOf("// === Module ", targetIdx);
+	const fromIdx = startIdx === -1 ? 0 : startIdx;
+	const nextIdx = text.indexOf("// === Module ", targetIdx + importPath.length);
+	const toIdx = nextIdx === -1 ? text.length : nextIdx;
+	return text.slice(fromIdx, toIdx);
 }
 
 function evalRawModule(snippet: string): any {
-	let code = snippet;
-	code = code.replace(/^import set from "set".*$/m, "const __importSet = { fileFinishedImporting: () => {} };");
-	code = code.replace(/^import.*$/gm, "");
-	code = code.replace(/set\.fileFinishedImporting/g, "__importSet.fileFinishedImporting");
-	code = code.replace(/export\s+const\s+_private/, "const _private");
-	code = code + "\n; _private;";
-	const result = runInNewContext(code, {});
-	if (!result || typeof result !== "object" || !result.RawColors || typeof result.RawColors !== "object") {
+	let code = snippet.replace(/^import.*$/gm, "");
+	const preamble = `
+		const size = { fileFinishedImporting: () => {} };
+		const set = size;
+	\n`;
+	code = preamble + code;
+	code = code.replace(/export\s+(?:const|var|let)\s+_private/, "const _private");
+	code = code + "\nreturn _private;";
+	try {
+		const fn = new Function(code);
+		const result = fn();
+		if (!result || typeof result !== "object" || !result.RawColors || typeof result.RawColors !== "object") {
+			throw new Error("RawColors object not found in evaluated module.");
+		}
+		return result;
+	} catch (e: any) {
 		throw new Error(
-			"VM evaluation failed: RawColors not found or invalid shape. The regex transforms may not match the current decompiler output.",
+			`VM evaluation failed for RawColors: ${e.message}. Decompiler output may have changed structure.`,
 		);
 	}
-	return result;
 }
 
 function evalSemanticModule(snippet: string): any {
-	let code = snippet;
-	code = code.replace(/^import set from "set".*$/m, "const __importSet = { fileFinishedImporting: () => {} };");
-	code = code.replace(
-		/^import items from "items".*$/m,
-		"const items = { _private: { Themes: new Proxy({}, { get(_, k){ return k.toString().toLowerCase(); } }) } };",
-	);
-	code = code.replace(/^import.*$/gm, "");
-	code = code.replace(/set\.fileFinishedImporting/g, "__importSet.fileFinishedImporting");
-	code = code.replace(/export\s+const\s+_private/, "const _private");
-	code = code + "\n; _private;";
-	code = fixHermesDecIndex(code);
-	const result = runInNewContext(code, {});
-	if (!result || typeof result !== "object" || !result.SemanticColors || typeof result.SemanticColors !== "object") {
+	let code = snippet.replace(/^import.*$/gm, "");
+	const preamble = `
+		const size = { fileFinishedImporting: () => {} };
+		const set = size;
+		const ThemeTypes = { _private: { Themes: new Proxy({}, { get(_, k) { return k.toString().toLowerCase(); } }) } };
+		const items = ThemeTypes;
+	\n`;
+	code = preamble + code;
+	code = code.replace(/export\s+(?:const|var|let)\s+_private/, "const _private");
+	code = code + "\nreturn _private;";
+	try {
+		const fn = new Function(code);
+		const result = fn();
+		if (!result || typeof result !== "object" || !result.SemanticColors || typeof result.SemanticColors !== "object") {
+			throw new Error("SemanticColors object not found in evaluated module.");
+		}
+		return result;
+	} catch (e: any) {
 		throw new Error(
-			"VM evaluation failed: SemanticColors not found or invalid shape. The regex transforms may not match the current decompiler output.",
+			`VM evaluation failed for SemanticColors: ${e.message}. Decompiler output may have changed structure.`,
 		);
 	}
-	return result;
 }
 
-export function getInternalRawColors(code: string[]) {
+export function getInternalRawColors(code: string[] | string) {
 	const snippet = findModuleSnippet(code, "raw-color-definitions.tsx");
 	if (!snippet) throw new Error("Cannot find raw-color-definitions module");
 	const mod = evalRawModule(snippet);
@@ -69,7 +78,7 @@ export function getInternalRawColors(code: string[]) {
 	return raw;
 }
 
-export function getInternalSemanticColors(code: string[], raw: Record<string, string>) {
+export function getInternalSemanticColors(code: string[] | string, raw: Record<string, string>) {
 	const snippet = findModuleSnippet(code, "native/generated-definitions");
 	if (!snippet) throw new Error("Cannot find semantic definitions module");
 	const mod = evalSemanticModule(snippet);
@@ -97,7 +106,7 @@ export function convertSimpleSemantic(semantic: SemanticColors) {
 	return simpleSemantic;
 }
 
-export default async function colors(channel: ChannelContext, code: string[]) {
+export default async function colors(channel: ChannelContext, code: string[] | string) {
 	const raw = getInternalRawColors(code);
 	await Bun.write(join(channel.canvasDir, "raw.json"), JSON.stringify(sortObj(raw), null, 4));
 
