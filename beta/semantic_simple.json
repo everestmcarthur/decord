@@ -2231,6 +2231,30 @@
         "onyx": "#4d505b",
         "dark": "#4d505b"
     },
+    "TOAST_CRITICAL_BACKGROUND": {
+        "ash": "#d22d3933",
+        "light": "#d22d391f",
+        "onyx": "#d22d391f",
+        "dark": "#d22d391f"
+    },
+    "TOAST_CRITICAL_BORDER": {
+        "ash": "#e24d50",
+        "light": "#e24d50",
+        "onyx": "#e24d50",
+        "dark": "#e24d50"
+    },
+    "TOAST_SUCCESS_BACKGROUND": {
+        "ash": "#00854533",
+        "light": "#0085451f",
+        "onyx": "#0085451f",
+        "dark": "#0085451f"
+    },
+    "TOAST_SUCCESS_BORDER": {
+        "ash": "#34995b",
+        "light": "#34995b",
+        "onyx": "#34995b",
+        "dark": "#34995b"
+    },
     "TOGGLEBUTTON_BACKGROUND_SELECTED": {
         "ash": "#5865f229",
         "light": "#5865f229",

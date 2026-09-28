@@ -11159,6 +11159,126 @@
             }
         ]
     },
+    "TOAST_CRITICAL_BACKGROUND": {
+        "ash": [
+            "#d22d3933",
+            {
+                "raw": "OPACITY_RED_20",
+                "opacity": 0.2
+            }
+        ],
+        "light": [
+            "#d22d391f",
+            {
+                "raw": "OPACITY_RED_12",
+                "opacity": 0.12156862745098039
+            }
+        ],
+        "onyx": [
+            "#d22d391f",
+            {
+                "raw": "OPACITY_RED_12",
+                "opacity": 0.12156862745098039
+            }
+        ],
+        "dark": [
+            "#d22d391f",
+            {
+                "raw": "OPACITY_RED_12",
+                "opacity": 0.12156862745098039
+            }
+        ]
+    },
+    "TOAST_CRITICAL_BORDER": {
+        "ash": [
+            "#e24d50",
+            {
+                "raw": "RED_NEW_42",
+                "opacity": 1
+            }
+        ],
+        "light": [
+            "#e24d50",
+            {
+                "raw": "RED_NEW_42",
+                "opacity": 1
+            }
+        ],
+        "onyx": [
+            "#e24d50",
+            {
+                "raw": "RED_NEW_42",
+                "opacity": 1
+            }
+        ],
+        "dark": [
+            "#e24d50",
+            {
+                "raw": "RED_NEW_42",
+                "opacity": 1
+            }
+        ]
+    },
+    "TOAST_SUCCESS_BACKGROUND": {
+        "ash": [
+            "#00854533",
+            {
+                "raw": "OPACITY_GREEN_20",
+                "opacity": 0.2
+            }
+        ],
+        "light": [
+            "#0085451f",
+            {
+                "raw": "OPACITY_GREEN_12",
+                "opacity": 0.12156862745098039
+            }
+        ],
+        "onyx": [
+            "#0085451f",
+            {
+                "raw": "OPACITY_GREEN_12",
+                "opacity": 0.12156862745098039
+            }
+        ],
+        "dark": [
+            "#0085451f",
+            {
+                "raw": "OPACITY_GREEN_12",
+                "opacity": 0.12156862745098039
+            }
+        ]
+    },
+    "TOAST_SUCCESS_BORDER": {
+        "ash": [
+            "#34995b",
+            {
+                "raw": "GREEN_NEW_42",
+                "opacity": 1
+            }
+        ],
+        "light": [
+            "#34995b",
+            {
+                "raw": "GREEN_NEW_42",
+                "opacity": 1
+            }
+        ],
+        "onyx": [
+            "#34995b",
+            {
+                "raw": "GREEN_NEW_42",
+                "opacity": 1
+            }
+        ],
+        "dark": [
+            "#34995b",
+            {
+                "raw": "GREEN_NEW_42",
+                "opacity": 1
+            }
+        ]
+    },
     "TOGGLEBUTTON_BACKGROUND_SELECTED": {
         "ash": [
             "#5865f229",
