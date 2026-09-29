@@ -451,9 +451,9 @@
     },
     "BACKGROUND_FEEDBACK_NOTIFICATION": {
         "ash": [
-            "#da3e44",
+            "#d22d39",
             {
-                "raw": "RED_NEW_46",
+                "raw": "RED_NEW_50",
                 "opacity": 1
             }
         ],
@@ -465,16 +465,16 @@
             }
         ],
         "onyx": [
-            "#da3e44",
+            "#d22d39",
             {
-                "raw": "RED_NEW_46",
+                "raw": "RED_NEW_50",
                 "opacity": 1
             }
         ],
         "dark": [
-            "#da3e44",
+            "#d22d39",
             {
-                "raw": "RED_NEW_46",
+                "raw": "RED_NEW_50",
                 "opacity": 1
             }
         ]
@@ -961,9 +961,9 @@
     },
     "BADGE_NOTIFICATION_BACKGROUND": {
         "ash": [
-            "#da3e44",
+            "#d22d39",
             {
-                "raw": "RED_NEW_46",
+                "raw": "RED_NEW_50",
                 "opacity": 1
             }
         ],
@@ -975,16 +975,16 @@
             }
         ],
         "onyx": [
-            "#da3e44",
+            "#d22d39",
             {
-                "raw": "RED_NEW_46",
+                "raw": "RED_NEW_50",
                 "opacity": 1
             }
         ],
         "dark": [
-            "#da3e44",
+            "#d22d39",
             {
-                "raw": "RED_NEW_46",
+                "raw": "RED_NEW_50",
                 "opacity": 1
             }
         ]
@@ -4951,9 +4951,9 @@
     },
     "ICON_FEEDBACK_NOTIFICATION": {
         "ash": [
-            "#da3e44",
+            "#d22d39",
             {
-                "raw": "RED_NEW_46",
+                "raw": "RED_NEW_50",
                 "opacity": 1
             }
         ],
@@ -4965,16 +4965,16 @@
             }
         ],
         "onyx": [
-            "#da3e44",
+            "#d22d39",
             {
-                "raw": "RED_NEW_46",
+                "raw": "RED_NEW_50",
                 "opacity": 1
             }
         ],
         "dark": [
-            "#da3e44",
+            "#d22d39",
             {
-                "raw": "RED_NEW_46",
+                "raw": "RED_NEW_50",
                 "opacity": 1
             }
         ]

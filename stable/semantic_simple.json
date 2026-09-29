@@ -90,10 +90,10 @@
         "dark": "#0074e314"
     },
     "BACKGROUND_FEEDBACK_NOTIFICATION": {
-        "ash": "#da3e44",
+        "ash": "#d22d39",
         "light": "#d22d39",
-        "onyx": "#da3e44",
-        "dark": "#da3e44"
+        "onyx": "#d22d39",
+        "dark": "#d22d39"
     },
     "BACKGROUND_FEEDBACK_POSITIVE": {
         "ash": "#00854514",
@@ -192,10 +192,10 @@
         "dark": "#97979f29"
     },
     "BADGE_NOTIFICATION_BACKGROUND": {
-        "ash": "#da3e44",
+        "ash": "#d22d39",
         "light": "#d22d39",
-        "onyx": "#da3e44",
-        "dark": "#da3e44"
+        "onyx": "#d22d39",
+        "dark": "#d22d39"
     },
     "BADGE_TEXT_BRAND": {
         "ash": "#ffffff",
@@ -990,10 +990,10 @@
         "dark": "#66a5f3"
     },
     "ICON_FEEDBACK_NOTIFICATION": {
-        "ash": "#da3e44",
+        "ash": "#d22d39",
         "light": "#d22d39",
-        "onyx": "#da3e44",
-        "dark": "#da3e44"
+        "onyx": "#d22d39",
+        "dark": "#d22d39"
     },
     "ICON_FEEDBACK_POSITIVE": {
         "ash": "#7ecb94",
