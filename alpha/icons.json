@@ -10476,16 +10476,6 @@
         "width": 250.66666666666666,
         "height": 167
     },
-    "nsfw_gate_lock": {
-        "file": "app/modules/age_gate/native/images/nsfw_gate_lock.png",
-        "hash": "acf69ce5e27634f2a502d3973927bbad",
-        "scales": [
-            2,
-            3
-        ],
-        "width": 86,
-        "height": 64
-    },
     "nsfw_gate_unavailable": {
         "file": "app/modules/age_gate/native/images/nsfw_gate_unavailable.png",
         "hash": "43e5ff0d9ea5f04fe209ebfd15e2d439",
