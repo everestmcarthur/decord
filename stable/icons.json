@@ -1298,6 +1298,16 @@
         "width": 24,
         "height": 24
     },
+    "ChannelListPlusIcon": {
+        "file": "app/design/components/Icon/native/redesign/generated/images/ChannelListPlusIcon.png",
+        "hash": "0110722316a0218f2757526a82d0fe2d",
+        "scales": [
+            2,
+            3
+        ],
+        "width": 24,
+        "height": 24
+    },
     "ChannelNotificationIcon": {
         "file": "app/design/components/Icon/native/redesign/generated/images/ChannelNotificationIcon.png",
         "hash": "4a26dcaa59eb2e8051daf1439ff56b26",
@@ -4040,6 +4050,15 @@
         "width": 24,
         "height": 24
     },
+    "hero-orbs": {
+        "file": "app/modules/virtual_currency/images/native/hero-orbs.png",
+        "hash": "83d6f52e41f68a6a0f493020b6be93e9",
+        "scales": [
+            1
+        ],
+        "width": 576,
+        "height": 324
+    },
     "hi": {
         "file": "discord_common/js/shared/images/flags/hi.png",
         "hash": "78cbfbf0381b8c7f5a192c4a46bd0b0e",
@@ -4724,6 +4743,16 @@
     "ic_emoji_recent_color_24px": {
         "file": "app/images/native/emoji/ic_emoji_recent_color_24px.png",
         "hash": "79fe2790d902aba7709041b8b44a4ced",
+        "scales": [
+            2,
+            3
+        ],
+        "width": 24,
+        "height": 24
+    },
+    "ic_emoji_zipper_24px": {
+        "file": "app/modules/guild_automod/native/images/ic_emoji_zipper_24px.png",
+        "hash": "7508dd06eca0e95324ea1e11c69f1b63",
         "scales": [
             2,
             3
@@ -8770,26 +8799,6 @@
         "width": 300,
         "height": 120
     },
-    "img_stream_failed_dark": {
-        "file": "app/images/native/application_streaming/img_stream_failed_dark.png",
-        "hash": "1116b1666a9928acf5e5ec15dec8e3d4",
-        "scales": [
-            2,
-            3
-        ],
-        "width": 274.5,
-        "height": 110
-    },
-    "img_stream_failed_darker": {
-        "file": "app/design/components/Illustration/native/redesign/generated/images/img_stream_failed_darker.png",
-        "hash": "b1d330bd5ccfa2833454c026755830a6",
-        "scales": [
-            2,
-            3
-        ],
-        "width": 238,
-        "height": 96
-    },
     "img_stream_full": {
         "file": "app/images/native/application_streaming/img_stream_full.png",
         "hash": "c73d40dd66a153a872cf68d5a6b8779e",
@@ -9525,6 +9534,16 @@
     "LinkIcon": {
         "file": "app/design/components/Icon/native/redesign/generated/images/LinkIcon.png",
         "hash": "1c7fa64f17165fe6aaad3178602df81d",
+        "scales": [
+            2,
+            3
+        ],
+        "width": 24,
+        "height": 24
+    },
+    "LinkPlusIcon": {
+        "file": "app/design/components/Icon/native/redesign/generated/images/LinkPlusIcon.png",
+        "hash": "7d0fcd84760d7c3a78fc59356502335c",
         "scales": [
             2,
             3
@@ -10974,6 +10993,16 @@
         ],
         "width": 56,
         "height": 65
+    },
+    "RemixIcon": {
+        "file": "app/design/components/Icon/native/redesign/generated/images/RemixIcon.png",
+        "hash": "5d10367ba9fc709d8c368aae16aadbae",
+        "scales": [
+            2,
+            3
+        ],
+        "width": 24,
+        "height": 24
     },
     "report": {
         "file": "app/modules/video_calls/native/images/report.png",
@@ -12478,6 +12507,16 @@
         ],
         "width": 24,
         "height": 24
+    },
+    "tiny-bronco-spot": {
+        "file": "app/modules/tiny_bronco/native/images/tiny-bronco-spot.png",
+        "hash": "f08317e805d614c5dd09a300df6ccaab",
+        "scales": [
+            2,
+            3
+        ],
+        "width": 198,
+        "height": 132
     },
     "top_perk_streaming_quality": {
         "file": "app/modules/guild_boosting/native/images/top_perk_streaming_quality.png",
