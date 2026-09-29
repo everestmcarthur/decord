@@ -4829,6 +4829,126 @@
             }
         ]
     },
+    "HEXAGON_CAMPAIGN_PROMO_GRADIENT_1": {
+        "ash": [
+            "#ff009d99",
+            {
+                "raw": "BG_GRADIENT_HEXAGON_PROMO_1",
+                "opacity": 0.6
+            }
+        ],
+        "light": [
+            "#ff009d99",
+            {
+                "raw": "BG_GRADIENT_HEXAGON_PROMO_1",
+                "opacity": 0.6
+            }
+        ],
+        "onyx": [
+            "#ff009d99",
+            {
+                "raw": "BG_GRADIENT_HEXAGON_PROMO_1",
+                "opacity": 0.6
+            }
+        ],
+        "dark": [
+            "#ff009d99",
+            {
+                "raw": "BG_GRADIENT_HEXAGON_PROMO_1",
+                "opacity": 0.6
+            }
+        ]
+    },
+    "HEXAGON_CAMPAIGN_PROMO_GRADIENT_2": {
+        "ash": [
+            "#912eff99",
+            {
+                "raw": "BG_GRADIENT_HEXAGON_PROMO_2",
+                "opacity": 0.6
+            }
+        ],
+        "light": [
+            "#912eff99",
+            {
+                "raw": "BG_GRADIENT_HEXAGON_PROMO_2",
+                "opacity": 0.6
+            }
+        ],
+        "onyx": [
+            "#912eff99",
+            {
+                "raw": "BG_GRADIENT_HEXAGON_PROMO_2",
+                "opacity": 0.6
+            }
+        ],
+        "dark": [
+            "#912eff99",
+            {
+                "raw": "BG_GRADIENT_HEXAGON_PROMO_2",
+                "opacity": 0.6
+            }
+        ]
+    },
+    "HEXAGON_CAMPAIGN_PROMO_GRADIENT_3": {
+        "ash": [
+            "#20083299",
+            {
+                "raw": "BG_GRADIENT_HEXAGON_PROMO_3",
+                "opacity": 0.6
+            }
+        ],
+        "light": [
+            "#20083299",
+            {
+                "raw": "BG_GRADIENT_HEXAGON_PROMO_3",
+                "opacity": 0.6
+            }
+        ],
+        "onyx": [
+            "#20083299",
+            {
+                "raw": "BG_GRADIENT_HEXAGON_PROMO_3",
+                "opacity": 0.6
+            }
+        ],
+        "dark": [
+            "#20083299",
+            {
+                "raw": "BG_GRADIENT_HEXAGON_PROMO_3",
+                "opacity": 0.6
+            }
+        ]
+    },
+    "HEXAGON_CAMPAIGN_PROMO_GRADIENT_SHADE": {
+        "ash": [
+            "#00000085",
+            {
+                "raw": "BLACK",
+                "opacity": 0.52
+            }
+        ],
+        "light": [
+            "#00000085",
+            {
+                "raw": "BLACK",
+                "opacity": 0.52
+            }
+        ],
+        "onyx": [
+            "#00000085",
+            {
+                "raw": "BLACK",
+                "opacity": 0.52
+            }
+        ],
+        "dark": [
+            "#00000085",
+            {
+                "raw": "BLACK",
+                "opacity": 0.52
+            }
+        ]
+    },
     "ICON_BRAND": {
         "ash": [
             "#94a8ff",

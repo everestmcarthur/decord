@@ -965,6 +965,30 @@
         "onyx": "#000000",
         "dark": "#121214"
     },
+    "HEXAGON_CAMPAIGN_PROMO_GRADIENT_1": {
+        "ash": "#ff009d99",
+        "light": "#ff009d99",
+        "onyx": "#ff009d99",
+        "dark": "#ff009d99"
+    },
+    "HEXAGON_CAMPAIGN_PROMO_GRADIENT_2": {
+        "ash": "#912eff99",
+        "light": "#912eff99",
+        "onyx": "#912eff99",
+        "dark": "#912eff99"
+    },
+    "HEXAGON_CAMPAIGN_PROMO_GRADIENT_3": {
+        "ash": "#20083299",
+        "light": "#20083299",
+        "onyx": "#20083299",
+        "dark": "#20083299"
+    },
+    "HEXAGON_CAMPAIGN_PROMO_GRADIENT_SHADE": {
+        "ash": "#00000085",
+        "light": "#00000085",
+        "onyx": "#00000085",
+        "dark": "#00000085"
+    },
     "ICON_BRAND": {
         "ash": "#94a8ff",
         "light": "#525fe0",
