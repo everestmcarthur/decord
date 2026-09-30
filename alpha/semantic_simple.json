@@ -660,16 +660,16 @@
         "dark": "#000000"
     },
     "CONTROL_OVERLAY_SECONDARY_BACKGROUND_ACTIVE": {
-        "ash": "#0000007a",
-        "light": "#0000007a",
-        "onyx": "#0000007a",
-        "dark": "#0000007a"
+        "ash": "#0000008f",
+        "light": "#0000008f",
+        "onyx": "#0000008f",
+        "dark": "#0000008f"
     },
     "CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT": {
-        "ash": "#00000085",
-        "light": "#00000085",
-        "onyx": "#00000085",
-        "dark": "#00000085"
+        "ash": "#0000008f",
+        "light": "#0000008f",
+        "onyx": "#0000008f",
+        "dark": "#0000008f"
     },
     "CONTROL_OVERLAY_SECONDARY_BORDER_DEFAULT": {
         "ash": "#97979f0a",

@@ -3301,61 +3301,61 @@
     },
     "CONTROL_OVERLAY_SECONDARY_BACKGROUND_ACTIVE": {
         "ash": [
-            "#0000007a",
+            "#0000008f",
             {
-                "raw": "OPACITY_BLACK_48",
-                "opacity": 0.47843137254901963
+                "raw": "OPACITY_BLACK_56",
+                "opacity": 0.5607843137254902
             }
         ],
         "light": [
-            "#0000007a",
+            "#0000008f",
             {
-                "raw": "OPACITY_BLACK_48",
-                "opacity": 0.47843137254901963
+                "raw": "OPACITY_BLACK_56",
+                "opacity": 0.5607843137254902
             }
         ],
         "onyx": [
-            "#0000007a",
+            "#0000008f",
             {
-                "raw": "OPACITY_BLACK_48",
-                "opacity": 0.47843137254901963
+                "raw": "OPACITY_BLACK_56",
+                "opacity": 0.5607843137254902
             }
         ],
         "dark": [
-            "#0000007a",
+            "#0000008f",
             {
-                "raw": "OPACITY_BLACK_48",
-                "opacity": 0.47843137254901963
+                "raw": "OPACITY_BLACK_56",
+                "opacity": 0.5607843137254902
             }
         ]
     },
     "CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT": {
         "ash": [
-            "#00000085",
+            "#0000008f",
             {
-                "raw": "OPACITY_BLACK_52",
-                "opacity": 0.5215686274509804
+                "raw": "OPACITY_BLACK_56",
+                "opacity": 0.5607843137254902
             }
         ],
         "light": [
-            "#00000085",
+            "#0000008f",
             {
-                "raw": "OPACITY_BLACK_52",
-                "opacity": 0.5215686274509804
+                "raw": "OPACITY_BLACK_56",
+                "opacity": 0.5607843137254902
             }
         ],
         "onyx": [
-            "#00000085",
+            "#0000008f",
             {
-                "raw": "OPACITY_BLACK_52",
-                "opacity": 0.5215686274509804
+                "raw": "OPACITY_BLACK_56",
+                "opacity": 0.5607843137254902
             }
         ],
         "dark": [
-            "#00000085",
+            "#0000008f",
             {
-                "raw": "OPACITY_BLACK_52",
-                "opacity": 0.5215686274509804
+                "raw": "OPACITY_BLACK_56",
+                "opacity": 0.5607843137254902
             }
         ]
     },
