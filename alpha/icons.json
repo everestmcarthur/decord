@@ -399,6 +399,16 @@
         "width": 24,
         "height": 24
     },
+    "ArrowsLeftRightIcon": {
+        "file": "app/design/components/Icon/native/redesign/generated/images/ArrowsLeftRightIcon.png",
+        "hash": "71edbf43dc7b4d94780b9aa2b20aeca2",
+        "scales": [
+            2,
+            3
+        ],
+        "width": 24,
+        "height": 24
+    },
     "ArrowSmallDownIcon": {
         "file": "app/design/components/Icon/native/redesign/generated/images/ArrowSmallDownIcon.png",
         "hash": "3b7bd4c82e3e8c361f5983d530550253",
@@ -2037,6 +2047,28 @@
         "width": 380,
         "height": 242
     },
+    "conjuring_activity_dark": {
+        "file": "app/modules/vibegrations/native/images/conjuring_activity_dark.png",
+        "hash": "147a8fcf8f2b95ff7d26fea87214d381",
+        "scales": [
+            1,
+            2,
+            3
+        ],
+        "width": 80,
+        "height": 80
+    },
+    "conjuring_activity_light": {
+        "file": "app/modules/vibegrations/native/images/conjuring_activity_light.png",
+        "hash": "d0ac2ff8bbd27dac2fa6efc885f4d1a1",
+        "scales": [
+            1,
+            2,
+            3
+        ],
+        "width": 80,
+        "height": 80
+    },
     "ConnectionAverageIcon": {
         "file": "app/design/components/Icon/native/redesign/generated/images/ConnectionAverageIcon.png",
         "hash": "296c2ec8ad1d8af66f5b6c763e93cbfa",
@@ -3114,6 +3146,16 @@
     "ExperimentalCommonIcon": {
         "file": "app/design/components/Icon/native/redesign/generated/images/ExperimentalCommonIcon.png",
         "hash": "eb549ee942b74daf232ce014560f92c6",
+        "scales": [
+            2,
+            3
+        ],
+        "width": 24,
+        "height": 24
+    },
+    "ExperimentalDirectSelectIcon": {
+        "file": "app/design/components/Icon/native/redesign/generated/images/ExperimentalDirectSelectIcon.png",
+        "hash": "ccc400a106e8185c58835ca1201624f3",
         "scales": [
             2,
             3
@@ -5740,17 +5782,6 @@
         "width": 24,
         "height": 24
     },
-    "ic_person_status": {
-        "file": "app/modules/stage_channels/native/images/ic_person_status.png",
-        "hash": "1264ef3550bb451574709cd13db33b41",
-        "scales": [
-            1,
-            2,
-            3
-        ],
-        "width": 24,
-        "height": 24
-    },
     "ic_person_waving": {
         "file": "app/images/native/icons/ic_person_waving.png",
         "hash": "abac82ff1ac426da4eac76f9342c367b",
@@ -6804,46 +6835,6 @@
         "width": 24,
         "height": 24
     },
-    "illustration-dark": {
-        "file": "app/modules/guild_settings/roles/native/images/illustration-dark.png",
-        "hash": "385febe027093418da10e0784f3891bd",
-        "scales": [
-            2,
-            3
-        ],
-        "width": 375,
-        "height": 280
-    },
-    "illustration-dark-large": {
-        "file": "app/modules/guild_settings/roles/native/images/illustration-dark-large.png",
-        "hash": "914423837bb34bd9385887217de01b93",
-        "scales": [
-            2,
-            3
-        ],
-        "width": 660,
-        "height": 240
-    },
-    "illustration-light": {
-        "file": "app/modules/guild_settings/roles/native/images/illustration-light.png",
-        "hash": "ba49963352a574e054e4ef5ad2b1d017",
-        "scales": [
-            2,
-            3
-        ],
-        "width": 375,
-        "height": 280
-    },
-    "illustration-light-large": {
-        "file": "app/modules/guild_settings/roles/native/images/illustration-light-large.png",
-        "hash": "19d4157d3d8c12964b276feef3728637",
-        "scales": [
-            2,
-            3
-        ],
-        "width": 660,
-        "height": 240
-    },
     "image_role_subscription_badge": {
         "file": "app/images/native/guild_role_subscription/image_role_subscription_badge.png",
         "hash": "1da146fe37f3351b22cf5b5c1c44b1cf",
@@ -7797,16 +7788,6 @@
         ],
         "width": 255,
         "height": 255
-    },
-    "img_empty_audience": {
-        "file": "app/modules/stage_channels/native/images/img_empty_audience.png",
-        "hash": "0ee8111d166277419681845b13003ed7",
-        "scales": [
-            1,
-            2
-        ],
-        "width": 89,
-        "height": 80
     },
     "img_forum_empty_state_dark": {
         "file": "app/modules/forums/native/images/img_forum_empty_state_dark.png",
