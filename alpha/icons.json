@@ -2047,8 +2047,8 @@
         "width": 380,
         "height": 242
     },
-    "conjuring_activity_dark": {
-        "file": "app/modules/vibegrations/native/images/conjuring_activity_dark.png",
+    "conjure_activity_dark": {
+        "file": "app/modules/conjure/presence/native/images/conjure_activity_dark.png",
         "hash": "147a8fcf8f2b95ff7d26fea87214d381",
         "scales": [
             1,
@@ -2058,8 +2058,8 @@
         "width": 80,
         "height": 80
     },
-    "conjuring_activity_light": {
-        "file": "app/modules/vibegrations/native/images/conjuring_activity_light.png",
+    "conjure_activity_light": {
+        "file": "app/modules/conjure/presence/native/images/conjure_activity_light.png",
         "hash": "d0ac2ff8bbd27dac2fa6efc885f4d1a1",
         "scales": [
             1,
