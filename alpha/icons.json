@@ -8721,28 +8721,6 @@
         "width": 762,
         "height": 525
     },
-    "img_remote_auth_loaded": {
-        "file": "app/images/native/img_remote_auth_loaded.png",
-        "hash": "0abf9581567470a391d7233deb0a4631",
-        "scales": [
-            1,
-            2,
-            3
-        ],
-        "width": 120,
-        "height": 100
-    },
-    "img_remote_auth_succeeded": {
-        "file": "app/images/native/img_remote_auth_succeeded.png",
-        "hash": "3ec4fb1a4fcdb736c4c87e7591f26daf",
-        "scales": [
-            1,
-            2,
-            3
-        ],
-        "width": 120,
-        "height": 108
-    },
     "img_roblox_dark": {
         "file": "app/images/platforms/img_roblox_dark.png",
         "hash": "8fce658b14b12e381e1ecc554a57f171",
