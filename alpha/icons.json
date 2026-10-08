@@ -13161,6 +13161,16 @@
         "width": 60,
         "height": 60
     },
+    "WidgetsIcon": {
+        "file": "app/design/components/Icon/native/redesign/generated/images/WidgetsIcon.png",
+        "hash": "07694532fe5b5d77fc59f6774ff08cb4",
+        "scales": [
+            2,
+            3
+        ],
+        "width": 24,
+        "height": 24
+    },
     "WindowLaunchIcon": {
         "file": "app/design/components/Icon/native/redesign/generated/images/WindowLaunchIcon.png",
         "hash": "6fc18e0c40f0ce37259a8a45cc634c66",
@@ -13262,33 +13272,6 @@
         ],
         "width": 84,
         "height": 66
-    },
-    "wumpus-bookmark": {
-        "file": "app/modules/saved_messages/wumpus-bookmark.png",
-        "hash": "ee27927c992063817a4891d6fea39469",
-        "scales": [
-            1
-        ],
-        "width": 297,
-        "height": 238
-    },
-    "wumpus-calendar-plus": {
-        "file": "app/modules/scheduled_messages/wumpus-calendar-plus.png",
-        "hash": "0ad2bf31ea242663dc2fd22966e4c43e",
-        "scales": [
-            1
-        ],
-        "width": 297,
-        "height": 238
-    },
-    "wumpus-clock": {
-        "file": "app/modules/saved_messages/wumpus-clock.png",
-        "hash": "2a38db2647d78740ca056c705d4301a7",
-        "scales": [
-            1
-        ],
-        "width": 297,
-        "height": 238
     },
     "wumpus-link": {
         "file": "app/images/native/wumpus/wumpus-link.png",
