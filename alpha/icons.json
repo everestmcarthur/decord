@@ -82,15 +82,6 @@
         "width": 16,
         "height": 16
     },
-    "amanda": {
-        "file": "app/modules/nuf_channels/native/images/amanda.png",
-        "hash": "b269fec2e8135bbc2e2d49cb182b352b",
-        "scales": [
-            1
-        ],
-        "width": 120,
-        "height": 120
-    },
     "amanda_1": {
         "file": "app/images/native/avatars/amanda_1.png",
         "hash": "483ce0fdce44b3dc03843ae26158121f",
@@ -2589,6 +2580,16 @@
         "width": 24,
         "height": 24
     },
+    "DoubleChevronSmallRightIcon": {
+        "file": "app/design/components/Icon/native/redesign/generated/images/DoubleChevronSmallRightIcon.png",
+        "hash": "75fbb724131df976287046b6c3b3dfce",
+        "scales": [
+            2,
+            3
+        ],
+        "width": 24,
+        "height": 24
+    },
     "DownloadIcon": {
         "file": "app/design/components/Icon/native/redesign/generated/images/DownloadIcon.png",
         "hash": "69ad990cd3c9b3023cf6437375e2fe6f",
@@ -3837,17 +3838,6 @@
         ],
         "width": 24,
         "height": 24
-    },
-    "graggle": {
-        "file": "app/modules/contact_sync/native/images/graggle.png",
-        "hash": "343480e621e13dced5261af60d8976f8",
-        "scales": [
-            1,
-            2,
-            3
-        ],
-        "width": 103,
-        "height": 113
     },
     "graggle_2": {
         "file": "app/images/native/avatars/graggle_2.png",
@@ -9718,15 +9708,6 @@
         "width": 60,
         "height": 60
     },
-    "mallow": {
-        "file": "app/modules/nuf_channels/native/images/mallow.png",
-        "hash": "94bb0fdcfba6a856a1567cdd4f281049",
-        "scales": [
-            1
-        ],
-        "width": 120,
-        "height": 120
-    },
     "mallow_1": {
         "file": "app/images/native/avatars/mallow_1.png",
         "hash": "332a7ab2f8939700ebbadbbe2c81234f",
@@ -10942,16 +10923,6 @@
         "width": 119,
         "height": 83
     },
-    "redesign_notification_illustration": {
-        "file": "app/modules/nuf/native/components/notification/redesign_notification_illustration.png",
-        "hash": "af47f5760d10cc835b5537c36ba26c7a",
-        "scales": [
-            2,
-            3
-        ],
-        "width": 150.5,
-        "height": 156
-    },
     "RedoIcon": {
         "file": "app/design/components/Icon/native/redesign/generated/images/RedoIcon.png",
         "hash": "3ba857c31c01ecf1567374bfd4da8171",
@@ -11840,42 +11811,6 @@
         ],
         "width": 20,
         "height": 20
-    },
-    "star_blue": {
-        "file": "app/modules/nuf_channels/native/images/star_blue.png",
-        "hash": "da7dcc5777ff296b64b9eaee0cd191e4",
-        "scales": [
-            1
-        ],
-        "width": 26,
-        "height": 51
-    },
-    "star_green": {
-        "file": "app/modules/nuf_channels/native/images/star_green.png",
-        "hash": "0874b569caae69893f5d6cd4e4046089",
-        "scales": [
-            1
-        ],
-        "width": 38,
-        "height": 76
-    },
-    "star_pink": {
-        "file": "app/modules/nuf_channels/native/images/star_pink.png",
-        "hash": "a22d4ac6a3cb3a331ce2730f706e3d95",
-        "scales": [
-            1
-        ],
-        "width": 40,
-        "height": 77
-    },
-    "star_purple": {
-        "file": "app/modules/nuf_channels/native/images/star_purple.png",
-        "hash": "997fd56d3361833ef80c750f0e0e48a8",
-        "scales": [
-            1
-        ],
-        "width": 23,
-        "height": 45
     },
     "StarIcon": {
         "file": "app/design/components/Icon/native/redesign/generated/images/StarIcon.png",
