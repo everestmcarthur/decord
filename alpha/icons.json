@@ -19,6 +19,16 @@
         "width": 24,
         "height": 24
     },
+    "ActivitiesIcon": {
+        "file": "app/design/components/Icon/native/redesign/generated/images/ActivitiesIcon.png",
+        "hash": "04284dcfb33cab4ac93ceefb6696c6d5",
+        "scales": [
+            2,
+            3
+        ],
+        "width": 24,
+        "height": 24
+    },
     "add": {
         "file": "app/modules/video_calls/native/images/add.png",
         "hash": "db76c9ef21a10a502ae95ae16e345521",
@@ -1443,16 +1453,6 @@
     "ChatXIcon": {
         "file": "app/design/components/Icon/native/redesign/generated/images/ChatXIcon.png",
         "hash": "cde816791540f65e5c599ecf6c251745",
-        "scales": [
-            2,
-            3
-        ],
-        "width": 24,
-        "height": 24
-    },
-    "check": {
-        "file": "app/modules/age_gate/native/images/check.png",
-        "hash": "d591eaa154611b58ebc00af8c514af58",
         "scales": [
             2,
             3
@@ -2929,16 +2929,6 @@
         "width": 200,
         "height": 72
     },
-    "empty_dms_activities": {
-        "file": "app/images/native/empties/empty_dms_activities.png",
-        "hash": "813b26f9493222d83dc58dec090b98ea",
-        "scales": [
-            2,
-            3
-        ],
-        "width": 311,
-        "height": 175
-    },
     "empty_permission": {
         "file": "app/modules/media_keyboard/native/images/empty_permission.png",
         "hash": "bef971c8357e3a1bbe631b70aec03333",
@@ -3315,28 +3305,6 @@
         ],
         "width": 76,
         "height": 76
-    },
-    "family_center_empty": {
-        "file": "app/modules/parent_tools/images/family_center_empty.png",
-        "hash": "245663cd177e246da48f58dd5c39e32f",
-        "scales": [
-            1,
-            2,
-            3
-        ],
-        "width": 244,
-        "height": 82
-    },
-    "family_center_linking_banner_image": {
-        "file": "app/modules/parent_tools/images/family_center_linking_banner_image.png",
-        "hash": "486816aa941617e34b6723be8f7303c9",
-        "scales": [
-            1,
-            2,
-            3
-        ],
-        "width": 343,
-        "height": 149
     },
     "featured_page_footer_dark": {
         "file": "app/modules/collectibles/native/images/featured_page_footer_dark.png",
@@ -3999,17 +3967,6 @@
         ],
         "width": 203,
         "height": 120
-    },
-    "guilds-empty-illustration": {
-        "file": "app/modules/main_tabs_v2/native/tabs/guilds/empty_states/images/guilds-empty-illustration.png",
-        "hash": "c4e35cf59b65ee25c9dfc91c26e34f5e",
-        "scales": [
-            2,
-            3,
-            4
-        ],
-        "width": 193.5,
-        "height": 205.5
     },
     "HammerIcon": {
         "file": "app/design/components/Icon/native/redesign/generated/images/HammerIcon.png",
@@ -6264,17 +6221,6 @@
         "width": 24.5,
         "height": 24
     },
-    "ic_switch_accounts": {
-        "file": "app/images/native/icons/ic_switch_accounts.png",
-        "hash": "633af95b6b643ea3b8457ce65540e36c",
-        "scales": [
-            1,
-            2,
-            3
-        ],
-        "width": 24,
-        "height": 24
-    },
     "ic_sync_24px": {
         "file": "app/images/native/icons/ic_sync_24px.png",
         "hash": "f8d71a087b50ca9ab07431463764cd8d",
@@ -6470,16 +6416,6 @@
         ],
         "width": 12,
         "height": 12
-    },
-    "ic_video_disabled": {
-        "file": "app/images/native/icons/user_profile/ic_video_disabled.png",
-        "hash": "c67b491c21edfc140b968b3afa5e6528",
-        "scales": [
-            2,
-            3
-        ],
-        "width": 24,
-        "height": 24
     },
     "ic_video_disabled_dark": {
         "file": "app/images/native/icons/user_profile/ic_video_disabled_dark.png",
@@ -9328,17 +9264,6 @@
         ],
         "width": 192.33333333333334,
         "height": 416
-    },
-    "invite-wumpus-ticket": {
-        "file": "app/modules/create_guild/native/images/invite-wumpus-ticket.png",
-        "hash": "15df55e98006c5e50dacb86d466b47d8",
-        "scales": [
-            1,
-            2,
-            3
-        ],
-        "width": 161,
-        "height": 105
     },
     "it": {
         "file": "discord_common/js/shared/images/flags/it.png",
