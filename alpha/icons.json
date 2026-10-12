@@ -1929,6 +1929,16 @@
         "width": 24,
         "height": 24
     },
+    "CloudDownloadIcon": {
+        "file": "app/design/components/Icon/native/redesign/generated/images/CloudDownloadIcon.png",
+        "hash": "66946e5f24d9f7d485f69d93acc2bd06",
+        "scales": [
+            2,
+            3
+        ],
+        "width": 24,
+        "height": 24
+    },
     "CloudIcon": {
         "file": "app/design/components/Icon/native/redesign/generated/images/CloudIcon.png",
         "hash": "01cd25a11a733a16463d72c98cca83b7",
@@ -9485,6 +9495,16 @@
         "width": 24,
         "height": 24
     },
+    "ListNumberedIcon": {
+        "file": "app/design/components/Icon/native/redesign/generated/images/ListNumberedIcon.png",
+        "hash": "e605304dde4d78202fb1f94d6df2847d",
+        "scales": [
+            2,
+            3
+        ],
+        "width": 24,
+        "height": 24
+    },
     "ListViewIcon": {
         "file": "app/design/components/Icon/native/redesign/generated/images/ListViewIcon.png",
         "hash": "87455c29d9dd2f3e04ebd45e93b772ba",
@@ -11146,6 +11166,16 @@
         ],
         "width": 300,
         "height": 120
+    },
+    "SaveIcon": {
+        "file": "app/design/components/Icon/native/redesign/generated/images/SaveIcon.png",
+        "hash": "fd7a05931e4df085da6e8b62ffa48f48",
+        "scales": [
+            2,
+            3
+        ],
+        "width": 24,
+        "height": 24
     },
     "ScienceIcon": {
         "file": "app/design/components/Icon/native/redesign/generated/images/ScienceIcon.png",
