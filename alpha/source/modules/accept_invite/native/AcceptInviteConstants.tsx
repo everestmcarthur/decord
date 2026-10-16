@@ -1,9 +1,9 @@
-// Module ID: 7360
-// Function ID: 7361
+// Module ID: 7578
+// Function ID: 7579
 // Name: AcceptInviteConstants
 // Dependencies: [2]
 
-// Module 7360 (AcceptInviteConstants)
+// Module 7578 (AcceptInviteConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/accept_invite/native/AcceptInviteConstants.tsx");

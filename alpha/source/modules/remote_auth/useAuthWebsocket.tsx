@@ -1,18 +1,18 @@
-// Module ID: 16721
-// Function ID: 16722
+// Module ID: 17032
+// Function ID: 17033
 // Name: useAuthWebsocket
-// Dependencies: [5, 32, 19, 1085, 3, 558, 576, 16720, 569, 6646, 14270, 16722, 1121, 1295, 5930, 16724, 2]
+// Dependencies: [5, 32, 19, 1087, 3, 558, 576, 17031, 569, 6868, 14636, 17033, 1123, 1297, 6148, 17035, 2]
 
-// Module 16721 (useAuthWebsocket)
+// Module 17032 (useAuthWebsocket)
 import LoggerDefault from "Logger" /* 3 */;
 import BackoffDefault from "Backoff" /* 569 */;
-import useStableCallbackDefault from "useStableCallback" /* 6646 */;
-import typing from "typing" /* 16720 */;
-import RemoteAuthCryptoDefault from "RemoteAuthCrypto" /* 16722 */;
+import useStableCallbackDefault from "useStableCallback" /* 6868 */;
+import typing from "typing" /* 17031 */;
+import RemoteAuthCryptoDefault from "RemoteAuthCrypto" /* 17033 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
-import Constants from "Constants" /* 1085 */;
+import Constants from "Constants" /* 1087 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -48,7 +48,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAuthWebso
   let tmp8 = tmp6[1];
   react = tmp8;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    let obj3 = { step: tmp(16720).RemoteAuthStep.INITIALIZING };
+    let obj3 = { step: tmp(17031).RemoteAuthStep.INITIALIZING };
     cResult[0] = obj3;
     first1 = obj3;
   } else {
@@ -81,7 +81,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAuthWebso
         tmp2 = closure_1;
         if (tmp2) {
           tmp7 = closure_3;
-          tmp8 = closure_3(() => { /* body not rendered: F148602 */ });
+          tmp8 = closure_3(() => { /* body not rendered: F149972 */ });
         } else {
           tmp3 = closure_8;
           str = "document is not visible, will defer reconnection when document becomes visible.";
@@ -105,7 +105,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAuthWebso
         tmp2 = closure_1;
         if (tmp2) {
           tmp7 = closure_3;
-          tmp8 = closure_3(() => { /* body not rendered: F148602 */ });
+          tmp8 = closure_3(() => { /* body not rendered: F149972 */ });
         } else {
           tmp3 = closure_8;
           str = "document is not visible, will defer reconnection when document becomes visible.";
@@ -187,7 +187,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAuthWebso
         flag = false;
         tmp8 = closure_5(false);
         tmp9 = closure_3;
-        tmp10 = closure_3(() => { /* body not rendered: F148603 */ });
+        tmp10 = closure_3(() => { /* body not rendered: F149973 */ });
       }
       return;
     }
@@ -343,7 +343,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAuthWebso
                   heartbeat_interval = undefined;
                   c3 = 1;
                   c4 = 1;
-                  return { value: "Set", done: true };
+                  return { value: "test", done: true };
                 }
               } else if (1 === tmp4) {
                 if (arg0 === 1) {

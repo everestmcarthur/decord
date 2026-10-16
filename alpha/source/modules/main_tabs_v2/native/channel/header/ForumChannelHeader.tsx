@@ -1,22 +1,22 @@
-// Module ID: 13357
-// Function ID: 13358
+// Module ID: 13718
+// Function ID: 13719
 // Name: ForumChannelHeader
-// Dependencies: [19, 17, 9299, 21, 5092, 558, 576, 13358, 13339, 13359, 2]
+// Dependencies: [19, 17, 9535, 21, 5153, 558, 576, 13719, 13700, 13720, 2]
 
-// Module 13357 (ForumChannelHeader)
+// Module 13718 (ForumChannelHeader)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import react_native2 from "react-native" /* 9299 */;
-import useIsForumChannelSearchActive from "useIsForumChannelSearchActive" /* 13358 */;
-import GuildChannelHeaderDefault from "GuildChannelHeader" /* 13359 */;
+import react_native2 from "react-native" /* 9535 */;
+import useIsForumChannelSearchActive from "useIsForumChannelSearchActive" /* 13719 */;
+import GuildChannelHeaderDefault from "GuildChannelHeader" /* 13720 */;
 import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 5092 */;
+import createStyles from "createStyles" /* 5153 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 let tmp;
-const ForumChannelSearch = tmp(13339);
+const ForumChannelSearch = tmp(13700);
 const View = react_native.View;
 const MIN_HEADER_HEIGHT = react_native2.MIN_HEADER_HEIGHT;
 const jsx = Fragment.jsx;

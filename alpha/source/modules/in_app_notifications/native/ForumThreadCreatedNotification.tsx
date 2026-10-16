@@ -1,15 +1,15 @@
-// Module ID: 13130
-// Function ID: 13131
+// Module ID: 13487
+// Function ID: 13488
 // Name: ForumThreadCreatedNotification
-// Dependencies: [19, 13088, 21, 5421, 1126, 5627, 5103, 5934, 13105, 2000, 13124, 1200, 5088, 2]
+// Dependencies: [19, 13445, 21, 5483, 1128, 5845, 5164, 6152, 13462, 2002, 13481, 1202, 5149, 2]
 // Exports: default
 
-// Module 13130 (ForumThreadCreatedNotification)
+// Module 13487 (ForumThreadCreatedNotification)
 import Fragment from "Fragment" /* 21 */;
-import asyncRequire from "asyncRequire" /* 2000 */;
-import transitionToChannel from "transitionToChannel" /* 5103 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5934 */;
-import InAppNotificationConstants from "InAppNotificationConstants" /* 13088 */;
+import asyncRequire from "asyncRequire" /* 2002 */;
+import transitionToChannel from "transitionToChannel" /* 5164 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6152 */;
+import InAppNotificationConstants from "InAppNotificationConstants" /* 13445 */;
 import react from "react" /* 19 */;
 import size from "module_2" /* 2 */;
 
@@ -46,7 +46,7 @@ export default function ForumThreadCreatedNotification(notification) {
   const callback1 = guild.useCallback(() => {
     const obj = ModalActionCreatorsDefault;
     const obj2 = { channelId: notification.parentChannel.id };
-    return obj.pushLazy(asyncRequire(13105, dependencyMap.paths), obj2, "in-app-notification-settings-modal");
+    return obj.pushLazy(asyncRequire(13462, dependencyMap.paths), obj2, "in-app-notification-settings-modal");
   }, items2);
   const NotificationPressable = notification(tmp[10]).NotificationPressable;
   ({ size: notification(parentChannel[11]).AvatarSizes.NORMAL, user: threadCreator, guildId: thread.guild_id });

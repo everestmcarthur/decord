@@ -1,24 +1,24 @@
-// Module ID: 12463
-// Function ID: 12464
+// Module ID: 12818
+// Function ID: 12819
 // Name: ChatInputActionButtonGiftOrThread
-// Dependencies: [19, 17, 11960, 21, 5092, 11959, 11956, 1126, 12455, 12464, 558, 576, 4818, 587, 4827, 2]
+// Dependencies: [19, 17, 12251, 21, 5153, 12250, 12247, 1128, 12810, 12819, 558, 576, 4877, 587, 4886, 2]
 
-// Module 12463 (ChatInputActionButtonGiftOrThread)
+// Module 12818 (ChatInputActionButtonGiftOrThread)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 4818 */;
-import ChatInputActionButtonDefault from "ChatInputActionButton" /* 11956 */;
-import ChatInputActionButtonTransitionItemDefault from "ChatInputActionButtonTransitionItem" /* 11959 */;
-import ChatInputConstants from "ChatInputConstants" /* 11960 */;
+import useToken from "useToken" /* 4877 */;
+import ChatInputActionButtonDefault from "ChatInputActionButton" /* 12247 */;
+import ChatInputActionButtonTransitionItemDefault from "ChatInputActionButtonTransitionItem" /* 12250 */;
+import ChatInputConstants from "ChatInputConstants" /* 12251 */;
 import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 5092 */;
+import createStyles from "createStyles" /* 5153 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
 let tmp;
-const native = tmp(4827);
+const native = tmp(4886);
 function renderChatInputActionButtonGiftAndThread(arg0, styleButton, state, cleanup) {
   let accessible;
   let canStartThreads;
@@ -35,20 +35,20 @@ function renderChatInputActionButtonGiftAndThread(arg0, styleButton, state, clea
   if (shouldShowThread) {
     const obj2 = {
       accessible,
-      accessibilityLabel: intl.string(onPress(1126).t["4WNcpu"]),
+      accessibilityLabel: intl.string(onPress(1128).t["4WNcpu"]),
       disabled: !canStartThreads,
-      IconComponent: onPress(12455).ThreadPlusIcon,
+      IconComponent: onPress(12810).ThreadPlusIcon,
       onPress(arg0) {
           return onPress(arg0, ChatInputActionType.THREAD);
         },
       style: styleButton
     };
     const tmp2Result = ChatInputActionButtonDefault;
-    intl = onPress(1126).intl;
+    intl = onPress(1128).intl;
     tmpResult = tmp(tmp2Result, obj2);
   } else {
     const obj3 = { accessible, channel, onPress, style: styleButtonWrapper, styleButton };
-    tmpResult = tmp(tmp2(12464), obj3);
+    tmpResult = tmp(tmp2(12819), obj3);
   }
   return <tmp4 key={arg0} cleanup={arg3} state={arg2}>{tmpResult}</tmp4>;
 }

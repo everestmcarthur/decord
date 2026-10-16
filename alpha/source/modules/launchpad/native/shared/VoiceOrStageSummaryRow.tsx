@@ -1,17 +1,17 @@
-// Module ID: 18004
-// Function ID: 18005
+// Module ID: 18322
+// Function ID: 18323
 // Name: VoiceOrStageSummaryRow
-// Dependencies: [19, 17, 21, 5092, 587, 558, 576, 17415, 5088, 1200, 17410, 2]
+// Dependencies: [19, 17, 21, 5153, 587, 558, 576, 17723, 5149, 1202, 17718, 2]
 
-// Module 18004 (VoiceOrStageSummaryRow)
+// Module 18322 (VoiceOrStageSummaryRow)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1200 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import getLayoutStylesDefault from "getLayoutStyles" /* 17415 */;
+import native from "native" /* 1202 */;
+import Text_Text from "Text/Text" /* 5149 */;
+import getLayoutStylesDefault from "getLayoutStyles" /* 17723 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 5092 */;
+import createStyles from "createStyles" /* 5153 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -20,7 +20,7 @@ let dependencyMap, num2, num3, obj1, obj10, obj11, obj12, obj8, obj9, str, str2,
 let closure_4;
 let hasOwnProperty;
 let tmp;
-const AssetRegistryDefault = tmp(17410);
+const AssetRegistryDefault = tmp(17718);
 const View = react_native.View;
 ({ jsx: closure_4, jsxs: hasOwnProperty } = Fragment);
 let closure_6 = createStyles.createStyles((height) => {
@@ -324,11 +324,11 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fu
     obj4 = { style: items3, children: items4 };
     items3 = [, ];
     ({ badge: arr4[0], audienceBadge: arr4[1] } = tmp4);
-    let obj5 = { size: max(1200).Icon.Sizes.CUSTOM, style: { height: 14, width: 14 }, source: AssetRegistryDefault };
-    const Icon = max(1200).Icon;
+    let obj5 = { size: max(1202).Icon.Sizes.CUSTOM, style: { height: 14, width: 14 }, source: AssetRegistryDefault };
+    const Icon = max(1202).Icon;
     items4 = [tmp8(Icon, obj5), ];
     let obj6 = { variant: "text-sm/bold", style: { marginLeft: 4 }, children: audienceCount };
-    items4[1] = closure_4(max(5088).Text, obj6);
+    items4[1] = closure_4(max(5149).Text, obj6);
     tmp8Result = tmp8(tmp6, obj3);
   }
   items1[1] = tmp8Result;

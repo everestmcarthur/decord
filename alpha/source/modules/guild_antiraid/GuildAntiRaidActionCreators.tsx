@@ -1,20 +1,20 @@
-// Module ID: 12180
-// Function ID: 12181
+// Module ID: 12474
+// Function ID: 12475
 // Name: GuildAntiRaidActionCreators
-// Dependencies: [5, 2087, 8045, 1085, 1265, 5107, 8638, 4702, 1295, 12181, 2]
+// Dependencies: [5, 2090, 8267, 1087, 1267, 5168, 8863, 4761, 1297, 12475, 2]
 // Exports: handleReportRaid, handleResolveRaid, setGuildIncidentActions, setGuildRaidAlerts, trackReportRaidViewed
 
-// Module 12180 (GuildAntiRaidActionCreators)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import HTTPUtils from "HTTPUtils" /* 1295 */;
-import _modDef4702 from "module_4702" /* 4702 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5107 */;
-import GuildAntiRaidConstants from "GuildAntiRaidConstants" /* 8045 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8638 */;
-import getGuildSafetyAlertsChannelIdDefault from "getGuildSafetyAlertsChannelId" /* 12181 */;
+// Module 12474 (GuildAntiRaidActionCreators)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
+import HTTPUtils from "HTTPUtils" /* 1297 */;
+import _modDef4761 from "module_4761" /* 4761 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5168 */;
+import GuildAntiRaidConstants from "GuildAntiRaidConstants" /* 8267 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8863 */;
+import getGuildSafetyAlertsChannelIdDefault from "getGuildSafetyAlertsChannelId" /* 12475 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import GuildStore from "GuildStore" /* 2087 */;
-import Constants from "Constants" /* 1085 */;
+import GuildStore from "GuildStore" /* 2090 */;
+import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 
 let c4, guild, set;
@@ -116,7 +116,7 @@ obj = function _setGuildIncidentActions() {
     }
     let toISOStringResult = null;
     if (tmp4) {
-      const obj3 = _modDef4702();
+      const obj3 = _modDef4761();
       const addResult = obj3.add(closure_4, "hours");
       toISOStringResult = addResult.toISOString();
     }

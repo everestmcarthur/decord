@@ -1,14 +1,14 @@
-// Module ID: 8856
-// Function ID: 8857
+// Module ID: 9080
+// Function ID: 9081
 // Name: usePlayingGameActivities
-// Dependencies: [19, 502, 5108, 5759, 558, 576, 504, 8857, 2]
+// Dependencies: [19, 502, 5169, 5977, 558, 576, 504, 9081, 2]
 
-// Module 8856 (usePlayingGameActivities)
-import isPlayingGameActivityDefault from "isPlayingGameActivity" /* 8857 */;
+// Module 9080 (usePlayingGameActivities)
+import isPlayingGameActivityDefault from "isPlayingGameActivity" /* 9081 */;
 import react from "react" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import PresenceStore from "PresenceStore" /* 5108 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5759 */;
+import PresenceStore from "PresenceStore" /* 5169 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5977 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

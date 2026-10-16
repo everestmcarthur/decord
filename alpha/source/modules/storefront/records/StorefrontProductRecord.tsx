@@ -1,11 +1,11 @@
-// Module ID: 7285
-// Function ID: 7286
+// Module ID: 7503
+// Function ID: 7504
 // Name: StorefrontProductRecord
-// Dependencies: [7284, 6089, 2]
+// Dependencies: [7502, 6313, 2]
 
-// Module 7285 (StorefrontProductRecord)
-import CollectiblesStoreListingStylesRecord from "CollectiblesStoreListingStylesRecord" /* 7284 */;
-import SKURecord from "SKURecord" /* 6089 */;
+// Module 7503 (StorefrontProductRecord)
+import CollectiblesStoreListingStylesRecord from "CollectiblesStoreListingStylesRecord" /* 7502 */;
+import SKURecord from "SKURecord" /* 6313 */;
 import size from "module_2" /* 2 */;
 
 let sku_ids;

@@ -1,15 +1,15 @@
-// Module ID: 10657
-// Function ID: 10658
+// Module ID: 11000
+// Function ID: 11001
 // Name: ActivityFlagUtils
-// Dependencies: [1085, 2041, 510, 1403, 7427, 2]
+// Dependencies: [1087, 2044, 510, 1405, 7645, 2]
 // Exports: computeActivityFlags, isContextlessEmbeddedActivity
 
-// Module 10657 (ActivityFlagUtils)
+// Module 11000 (ActivityFlagUtils)
 import Storage2 from "Storage" /* 510 */;
-import FlagUtils from "FlagUtils" /* 1403 */;
-import UserSettings from "UserSettings" /* 2041 */;
-import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7427 */;
-import Constants from "Constants" /* 1085 */;
+import FlagUtils from "FlagUtils" /* 1405 */;
+import UserSettings from "UserSettings" /* 2044 */;
+import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7645 */;
+import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 
 let c3;
@@ -17,24 +17,25 @@ let closure_4;
 ({ ActivityFlags: c3, ActivityPartyPrivacy: closure_4 } = Constants);
 const result = size.fileFinishedImporting("modules/activities/utils/ActivityFlagUtils.tsx");
 
-export const computeActivityFlags = function computeActivityFlags(activity, flag, arg2, tmp13Result, privacy) {
+export const computeActivityFlags = function computeActivityFlags(secrets, hasFlagResult, arg2, result1, privacy) {
   let tmp12;
-  if (flag === undefined) {
+  let flag = hasFlagResult;
+  if (hasFlagResult === undefined) {
     flag = false;
   }
   let flag2 = arg2;
   if (arg2 === undefined) {
     flag2 = false;
   }
-  let flag3 = tmp13Result;
-  if (tmp13Result === undefined) {
+  let flag3 = result1;
+  if (result1 === undefined) {
     flag3 = false;
   }
   let PRIVATE = privacy;
   if (privacy === undefined) {
     PRIVATE = constants2.PRIVATE;
   }
-  const secrets = activity.secrets;
+  secrets = secrets.secrets;
   let num = 0;
   if (flag) {
     num = constants.INSTANCE | 0;

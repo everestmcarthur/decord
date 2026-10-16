@@ -1,16 +1,16 @@
-// Module ID: 11056
-// Function ID: 11057
+// Module ID: 11370
+// Function ID: 11371
 // Name: GoLiveAutoQualityExperiment
-// Dependencies: [1259, 5271, 5212, 1454, 558, 576, 504, 510, 7444, 2]
+// Dependencies: [1261, 5333, 5273, 1456, 558, 576, 504, 510, 7663, 2]
 // Exports: getGoLiveAutoQualityExperimentConfig, maybeMigrateToAutoQuality
 
-// Module 11056 (GoLiveAutoQualityExperiment)
+// Module 11370 (GoLiveAutoQualityExperiment)
 import Storage3 from "Storage" /* 510 */;
-import StreamSettingsConstants from "StreamSettingsConstants" /* 5212 */;
-import StreamActionCreators from "StreamActionCreators" /* 7444 */;
-import ApexExperimentStore from "ApexExperimentStore" /* 1259 */;
-import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 5271 */;
-import ApexExperiment from "apex/ApexExperiment" /* 1454 */;
+import StreamSettingsConstants from "StreamSettingsConstants" /* 5273 */;
+import StreamActionCreators from "StreamActionCreators" /* 7663 */;
+import ApexExperimentStore from "ApexExperimentStore" /* 1261 */;
+import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 5333 */;
+import ApexExperiment from "apex/ApexExperiment" /* 1456 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

@@ -1,26 +1,26 @@
-// Module ID: 13869
-// Function ID: 13870
+// Module ID: 14235
+// Function ID: 14236
 // Name: EmbeddedActivityInstanceEmbed
-// Dependencies: [2064, 5440, 502, 2065, 5108, 1390, 9610, 12359, 1126, 12360, 13858, 13870, 12361, 12362, 6853, 11625, 2]
+// Dependencies: [2067, 5502, 502, 2068, 5169, 1392, 9844, 12713, 1128, 12714, 14223, 14236, 12715, 12716, 6286, 11884, 2]
 // Exports: createActivityInstanceEmbed
 
-// Module 13869 (EmbeddedActivityInstanceEmbed)
-import intl10 from "intl" /* 1126 */;
-import ApplicationActionCreators from "ApplicationActionCreators" /* 6853 */;
-import CodedLinksConstants from "CodedLinksConstants" /* 9610 */;
-import getApplicationInstallURL from "getApplicationInstallURL" /* 11625 */;
-import ContentClassificationVisibility from "ContentClassificationVisibility" /* 12359 */;
-import CodedLinksTypes from "CodedLinksTypes" /* 12360 */;
-import getPlayInContext from "getPlayInContext" /* 12361 */;
-import nativeAppMessageEmbedUtil from "nativeAppMessageEmbedUtil" /* 12362 */;
-import useEmbeddedActivityParticipantAvatarUris from "useEmbeddedActivityParticipantAvatarUris" /* 13858 */;
-import EmbeddedApplicationInstanceUtils from "EmbeddedApplicationInstanceUtils" /* 13870 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
-import ApplicationStore from "ApplicationStore" /* 5440 */;
+// Module 14235 (EmbeddedActivityInstanceEmbed)
+import intl10 from "intl" /* 1128 */;
+import ApplicationActionCreators from "ApplicationActionCreators" /* 6286 */;
+import CodedLinksConstants from "CodedLinksConstants" /* 9844 */;
+import getApplicationInstallURL from "getApplicationInstallURL" /* 11884 */;
+import ContentClassificationVisibility from "ContentClassificationVisibility" /* 12713 */;
+import CodedLinksTypes from "CodedLinksTypes" /* 12714 */;
+import getPlayInContext from "getPlayInContext" /* 12715 */;
+import nativeAppMessageEmbedUtil from "nativeAppMessageEmbedUtil" /* 12716 */;
+import useEmbeddedActivityParticipantAvatarUris from "useEmbeddedActivityParticipantAvatarUris" /* 14223 */;
+import EmbeddedApplicationInstanceUtils from "EmbeddedApplicationInstanceUtils" /* 14236 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2067 */;
+import ApplicationStore from "ApplicationStore" /* 5502 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import PresenceStore from "PresenceStore" /* 5108 */;
-import UserStore from "UserStore" /* 1390 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import PresenceStore from "PresenceStore" /* 5169 */;
+import UserStore from "UserStore" /* 1392 */;
 import size from "module_2" /* 2 */;
 
 const CodedLinkExtendedType = CodedLinksConstants.CodedLinkExtendedType;
@@ -96,20 +96,20 @@ export const createActivityInstanceEmbed = function createActivityInstanceEmbed(
           EmbeddedApplicationInstanceUtils;
           if (null != found) {
             if (stringResult == null) {
-              const intl5 = tmp5(1126).intl;
-              stringResult = intl5.string(tmp5(1126).t.oQn0h4);
+              const intl5 = tmp5(1128).intl;
+              stringResult = intl5.string(tmp5(1128).t.oQn0h4);
             }
             const length = embeddedActivityParticipantAvatarUris.length;
-            const intl6 = tmp5(1126).intl;
+            const intl6 = tmp5(1128).intl;
             const _HermesInternal = HermesInternal;
-            combined = "" + length + " " + intl6.string(tmp5(1126).t.BMTj28);
+            combined = "" + length + " " + intl6.string(tmp5(1128).t.BMTj28);
             str2 = stringResult;
           } else {
             let stringResult1;
             const disabled = tmp17.disabled;
-            const intl4 = tmp5(1126).intl;
+            const intl4 = tmp5(1128).intl;
             const string = intl4.string;
-            const t = tmp5(1126).t;
+            const t = tmp5(1128).t;
             if (disabled) {
               stringResult1 = string(t.JBnc7N);
             } else {
@@ -131,11 +131,11 @@ export const createActivityInstanceEmbed = function createActivityInstanceEmbed(
             appIconSrc = tmp5Result9.getAppIconSrc(application.id, application.icon, application.bot);
           }
           if (null == instanceId) {
-            const intl8 = tmp5(1126).intl;
-            stringResult2 = intl8.string(tmp5(1126).t.RscU7I);
+            const intl8 = tmp5(1128).intl;
+            stringResult2 = intl8.string(tmp5(1128).t.RscU7I);
           } else {
-            const intl7 = tmp5(1126).intl;
-            stringResult2 = intl7.string(tmp5(1126).t.VJlc0S);
+            const intl7 = tmp5(1128).intl;
+            stringResult2 = intl7.string(tmp5(1128).t.VJlc0S);
           }
           const obj4 = { id: "play_in_channel", label: stringResult2, disabled: isCurrentlyInInstance };
           if (!isCurrentlyInInstance) {
@@ -152,7 +152,7 @@ export const createActivityInstanceEmbed = function createActivityInstanceEmbed(
             const application1 = tmp5Result10.fetchApplication(application.id);
           }
           const obj6 = { displayType: CodedLinksTypes.AppMessageEmbedDisplayType.DISPLAY, appId: application.id, messageId: message.id, title: intl9.string(intl10.t.pkq6Vq), header: str2, info: null, tagline: null, staticBannerSrc: null, iconSrc: appIconSrc, embedUrl: getActivityLaunchURL(obj7), bannerRatio: "bot", actions: items, extendedType: CodedLinkExtendedType.APP_MESSAGE_EMBED, gradientColors: getAppGradientColors(appIconSrc), backgroundColor: 0, borderColor: 0, headerColor: 0, headerText: null, type: null };
-          intl9 = tmp5(1126).intl;
+          intl9 = tmp5(1128).intl;
           if (str2 == null) {
             str2 = "";
           }
@@ -168,15 +168,15 @@ export const createActivityInstanceEmbed = function createActivityInstanceEmbed(
           const id2 = activityInstance.id;
           const id3 = message.id;
           if (contentClassificationVisibility === ContentClassificationVisibility.ContentClassificationVisibility.BLOCK_UNDERAGE) {
-            const intl2 = tmp5(1126).intl;
-            stringResult3 = intl2.string(tmp5(1126).t.LPOzxB);
+            const intl2 = tmp5(1128).intl;
+            stringResult3 = intl2.string(tmp5(1128).t.LPOzxB);
           } else {
-            const intl = tmp5(1126).intl;
-            stringResult3 = intl.string(tmp5(1126).t.NIZyKq);
+            const intl = tmp5(1128).intl;
+            stringResult3 = intl.string(tmp5(1128).t.NIZyKq);
           }
           const obj10 = { applicationId: id, instanceId: id2, participantAvatarUris: [], participantsDescription: null, appMessageEmbedModel: obj11 };
           obj11 = { displayType: CodedLinksTypes.AppMessageEmbedDisplayType.BLOCKED, appId: id, messageId: id3, title: null, header: intl3.string(intl10.t.bZBN64), info: stringResult3, tagline: null, iconSrc: null, staticBannerSrc: null, bannerRatio: "bot", actions: [], embedUrl: null, extendedType: CodedLinkExtendedType.APP_MESSAGE_EMBED, gradientColors: [], backgroundColor: 0, borderColor: 0, headerColor: 0, headerText: null, type: null };
-          intl3 = tmp5(1126).intl;
+          intl3 = tmp5(1128).intl;
           return obj10;
         }
       }

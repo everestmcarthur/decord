@@ -1,33 +1,33 @@
-// Module ID: 7444
-// Function ID: 7445
+// Module ID: 7663
+// Function ID: 7664
 // Name: StreamActionCreators
-// Dependencies: [5, 5111, 7445, 7446, 5897, 502, 2065, 2087, 2116, 5113, 1085, 5898, 584, 5900, 38, 5414, 7447, 5106, 7481, 1295, 1102, 5938, 1273, 5270, 5889, 7015, 7017, 2]
+// Dependencies: [5, 5172, 7664, 7665, 6115, 502, 2068, 2090, 2119, 5174, 1087, 6116, 584, 6118, 38, 5476, 7666, 5167, 7700, 1297, 1104, 6156, 1275, 5332, 6107, 7236, 7238, 2]
 // Exports: changeStreamRegion, closeStream, fetchStreamPreview, joinPrivateChannelAndWatchStream, notifyStreamStart, setLayout, setStreamPaused, startStream, stopOwnStream, stopStream, toggleSelfStreamHidden, updateStreamSettings, watchStreamAndTransitionToStream
 
-// Module 7444 (StreamActionCreators)
+// Module 7663 (StreamActionCreators)
 import _modDef38 from "module_38" /* 38 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import HTTPUtils from "HTTPUtils" /* 1295 */;
-import StreamQualityUtils from "StreamQualityUtils" /* 5270 */;
-import ChannelUtils from "ChannelUtils" /* 5414 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5889 */;
-import Constants2 from "Constants" /* 5898 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 5900 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 5938 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7015 */;
-import CallActionCreatorsDefault from "CallActionCreators" /* 7017 */;
-import transitionToStreamDefault from "transitionToStream" /* 7481 */;
+import HTTPUtils from "HTTPUtils" /* 1297 */;
+import StreamQualityUtils from "StreamQualityUtils" /* 5332 */;
+import ChannelUtils from "ChannelUtils" /* 5476 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6107 */;
+import Constants2 from "Constants" /* 6116 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6118 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6156 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7236 */;
+import CallActionCreatorsDefault from "CallActionCreators" /* 7238 */;
+import transitionToStreamDefault from "transitionToStream" /* 7700 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import GameConsoleStore from "GameConsoleStore" /* 5111 */;
-import PopoutWindowStore from "PopoutWindowStore" /* 7445 */;
-import ApplicationStreamPreviewStore from "ApplicationStreamPreviewStore" /* 7446 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 5897 */;
+import GameConsoleStore from "GameConsoleStore" /* 5172 */;
+import PopoutWindowStore from "PopoutWindowStore" /* 7664 */;
+import ApplicationStreamPreviewStore from "ApplicationStreamPreviewStore" /* 7665 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6115 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import GuildStore from "GuildStore" /* 2087 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
-import VoiceStateStore from "VoiceStateStore" /* 5113 */;
-import Constants from "Constants" /* 1085 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import GuildStore from "GuildStore" /* 2090 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2119 */;
+import VoiceStateStore from "VoiceStateStore" /* 5174 */;
+import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -59,7 +59,7 @@ function watchStream(stream, forceMultiple) {
       obj3.dispatch(obj4);
       const tmp18 = importDefault;
       if (null != guildId) {
-        const tmp12Result = tmp12(7447);
+        const tmp12Result = tmp12(7666);
         const result = tmp12Result.maybeSetGuildRoomVideoOverlay(true, guildId, channelId);
       }
       let forceFocus;
@@ -78,7 +78,7 @@ function watchStream(stream, forceMultiple) {
         tmp22 = forceMultiple;
       }
       if (!tmp22) {
-        const tmp18Result = tmp18(5106);
+        const tmp18Result = tmp18(5167);
         const participant = tmp18Result.selectParticipant(stream.channelId, encodeStreamKeyResult);
       }
     } else {

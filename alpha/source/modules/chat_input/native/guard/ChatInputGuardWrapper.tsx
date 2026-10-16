@@ -1,35 +1,35 @@
-// Module ID: 12668
-// Function ID: 12669
+// Module ID: 13027
+// Function ID: 13028
 // Name: ChatInputGuardWrapper
-// Dependencies: [19, 4751, 2069, 2125, 2087, 5891, 4760, 1390, 11960, 1085, 6732, 21, 504, 6171, 4737, 4756, 12669, 12670, 10385, 10384, 12671, 12672, 5107, 7018, 5934, 6731, 2000, 6734, 6198, 10719, 12674, 12675, 12684, 12683, 5046, 1126, 12686, 12689, 12690, 12704, 12708, 12709, 12712, 12713, 8680, 12715, 2]
+// Dependencies: [19, 4810, 2072, 2128, 2090, 6109, 4819, 1392, 12251, 1087, 6954, 21, 504, 6393, 4796, 4815, 13028, 13029, 10633, 10632, 13030, 13031, 5168, 7239, 6152, 6953, 2002, 6956, 6420, 11061, 13033, 13034, 13043, 13042, 5108, 1128, 13045, 13048, 13049, 13063, 13067, 13068, 13071, 13072, 8905, 13074, 2]
 // Exports: default
 
-// Module 12668 (ChatInputGuardWrapper)
+// Module 13027 (ChatInputGuardWrapper)
 import Fragment from "Fragment" /* 21 */;
-import ChannelRecord from "ChannelRecord" /* 2069 */;
-import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4737 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5107 */;
-import MemberVerificationUtils from "MemberVerificationUtils" /* 6171 */;
-import PhoneConstants from "PhoneConstants" /* 6732 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7018 */;
-import GuildRoleConnectionsModalActionCreators from "GuildRoleConnectionsModalActionCreators" /* 10719 */;
-import ChatInputConstants from "ChatInputConstants" /* 11960 */;
-import navigateToThreadCreation from "navigateToThreadCreation" /* 12674 */;
+import ChannelRecord from "ChannelRecord" /* 2072 */;
+import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4796 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5168 */;
+import MemberVerificationUtils from "MemberVerificationUtils" /* 6393 */;
+import PhoneConstants from "PhoneConstants" /* 6954 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7239 */;
+import GuildRoleConnectionsModalActionCreators from "GuildRoleConnectionsModalActionCreators" /* 11061 */;
+import ChatInputConstants from "ChatInputConstants" /* 12251 */;
+import navigateToThreadCreation from "navigateToThreadCreation" /* 13033 */;
 import react from "react" /* 19 */;
-import LurkingStore from "LurkingStore" /* 4751 */;
-import GuildMemberStore from "GuildMemberStore" /* 2125 */;
-import GuildStore from "GuildStore" /* 2087 */;
-import GuildVerificationStore from "GuildVerificationStore" /* 5891 */;
-import RelationshipStore from "RelationshipStore" /* 4760 */;
-import UserStore from "UserStore" /* 1390 */;
-import Constants from "Constants" /* 1085 */;
+import LurkingStore from "LurkingStore" /* 4810 */;
+import GuildMemberStore from "GuildMemberStore" /* 2128 */;
+import GuildStore from "GuildStore" /* 2090 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 6109 */;
+import RelationshipStore from "RelationshipStore" /* 4819 */;
+import UserStore from "UserStore" /* 1392 */;
+import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 
 let closure_12;
 let map1;
 let tmp6;
 let unpackModuleId;
-const AutomodPermissionUtils = tmp6(4756);
+const AutomodPermissionUtils = tmp6(4815);
 const isThread = ChannelRecord.isThread;
 const TextAreaCta = ChatInputConstants.TextAreaCta;
 ({ AnalyticEvents: unpackModuleId, ChannelTypes: closure_12, VerificationCriteria: map1 } = Constants);
@@ -272,8 +272,8 @@ export default function ChatInputGuardWrapper(channel) {
                     } else {
                       obj22 = { type: "simple-action", message: formatResult };
                     }
-                    tmp21Result = tmp27(tmp7Result15, obj22);
-                    tmp23 = tmp27;
+                    tmp21Result = tmp28(tmp7Result15, obj22);
+                    tmp23 = tmp28;
                   }
                 }
                 if (isReadonly) {
@@ -304,7 +304,12 @@ export default function ChatInputGuardWrapper(channel) {
                     }
                   }
                 }
-                return children;
+                if (null == tmp10) {
+                  return children;
+                } else {
+                  tmp21Result = jsx(tmp7(tmp3[37]), { pendingGameProfileReturn: tmp10 });
+                  tmp23 = jsx;
+                }
               }
             }
           }
@@ -313,9 +318,9 @@ export default function ChatInputGuardWrapper(channel) {
         }
       }
     }
-    tmp21Result = jsx(tmp7(tmp3[38]), { channel, isReadonlyAnnouncementsChannel: tmp9 });
+    tmp21Result = jsx(tmp7(tmp3[38]), { channel, isReadonlyAnnouncementsChannel: tmp9, pendingGameProfileReturn: tmp10 });
     tmp23 = jsx;
   }
-  const obj27 = { screenIndex, channelId: channel.id, onJumpToPresent, children: tmp21Result };
-  return tmp23(tmp2(tmp3[33]).ChatInputGuardContainer, obj27);
+  const obj28 = { screenIndex, channelId: channel.id, onJumpToPresent, children: tmp21Result };
+  return tmp23(tmp2(tmp3[33]).ChatInputGuardContainer, obj28);
 };

@@ -1,13 +1,13 @@
-// Module ID: 18097
-// Function ID: 18098
+// Module ID: 18415
+// Function ID: 18416
 // Name: FeedbackConfig
-// Dependencies: [5110, 9651, 6909, 18098, 2]
+// Dependencies: [5171, 9885, 7130, 18416, 2]
 
-// Module 18097 (FeedbackConfig)
-import HotspotStore from "HotspotStore" /* 6909 */;
-import SearchResultsFeedbackExperiment from "SearchResultsFeedbackExperiment" /* 18098 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5110 */;
-import Constants from "Constants" /* 9651 */;
+// Module 18415 (FeedbackConfig)
+import HotspotStore from "HotspotStore" /* 7130 */;
+import SearchResultsFeedbackExperiment from "SearchResultsFeedbackExperiment" /* 18416 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5171 */;
+import Constants from "Constants" /* 9885 */;
 import size from "module_2" /* 2 */;
 
 let FeedbackGroup;
@@ -53,8 +53,8 @@ items1 = [
   }
 ];
 obj2[SEARCH_RESULTS] = obj8;
-obj2[FeedbackType.VIBEGRATIONS] = { cooldown: 3600000, chance: 1, group: FeedbackGroup.BUILDER, hotspot: HotspotStore.HotspotLocations.VIBEGRATIONS_FEEDBACK, storageKey: "lastVibegrationsFeedback", feedbackType: FeedbackType.VIBEGRATIONS };
-({ cooldown: 3600000, chance: 1, group: FeedbackGroup.BUILDER, hotspot: HotspotStore.HotspotLocations.VIBEGRATIONS_FEEDBACK, storageKey: "lastVibegrationsFeedback", feedbackType: FeedbackType.VIBEGRATIONS });
+obj2[FeedbackType.CONJURE] = { cooldown: 3600000, chance: 1, group: FeedbackGroup.BUILDER, hotspot: HotspotStore.HotspotLocations.CONJURE_FEEDBACK, storageKey: "lastConjureFeedback", feedbackType: FeedbackType.CONJURE };
+({ cooldown: 3600000, chance: 1, group: FeedbackGroup.BUILDER, hotspot: HotspotStore.HotspotLocations.CONJURE_FEEDBACK, storageKey: "lastConjureFeedback", feedbackType: FeedbackType.CONJURE });
 const result = size.fileFinishedImporting("modules/feedback/FeedbackConfig.tsx");
 
 export const FeedbackConfig = obj2;

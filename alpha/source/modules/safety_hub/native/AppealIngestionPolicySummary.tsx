@@ -1,19 +1,19 @@
-// Module ID: 12264
-// Function ID: 12265
+// Module ID: 12558
+// Function ID: 12559
 // Name: AppealIngestionPolicySummary
-// Dependencies: [19, 17, 21, 5092, 587, 558, 576, 7512, 4967, 1126, 5088, 2]
+// Dependencies: [19, 17, 21, 5153, 587, 558, 576, 7731, 5026, 1128, 5149, 2]
 
-// Module 12264 (AppealIngestionPolicySummary)
+// Module 12558 (AppealIngestionPolicySummary)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import intl2 from "intl" /* 1126 */;
-import ColorUtils from "ColorUtils" /* 4967 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import SafetyHubUtils from "SafetyHubUtils" /* 7512 */;
+import intl2 from "intl" /* 1128 */;
+import ColorUtils from "ColorUtils" /* 5026 */;
+import Text_Text from "Text/Text" /* 5149 */;
+import SafetyHubUtils from "SafetyHubUtils" /* 7731 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 5092 */;
+import createStyles_mod from "createStyles" /* 5153 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -66,7 +66,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function AppealInge
   }
   ({ policy, sectionTitle } = tmp4);
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = tmp(1126).intl;
+    const intl = tmp(1128).intl;
     const stringResult = intl.string(intl2.t.xsdcxh);
     cResult[4] = stringResult;
     tmp10 = stringResult;
@@ -157,8 +157,8 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function AppealInge
   const tmp2Result = ColorUtils;
   const obj2 = { style: tmp.sectionTitle, variant: "text-sm/bold", children: intl.string(intl2.t.xsdcxh) };
   const hexWithOpacityResult = tmp2Result.hexWithOpacity(tmp.borderColor.color, 0.08);
-  const Text = tmp2(5088).Text;
-  intl = tmp2(1126).intl;
+  const Text = tmp2(5149).Text;
+  intl = tmp2(1128).intl;
   items = [_false(Text, obj2), ];
   const obj3 = { style: items1, children: _false(Text_Text.Text, { variant: "text-md/semibold", children: capitalizeTextResult }) };
   items1 = [tmp.userContainer, { borderColor: hexWithOpacityResult }];

@@ -1,14 +1,14 @@
-// Module ID: 11257
-// Function ID: 11258
+// Module ID: 10982
+// Function ID: 10983
 // Name: ConjurePreviewActionCreators
-// Dependencies: [10652, 11242, 6947, 584, 2]
+// Dependencies: [10900, 10933, 7168, 584, 2]
 // Exports: reloadConjureAppFrames, reloadConjureProjectFrames, setBuilderPreviewApplicationId, setBuilderPreviewLandscape, setBuilderPreviewMobile
 
-// Module 11257 (ConjurePreviewActionCreators)
+// Module 10982 (ConjurePreviewActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6947 */;
-import ConjurePlatformUtilsDefault from "ConjurePlatformUtils" /* 11242 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 10652 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 7168 */;
+import ConjurePlatformUtilsDefault from "ConjurePlatformUtils" /* 10933 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 10900 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/preview/ConjurePreviewActionCreators.tsx");
@@ -30,7 +30,7 @@ export const reloadConjureProjectFrames = function reloadConjureProjectFrames(ar
       if (prop == null) {
         prop = null;
       }
-      const tmp2Result = tmp2(11242);
+      const tmp2Result = tmp2(10933);
       tmp2Result.reloadAppFrames(prop);
     }
   }

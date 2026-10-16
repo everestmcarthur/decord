@@ -1,19 +1,19 @@
-// Module ID: 11604
-// Function ID: 11605
+// Module ID: 11863
+// Function ID: 11864
 // Name: home/EmptyState
-// Dependencies: [19, 17, 21, 5092, 587, 558, 576, 11529, 10623, 1126, 5088, 2]
+// Dependencies: [19, 17, 21, 5153, 587, 558, 576, 11788, 10871, 1128, 5149, 2]
 
-// Module 11604 (home/EmptyState)
+// Module 11863 (home/EmptyState)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import intl2 from "intl" /* 1126 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 10623 */;
-import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 11529 */;
+import intl2 from "intl" /* 1128 */;
+import Text_Text from "Text/Text" /* 5149 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 10871 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 11788 */;
 import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 5092 */;
+import createStyles from "createStyles" /* 5153 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -35,7 +35,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmptyState
   const logAppLauncherEmptyStateView = obj2.useLogAppLauncherEmptyStateView(AppLauncherTypes.AppLauncherEmptyStateType.HOME_EMPTY);
   ({ container, textContainer } = tmp4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = tmp(1126).intl;
+    const intl = tmp(1128).intl;
     const stringResult = intl.string(intl2.t["V7+xhH"]);
     cResult[0] = stringResult;
     first = stringResult;

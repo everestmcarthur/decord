@@ -1,18 +1,18 @@
-// Module ID: 15721
-// Function ID: 15722
+// Module ID: 16087
+// Function ID: 16088
 // Name: QuestModalContentCloudBackground
-// Dependencies: [19, 17, 21, 5092, 558, 576, 5031, 4825, 5391, 15722, 15723, 6157, 2]
+// Dependencies: [19, 17, 21, 5153, 558, 576, 5090, 4884, 5453, 16088, 16089, 5091, 2]
 
-// Module 15721 (QuestModalContentCloudBackground)
+// Module 16087 (QuestModalContentCloudBackground)
 import react2 from "react" /* 576 */;
-import themes from "themes" /* 4825 */;
-import useTheme from "useTheme" /* 5031 */;
-import LinearGradientDefault from "LinearGradient" /* 5391 */;
-import FastImageDefault from "FastImage" /* 6157 */;
+import themes from "themes" /* 4884 */;
+import useTheme from "useTheme" /* 5090 */;
+import FastImageDefault from "FastImage" /* 5091 */;
+import LinearGradientDefault from "LinearGradient" /* 5453 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 5092 */;
+import createStyles from "createStyles" /* 5153 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -103,7 +103,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestModalCo
             if (cResult[11] === tmp14) {
               tmp15 = cResult[12];
             }
-            const tmp16Result = importDefault(tmp6 ? 15722 : 15723);
+            const tmp16Result = importDefault(tmp6 ? 16088 : 16089);
             if (cResult[13] === str2) {
               if (cResult[14] === tmp15) {
                 let tmp18;
@@ -200,7 +200,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestModalCo
     tmp9 = tmp7;
   }
   items1 = [tmp7Result, ];
-  const obj5 = { style: items2, source: importDefault(isThemeDarkResult ? 15722 : 15723), resizeMode: str2 };
+  const obj5 = { style: items2, source: importDefault(isThemeDarkResult ? 16088 : 16089), resizeMode: str2 };
   items2 = [isThemeDarkResult ? tmp.cloudsImage : tmp.cloudsImageLight, imgStyle];
   const tmp12 = FastImageDefault;
   items1[1] = tmp9(tmp12, obj5);

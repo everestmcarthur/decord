@@ -1,14 +1,14 @@
-// Module ID: 13799
-// Function ID: 13800
+// Module ID: 14164
+// Function ID: 14165
 // Name: useCanGiftProduct
-// Dependencies: [558, 8303, 7276, 7275, 4769, 1993, 4782, 2]
+// Dependencies: [558, 8529, 7494, 7493, 4828, 1995, 4841, 2]
 
-// Module 13799 (useCanGiftProduct)
-import PremiumUtilsDefault from "PremiumUtils" /* 4769 */;
-import BillingPlatformUtils from "BillingPlatformUtils" /* 4782 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7275 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7276 */;
-import useCurrentUser from "useCurrentUser" /* 8303 */;
+// Module 14164 (useCanGiftProduct)
+import PremiumUtilsDefault from "PremiumUtils" /* 4828 */;
+import BillingPlatformUtils from "BillingPlatformUtils" /* 4841 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7493 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7494 */;
+import useCurrentUser from "useCurrentUser" /* 8529 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -34,7 +34,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCanGift
     result = result2;
   }
   if (!result) {
-    result = type.type === tmp(1993).CollectiblesItemType.EXTERNAL_SKU;
+    result = type.type === tmp(1995).CollectiblesItemType.EXTERNAL_SKU;
   }
   if (!result) {
     let currency;
@@ -72,7 +72,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCanGift
     result = result2;
   }
   if (!result) {
-    result = type.type === tmp(1993).CollectiblesItemType.EXTERNAL_SKU;
+    result = type.type === tmp(1995).CollectiblesItemType.EXTERNAL_SKU;
   }
   if (!result) {
     let currency;

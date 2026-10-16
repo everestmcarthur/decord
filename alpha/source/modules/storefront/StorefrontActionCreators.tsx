@@ -1,20 +1,20 @@
-// Module ID: 8990
-// Function ID: 8991
+// Module ID: 9220
+// Function ID: 9221
 // Name: StorefrontActionCreators
-// Dependencies: [5, 4771, 6937, 8991, 8992, 8993, 1085, 1102, 584, 1295, 5636, 6936, 2]
+// Dependencies: [5, 4830, 7158, 9221, 9222, 9223, 1087, 1104, 584, 1297, 5854, 7157, 2]
 // Exports: claimStorefrontPromotion, fetchStorefrontPricesForApplicationId, fetchStorefrontPricesForSkuIds, maybeFetchStorefrontPromotions, setStorefrontPromotionIdOverride
 
-// Module 8990 (StorefrontActionCreators)
+// Module 9220 (StorefrontActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import Constants from "Constants" /* 1085 */;
-import DurationsDefault from "Durations" /* 1102 */;
-import HTTPUtils from "HTTPUtils" /* 1295 */;
+import Constants from "Constants" /* 1087 */;
+import DurationsDefault from "Durations" /* 1104 */;
+import HTTPUtils from "HTTPUtils" /* 1297 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import BillingInfoStore from "BillingInfoStore" /* 4771 */;
-import SKUPricesStore from "SKUPricesStore" /* 6937 */;
-import StorefrontPromotionOverrideStore from "StorefrontPromotionOverrideStore" /* 8991 */;
-import StorefrontPromotionStore from "StorefrontPromotionStore" /* 8992 */;
-import StorefrontPromotionRecord from "StorefrontPromotionRecord" /* 8993 */;
+import BillingInfoStore from "BillingInfoStore" /* 4830 */;
+import SKUPricesStore from "SKUPricesStore" /* 7158 */;
+import StorefrontPromotionOverrideStore from "StorefrontPromotionOverrideStore" /* 9221 */;
+import StorefrontPromotionStore from "StorefrontPromotionStore" /* 9222 */;
+import StorefrontPromotionRecord from "StorefrontPromotionRecord" /* 9223 */;
 import size from "module_2" /* 2 */;
 
 let apiError, c1, closure_4, promotions;
@@ -292,7 +292,7 @@ obj = function _fetchStorefrontPricesForApplicationId() {
       await closure_130_18(obj5);
       await "IconComponent";
       applicationId = applicationId.applicationId;
-      return "Set";
+      return "test";
     })();
     iter.next();
     return iter;
@@ -311,7 +311,7 @@ obj = function _fetchStorefrontPricesForSkuIds() {
       await closure_130_18(obj5);
       await "IconComponent";
       skuIds = skuIds.skuIds;
-      return "Set";
+      return "test";
     })();
     iter.next();
     return iter;

@@ -1,15 +1,15 @@
-// Module ID: 12643
-// Function ID: 12644
+// Module ID: 12998
+// Function ID: 12999
 // Name: MultiAccountStore
-// Dependencies: [12644, 12645, 1111, 12646, 504, 584, 2]
+// Dependencies: [12999, 13000, 1113, 13001, 504, 584, 2]
 
-// Module 12643 (MultiAccountStore)
+// Module 12998 (MultiAccountStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import TokenManagerAll from "TokenManager" /* 1111 */;
-import Constants from "Constants" /* 12644 */;
-import isStaffFromRawUserDefault from "isStaffFromRawUser" /* 12645 */;
-import DragAndDropUtils from "DragAndDropUtils" /* 12646 */;
+import TokenManagerAll from "TokenManager" /* 1113 */;
+import Constants from "Constants" /* 12999 */;
+import isStaffFromRawUserDefault from "isStaffFromRawUser" /* 13000 */;
+import DragAndDropUtils from "DragAndDropUtils" /* 13001 */;
 import size from "module_2" /* 2 */;
 
 let c4, c5, canUseMultiAccountMobile;

@@ -1,17 +1,17 @@
-// Module ID: 5635
-// Function ID: 5636
+// Module ID: 5853
+// Function ID: 5854
 // Name: V6OrEarlierAPIError
-// Dependencies: [2, 4792, 5636, 4791, 5637, 5638, 5641, 5642, 5643]
+// Dependencies: [2, 4851, 5854, 4850, 5855, 5856, 5859, 5860, 5861]
 
-// Module 5635 (V6OrEarlierAPIError)
-import BillingErrorDefault from "BillingError" /* 4791 */;
-import errors_V6OrEarlierAPIErrorDefault from "errors/V6OrEarlierAPIError" /* 4792 */;
-import APIErrorDefault from "APIError" /* 5636 */;
-import StripeErrorDefault from "StripeError" /* 5637 */;
-import NativeDispatchErrorDefault from "NativeDispatchError" /* 5638 */;
-import AppliedGuildBoostErrorDefault from "AppliedGuildBoostError" /* 5641 */;
-import ClientOutdatedAcceptGiftErrorDefault from "ClientOutdatedAcceptGiftError" /* 5642 */;
-import UploadVoiceDebugLogsError from "UploadVoiceDebugLogsError" /* 5643 */;
+// Module 5853 (V6OrEarlierAPIError)
+import BillingErrorDefault from "BillingError" /* 4850 */;
+import errors_V6OrEarlierAPIErrorDefault from "errors/V6OrEarlierAPIError" /* 4851 */;
+import APIErrorDefault from "APIError" /* 5854 */;
+import StripeErrorDefault from "StripeError" /* 5855 */;
+import NativeDispatchErrorDefault from "NativeDispatchError" /* 5856 */;
+import AppliedGuildBoostErrorDefault from "AppliedGuildBoostError" /* 5859 */;
+import ClientOutdatedAcceptGiftErrorDefault from "ClientOutdatedAcceptGiftError" /* 5860 */;
+import UploadVoiceDebugLogsError from "UploadVoiceDebugLogsError" /* 5861 */;
 import size from "module_2" /* 2 */;
 
 const UploadVoiceDebugLogsErrorDefault = UploadVoiceDebugLogsError;

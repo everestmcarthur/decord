@@ -1,18 +1,18 @@
-// Module ID: 18092
-// Function ID: 18093
+// Module ID: 18410
+// Function ID: 18411
 // Name: KvBackgroundManager
-// Dependencies: [32, 5, 12643, 7200, 7201, 1102, 3, 6808, 18093, 9702, 1382, 2091, 2092, 2108, 2]
+// Dependencies: [32, 5, 12998, 7418, 7419, 1104, 3, 7030, 18411, 9936, 1384, 2094, 2095, 2111, 2]
 
-// Module 18092 (KvBackgroundManager)
+// Module 18410 (KvBackgroundManager)
 import LoggerDefault from "Logger" /* 3 */;
-import DurationsDefault from "Durations" /* 1102 */;
-import reportMalformedStorageValuesDefault from "reportMalformedStorageValues" /* 18093 */;
+import DurationsDefault from "Durations" /* 1104 */;
+import reportMalformedStorageValuesDefault from "reportMalformedStorageValues" /* 18411 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import MultiAccountStore from "MultiAccountStore" /* 12643 */;
-import SaveableChannelsStore_mod from "SaveableChannelsStore" /* 7200 */;
-import FileSystemStore from "FileSystemStore" /* 7201 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6808 */;
+import MultiAccountStore from "MultiAccountStore" /* 12998 */;
+import SaveableChannelsStore_mod from "SaveableChannelsStore" /* 7418 */;
+import FileSystemStore from "FileSystemStore" /* 7419 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7030 */;
 import size from "module_2" /* 2 */;
 
 let _self, c0, c2, c4, c5, c6, c7, saveableChannels, set;

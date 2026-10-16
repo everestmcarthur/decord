@@ -1,9 +1,9 @@
-// Module ID: 15127
-// Function ID: 15128
+// Module ID: 15497
+// Function ID: 15498
 // Name: MediaPlaybackPanelConstants
 // Dependencies: [2]
 
-// Module 15127 (MediaPlaybackPanelConstants)
+// Module 15497 (MediaPlaybackPanelConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/media_panel/native/MediaPlaybackPanelConstants.tsx");

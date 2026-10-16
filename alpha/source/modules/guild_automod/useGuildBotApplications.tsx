@@ -1,13 +1,13 @@
-// Module ID: 18330
-// Function ID: 18331
+// Module ID: 18647
+// Function ID: 18648
 // Name: useGuildBotApplications
-// Dependencies: [19, 8639, 558, 576, 504, 8645, 18331, 1388, 2]
+// Dependencies: [19, 8864, 558, 576, 504, 8870, 18648, 1388, 2]
 
-// Module 18330 (useGuildBotApplications)
+// Module 18647 (useGuildBotApplications)
 import GlobalUtils from "GlobalUtils" /* 1388 */;
-import GuildSettingsFetchActionCreators from "GuildSettingsFetchActionCreators" /* 8645 */;
+import GuildSettingsFetchActionCreators from "GuildSettingsFetchActionCreators" /* 8870 */;
 import react from "react" /* 19 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 8639 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 8864 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

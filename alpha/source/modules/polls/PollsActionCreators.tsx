@@ -1,25 +1,25 @@
-// Module ID: 11723
-// Function ID: 11724
+// Module ID: 11982
+// Function ID: 11983
 // Name: PollsActionCreators
-// Dependencies: [5, 4751, 7313, 502, 2065, 7244, 5891, 5432, 7908, 10489, 1085, 38, 5299, 1126, 6098, 6920, 11724, 11726, 5107, 12, 504, 584, 7901, 11735, 4969, 11729, 7179, 9265, 5635, 2]
+// Dependencies: [5, 4810, 7531, 502, 2068, 7462, 6109, 5494, 8128, 10737, 1087, 38, 5361, 1128, 6322, 7141, 11983, 11985, 5168, 12, 504, 584, 8121, 11994, 5028, 11988, 7397, 9501, 5853, 2]
 
-// Module 11723 (PollsActionCreators)
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5107 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5299 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6098 */;
-import JoinGuildRefusedError from "JoinGuildRefusedError" /* 6920 */;
-import DraftStore from "DraftStore" /* 7244 */;
-import PollInteractionUtilsAll from "PollInteractionUtils" /* 11724 */;
+// Module 11982 (PollsActionCreators)
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5168 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5361 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6322 */;
+import JoinGuildRefusedError from "JoinGuildRefusedError" /* 7141 */;
+import DraftStore from "DraftStore" /* 7462 */;
+import PollInteractionUtilsAll from "PollInteractionUtils" /* 11983 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import LurkingStore from "LurkingStore" /* 4751 */;
-import ReferencedMessageStore from "ReferencedMessageStore" /* 7313 */;
+import LurkingStore from "LurkingStore" /* 4810 */;
+import ReferencedMessageStore from "ReferencedMessageStore" /* 7531 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import GuildVerificationStore from "GuildVerificationStore" /* 5891 */;
-import MessageStore from "MessageStore" /* 5432 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 7908 */;
-import PollsInteractionStore from "PollsInteractionStore" /* 10489 */;
-import Constants from "Constants" /* 1085 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 6109 */;
+import MessageStore from "MessageStore" /* 5494 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 8128 */;
+import PollsInteractionStore from "PollsInteractionStore" /* 10737 */;
+import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 
 let answerIds, attachmentsToUpload, closure_3, duration, importAll, importDefault, layout_type, scheduledTimestamp, selectedAnswerIds, set;
@@ -74,8 +74,8 @@ function showLurkingAlert(guildId) {
   obj = {
     title,
     body,
-    confirmText: intl.string(guildId(1126).t["9VLmlZ"]),
-    cancelText: intl2.string(guildId(1126).t["2m+Sqk"]),
+    confirmText: intl.string(guildId(1128).t["9VLmlZ"]),
+    cancelText: intl2.string(guildId(1128).t["2m+Sqk"]),
     onConfirm() {
       obj = GuildActionCreatorsDefault;
       const obj2 = { source: constants.POLL_ALERT };
@@ -85,8 +85,8 @@ function showLurkingAlert(guildId) {
   };
   const show = AlertActionCreatorsDefault.show;
   AlertActionCreatorsDefault;
-  intl = guildId(1126).intl;
-  intl2 = guildId(1126).intl;
+  intl = guildId(1128).intl;
+  intl2 = guildId(1128).intl;
   show(obj);
 }
 function handleShowVotesForAnswer(messageId) {
@@ -100,15 +100,15 @@ function handleShowVotesForAnswer(messageId) {
   if (null != channel) {
     if (LurkingStore.isLurking(channel.guild_id)) {
       const guild_id = channel.guild_id;
-      const intl = guild_id(1126).intl;
-      const stringResult = intl.string(guild_id(1126).t["7LpysO"]);
-      const intl2 = guild_id(1126).intl;
-      const stringResult1 = intl2.string(guild_id(1126).t["5sHHoy"]);
+      const intl = guild_id(1128).intl;
+      const stringResult = intl.string(guild_id(1128).t["7LpysO"]);
+      const intl2 = guild_id(1128).intl;
+      const stringResult1 = intl2.string(guild_id(1128).t["5sHHoy"]);
       let obj2 = {
         title: stringResult,
         body: stringResult1,
-        confirmText: intl3.string(guild_id(1126).t["9VLmlZ"]),
-        cancelText: intl4.string(guild_id(1126).t["2m+Sqk"]),
+        confirmText: intl3.string(guild_id(1128).t["9VLmlZ"]),
+        cancelText: intl4.string(guild_id(1128).t["2m+Sqk"]),
         onConfirm() {
               obj = GuildActionCreatorsDefault;
               const obj2 = { source: constants.POLL_ALERT };
@@ -118,8 +118,8 @@ function handleShowVotesForAnswer(messageId) {
       };
       const show = AlertActionCreatorsDefault.show;
       AlertActionCreatorsDefault;
-      intl3 = guild_id(1126).intl;
-      intl4 = guild_id(1126).intl;
+      intl3 = guild_id(1128).intl;
+      intl4 = guild_id(1128).intl;
       show(obj2);
     } else {
       const message = MessageStore.getMessage(channelId, messageId);
@@ -239,7 +239,7 @@ let obj = function _optimisticallySetAnswers() {
       await "IconComponent";
       closure_2 = tmp;
       ({ channelId: c0, messageId: c1, answerIds: c2 } = channelId);
-      return "Set";
+      return "test";
     })();
     iter.next();
     return iter;
@@ -400,7 +400,7 @@ obj = function _handlePollSubmitVote() {
       await "IconComponent";
       answerIds = tmp5;
       ({ channelId: c0, messageId: c1 } = closure_0);
-      return "Set";
+      return "test";
     })();
     iter.next();
     return iter;
@@ -446,7 +446,7 @@ obj = function _handleClearPollVote() {
               channel = undefined;
               c3 = 1;
               c4 = 1;
-              return { value: "Set", done: true };
+              return { value: "test", done: true };
             }
           } else if (1 === c3) {
             if (arg0 === 1) {
@@ -617,7 +617,7 @@ obj = function _handlePollActionTapped() {
       }
       await "IconComponent";
       ({ channelId: c0, messageId: c1, type: c2 } = closure_0);
-      return "Set";
+      return "test";
     })();
     iter.next();
     return iter;
@@ -681,7 +681,7 @@ obj = function _createPoll() {
                 obj5 = undefined;
                 layout_type = 1;
                 c6 = 1;
-                return { value: "Set", done: true };
+                return { value: "test", done: true };
               }
             } else if (1 === layout_type) {
               if (arg0 === 1) {
@@ -847,7 +847,7 @@ obj = function _endPollEarly() {
       }
       await "IconComponent";
       ({ channelId: c0, messageId: c1 } = closure_0);
-      return "Set";
+      return "test";
     })();
     iter.next();
     return iter;

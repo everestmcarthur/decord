@@ -1,11 +1,11 @@
-// Module ID: 11379
-// Function ID: 11380
+// Module ID: 11639
+// Function ID: 11640
 // Name: getInlineFramePresentation
-// Dependencies: [10802, 2]
+// Dependencies: [10934, 2]
 // Exports: default
 
-// Module 11379 (getInlineFramePresentation)
-import FramesConstants from "FramesConstants" /* 10802 */;
+// Module 11639 (getInlineFramePresentation)
+import FramesConstants from "FramesConstants" /* 10934 */;
 import size from "module_2" /* 2 */;
 
 const FrameLayoutModes = FramesConstants.FrameLayoutModes;

@@ -1,22 +1,22 @@
-// Module ID: 12352
-// Function ID: 12353
+// Module ID: 12646
+// Function ID: 12647
 // Name: SoundmojiActionSheet
-// Dependencies: [19, 17, 21, 5092, 587, 1382, 558, 576, 5427, 6820, 12353, 5088, 1126, 6840, 2]
+// Dependencies: [19, 17, 21, 5153, 587, 1384, 558, 576, 5489, 7043, 12647, 5149, 1128, 7063, 2]
 
-// Module 12352 (SoundmojiActionSheet)
+// Module 12646 (SoundmojiActionSheet)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import intl2 from "intl" /* 1126 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import getSoundmojiASTFromString from "getSoundmojiASTFromString" /* 5427 */;
-import EmojiDefault from "Emoji" /* 6820 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6840 */;
-import getSoundboardEmojiUrlDefault from "getSoundboardEmojiUrl" /* 12353 */;
+import intl2 from "intl" /* 1128 */;
+import Text_Text from "Text/Text" /* 5149 */;
+import getSoundmojiASTFromString from "getSoundmojiASTFromString" /* 5489 */;
+import EmojiDefault from "Emoji" /* 7043 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7063 */;
+import getSoundboardEmojiUrlDefault from "getSoundboardEmojiUrl" /* 12647 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 5092 */;
-import PlatformUtils from "PlatformUtils" /* 1382 */;
+import createStyles_mod from "createStyles" /* 5153 */;
+import PlatformUtils from "PlatformUtils" /* 1384 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -81,8 +81,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function SoundmojiAct
             const _Symbol = Symbol;
             if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
               const obj4 = { variant: "text-sm/normal", children: intl.string(intl2.t.Tj5Nwi) };
-              const Text = tmp(5088).Text;
-              intl = tmp(1126).intl;
+              const Text = tmp(5149).Text;
+              intl = tmp(1128).intl;
               const tmp20 = hasOwnProperty(Text, obj4);
               cResult[10] = tmp20;
               tmp18 = tmp20;

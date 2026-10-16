@@ -1,19 +1,19 @@
-// Module ID: 8996
-// Function ID: 8997
+// Module ID: 9226
+// Function ID: 9227
 // Name: SocialLayerStorefrontEligibilityHooks
-// Dependencies: [19, 8997, 2019, 7321, 2087, 5108, 6933, 558, 576, 8460, 504, 8998, 2]
+// Dependencies: [19, 9227, 2021, 7539, 2090, 5169, 7154, 558, 576, 8686, 504, 9228, 2]
 // Exports: useIsCurrentUserPlayingSocialLayerStorefrontGames
 
-// Module 8996 (SocialLayerStorefrontEligibilityHooks)
+// Module 9226 (SocialLayerStorefrontEligibilityHooks)
 import react2 from "react" /* 576 */;
-import ContentInventoryTypes from "ContentInventoryTypes" /* 8460 */;
+import ContentInventoryTypes from "ContentInventoryTypes" /* 8686 */;
 import react from "react" /* 19 */;
-import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 8997 */;
-import RunningGameStore from "RunningGameStore" /* 2019 */;
-import UserProfileStore from "UserProfileStore" /* 7321 */;
-import GuildStore from "GuildStore" /* 2087 */;
-import PresenceStore from "PresenceStore" /* 5108 */;
-import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 6933 */;
+import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 9227 */;
+import RunningGameStore from "RunningGameStore" /* 2021 */;
+import UserProfileStore from "UserProfileStore" /* 7539 */;
+import GuildStore from "GuildStore" /* 2090 */;
+import PresenceStore from "PresenceStore" /* 5169 */;
+import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7154 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -255,7 +255,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useUsersPlay
   }
   const tmp2Result = tmp2(504);
   const stateFromStoresArray = tmp2Result.useStateFromStoresArray(first, tmp8, tmp9);
-  const tmp2Result2 = tmp2(8998);
+  const tmp2Result2 = tmp2(9228);
   const slayerStorefrontDevApplicationIdOverride = tmp2Result2.useSlayerStorefrontDevApplicationIdOverride();
   let tmp12 = stateFromStoresArray;
   if (null != slayerStorefrontDevApplicationIdOverride) {

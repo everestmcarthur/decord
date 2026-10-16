@@ -1,23 +1,23 @@
-// Module ID: 9316
-// Function ID: 9317
+// Module ID: 9552
+// Function ID: 9553
 // Name: SidebarActionCreators
-// Dependencies: [2069, 2065, 1085, 2072, 584, 6063, 7179, 9317, 5027, 9320, 1112, 2]
+// Dependencies: [2072, 2068, 1087, 2075, 584, 6281, 7397, 9553, 5086, 9556, 1114, 2]
 
-// Module 9316 (SidebarActionCreators)
+// Module 9552 (SidebarActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import Constants from "Constants" /* 1085 */;
-import router_utils from "router_utils" /* 1112 */;
-import ChannelRecord from "ChannelRecord" /* 2069 */;
-import ChannelConstants from "ChannelConstants" /* 2072 */;
-import SidebarActionTypes from "SidebarActionTypes" /* 6063 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7179 */;
-import MessageManagerDefault from "MessageManager" /* 9317 */;
-import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 9320 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
+import Constants from "Constants" /* 1087 */;
+import router_utils from "router_utils" /* 1114 */;
+import ChannelRecord from "ChannelRecord" /* 2072 */;
+import ChannelConstants from "ChannelConstants" /* 2075 */;
+import SidebarActionTypes from "SidebarActionTypes" /* 6281 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7397 */;
+import MessageManagerDefault from "MessageManager" /* 9553 */;
+import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 9556 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
 import size from "module_2" /* 2 */;
 
 let tmp3;
-const flow_Client = tmp3(5027);
+const flow_Client = tmp3(5086);
 let closure_3 = ChannelRecord.isChannelThreadsForcedOpenedInFullView;
 const Routes = Constants.Routes;
 const StaticChannelRoute = ChannelConstants.StaticChannelRoute;
@@ -144,9 +144,9 @@ let obj = {
       const messages = tmp3Result2.fetchMessages(obj4);
     }
   },
-  closeChannelSidebar(baseChannelId) {
+  closeChannelSidebar(handleFrameDeepLinkQueued) {
     const obj = DispatcherDefault;
-    const obj2 = { type: "SIDEBAR_CLOSE", baseChannelId };
+    const obj2 = { type: "SIDEBAR_CLOSE", baseChannelId: handleFrameDeepLinkQueued };
     obj.dispatch(obj2);
   },
   openGuildSidebar(arg0) {

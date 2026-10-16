@@ -1,28 +1,28 @@
-// Module ID: 13001
-// Function ID: 13002
+// Module ID: 13358
+// Function ID: 13359
 // Name: HubEmailConnectionModal
-// Dependencies: [19, 12992, 21, 5092, 6259, 6201, 13002, 1273, 13005, 13012, 13014, 13015, 13016, 13019, 558, 576, 6814, 1503, 13021, 6170, 1126, 6688, 2]
+// Dependencies: [19, 13349, 21, 5153, 6481, 6423, 13359, 1275, 13362, 13369, 13371, 13372, 13373, 13376, 558, 576, 7037, 1505, 13378, 6392, 1128, 6910, 2]
 
-// Module 13001 (HubEmailConnectionModal)
+// Module 13358 (HubEmailConnectionModal)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import intl2 from "intl" /* 1126 */;
-import useNavigation from "useNavigation" /* 1503 */;
-import useInitialValueDefault from "useInitialValue" /* 6170 */;
-import NavigatorHeader from "NavigatorHeader" /* 6201 */;
-import NavigatorConstants from "NavigatorConstants" /* 6259 */;
-import Navigator2 from "Navigator" /* 6688 */;
-import HubConstants from "HubConstants" /* 12992 */;
-import HubEmailConnectionStudentPromptDefault from "HubEmailConnectionStudentPrompt" /* 13002 */;
-import HubEmailConnectionContentDefault from "HubEmailConnectionContent" /* 13005 */;
-import HubEmailConnectionWaitlistDefault from "HubEmailConnectionWaitlist" /* 13012 */;
-import HubEmailConnectionSubmitSchoolDefault from "HubEmailConnectionSubmitSchool" /* 13014 */;
-import HubEmailConnectionGuildSelectDefault from "HubEmailConnectionGuildSelect" /* 13015 */;
-import HubEmailConnectionPinVerifyDefault from "HubEmailConnectionPinVerify" /* 13016 */;
-import HubEmailConnectionGuildSelectSearchDefault from "HubEmailConnectionGuildSelectSearch" /* 13019 */;
-import HubEmailConnectionModalActionCreatorsDefault from "HubEmailConnectionModalActionCreators" /* 13021 */;
+import intl2 from "intl" /* 1128 */;
+import useNavigation from "useNavigation" /* 1505 */;
+import useInitialValueDefault from "useInitialValue" /* 6392 */;
+import NavigatorHeader from "NavigatorHeader" /* 6423 */;
+import NavigatorConstants from "NavigatorConstants" /* 6481 */;
+import Navigator2 from "Navigator" /* 6910 */;
+import HubConstants from "HubConstants" /* 13349 */;
+import HubEmailConnectionStudentPromptDefault from "HubEmailConnectionStudentPrompt" /* 13359 */;
+import HubEmailConnectionContentDefault from "HubEmailConnectionContent" /* 13362 */;
+import HubEmailConnectionWaitlistDefault from "HubEmailConnectionWaitlist" /* 13369 */;
+import HubEmailConnectionSubmitSchoolDefault from "HubEmailConnectionSubmitSchool" /* 13371 */;
+import HubEmailConnectionGuildSelectDefault from "HubEmailConnectionGuildSelect" /* 13372 */;
+import HubEmailConnectionPinVerifyDefault from "HubEmailConnectionPinVerify" /* 13373 */;
+import HubEmailConnectionGuildSelectSearchDefault from "HubEmailConnectionGuildSelectSearch" /* 13376 */;
+import HubEmailConnectionModalActionCreatorsDefault from "HubEmailConnectionModalActionCreators" /* 13378 */;
 import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 5092 */;
+import createStyles from "createStyles" /* 5153 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -30,7 +30,7 @@ let navigation;
 
 let obj2;
 let tmp;
-const common_SafeAreaView = tmp(6814);
+const common_SafeAreaView = tmp(7037);
 function getScreens(pop, arg1) {
   let headerBackButton;
   let obj3;
@@ -69,7 +69,7 @@ function getScreens(pop, arg1) {
       return <tmp />;
     }
   };
-  obj2[HubEmailConnectionSteps.VERIFY_EMAIL] = { impressionName: tmp6(1273).ImpressionNames.HUB_EMAIL_SIGNUP, impressionProperties, fullscreen: true, headerLeft: headerBackButton, headerTitle, render };
+  obj2[HubEmailConnectionSteps.VERIFY_EMAIL] = { impressionName: tmp6(1275).ImpressionNames.HUB_EMAIL_SIGNUP, impressionProperties, fullscreen: true, headerLeft: headerBackButton, headerTitle, render };
   obj2[HubEmailConnectionSteps.EMAIL_WAITLIST] = {
     fullscreen: true,
     headerTitle() {
@@ -123,7 +123,7 @@ function getScreens(pop, arg1) {
       return <tmp />;
     }
   };
-  ({ impressionName: tmp6(1273).ImpressionNames.HUB_EMAIL_SIGNUP, impressionProperties, fullscreen: true, headerLeft: headerBackButton, headerTitle, render });
+  ({ impressionName: tmp6(1275).ImpressionNames.HUB_EMAIL_SIGNUP, impressionProperties, fullscreen: true, headerLeft: headerBackButton, headerTitle, render });
   return obj2;
 }
 const HubEmailConnectionSteps = HubConstants.HubEmailConnectionSteps;

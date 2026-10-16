@@ -1,15 +1,15 @@
-// Module ID: 15335
-// Function ID: 15336
+// Module ID: 15701
+// Function ID: 15702
 // Name: useAccountStandingStatusLabel
-// Dependencies: [558, 576, 12241, 12275, 15336, 1126, 15337, 2]
+// Dependencies: [558, 576, 12535, 12569, 15702, 1128, 15703, 2]
 
-// Module 15335 (useAccountStandingStatusLabel)
+// Module 15701 (useAccountStandingStatusLabel)
 import react from "react" /* 576 */;
-import intl3 from "intl" /* 1126 */;
-import useSafetyHubAccountStanding from "useSafetyHubAccountStanding" /* 12241 */;
-import useSafetyHubInitialized from "useSafetyHubInitialized" /* 12275 */;
-import useSafetyHubFetchError from "useSafetyHubFetchError" /* 15336 */;
-import SafetyHubAccountStandingLabels from "SafetyHubAccountStandingLabels" /* 15337 */;
+import intl3 from "intl" /* 1128 */;
+import useSafetyHubAccountStanding from "useSafetyHubAccountStanding" /* 12535 */;
+import useSafetyHubInitialized from "useSafetyHubInitialized" /* 12569 */;
+import useSafetyHubFetchError from "useSafetyHubFetchError" /* 15702 */;
+import SafetyHubAccountStandingLabels from "SafetyHubAccountStandingLabels" /* 15703 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -36,7 +36,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAccount
       } else {
         tmp12 = cResult[4];
       }
-      const intl2 = tmp(1126).intl;
+      const intl2 = tmp(1128).intl;
       const obj5 = { hook: tmp12 };
       const formatToPlainStringResult = intl2.formatToPlainString(SafetyHubAccountStandingLabels.ACCOUNT_STANDING_SHORT_STATUS[safetyHubAccountStanding.state], obj5);
       cResult[2] = safetyHubAccountStanding.state;
@@ -50,12 +50,12 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAccount
     let tmp7;
     if (cResult[0] !== safetyHubFetchError) {
       let ZTNur7;
-      const intl = tmp(1126).intl;
+      const intl = tmp(1128).intl;
       const string = intl.string;
       if (null != safetyHubFetchError) {
-        ZTNur7 = tmp(1126).t.TDRvqs;
+        ZTNur7 = tmp(1128).t.TDRvqs;
       } else {
-        ZTNur7 = tmp(1126).t.ZTNur7;
+        ZTNur7 = tmp(1128).t.ZTNur7;
       }
       const stringResult = string(ZTNur7);
       cResult[0] = safetyHubFetchError;
@@ -81,14 +81,14 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAccount
           return arg0;
         }
     };
-    formatToPlainStringResult = intl.formatToPlainString(tmp(15337).ACCOUNT_STANDING_SHORT_STATUS[safetyHubAccountStanding.state], obj4);
+    formatToPlainStringResult = intl.formatToPlainString(tmp(15703).ACCOUNT_STANDING_SHORT_STATUS[safetyHubAccountStanding.state], obj4);
   } else {
     let ZTNur7;
     const string = intl.string;
     if (null != safetyHubFetchError) {
-      ZTNur7 = tmp(1126).t.TDRvqs;
+      ZTNur7 = tmp(1128).t.TDRvqs;
     } else {
-      ZTNur7 = tmp(1126).t.ZTNur7;
+      ZTNur7 = tmp(1128).t.ZTNur7;
     }
     formatToPlainStringResult = string(ZTNur7);
   }

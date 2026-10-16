@@ -1,27 +1,27 @@
-// Module ID: 13487
-// Function ID: 13488
+// Module ID: 12212
+// Function ID: 12213
 // Name: useConjureProjects
-// Dependencies: [32, 19, 5440, 7321, 4748, 2087, 4750, 4939, 11216, 10652, 1126, 3849, 558, 576, 6948, 12854, 11212, 1453, 504, 6946, 2]
+// Dependencies: [32, 19, 5502, 7539, 4807, 2090, 4809, 4998, 10902, 10900, 1128, 3865, 558, 576, 6285, 11522, 10926, 1455, 504, 7167, 2]
 // Exports: describeConjureProjectRow
 
-// Module 13487 (useConjureProjects)
+// Module 12212 (useConjureProjects)
 import react2 from "react" /* 576 */;
-import intl6 from "intl" /* 1126 */;
-import _modDef3849 from "module_3849" /* 3849 */;
-import ConjureUtils from "ConjureUtils" /* 6946 */;
-import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6948 */;
-import conjureAppInServer from "conjureAppInServer" /* 11212 */;
-import ConjureActivity from "ConjureActivity" /* 12854 */;
+import intl6 from "intl" /* 1128 */;
+import _modDef3865 from "module_3865" /* 3865 */;
+import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6285 */;
+import ConjureUtils from "ConjureUtils" /* 7167 */;
+import conjureAppInServer from "conjureAppInServer" /* 10926 */;
+import ConjureActivity from "ConjureActivity" /* 11522 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 5440 */;
-import UserProfileStore from "UserProfileStore" /* 7321 */;
-import GuildChannelStore from "GuildChannelStore" /* 4748 */;
-import GuildStore from "GuildStore" /* 2087 */;
-import PermissionStore from "PermissionStore" /* 4750 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4939 */;
-import ConjureChatStore from "ConjureChatStore" /* 11216 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 10652 */;
+import ApplicationStore from "ApplicationStore" /* 5502 */;
+import UserProfileStore from "UserProfileStore" /* 7539 */;
+import GuildChannelStore from "GuildChannelStore" /* 4807 */;
+import GuildStore from "GuildStore" /* 2090 */;
+import PermissionStore from "PermissionStore" /* 4809 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4998 */;
+import ConjureChatStore from "ConjureChatStore" /* 10902 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 10900 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -60,7 +60,7 @@ function collectEntries(_location) {
         const conjureActivityResult = tmpResult.conjureActivity(obj4);
         if ("done" === conjureActivityResult) {
           if (null != num) {
-            const sum = num + tmp(12854).CONJURE_DONE_WINDOW_MS;
+            const sum = num + tmp(11522).CONJURE_DONE_WINDOW_MS;
             bound = sum;
             if (null != bound) {
               const _Math = Math;
@@ -434,19 +434,19 @@ export const describeConjureProjectRow = function describeConjureProjectRow(entr
   let obj4;
   let obj6;
   if (entry.notInServer) {
-    const obj3 = { serverName: intl4.string(_modDef3849["08PzLy"]), label: intl5.formatToPlainString(_modDef3849.pyh2pa, obj4) };
+    const obj3 = { serverName: intl4.string(_modDef3865["08PzLy"]), label: intl5.formatToPlainString(_modDef3865.pyh2pa, obj4) };
     intl4 = intl6.intl;
     intl5 = intl6.intl;
     obj = obj3;
     obj4 = { name: entry.name };
   } else if (null == entry.guildName) {
-    const obj5 = { serverName: intl2.string(_modDef3849["3QFps8"]), label: intl3.formatToPlainString(_modDef3849["2sBOnp"], obj6) };
+    const obj5 = { serverName: intl2.string(_modDef3865["3QFps8"]), label: intl3.formatToPlainString(_modDef3865["2sBOnp"], obj6) };
     intl2 = intl6.intl;
     intl3 = intl6.intl;
     obj = obj5;
     obj6 = { name: entry.name };
   } else {
-    obj = { serverName: entry.guildName, label: intl.formatToPlainString(_modDef3849["hd+GF1"], obj11) };
+    obj = { serverName: entry.guildName, label: intl.formatToPlainString(_modDef3865["hd+GF1"], obj11) };
     intl = intl6.intl;
     obj11 = { name: null, server: null };
     ({ name: obj2.name, guildName: obj2.server } = entry);

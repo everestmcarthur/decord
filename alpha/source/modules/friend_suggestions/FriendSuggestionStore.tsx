@@ -1,22 +1,22 @@
-// Module ID: 7351
-// Function ID: 7352
+// Module ID: 7569
+// Function ID: 7570
 // Name: FriendSuggestionStore
-// Dependencies: [1404, 1390, 12, 7352, 7353, 504, 584, 2]
+// Dependencies: [1406, 1392, 12, 7570, 7571, 504, 584, 2]
 // Exports: transformFriendSuggestions
 
-// Module 7351 (FriendSuggestionStore)
+// Module 7569 (FriendSuggestionStore)
 import _modDef12 from "module_12" /* 12 */;
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import FriendSuggestionActionCreatorsDefault from "FriendSuggestionActionCreators" /* 7352 */;
-import maybeDispatchDevOnlyDummyFriendSuggestionsDefault from "maybeDispatchDevOnlyDummyFriendSuggestions" /* 7353 */;
-import UserRecord from "UserRecord" /* 1404 */;
-import UserStore from "UserStore" /* 1390 */;
+import FriendSuggestionActionCreatorsDefault from "FriendSuggestionActionCreators" /* 7570 */;
+import maybeDispatchDevOnlyDummyFriendSuggestionsDefault from "maybeDispatchDevOnlyDummyFriendSuggestions" /* 7571 */;
+import UserRecord from "UserRecord" /* 1406 */;
+import UserStore from "UserStore" /* 1392 */;
 import size from "module_2" /* 2 */;
 
 let closure_4;
 
-const f96439 = function(contact_names) {
+const f97348 = function(contact_names) {
   let name;
   let tmp7;
   if (null != contact_names.contact_names) {
@@ -37,7 +37,7 @@ const f96439 = function(contact_names) {
     return obj;
   }
 };
-const f96440 = (key) => key.key;
+const f97349 = (key) => key.key;
 const React3 = {};
 let friendSuggestionCount = 0;
 let c6 = false;
@@ -121,8 +121,8 @@ let obj = {
     suggestions = suggestions.suggestions;
     let obj = _modDef12;
     const chainResult = obj.chain(suggestions);
-    const mapped = chainResult.map(f96439);
-    const iter = mapped.keyBy(f96440);
+    const mapped = chainResult.map(f97348);
+    const iter = mapped.keyBy(f97349);
     closure_4 = iter.value();
     const obj3 = _modDef12;
     friendSuggestionCount = obj3.keys(closure_4).length;
@@ -139,7 +139,7 @@ export default friendSuggestionStore;
 export const transformFriendSuggestions = function transformFriendSuggestions(arg0) {
   const obj = _modDef12;
   const chainResult = obj.chain(arg0);
-  const mapped = chainResult.map(f96439);
-  const iter = mapped.keyBy(f96440);
+  const mapped = chainResult.map(f97348);
+  const iter = mapped.keyBy(f97349);
   return iter.value();
 };

@@ -1,19 +1,19 @@
-// Module ID: 11368
-// Function ID: 11369
+// Module ID: 11626
+// Function ID: 11627
 // Name: useUserApplicationWidgetData
-// Dependencies: [32, 19, 5440, 11369, 7321, 11256, 558, 576, 11370, 504, 6858, 11371, 8312, 7326, 2]
+// Dependencies: [32, 19, 5502, 11627, 7539, 10980, 558, 576, 11628, 504, 7079, 11629, 8538, 7544, 2]
 
-// Module 11368 (useUserApplicationWidgetData)
-import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7326 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8312 */;
-import ApplicationWidgetConfigStore2 from "ApplicationWidgetConfigStore" /* 11256 */;
-import UserApplicationIdentityStore2 from "UserApplicationIdentityStore" /* 11369 */;
-import useApplicationWidgetConfigsDefault from "useApplicationWidgetConfigs" /* 11370 */;
-import UserApplicationIdentityActionCreatorsDefault from "UserApplicationIdentityActionCreators" /* 11371 */;
+// Module 11626 (useUserApplicationWidgetData)
+import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7544 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8538 */;
+import ApplicationWidgetConfigStore2 from "ApplicationWidgetConfigStore" /* 10980 */;
+import UserApplicationIdentityStore2 from "UserApplicationIdentityStore" /* 11627 */;
+import useApplicationWidgetConfigsDefault from "useApplicationWidgetConfigs" /* 11628 */;
+import UserApplicationIdentityActionCreatorsDefault from "UserApplicationIdentityActionCreators" /* 11629 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 5440 */;
-import UserProfileStore from "UserProfileStore" /* 7321 */;
+import ApplicationStore from "ApplicationStore" /* 5502 */;
+import UserProfileStore from "UserProfileStore" /* 7539 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

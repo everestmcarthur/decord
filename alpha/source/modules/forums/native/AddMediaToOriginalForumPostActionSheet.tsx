@@ -1,25 +1,25 @@
-// Module ID: 12417
-// Function ID: 12418
+// Module ID: 12772
+// Function ID: 12773
 // Name: AddMediaToOriginalForumPostActionSheet
-// Dependencies: [32, 5, 19, 17, 2065, 7244, 2087, 5432, 1085, 21, 5092, 587, 9700, 7765, 7780, 5056, 9266, 9263, 11, 7760, 9265, 7902, 1295, 12418, 7179, 8243, 5300, 1126, 558, 576, 504, 6852, 7904, 7769, 12419, 5088, 5380, 6840, 2]
+// Dependencies: [32, 5, 19, 17, 2068, 7462, 2090, 5494, 1087, 21, 5153, 587, 9934, 7984, 8000, 5118, 9502, 9499, 11, 7979, 9501, 8122, 1297, 12773, 7397, 8468, 5362, 1128, 558, 576, 504, 7075, 8124, 7988, 12774, 5149, 5442, 7063, 2]
 
-// Module 12417 (AddMediaToOriginalForumPostActionSheet)
+// Module 12772 (AddMediaToOriginalForumPostActionSheet)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
-import DraftStore from "DraftStore" /* 7244 */;
-import utils_UploadUtils from "utils/UploadUtils" /* 7769 */;
-import Tracking from "Tracking" /* 7904 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5118 */;
+import DraftStore from "DraftStore" /* 7462 */;
+import utils_UploadUtils from "utils/UploadUtils" /* 7988 */;
+import Tracking from "Tracking" /* 8124 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import react from "react" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import GuildStore from "GuildStore" /* 2087 */;
-import MessageStore from "MessageStore" /* 5432 */;
-import Constants from "Constants" /* 1085 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import GuildStore from "GuildStore" /* 2090 */;
+import MessageStore from "MessageStore" /* 5494 */;
+import Constants from "Constants" /* 1087 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 5092 */;
+import createStyles_mod from "createStyles" /* 5153 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -95,7 +95,7 @@ let obj = function _upload2() {
               anyErrorMessage = undefined;
               c8 = 1;
               c9 = 1;
-              return { value: "Set", done: true };
+              return { value: "test", done: true };
             }
           } else if (1 === c8) {
             if (arg0 === 1) {

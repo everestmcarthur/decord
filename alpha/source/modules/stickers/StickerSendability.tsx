@@ -1,16 +1,16 @@
-// Module ID: 7047
-// Function ID: 7048
+// Module ID: 7270
+// Function ID: 7271
 // Name: StickerSendability
-// Dependencies: [2125, 6032, 1085, 4769, 5749, 4755, 2]
+// Dependencies: [2128, 6250, 1087, 4828, 5967, 4814, 2]
 // Exports: isSendableSticker
 
-// Module 7047 (StickerSendability)
-import Constants from "Constants" /* 1085 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4755 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4769 */;
-import StickersUtils from "StickersUtils" /* 5749 */;
-import GuildMemberStore from "GuildMemberStore" /* 2125 */;
-import StickersPackStore from "StickersPackStore" /* 6032 */;
+// Module 7270 (StickerSendability)
+import Constants from "Constants" /* 1087 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4814 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4828 */;
+import StickersUtils from "StickersUtils" /* 5967 */;
+import GuildMemberStore from "GuildMemberStore" /* 2128 */;
+import StickersPackStore from "StickersPackStore" /* 6250 */;
 import size from "module_2" /* 2 */;
 
 function getStickerSendability(item10030, currentUser, channel) {
@@ -32,7 +32,7 @@ function getStickerSendability(item10030, currentUser, channel) {
       }
       NONSENDABLE = SENDABLE;
     } else {
-      const tmp19Result = tmp19(5749);
+      const tmp19Result = tmp19(5967);
       if (tmp19Result.isGuildSticker(item10030)) {
         if (null != channel) {
           let SENDABLE_WITH_BOOSTED_GUILD;

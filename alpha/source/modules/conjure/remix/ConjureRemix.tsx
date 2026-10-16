@@ -1,15 +1,15 @@
-// Module ID: 11299
-// Function ID: 11300
+// Module ID: 11556
+// Function ID: 11557
 // Name: ConjureRemix
-// Dependencies: [5, 11215, 1126, 3849, 11207, 11264, 2]
+// Dependencies: [5, 10901, 1128, 3865, 10922, 10990, 2]
 // Exports: remixConjureProjectInto
 
-// Module 11299 (ConjureRemix)
-import intl3 from "intl" /* 1126 */;
-import _modDef3849 from "module_3849" /* 3849 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 11207 */;
+// Module 11556 (ConjureRemix)
+import intl3 from "intl" /* 1128 */;
+import _modDef3865 from "module_3865" /* 3865 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 10922 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import ConjureConnectionStore from "ConjureConnectionStore" /* 11215 */;
+import ConjureConnectionStore from "ConjureConnectionStore" /* 10901 */;
 import size from "module_2" /* 2 */;
 
 let closure_2, closure_3;
@@ -56,7 +56,7 @@ let obj = function _remixConjureProjectInto() {
               closure_2 = tmp19;
               projectId = undefined;
               closure_3 = undefined;
-              obj5 = { ok: false, message: intl2.string(_modDef3849.Cn8H0Y) };
+              obj5 = { ok: false, message: intl2.string(_modDef3865.Cn8H0Y) };
               intl2 = intl3.intl;
               c4 = 1;
               const obj6 = { name: "" + name.slice(0, 120) + closure_2_6, guild_id: projectId, install_scope: user.install_scope };

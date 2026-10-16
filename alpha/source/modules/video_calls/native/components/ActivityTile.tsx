@@ -1,25 +1,25 @@
-// Module ID: 10917
-// Function ID: 10918
+// Module ID: 11232
+// Function ID: 11233
 // Name: ActivityTile
-// Dependencies: [5, 32, 19, 17, 2064, 1390, 1085, 1204, 2024, 21, 1200, 5092, 587, 558, 576, 1388, 504, 6858, 5409, 4962, 10918, 6852, 6879, 9539, 1126, 10920, 10822, 10922, 10923, 10924, 6185, 10961, 5088, 5380, 4827, 2]
+// Dependencies: [5, 32, 19, 17, 2067, 1392, 1087, 1206, 2026, 21, 1202, 5153, 587, 558, 576, 1388, 504, 7079, 5471, 5021, 11233, 7075, 7100, 9774, 1128, 11235, 11142, 11237, 11238, 11239, 6407, 11279, 5149, 5442, 4886, 2]
 
-// Module 10917 (ActivityTile)
+// Module 11232 (ActivityTile)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1200 */;
-import FormConstants from "FormConstants" /* 1204 */;
+import native from "native" /* 1202 */;
+import FormConstants from "FormConstants" /* 1206 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
-import Constants2 from "Constants" /* 2024 */;
-import handlePressJoinActivityDefault from "handlePressJoinActivity" /* 10923 */;
+import Constants2 from "Constants" /* 2026 */;
+import handlePressJoinActivityDefault from "handlePressJoinActivity" /* 11238 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
-import UserStore from "UserStore" /* 1390 */;
-import Constants from "Constants" /* 1085 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2067 */;
+import UserStore from "UserStore" /* 1392 */;
+import Constants from "Constants" /* 1087 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 5092 */;
+import createStyles_mod from "createStyles" /* 5153 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -35,7 +35,7 @@ let obj4;
 let size;
 let tmp;
 let unpackModuleId;
-const native2 = tmp(4827);
+const native2 = tmp(4886);
 const View = react_native.View;
 ({ ThemeTypes: metroImportAll, Fonts } = Constants);
 const getThemedRippleConfig = FormConstants.getThemedRippleConfig;

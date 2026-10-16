@@ -1,9 +1,9 @@
-// Module ID: 13741
-// Function ID: 13742
+// Module ID: 14106
+// Function ID: 14107
 // Name: WishlistVisibility
 // Dependencies: [2]
 
-// Module 13741 (WishlistVisibility)
+// Module 14106 (WishlistVisibility)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/WishlistVisibility.tsx");

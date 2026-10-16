@@ -1,49 +1,70 @@
 // Module ID: 7871
 // Function ID: 7872
-// Dependencies: [7848, 7849, 7828]
+// Dependencies: [41, 42, 93, 95, 98, 19, 21, 7872, 7873, 7820]
 
 // Module 7871
-import _mod7828 from "module_7828" /* 7828 */;
-import get0thIfdOffset from "get0thIfdOffset" /* 7848 */;
-import IFD_TYPE_0TH from "IFD_TYPE_0TH" /* 7849 */;
+import Fragment from "Fragment" /* 21 */;
+import multiplyMatricesDefault from "multiplyMatrices" /* 7820 */;
+import _modDef7872 from "module_7872" /* 7872 */;
+import extractGradientDefault from "extractGradient" /* 7873 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
+import react from "react" /* 19 */;
 
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {
 
-export default {
-  read(byteLength, sum, arg2, byteOrder, arg4) {
-    let str;
-    const obj = get0thIfdOffset;
-    const ifd = obj.readIfd(byteLength, IFD_TYPE_0TH.IFD_TYPE_CANON, sum, sum + arg2, byteOrder, arg4);
-    let tmp4 = ifd;
-    if (ifd.ShotInfo) {
-      const value = ifd.ShotInfo.value;
-      const obj2 = {};
-      const objectAssign = tmp(7828).objectAssign;
-      _mod7828;
-      if (undefined !== value[27]) {
-        const obj3 = { value: value[27], description: str };
-        str = "None";
-        if (0 !== value[27]) {
-          let str2 = "Rotate 90 CW";
-          if (1 !== value[27]) {
-            let str3 = "Rotate 180";
-            if (2 !== value[27]) {
-              let str4 = "Unknown";
-              if (3 === value[27]) {
-                str4 = "Rotate 270 CW";
-              }
-              str3 = str4;
-            }
-            str2 = str3;
-          }
-          str = str2;
-        }
-        obj2.AutoRotate = obj3;
-      }
-      const objectAssignResult = objectAssign({}, ifd, obj2);
-      delete tmp7["ShotInfo"];
-      tmp4 = objectAssignResult;
+    }));
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
+  }
+}
+const jsx = Fragment.jsx;
+class LinearGradient {
+  constructor() {
+    let constructResult;
+    const self = this;
+    _classCallCheck(this, LinearGradient);
+    const obj = _getPrototypeOf(LinearGradient);
+    const tmp2 = _getPrototypeOf;
+    const tmp3 = c3;
+    if (_isNativeReflectConstruct()) {
+      const _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      constructResult = obj(...arguments);
     }
-    return tmp4;
-  },
-  SHOT_INFO_AUTO_ROTATE: 27
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(LinearGradient, multiplyMatricesDefault);
+const entry = {
+  key: "render",
+  value: function render() {
+    const self = this;
+    const props = this.props;
+    const obj = { x1: props.x1, y1: props.y1, x2: props.x2, y2: props.y2 };
+    _modDef7872;
+    const merged = Object.assign(obj);
+    const merged1 = Object.assign(extractGradientDefault(props, this));
+    return <tmp ref={function ref(arg0) {
+      return self.refMethod(arg0);
+    }} />;
+  }
 };
+const items = [entry];
+const importDefaultResultResult = _createClass(LinearGradient, items);
+importDefaultResultResult.displayName = "LinearGradient";
+importDefaultResultResult.defaultProps = { x1: "0%", y1: "0%", x2: "100%", y2: "0%" };
+
+export default importDefaultResultResult;

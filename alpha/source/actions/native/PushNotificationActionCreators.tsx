@@ -1,24 +1,24 @@
-// Module ID: 12642
-// Function ID: 12643
+// Module ID: 12997
+// Function ID: 12998
 // Name: PushNotificationActionCreators
-// Dependencies: [5, 12643, 502, 1085, 12644, 5933, 3, 1111, 1295, 1255, 12647, 510, 5938, 1382, 1273, 1388, 584, 2]
+// Dependencies: [5, 12998, 502, 1087, 12999, 6151, 3, 1113, 1297, 1257, 13002, 510, 6156, 1384, 1275, 1388, 584, 2]
 // Exports: setPushNotificationPermissionEligibleForPrompt, setPushPermissionReactivationSeen, setPushPermissionState, updateNotificationAuthorizationStatus
 
-// Module 12642 (PushNotificationActionCreators)
+// Module 12997 (PushNotificationActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import TokenManagerAll from "TokenManager" /* 1111 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1273 */;
-import HTTPUtils from "HTTPUtils" /* 1295 */;
-import PlatformUtils from "PlatformUtils" /* 1382 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 5938 */;
-import Constants2 from "Constants" /* 12644 */;
+import TokenManagerAll from "TokenManager" /* 1113 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1275 */;
+import HTTPUtils from "HTTPUtils" /* 1297 */;
+import PlatformUtils from "PlatformUtils" /* 1384 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6156 */;
+import Constants2 from "Constants" /* 12999 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import MultiAccountStore from "MultiAccountStore" /* 12643 */;
+import MultiAccountStore from "MultiAccountStore" /* 12998 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import Constants from "Constants" /* 1085 */;
-import PushNotificationConstants from "PushNotificationConstants" /* 5933 */;
+import Constants from "Constants" /* 1087 */;
+import PushNotificationConstants from "PushNotificationConstants" /* 6151 */;
 import size from "module_2" /* 2 */;
 
 let c2, c3, c5, c6, closure_3;

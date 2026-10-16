@@ -1,34 +1,34 @@
-// Module ID: 11712
-// Function ID: 11713
+// Module ID: 11971
+// Function ID: 11972
 // Name: MediaKeyboard
-// Dependencies: [19, 7244, 7908, 1627, 1085, 1502, 11513, 21, 558, 576, 1265, 4850, 4987, 1629, 11713, 4818, 587, 8513, 11715, 11651, 10023, 7769, 4985, 7758, 1382, 7757, 10021, 11717, 1126, 8234, 8201, 10026, 10028, 8215, 10030, 11751, 11752, 10032, 10033, 11753, 2]
+// Dependencies: [19, 7462, 8128, 1629, 1087, 1504, 11772, 21, 558, 576, 1267, 4909, 5046, 1631, 11972, 4877, 587, 8739, 11974, 11910, 10257, 7988, 5044, 7977, 1384, 7976, 10255, 11976, 1128, 8459, 8426, 10260, 10262, 8440, 10264, 12010, 12011, 10266, 10267, 12012, 2]
 
-// Module 11712 (MediaKeyboard)
-import intl6 from "intl" /* 1126 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import PlatformUtils from "PlatformUtils" /* 1382 */;
-import AppLauncherNativeConstants from "AppLauncherNativeConstants" /* 1502 */;
-import KeyboardTypes from "KeyboardTypes" /* 1629 */;
-import ChatInputUtils from "ChatInputUtils" /* 4985 */;
-import DraftStore from "DraftStore" /* 7244 */;
-import Upload from "Upload" /* 7758 */;
-import utils_UploadUtils from "utils/UploadUtils" /* 7769 */;
-import ThreadIcon from "ThreadIcon" /* 8201 */;
-import ImageIcon from "ImageIcon" /* 8215 */;
-import AppsIcon from "AppsIcon" /* 8234 */;
-import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10023 */;
-import PollsIcon from "PollsIcon" /* 10026 */;
-import AttachmentIcon from "AttachmentIcon" /* 10028 */;
-import MediaKeyboardBottomSheetHeaderSimpleDefault from "MediaKeyboardBottomSheetHeaderSimple" /* 10030 */;
-import MediaKeyboardBottomSheetActionsDefault from "MediaKeyboardBottomSheetActions" /* 10032 */;
-import PortalKeyboardConstants from "PortalKeyboardConstants" /* 11513 */;
-import PollCreationModalActionCreators from "PollCreationModalActionCreators" /* 11717 */;
-import MediaKeyboardAccessoriesContainerDefault from "MediaKeyboardAccessoriesContainer" /* 11751 */;
-import MediaKeyboardFloatingSendDefault from "MediaKeyboardFloatingSend" /* 11752 */;
+// Module 11971 (MediaKeyboard)
+import intl6 from "intl" /* 1128 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
+import PlatformUtils from "PlatformUtils" /* 1384 */;
+import AppLauncherNativeConstants from "AppLauncherNativeConstants" /* 1504 */;
+import KeyboardTypes from "KeyboardTypes" /* 1631 */;
+import ChatInputUtils from "ChatInputUtils" /* 5044 */;
+import DraftStore from "DraftStore" /* 7462 */;
+import Upload from "Upload" /* 7977 */;
+import utils_UploadUtils from "utils/UploadUtils" /* 7988 */;
+import ThreadIcon from "ThreadIcon" /* 8426 */;
+import ImageIcon from "ImageIcon" /* 8440 */;
+import AppsIcon from "AppsIcon" /* 8459 */;
+import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10257 */;
+import PollsIcon from "PollsIcon" /* 10260 */;
+import AttachmentIcon from "AttachmentIcon" /* 10262 */;
+import MediaKeyboardBottomSheetHeaderSimpleDefault from "MediaKeyboardBottomSheetHeaderSimple" /* 10264 */;
+import MediaKeyboardBottomSheetActionsDefault from "MediaKeyboardBottomSheetActions" /* 10266 */;
+import PortalKeyboardConstants from "PortalKeyboardConstants" /* 11772 */;
+import PollCreationModalActionCreators from "PollCreationModalActionCreators" /* 11976 */;
+import MediaKeyboardAccessoriesContainerDefault from "MediaKeyboardAccessoriesContainer" /* 12010 */;
+import MediaKeyboardFloatingSendDefault from "MediaKeyboardFloatingSend" /* 12011 */;
 import react from "react" /* 19 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 7908 */;
-import MediaKeyboardConstants from "MediaKeyboardConstants" /* 1627 */;
-import Constants from "Constants" /* 1085 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 8128 */;
+import MediaKeyboardConstants from "MediaKeyboardConstants" /* 1629 */;
+import Constants from "Constants" /* 1087 */;
 import Fragment from "Fragment" /* 21 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -478,7 +478,7 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fu
                                   }
                                 }
                                 const tmp19Result2 = MediaKeyboardUtils;
-                                const result2 = tmp19Result2.addAttachmentForCommand(channelId, chatInputRef, result1, tmp3, tmp19(7758).UploadOrigin.IMAGE_PICKER);
+                                const result2 = tmp19Result2.addAttachmentForCommand(channelId, chatInputRef, result1, tmp3, tmp19(7977).UploadOrigin.IMAGE_PICKER);
                               }
                             }
                             cResult[29] = chatInputRef;

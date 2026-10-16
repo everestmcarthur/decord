@@ -1,37 +1,37 @@
-// Module ID: 15745
-// Function ID: 15746
+// Module ID: 16111
+// Function ID: 16112
 // Name: QuestContextMenu
-// Dependencies: [109, 19, 7391, 1085, 21, 7574, 8772, 1126, 558, 576, 9171, 5975, 504, 13471, 9202, 9193, 7411, 1382, 5069, 9168, 9204, 7416, 4828, 15703, 5979, 9172, 7706, 15746, 5042, 7413, 6886, 6196, 9174, 9175, 9178, 9363, 2]
+// Dependencies: [109, 19, 7609, 1087, 21, 7793, 8997, 1128, 558, 576, 9408, 6193, 504, 13832, 9439, 9430, 7629, 1384, 5131, 9405, 9441, 7634, 4887, 16069, 6197, 9409, 7925, 16112, 5104, 7631, 7107, 6418, 9411, 9412, 9415, 9599, 2]
 
-// Module 15745 (QuestContextMenu)
+// Module 16111 (QuestContextMenu)
 import Fragment from "Fragment" /* 21 */;
-import Constants from "Constants" /* 1085 */;
-import intl3 from "intl" /* 1126 */;
-import PlatformUtils from "PlatformUtils" /* 1382 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4828 */;
-import CopyIcon from "CopyIcon" /* 5042 */;
-import parseURLDefault from "parseURL" /* 5069 */;
-import QuestTypes from "QuestTypes" /* 5975 */;
-import AdCreativeType from "AdCreativeType" /* 5979 */;
-import CheckmarkLargeIcon2 from "CheckmarkLargeIcon" /* 6196 */;
-import ClipboardUtils from "ClipboardUtils" /* 6886 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 7413 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7416 */;
-import IconButton2 from "IconButton" /* 7574 */;
-import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 7706 */;
-import AssetRegistryDefault from "AssetRegistry" /* 8772 */;
-import QuestUtils from "QuestUtils" /* 9168 */;
-import QuestActionCreators from "QuestActionCreators" /* 9172 */;
-import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 9174 */;
-import captureAdUserAction2 from "captureAdUserAction" /* 9175 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9178 */;
-import QuestCopyUtils from "QuestCopyUtils" /* 9193 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 9204 */;
-import QuestDisclosureModalActionCreatorsDefault from "QuestDisclosureModalActionCreators" /* 15703 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 15746 */;
+import Constants from "Constants" /* 1087 */;
+import intl3 from "intl" /* 1128 */;
+import PlatformUtils from "PlatformUtils" /* 1384 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4887 */;
+import CopyIcon from "CopyIcon" /* 5104 */;
+import parseURLDefault from "parseURL" /* 5131 */;
+import QuestTypes from "QuestTypes" /* 6193 */;
+import AdCreativeType from "AdCreativeType" /* 6197 */;
+import CheckmarkLargeIcon2 from "CheckmarkLargeIcon" /* 6418 */;
+import ClipboardUtils from "ClipboardUtils" /* 7107 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 7631 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7634 */;
+import IconButton2 from "IconButton" /* 7793 */;
+import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 7925 */;
+import AssetRegistryDefault from "AssetRegistry" /* 8997 */;
+import QuestUtils from "QuestUtils" /* 9405 */;
+import QuestActionCreators from "QuestActionCreators" /* 9409 */;
+import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 9411 */;
+import captureAdUserAction2 from "captureAdUserAction" /* 9412 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9415 */;
+import QuestCopyUtils from "QuestCopyUtils" /* 9430 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 9441 */;
+import QuestDisclosureModalActionCreatorsDefault from "QuestDisclosureModalActionCreators" /* 16069 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 16112 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
-import QuestStore from "QuestStore" /* 7391 */;
+import QuestStore from "QuestStore" /* 7609 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -375,7 +375,7 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? (function
     const tmp4 = flag;
     if (tmp4) {
       const obj3 = { label: intl2.string(intl3.t.WqhZss), IconComponent: CopyIcon.CopyIcon, action: callback1 };
-      intl2 = tmp2(1126).intl;
+      intl2 = tmp2(1128).intl;
       const items1 = [obj3];
       items2 = items1;
     } else {

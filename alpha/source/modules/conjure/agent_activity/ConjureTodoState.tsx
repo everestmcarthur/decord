@@ -1,12 +1,12 @@
-// Module ID: 11791
-// Function ID: 11792
+// Module ID: 12050
+// Function ID: 12051
 // Name: ConjureTodoState
-// Dependencies: [11217, 11792, 2]
-// Exports: checklistExpanded, checklistLive, messageChecklist, supersededChecklists, todoLabel, todoMark, toggleChecklist, unfinishedTodoCount
+// Dependencies: [10903, 12051, 2]
+// Exports: checklistExpanded, checklistLive, messageChecklist, supersededChecklists, todoLabel, todoMark, todoProgress, toggleChecklist, unfinishedTodoCount
 
-// Module 11791 (ConjureTodoState)
-import conjureChatTurns from "conjureChatTurns" /* 11217 */;
-import ConjureTimelineTree from "ConjureTimelineTree" /* 11792 */;
+// Module 12050 (ConjureTodoState)
+import conjureChatTurns from "conjureChatTurns" /* 10903 */;
+import ConjureTimelineTree from "ConjureTimelineTree" /* 12051 */;
 import size from "module_2" /* 2 */;
 
 let map, set;
@@ -42,6 +42,10 @@ export const checklistLive = function checklistLive(memo) {
     tmp2 = true !== memo.stopRequested;
   }
   return tmp2;
+};
+export const todoProgress = function todoProgress(todos) {
+  const obj = { completed: todos.filter((status) => "completed" === status.status).length, total: todos.length };
+  return obj;
 };
 export const unfinishedTodoCount = function unfinishedTodoCount(arr) {
   return arr.filter((status) => "completed" !== status.status).length;
@@ -106,8 +110,8 @@ export const supersededChecklists = function supersededChecklists(memo) {
   }
   return set;
 };
-export const checklistExpanded = function checklistExpanded(c14, render_id, arg2) {
-  let value = c14.get(render_id);
+export const checklistExpanded = function checklistExpanded(c13, render_id, arg2) {
+  let value = c13.get(render_id);
   if (value == null) {
     value = !arg2;
   }

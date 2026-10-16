@@ -1,10 +1,10 @@
 // Module ID: 11069
 // Function ID: 11070
 // Name: AssetRegistry
-// Dependencies: [1132]
+// Dependencies: [1134]
 
 // Module 11069 (AssetRegistry)
-import AssetRegistry from "AssetRegistry" /* 1132 */;
+import AssetRegistry from "AssetRegistry" /* 1134 */;
 
 
-export default AssetRegistry.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "4782ad45462ec62f2912f2f8f1ed8388", name: "ic_leave_24px", type: "png" });
+export default AssetRegistry.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images", width: 54, height: 54, scales: [1], hash: "9a03a674792f2187c83109744abce109", name: "connections-profile-steam-dota2", type: "png" });

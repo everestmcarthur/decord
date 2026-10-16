@@ -1,11 +1,11 @@
-// Module ID: 12567
-// Function ID: 12568
+// Module ID: 12922
+// Function ID: 12923
 // Name: SearchQueryTagManager
-// Dependencies: [9313, 9312, 2]
+// Dependencies: [9549, 9548, 2]
 
-// Module 12567 (SearchQueryTagManager)
-import TrackingConstants from "TrackingConstants" /* 9312 */;
-import SearchConstants from "SearchConstants" /* 9313 */;
+// Module 12922 (SearchQueryTagManager)
+import TrackingConstants from "TrackingConstants" /* 9548 */;
+import SearchConstants from "SearchConstants" /* 9549 */;
 import size from "module_2" /* 2 */;
 
 let set;
@@ -46,7 +46,7 @@ class SearchQueryTagManager {
     let closure_1 = channelId;
     const tags = this.tags;
     const items = [];
-    items[HermesBuiltin.arraySpread(items, tags.filter((item) => item !== userId && item !== closure_1_1), 0)] = { type: SearchQueryTagTypes.COMPLETE, text: "" + location.text + " " + channelId.text, location: location.location, searchTokenType: location.searchTokenType, channelId: channelId.channelId, userId: channelId.userId };
+    items[HermesBuiltin.arraySpread(items, tags.filter((item) => item !== user && item !== closure_1_1), 0)] = { type: SearchQueryTagTypes.COMPLETE, text: "" + location.text + " " + channelId.text, location: location.location, searchTokenType: location.searchTokenType, channelId: channelId.channelId, userId: channelId.userId };
     this.tags = items;
     ({ type: SearchQueryTagTypes.COMPLETE, text: "" + location.text + " " + channelId.text, location: location.location, searchTokenType: location.searchTokenType, channelId: channelId.channelId, userId: channelId.userId });
   }

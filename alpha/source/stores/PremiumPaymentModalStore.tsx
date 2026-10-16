@@ -1,12 +1,12 @@
-// Module ID: 5634
-// Function ID: 5635
+// Module ID: 5852
+// Function ID: 5853
 // Name: PremiumPaymentModalStore
-// Dependencies: [5635, 504, 584, 2]
+// Dependencies: [5853, 504, 584, 2]
 
-// Module 5634 (PremiumPaymentModalStore)
+// Module 5852 (PremiumPaymentModalStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 5635 */;
+import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 5853 */;
 import size from "module_2" /* 2 */;
 
 function handleSubscribeFailure(error) {

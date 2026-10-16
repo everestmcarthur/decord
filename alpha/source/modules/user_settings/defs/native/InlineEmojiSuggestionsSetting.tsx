@@ -1,17 +1,22 @@
-// Module ID: 16084
-// Function ID: 16085
+// Module ID: 16450
+// Function ID: 16451
 // Name: InlineEmojiSuggestionsSetting
-// Dependencies: [7993, 10663, 1126, 2041, 12383, 2]
+// Dependencies: [8213, 1087, 1267, 2044, 11006, 1128, 12738, 2]
 
-// Module 16084 (InlineEmojiSuggestionsSetting)
-import intl2 from "intl" /* 1126 */;
-import UserSettings from "UserSettings" /* 2041 */;
-import SettingsConstants from "SettingsConstants" /* 7993 */;
-import MobileEmojiSuggestionsExperiment from "MobileEmojiSuggestionsExperiment" /* 12383 */;
-import SettingBuilders from "SettingBuilders" /* 10663 */;
+// Module 16450 (InlineEmojiSuggestionsSetting)
+import intl2 from "intl" /* 1128 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
+import UserSettings from "UserSettings" /* 2044 */;
+import SettingsConstants from "SettingsConstants" /* 8213 */;
+import MobileEmojiSuggestionsExperiment from "MobileEmojiSuggestionsExperiment" /* 12738 */;
+import Constants from "Constants" /* 1087 */;
+import SettingBuilders from "SettingBuilders" /* 11006 */;
 import size from "module_2" /* 2 */;
 
+let c3;
+let closure_4;
 const MobileUserSettings = SettingsConstants.MobileUserSettings;
+({ AnalyticEvents: c3, AnalyticsSections: closure_4 } = Constants);
 let obj = {
   useTitle() {
     const intl = intl2.intl;
@@ -19,7 +24,15 @@ let obj = {
   },
   parent: MobileUserSettings.CHAT,
   useValue: UserSettings.InlineEmojiSuggestionsEnabled.useSetting,
-  onValueChange: UserSettings.InlineEmojiSuggestionsEnabled.updateSetting,
+  onValueChange: function onInlineEmojiSuggestionsValueChange(enabled) {
+    let obj3;
+    const obj2 = { enabled, location: obj3 };
+    obj3 = { section: constants2.SETTINGS_TEXT_AND_IMAGES };
+    const obj = AnalyticsUtilsDefault;
+    obj.track(constants.INLINE_EMOJI_SUGGESTIONS_TOGGLED, obj2);
+    const InlineEmojiSuggestionsEnabled = UserSettings.InlineEmojiSuggestionsEnabled;
+    InlineEmojiSuggestionsEnabled.updateSetting(enabled);
+  },
   usePredicate() {
     const obj = MobileEmojiSuggestionsExperiment;
     return obj.useMobileEmojiSuggestionsConfig({ location: "InlineEmojiSuggestionsSetting" }).enabled;

@@ -1,13 +1,13 @@
-// Module ID: 8380
-// Function ID: 8381
+// Module ID: 8606
+// Function ID: 8607
 // Name: useVideoTileGradientColors
-// Dependencies: [19, 1085, 8356, 1103, 558, 576, 2]
+// Dependencies: [19, 1087, 8582, 1105, 558, 576, 2]
 
-// Module 8380 (useVideoTileGradientColors)
+// Module 8606 (useVideoTileGradientColors)
 import react2 from "react" /* 576 */;
-import Constants from "Constants" /* 1085 */;
-import utils_ColorUtils from "utils/ColorUtils" /* 1103 */;
-import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8356 */;
+import Constants from "Constants" /* 1087 */;
+import utils_ColorUtils from "utils/ColorUtils" /* 1105 */;
+import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8582 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

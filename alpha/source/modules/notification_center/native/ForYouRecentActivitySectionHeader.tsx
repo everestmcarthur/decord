@@ -1,17 +1,17 @@
-// Module ID: 17197
-// Function ID: 17198
+// Module ID: 17505
+// Function ID: 17506
 // Name: ForYouRecentActivitySectionHeader
-// Dependencies: [19, 17, 21, 5092, 587, 558, 576, 1126, 5088, 2]
+// Dependencies: [19, 17, 21, 5153, 587, 558, 576, 1128, 5149, 2]
 
-// Module 17197 (ForYouRecentActivitySectionHeader)
+// Module 17505 (ForYouRecentActivitySectionHeader)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import intl2 from "intl" /* 1126 */;
-import Text_Text from "Text/Text" /* 5088 */;
+import intl2 from "intl" /* 1128 */;
+import Text_Text from "Text/Text" /* 5149 */;
 import react from "react" /* 19 */;
-import createStyles_mod from "createStyles" /* 5092 */;
+import createStyles_mod from "createStyles" /* 5153 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -34,7 +34,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForYouRecent
   const tmp4 = closure_4();
   ({ container, textHeader } = tmp4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = tmp(1126).intl;
+    const intl = tmp(1128).intl;
     const stringResult = intl.string(intl2.t.yM9Krm);
     cResult[0] = stringResult;
     first = stringResult;

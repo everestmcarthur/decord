@@ -1,10 +1,10 @@
-// Module ID: 13278
-// Function ID: 13279
+// Module ID: 13639
+// Function ID: 13640
 // Name: ProductPurchaseSuccessActionCreators
-// Dependencies: [5, 5934, 13279, 2000, 2]
+// Dependencies: [5, 6152, 13640, 2002, 2]
 
-// Module 13278 (ProductPurchaseSuccessActionCreators)
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5934 */;
+// Module 13639 (ProductPurchaseSuccessActionCreators)
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6152 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import size from "module_2" /* 2 */;
 

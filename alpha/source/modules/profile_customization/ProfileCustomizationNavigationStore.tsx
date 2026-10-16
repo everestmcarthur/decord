@@ -1,11 +1,11 @@
-// Module ID: 10578
-// Function ID: 10579
+// Module ID: 10826
+// Function ID: 10827
 // Name: ProfileCustomizationNavigationStore
-// Dependencies: [4989, 1095, 2]
+// Dependencies: [5048, 1097, 2]
 
-// Module 10578 (ProfileCustomizationNavigationStore)
-import UserSettingsConstants from "UserSettingsConstants" /* 1095 */;
-import ZustandStore from "ZustandStore" /* 4989 */;
+// Module 10826 (ProfileCustomizationNavigationStore)
+import UserSettingsConstants from "UserSettingsConstants" /* 1097 */;
+import ZustandStore from "ZustandStore" /* 5048 */;
 import size from "module_2" /* 2 */;
 
 const createZustandStore = ZustandStore.createZustandStore;

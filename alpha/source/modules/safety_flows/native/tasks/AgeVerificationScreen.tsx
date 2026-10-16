@@ -1,18 +1,18 @@
-// Module ID: 18702
-// Function ID: 18703
+// Module ID: 19019
+// Function ID: 19020
 // Name: AgeVerificationScreen
-// Dependencies: [19, 17, 1390, 1085, 21, 5092, 558, 576, 1279, 18695, 504, 18689, 7710, 1998, 5918, 7517, 1126, 2862, 3120, 7498, 2128, 5930, 14612, 5088, 7712, 18698, 2]
+// Dependencies: [19, 17, 1392, 1087, 21, 5153, 558, 576, 1281, 19012, 504, 19006, 7929, 2000, 6136, 7736, 1128, 2867, 3125, 7717, 2131, 6148, 14980, 5149, 7931, 19015, 2]
 
-// Module 18702 (AgeVerificationScreen)
+// Module 19019 (AgeVerificationScreen)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import Constants from "Constants" /* 1085 */;
-import Server from "Server" /* 1998 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 5918 */;
-import types from "types" /* 18689 */;
+import Constants from "Constants" /* 1087 */;
+import Server from "Server" /* 2000 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6136 */;
+import types from "types" /* 19006 */;
 import react from "react" /* 19 */;
-import UserStore from "UserStore" /* 1390 */;
-import createStyles from "createStyles" /* 5092 */;
+import UserStore from "UserStore" /* 1392 */;
+import createStyles from "createStyles" /* 5153 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

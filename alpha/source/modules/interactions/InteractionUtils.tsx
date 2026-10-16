@@ -1,21 +1,21 @@
-// Module ID: 8254
-// Function ID: 8255
+// Module ID: 8479
+// Function ID: 8480
 // Name: InteractionUtils
-// Dependencies: [5, 502, 7884, 1085, 11, 7902, 8255, 5442, 1295, 1998, 7179, 8256, 584, 5443, 2, 5439]
+// Dependencies: [5, 502, 8104, 1087, 11, 8122, 8480, 5504, 1297, 2000, 7397, 8481, 584, 5505, 2, 5501]
 // Exports: canRetryInteractionData, executeMessageComponentInteraction, getInteractionInitialResponseDeadlineTimestamp, getInteractionStatusViewState, getInteractionTimeoutTimestamp
 
-// Module 8254 (InteractionUtils)
+// Module 8479 (InteractionUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import Server from "Server" /* 1998 */;
-import interactionCallbackErrorReason from "interactionCallbackErrorReason" /* 5439 */;
-import InteractionTypes from "InteractionTypes" /* 5442 */;
-import InteractionActionCreators from "InteractionActionCreators" /* 8255 */;
-import _slicedToArray from "_slicedToArray" /* 8256 */;
+import Server from "Server" /* 2000 */;
+import interactionCallbackErrorReason from "interactionCallbackErrorReason" /* 5501 */;
+import InteractionTypes from "InteractionTypes" /* 5504 */;
+import InteractionActionCreators from "InteractionActionCreators" /* 8480 */;
+import _slicedToArray from "_slicedToArray" /* 8481 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import InteractionStore from "InteractionStore" /* 7884 */;
-import Constants from "Constants" /* 1085 */;
+import InteractionStore from "InteractionStore" /* 8104 */;
+import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 
 let componentId;
@@ -131,7 +131,7 @@ let obj = function _executeMessageComponentInteraction() {
       }
       await "IconComponent";
       ({ componentType: c0, messageId: c1, messageFlags: c2, customId: c3, componentId: c4, applicationId: c5, channelId: c6, guildId: c7, localState: c8 } = closure_0);
-      return "Set";
+      return "test";
     })();
     iter.next();
     return iter;
@@ -203,7 +203,7 @@ function handleInteractionResponse(nonce, ok, applicationId, channelId, guildId)
                   dispatch2(obj2);
                 }
                 let message;
-                const setFailed2 = tmp26(8255).setFailed;
+                const setFailed2 = tmp26(8480).setFailed;
                 InteractionActionCreators;
                 if (firstSkemaError != null) {
                   message = firstSkemaError.message;
@@ -378,7 +378,7 @@ export const canRetryInteractionData = function canRetryInteractionData(interact
           } else {
             tmp4 = options1;
             items = options1;
-            if (options1[0].type !== tmp7(1998).ApplicationCommandOptionType.SUB_COMMAND) {
+            if (options1[0].type !== tmp7(2000).ApplicationCommandOptionType.SUB_COMMAND) {
               break;
             }
           }

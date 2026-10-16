@@ -1,25 +1,25 @@
-// Module ID: 9005
-// Function ID: 9006
+// Module ID: 9235
+// Function ID: 9236
 // Name: ProfileEffect
-// Dependencies: [32, 19, 17, 5081, 1999, 21, 5092, 558, 576, 1497, 9006, 9007, 9008, 9010, 504, 1105, 9011, 9009, 6157, 8353, 2]
+// Dependencies: [32, 19, 17, 5143, 2001, 21, 5153, 558, 576, 1499, 9236, 9237, 9238, 9240, 504, 1107, 9241, 9239, 5091, 8579, 2]
 
-// Module 9005 (ProfileEffect)
+// Module 9235 (ProfileEffect)
 import Fragment from "Fragment" /* 21 */;
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
-import ConstantsIOS from "ConstantsIOS" /* 1105 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1497 */;
-import useProfileEffectDefault from "useProfileEffect" /* 8353 */;
-import utils from "utils" /* 9006 */;
-import profile_effects_constants from "profile_effects/constants" /* 9007 */;
-import ProfileEffectUtils from "ProfileEffectUtils" /* 9008 */;
-import ProfileEffectLayerDefault from "ProfileEffectLayer" /* 9011 */;
+import ConstantsIOS from "ConstantsIOS" /* 1107 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
+import useProfileEffectDefault from "useProfileEffect" /* 8579 */;
+import utils from "utils" /* 9236 */;
+import profile_effects_constants from "profile_effects/constants" /* 9237 */;
+import ProfileEffectUtils from "ProfileEffectUtils" /* 9238 */;
+import ProfileEffectLayerDefault from "ProfileEffectLayer" /* 9241 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import AccessibilityStore from "AccessibilityStore" /* 5081 */;
-import AppStateStore from "AppStateStore" /* 1999 */;
-import createStyles from "createStyles" /* 5092 */;
+import AccessibilityStore from "AccessibilityStore" /* 5143 */;
+import AppStateStore from "AppStateStore" /* 2001 */;
+import createStyles from "createStyles" /* 5153 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

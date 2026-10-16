@@ -1,30 +1,30 @@
-// Module ID: 10038
-// Function ID: 10039
+// Module ID: 10272
+// Function ID: 10273
 // Name: MediaKeyboardItem
-// Dependencies: [19, 17, 7908, 10039, 21, 4850, 5092, 587, 4967, 558, 576, 1200, 9770, 5088, 7767, 504, 10040, 1126, 7787, 7769, 10041, 10042, 5093, 1497, 10043, 8215, 10028, 2]
+// Dependencies: [19, 17, 8128, 10273, 21, 4909, 5153, 587, 5026, 558, 576, 1202, 10004, 5149, 7986, 504, 10274, 1128, 8007, 7988, 10275, 10276, 5154, 1499, 10277, 8440, 10262, 2]
 // Exports: isAttachFilesNode, isMediaCameraNode, isSpecialMediaGridNode, isViewAllPhotosNode
 
-// Module 10038 (MediaKeyboardItem)
+// Module 10272 (MediaKeyboardItem)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import intl3 from "intl" /* 1126 */;
-import native from "native" /* 1200 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1497 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4850 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import timing from "timing" /* 5093 */;
-import ImageIcon from "ImageIcon" /* 8215 */;
-import AssetRegistryDefault from "AssetRegistry" /* 9770 */;
-import AttachmentIcon from "AttachmentIcon" /* 10028 */;
-import NativeMenuActionCreatorsDefault from "NativeMenuActionCreators" /* 10040 */;
-import CameraIcon from "CameraIcon" /* 10043 */;
+import intl3 from "intl" /* 1128 */;
+import native from "native" /* 1202 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4909 */;
+import Text_Text from "Text/Text" /* 5149 */;
+import timing from "timing" /* 5154 */;
+import ImageIcon from "ImageIcon" /* 8440 */;
+import AssetRegistryDefault from "AssetRegistry" /* 10004 */;
+import AttachmentIcon from "AttachmentIcon" /* 10262 */;
+import NativeMenuActionCreatorsDefault from "NativeMenuActionCreators" /* 10274 */;
+import CameraIcon from "CameraIcon" /* 10277 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 7908 */;
-import DeviceConstants from "DeviceConstants" /* 10039 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 8128 */;
+import DeviceConstants from "DeviceConstants" /* 10273 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 5092 */;
-import ColorUtils_mod from "ColorUtils" /* 4967 */;
+import createStyles_mod from "createStyles" /* 5153 */;
+import ColorUtils_mod from "ColorUtils" /* 5026 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -199,7 +199,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function NewCap
     }
     if (cResult[3] !== tmp4.icon) {
       const obj2 = { source: AssetRegistryDefault, style: tmp4.icon };
-      const Icon = tmp(1200).Icon;
+      const Icon = tmp(1202).Icon;
       const tmp9 = React4(Icon, obj2);
       cResult[3] = tmp4.icon;
       cResult[4] = tmp9;

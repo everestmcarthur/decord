@@ -1,10 +1,10 @@
-// Module ID: 14024
-// Function ID: 14025
+// Module ID: 14390
+// Function ID: 14391
 // Name: PremiumNitroNavigationStore
-// Dependencies: [4989, 2]
+// Dependencies: [5048, 2]
 
-// Module 14024 (PremiumNitroNavigationStore)
-import ZustandStore from "ZustandStore" /* 4989 */;
+// Module 14390 (PremiumNitroNavigationStore)
+import ZustandStore from "ZustandStore" /* 5048 */;
 import size from "module_2" /* 2 */;
 
 const zustandStore = ZustandStore.createZustandStore(() => ({ scrollToSectionId: "r" }));

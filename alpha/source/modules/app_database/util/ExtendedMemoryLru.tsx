@@ -1,11 +1,11 @@
-// Module ID: 7202
-// Function ID: 7203
+// Module ID: 7420
+// Function ID: 7421
 // Name: ExtendedMemoryLru
-// Dependencies: [32, 7203, 7204, 2]
+// Dependencies: [32, 7421, 7422, 2]
 
-// Module 7202 (ExtendedMemoryLru)
-import Lru from "Lru" /* 7203 */;
-import IterableAll from "Iterable" /* 7204 */;
+// Module 7420 (ExtendedMemoryLru)
+import Lru from "Lru" /* 7421 */;
+import IterableAll from "Iterable" /* 7422 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import size from "module_2" /* 2 */;
 

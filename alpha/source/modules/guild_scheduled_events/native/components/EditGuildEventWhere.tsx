@@ -1,25 +1,25 @@
-// Module ID: 8574
-// Function ID: 8575
+// Module ID: 8802
+// Function ID: 8803
 // Name: EditGuildEventWhere
-// Dependencies: [32, 19, 2065, 4750, 6054, 2071, 1085, 21, 5092, 1126, 8524, 558, 576, 504, 1503, 1894, 8520, 4828, 4702, 8575, 8541, 5088, 5379, 8636, 8637, 8638, 8539, 2]
+// Dependencies: [32, 19, 2068, 4809, 6272, 2074, 1087, 21, 5153, 1128, 8750, 558, 576, 504, 1505, 1896, 8746, 4887, 4761, 8803, 8769, 5149, 5441, 8861, 8862, 8863, 8767, 2]
 
-// Module 8574 (EditGuildEventWhere)
-import intl5 from "intl" /* 1126 */;
-import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1894 */;
-import _modDef4702 from "module_4702" /* 4702 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4828 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6054 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 8520 */;
-import EntityUtils from "EntityUtils" /* 8524 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8638 */;
+// Module 8802 (EditGuildEventWhere)
+import intl5 from "intl" /* 1128 */;
+import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1896 */;
+import _modDef4761 from "module_4761" /* 4761 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4887 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6272 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 8746 */;
+import EntityUtils from "EntityUtils" /* 8750 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8863 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import PermissionStore from "PermissionStore" /* 4750 */;
-import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 2071 */;
-import Constants from "Constants" /* 1085 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import PermissionStore from "PermissionStore" /* 4809 */;
+import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 2074 */;
+import Constants from "Constants" /* 1087 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 5092 */;
+import createStyles from "createStyles" /* 5153 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -46,10 +46,10 @@ function assertGuildEventWhereIsValid(guildEvent) {
       const obj = EntityUtils;
       if (null == obj.getLocationFromEventData(guildEvent)) {
         const _Error2 = Error;
-        const intl2 = tmp3(1126).intl;
+        const intl2 = tmp3(1128).intl;
         const self3 = this;
         const self4 = this;
-        const error1 = new Error(intl2.string(tmp3(1126).t.q91szp));
+        const error1 = new Error(intl2.string(tmp3(1128).t.q91szp));
         throw error1;
       }
     }
@@ -256,12 +256,12 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function EditGuildE
     }
     function handleChangeEventEntityType(entityType) {
       _slicedToArray(null);
-      const obj = { entityType, scheduledEndTime: "a" };
+      const obj = { entityType, scheduledEndTime: "r" };
       if (entityType === constants.EXTERNAL) {
-        let obj2 = _modDef4702(guildEvent.scheduledStartTime);
+        let obj2 = _modDef4761(guildEvent.scheduledStartTime);
         const tmp2 = importDefault;
         if (obj2 == null) {
-          obj2 = tmp2(4702)();
+          obj2 = tmp2(4761)();
         }
         const addResult = obj2.add(1, "hour");
         obj.scheduledEndTime = addResult.toISOString();
@@ -412,12 +412,12 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function EditGuildE
     entityType: guildEvent.entityType,
     onChange: function handleChangeEventEntityType(entityType) {
       _undefined(null);
-      const obj = { entityType, scheduledEndTime: "a" };
+      const obj = { entityType, scheduledEndTime: "r" };
       if (entityType === constants.EXTERNAL) {
-        let obj2 = _modDef4702(guildEvent.scheduledStartTime);
+        let obj2 = _modDef4761(guildEvent.scheduledStartTime);
         const tmp2 = importDefault;
         if (obj2 == null) {
-          obj2 = tmp2(4702)();
+          obj2 = tmp2(4761)();
         }
         const addResult = obj2.add(1, "hour");
         obj.scheduledEndTime = addResult.toISOString();

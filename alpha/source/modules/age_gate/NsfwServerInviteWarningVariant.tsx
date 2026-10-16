@@ -1,15 +1,15 @@
-// Module ID: 9624
-// Function ID: 9625
+// Module ID: 9858
+// Function ID: 9859
 // Name: NsfwServerInviteWarningVariant
-// Dependencies: [1085, 5926, 1126, 9625, 558, 5909, 9626, 2]
+// Dependencies: [1087, 6144, 1128, 9859, 558, 6127, 9860, 2]
 // Exports: getNsfwServerInviteWarningAgeGroupForError, getNsfwServerInviteWarningVariant
 
-// Module 9624 (NsfwServerInviteWarningVariant)
-import Constants from "Constants" /* 1085 */;
-import intl3 from "intl" /* 1126 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 5909 */;
-import getTinyBroncoWarningDescriptions from "getTinyBroncoWarningDescriptions" /* 5926 */;
-import useAgeGroupPresentation from "useAgeGroupPresentation" /* 9625 */;
+// Module 9858 (NsfwServerInviteWarningVariant)
+import Constants from "Constants" /* 1087 */;
+import intl3 from "intl" /* 1128 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6127 */;
+import getTinyBroncoWarningDescriptions from "getTinyBroncoWarningDescriptions" /* 6144 */;
+import useAgeGroupPresentation from "useAgeGroupPresentation" /* 9859 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -54,7 +54,7 @@ export const getNsfwServerInviteWarningVariant = function getNsfwServerInviteWar
   if (useAgeGroupPresentation.AgeGroupState.ADULT === gatedAgeGroup) {
     const obj3 = { description: tmp3, confirm: obj4, goBackIsPrimary: false };
     obj4 = { text: intl2.string(intl3.t.wVq7uo), joins: true };
-    intl2 = tmp(1126).intl;
+    intl2 = tmp(1128).intl;
     return obj3;
   } else if (useAgeGroupPresentation.AgeGroupState.TEEN === gatedAgeGroup) {
     return { description: tmp3, confirm: obj2, goBackIsPrimary: true };
@@ -76,7 +76,7 @@ export const getNsfwServerInviteWarningAgeGroupForError = function getNsfwServer
     return null;
   }
   let tmp7 = null;
-  const tmp3Result = tmp3(9626);
+  const tmp3Result = tmp3(9860);
   if (tmp3Result.getIsInviteAcceptAgeGroupErrorsEnabled("invite_accept_error")) {
     tmp7 = UNVERIFIED;
   }

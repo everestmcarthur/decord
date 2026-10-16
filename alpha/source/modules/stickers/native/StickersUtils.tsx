@@ -1,22 +1,22 @@
-// Module ID: 9760
-// Function ID: 9761
+// Module ID: 9994
+// Function ID: 9995
 // Name: stickers/StickersUtils
-// Dependencies: [19, 17, 2087, 1390, 9761, 1085, 1241, 558, 576, 9758, 504, 9536, 5750, 9762, 9763, 9764, 1629, 2]
+// Dependencies: [19, 17, 2090, 1392, 9995, 1087, 1243, 558, 576, 9992, 504, 9771, 5968, 9996, 9997, 9998, 1631, 2]
 // Exports: dropPreloadedSticker, openStickerPickerToPackId, preloadSticker
 
-// Module 9760 (stickers/StickersUtils)
+// Module 9994 (stickers/StickersUtils)
 import react_native from "react-native" /* 17 */;
-import Constants from "Constants" /* 1085 */;
-import ExpressionPickerConstants from "ExpressionPickerConstants" /* 1241 */;
-import KeyboardTypes from "KeyboardTypes" /* 1629 */;
-import StickersTypes from "StickersTypes" /* 5750 */;
-import StickerPickerStore from "StickerPickerStore" /* 9761 */;
-import StickerCategoryUtils from "StickerCategoryUtils" /* 9762 */;
-import AssetRegistryDefault from "AssetRegistry" /* 9763 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 9764 */;
+import Constants from "Constants" /* 1087 */;
+import ExpressionPickerConstants from "ExpressionPickerConstants" /* 1243 */;
+import KeyboardTypes from "KeyboardTypes" /* 1631 */;
+import StickersTypes from "StickersTypes" /* 5968 */;
+import StickerPickerStore from "StickerPickerStore" /* 9995 */;
+import StickerCategoryUtils from "StickerCategoryUtils" /* 9996 */;
+import AssetRegistryDefault from "AssetRegistry" /* 9997 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 9998 */;
 import react from "react" /* 19 */;
-import GuildStore from "GuildStore" /* 2087 */;
-import UserStore from "UserStore" /* 1390 */;
+import GuildStore from "GuildStore" /* 2090 */;
+import UserStore from "UserStore" /* 1392 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -63,7 +63,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useStickerCa
     tmp9 = cResult[2];
   }
   dependencyMap = tmp9;
-  const tmpResult2 = tmp(9536);
+  const tmpResult2 = tmp(9771);
   const mobileStickerPickerUpsellRestyleEnabled = tmpResult2.useMobileStickerPickerUpsellRestyleEnabled("native.StickerPicker");
   if (cResult[3] === arg0) {
     if (cResult[4] === stickerPackCategories) {

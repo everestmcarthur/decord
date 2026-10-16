@@ -1,21 +1,21 @@
-// Module ID: 18299
-// Function ID: 18300
+// Module ID: 18616
+// Function ID: 18617
 // Name: AssetChooser
-// Dependencies: [5, 19, 17, 1085, 21, 5092, 587, 4827, 7769, 6185, 1126, 6157, 18300, 18301, 1200, 2]
+// Dependencies: [5, 19, 17, 1087, 21, 5153, 587, 4886, 7988, 6407, 1128, 5091, 18617, 18618, 1202, 2]
 
-// Module 18299 (AssetChooser)
+// Module 18616 (AssetChooser)
 import nativeDefault from "native" /* 587 */;
-import Constants from "Constants" /* 1085 */;
-import intl3 from "intl" /* 1126 */;
-import native from "native" /* 4827 */;
-import FastImageDefault from "FastImage" /* 6157 */;
-import Pressables from "Pressables" /* 6185 */;
-import AssetRegistryDefault from "AssetRegistry" /* 18301 */;
+import Constants from "Constants" /* 1087 */;
+import intl3 from "intl" /* 1128 */;
+import native from "native" /* 4886 */;
+import FastImageDefault from "FastImage" /* 5091 */;
+import Pressables from "Pressables" /* 6407 */;
+import AssetRegistryDefault from "AssetRegistry" /* 18618 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 5092 */;
+import createStyles from "createStyles" /* 5153 */;
 import size_mod from "module_2" /* 2 */;
 
 let c2, c3;
@@ -161,7 +161,7 @@ class AssetChooser extends PureComponent {
     const tmp10 = FastImageDefault;
     const tmp4 = React4;
     if (null == source) {
-      tmp9Result = tmp9(18300);
+      tmp9Result = tmp9(18617);
     }
     items = [, ];
     const obj3 = { source: tmp9Result, style: tmp.assetImage };
@@ -181,8 +181,8 @@ class AssetChooser extends PureComponent {
       if (!disabled) {
         const obj6 = { accessibilityRole: "button", onPress: this.handleRemoveAsset, children: metroImportDefault(LegacyText, obj7) };
         obj7 = { style: tmp.remove, children: intl2.string(intl3.t.N86XcP) };
-        LegacyText = tmp6(1200).LegacyText;
-        intl2 = tmp6(1126).intl;
+        LegacyText = tmp6(1202).LegacyText;
+        intl2 = tmp6(1128).intl;
         tmp5Result2 = tmp5(hasOwnProperty, obj6);
       }
     }

@@ -1,36 +1,36 @@
-// Module ID: 9172
-// Function ID: 9173
+// Module ID: 9409
+// Function ID: 9410
 // Name: QuestActionCreators
-// Dependencies: [5, 7388, 9173, 5964, 5282, 5963, 7391, 7393, 5972, 1085, 5975, 1295, 584, 5636, 1126, 7399, 1255, 5938, 1273, 9174, 9175, 9178, 5979, 7407, 9179, 7387, 7471, 7478, 9180, 7184, 7410, 9181, 4957, 9182, 9183, 9197, 1265, 7365, 9198, 9185, 1102, 9199, 2]
+// Dependencies: [5, 7606, 9410, 6182, 5344, 6181, 7609, 7611, 6190, 1087, 6193, 1297, 584, 5854, 1128, 7617, 1257, 6156, 1275, 9411, 9412, 9415, 6197, 7625, 9416, 7605, 7690, 7697, 9417, 7402, 7628, 9418, 5016, 9419, 9420, 9434, 1267, 7583, 9435, 9422, 1104, 9436, 2]
 // Exports: claimQuestReward, clearQuestAdDecision, completeQuestPreview, dismissProgressTrackingFailureNotice, dismissQuestActivityModal, dismissQuestContent, enrollInQuest, fetchClaimedQuests, fetchCurrentQuests, fetchEarnedQuestToDeliver, fetchQuest, fetchQuestHomeHero, fetchQuestHomeHeroPreview, fetchQuestPreview, fetchQuestRewardCode, fetchQuestToDeliver, fetchVideoTranscript, manualStopConsoleQuest, manuallyStartConsoleQuest, markAdContentSeen, markAdContentUnseen, markQuestDiscovered, overrideQuestForPlacement, questsVisibleMobileMessagesChanged, resetOptimisticProgress, resetQuestDismissibilityStatus, resetQuestPreviewStatus, resetRecentQuestCompletions, selectTaskPlatform, sendHeartbeat, setAutoEnroll, updateOptimisticProgress, updatePrevRestingQuestDockMode, updateQuestDockVisibilityEligibility, updateVideoProgress
 
-// Module 9172 (QuestActionCreators)
+// Module 9409 (QuestActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import DurationsDefault from "Durations" /* 1102 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1273 */;
-import HTTPUtils from "HTTPUtils" /* 1295 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 5938 */;
-import QuestConstants from "QuestConstants" /* 5972 */;
-import QuestTypes from "QuestTypes" /* 5975 */;
-import AdCreativeType from "AdCreativeType" /* 5979 */;
-import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 7184 */;
-import QuestDataUtils from "QuestDataUtils" /* 7387 */;
-import VideoQuestUIStore2 from "VideoQuestUIStore" /* 7393 */;
-import AnalyticsActions from "AnalyticsActions" /* 7407 */;
-import SidebarVisibilityMethodStore from "SidebarVisibilityMethodStore" /* 9173 */;
-import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 9174 */;
-import captureAdUserAction2 from "captureAdUserAction" /* 9175 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9178 */;
-import VirtualCurrencyUtils from "VirtualCurrencyUtils" /* 9179 */;
-import QuestDecisionRoundtripTrackerDefault from "QuestDecisionRoundtripTracker" /* 9180 */;
-import EarnedDecisionRoundtripTrackerDefault from "EarnedDecisionRoundtripTracker" /* 9198 */;
+import DurationsDefault from "Durations" /* 1104 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1275 */;
+import HTTPUtils from "HTTPUtils" /* 1297 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6156 */;
+import QuestConstants from "QuestConstants" /* 6190 */;
+import QuestTypes from "QuestTypes" /* 6193 */;
+import AdCreativeType from "AdCreativeType" /* 6197 */;
+import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 7402 */;
+import QuestDataUtils from "QuestDataUtils" /* 7605 */;
+import VideoQuestUIStore2 from "VideoQuestUIStore" /* 7611 */;
+import AnalyticsActions from "AnalyticsActions" /* 7625 */;
+import SidebarVisibilityMethodStore from "SidebarVisibilityMethodStore" /* 9410 */;
+import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 9411 */;
+import captureAdUserAction2 from "captureAdUserAction" /* 9412 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9415 */;
+import VirtualCurrencyUtils from "VirtualCurrencyUtils" /* 9416 */;
+import QuestDecisionRoundtripTrackerDefault from "QuestDecisionRoundtripTracker" /* 9417 */;
+import EarnedDecisionRoundtripTrackerDefault from "EarnedDecisionRoundtripTracker" /* 9435 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import AdDeliveryStore from "AdDeliveryStore" /* 7388 */;
-import ExpandedGuildFolderStore from "ExpandedGuildFolderStore" /* 5964 */;
-import NetworkStore from "NetworkStore" /* 5282 */;
-import SortedGuildStore from "SortedGuildStore" /* 5963 */;
-import QuestStore from "QuestStore" /* 7391 */;
-import Constants from "Constants" /* 1085 */;
+import AdDeliveryStore from "AdDeliveryStore" /* 7606 */;
+import ExpandedGuildFolderStore from "ExpandedGuildFolderStore" /* 6182 */;
+import NetworkStore from "NetworkStore" /* 5344 */;
+import SortedGuildStore from "SortedGuildStore" /* 6181 */;
+import QuestStore from "QuestStore" /* 7609 */;
+import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 
 let _null, _null2, bounty, closure_5, content, enabled, map, noFillAdContentId, quest, stack_trace, text, userStatus;
@@ -86,7 +86,7 @@ let obj = function _manuallyStartConsoleQuest() {
             message = undefined;
             c7 = 1;
             c8 = 1;
-            return { value: "Set", done: true };
+            return { value: "test", done: true };
           }
         } else if (1 === c7) {
           if (arg0 === 1) {
@@ -505,7 +505,7 @@ obj = function _sendHeartbeat() {
       terminal = false;
     }
     ({ executablePath: c4, executableFingerprint: c5 } = tmp59);
-    return "Set";
+    return "test";
   });
   return obj(...arguments);
 };
@@ -1010,7 +1010,7 @@ obj = function _completeQuestPreview() {
       if (closure_1 === undefined) {
         num7 = 1;
       }
-      return "Set";
+      return "test";
     })();
     iter.next();
     return iter;
@@ -1290,7 +1290,7 @@ obj = function _fetchQuestToDeliver() {
       let obj22;
       let obj26;
       let obj32;
-      let tmp176;
+      let tmp180;
       if (c9 === 2) {
         c9 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -1370,9 +1370,9 @@ obj = function _fetchQuestToDeliver() {
               prop = closure_133_1(closure_133_2[12]).dispatch;
               const self5 = this;
               const self6 = this;
-              const obj10 = { type: "QUESTS_FETCH_QUEST_TO_DELIVER_FAILURE", error: tmp176, placement };
+              const obj10 = { type: "QUESTS_FETCH_QUEST_TO_DELIVER_FAILURE", error: tmp180, placement };
               closure_133_1(closure_133_2[12]);
-              tmp176 = new closure_133_1(closure_133_2[13])(message);
+              tmp180 = new closure_133_1(closure_133_2[13])(message);
               prop(obj10);
             } else if (2 === c8) {
               if (arg0 === 1) {
@@ -1466,6 +1466,11 @@ obj = function _fetchQuestToDeliver() {
               return { value, done: true };
             } else {
               body = value.body;
+              prop = placement !== closure_133_0(closure_133_2[10]).AdPlacement.MOBILE_HOME_DOCK_AREA;
+              if (!prop) {
+                const BountiesMobileQuestBarExperiment = closure_133_0(closure_133_2[33]).BountiesMobileQuestBarExperiment;
+                prop = BountiesMobileQuestBarExperiment.getConfig({ location: "QuestActionCreators.fetchQuestToDeliver" }).enabled;
+              }
               const creative = body.creative;
               prop = undefined;
               if (creative != null) {
@@ -1474,7 +1479,6 @@ obj = function _fetchQuestToDeliver() {
               if (prop !== closure_133_0(closure_133_2[22]).AdCreativeType.BOUNTY) {
                 prop = body.creative;
               } else {
-                const BountiesMobileQuestBarExperiment = closure_133_0(closure_133_2[33]).BountiesMobileQuestBarExperiment;
                 prop = null;
               }
               obj24 = null;
@@ -1580,11 +1584,11 @@ obj = function _fetchQuestToDeliver() {
             c9 = 3;
             return { value: "IconComponent", done: null };
           }
-        } catch (tmp180) {
-          const folderExpanded = tmp180;
+        } catch (tmp184) {
+          const folderExpanded = tmp184;
           if (0 === c7) {
             c9 = 3;
-            throw tmp180;
+            throw tmp184;
           } else {
             c8 = 1;
           }
@@ -1910,7 +1914,7 @@ obj = function _fetchVideoTranscript() {
       if (closure_1 === undefined) {
         flag = false;
       }
-      return "Set";
+      return "test";
     })();
     iter.next();
     return iter;

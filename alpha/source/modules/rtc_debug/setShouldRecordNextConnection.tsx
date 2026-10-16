@@ -1,13 +1,13 @@
-// Module ID: 5224
-// Function ID: 5225
+// Module ID: 5285
+// Function ID: 5286
 // Name: setShouldRecordNextConnection
-// Dependencies: [5135, 5225, 584, 2]
+// Dependencies: [5196, 5286, 584, 2]
 // Exports: default
 
-// Module 5224 (setShouldRecordNextConnection)
+// Module 5285 (setShouldRecordNextConnection)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import trackVoiceAndVideoSettingsUpdateDefault from "trackVoiceAndVideoSettingsUpdate" /* 5225 */;
-import RTCDebugStore from "RTCDebugStore" /* 5135 */;
+import trackVoiceAndVideoSettingsUpdateDefault from "trackVoiceAndVideoSettingsUpdate" /* 5286 */;
+import RTCDebugStore from "RTCDebugStore" /* 5196 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/rtc_debug/setShouldRecordNextConnection.tsx");

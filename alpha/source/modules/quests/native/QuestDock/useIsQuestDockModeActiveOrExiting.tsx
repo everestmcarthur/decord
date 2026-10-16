@@ -1,11 +1,11 @@
-// Module ID: 15795
-// Function ID: 15796
+// Module ID: 16161
+// Function ID: 16162
 // Name: useIsQuestDockModeActiveOrExiting
-// Dependencies: [19, 15687, 558, 15688, 4850, 5378, 8395, 2]
+// Dependencies: [19, 16053, 558, 16054, 4909, 5440, 8621, 2]
 
-// Module 15795 (useIsQuestDockModeActiveOrExiting)
-import spring from "spring" /* 5378 */;
-import QuestDockConstants from "QuestDockConstants" /* 15687 */;
+// Module 16161 (useIsQuestDockModeActiveOrExiting)
+import spring from "spring" /* 5440 */;
+import QuestDockConstants from "QuestDockConstants" /* 16053 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

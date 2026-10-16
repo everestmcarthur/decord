@@ -1,38 +1,38 @@
-// Module ID: 7061
-// Function ID: 7062
+// Module ID: 7284
+// Function ID: 7285
 // Name: VoiceChannelEffectsUtils
-// Dependencies: [1390, 7060, 7062, 7063, 7064, 7065, 7066, 7067, 7068, 7069, 7070, 7071, 7072, 7073, 7074, 7075, 7076, 7077, 7078, 7079, 7080, 7081, 7082, 7083, 12, 1450, 1415, 4764, 4768, 1126, 2]
+// Dependencies: [1392, 7283, 7285, 7286, 7287, 7288, 7289, 7290, 7291, 7292, 7293, 7294, 7295, 7296, 7297, 7298, 7299, 7300, 7301, 7302, 7303, 7304, 7305, 7306, 12, 1452, 1417, 4823, 4827, 1128, 2]
 // Exports: getEffectAnnouncement, getEffectUrl, sampleAnimationId
 
-// Module 7061 (VoiceChannelEffectsUtils)
-import intl4 from "intl" /* 1126 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
-import ImageLoaderUtils from "ImageLoaderUtils" /* 1450 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4764 */;
-import _modDef7062 from "module_7062" /* 7062 */;
-import _modDef7063 from "module_7063" /* 7063 */;
-import _modDef7064 from "module_7064" /* 7064 */;
-import _modDef7065 from "module_7065" /* 7065 */;
-import _modDef7066 from "module_7066" /* 7066 */;
-import _modDef7067 from "module_7067" /* 7067 */;
-import _modDef7068 from "module_7068" /* 7068 */;
-import _modDef7069 from "module_7069" /* 7069 */;
-import _modDef7070 from "module_7070" /* 7070 */;
-import _modDef7071 from "module_7071" /* 7071 */;
-import _modDef7072 from "module_7072" /* 7072 */;
-import _modDef7073 from "module_7073" /* 7073 */;
-import _modDef7074 from "module_7074" /* 7074 */;
-import _modDef7075 from "module_7075" /* 7075 */;
-import _modDef7076 from "module_7076" /* 7076 */;
-import _modDef7077 from "module_7077" /* 7077 */;
-import _modDef7078 from "module_7078" /* 7078 */;
-import _modDef7079 from "module_7079" /* 7079 */;
-import _modDef7080 from "module_7080" /* 7080 */;
-import _modDef7081 from "module_7081" /* 7081 */;
-import _modDef7082 from "module_7082" /* 7082 */;
-import _modDef7083 from "module_7083" /* 7083 */;
-import UserStore from "UserStore" /* 1390 */;
-import VoiceChannelEffectsConstants from "VoiceChannelEffectsConstants" /* 7060 */;
+// Module 7284 (VoiceChannelEffectsUtils)
+import intl4 from "intl" /* 1128 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
+import ImageLoaderUtils from "ImageLoaderUtils" /* 1452 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4823 */;
+import _modDef7285 from "module_7285" /* 7285 */;
+import _modDef7286 from "module_7286" /* 7286 */;
+import _modDef7287 from "module_7287" /* 7287 */;
+import _modDef7288 from "module_7288" /* 7288 */;
+import _modDef7289 from "module_7289" /* 7289 */;
+import _modDef7290 from "module_7290" /* 7290 */;
+import _modDef7291 from "module_7291" /* 7291 */;
+import _modDef7292 from "module_7292" /* 7292 */;
+import _modDef7293 from "module_7293" /* 7293 */;
+import _modDef7294 from "module_7294" /* 7294 */;
+import _modDef7295 from "module_7295" /* 7295 */;
+import _modDef7296 from "module_7296" /* 7296 */;
+import _modDef7297 from "module_7297" /* 7297 */;
+import _modDef7298 from "module_7298" /* 7298 */;
+import _modDef7299 from "module_7299" /* 7299 */;
+import _modDef7300 from "module_7300" /* 7300 */;
+import _modDef7301 from "module_7301" /* 7301 */;
+import _modDef7302 from "module_7302" /* 7302 */;
+import _modDef7303 from "module_7303" /* 7303 */;
+import _modDef7304 from "module_7304" /* 7304 */;
+import _modDef7305 from "module_7305" /* 7305 */;
+import _modDef7306 from "module_7306" /* 7306 */;
+import UserStore from "UserStore" /* 1392 */;
+import VoiceChannelEffectsConstants from "VoiceChannelEffectsConstants" /* 7283 */;
 import module_12 from "module_12" /* 12 */;
 import size from "module_2" /* 2 */;
 
@@ -41,8 +41,8 @@ let src;
 let VoiceChannelEffectAnimationType;
 let closure_4;
 ({ EMOJI_SIZE: closure_4, VoiceChannelEffectAnimationType } = VoiceChannelEffectsConstants);
-const items = [_modDef7062];
-const items1 = [_modDef7063, _modDef7064, _modDef7065, _modDef7066, _modDef7067, _modDef7068, _modDef7069, _modDef7070, _modDef7071, _modDef7072, _modDef7073, _modDef7074, _modDef7075, _modDef7076, _modDef7077, _modDef7078, _modDef7079, _modDef7080, _modDef7081, _modDef7082, _modDef7083];
+const items = [_modDef7285];
+const items1 = [_modDef7286, _modDef7287, _modDef7288, _modDef7289, _modDef7290, _modDef7291, _modDef7292, _modDef7293, _modDef7294, _modDef7295, _modDef7296, _modDef7297, _modDef7298, _modDef7299, _modDef7300, _modDef7301, _modDef7302, _modDef7303, _modDef7304, _modDef7305, _modDef7306];
 const AnimationTypeToAnimations = { [VoiceChannelEffectAnimationType.BASIC]: items, [VoiceChannelEffectAnimationType.PREMIUM]: items1 };
 const memoizeResult = module_12.memoize((src) => {
   const promise = new Promise((arg0) => {
@@ -111,7 +111,7 @@ export const getEffectUrl = function getEffectUrl(emoji) {
     let str = "";
     const tmp2 = importDefault;
     if (null != byName) {
-      const tmp2Result = tmp2(4768);
+      const tmp2Result = tmp2(4827);
       str = tmp2Result.getURL(byName.surrogates);
     }
     return str;
@@ -120,28 +120,28 @@ export const getEffectUrl = function getEffectUrl(emoji) {
 export const getEffectAnnouncement = function getEffectAnnouncement(items) {
   let username2;
   let username4;
-  const f95536 = (item) => {
+  const f96439 = (item) => {
     let tmp = item[emojiName];
     if (tmp == null) {
       tmp = null;
     }
     return tmp;
   };
-  const f95537 = (item) => null != item;
+  const f96440 = (item) => null != item;
   if (items.length < 1) {
     return "";
   } else {
     let joined;
     const userId = "userId";
     const arr = module_12(items);
-    const mapped = arr.map(f95536);
-    const found = mapped.filter(f95537);
+    const mapped = arr.map(f96439);
+    const found = mapped.filter(f96440);
     const iter = found.uniq();
     const valueResult = iter.value();
     const emojiName = "emojiName";
     const arr4 = module_12(items);
-    const mapped1 = arr4.map(f95536);
-    const found1 = mapped1.filter(f95537);
+    const mapped1 = arr4.map(f96439);
+    const found1 = mapped1.filter(f96440);
     const iter2 = found1.uniq();
     const valueResult2 = iter2.value();
     if (valueResult2.length < 2) {

@@ -1,12 +1,12 @@
-// Module ID: 10502
-// Function ID: 10503
+// Module ID: 10750
+// Function ID: 10751
 // Name: useGiftCodeErrorMessage
-// Dependencies: [32, 7280, 10491, 558, 576, 504, 1126, 5633, 2]
+// Dependencies: [32, 7498, 10739, 558, 576, 504, 1128, 5851, 2]
 
-// Module 10502 (useGiftCodeErrorMessage)
+// Module 10750 (useGiftCodeErrorMessage)
 import _slicedToArray from "_slicedToArray" /* 32 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7280 */;
-import GiftCodeStore from "GiftCodeStore" /* 10491 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7498 */;
+import GiftCodeStore from "GiftCodeStore" /* 10739 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

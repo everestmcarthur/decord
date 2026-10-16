@@ -1,16 +1,16 @@
-// Module ID: 11819
-// Function ID: 11820
+// Module ID: 12097
+// Function ID: 12098
 // Name: ConjureMessageActionSheet
-// Dependencies: [19, 21, 8304, 5056, 558, 576, 6886, 4809, 1126, 5042, 6895, 3849, 11820, 6208, 11337, 11760, 11780, 6899, 2]
+// Dependencies: [19, 21, 8530, 5118, 558, 576, 7107, 4868, 1128, 5104, 7116, 3865, 12098, 6430, 11596, 12019, 12039, 7120, 2]
 // Exports: openMessageAuthorProfile, showConjureMessageActions
 
-// Module 11819 (ConjureMessageActionSheet)
-import intl6 from "intl" /* 1126 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4809 */;
-import CopyIcon from "CopyIcon" /* 5042 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5056 */;
-import ClipboardUtils from "ClipboardUtils" /* 6886 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8304 */;
+// Module 12097 (ConjureMessageActionSheet)
+import intl6 from "intl" /* 1128 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4868 */;
+import CopyIcon from "CopyIcon" /* 5104 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5118 */;
+import ClipboardUtils from "ClipboardUtils" /* 7107 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8530 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
@@ -68,7 +68,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjure
       const open = ToastActionCreatorsDefault.open;
       ToastActionCreatorsDefault;
       intl = intl6.intl;
-      open("VIBEGRATIONS_MESSAGE_COPIED", obj3);
+      open("CONJURE_MESSAGE_COPIED", obj3);
     };
     cResult[0] = content;
     cResult[1] = fn;
@@ -77,7 +77,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjure
     tmp4 = cResult[1];
   }
   if (cResult[2] !== userId) {
-    class R {
+    class C {
       constructor() {
         if (null != userId) {
           const obj = { userId: tmp };
@@ -86,9 +86,9 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjure
       }
     }
     cResult[2] = userId;
-    cResult[3] = R;
+    cResult[3] = C;
   } else {
-    class R {
+    class C {
       constructor() {
         if (null != userId) {
           const obj = { userId: tmp };
@@ -98,7 +98,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjure
     }
   }
   if (cResult[4] !== onQueuedAction) {
-    class R {
+    class C {
       constructor() {
         if (null != userId) {
           const obj = { userId: tmp };
@@ -109,7 +109,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjure
     cResult[4] = onQueuedAction;
     cResult[5] = tmp7;
   } else {
-    class R {
+    class C {
       constructor() {
         if (null != userId) {
           const obj = { userId: tmp };
@@ -402,7 +402,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjure
     const open = ToastActionCreatorsDefault.open;
     ToastActionCreatorsDefault;
     intl = intl6.intl;
-    open("VIBEGRATIONS_MESSAGE_COPIED", obj3);
+    open("CONJURE_MESSAGE_COPIED", obj3);
   }, items);
   const items2 = [onRestoreVersion];
   const callback1 = onRestoreVersion.useCallback(() => {

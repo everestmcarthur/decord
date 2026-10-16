@@ -1,12 +1,12 @@
-// Module ID: 11219
-// Function ID: 11220
+// Module ID: 10905
+// Function ID: 10906
 // Name: conjureChatHistory
-// Dependencies: [32, 11218, 11, 2]
+// Dependencies: [32, 10904, 11, 2]
 // Exports: foldDividers, messagesFromHistory
 
-// Module 11219 (conjureChatHistory)
+// Module 10905 (conjureChatHistory)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import conjureStepTimeline from "conjureStepTimeline" /* 11218 */;
+import conjureStepTimeline from "conjureStepTimeline" /* 10904 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import size from "module_2" /* 2 */;
 
@@ -141,6 +141,9 @@ function newMessageFromHistory(ts) {
   }
   if (null != ts.restore_proposal) {
     tmp.restoreProposal = ts.restore_proposal;
+  }
+  if (null != ts.app_build_request) {
+    tmp.appBuildRequest = ts.app_build_request;
   }
   if (null != ts.source_sha) {
     tmp.sourceSha = ts.source_sha;

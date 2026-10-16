@@ -1,27 +1,27 @@
-// Module ID: 8307
-// Function ID: 8308
+// Module ID: 8533
+// Function ID: 8534
 // Name: UserProfileSpeedBumpActionSheet
-// Dependencies: [32, 19, 17, 2065, 2125, 1390, 8308, 1085, 21, 5092, 587, 8310, 1126, 558, 576, 6265, 6180, 1200, 4969, 5031, 504, 8311, 6879, 6852, 8315, 8324, 1265, 8306, 8304, 8325, 6651, 5088, 5409, 5379, 6185, 2041, 6840, 6307, 2]
+// Dependencies: [32, 19, 17, 2068, 2128, 1392, 8534, 1087, 21, 5153, 587, 8536, 1128, 558, 576, 6487, 6402, 1202, 5028, 5090, 504, 8537, 7100, 7075, 8541, 8550, 1267, 8532, 8530, 8551, 6873, 5149, 5471, 5441, 6407, 2044, 7063, 6529, 2]
 
-// Module 8307 (UserProfileSpeedBumpActionSheet)
+// Module 8533 (UserProfileSpeedBumpActionSheet)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1200 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import UserSettings from "UserSettings" /* 2041 */;
-import TableRow2 from "TableRow" /* 6180 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8304 */;
-import UserActionCreators from "UserActionCreators" /* 8306 */;
-import Constants2 from "Constants" /* 8308 */;
-import AssetRegistryDefault from "AssetRegistry" /* 8310 */;
+import native from "native" /* 1202 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
+import UserSettings from "UserSettings" /* 2044 */;
+import TableRow2 from "TableRow" /* 6402 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8530 */;
+import UserActionCreators from "UserActionCreators" /* 8532 */;
+import Constants2 from "Constants" /* 8534 */;
+import AssetRegistryDefault from "AssetRegistry" /* 8536 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import GuildMemberStore from "GuildMemberStore" /* 2125 */;
-import UserStore_mod from "UserStore" /* 1390 */;
-import Constants from "Constants" /* 1085 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import GuildMemberStore from "GuildMemberStore" /* 2128 */;
+import UserStore_mod from "UserStore" /* 1392 */;
+import Constants from "Constants" /* 1087 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 5092 */;
+import createStyles_mod from "createStyles" /* 5153 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -68,19 +68,19 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Inform
   speedBumpType = speedBumpType.speedBumpType;
   if (cResult[0] !== speedBumpType) {
     if (typeof SPEEDBUMP_ROWS === "function") {
-      let obj2 = { icon: AssetRegistryDefault, text: intl.string(items(1126).t.kcuWva) };
-      intl = tmp(1126).intl;
+      let obj2 = { icon: AssetRegistryDefault, text: intl.string(items(1128).t.kcuWva) };
+      intl = tmp(1128).intl;
       items = [obj2, ];
       const obj3 = { icon: AssetRegistryDefault, text: stringResult };
       if ("block" === speedBumpType) {
-        const intl3 = tmp(1126).intl;
-        stringResult = intl3.string(tmp(1126).t.QxrDY1);
+        const intl3 = tmp(1128).intl;
+        stringResult = intl3.string(tmp(1128).t.QxrDY1);
       } else {
-        const intl2 = tmp(1126).intl;
-        stringResult = intl2.string(tmp(1126).t.W6fjkS);
+        const intl2 = tmp(1128).intl;
+        stringResult = intl2.string(tmp(1128).t.W6fjkS);
       }
       items[1] = obj3;
-      const TableRowGroup = tmp(6265).TableRowGroup;
+      const TableRowGroup = tmp(6487).TableRowGroup;
       const mapped = items.map((icon, index) => {
         let Icon;
         let obj2;
@@ -125,16 +125,16 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Inform
   let stringResult;
   let items;
   if (typeof SPEEDBUMP_ROWS === "function") {
-    let obj = { icon: AssetRegistryDefault, text: intl.string(items(1126).t.kcuWva) };
-    intl = items(1126).intl;
+    let obj = { icon: AssetRegistryDefault, text: intl.string(items(1128).t.kcuWva) };
+    intl = items(1128).intl;
     items = [obj, ];
     let obj2 = { icon: AssetRegistryDefault, text: stringResult };
     if ("block" === tmp) {
-      const intl3 = tmp4(1126).intl;
-      stringResult = intl3.string(tmp4(1126).t.QxrDY1);
+      const intl3 = tmp4(1128).intl;
+      stringResult = intl3.string(tmp4(1128).t.QxrDY1);
     } else {
-      const intl2 = tmp4(1126).intl;
-      stringResult = intl2.string(tmp4(1126).t.W6fjkS);
+      const intl2 = tmp4(1128).intl;
+      stringResult = intl2.string(tmp4(1128).t.W6fjkS);
     }
     items[1] = obj2;
     const obj3 = {
@@ -149,7 +149,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Inform
           return authStore2(TableRow, obj, index);
         })
     };
-    const TableRowGroup = tmp4(6265).TableRowGroup;
+    const TableRowGroup = tmp4(6487).TableRowGroup;
     return closure_12(TableRowGroup, obj3);
   } else {
     throw new TypeError("Trying to call a non-function");

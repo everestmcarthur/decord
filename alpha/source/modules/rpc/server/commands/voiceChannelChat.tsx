@@ -1,14 +1,14 @@
-// Module ID: 15096
-// Function ID: 15097
+// Module ID: 15466
+// Function ID: 15467
 // Name: voiceChannelChat
-// Dependencies: [5639, 1085, 10939, 15097, 10936, 2]
+// Dependencies: [5857, 1087, 11253, 15467, 11250, 2]
 
-// Module 15096 (voiceChannelChat)
-import Constants2 from "Constants" /* 5639 */;
-import RPCErrorDefault from "RPCError" /* 10936 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 10939 */;
-import toggleVoiceChannelChat from "toggleVoiceChannelChat" /* 15097 */;
-import Constants from "Constants" /* 1085 */;
+// Module 15466 (voiceChannelChat)
+import Constants2 from "Constants" /* 5857 */;
+import RPCErrorDefault from "RPCError" /* 11250 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 11253 */;
+import toggleVoiceChannelChat from "toggleVoiceChannelChat" /* 15467 */;
+import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 
 const RPC_LOCAL_SCOPE = Constants2.RPC_LOCAL_SCOPE;

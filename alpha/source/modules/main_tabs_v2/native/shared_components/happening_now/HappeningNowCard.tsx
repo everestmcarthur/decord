@@ -1,17 +1,17 @@
-// Module ID: 15905
-// Function ID: 15906
+// Module ID: 16271
+// Function ID: 16272
 // Name: HappeningNowCard
-// Dependencies: [109, 19, 17, 15904, 21, 5092, 558, 576, 6627, 4972, 6182, 5088, 2]
+// Dependencies: [109, 19, 17, 16270, 21, 5153, 558, 576, 6849, 5031, 6404, 5149, 2]
 
-// Module 15905 (HappeningNowCard)
+// Module 16271 (HappeningNowCard)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 6627 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 6849 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
-import HappeningNowConstants from "HappeningNowConstants" /* 15904 */;
+import HappeningNowConstants from "HappeningNowConstants" /* 16270 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 5092 */;
+import createStyles_mod from "createStyles" /* 5153 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -33,9 +33,9 @@ let metroImportAll;
 let obj2;
 let tmp;
 let unpackModuleId;
-const useColorThemeBackgroundDefault = tmp(4972);
-const Text_Text = tmp(5088);
-const Card_Card = tmp(6182);
+const useColorThemeBackgroundDefault = tmp(5031);
+const Text_Text = tmp(5149);
+const Card_Card = tmp(6404);
 let closure_3 = ["children", "noMargin", "displayNameFont"];
 let closure_4 = ["children", "variant"];
 const View = react_native.View;

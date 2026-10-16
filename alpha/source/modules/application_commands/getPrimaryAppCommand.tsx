@@ -1,19 +1,19 @@
-// Module ID: 10859
-// Function ID: 10860
+// Module ID: 11179
+// Function ID: 11180
 // Name: getPrimaryAppCommand
-// Dependencies: [5, 19, 2065, 9248, 1998, 9254, 558, 576, 9252, 9235, 2]
+// Dependencies: [5, 19, 2068, 9484, 2000, 9490, 558, 576, 9488, 9471, 2]
 // Exports: default, isPrimaryAppCommandUsableInAppDM
 
-// Module 10859 (getPrimaryAppCommand)
+// Module 11179 (getPrimaryAppCommand)
 import react2 from "react" /* 576 */;
-import Server from "Server" /* 1998 */;
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9235 */;
-import ApplicationCommandIndexActionCreators from "ApplicationCommandIndexActionCreators" /* 9252 */;
-import ApplicationCommandQueryTypes from "ApplicationCommandQueryTypes" /* 9254 */;
+import Server from "Server" /* 2000 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9471 */;
+import ApplicationCommandIndexActionCreators from "ApplicationCommandIndexActionCreators" /* 9488 */;
+import ApplicationCommandQueryTypes from "ApplicationCommandQueryTypes" /* 9490 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import react from "react" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import ApplicationCommandIndexStore_mod from "ApplicationCommandIndexStore" /* 9248 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import ApplicationCommandIndexStore_mod from "ApplicationCommandIndexStore" /* 9484 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -218,12 +218,12 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsPrimary
         let hasItem = null != tmp4.integration_types;
         if (hasItem) {
           const integration_types = tmp4.integration_types;
-          hasItem = integration_types.includes(tmp(9235).ApplicationIntegrationType.USER_INSTALL);
+          hasItem = integration_types.includes(tmp(9471).ApplicationIntegrationType.USER_INSTALL);
         }
         let hasItem1 = null != tmp4.contexts;
         if (hasItem1) {
           const contexts = tmp4.contexts;
-          hasItem1 = contexts.includes(tmp(1998).InteractionContextType.BOT_DM);
+          hasItem1 = contexts.includes(tmp(2000).InteractionContextType.BOT_DM);
         }
         if (hasItem) {
           hasItem = hasItem1;

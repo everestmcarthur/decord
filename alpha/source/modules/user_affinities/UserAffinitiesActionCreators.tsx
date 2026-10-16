@@ -1,15 +1,16 @@
-// Module ID: 8717
-// Function ID: 8718
+// Module ID: 8941
+// Function ID: 8942
 // Name: UserAffinitiesActionCreators
-// Dependencies: [5932, 7348, 1085, 584, 1295, 2]
-// Exports: fetchUserAffinitiesV2
+// Dependencies: [6150, 7566, 1087, 584, 1297, 8942, 2]
+// Exports: fetchUserAffinitiesV2, setDevToolsUserAffinityOverride
 
-// Module 8717 (UserAffinitiesActionCreators)
+// Module 8941 (UserAffinitiesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import HTTPUtils from "HTTPUtils" /* 1295 */;
-import ConsentStore from "ConsentStore" /* 5932 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7348 */;
-import Constants from "Constants" /* 1085 */;
+import HTTPUtils from "HTTPUtils" /* 1297 */;
+import UserAffinitiesTypes from "UserAffinitiesTypes" /* 8942 */;
+import ConsentStore from "ConsentStore" /* 6150 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7566 */;
+import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 
 let body;
@@ -100,4 +101,15 @@ export const fetchUserAffinitiesV2 = function fetchUserAffinitiesV2() {
     return nextPromise;
   }
   nextPromise = Promise.resolve();
+};
+export const setDevToolsUserAffinityOverride = function setDevToolsUserAffinityOverride(userId) {
+  let tmp3 = null;
+  const dispatch = DispatcherDefault.dispatch;
+  DispatcherDefault;
+  if (null != userId) {
+    const obj = { otherUserId: userId.userId, userSegment: UserAffinitiesTypes.AffineUserSegment.HFU_MAU, otherUserSegment: UserAffinitiesTypes.AffineUserSegment.HFU_MAU, isFriend: false, dmProbability: null, dmRank: 1, vcProbability: null, vcRank: 1, serverMessageProbability: 0, serverMessageRank: 1, communicationProbability: null, communicationRank: 1 };
+    ({ communicationProbability: obj.dmProbability, vcProbability: obj.vcProbability, communicationProbability: obj.communicationProbability } = userId);
+    tmp3 = obj;
+  }
+  dispatch({ type: "DEV_TOOLS_SET_USER_AFFINITY_OVERRIDE", override: tmp3 });
 };

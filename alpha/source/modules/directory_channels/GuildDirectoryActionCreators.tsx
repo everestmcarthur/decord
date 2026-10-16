@@ -1,18 +1,18 @@
-// Module ID: 12530
-// Function ID: 12531
+// Module ID: 12885
+// Function ID: 12886
 // Name: GuildDirectoryActionCreators
-// Dependencies: [5, 12517, 12519, 1085, 551, 584, 1295, 5938, 1273, 2]
+// Dependencies: [5, 12872, 12874, 1087, 551, 584, 1297, 6156, 1275, 2]
 // Exports: addDirectoryGuildEntry, clearDirectorySearch, fetchGuildEntriesForIds, removeDirectoryGuildEntry, selectDirectoryCategory, updateDirectoryEntry
 
-// Module 12530 (GuildDirectoryActionCreators)
+// Module 12885 (GuildDirectoryActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import Constants from "Constants" /* 1085 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1273 */;
-import HTTPUtils from "HTTPUtils" /* 1295 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 5938 */;
-import GuildDirectoryConstants from "GuildDirectoryConstants" /* 12519 */;
+import Constants from "Constants" /* 1087 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1275 */;
+import HTTPUtils from "HTTPUtils" /* 1297 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6156 */;
+import GuildDirectoryConstants from "GuildDirectoryConstants" /* 12874 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import GuildDirectorySearchStore from "GuildDirectorySearchStore" /* 12517 */;
+import GuildDirectorySearchStore from "GuildDirectorySearchStore" /* 12872 */;
 import debounce_mod from "debounce" /* 551 */;
 import size from "module_2" /* 2 */;
 
@@ -48,7 +48,7 @@ let obj = function _addDirectoryGuildEntry() {
       if (closure_3 === undefined) {
         UNCATEGORIZED = constants.UNCATEGORIZED;
       }
-      return "Set";
+      return "test";
     })();
     iter.next();
     return iter;
@@ -81,7 +81,7 @@ obj = function _updateDirectoryEntry() {
       if (closure_3 === undefined) {
         UNCATEGORIZED = constants.UNCATEGORIZED;
       }
-      return "Set";
+      return "test";
     })();
     iter.next();
     return iter;

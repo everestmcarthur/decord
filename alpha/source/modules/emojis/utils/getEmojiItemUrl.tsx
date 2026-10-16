@@ -1,11 +1,11 @@
-// Module ID: 9515
-// Function ID: 9516
+// Module ID: 9751
+// Function ID: 9752
 // Name: getEmojiItemUrl
-// Dependencies: [1415, 2]
+// Dependencies: [1417, 2]
 // Exports: default
 
-// Module 9515 (getEmojiItemUrl)
-import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
+// Module 9751 (getEmojiItemUrl)
+import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/emojis/utils/getEmojiItemUrl.tsx");

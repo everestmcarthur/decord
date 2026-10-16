@@ -1,17 +1,17 @@
-// Module ID: 15091
-// Function ID: 15092
+// Module ID: 15461
+// Function ID: 15462
 // Name: soundboard
-// Dependencies: [5, 5428, 1390, 5639, 1096, 8458, 7048, 7049, 10939, 7085, 7056, 10936, 7087, 6879, 2]
+// Dependencies: [5, 5490, 1392, 5857, 1098, 8684, 7271, 7272, 11253, 7308, 7279, 11250, 7310, 7100, 2]
 
-// Module 15091 (soundboard)
-import SoundboardActionCreators from "SoundboardActionCreators" /* 7048 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 8458 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 10939 */;
+// Module 15461 (soundboard)
+import SoundboardActionCreators from "SoundboardActionCreators" /* 7271 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 8684 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 11253 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import SoundboardStore from "SoundboardStore" /* 5428 */;
-import UserStore from "UserStore" /* 1390 */;
-import Constants_mod from "Constants" /* 5639 */;
-import Constants_mod2 from "Constants" /* 1096 */;
+import SoundboardStore from "SoundboardStore" /* 5490 */;
+import UserStore from "UserStore" /* 1392 */;
+import Constants_mod from "Constants" /* 5857 */;
+import Constants_mod2 from "Constants" /* 1098 */;
 import size from "module_2" /* 2 */;
 
 let c2, c3, id;

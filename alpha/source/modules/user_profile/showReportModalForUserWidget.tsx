@@ -1,12 +1,12 @@
-// Module ID: 13709
-// Function ID: 13710
+// Module ID: 14075
+// Function ID: 14076
 // Name: showReportModalForUserWidget
-// Dependencies: [5440, 7326, 7722, 6853, 2]
+// Dependencies: [5502, 7544, 7941, 6286, 2]
 // Exports: showReportModalForUserWidget
 
-// Module 13709 (showReportModalForUserWidget)
-import ReportModals from "ReportModals" /* 7722 */;
-import ApplicationStore from "ApplicationStore" /* 5440 */;
+// Module 14075 (showReportModalForUserWidget)
+import ReportModals from "ReportModals" /* 7941 */;
+import ApplicationStore from "ApplicationStore" /* 5502 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -27,11 +27,11 @@ export const showReportModalForUserWidget = function showReportModalForUserWidge
     let obj2 = ApplicationStore;
     if (ApplicationStore.isHydrated(applicationId)) {
       let application = obj2.getApplication(applicationId);
-      let prop;
+      let conjureProjectId;
       if (application != null) {
-        prop = application.vibegrationsProjectId;
+        conjureProjectId = application.conjureProjectId;
       }
-      if (null != prop) {
+      if (null != conjureProjectId) {
         let obj = { application, entrypoint: user_profile_widget };
         const tmpResult = tmp(tmp2[2]);
         let result = tmpResult.showReportModalForApp(obj);
@@ -44,13 +44,13 @@ export const showReportModalForUserWidget = function showReportModalForUserWidge
       const application1 = obj3.fetchApplication(applicationId);
       const nextPromise = application1.then(() => {
         const application = ApplicationStore.getApplication(applicationId);
-        let prop;
+        let conjureProjectId;
         const tmp = userId;
         const tmp2 = widget;
         if (application != null) {
-          prop = application.vibegrationsProjectId;
+          conjureProjectId = application.conjureProjectId;
         }
-        if (null != prop) {
+        if (null != conjureProjectId) {
           const obj3 = { application, entrypoint: user_profile_widget };
           const obj2 = ReportModals;
           const result = obj2.showReportModalForApp(obj3);

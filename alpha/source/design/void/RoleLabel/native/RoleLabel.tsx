@@ -1,17 +1,17 @@
-// Module ID: 9725
-// Function ID: 9726
+// Module ID: 9959
+// Function ID: 9960
 // Name: RoleLabel
-// Dependencies: [19, 17, 5081, 21, 5092, 558, 576, 504, 1200, 8580, 2]
+// Dependencies: [19, 17, 5143, 21, 5153, 558, 576, 504, 1202, 8808, 2]
 
-// Module 9725 (RoleLabel)
+// Module 9959 (RoleLabel)
 import react_native from "react-native" /* 17 */;
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
-import Form from "Form" /* 8580 */;
+import Form from "Form" /* 8808 */;
 import react from "react" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5081 */;
+import AccessibilityStore from "AccessibilityStore" /* 5143 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 5092 */;
+import createStyles from "createStyles" /* 5153 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -109,7 +109,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function RoleLabel(ar
   let tmp14 = "dot" === stateFromStores && null != color;
   if (tmp14) {
     const obj6 = { color, colors, containerStyles: tmp4.roleDot };
-    tmp14 = React3(tmp(1200).RoleDot, obj6);
+    tmp14 = React3(tmp(1202).RoleDot, obj6);
   }
   cResult[5] = color;
   cResult[6] = colors;
@@ -138,7 +138,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function RoleLabel(ar
   }
   if (tmp10) {
     const obj4 = { color, colors, containerStyles: tmp.roleDot };
-    tmp10 = React3(tmp2(1200).RoleDot, obj4);
+    tmp10 = React3(tmp2(1202).RoleDot, obj4);
   }
   items1 = [tmp10, React3(Form.FormLabel, { style: {}, text: name })];
   return tmp8(tmp9, obj3);

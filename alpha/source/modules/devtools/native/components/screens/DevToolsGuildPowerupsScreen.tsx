@@ -1,29 +1,29 @@
-// Module ID: 16388
-// Function ID: 16389
+// Module ID: 16697
+// Function ID: 16698
 // Name: DevToolsGuildPowerupsScreen
-// Dependencies: [5, 19, 17, 1244, 12813, 2087, 4939, 16389, 1085, 21, 5092, 587, 1295, 4702, 8027, 12739, 558, 576, 16235, 6896, 12745, 2046, 2049, 1631, 504, 5088, 6180, 6265, 2]
+// Dependencies: [5, 19, 17, 1246, 13172, 2090, 4998, 16698, 1087, 21, 5153, 587, 1297, 4761, 8249, 13098, 558, 576, 16601, 7117, 13104, 2049, 2052, 1633, 504, 5149, 6402, 6487, 2]
 
-// Module 16388 (DevToolsGuildPowerupsScreen)
+// Module 16697 (DevToolsGuildPowerupsScreen)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Constants from "Constants" /* 1085 */;
-import HTTPUtils from "HTTPUtils" /* 1295 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
-import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 2046 */;
-import dismissible_content from "dismissible_content" /* 2049 */;
-import _modDef4702 from "module_4702" /* 4702 */;
-import GuildDismissibleContentUtils from "GuildDismissibleContentUtils" /* 12745 */;
-import toggleDismissibleContentDismissStateDefault from "toggleDismissibleContentDismissState" /* 16235 */;
+import Constants from "Constants" /* 1087 */;
+import HTTPUtils from "HTTPUtils" /* 1297 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
+import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 2049 */;
+import dismissible_content from "dismissible_content" /* 2052 */;
+import _modDef4761 from "module_4761" /* 4761 */;
+import GuildDismissibleContentUtils from "GuildDismissibleContentUtils" /* 13104 */;
+import toggleDismissibleContentDismissStateDefault from "toggleDismissibleContentDismissState" /* 16601 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1244 */;
-import AppliedGuildBoostStore from "AppliedGuildBoostStore" /* 12813 */;
-import GuildStore from "GuildStore" /* 2087 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4939 */;
-import DevToolsGuildPowerupsConstants from "DevToolsGuildPowerupsConstants" /* 16389 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1246 */;
+import AppliedGuildBoostStore from "AppliedGuildBoostStore" /* 13172 */;
+import GuildStore from "GuildStore" /* 2090 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4998 */;
+import DevToolsGuildPowerupsConstants from "DevToolsGuildPowerupsConstants" /* 16698 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 5092 */;
+import createStyles_mod from "createStyles" /* 5153 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -42,7 +42,7 @@ let obj3;
 let obj4;
 let tmp;
 let unpackModuleId;
-const TableSwitchRow2 = tmp(6896);
+const TableSwitchRow2 = tmp(7117);
 function setWarningBoosts() {
   return obj(...arguments);
 }
@@ -85,7 +85,7 @@ let obj = function _setWarningBoosts() {
             const patch = HTTP.patch;
             addResult = null;
             if (!closure_2) {
-              const obj4 = _modDef4702();
+              const obj4 = _modDef4761();
               addResult = obj4.add(1, "day");
             }
             c5 = 1;
@@ -219,7 +219,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserDC
       return tmp10;
     }
   }
-  const tmp11 = closure_17(TableSwitchRow2.TableSwitchRow, { label: tmp7, value: isDismissed, onValueChange: handleToggleDismissState });
+  const tmp11 = trackedExposureExperiments(TableSwitchRow2.TableSwitchRow, { label: tmp7, value: isDismissed, onValueChange: handleToggleDismissState });
   cResult[4] = handleToggleDismissState;
   cResult[5] = isDismissed;
   cResult[6] = tmp7;
@@ -233,7 +233,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserDC
   obj = { label: authStore3(dc), value: isDismissed, onValueChange: handleToggleDismissState };
   toggleDismissibleContentDismissStateDefault(dc);
   const TableSwitchRow = TableSwitchRow2.TableSwitchRow;
-  return closure_17(TableSwitchRow, obj);
+  return trackedExposureExperiments(TableSwitchRow, obj);
 });
 ReactCompilerGating = ReactCompilerGating_mod;
 let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildDCSwitchRow(dc) {
@@ -267,7 +267,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildD
       }
     }
     let obj2 = { label: tmp5, value: isDismissed, onValueChange: tmp4 };
-    const tmp10 = closure_17(tmp(6896).TableSwitchRow, obj2);
+    const tmp10 = closure_17(tmp(7117).TableSwitchRow, obj2);
     cResult[5] = tmp4;
     cResult[6] = isDismissed;
     cResult[7] = tmp5;
@@ -308,7 +308,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildD
     }
   }, items);
   obj = { label: closure_14(dc), value: isDismissed, onValueChange: callback };
-  const TableSwitchRow = dc(6896).TableSwitchRow;
+  const TableSwitchRow = dc(7117).TableSwitchRow;
   return closure_17(TableSwitchRow, obj);
 });
 ReactCompilerGating = ReactCompilerGating_mod;
@@ -998,7 +998,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function DevToolsGuil
               }
               const mapped = closure_12.map((dc) => {
                 obj = { dc, guildId: stateFromStores, isDismissed: stateFromStoresArray.includes(dc) };
-                return closure_17(closure_25, obj, dc);
+                return trackedExposureExperiments(closure_25, obj, dc);
               });
               cResult[40] = stateFromStores;
               cResult[41] = stateFromStoresArray;
@@ -1006,7 +1006,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function DevToolsGuil
             }
             const mapped1 = closure_11.map((dc) => {
               obj = { dc, guildId: stateFromStores, isDismissed: stateFromStoresArray.includes(dc) };
-              return closure_17(closure_25, obj, dc);
+              return trackedExposureExperiments(closure_25, obj, dc);
             });
             cResult[35] = stateFromStores;
             cResult[36] = stateFromStoresArray;
@@ -1107,7 +1107,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function DevToolsGuil
     return items;
   });
   if (null == stateFromStores) {
-    const obj5 = { style: items4, children: closure_17(stateFromStores(5088).Text, { variant: "heading-md/semibold", color: "text-muted", children: "No guild selected" }) };
+    const obj5 = { style: items4, children: closure_17(stateFromStores(5149).Text, { variant: "heading-md/semibold", color: "text-muted", children: "No guild selected" }) };
     items4 = [, ];
     ({ container: arr7[0], noGuildContainer: arr7[1] } = tmp);
     tmp15Result = closure_17(closure_6, obj5);
@@ -1117,13 +1117,13 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function DevToolsGuil
     items5[1] = { paddingBottom: tmp4.bottom + nativeDefault.space.PX_16 };
     let str = stateFromStores1;
     const obj7 = { paddingBottom: tmp4.bottom + nativeDefault.space.PX_16 };
-    const TableRowGroup6 = tmp5(6265).TableRowGroup;
+    const TableRowGroup6 = tmp5(6487).TableRowGroup;
     const tmp16 = closure_5;
     if (stateFromStores1 == null) {
       str = "Unknown";
     }
     const _HermesInternal = HermesInternal;
-    const obj8 = { title: "Current Guild: " + str, hasIcons: false, children: closure_17(stateFromStores(6180).TableRow, obj9) };
+    const obj8 = { title: "Current Guild: " + str, hasIcons: false, children: closure_17(stateFromStores(6402).TableRow, obj9) };
     obj9 = {
       label: "Reset Notification Indicators",
       onPress() {
@@ -1133,21 +1133,21 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function DevToolsGuil
     };
     items6 = [closure_17(TableRowGroup6, obj8), , , , , ];
     const obj10 = { title: "Warning State", hasIcons: false, children: items7 };
-    const TableRowGroup = tmp5(6265).TableRowGroup;
+    const TableRowGroup = tmp5(6487).TableRowGroup;
     const obj11 = {
       label: "Set Half Boosts expiring in 1 day",
       onPress() {
           return setWarningBoosts(stateFromStores, closure_2.slice(Math.floor(closure_2.length / 2)), false);
         }
     };
-    items7 = [closure_17(tmp5(6180).TableRow, obj11), ];
+    items7 = [closure_17(tmp5(6402).TableRow, obj11), ];
     const obj12 = {
       label: "Reset End Date",
       onPress() {
           return setWarningBoosts(stateFromStores, closure_2, true);
         }
     };
-    items7[1] = closure_17(stateFromStores(6180).TableRow, obj12);
+    items7[1] = closure_17(stateFromStores(6402).TableRow, obj12);
     items6[1] = closure_18(TableRowGroup, obj10);
     const obj13 = {
       title: "User Level DCs",
@@ -1157,30 +1157,30 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function DevToolsGuil
           return closure_1_17(closure_1_24, obj, dc);
         })
     };
-    const TableRowGroup2 = tmp5(6265).TableRowGroup;
+    const TableRowGroup2 = tmp5(6487).TableRowGroup;
     items6[2] = closure_17(TableRowGroup2, obj13);
     const obj14 = {
       title: "Guild Level DCs",
       hasIcons: false,
       children: closure_11.map((dc) => {
           obj = { dc, guildId: stateFromStores, isDismissed: closure_1.includes(dc) };
-          return closure_17(closure_25, obj, dc);
+          return trackedExposureExperiments(closure_25, obj, dc);
         })
     };
-    const TableRowGroup3 = tmp5(6265).TableRowGroup;
+    const TableRowGroup3 = tmp5(6487).TableRowGroup;
     items6[3] = closure_17(TableRowGroup3, obj14);
     const obj15 = {
       title: "Server Tag Guild Level DCs",
       hasIcons: false,
       children: closure_12.map((dc) => {
           obj = { dc, guildId: stateFromStores, isDismissed: closure_1.includes(dc) };
-          return closure_17(closure_25, obj, dc);
+          return trackedExposureExperiments(closure_25, obj, dc);
         })
     };
-    const TableRowGroup4 = tmp5(6265).TableRowGroup;
+    const TableRowGroup4 = tmp5(6487).TableRowGroup;
     items6[4] = closure_17(TableRowGroup4, obj15);
-    const obj16 = { title: "System Messages", hasIcons: false, children: closure_17(stateFromStores(6180).TableRow, obj17) };
-    const TableRowGroup5 = tmp5(6265).TableRowGroup;
+    const obj16 = { title: "System Messages", hasIcons: false, children: closure_17(stateFromStores(6402).TableRow, obj17) };
+    const TableRowGroup5 = tmp5(6487).TableRowGroup;
     obj17 = {
       label: "Send Powerups System Message",
       onPress() {

@@ -1,19 +1,19 @@
-// Module ID: 9243
-// Function ID: 9244
+// Module ID: 9479
+// Function ID: 9480
 // Name: IntegrationTypeSelector
-// Dependencies: [19, 17, 21, 5092, 587, 558, 576, 1415, 9235, 5032, 1126, 9244, 6157, 5088, 9246, 6265, 6180, 1200, 2]
+// Dependencies: [19, 17, 21, 5153, 587, 558, 576, 1417, 9471, 5094, 1128, 9480, 5091, 5149, 9482, 6487, 6402, 1202, 2]
 
-// Module 9243 (IntegrationTypeSelector)
+// Module 9479 (IntegrationTypeSelector)
 import nativeDefault from "native" /* 587 */;
-import intl5 from "intl" /* 1126 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
-import UserPlusIcon from "UserPlusIcon" /* 5032 */;
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9235 */;
-import ServerIcon from "ServerIcon" /* 9244 */;
+import intl5 from "intl" /* 1128 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
+import UserPlusIcon from "UserPlusIcon" /* 5094 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9471 */;
+import ServerIcon from "ServerIcon" /* 9480 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 5092 */;
+import createStyles_mod from "createStyles" /* 5153 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

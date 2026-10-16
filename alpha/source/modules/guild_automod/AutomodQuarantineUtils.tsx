@@ -1,23 +1,23 @@
-// Module ID: 12225
-// Function ID: 12226
+// Module ID: 12519
+// Function ID: 12520
 // Name: AutomodQuarantineUtils
-// Dependencies: [19, 10578, 502, 2125, 2087, 4750, 4939, 1085, 4736, 1095, 558, 576, 4756, 573, 1126, 10642, 10643, 7094, 2]
+// Dependencies: [19, 10826, 502, 2128, 2090, 4809, 4998, 1087, 4795, 1097, 558, 576, 4815, 573, 1128, 10890, 10891, 7317, 2]
 
-// Module 12225 (AutomodQuarantineUtils)
-import UserSettingsConstants from "UserSettingsConstants" /* 1095 */;
-import intl4 from "intl" /* 1126 */;
-import GuildMemberConstants from "GuildMemberConstants" /* 4736 */;
-import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4756 */;
-import openUserSettings2 from "openUserSettings" /* 7094 */;
-import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 10643 */;
+// Module 12519 (AutomodQuarantineUtils)
+import UserSettingsConstants from "UserSettingsConstants" /* 1097 */;
+import intl4 from "intl" /* 1128 */;
+import GuildMemberConstants from "GuildMemberConstants" /* 4795 */;
+import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4815 */;
+import openUserSettings2 from "openUserSettings" /* 7317 */;
+import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 10891 */;
 import react from "react" /* 19 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 10578 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 10826 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberStore from "GuildMemberStore" /* 2125 */;
-import GuildStore from "GuildStore" /* 2087 */;
-import PermissionStore from "PermissionStore" /* 4750 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4939 */;
-import Constants from "Constants" /* 1085 */;
+import GuildMemberStore from "GuildMemberStore" /* 2128 */;
+import GuildStore from "GuildStore" /* 2090 */;
+import PermissionStore from "PermissionStore" /* 4809 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4998 */;
+import Constants from "Constants" /* 1087 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -113,7 +113,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildAu
       if (closure_0 == null) {
         guildId = SelectedGuildStore.getGuildId();
       }
-      const obj = { nick: "kind", bio: "apply" };
+      const obj = { nick: "Array", bio: "test" };
       const guild = GuildStore.getGuild(guildId);
       if (null != guild) {
         if (null != guildId) {
@@ -130,10 +130,10 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildAu
             if (automodQuarantinedProfileFlags.has(GuildMemberFlags.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME)) {
               let items1;
               if (null == tmp) {
-                const intl2 = tmp8(1126).intl;
+                const intl2 = tmp8(1128).intl;
                 const formatToPlainString = intl2.formatToPlainString;
                 let str = guild.name;
-                const WBUh3O = tmp8(1126).t.WBUh3O;
+                const WBUh3O = tmp8(1128).t.WBUh3O;
                 if (str == null) {
                   str = "";
                 }
@@ -141,13 +141,13 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildAu
                 const items = [formatToPlainString(WBUh3O, obj2)];
                 items1 = items;
               } else {
-                const intl = tmp8(1126).intl;
+                const intl = tmp8(1128).intl;
                 items1 = [intl.string(intl4.t.EPZCrM)];
               }
               obj.nick = items1;
             }
             if (automodQuarantinedProfileFlags.has(tmp11.AUTOMOD_QUARANTINED_BIO)) {
-              const intl3 = tmp8(1126).intl;
+              const intl3 = tmp8(1128).intl;
               const items2 = [intl3.string(intl4.t.dZh1vz)];
               obj.bio = items2;
             }
@@ -181,7 +181,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildAu
     if (closure_0 == null) {
       guildId = SelectedGuildStore.getGuildId();
     }
-    const obj = { nick: "kind", bio: "apply" };
+    const obj = { nick: "Array", bio: "test" };
     const guild = GuildStore.getGuild(guildId);
     if (null != guild) {
       if (null != guildId) {
@@ -198,10 +198,10 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildAu
           if (automodQuarantinedProfileFlags.has(GuildMemberFlags.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME)) {
             let items1;
             if (null == tmp) {
-              const intl2 = tmp8(1126).intl;
+              const intl2 = tmp8(1128).intl;
               const formatToPlainString = intl2.formatToPlainString;
               let str = guild.name;
-              const WBUh3O = tmp8(1126).t.WBUh3O;
+              const WBUh3O = tmp8(1128).t.WBUh3O;
               if (str == null) {
                 str = "";
               }
@@ -209,13 +209,13 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildAu
               const items = [formatToPlainString(WBUh3O, obj2)];
               items1 = items;
             } else {
-              const intl = tmp8(1126).intl;
+              const intl = tmp8(1128).intl;
               items1 = [intl.string(intl4.t.EPZCrM)];
             }
             obj.nick = items1;
           }
           if (automodQuarantinedProfileFlags.has(tmp11.AUTOMOD_QUARANTINED_BIO)) {
-            const intl3 = tmp8(1126).intl;
+            const intl3 = tmp8(1128).intl;
             const items2 = [intl3.string(intl4.t.dZh1vz)];
             obj.bio = items2;
           }

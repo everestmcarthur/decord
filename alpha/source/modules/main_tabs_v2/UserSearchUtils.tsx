@@ -1,16 +1,16 @@
-// Module ID: 7350
-// Function ID: 7351
+// Module ID: 7568
+// Function ID: 7569
 // Name: UserSearchUtils
-// Dependencies: [7351, 2125, 4760, 1085, 2031, 4962, 2]
+// Dependencies: [7569, 2128, 4819, 1087, 2034, 5021, 2]
 // Exports: cleanString, getNames, getRelationshipType
 
-// Module 7350 (UserSearchUtils)
-import Constants from "Constants" /* 1085 */;
-import StringUtils from "StringUtils" /* 2031 */;
-import UserUtilsDefault from "UserUtils" /* 4962 */;
-import FriendSuggestionStore from "FriendSuggestionStore" /* 7351 */;
-import GuildMemberStore from "GuildMemberStore" /* 2125 */;
-import RelationshipStore from "RelationshipStore" /* 4760 */;
+// Module 7568 (UserSearchUtils)
+import Constants from "Constants" /* 1087 */;
+import StringUtils from "StringUtils" /* 2034 */;
+import UserUtilsDefault from "UserUtils" /* 5021 */;
+import FriendSuggestionStore from "FriendSuggestionStore" /* 7569 */;
+import GuildMemberStore from "GuildMemberStore" /* 2128 */;
+import RelationshipStore from "RelationshipStore" /* 4819 */;
 import size from "module_2" /* 2 */;
 
 const RelationshipTypes = Constants.RelationshipTypes;
@@ -37,7 +37,7 @@ export const getNames = function getNames(user) {
   const nick = RelationshipStore.getNickname(user.id);
   if (null != nick) {
     const tmp = names;
-    const obj3 = names(2031);
+    const obj3 = names(2034);
     let str = obj3.stripDiacritics(nick.toLocaleLowerCase());
     let str2 = str.trim();
     names[nick] = str2.split(" ");
@@ -46,14 +46,14 @@ export const getNames = function getNames(user) {
   const globalName = obj4.getGlobalName(user);
   const tmp4 = null != globalName && null == names[globalName];
   if (tmp4) {
-    const obj6 = names(2031);
+    const obj6 = names(2034);
     const str4 = obj6.stripDiacritics(globalName.toLocaleLowerCase());
     const str5 = str4.trim();
     names[globalName] = str5.split(" ");
   }
   const username2 = user.username;
   const username = user.username;
-  const obj7 = names(2031);
+  const obj7 = names(2034);
   const str7 = obj7.stripDiacritics(username2.toLocaleLowerCase());
   const str8 = str7.trim();
   names[username] = str8.split(" ");

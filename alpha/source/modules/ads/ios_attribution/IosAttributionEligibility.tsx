@@ -1,17 +1,17 @@
-// Module ID: 13451
-// Function ID: 13452
+// Module ID: 13812
+// Function ID: 13813
 // Name: IosAttributionEligibility
-// Dependencies: [9162, 1382, 7387, 13452, 2]
+// Dependencies: [9399, 1384, 7605, 13813, 2]
 // Exports: getIosAttributionClickFramework, isCampaignIosAttributionEnabled, isIosAttributionEligible
 
-// Module 13451 (IosAttributionEligibility)
-import QuestDataUtils from "QuestDataUtils" /* 7387 */;
-import apexExperiment from "apexExperiment" /* 9162 */;
-import IosAttributionNativeModule from "IosAttributionNativeModule" /* 13452 */;
+// Module 13812 (IosAttributionEligibility)
+import QuestDataUtils from "QuestDataUtils" /* 7605 */;
+import apexExperiment from "apexExperiment" /* 9399 */;
+import IosAttributionNativeModule from "IosAttributionNativeModule" /* 13813 */;
 import size from "module_2" /* 2 */;
 
 let tmp;
-const PlatformUtils = tmp(1382);
+const PlatformUtils = tmp(1384);
 const result = size.fileFinishedImporting("modules/ads/ios_attribution/IosAttributionEligibility.tsx");
 
 export const isIosAttributionEligible = function isIosAttributionEligible() {

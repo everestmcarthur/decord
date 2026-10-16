@@ -1,14 +1,14 @@
-// Module ID: 13207
-// Function ID: 13208
+// Module ID: 13564
+// Function ID: 13565
 // Name: ChannelSortingUtils
-// Dependencies: [2069, 1085, 12646, 6802, 2]
+// Dependencies: [2072, 1087, 13001, 7024, 2]
 // Exports: areTypesInSameSection, getChannelPlacementUpdates, getDropData, getSectionSiblings
 
-// Module 13207 (ChannelSortingUtils)
-import getFlattedChannelListDefault from "getFlattedChannelList" /* 6802 */;
-import DragAndDropUtilsDefault from "DragAndDropUtils" /* 12646 */;
-import ChannelRecord from "ChannelRecord" /* 2069 */;
-import Constants from "Constants" /* 1085 */;
+// Module 13564 (ChannelSortingUtils)
+import getFlattedChannelListDefault from "getFlattedChannelList" /* 7024 */;
+import DragAndDropUtilsDefault from "DragAndDropUtils" /* 13001 */;
+import ChannelRecord from "ChannelRecord" /* 2072 */;
+import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -216,7 +216,6 @@ function getChannelMoveUpdates(localChannel, channel, parentId, channels) {
     items = collectUpdatesResult;
   }
   if (num11(localChannel.type)) {
-    let tmp9 = importDefault;
     let tmp12 = _categories;
     const tmp11 = require("getFlattedChannelList");
     if (items.length > 0) {
@@ -513,8 +512,8 @@ export const getDropData = function getDropData(localChannel, arg1, localChannel
               if (tmp53.channel.id !== localChannel.id) {
                 let tmp55;
                 if (null == channelList[num17 + 1]) {
-                  tmp55 = { referenceId: tmp53.channel.id, parentId: null };
-                  const obj2 = { referenceId: tmp53.channel.id, parentId: null };
+                  let obj2 = { referenceId: tmp53.channel.id, parentId: null };
+                  tmp55 = obj2;
                 } else {
                   tmp55 = null;
                 }
@@ -524,7 +523,7 @@ export const getDropData = function getDropData(localChannel, arg1, localChannel
             tmp48 = tmp54;
           }
         }
-        const obj3 = { referenceId: null, parentId: null };
+        let obj3 = { referenceId: null, parentId: null };
         ({ id: obj13.referenceId, parent_id: obj13.parentId } = localChannel2);
         tmp48 = obj3;
       } else {
@@ -546,7 +545,7 @@ export const getDropData = function getDropData(localChannel, arg1, localChannel
           tmp = tmp2;
         }
         if (tmp) {
-          const obj4 = { referenceId: null, parentId: null };
+          let obj4 = { referenceId: null, parentId: null };
           ({ id: obj11.referenceId, parent_id: obj11.parentId } = localChannel2);
           tmp12 = obj4;
         } else if (to < arg1) {
@@ -750,6 +749,7 @@ export const getDropData = function getDropData(localChannel, arg1, localChannel
           if (num5 == null) {
             num5 = 0;
           }
+          const tmp16 = getFirstChannelOfType;
           const tmp18 = getFirstChannelOfType(-1, localChannel2.id, localChannel.type, channelList);
           let tmp19 = null;
           if (null != tmp18) {
@@ -834,15 +834,17 @@ export const getDropData = function getDropData(localChannel, arg1, localChannel
           if (num == null) {
             num = 0;
           }
+          let tmp8 = channelList[num + 1];
+          let tmp9 = getFirstChannelOfType;
           const tmp11 = getFirstChannelOfType(-1, localChannel2.id, localChannel.type, channelList);
           tmp12 = null;
           if (null != tmp11) {
             if (!localChannel.isGuildVocal()) {
               let tmp13 = null;
               if (localChannel.isCategory()) {
-                if (null == channelList[num + 1]) {
-                  tmp13 = { referenceId: tmp11.channel.id, parentId: null };
-                  const obj = { referenceId: tmp11.channel.id, parentId: null };
+                if (null == tmp8) {
+                  let obj = { referenceId: tmp11.channel.id, parentId: null };
+                  tmp13 = obj;
                 } else {
                   const channel2 = tmp8.channel;
                   tmp13 = null;
@@ -850,13 +852,13 @@ export const getDropData = function getDropData(localChannel, arg1, localChannel
               }
               tmp12 = tmp13;
             } else {
-              if (null != channelList[num + 1]) {
+              if (null != tmp8) {
                 const channel7 = tmp8.channel;
                 if (!channel7.isCategory()) {
                   const channel = tmp8.channel;
                   if (channel.isGuildVocal()) {
-                    tmp12 = { referenceId: tmp11.channel.id, parentId: channelList[num + 1].channel.parent_id };
-                    const obj27 = { referenceId: tmp11.channel.id, parentId: channelList[num + 1].channel.parent_id };
+                    tmp12 = { referenceId: tmp11.channel.id, parentId: tmp8.channel.parent_id };
+                    const obj27 = { referenceId: tmp11.channel.id, parentId: tmp8.channel.parent_id };
                   }
                 }
               }

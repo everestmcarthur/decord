@@ -1,23 +1,23 @@
-// Module ID: 18642
-// Function ID: 18643
+// Module ID: 18959
+// Function ID: 18960
 // Name: NativeExperimentBridgeManager
-// Dependencies: [17, 2129, 502, 1382, 18643, 5755, 18644, 1265, 18645, 1295, 6808, 2]
+// Dependencies: [17, 2132, 502, 1384, 18960, 5973, 18961, 1267, 18962, 1297, 7030, 2]
 
-// Module 18642 (NativeExperimentBridgeManager)
+// Module 18959 (NativeExperimentBridgeManager)
 import react_native from "react-native" /* 17 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import HTTPUtils from "HTTPUtils" /* 1295 */;
-import PlatformUtils from "PlatformUtils" /* 1382 */;
-import IOSPushNotificationRawPayloadFixExperiment from "IOSPushNotificationRawPayloadFixExperiment" /* 5755 */;
-import VideoStutterMitigationExperimentDefault from "VideoStutterMitigationExperiment" /* 18644 */;
-import NotificationLoadMessagesExperimentDefault from "NotificationLoadMessagesExperiment" /* 18645 */;
-import LocaleStore from "LocaleStore" /* 2129 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
+import HTTPUtils from "HTTPUtils" /* 1297 */;
+import PlatformUtils from "PlatformUtils" /* 1384 */;
+import IOSPushNotificationRawPayloadFixExperiment from "IOSPushNotificationRawPayloadFixExperiment" /* 5973 */;
+import VideoStutterMitigationExperimentDefault from "VideoStutterMitigationExperiment" /* 18961 */;
+import NotificationLoadMessagesExperimentDefault from "NotificationLoadMessagesExperiment" /* 18962 */;
+import LocaleStore from "LocaleStore" /* 2132 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6808 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7030 */;
 import size from "module_2" /* 2 */;
 
 let tmp;
-const YYTextReplacementExperiment = tmp(18643);
+const YYTextReplacementExperiment = tmp(18960);
 function syncYYTextReplacementExperiment() {
   const obj = PlatformUtils;
   if (obj.isIOS()) {

@@ -1,12 +1,12 @@
-// Module ID: 10290
-// Function ID: 10291
+// Module ID: 10538
+// Function ID: 10539
 // Name: LobbyUtils
-// Dependencies: [4750, 1085, 558, 576, 504, 2]
+// Dependencies: [4809, 1087, 558, 576, 504, 2]
 // Exports: canUnlinkLobbyChannel
 
-// Module 10290 (LobbyUtils)
-import Constants from "Constants" /* 1085 */;
-import PermissionStore from "PermissionStore" /* 4750 */;
+// Module 10538 (LobbyUtils)
+import Constants from "Constants" /* 1087 */;
+import PermissionStore from "PermissionStore" /* 4809 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

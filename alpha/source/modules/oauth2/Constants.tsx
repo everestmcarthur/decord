@@ -1,9 +1,9 @@
-// Module ID: 9225
-// Function ID: 9226
+// Module ID: 9462
+// Function ID: 9463
 // Name: Constants
 // Dependencies: [2]
 
-// Module 9225 (Constants)
+// Module 9462 (Constants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/oauth2/Constants.tsx");

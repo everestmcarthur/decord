@@ -1,19 +1,21 @@
-// Module ID: 16363
-// Function ID: 16364
+// Module ID: 12710
+// Function ID: 12711
 // Name: useCheckpointPreloader
-// Dependencies: [32, 19, 16313, 4913, 4915, 16328, 16349, 16337, 16321, 16319, 558, 576, 16364, 1295, 2]
+// Dependencies: [32, 19, 12654, 4972, 4974, 12672, 12696, 12685, 12681, 12692, 12665, 12663, 558, 576, 12711, 1297, 2]
 
-// Module 16363 (useCheckpointPreloader)
+// Module 12710 (useCheckpointPreloader)
 import react2 from "react" /* 19 */;
-import HTTPUtils from "HTTPUtils" /* 1295 */;
-import _modDef4913 from "module_4913" /* 4913 */;
-import _modDef4915 from "module_4915" /* 4915 */;
-import CheckpointStore from "CheckpointStore" /* 16313 */;
-import _modDef16319 from "module_16319" /* 16319 */;
-import _modDef16321 from "module_16321" /* 16321 */;
-import _modDef16328 from "module_16328" /* 16328 */;
-import _modDef16337 from "module_16337" /* 16337 */;
-import _modDef16349 from "module_16349" /* 16349 */;
+import HTTPUtils from "HTTPUtils" /* 1297 */;
+import _modDef4972 from "module_4972" /* 4972 */;
+import _modDef4974 from "module_4974" /* 4974 */;
+import CheckpointStore from "CheckpointStore" /* 12654 */;
+import _modDef12663 from "module_12663" /* 12663 */;
+import _modDef12665 from "module_12665" /* 12665 */;
+import _modDef12672 from "module_12672" /* 12672 */;
+import _modDef12681 from "module_12681" /* 12681 */;
+import _modDef12685 from "module_12685" /* 12685 */;
+import _modDef12692 from "module_12692" /* 12692 */;
+import _modDef12696 from "module_12696" /* 12696 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -24,7 +26,7 @@ let _require, dependencyMap;
 
 const useEffect = react2.useEffect;
 const CheckpointFetchStates = CheckpointStore.CheckpointFetchStates;
-let items = [_modDef4913, _modDef4915, _modDef16328, _modDef16349, _modDef16337, _modDef16321, _modDef16319];
+let items = [_modDef4972, _modDef4974, _modDef12672, _modDef12696, _modDef12685, _modDef12681, _modDef12692, _modDef12665, _modDef12663];
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCheckpointPreloader() {
   let closure_0;
   let closure_1;

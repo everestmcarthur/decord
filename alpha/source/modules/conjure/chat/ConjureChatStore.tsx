@@ -1,18 +1,18 @@
-// Module ID: 11216
-// Function ID: 11217
+// Module ID: 10902
+// Function ID: 10903
 // Name: ConjureChatStore
-// Dependencies: [109, 10652, 11217, 11219, 11218, 504, 1126, 3849, 584, 2]
+// Dependencies: [109, 10900, 10903, 10905, 10904, 504, 1128, 3865, 584, 2]
 // Exports: getOlderHistoryCursor
 
-// Module 11216 (ConjureChatStore)
+// Module 10902 (ConjureChatStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import _modDef3849 from "module_3849" /* 3849 */;
-import conjureChatTurns from "conjureChatTurns" /* 11217 */;
-import conjureStepTimeline from "conjureStepTimeline" /* 11218 */;
-import conjureChatHistory from "conjureChatHistory" /* 11219 */;
+import _modDef3865 from "module_3865" /* 3865 */;
+import conjureChatTurns from "conjureChatTurns" /* 10903 */;
+import conjureStepTimeline from "conjureStepTimeline" /* 10904 */;
+import conjureChatHistory from "conjureChatHistory" /* 10905 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 10652 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 10900 */;
 import size from "module_2" /* 2 */;
 
 let set3;
@@ -390,7 +390,7 @@ let obj = {
     }
     let tmp21 = messagesFromHistoryResult;
     set3 = map.set;
-    const foldDividers = tmp16(11219).foldDividers;
+    const foldDividers = tmp16(10905).foldDividers;
     conjureChatHistory;
     if (-1 !== num2) {
       const items1 = [];
@@ -592,20 +592,45 @@ let obj = {
       }
     }
   },
-  CONJURE_CHAT_MESSAGE_CANCELLED: function handleChatMessageCancelled(arg0) {
+  CONJURE_CHAT_MESSAGE_CANCELLED: function handleChatMessageCancelled(withdrawn) {
     let closure_129_0;
     let projectId;
-    ({ projectId, id: closure_129_0 } = arg0);
+    ({ projectId, id: closure_129_0 } = withdrawn);
+    let id;
+    withdrawn = withdrawn.withdrawn;
     const value = map.get(projectId);
     const obj = map;
     if (null == value) {
       return false;
     } else {
-      const found = value.filter((id) => id.id !== closure_1_0 && id.in_reply_to !== tmp);
+      let tmp;
+      if (true === withdrawn) {
+        tmp = value[value.findIndex(value, (id) => id.id === closure_1_0) + 1];
+      }
+      id = null;
+      if (null != tmp) {
+        id = null;
+        if ("assistant" === tmp.role) {
+          id = null;
+          if ("" === tmp.content) {
+            id = null;
+            if (null == tmp.turn_id) {
+              id = null;
+              if (0 === tmp.steps.length) {
+                id = tmp.id;
+              }
+            }
+          }
+        }
+      }
+      const found = value.filter((id) => id.id !== closure_1_0 && id.in_reply_to !== tmp && id.id !== id);
       if (found.length === value.length) {
         return false;
       } else {
         const result = obj.set(projectId, found);
+        if (null != id) {
+          recordThinkingTransition(projectId);
+        }
       }
     }
   },
@@ -664,7 +689,7 @@ let obj = {
       return false;
     } else {
       const obj3 = { ts: timestamp, id };
-      const obj2 = id(11219);
+      const obj2 = id(10905);
       const newMessageResult = obj2.newMessage("assistant", content, obj3);
       newMessageResult.kind = "publish_notice";
       newMessageResult.publishNotice = publishNotice;
@@ -680,7 +705,7 @@ let obj = {
       let tmp6 = null;
       if (-1 !== findLastIndexResult) {
         tmp6 = null;
-        const tmp2Result = id(11217);
+        const tmp2Result = id(10903);
         if (!tmp2Result.turnSettled(value[findLastIndexResult])) {
           tmp6 = value[findLastIndexResult];
         }
@@ -701,8 +726,8 @@ let obj = {
           items[arraySpreadResult] = obj4;
           const arraySpreadResult4 = HermesBuiltin.arraySpread(items, value.slice(findLastIndexResult + 1), arraySpreadResult + 1);
           items[arraySpreadResult4] = newMessageResult;
-          const newMessage = tmp2(11219).newMessage;
-          id(11219);
+          const newMessage = tmp2(10905).newMessage;
+          id(10905);
           if (null != tmp6.turn_id) {
             obj6 = { turnId: tmp6.turn_id };
             const obj5 = { turnId: tmp6.turn_id };
@@ -732,8 +757,8 @@ let obj = {
     let event;
     let projectId;
     ({ projectId, event } = arg0);
+    let obj = map;
     const value = map.get(projectId);
-    const obj = map;
     if (null == value) {
       return false;
     } else if (value.some((id) => id.id === event.id)) {
@@ -823,7 +848,7 @@ let obj = {
     if ("preview_ready" === step.kind) {
       if (null == turnId) {
         let tmp2 = step;
-        let obj = step(11217);
+        let obj = step(10903);
         if (!obj.hasOpenTurn(map.get(projectId))) {
           return false;
         }
@@ -942,7 +967,7 @@ let obj = {
       if (flag2) {
         const obj2 = { provisionalTodo: text };
         set = tmp.set;
-        const replaceAt = tmp3(11217).replaceAt;
+        const replaceAt = tmp3(10903).replaceAt;
         conjureChatTurns;
         const merged = Object.assign(value[findTurnSegmentResult]);
         const result = set(projectId, replaceAt(value, findTurnSegmentResult, obj2));
@@ -1093,7 +1118,7 @@ let obj = {
                 const obj = { provisionalTodo: undefined, steps: items };
                 const merged = Object.assign(disposition);
                 items = [];
-                const obj2 = { type: "step", kind: "terminal_error", message: intl.string(_modDef3849.lmiuFX) };
+                const obj2 = { type: "step", kind: "terminal_error", message: intl.string(_modDef3865.lmiuFX) };
                 const arraySpreadResult = HermesBuiltin.arraySpread(items, disposition.steps, 0);
                 intl = tmp11(tmp12[6]).intl;
                 items[arraySpreadResult] = obj2;

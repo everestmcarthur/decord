@@ -1,16 +1,16 @@
-// Module ID: 6933
-// Function ID: 6934
+// Module ID: 7154
+// Function ID: 7155
 // Name: SocialLayerStorefrontStore
-// Dependencies: [2129, 502, 504, 584, 2]
+// Dependencies: [2132, 502, 504, 584, 2]
 
-// Module 6933 (SocialLayerStorefrontStore)
+// Module 7154 (SocialLayerStorefrontStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import LocaleStore from "LocaleStore" /* 2129 */;
+import LocaleStore from "LocaleStore" /* 2132 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import size from "module_2" /* 2 */;
 
-let closure_18, locale;
+let closure_17, closure_18, locale;
 
 function handleUserSettingsStoreUpdate() {
   if (locale === LocaleStore.locale) {
@@ -34,7 +34,7 @@ new Set();
 obj = { state: "idle" };
 let set1 = new Set();
 let set = set1;
-let closure_17 = {};
+const trackedExposureExperiments = {};
 const authStore5 = {};
 let closure_19 = {};
 let closure_20 = {};
@@ -403,7 +403,7 @@ obj = {
       const merged7 = Object.assign(obj12);
       obj12 = obj8;
     } else {
-      obj = { state: "error", fetchedAt: Date.now(), storefront: "r" };
+      obj = { state: "error", fetchedAt: Date.now(), storefront: "o" };
       const _Date = Date;
       if (null != guildId) {
         const obj9 = {};

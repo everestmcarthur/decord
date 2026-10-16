@@ -1,14 +1,14 @@
-// Module ID: 11252
-// Function ID: 11253
+// Module ID: 10962
+// Function ID: 10963
 // Name: restartConjureAppFrames
-// Dependencies: [10807, 10802, 10821, 10804, 2]
+// Dependencies: [10950, 10934, 10963, 10964, 2]
 // Exports: default
 
-// Module 11252 (restartConjureAppFrames)
-import FramesConstants from "FramesConstants" /* 10802 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 10804 */;
-import leaveFrame from "leaveFrame" /* 10821 */;
-import FramesStore from "FramesStore" /* 10807 */;
+// Module 10962 (restartConjureAppFrames)
+import FramesConstants from "FramesConstants" /* 10934 */;
+import leaveFrame from "leaveFrame" /* 10963 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 10964 */;
+import FramesStore from "FramesStore" /* 10950 */;
 import size from "module_2" /* 2 */;
 
 const isLaunched = FramesConstants.isLaunched;
@@ -44,7 +44,7 @@ export default function restartConjureAppFrames(applicationId) {
 
       });
       if (id1 !== id) {
-        let tmp15Result = tmp15(10804);
+        let tmp15Result = tmp15(10964);
         let demoteMainFrameResult = tmp15Result.demoteMainFrame(tmp3.id);
       }
       continue;

@@ -1,13 +1,13 @@
-// Module ID: 8891
-// Function ID: 8892
+// Module ID: 9115
+// Function ID: 9116
 // Name: useInAppBrowserReturn
-// Dependencies: [19, 8887, 558, 576, 1383, 5053, 8885, 8879, 2]
+// Dependencies: [19, 9111, 558, 576, 1385, 5115, 9109, 9103, 2]
 
-// Module 8891 (useInAppBrowserReturn)
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8879 */;
-import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 8885 */;
+// Module 9115 (useInAppBrowserReturn)
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9103 */;
+import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 9109 */;
 import react from "react" /* 19 */;
-import GameProfileStore from "GameProfileStore" /* 8887 */;
+import GameProfileStore from "GameProfileStore" /* 9111 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

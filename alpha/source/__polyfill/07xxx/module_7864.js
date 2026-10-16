@@ -1,33 +1,11 @@
 // Module ID: 7864
 // Function ID: 7865
-// Dependencies: []
+// Dependencies: [65]
 
 // Module 7864
-let obj = {
-  get(arg0) {
-    const tmp = arg0;
-    if (tmp) {
-      return arg0;
-    } else {
-      if (typeof globalThis.DOMParser !== "undefined") {
-        const DOMParser2 = globalThis.DOMParser;
-        const self3 = this;
-        const self4 = this;
-        const dOMParser = new globalThis.DOMParser();
-        return dOMParser;
-      } else {
-        try {
-          const result = globalThis.__non_webpack_require__("@xmldom/xmldom");
-          const self = this;
-          const self2 = this;
-          const obj = { onError: result.onErrorStopParsing };
-          const dOMParser1 = new result.DOMParser(obj);
-          return dOMParser1;
-        } catch (err) {
-        }
-      }
-    }
-  }
-};
+import module_65 from "module_65" /* 65 */;
 
-export default obj;
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGFilter", validAttributes: { name: true, x: true, y: true, height: true, width: true, filterUnits: true, primitiveUnits: true } };
+
+export default module_65.get("RNSVGFilter", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

@@ -1,20 +1,20 @@
-// Module ID: 18147
-// Function ID: 18148
+// Module ID: 18465
+// Function ID: 18466
 // Name: InteractionIframeModal
-// Dependencies: [32, 19, 17, 1373, 21, 5092, 587, 558, 576, 18135, 10929, 6665, 8451, 18148, 5372, 4809, 1126, 10259, 6185, 5088, 8767, 10809, 10960, 17747, 2]
+// Dependencies: [32, 19, 17, 1375, 21, 5153, 587, 558, 576, 18453, 11244, 6887, 8677, 18466, 5434, 4868, 1128, 10497, 6407, 5149, 8992, 10952, 11278, 18057, 2]
 
-// Module 18147 (InteractionIframeModal)
+// Module 18465 (InteractionIframeModal)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
-import intl2 from "intl" /* 1126 */;
-import ApplicationConstants from "ApplicationConstants" /* 1373 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4809 */;
-import makeIframeIdDefault from "makeIframeId" /* 10929 */;
-import closeIFrameModalDefault from "closeIFrameModal" /* 18148 */;
+import intl2 from "intl" /* 1128 */;
+import ApplicationConstants from "ApplicationConstants" /* 1375 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4868 */;
+import makeIframeIdDefault from "makeIframeId" /* 11244 */;
+import closeIFrameModalDefault from "closeIFrameModal" /* 18466 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 5092 */;
+import createStyles from "createStyles" /* 5153 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -68,7 +68,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function Interactio
       constructor() {
         obj = id(closure_2[12]);
         lockOrientationResult = obj.lockOrientation("PORTRAIT");
-        return () => { /* body not rendered: F151684 */ };
+        return () => { /* body not rendered: F152970 */ };
       }
     }
     const items = [];
@@ -81,7 +81,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function Interactio
       constructor() {
         obj = id(closure_2[12]);
         lockOrientationResult = obj.lockOrientation("PORTRAIT");
-        return () => { /* body not rendered: F151684 */ };
+        return () => { /* body not rendered: F152970 */ };
       }
     }
     tmp10 = cResult[2];

@@ -1,14 +1,14 @@
-// Module ID: 11244
-// Function ID: 11245
+// Module ID: 10949
+// Function ID: 10950
 // Name: conjurePreviewSurface
-// Dependencies: [10807, 10802, 8611, 11245, 2]
+// Dependencies: [10950, 10934, 7261, 10954, 2]
 // Exports: getConjureBuilderPreviewFrame, getConjureBuilderPreviewFrames, getConjurePreviewGuildId, getConjurePreviewSurface, isConjurePreviewSurface
 
-// Module 11244 (conjurePreviewSurface)
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8611 */;
-import conjurePreviewFrameSurfaces from "conjurePreviewFrameSurfaces" /* 11245 */;
-import FramesStore from "FramesStore" /* 10807 */;
-import FramesConstants from "FramesConstants" /* 10802 */;
+// Module 10949 (conjurePreviewSurface)
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 7261 */;
+import conjurePreviewFrameSurfaces from "conjurePreviewFrameSurfaces" /* 10954 */;
+import FramesStore from "FramesStore" /* 10950 */;
+import FramesConstants from "FramesConstants" /* 10934 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -16,7 +16,7 @@ let _require;
 
 let c3;
 let closure_4;
-const f108007 = (item) => null != item;
+const f106983 = (item) => null != item;
 ({ isLaunched: c3, makeFrameId: closure_4 } = FramesConstants);
 let c5 = "0";
 const CONJURE_PREVIEW_SURFACE = { type: EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL, channelId: "0" };
@@ -88,7 +88,7 @@ export const getConjureBuilderPreviewFrames = function getConjureBuilderPreviewF
     }
     return getFrame(tmp2(tmp3, obj2));
   });
-  return mapped.filter(f108007);
+  return mapped.filter(f106983);
 };
 export const getConjureBuilderPreviewFrame = function getConjureBuilderPreviewFrame(prop) {
   _require = prop;
@@ -111,7 +111,7 @@ export const getConjureBuilderPreviewFrame = function getConjureBuilderPreviewFr
     }
     return getFrame(tmp2(tmp3, obj2));
   });
-  const found = mapped.filter(f108007);
+  const found = mapped.filter(f106983);
   let found1 = found.find(closure_3);
   if (found1 == null) {
     found1 = found[0];

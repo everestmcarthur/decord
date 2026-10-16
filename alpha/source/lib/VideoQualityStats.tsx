@@ -1,13 +1,13 @@
-// Module ID: 5292
-// Function ID: 5293
+// Module ID: 5354
+// Function ID: 5355
 // Name: VideoQualityStats
-// Dependencies: [32, 5275, 5283, 5121, 2]
+// Dependencies: [32, 5337, 5345, 5182, 2]
 // Exports: parseCodecType
 
-// Module 5292 (VideoQualityStats)
-import TimeUtils from "TimeUtils" /* 5121 */;
-import Histogram from "Histogram" /* 5275 */;
-import SystemResourcesDefault from "SystemResources" /* 5283 */;
+// Module 5354 (VideoQualityStats)
+import TimeUtils from "TimeUtils" /* 5182 */;
+import Histogram from "Histogram" /* 5337 */;
+import SystemResourcesDefault from "SystemResources" /* 5345 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import size from "module_2" /* 2 */;
 

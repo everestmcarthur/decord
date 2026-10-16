@@ -1,13 +1,13 @@
-// Module ID: 10325
-// Function ID: 10326
+// Module ID: 10573
+// Function ID: 10574
 // Name: showFavoritesGuildAddedToast
-// Dependencies: [4809, 1126, 9553, 2]
+// Dependencies: [4868, 1128, 9788, 2]
 // Exports: default
 
-// Module 10325 (showFavoritesGuildAddedToast)
-import intl2 from "intl" /* 1126 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4809 */;
-import StarIcon from "StarIcon" /* 9553 */;
+// Module 10573 (showFavoritesGuildAddedToast)
+import intl2 from "intl" /* 1128 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4868 */;
+import StarIcon from "StarIcon" /* 9788 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/favorites/utils/showFavoritesGuildAddedToast.native.tsx");

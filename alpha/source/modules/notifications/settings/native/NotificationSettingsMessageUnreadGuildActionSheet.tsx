@@ -1,18 +1,18 @@
-// Module ID: 13120
-// Function ID: 13121
+// Module ID: 13477
+// Function ID: 13478
 // Name: NotificationSettingsMessageUnreadGuildActionSheet
-// Dependencies: [19, 5966, 1085, 5967, 1095, 21, 558, 576, 13110, 1126, 6809, 10448, 6804, 13121, 2]
+// Dependencies: [19, 6184, 1087, 6185, 1097, 21, 558, 576, 13467, 1128, 7031, 10696, 7026, 13478, 2]
 
-// Module 13120 (NotificationSettingsMessageUnreadGuildActionSheet)
+// Module 13477 (NotificationSettingsMessageUnreadGuildActionSheet)
 import Fragment from "Fragment" /* 21 */;
-import Constants from "Constants" /* 1085 */;
-import UserSettingsConstants from "UserSettingsConstants" /* 1095 */;
-import ReadStateConstants from "ReadStateConstants" /* 5967 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 6809 */;
-import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 10448 */;
-import NotificationSettingsMessageUnreadActionSheetDefault from "NotificationSettingsMessageUnreadActionSheet" /* 13121 */;
+import Constants from "Constants" /* 1087 */;
+import UserSettingsConstants from "UserSettingsConstants" /* 1097 */;
+import ReadStateConstants from "ReadStateConstants" /* 6185 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7031 */;
+import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 10696 */;
+import NotificationSettingsMessageUnreadActionSheetDefault from "NotificationSettingsMessageUnreadActionSheet" /* 13478 */;
 import react from "react" /* 19 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5966 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6184 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -20,7 +20,7 @@ const require = globalThis.__r;
 let _require;
 
 let tmp4;
-const NotificationSettingsUtils = tmp4(6804);
+const NotificationSettingsUtils = tmp4(7026);
 const UserNotificationSettings = Constants.UserNotificationSettings;
 const UnreadSetting = ReadStateConstants.UnreadSetting;
 let closure_6 = UserSettingsConstants.GuildNotificationSettingsFlags;
@@ -39,8 +39,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function Notificati
   if (cResult[0] !== notification) {
     let stringResult;
     if (notification === UserNotificationSettings.ALL_MESSAGES) {
-      const intl = tmp(1126).intl;
-      stringResult = intl.string(tmp(1126).t.eP8yWU);
+      const intl = tmp(1128).intl;
+      stringResult = intl.string(tmp(1128).t.eP8yWU);
     }
     cResult[0] = notification;
     cResult[1] = stringResult;
@@ -98,8 +98,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function Notificati
   let stringResult;
   const tmp5 = NotificationSettingsMessageUnreadActionSheetDefault;
   if (notification === UserNotificationSettings.ALL_MESSAGES) {
-    const intl = tmp(1126).intl;
-    stringResult = intl.string(tmp(1126).t.eP8yWU);
+    const intl = tmp(1128).intl;
+    stringResult = intl.string(tmp(1128).t.eP8yWU);
   }
   const obj2 = {
     disabledMentionOnlyWithReason: stringResult,

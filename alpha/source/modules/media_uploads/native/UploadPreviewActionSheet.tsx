@@ -1,24 +1,24 @@
-// Module ID: 10022
-// Function ID: 10023
+// Module ID: 10256
+// Function ID: 10257
 // Name: UploadPreviewActionSheet
-// Dependencies: [32, 19, 17, 7244, 1085, 6841, 21, 5092, 587, 558, 576, 38, 7759, 1497, 1631, 5396, 5056, 9263, 7770, 10023, 1265, 4809, 7769, 13303, 13304, 5088, 1382, 8426, 10041, 6265, 6180, 11687, 13305, 1126, 6177, 13307, 8215, 13309, 5379, 5049, 5377, 6307, 6840, 2]
+// Dependencies: [32, 19, 17, 7462, 1087, 7064, 21, 5153, 587, 558, 576, 38, 7978, 1499, 1633, 5458, 5118, 9499, 7989, 10257, 1267, 4868, 7988, 13664, 13665, 5149, 1384, 8652, 10275, 6487, 6402, 11946, 13666, 1128, 6399, 13668, 8440, 13670, 5441, 5111, 5439, 6529, 7063, 2]
 
-// Module 10022 (UploadPreviewActionSheet)
+// Module 10256 (UploadPreviewActionSheet)
 import nativeDefault from "native" /* 587 */;
-import Constants from "Constants" /* 1085 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
-import ActionSheetConstants from "ActionSheetConstants" /* 6841 */;
-import DraftStore from "DraftStore" /* 7244 */;
-import utils_UploadUtils from "utils/UploadUtils" /* 7769 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9263 */;
-import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10023 */;
-import AddImageDescriptionModalActionCreatorsDefault from "AddImageDescriptionModalActionCreators" /* 13305 */;
+import Constants from "Constants" /* 1087 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5118 */;
+import ActionSheetConstants from "ActionSheetConstants" /* 7064 */;
+import DraftStore from "DraftStore" /* 7462 */;
+import utils_UploadUtils from "utils/UploadUtils" /* 7988 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9499 */;
+import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10257 */;
+import AddImageDescriptionModalActionCreatorsDefault from "AddImageDescriptionModalActionCreators" /* 13666 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 5092 */;
+import createStyles_mod from "createStyles" /* 5153 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

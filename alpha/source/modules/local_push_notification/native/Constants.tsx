@@ -1,12 +1,12 @@
-// Module ID: 11243
-// Function ID: 11244
+// Module ID: 10935
+// Function ID: 10936
 // Name: Constants
 // Dependencies: [2]
 
-// Module 11243 (Constants)
+// Module 10935 (Constants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/local_push_notification/native/Constants.tsx");
 
-export const LocalNotificationTypes = { GUILD_VERIFICATION: "GUILD_VERIFICATION", CALL_RING: "CALL_RING", MESSAGE_SEND_FAILED: "MESSAGE_SEND_FAILED", CONJURE: "VIBEGRATIONS" };
+export const LocalNotificationTypes = { GUILD_VERIFICATION: "GUILD_VERIFICATION", CALL_RING: "CALL_RING", MESSAGE_SEND_FAILED: "MESSAGE_SEND_FAILED", CONJURE: "CONJURE" };
 export const FIRE_DATE_FORMAT = "YYYY-MM-DDTHH:mm:ss.sssZ";

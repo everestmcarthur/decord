@@ -1,12 +1,12 @@
-// Module ID: 16239
-// Function ID: 16240
+// Module ID: 16605
+// Function ID: 16606
 // Name: MobileGameCommunitiesStore
-// Dependencies: [7052, 504, 584, 2]
+// Dependencies: [7275, 504, 584, 2]
 
-// Module 16239 (MobileGameCommunitiesStore)
+// Module 16605 (MobileGameCommunitiesStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import GuildDiscoveryUtils from "GuildDiscoveryUtils" /* 7052 */;
+import GuildDiscoveryUtils from "GuildDiscoveryUtils" /* 7275 */;
 import size from "module_2" /* 2 */;
 
 let dismissedGuildIds;

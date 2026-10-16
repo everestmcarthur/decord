@@ -1,10 +1,10 @@
 // Module ID: 16262
 // Function ID: 16263
 // Name: AssetRegistry
-// Dependencies: [1132]
+// Dependencies: [1134]
 
 // Module 16262 (AssetRegistry)
-import AssetRegistry from "AssetRegistry" /* 1132 */;
+import AssetRegistry from "AssetRegistry" /* 1134 */;
 
 
-export default AssetRegistry.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9pbnRs", scales: [1], hash: "99ca2b0cb6c6ab32f98726cbd8d2cd48", name: "pl.messages.99ca2b0cb6c6ab32f98726cbd8d2cd48.compiled.messages", type: "jsona" });
+export default AssetRegistry.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/avatars", width: 161, height: 161, scales: [1], hash: "1b6a1fd726ebdfc69d47b037085b4f19", name: "graggle_2", type: "png" });

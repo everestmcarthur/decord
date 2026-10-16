@@ -1,21 +1,21 @@
-// Module ID: 15196
-// Function ID: 15197
+// Module ID: 15565
+// Function ID: 15566
 // Name: UserProfileBadgesEditButton
-// Dependencies: [32, 19, 17, 10578, 2062, 21, 5092, 587, 558, 576, 10572, 10574, 6852, 2049, 7100, 15197, 10575, 15201, 1126, 15195, 5088, 10579, 6157, 10570, 2]
+// Dependencies: [32, 19, 17, 10826, 2065, 21, 5153, 587, 558, 576, 10820, 10822, 7075, 2052, 7323, 15566, 10823, 15570, 1128, 15564, 5149, 10827, 5091, 10818, 2]
 
-// Module 15196 (UserProfileBadgesEditButton)
+// Module 15565 (UserProfileBadgesEditButton)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
-import DismissibleContentConstants from "DismissibleContentConstants" /* 2062 */;
-import FastImageDefault from "FastImage" /* 6157 */;
-import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 10570 */;
-import BadgeUtils from "BadgeUtils" /* 10579 */;
-import openCustomizeBadgesSheet from "openCustomizeBadgesSheet" /* 15197 */;
+import DismissibleContentConstants from "DismissibleContentConstants" /* 2065 */;
+import FastImageDefault from "FastImage" /* 5091 */;
+import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 10818 */;
+import BadgeUtils from "BadgeUtils" /* 10827 */;
+import openCustomizeBadgesSheet from "openCustomizeBadgesSheet" /* 15566 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
-import ProfileCustomizationNavigationStore_mod from "ProfileCustomizationNavigationStore" /* 10578 */;
+import ProfileCustomizationNavigationStore_mod from "ProfileCustomizationNavigationStore" /* 10826 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 5092 */;
+import createStyles from "createStyles" /* 5153 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

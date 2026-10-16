@@ -1,12 +1,12 @@
-// Module ID: 9805
-// Function ID: 9806
+// Module ID: 10039
+// Function ID: 10040
 // Name: ApplicationCommandChoiceUtils
-// Dependencies: [7921, 5403, 2]
+// Dependencies: [8141, 5465, 2]
 // Exports: findAutocompleteChoiceNumberValue, findAutocompleteChoiceStringValue, findChoiceNumberValue, findChoiceStringValue, toChoiceBooleanValue
 
-// Module 9805 (ApplicationCommandChoiceUtils)
-import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 7921 */;
-import ApplicationCommandConstants from "ApplicationCommandConstants" /* 5403 */;
+// Module 10039 (ApplicationCommandChoiceUtils)
+import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 8141 */;
+import ApplicationCommandConstants from "ApplicationCommandConstants" /* 5465 */;
 import size from "module_2" /* 2 */;
 
 let c2;

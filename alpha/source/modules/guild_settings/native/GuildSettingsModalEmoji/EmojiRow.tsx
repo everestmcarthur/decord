@@ -1,29 +1,29 @@
-// Module ID: 18365
-// Function ID: 18366
+// Module ID: 18682
+// Function ID: 18683
 // Name: GuildSettingsModalEmoji/EmojiRow
-// Dependencies: [32, 19, 17, 2087, 1390, 21, 5092, 587, 1382, 558, 576, 8625, 504, 8573, 9547, 4768, 18366, 5362, 5088, 1200, 4809, 1126, 6157, 1415, 5409, 4962, 6185, 18368, 6180, 2]
+// Dependencies: [32, 19, 17, 2090, 1392, 21, 5153, 587, 1384, 558, 576, 7036, 504, 8801, 9782, 4827, 18683, 5424, 5149, 1202, 4868, 1128, 5091, 1417, 5471, 5021, 6407, 18685, 6402, 2]
 
-// Module 18365 (GuildSettingsModalEmoji/EmojiRow)
+// Module 18682 (GuildSettingsModalEmoji/EmojiRow)
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1200 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
-import EmojiUtilsDefault from "EmojiUtils" /* 4768 */;
-import UserUtilsDefault from "UserUtils" /* 4962 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5362 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5409 */;
-import FastImageDefault from "FastImage" /* 6157 */;
-import EmojiActionCreators from "EmojiActionCreators" /* 9547 */;
-import showEmojiOverflowActionSheetDefault from "showEmojiOverflowActionSheet" /* 18366 */;
-import AssetRegistryDefault from "AssetRegistry" /* 18368 */;
+import native from "native" /* 1202 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
+import EmojiUtilsDefault from "EmojiUtils" /* 4827 */;
+import UserUtilsDefault from "UserUtils" /* 5021 */;
+import FastImageDefault from "FastImage" /* 5091 */;
+import Text_Text from "Text/Text" /* 5149 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5424 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5471 */;
+import EmojiActionCreators from "EmojiActionCreators" /* 9782 */;
+import showEmojiOverflowActionSheetDefault from "showEmojiOverflowActionSheet" /* 18683 */;
+import AssetRegistryDefault from "AssetRegistry" /* 18685 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import GuildStore_mod from "GuildStore" /* 2087 */;
-import UserStore_mod from "UserStore" /* 1390 */;
+import GuildStore_mod from "GuildStore" /* 2090 */;
+import UserStore_mod from "UserStore" /* 1392 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 5092 */;
-import PlatformUtils_mod from "PlatformUtils" /* 1382 */;
+import createStyles_mod from "createStyles" /* 5153 */;
+import PlatformUtils_mod from "PlatformUtils" /* 1384 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

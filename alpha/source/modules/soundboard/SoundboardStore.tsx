@@ -1,26 +1,26 @@
-// Module ID: 5428
-// Function ID: 5429
+// Module ID: 5490
+// Function ID: 5491
 // Name: SoundboardStore
-// Dependencies: [32, 1244, 5110, 1390, 5429, 5430, 1085, 1095, 5129, 4702, 12, 2041, 1265, 5251, 11, 504, 5431, 584, 2]
+// Dependencies: [32, 1246, 5171, 1392, 5491, 5492, 1087, 1097, 5190, 4761, 12, 2044, 1267, 5313, 11, 504, 5493, 584, 2]
 
-// Module 5428 (SoundboardStore)
+// Module 5490 (SoundboardStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import Constants from "Constants" /* 1085 */;
-import UserSettingsConstants from "UserSettingsConstants" /* 1095 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import UserSettings from "UserSettings" /* 2041 */;
-import _modDef4702 from "module_4702" /* 4702 */;
-import FrecencyDefault from "Frecency" /* 5129 */;
-import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 5251 */;
-import SoundboardFavoritesExperiment2 from "SoundboardFavoritesExperiment" /* 5431 */;
+import Constants from "Constants" /* 1087 */;
+import UserSettingsConstants from "UserSettingsConstants" /* 1097 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
+import UserSettings from "UserSettings" /* 2044 */;
+import _modDef4761 from "module_4761" /* 4761 */;
+import FrecencyDefault from "Frecency" /* 5190 */;
+import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 5313 */;
+import SoundboardFavoritesExperiment2 from "SoundboardFavoritesExperiment" /* 5493 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1244 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5110 */;
-import UserStore from "UserStore" /* 1390 */;
-import TopSoundboardSoundStore from "TopSoundboardSoundStore" /* 5429 */;
-import SoundboardConstants from "SoundboardConstants" /* 5430 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1246 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5171 */;
+import UserStore from "UserStore" /* 1392 */;
+import TopSoundboardSoundStore from "TopSoundboardSoundStore" /* 5491 */;
+import SoundboardConstants from "SoundboardConstants" /* 5492 */;
 import module_12_mod from "module_12" /* 12 */;
 import size from "module_2" /* 2 */;
 
@@ -111,7 +111,7 @@ let obj2 = {
     return 100;
   },
   computeWeight(arg0) {
-    const obj = _modDef4702();
+    const obj = _modDef4761();
     if (arg0 > obj.diff(closure_22, "days")) {
       return 0;
     } else {
@@ -141,7 +141,7 @@ let obj2 = {
 
   }
 };
-let closure_23 = new FrecencyDefault(obj2);
+const isAppBarToggleOpen = new FrecencyDefault(obj2);
 let closure_24 = [];
 let c25 = false;
 let closure_26 = false;
@@ -510,7 +510,7 @@ const obj3 = {
     const guildId = topSoundsMetadata.guildId;
     const obj = { soundIds: topSoundsMetadata.map((soundId) => soundId.soundId), topSoundsTTL: addResult.valueOf() };
     set = map1.set;
-    const obj2 = _modDef4702();
+    const obj2 = _modDef4761();
     addResult = obj2.add(1, "days");
     const result = set(guildId, obj);
   }

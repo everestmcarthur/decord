@@ -1,28 +1,28 @@
-// Module ID: 17274
-// Function ID: 17275
+// Module ID: 17582
+// Function ID: 17583
 // Name: ICYMICustomStatusRow
-// Dependencies: [32, 19, 17, 1390, 8454, 21, 587, 5092, 17217, 558, 576, 1200, 12428, 5088, 1126, 9307, 4967, 504, 5628, 8854, 10239, 10257, 1382, 6185, 5049, 9724, 11912, 8961, 11, 1102, 4962, 6059, 17275, 9017, 17271, 2]
+// Dependencies: [32, 19, 17, 1392, 8680, 21, 587, 5153, 17525, 558, 576, 1202, 12783, 5149, 1128, 9543, 5026, 504, 5846, 9079, 10478, 10495, 1384, 6407, 5111, 9958, 12194, 9191, 11, 1104, 5021, 6277, 17583, 9247, 17579, 2]
 
-// Module 17274 (ICYMICustomStatusRow)
+// Module 17582 (ICYMICustomStatusRow)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import intl4 from "intl" /* 1126 */;
-import native from "native" /* 1200 */;
-import TrashIcon from "TrashIcon" /* 5049 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import Pressables from "Pressables" /* 6185 */;
-import ReactionIcon from "ReactionIcon" /* 8961 */;
-import PencilIcon from "PencilIcon" /* 9724 */;
-import ArrowAngleLeftUpIcon from "ArrowAngleLeftUpIcon" /* 11912 */;
-import AssetRegistryDefault from "AssetRegistry" /* 12428 */;
+import intl4 from "intl" /* 1128 */;
+import native from "native" /* 1202 */;
+import TrashIcon from "TrashIcon" /* 5111 */;
+import Text_Text from "Text/Text" /* 5149 */;
+import Pressables from "Pressables" /* 6407 */;
+import ReactionIcon from "ReactionIcon" /* 9191 */;
+import PencilIcon from "PencilIcon" /* 9958 */;
+import ArrowAngleLeftUpIcon from "ArrowAngleLeftUpIcon" /* 12194 */;
+import AssetRegistryDefault from "AssetRegistry" /* 12783 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
-import UserStore from "UserStore" /* 1390 */;
-import ICYMIStore from "ICYMIStore" /* 8454 */;
+import UserStore from "UserStore" /* 1392 */;
+import ICYMIStore from "ICYMIStore" /* 8680 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 5092 */;
-import createICYMIStyles from "createICYMIStyles" /* 17217 */;
+import createStyles from "createStyles" /* 5153 */;
+import createICYMIStyles from "createICYMIStyles" /* 17525 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -73,7 +73,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Upload
   const tmp4 = closure_14(false);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { source: AssetRegistryDefault, size: native.IconSizes.SMALL };
-    const Icon = tmp(1200).Icon;
+    const Icon = tmp(1202).Icon;
     const tmp8 = metroImportAll(Icon, obj2);
     cResult[0] = tmp8;
     first = tmp8;
@@ -82,8 +82,8 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Upload
   }
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const obj3 = { variant: "text-md/normal", color: "text-strong", children: intl.string(intl4.t["3UB9ad"]) };
-    const Text = tmp(5088).Text;
-    intl = tmp(1126).intl;
+    const Text = tmp(5149).Text;
+    intl = tmp(1128).intl;
     const tmp11 = metroImportAll(Text, obj3);
     cResult[1] = tmp11;
     tmp9 = tmp11;
@@ -127,7 +127,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function GravityCus
   const userId = id.userId;
   ({ customStatusExtra, renderForScreenshot, variant } = id);
   closure_14(renderForScreenshot);
-  const obj2 = id(9307);
+  const obj2 = id(9543);
   const gradientBottom = obj2.useGradientBottom();
   let backgroundColor;
   const tmp6 = closure_13;
@@ -139,7 +139,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function GravityCus
   }
   const tmp6Result = tmp6(backgroundColor);
   if (cResult[0] !== tmp6Result.background.backgroundColor) {
-    const tmpResult = id(4967);
+    const tmpResult = id(5026);
     cResult[0] = tmp6Result.background.backgroundColor;
     cResult[1] = tmpResult.hexWithOpacity(tmp6Result.background.backgroundColor, 0.6);
     const hexWithOpacityResult = tmpResult.hexWithOpacity(tmp6Result.background.backgroundColor, 0.6);

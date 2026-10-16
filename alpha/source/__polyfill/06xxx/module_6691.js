@@ -1,79 +1,97 @@
 // Module ID: 6691
 // Function ID: 6692
-// Dependencies: [19, 21, 1504, 6692]
-// Exports: createStackNavigator
+// Dependencies: [109, 41, 42, 93, 95, 98, 19, 17, 21, 6690]
 
 // Module 6691
+import react_native from "react-native" /* 17 */;
+import react2 from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import react from "react" /* 19 */;
-import Link from "Link" /* 1504 */;
+import TOUCHABLE_STATEDefault from "TOUCHABLE_STATE" /* 6690 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import hasOwnProperty from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
-let focused, navigation;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {
 
-function StackNavigator(arg0) {
-  let NavigationContent;
-  let UNSTABLE_routeNamesChangeBehavior;
-  let UNSTABLE_router;
-  let children;
-  let describe;
-  let descriptors;
-  let id;
-  let initialRouteName;
-  let layout;
-  let screenLayout;
-  let screenListeners;
-  let screenOptions;
-  ({ id, initialRouteName, UNSTABLE_routeNamesChangeBehavior, children, layout, screenListeners, screenOptions, screenLayout, UNSTABLE_router } = arg0);
-  let merged = Object.assign(arg0, Object.assign({ id: 0, initialRouteName: 0, UNSTABLE_routeNamesChangeBehavior: 0, children: 0, layout: 0, screenListeners: 0, screenOptions: 0, screenLayout: 0, UNSTABLE_router: 0 }));
-  let state;
-  navigation = undefined;
-  let obj = state(navigation[2]);
-  const direction = obj.useLocale().direction;
-  const obj2 = state(navigation[2]);
-  const navigationBuilder = obj2.useNavigationBuilder(state(navigation[2]).StackRouter, { id, initialRouteName, UNSTABLE_routeNamesChangeBehavior, children, layout, screenListeners, screenOptions, screenLayout, UNSTABLE_router });
-  state = navigationBuilder.state;
-  navigation = navigationBuilder.navigation;
-  const items = [navigation, , ];
-  ({ index: arr[1], key: arr[2] } = state);
-  ({ describe, descriptors, NavigationContent } = navigationBuilder);
-  const effect = react.useEffect(() => {
-    let index;
-    const addListener = navigation.addListener;
-    let addListenerResult;
-    if (addListener != null) {
-      addListenerResult = addListener("tabPress", (arg0) => {
-        let closure_1;
-        const defaultPrevented = arg0;
-        focused = focused.isFocused();
-        const animationFrame = requestAnimationFrame(() => {
-          let tmp2 = index.index > 0;
-          const tmp = index;
-          if (tmp2) {
-            tmp2 = closure_1;
-          }
-          if (tmp2) {
-            tmp2 = !defaultPrevented.defaultPrevented;
-          }
-          if (tmp2) {
-            const dispatch = focused.dispatch;
-            const obj = { target: tmp.key };
-            const StackActions = state(navigation[2]).StackActions;
-            const merged = Object.assign(StackActions.popToTop());
-            dispatch(obj);
-          }
-        });
-      });
-    }
-    return addListenerResult;
-  }, items);
-  const StackView = state(navigation[3]).StackView;
-  const merged1 = Object.assign(merged);
-  return <NavigationContent>{null}</NavigationContent>;
+    }));
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
+  }
 }
+let closure_2 = ["style"];
+const Component = react2.Component;
+const Platform = react_native.Platform;
 const jsx = Fragment.jsx;
-
-export const createStackNavigator = function createStackNavigator(arg0) {
-  const obj = Link;
-  return obj.createNavigatorFactory(StackNavigator)(arg0);
+class TouchableNativeFeedback {
+  constructor() {
+    let constructResult;
+    const self = this;
+    _classCallCheck(this, TouchableNativeFeedback);
+    const obj = _getPrototypeOf(TouchableNativeFeedback);
+    const tmp2 = _getPrototypeOf;
+    const tmp3 = hasOwnProperty;
+    if (_isNativeReflectConstruct()) {
+      const _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(TouchableNativeFeedback, Component);
+const entry = {
+  key: "getExtraButtonProps",
+  value: function getExtraButtonProps() {
+    const obj = { foreground: this.props.useForeground };
+    const background = this.props.background;
+    if (background) {
+      if ("RippleAndroid" === background.type) {
+        ({ borderless: obj.borderless, color: obj.rippleColor } = background);
+      } else if ("ThemeAttrAndroid" === background.type) {
+        obj.borderless = "selectableItemBackgroundBorderless" === background.attribute;
+      }
+      obj.rippleRadius = background.rippleRadius;
+    }
+    return obj;
+  }
 };
-export const createStackScreen = Link.createScreenFactory();
+const items = [
+  entry,
+  {
+    key: "render",
+    value: function render() {
+      const self = this;
+      const props = this.props;
+      let style = props.style;
+      if (undefined === style) {
+        style = {};
+      }
+      const tmp = _objectWithoutProperties(props, closure_2);
+      TOUCHABLE_STATEDefault;
+      const merged = Object.assign(tmp);
+      return <tmp2 style={style} extraButtonProps={self.getExtraButtonProps()} />;
+    }
+  }
+];
+const importDefaultResultResult = _createClass(TouchableNativeFeedback, items);
+let obj = { useForeground: true, extraButtonProps: { rippleColor: null } };
+let merged = Object.assign(TOUCHABLE_STATEDefault.defaultProps);
+importDefaultResultResult.defaultProps = obj;
+importDefaultResultResult.SelectableBackground = (rippleRadius) => ({ type: "ThemeAttrAndroid", attribute: "selectableItemBackground", rippleRadius });
+importDefaultResultResult.SelectableBackgroundBorderless = (rippleRadius) => ({ type: "ThemeAttrAndroid", attribute: "selectableItemBackgroundBorderless", rippleRadius });
+importDefaultResultResult.Ripple = (color, borderless, rippleRadius) => ({ type: "RippleAndroid", color, borderless, rippleRadius });
+importDefaultResultResult.canUseNativeForeground = () => Platform.Version >= 23;
+
+export default importDefaultResultResult;

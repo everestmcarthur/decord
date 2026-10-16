@@ -1,11 +1,11 @@
-// Module ID: 6966
-// Function ID: 6967
+// Module ID: 7186
+// Function ID: 7187
 // Name: useGuildShopPreviewVisible
-// Dependencies: [4750, 1085, 558, 576, 4938, 2049, 573, 6961, 2]
+// Dependencies: [4809, 1087, 558, 576, 4997, 2052, 573, 7181, 2]
 
-// Module 6966 (useGuildShopPreviewVisible)
-import PermissionStore from "PermissionStore" /* 4750 */;
-import Constants from "Constants" /* 1085 */;
+// Module 7186 (useGuildShopPreviewVisible)
+import PermissionStore from "PermissionStore" /* 4809 */;
+import Constants from "Constants" /* 1087 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -71,8 +71,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildSh
     tmp11 = cResult[4];
   }
   let id;
-  const useGuildEligibleForGuildProducts = tmp(6961).useGuildEligibleForGuildProducts;
-  tmp(6961);
+  const useGuildEligibleForGuildProducts = tmp(7181).useGuildEligibleForGuildProducts;
+  tmp(7181);
   if (features != null) {
     id = features.id;
   }
@@ -124,8 +124,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildSh
     flag = false;
   }
   let id;
-  const useGuildEligibleForGuildProducts = tmp(6961).useGuildEligibleForGuildProducts;
-  tmp(6961);
+  const useGuildEligibleForGuildProducts = tmp(7181).useGuildEligibleForGuildProducts;
+  tmp(7181);
   if (features != null) {
     id = features.id;
   }

@@ -1,21 +1,21 @@
-// Module ID: 15464
-// Function ID: 15465
+// Module ID: 15830
+// Function ID: 15831
 // Name: FamilyCenterSetting
-// Dependencies: [19, 1085, 21, 558, 576, 15465, 15466, 7572, 587, 1126, 2568, 10663, 8217, 15469, 2]
+// Dependencies: [19, 1087, 21, 558, 576, 15831, 15832, 7791, 587, 1128, 2571, 11006, 8442, 15835, 2]
 
-// Module 15464 (FamilyCenterSetting)
+// Module 15830 (FamilyCenterSetting)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Constants from "Constants" /* 1085 */;
-import intl2 from "intl" /* 1126 */;
-import _modDef2568 from "module_2568" /* 2568 */;
-import GroupIcon from "GroupIcon" /* 8217 */;
-import useIsParentalConsentBannerActive from "useIsParentalConsentBannerActive" /* 15465 */;
-import useParentalConsentWarning from "useParentalConsentWarning" /* 15466 */;
+import Constants from "Constants" /* 1087 */;
+import intl2 from "intl" /* 1128 */;
+import _modDef2571 from "module_2571" /* 2571 */;
+import GroupIcon from "GroupIcon" /* 8442 */;
+import useIsParentalConsentBannerActive from "useIsParentalConsentBannerActive" /* 15831 */;
+import useParentalConsentWarning from "useParentalConsentWarning" /* 15832 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 10663 */;
+import SettingBuilders from "SettingBuilders" /* 11006 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -45,9 +45,9 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFamilyC
         let first;
         const _Symbol = Symbol;
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-          const WarningIcon = tmp(7572).WarningIcon;
-          const intl = tmp(1126).intl;
-          const tmp12 = <WarningIcon size="sm" color={nativeDefault.colors.ICON_FEEDBACK_WARNING} accessible accessibilityLabel={intl.string(_modDef2568.wucWfE)} />;
+          const WarningIcon = tmp(7791).WarningIcon;
+          const intl = tmp(1128).intl;
+          const tmp12 = <WarningIcon size="sm" color={nativeDefault.colors.ICON_FEEDBACK_WARNING} accessible accessibilityLabel={intl.string(_modDef2571.wucWfE)} />;
           cResult[0] = tmp12;
           first = tmp12;
         } else {
@@ -76,9 +76,9 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFamilyC
     if (null != daysRemaining) {
       tmp6 = null;
       if (daysRemaining >= 0) {
-        const WarningIcon = tmp(7572).WarningIcon;
-        const intl = tmp(1126).intl;
-        tmp6 = <WarningIcon size="sm" color={nativeDefault.colors.ICON_FEEDBACK_WARNING} accessible accessibilityLabel={intl.string(_modDef2568.wucWfE)} />;
+        const WarningIcon = tmp(7791).WarningIcon;
+        const intl = tmp(1128).intl;
+        tmp6 = <WarningIcon size="sm" color={nativeDefault.colors.ICON_FEEDBACK_WARNING} accessible accessibilityLabel={intl.string(_modDef2571.wucWfE)} />;
       }
     }
   }
@@ -87,7 +87,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFamilyC
 let obj = {
   useTitle() {
     const intl = intl2.intl;
-    return intl.string(_modDef2568.RZqaJn);
+    return intl.string(_modDef2571.RZqaJn);
   },
   parent: null,
   IconComponent: GroupIcon.GroupIcon,

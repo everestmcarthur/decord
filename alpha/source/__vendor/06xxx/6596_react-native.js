@@ -1,12 +1,19 @@
 // Module ID: 6596
 // Function ID: 6597
 // Name: react-native
-// Dependencies: [17, 6535]
+// Dependencies: [17]
 
 // Module 6596 (react-native)
 import react_native from "react-native" /* 17 */;
-import FlashList from "FlashList" /* 6535 */;
 
-const Animated = react_native.Animated;
+const NativeModules = react_native.NativeModules;
+let PlatformConstants;
+const Platform = react_native.Platform;
+if (NativeModules != null) {
+  PlatformConstants = NativeModules.PlatformConstants;
+}
+if (PlatformConstants == null) {
+  PlatformConstants = Platform.constants;
+}
 
-export default Animated.createAnimatedComponent(FlashList.FlashList);
+export default PlatformConstants;

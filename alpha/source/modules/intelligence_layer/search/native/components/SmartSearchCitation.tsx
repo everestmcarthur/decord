@@ -1,12 +1,12 @@
-// Module ID: 17445
-// Function ID: 17446
+// Module ID: 17753
+// Function ID: 17754
 // Name: SmartSearchCitation
-// Dependencies: [5, 19, 9313, 21, 558, 576, 17395, 12576, 12574, 17446, 17426, 2]
+// Dependencies: [5, 19, 9549, 21, 558, 576, 17703, 12931, 12929, 17754, 17734, 2]
 
-// Module 17445 (SmartSearchCitation)
+// Module 17753 (SmartSearchCitation)
 import Fragment from "Fragment" /* 21 */;
-import SearchConstants from "SearchConstants" /* 9313 */;
-import MessageSearchResultParserDefault from "MessageSearchResultParser" /* 17446 */;
+import SearchConstants from "SearchConstants" /* 9549 */;
+import MessageSearchResultParserDefault from "MessageSearchResultParser" /* 17754 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

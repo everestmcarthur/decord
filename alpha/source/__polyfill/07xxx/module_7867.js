@@ -1,80 +1,112 @@
 // Module ID: 7867
 // Function ID: 7868
-// Dependencies: [32, 7828, 7845, 7868]
+// Dependencies: [41, 42, 93, 95, 98, 19, 17, 21, 7809, 7868, 7811, 7820]
 
 // Module 7867
-import _mod7828 from "module_7828" /* 7828 */;
-import _modDef7845 from "module_7845" /* 7845 */;
-import PathRecordTypesDefault from "PathRecordTypes" /* 7868 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import react_native from "react-native" /* 17 */;
+import Fragment from "Fragment" /* 21 */;
+import extractViewBox from "extractViewBox" /* 7809 */;
+import extractProps from "extractProps" /* 7811 */;
+import multiplyMatricesDefault from "multiplyMatrices" /* 7820 */;
+import _modDef7868 from "module_7868" /* 7868 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
+import react from "react" /* 19 */;
 
-let length;
-let metroImportDefault;
-function getTagName(dataView, sum1) {
-  let num;
-  let sum;
-  const obj = _mod7828;
-  const tmp = _slicedToArray(obj.getPascalStringFromDataView(dataView, sum1), 2);
-  const first = tmp[0];
-  const obj2 = { tagName: tmp[1], tagNameSize: sum + num };
-  num = 0;
-  sum = 1 + first;
-  if (first % 2 === 0) {
-    num = 1;
+let size;
+
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {
+
+    }));
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
-  return obj2;
 }
-let obj = {
-  read(arg0, arg1) {
-    let tmp4Result2;
-    const getDataView = _mod7828.getDataView;
-    _mod7828;
-    const uint8Array = new Uint8Array(arg0);
-    const dataView = getDataView(uint8Array.buffer);
-    const obj = {};
-    let num = 0;
-    if (0 < arg0.length) {
-      const sum = num + metroImportDefault;
-      const obj2 = _mod7828;
-      const stringFromDataView = obj2.getStringFromDataView(dataView, num, metroImportDefault);
-      const obj3 = _modDef7845;
-      const shortAt = obj3.getShortAt(dataView, sum);
-      const sum1 = sum + c5;
-      const tmp14 = getTagName(dataView, sum1);
-      let name = tmp14.tagName;
-      const sum2 = sum1 + tmp14.tagNameSize;
-      const obj4 = _modDef7845;
-      const longAt = obj4.getLongAt(dataView, sum2);
-      const sum3 = sum2 + c6;
-      if (stringFromDataView === c4) {
-        const tmp4Result = _mod7828;
-        const dataView1 = tmp4Result.getDataView(dataView.buffer, sum3, longAt);
-        const obj6 = { id: shortAt, value: tmp4Result2.getStringFromDataView(dataView1, 0, longAt) };
-        tmp4Result2 = _mod7828;
-        if (PathRecordTypesDefault[shortAt]) {
-          try {
-            const obj5 = PathRecordTypesDefault[shortAt];
-            obj6.description = obj5.description(dataView1);
-          } catch (err) {
-            obj6.description = "<no description formatter>";
-          }
-          if (!name) {
-            name = tmp9(7868)[shortAt].name;
-          }
-          obj[name] = obj6;
-        } else if (arg1) {
-          const _HermesInternal = HermesInternal;
-          obj["undefined-" + shortAt] = obj6;
-        }
-      }
-      num = sum3 + (longAt + longAt % 2);
+const Image = react_native.Image;
+const jsx = Fragment.jsx;
+const re9 = /\s+/;
+class SvgImage {
+  constructor() {
+    let constructResult;
+    const self = this;
+    _classCallCheck(this, SvgImage);
+    const obj = _getPrototypeOf(SvgImage);
+    const tmp2 = _getPrototypeOf;
+    const tmp3 = _possibleConstructorReturn;
+    if (_isNativeReflectConstruct()) {
+      const _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      constructResult = obj(...arguments);
     }
-    return obj;
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(SvgImage, multiplyMatricesDefault);
+const entry = {
+  key: "render",
+  value: function render() {
+    let assetSource;
+    let height;
+    let href;
+    let parts;
+    let preserveAspectRatio;
+    let tmp2;
+    let tmp3;
+    let width;
+    let x;
+    let y;
+    const self = this;
+    const props = this.props;
+    ({ preserveAspectRatio, href } = props);
+    ({ x, y, width, height } = props);
+    if (undefined === href) {
+      href = props.xlinkHref;
+    }
+    const onLoad = props.onLoad;
+    if (preserveAspectRatio) {
+      const str = preserveAspectRatio.trim();
+      parts = str.split(re9);
+    } else {
+      parts = [];
+    }
+    size = { x, y, width, height, onLoad, meetOrSlice: extractViewBox.meetOrSliceTypes[tmp3] || 0, align: extractViewBox.alignEnum[tmp2] || "xMidYMid", src: assetSource };
+    [tmp2, tmp3] = parts;
+    extractViewBox.meetOrSliceTypes[tmp3] || 0;
+    assetSource = null;
+    extractViewBox.alignEnum[tmp2] || "xMidYMid";
+    if (href) {
+      let tmp10 = href;
+      const resolveAssetSource = Image.resolveAssetSource;
+      if (typeof href === "string") {
+        tmp10 = { uri: href };
+        const obj = { uri: href };
+      }
+      assetSource = resolveAssetSource(tmp10);
+    }
+    _modDef7868;
+    const tmp4Result = extractProps;
+    const merged = Object.assign(tmp4Result.withoutXY(this, props));
+    const merged1 = Object.assign(size);
+    return <tmp11 ref={function ref(arg0) {
+      return self.refMethod(arg0);
+    }} />;
   }
 };
-let c4 = "8BIM";
-let c5 = 2;
-let c6 = 4;
-({ length, length: metroImportDefault } = "8BIM");
+const items = [entry];
+const importDefaultResultResult = _createClass(SvgImage, items);
+importDefaultResultResult.displayName = "Image";
+importDefaultResultResult.defaultProps = { x: 0, y: 0, width: 0, height: 0, preserveAspectRatio: "xMidYMid meet" };
 
-export default obj;
+export default importDefaultResultResult;

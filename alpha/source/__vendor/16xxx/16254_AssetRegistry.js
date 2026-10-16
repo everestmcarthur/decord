@@ -1,10 +1,10 @@
 // Module ID: 16254
 // Function ID: 16255
 // Name: AssetRegistry
-// Dependencies: [1132]
+// Dependencies: [1134]
 
 // Module 16254 (AssetRegistry)
-import AssetRegistry from "AssetRegistry" /* 1132 */;
+import AssetRegistry from "AssetRegistry" /* 1134 */;
 
 
-export default AssetRegistry.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9pbnRs", scales: [1], hash: "d280460baa66780ad374e84d31fc04a4", name: "hr.messages.d280460baa66780ad374e84d31fc04a4.compiled.messages", type: "jsona" });
+export default AssetRegistry.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/main_tabs", width: 192, height: 144, scales: [1], hash: "2bbd6220afd7d7de1fa25c481ae56a3d", name: "ExampleSketchheadsActivity", type: "png" });

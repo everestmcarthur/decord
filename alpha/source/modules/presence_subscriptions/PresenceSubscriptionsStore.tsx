@@ -1,16 +1,16 @@
-// Module ID: 10666
-// Function ID: 10667
+// Module ID: 11009
+// Function ID: 11010
 // Name: PresenceSubscriptionsStore
-// Dependencies: [32, 5108, 2024, 10667, 2060, 504, 584, 2]
+// Dependencies: [32, 5169, 2026, 11010, 2063, 504, 584, 2]
 
-// Module 10666 (PresenceSubscriptionsStore)
+// Module 11009 (PresenceSubscriptionsStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import Constants from "Constants" /* 2024 */;
-import Timers from "Timers" /* 2060 */;
-import ActivitiesActionCreatorsDefault from "ActivitiesActionCreators" /* 10667 */;
+import Constants from "Constants" /* 2026 */;
+import Timers from "Timers" /* 2063 */;
+import ActivitiesActionCreatorsDefault from "ActivitiesActionCreators" /* 11010 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
-import PresenceStore from "PresenceStore" /* 5108 */;
+import PresenceStore from "PresenceStore" /* 5169 */;
 import size from "module_2" /* 2 */;
 
 function handleConnectionOpenOrResumed() {

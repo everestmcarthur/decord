@@ -1,24 +1,24 @@
-// Module ID: 18683
-// Function ID: 18684
+// Module ID: 19000
+// Function ID: 19001
 // Name: NativeIntentsManager
-// Dependencies: [32, 2065, 2087, 4750, 4760, 2116, 1390, 1085, 18684, 18685, 5421, 13637, 1415, 1388, 4962, 6808, 2]
+// Dependencies: [32, 2068, 2090, 4809, 4819, 2119, 1392, 1087, 19001, 19002, 5483, 14003, 1417, 1388, 5021, 7030, 2]
 
-// Module 18683 (NativeIntentsManager)
-import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
-import UserUtilsDefault from "UserUtils" /* 4962 */;
-import useChannelName from "useChannelName" /* 5421 */;
-import getChannelIcon from "getChannelIcon" /* 13637 */;
-import NativeIntentsExperimentDefault from "NativeIntentsExperiment" /* 18684 */;
-import IntentsBindingsDefault from "IntentsBindings" /* 18685 */;
+// Module 19000 (NativeIntentsManager)
+import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
+import UserUtilsDefault from "UserUtils" /* 5021 */;
+import useChannelName from "useChannelName" /* 5483 */;
+import getChannelIcon from "getChannelIcon" /* 14003 */;
+import NativeIntentsExperimentDefault from "NativeIntentsExperiment" /* 19001 */;
+import IntentsBindingsDefault from "IntentsBindings" /* 19002 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import GuildStore from "GuildStore" /* 2087 */;
-import PermissionStore from "PermissionStore" /* 4750 */;
-import RelationshipStore from "RelationshipStore" /* 4760 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
-import UserStore from "UserStore" /* 1390 */;
-import Constants from "Constants" /* 1085 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6808 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import GuildStore from "GuildStore" /* 2090 */;
+import PermissionStore from "PermissionStore" /* 4809 */;
+import RelationshipStore from "RelationshipStore" /* 4819 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2119 */;
+import UserStore from "UserStore" /* 1392 */;
+import Constants from "Constants" /* 1087 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7030 */;
 import size from "module_2" /* 2 */;
 
 let id;

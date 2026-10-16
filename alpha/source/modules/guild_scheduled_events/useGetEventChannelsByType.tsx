@@ -1,14 +1,14 @@
-// Module ID: 8571
-// Function ID: 8572
+// Module ID: 8799
+// Function ID: 8800
 // Name: useGetEventChannelsByType
-// Dependencies: [2070, 4748, 4750, 8572, 558, 576, 504, 8573, 2]
+// Dependencies: [2073, 4807, 4809, 8800, 558, 576, 504, 8801, 2]
 
-// Module 8571 (useGetEventChannelsByType)
-import GuildChannelStore2 from "GuildChannelStore" /* 4748 */;
-import useManageResourcePermissions from "useManageResourcePermissions" /* 8573 */;
-import StageInstanceStore from "StageInstanceStore" /* 2070 */;
-import PermissionStore from "PermissionStore" /* 4750 */;
-import PermissionsConstants from "PermissionsConstants" /* 8572 */;
+// Module 8799 (useGetEventChannelsByType)
+import GuildChannelStore2 from "GuildChannelStore" /* 4807 */;
+import useManageResourcePermissions from "useManageResourcePermissions" /* 8801 */;
+import StageInstanceStore from "StageInstanceStore" /* 2073 */;
+import PermissionStore from "PermissionStore" /* 4809 */;
+import PermissionsConstants from "PermissionsConstants" /* 8800 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

@@ -1,25 +1,11 @@
 // Module ID: 7833
 // Function ID: 7834
-// Dependencies: []
+// Dependencies: [65]
 
 // Module 7833
-let c0 = 18761;
-let c1 = 19789;
+import module_65 from "module_65" /* 65 */;
 
-export default {
-  BIG_ENDIAN: 19789,
-  LITTLE_ENDIAN: 18761,
-  getByteOrder(getUint16, c5) {
-    if (getUint16.getUint16(c5) === c0) {
-      return c0;
-    } else if (getUint16.getUint16(c5) === c1) {
-      return c1;
-    } else {
-      const _Error = Error;
-      const self = this;
-      const self2 = this;
-      const error = new Error("Illegal byte order value. Faulty image.");
-      throw error;
-    }
-  }
-};
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGFeBlend", validAttributes: { x: true, y: true, width: true, height: true, result: true, in1: true, in2: true, mode: true } };
+
+export default module_65.get("RNSVGFeBlend", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

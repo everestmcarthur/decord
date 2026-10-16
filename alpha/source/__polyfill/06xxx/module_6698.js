@@ -1,77 +1,108 @@
 // Module ID: 6698
 // Function ID: 6699
-// Dependencies: [19, 21, 1634, 6699, 1504, 6700, 6210, 6701]
+// Dependencies: [1658, 6557, 6530]
+// Exports: useGestureHandler
 
 // Module 6698
-import Fragment from "Fragment" /* 21 */;
-import Link from "Link" /* 1504 */;
-import react from "react" /* 19 */;
+import GESTURE_SOURCE from "GESTURE_SOURCE" /* 6530 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6557 */;
 
-const jsx = Fragment.jsx;
+const require = globalThis.__r;
+let dependencyMap, tmp, tmp2, tmp3, tmp4, tmp5, tmp6, tmp7, tmp8;
 
-export const Header = react.memo(function Header(navigation) {
-  let back;
-  let headerBackTitle;
-  let href;
-  let layout;
-  let num;
-  let options;
-  let progress;
-  let route;
-  let styleInterpolator;
-  let tmp9;
-  let tmpResult2;
-  ({ back, options, route } = navigation);
-  navigation = navigation.navigation;
-  let tmp = route;
-  ({ layout, progress, styleInterpolator } = navigation);
-  const obj = route(navigation[2]);
-  const safeAreaInsets = obj.useSafeAreaInsets();
-  if (undefined !== options.headerBackTitle) {
-    headerBackTitle = options.headerBackTitle;
-  } else if (back) {
-    headerBackTitle = back.title;
-  }
-  const items = [navigation, route.key];
-  const useCallback = react.useCallback;
-  const tmpResult = tmp(navigation[3]);
-  const callback = useCallback(tmpResult.throttle(() => {
-    const tmp = navigation.isFocused() && navigation.canGoBack();
-    if (tmp) {
-      const dispatch = obj.dispatch;
-      const obj2 = { source: route.key };
-      const StackActions = Link.StackActions;
-      const merged = Object.assign(StackActions.pop());
-      dispatch(obj2);
+let __initData = { code: "function pnpm_useGestureHandlerTs1(event){const{state,State,gestureSource,source,onStart}=this.__closure;state.value=State.BEGAN;gestureSource.value=source;onStart(source,event);return;}" };
+let __initData2 = { code: "function pnpm_useGestureHandlerTs2(event){const{gestureSource,source,state,onChange}=this.__closure;if(gestureSource.value!==source){return;}state.value=event.state;onChange(source,event);}" };
+let __initData3 = { code: "function pnpm_useGestureHandlerTs3(event){const{gestureSource,source,state,GESTURE_SOURCE,onEnd}=this.__closure;if(gestureSource.value!==source){return;}state.value=event.state;gestureSource.value=GESTURE_SOURCE.UNDETERMINED;onEnd(source,event);}" };
+let __initData4 = { code: "function pnpm_useGestureHandlerTs4(event){const{gestureSource,source,state,GESTURE_SOURCE,onFinalize}=this.__closure;if(gestureSource.value!==source){return;}state.value=event.state;gestureSource.value=GESTURE_SOURCE.UNDETERMINED;onFinalize(source,event);}" };
+
+export const useGestureHandler = (source, state, gestureSource, onStart, onChange, onEnd, onFinalize) => {
+  let items;
+  let items1;
+  let items2;
+  let items3;
+  let obj2;
+  let obj4;
+  let obj5;
+  let obj7;
+  const _require = source;
+  dependencyMap = state;
+  __initData = gestureSource;
+  __initData2 = onStart;
+  __initData3 = onChange;
+  __initData4 = onEnd;
+  const obj = { handleOnStart: obj2.useWorkletCallback(R, items), handleOnChange: obj4.useWorkletCallback(U, items1), handleOnEnd: obj5.useWorkletCallback(C, items2), handleOnFinalize: obj7.useWorkletCallback(T, items3) };
+  obj2 = require("module_1658");
+  class R {
+    constructor(arg0) {
+      closure_1.value = closure_0(closure_1[1]).State.BEGAN;
+      closure_2.value = closure_0;
+      tmp = closure_3(closure_0, source);
+      return;
     }
-  }, 50), items);
-  const context = react.useContext(tmp(tmp2[5]).ModalPresentationContext);
-  if (undefined !== options.headerStatusBarHeight) {
-    num = options.headerStatusBarHeight;
-  } else {
-    num = 0;
-    if (!context) {
-      num = 0;
-      if (!tmp6) {
-        num = safeAreaInsets.top;
+  }
+  R.__closure = { state, State: require("LegacyBaseButton").State, gestureSource, source, onStart };
+  R.__workletHash = 16113572067379;
+  R.__initData = __initData;
+  items = [state, gestureSource, source, onStart];
+  ({ state, State: require("LegacyBaseButton").State, gestureSource, source, onStart });
+  obj4 = require("module_1658");
+  class U {
+    constructor(arg0) {
+      if (closure_2.value === closure_0) {
+        tmp2 = source;
+        tmp3 = closure_1;
+        closure_1.value = source.state;
+        tmp4 = closure_4;
+        tmp5 = closure_4(tmp, source);
       }
+      return;
     }
   }
-  let obj2 = { title: tmpResult2.getHeaderTitle(options, route.name), progress, layout, modal: context, headerBackTitle, headerStatusBarHeight: num, onGoBack: tmp9, backHref: href, styleInterpolator };
-  const HeaderSegment = tmp(tmp2[7]).HeaderSegment;
-  let merged = Object.assign(options);
-  const tmp7 = jsx;
-  tmpResult2 = tmp(navigation[6]);
-  if (undefined !== options.headerBackTitle) {
-    headerBackTitle = options.headerBackTitle;
+  U.__closure = { gestureSource, source, state, onChange };
+  U.__workletHash = 9050442757159;
+  U.__initData = __initData2;
+  items1 = [state, gestureSource, source, onChange];
+  obj5 = require("module_1658");
+  class C {
+    constructor(arg0) {
+      if (closure_2.value === closure_0) {
+        tmp3 = source;
+        tmp4 = closure_1;
+        closure_1.value = source.state;
+        tmp5 = closure_0;
+        tmp6 = closure_1;
+        tmp.value = closure_0(closure_1[2]).GESTURE_SOURCE.UNDETERMINED;
+        tmp7 = closure_5;
+        tmp8 = closure_5(tmp2, source);
+      }
+      return;
+    }
   }
-  tmp9 = undefined;
-  if (back) {
-    tmp9 = callback;
+  C.__closure = { gestureSource, source, state, GESTURE_SOURCE: require("GESTURE_SOURCE").GESTURE_SOURCE, onEnd };
+  C.__workletHash = 10682034812271;
+  C.__initData = __initData3;
+  items2 = [state, gestureSource, source, onEnd];
+  ({ gestureSource, source, state, GESTURE_SOURCE: require("GESTURE_SOURCE").GESTURE_SOURCE, onEnd });
+  obj7 = require("module_1658");
+  class T {
+    constructor(arg0) {
+      if (closure_2.value === closure_0) {
+        tmp3 = source;
+        tmp4 = closure_1;
+        closure_1.value = source.state;
+        tmp5 = closure_0;
+        tmp6 = closure_1;
+        tmp.value = closure_0(closure_1[2]).GESTURE_SOURCE.UNDETERMINED;
+        tmp7 = closure_6;
+        tmp8 = closure_6(tmp2, source);
+      }
+      return;
+    }
   }
-  href = undefined;
-  if (back) {
-    href = back.href;
-  }
-  return tmp7(HeaderSegment, obj2);
-});
+  T.__closure = { gestureSource, source, state, GESTURE_SOURCE: require("GESTURE_SOURCE").GESTURE_SOURCE, onFinalize };
+  T.__workletHash = 9696716573416;
+  T.__initData = __initData4;
+  items3 = [state, gestureSource, source, onFinalize];
+  ({ gestureSource, source, state, GESTURE_SOURCE: require("GESTURE_SOURCE").GESTURE_SOURCE, onFinalize });
+  return obj;
+};

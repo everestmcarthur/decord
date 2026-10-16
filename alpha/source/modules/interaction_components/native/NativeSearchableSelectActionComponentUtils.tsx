@@ -1,23 +1,23 @@
-// Module ID: 8260
-// Function ID: 8261
+// Module ID: 8485
+// Function ID: 8486
 // Name: NativeSearchableSelectActionComponentUtils
-// Dependencies: [2065, 2119, 2087, 1390, 1085, 5445, 1388, 1418, 6884, 8261, 1103, 587, 8262, 8159, 2]
+// Dependencies: [2068, 2122, 2090, 1392, 1087, 5507, 1388, 1420, 7105, 8486, 1105, 587, 8487, 8384, 2]
 // Exports: getChannelIconData, transformSearchableSelectOptions
 
-// Module 8260 (NativeSearchableSelectActionComponentUtils)
+// Module 8485 (NativeSearchableSelectActionComponentUtils)
 import nativeDefault from "native" /* 587 */;
-import utils_ColorUtils from "utils/ColorUtils" /* 1103 */;
-import utils_AvatarUtils from "utils/AvatarUtils" /* 1418 */;
-import InteractionComponentTypes from "InteractionComponentTypes" /* 5445 */;
-import RoleIconUtils from "RoleIconUtils" /* 6884 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8159 */;
-import AssetRegistryDefault from "AssetRegistry" /* 8261 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 8262 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import GuildRoleStore from "GuildRoleStore" /* 2119 */;
-import GuildStore from "GuildStore" /* 2087 */;
-import UserStore from "UserStore" /* 1390 */;
-import Constants from "Constants" /* 1085 */;
+import utils_ColorUtils from "utils/ColorUtils" /* 1105 */;
+import utils_AvatarUtils from "utils/AvatarUtils" /* 1420 */;
+import InteractionComponentTypes from "InteractionComponentTypes" /* 5507 */;
+import RoleIconUtils from "RoleIconUtils" /* 7105 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8384 */;
+import AssetRegistryDefault from "AssetRegistry" /* 8486 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 8487 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import GuildRoleStore from "GuildRoleStore" /* 2122 */;
+import GuildStore from "GuildStore" /* 2090 */;
+import UserStore from "UserStore" /* 1392 */;
+import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

@@ -1,17 +1,17 @@
-// Module ID: 6140
-// Function ID: 6141
+// Module ID: 6364
+// Function ID: 6365
 // Name: DesktopNativeUtils
-// Dependencies: [32, 5, 1085, 38, 5027, 1382, 510, 6141, 6142, 4, 6143, 6144, 1384, 1295, 5118, 2]
+// Dependencies: [32, 5, 1087, 38, 5086, 1384, 510, 6365, 6366, 4, 6367, 6368, 1386, 1297, 5179, 2]
 
-// Module 6140 (DesktopNativeUtils)
+// Module 6364 (DesktopNativeUtils)
 import logger_Logger from "logger/Logger" /* 4 */;
 import Storage3 from "Storage" /* 510 */;
-import Constants from "Constants" /* 1085 */;
-import flow_Client from "flow/Client" /* 5027 */;
-import discord_common_DiscordNative from "discord_common/DiscordNative" /* 5118 */;
-import DomainMigrationUtils from "DomainMigrationUtils" /* 6141 */;
-import GameDetectionDebugLevel from "GameDetectionDebugLevel" /* 6142 */;
-import IPCEvents from "IPCEvents" /* 6143 */;
+import Constants from "Constants" /* 1087 */;
+import flow_Client from "flow/Client" /* 5086 */;
+import discord_common_DiscordNative from "discord_common/DiscordNative" /* 5179 */;
+import DomainMigrationUtils from "DomainMigrationUtils" /* 6365 */;
+import GameDetectionDebugLevel from "GameDetectionDebugLevel" /* 6366 */;
+import IPCEvents from "IPCEvents" /* 6367 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import size from "module_2" /* 2 */;
@@ -20,7 +20,7 @@ const require = globalThis.__r;
 let _require, c10, c9, closeResult, importDefault;
 
 let tmp2;
-const FileExtensionUtils = tmp2(6144);
+const FileExtensionUtils = tmp2(6368);
 function sanitizeFilename(str) {
   try {
     const _decodeURIComponent = decodeURIComponent;
@@ -1037,7 +1037,7 @@ let obj2 = {
     if (null != uri) {
       const tmp = require;
       if (require("PlatformUtils").isPlatformEmbedded) {
-        const tmpResult = tmp(6144);
+        const tmpResult = tmp(6368);
         const decideFileExtensionResult = tmpResult.decideFileExtension(uri, contentType);
         const hasItem = null == decideFileExtensionResult || set2.has(decideFileExtensionResult);
         return hasItem;
@@ -2832,6 +2832,61 @@ let obj2 = {
       let result;
       if (dotaGsi != null) {
         result = dotaGsi.debugLogDotaGsiPayload(arg0);
+      }
+      if (result == null) {
+        result = Promise.resolve();
+      }
+      resolved = result;
+    } else {
+      resolved = Promise.resolve();
+    }
+    return resolved;
+  },
+  readRocketLeagueStatsApiConfig() {
+    let resolved;
+    obj = { installed: false, config: {} };
+    obj2 = require("PlatformUtils");
+    if (obj2.isWindows()) {
+      const rocketLeagueStatsApi = DiscordNative.rocketLeagueStatsApi;
+      let rocketLeagueStatsApiConfig;
+      if (rocketLeagueStatsApi != null) {
+        rocketLeagueStatsApiConfig = rocketLeagueStatsApi.readRocketLeagueStatsApiConfig();
+      }
+      if (rocketLeagueStatsApiConfig == null) {
+        rocketLeagueStatsApiConfig = Promise.resolve(obj);
+      }
+      resolved = rocketLeagueStatsApiConfig;
+    } else {
+      resolved = Promise.resolve(obj);
+    }
+    return resolved;
+  },
+  writeRocketLeagueStatsApiConfig(arg0) {
+    let resolved;
+    obj = require("PlatformUtils");
+    if (obj.isWindows()) {
+      const rocketLeagueStatsApi = DiscordNative.rocketLeagueStatsApi;
+      let result;
+      if (rocketLeagueStatsApi != null) {
+        result = rocketLeagueStatsApi.writeRocketLeagueStatsApiConfig(arg0);
+      }
+      if (result == null) {
+        result = Promise.resolve(false);
+      }
+      resolved = result;
+    } else {
+      resolved = Promise.resolve(false);
+    }
+    return resolved;
+  },
+  debugLogRocketLeagueStatsApiMessage(arg0) {
+    let resolved;
+    obj = require("PlatformUtils");
+    if (obj.isWindows()) {
+      const rocketLeagueStatsApi = DiscordNative.rocketLeagueStatsApi;
+      let result;
+      if (rocketLeagueStatsApi != null) {
+        result = rocketLeagueStatsApi.debugLogRocketLeagueStatsApiMessage(arg0);
       }
       if (result == null) {
         result = Promise.resolve();

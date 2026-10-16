@@ -6,24 +6,11 @@
 // Module 6714 (react-native)
 import react_native from "react-native" /* 17 */;
 
-let reactNativeVersion;
-let tmp;
-const constants = react_native.Platform.constants;
-if (constants != null) {
-  reactNativeVersion = constants.reactNativeVersion;
-}
-try {
-  let InteractionManager;
-  let major;
-  if (reactNativeVersion != null) {
-    major = reactNativeVersion.major;
-  }
-  if (0 !== major) {
-    InteractionManager = react_native.InteractionManager;
-  }
-  tmp = InteractionManager;
-} catch (err) {
-}
-const InteractionManager_export = tmp;
+let obj2;
+const StyleSheet = react_native.StyleSheet;
+const obj = { container: obj2 };
+const create = StyleSheet.create;
+obj2 = { pointerEvents: "box-none" };
+const merged = Object.assign(StyleSheet.absoluteFillObject);
 
-export { InteractionManager_export as InteractionManager };
+export const styles = create(obj);

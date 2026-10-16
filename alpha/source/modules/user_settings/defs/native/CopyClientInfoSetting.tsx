@@ -1,33 +1,33 @@
-// Module ID: 16172
-// Function ID: 16173
+// Module ID: 16538
+// Function ID: 16539
 // Name: CopyClientInfoSetting
-// Dependencies: [10484, 21, 1381, 5056, 12139, 6886, 4808, 558, 576, 6839, 1126, 6895, 6899, 5042, 5068, 10663, 6114, 2041, 2]
+// Dependencies: [10732, 21, 1383, 5118, 12431, 7107, 4867, 558, 576, 7062, 1128, 7116, 7120, 5104, 5130, 11006, 6338, 2044, 2]
 // Exports: getClientInfoString
 
-// Module 16172 (CopyClientInfoSetting)
+// Module 16538 (CopyClientInfoSetting)
 import react from "react" /* 576 */;
-import UserSettings from "UserSettings" /* 2041 */;
-import ToastUtils from "ToastUtils" /* 4808 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
-import DeviceUtils from "DeviceUtils" /* 5068 */;
-import ClipboardListIcon from "ClipboardListIcon" /* 6114 */;
-import ClipboardUtils from "ClipboardUtils" /* 6886 */;
-import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 12139 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 10484 */;
+import UserSettings from "UserSettings" /* 2044 */;
+import ToastUtils from "ToastUtils" /* 4867 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5118 */;
+import DeviceUtils from "DeviceUtils" /* 5130 */;
+import ClipboardListIcon from "ClipboardListIcon" /* 6338 */;
+import ClipboardUtils from "ClipboardUtils" /* 7107 */;
+import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 12431 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 10732 */;
 import Fragment from "Fragment" /* 21 */;
-import react_native from "react-native" /* 1381 */;
+import react_native from "react-native" /* 1383 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 10663 */;
+import SettingBuilders from "SettingBuilders" /* 11006 */;
 import size from "module_2" /* 2 */;
 
 let closure_4;
 let hasOwnProperty;
 let tmp;
-const intl8 = tmp(1126);
-const CopyIcon = tmp(5042);
-const BottomSheetTitleHeader2 = tmp(6839);
-const ActionSheetRow7 = tmp(6895);
-const ActionSheet2 = tmp(6899);
+const intl8 = tmp(1128);
+const CopyIcon = tmp(5104);
+const BottomSheetTitleHeader2 = tmp(7062);
+const ActionSheetRow7 = tmp(7116);
+const ActionSheet2 = tmp(7120);
 function getClientInfo() {
   let str10;
   const overrides = BuildOverrideStore.getCurrentBuildOverride().overrides;

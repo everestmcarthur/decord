@@ -1,13 +1,13 @@
-// Module ID: 7893
-// Function ID: 7894
+// Module ID: 8113
+// Function ID: 8114
 // Name: ForumPostActions
-// Dependencies: [1085, 7891, 6197, 7894, 1255, 5039, 1126, 2128, 7895, 6778, 1415, 7896, 4762, 4768, 2]
+// Dependencies: [1087, 8111, 6419, 8114, 1257, 5101, 1128, 2131, 8115, 7000, 1417, 8116, 4821, 4827, 2]
 // Exports: createDefaultReaction, createForumPostActions
 
-// Module 7893 (ForumPostActions)
-import Constants from "Constants" /* 1085 */;
-import ReactionUtils from "ReactionUtils" /* 4762 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 7891 */;
+// Module 8113 (ForumPostActions)
+import Constants from "Constants" /* 1087 */;
+import ReactionUtils from "ReactionUtils" /* 4821 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8111 */;
 import size from "module_2" /* 2 */;
 
 const HelpdeskArticles = Constants.HelpdeskArticles;
@@ -102,56 +102,56 @@ export const createForumPostActions = function createForumPostActions(arg0) {
   const getAssetUriForEmbed = renderer_EmbedUtils.getAssetUriForEmbed;
   renderer_EmbedUtils;
   if (isFollowing) {
-    assetUriForEmbed = getAssetUriForEmbed(tmp4(6197));
+    assetUriForEmbed = getAssetUriForEmbed(tmp4(6419));
     tmp6 = tmp4;
     tmp8 = tmp;
   } else {
-    assetUriForEmbed = getAssetUriForEmbed(tmp4(7894));
+    assetUriForEmbed = getAssetUriForEmbed(tmp4(8114));
     tmp6 = tmp4;
     tmp8 = tmp;
   }
   if (null == assetUriForEmbed) {
     const _HermesInternal = HermesInternal;
-    const tmp6Result = tmp6(1255);
-    tmp6Result.captureMessage("Forum follow is null. isFollowing: " + isFollowing + " icon: " + tmp6(isFollowing ? 6197 : 7894));
+    const tmp6Result = tmp6(1257);
+    tmp6Result.captureMessage("Forum follow is null. isFollowing: " + isFollowing + " icon: " + tmp6(isFollowing ? 6419 : 8114));
   }
   let stringResult;
-  const tmp8Result = tmp8(7891);
-  const assetUriForEmbed1 = tmp8Result.getAssetUriForEmbed(tmp6(5039));
+  const tmp8Result = tmp8(8111);
+  const assetUriForEmbed1 = tmp8Result.getAssetUriForEmbed(tmp6(5101));
   if (!hasReactions) {
     let emoji;
     if (defaultReaction != null) {
       emoji = defaultReaction.emoji;
     }
     if (null == emoji) {
-      const intl = tmp8(1126).intl;
-      stringResult = intl.string(tmp8(1126).t.xpOyTO);
+      const intl = tmp8(1128).intl;
+      stringResult = intl.string(tmp8(1128).t.xpOyTO);
     }
   }
   let tmp14;
   if (showMediaPostSharePrompt) {
-    const obj = { title: intl2.string(tmp8(1126).t["5uAO7d"]), subtitle: formatToParts(YtCu5p, obj2), cta: intl4.string(tmp8(1126).t.C5UQC9), icon: tmp8Result3.getAssetUriForEmbed(tmp6(7895)), closeIcon: tmp8Result4.getAssetUriForEmbed(tmp6(6778)) };
-    intl2 = tmp8(1126).intl;
-    const intl3 = tmp8(1126).intl;
+    const obj = { title: intl2.string(tmp8(1128).t["5uAO7d"]), subtitle: formatToParts(YtCu5p, obj2), cta: intl4.string(tmp8(1128).t.C5UQC9), icon: tmp8Result3.getAssetUriForEmbed(tmp6(8115)), closeIcon: tmp8Result4.getAssetUriForEmbed(tmp6(7000)) };
+    intl2 = tmp8(1128).intl;
+    const intl3 = tmp8(1128).intl;
     formatToParts = intl3.formatToParts;
     obj2 = { helpArticleUrl: obj3 };
     obj3 = { url: tmp6Result2.getCreatorSupportArticleURL(HelpdeskArticles.MEDIA_CHANNEL) };
-    YtCu5p = tmp8(1126).t.YtCu5p;
-    tmp6Result2 = tmp6(2128);
-    intl4 = tmp8(1126).intl;
-    tmp8Result3 = tmp8(7891);
+    YtCu5p = tmp8(1128).t.YtCu5p;
+    tmp6Result2 = tmp6(2131);
+    intl4 = tmp8(1128).intl;
+    tmp8Result3 = tmp8(8111);
     tmp14 = obj;
-    tmp8Result4 = tmp8(7891);
+    tmp8Result4 = tmp8(8111);
   }
-  const obj4 = { numDisplayedReactions: 3, isFollowing, followIcon: assetUriForEmbed, followLabel: stringResult1, shareIcon: assetUriForEmbed1, shareLabel: intl6.string(tmp8(1126).t.Ej3B3Y), defaultReaction, addReactLabel: stringResult, sharePrompt: tmp14 };
-  const intl5 = tmp8(1126).intl;
+  const obj4 = { numDisplayedReactions: 3, isFollowing, followIcon: assetUriForEmbed, followLabel: stringResult1, shareIcon: assetUriForEmbed1, shareLabel: intl6.string(tmp8(1128).t.Ej3B3Y), defaultReaction, addReactLabel: stringResult, sharePrompt: tmp14 };
+  const intl5 = tmp8(1128).intl;
   const string = intl5.string;
-  const t = tmp8(1126).t;
+  const t = tmp8(1128).t;
   if (isFollowing) {
     stringResult1 = string(t["OtF+lC"]);
   } else {
     stringResult1 = string(t["0rQinA"]);
   }
-  intl6 = tmp8(1126).intl;
+  intl6 = tmp8(1128).intl;
   return obj4;
 };

@@ -1,14 +1,14 @@
-// Module ID: 17443
-// Function ID: 17444
+// Module ID: 17751
+// Function ID: 17752
 // Name: SmartSearchResults
-// Dependencies: [19, 17, 12554, 21, 558, 576, 12576, 12574, 17444, 17445, 17452, 2]
+// Dependencies: [19, 17, 12909, 21, 558, 576, 12931, 12929, 17752, 17753, 17760, 2]
 
-// Module 17443 (SmartSearchResults)
+// Module 17751 (SmartSearchResults)
 import react_native from "react-native" /* 17 */;
-import SmartSearchConstants from "SmartSearchConstants" /* 12554 */;
-import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 12574 */;
-import SmartSearchAnalyticsManagerDefault from "SmartSearchAnalyticsManager" /* 12576 */;
-import SmartSearchCitation from "SmartSearchCitation" /* 17445 */;
+import SmartSearchConstants from "SmartSearchConstants" /* 12909 */;
+import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 12929 */;
+import SmartSearchAnalyticsManagerDefault from "SmartSearchAnalyticsManager" /* 12931 */;
+import SmartSearchCitation from "SmartSearchCitation" /* 17753 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

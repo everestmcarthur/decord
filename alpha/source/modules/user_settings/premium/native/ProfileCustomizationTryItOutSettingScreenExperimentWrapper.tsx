@@ -1,14 +1,14 @@
-// Module ID: 16498
-// Function ID: 16499
+// Module ID: 16809
+// Function ID: 16810
 // Name: ProfileCustomizationTryItOutSettingScreenExperimentWrapper
-// Dependencies: [19, 21, 558, 576, 15181, 16499, 16502, 2]
+// Dependencies: [19, 21, 558, 576, 15551, 16810, 16813, 2]
 
-// Module 16498 (ProfileCustomizationTryItOutSettingScreenExperimentWrapper)
+// Module 16809 (ProfileCustomizationTryItOutSettingScreenExperimentWrapper)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import UserProfilePremiumTryItOutMobileRefreshExperiment from "UserProfilePremiumTryItOutMobileRefreshExperiment" /* 15181 */;
-import ProfileCustomizationTryItOutV2SettingScreenDefault from "ProfileCustomizationTryItOutV2SettingScreen" /* 16499 */;
-import ProfileCustomizationTryItOutSettingScreenDefault from "ProfileCustomizationTryItOutSettingScreen" /* 16502 */;
+import UserProfilePremiumTryItOutMobileRefreshExperiment from "UserProfilePremiumTryItOutMobileRefreshExperiment" /* 15551 */;
+import ProfileCustomizationTryItOutV2SettingScreenDefault from "ProfileCustomizationTryItOutV2SettingScreen" /* 16810 */;
+import ProfileCustomizationTryItOutSettingScreenDefault from "ProfileCustomizationTryItOutSettingScreen" /* 16813 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -43,7 +43,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ProfileCus
   return tmp4;
 }) : (function ProfileCustomizationTryItOutSettingScreenExperimentWrapper() {
   const obj = UserProfilePremiumTryItOutMobileRefreshExperiment;
-  return jsx(importDefault(obj.useTryItOutMobileRefreshConfig("ProfileCustomizationTryItOutSettingScreenExperimentWrapper").enabled ? 16499 : 16502), {});
+  return jsx(importDefault(obj.useTryItOutMobileRefreshConfig("ProfileCustomizationTryItOutSettingScreenExperimentWrapper").enabled ? 16810 : 16813), {});
 });
 const result = size.fileFinishedImporting("modules/user_settings/premium/native/ProfileCustomizationTryItOutSettingScreenExperimentWrapper.tsx");
 

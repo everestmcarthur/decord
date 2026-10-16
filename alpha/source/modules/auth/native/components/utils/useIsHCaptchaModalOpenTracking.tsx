@@ -1,13 +1,13 @@
-// Module ID: 16727
-// Function ID: 16728
+// Module ID: 17038
+// Function ID: 17039
 // Name: useIsHCaptchaModalOpenTracking
-// Dependencies: [19, 16676, 16677, 558, 576, 16673, 4977, 4976, 2]
+// Dependencies: [19, 16987, 16988, 558, 576, 16984, 5036, 5035, 2]
 
-// Module 16727 (useIsHCaptchaModalOpenTracking)
-import RootNavigationRef from "RootNavigationRef" /* 4977 */;
-import RegistrationUIStore from "RegistrationUIStore" /* 16676 */;
+// Module 17038 (useIsHCaptchaModalOpenTracking)
+import RootNavigationRef from "RootNavigationRef" /* 5036 */;
+import RegistrationUIStore from "RegistrationUIStore" /* 16987 */;
 import react from "react" /* 19 */;
-import RegistrationConstants from "RegistrationConstants" /* 16677 */;
+import RegistrationConstants from "RegistrationConstants" /* 16988 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -23,7 +23,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsHCaptch
   let obj = context(576);
   const cResult = obj.c(3);
   let obj2 = react;
-  context = react.useContext(context(16673).TrackRegistrationContext);
+  context = react.useContext(context(16984).TrackRegistrationContext);
   if (cResult[0] !== context) {
     const fn = function s() {
       let obj = RootNavigationRef;
@@ -57,7 +57,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsHCaptch
 }) : (function useIsHCaptchaModalOpenTracking() {
   let constants2;
   let context;
-  context = react.useContext(context(16673).TrackRegistrationContext);
+  context = react.useContext(context(16984).TrackRegistrationContext);
   const items = [context];
   const layoutEffect = react.useLayoutEffect(() => {
     let obj = RootNavigationRef;

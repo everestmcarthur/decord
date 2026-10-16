@@ -1,96 +1,91 @@
 // Module ID: 10121
 // Function ID: 10122
-// Dependencies: [1656, 10122, 10123, 10124]
-// Exports: useCommonVariables
+// Dependencies: [41, 42, 93, 95, 98, 10116, 10054, 10056, 10057, 10061]
 
 // Module 10121
-import handlerOffsetDirection from "handlerOffsetDirection" /* 10122 */;
-import omitZero from "omitZero" /* 10123 */;
-import computeOffsetIfSizeChanged from "computeOffsetIfSizeChanged" /* 10124 */;
+import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10054 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10061 */;
+import _mod10116 from "module_10116" /* 10116 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
-let closure_2 = { code: "function pnpm_useCommonVariablesTs1(){const{prevDataLength,dataLength,loop}=this.__closure;const previousLength=prevDataLength.value;const currentLength=dataLength;const isLengthChanged=previousLength!==currentLength;const shouldComputed=isLengthChanged&&loop;if(shouldComputed)prevDataLength.value=dataLength;return{shouldComputed:shouldComputed,previousLength:previousLength,currentLength:currentLength};}" };
-let closure_3 = { code: "function pnpm_useCommonVariablesTs2({shouldComputed:shouldComputed,previousLength:previousLength,currentLength:currentLength}){const{handlerOffsetDirection,handlerOffset,computeOffsetIfDataChanged,size}=this.__closure;if(shouldComputed){const direction=handlerOffsetDirection(handlerOffset);handlerOffset.value=computeOffsetIfDataChanged({direction:direction,previousLength:previousLength,currentLength:currentLength,size:size,handlerOffset:handlerOffset.value});}}" };
-let closure_4 = { code: "function pnpm_useCommonVariablesTs3(){const{prevSize,size}=this.__closure;const previousSize=prevSize.value;const isSizeChanged=previousSize!==size;const shouldComputed=isSizeChanged;if(shouldComputed)prevSize.value=size;return{shouldComputed:shouldComputed,previousSize:previousSize,size:size};}" };
-let closure_5 = { code: "function pnpm_useCommonVariablesTs4({shouldComputed:shouldComputed,previousSize:previousSize,size:size}){const{handlerOffset,computeOffsetIfSizeChanged}=this.__closure;if(shouldComputed){handlerOffset.value=computeOffsetIfSizeChanged({handlerOffset:handlerOffset.value,prevSize:previousSize,size:size});}}" };
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {
 
-export const useCommonVariables = function useCommonVariables(initProps) {
-  let dataLength;
-  let defaultScrollOffsetValue;
-  let loop;
-  let width;
-  ({ width, dataLength } = initProps);
-  ({ defaultScrollOffsetValue, loop } = initProps);
-  const defaultIndex = initProps.defaultIndex;
-  if (initProps.vertical) {
-    width = initProps.height;
+    }));
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
-  const tmp2 = dataLength;
-  let tmp = -Math.abs(defaultIndex * width);
-  let obj = dataLength(loop[0]);
-  if (defaultScrollOffsetValue == null) {
-    defaultScrollOffsetValue = obj.useSharedValue(tmp);
+}
+class FRTimeUnitAgoFormatParser {
+  constructor() {
+    let constructResult;
+    const self = this;
+    _classCallCheck(this, FRTimeUnitAgoFormatParser);
+    const obj = _getPrototypeOf(FRTimeUnitAgoFormatParser);
+    const tmp2 = _getPrototypeOf;
+    const tmp3 = c3;
+    if (_isNativeReflectConstruct()) {
+      const _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, undefined);
+    }
+    return tmp3(self, constructResult);
   }
-  const tmp2Result = tmp2(loop[0]);
-  const sharedValue = tmp2Result.useSharedValue(dataLength);
-  const tmp2Result4 = tmp2(loop[0]);
-  const sharedValue1 = tmp2Result4.useSharedValue(width);
-  const fn = function f() {
-    const previousLength = sharedValue.value;
-    const currentLength = dataLength;
-    let shouldComputed = previousLength !== dataLength;
-    const tmp = sharedValue;
-    if (shouldComputed) {
-      shouldComputed = loop;
-    }
-    if (shouldComputed) {
-      tmp.value = currentLength;
-    }
-    return { shouldComputed, previousLength, currentLength };
-  };
-  fn.__closure = { prevDataLength: sharedValue, dataLength, loop };
-  fn.__workletHash = 16900133248154;
-  fn.__initData = width;
-  const fn2 = function h(shouldComputed) {
-    if (shouldComputed.shouldComputed) {
-      const obj = handlerOffsetDirection;
-      const result = obj.handlerOffsetDirection(defaultScrollOffsetValue);
-      const obj3 = { direction: result, previousLength: tmp, currentLength: tmp2, size: width, handlerOffset: defaultScrollOffsetValue.value };
-      const obj2 = omitZero;
-      defaultScrollOffsetValue.value = obj2.computeOffsetIfDataChanged(obj3);
-    }
-  };
-  const tmp2Result5 = tmp2(loop[0]);
-  let obj2 = { handlerOffsetDirection: tmp2(tmp3[1]).handlerOffsetDirection, handlerOffset: defaultScrollOffsetValue, computeOffsetIfDataChanged: tmp2(tmp3[2]).computeOffsetIfDataChanged, size: width };
-  fn2.__closure = obj2;
-  fn2.__workletHash = 6990374823872;
-  fn2.__initData = defaultScrollOffsetValue;
-  const items = [dataLength, loop];
-  const animatedReaction = tmp2Result5.useAnimatedReaction(fn, fn2, items);
-  const fn3 = function c() {
-    const previousSize = sharedValue1.value;
-    size = width;
-    const shouldComputed = previousSize !== width;
-    if (shouldComputed) {
-      sharedValue1.value = size;
-    }
-    return { shouldComputed, previousSize, size };
-  };
-  fn3.__closure = { prevSize: sharedValue1, size: width };
-  fn3.__workletHash = 10373775645111;
-  fn3.__initData = sharedValue;
-  const fn4 = function l(shouldComputed) {
-    if (shouldComputed.shouldComputed) {
-      const obj2 = { handlerOffset: defaultScrollOffsetValue.value, prevSize: tmp, size: tmp2 };
-      const obj = computeOffsetIfSizeChanged;
-      defaultScrollOffsetValue.value = obj.computeOffsetIfSizeChanged(obj2);
-    }
-  };
-  const tmp2Result6 = tmp2(loop[0]);
-  let obj3 = { handlerOffset: defaultScrollOffsetValue, computeOffsetIfSizeChanged: tmp2(tmp3[3]).computeOffsetIfSizeChanged };
-  fn4.__closure = obj3;
-  fn4.__workletHash = 12618693189041;
-  fn4.__initData = sharedValue1;
-  const items1 = [width];
-  const animatedReaction1 = tmp2Result6.useAnimatedReaction(fn3, fn4, items1);
-  return { size: width, validLength: dataLength - 1, handlerOffset: defaultScrollOffsetValue };
+}
+_inherits(FRTimeUnitAgoFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+const entry = {
+  key: "innerPattern",
+  value: function innerPattern() {
+    const NUMBER_PATTERN = _mod10116.NUMBER_PATTERN;
+    const regExp = new RegExp("(?:les?|la|l'|du|des?)\\s*(" + NUMBER_PATTERN + ")?(?:\\s*(prochaine?s?|derni[e\u00E8]re?s?|pass[\u00E9e]e?s?|pr[\u00E9e]c[\u00E9e]dents?|suivante?s?))?\\s*(" + repeatedTimeunitPattern.matchAnyPattern(_mod10116.TIME_UNIT_DICTIONARY) + ")(?:\\s*(prochaine?s?|derni[e\u00E8]re?s?|pass[\u00E9e]e?s?|pr[\u00E9e]c[\u00E9e]dents?|suivante?s?))?", "i");
+    return regExp;
+  }
 };
+const items = [
+  entry,
+  {
+    key: "innerExtract",
+    value: function innerExtract(reference, arg1) {
+      let num = 1;
+      if (arg1[1]) {
+        num = _mod10116.parseNumberPattern(arg1[1]);
+      }
+      const obj = {};
+      obj[_mod10116.TIME_UNIT_DICTIONARY[arg1[3].toLowerCase(arg1[3])]] = num;
+      const str2 = arg1[2] || arg1[4] || "";
+      const formatted = str2.toLowerCase();
+      if (formatted) {
+        const obj2 = /derni[eè]re?s?/;
+        let isMatch = obj2.test(formatted);
+        if (!isMatch) {
+          const obj3 = /pass[ée]e?s?/;
+          isMatch = obj3.test(formatted);
+        }
+        if (!isMatch) {
+          const obj4 = /pr[ée]c[ée]dents?/;
+          isMatch = obj4.test(formatted);
+        }
+        let reverseDurationResult = obj;
+        if (isMatch) {
+          reverseDurationResult = tmp3(10056).reverseDuration(obj);
+        }
+        const ParsingComponents = tmp3(10057).ParsingComponents;
+        return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
+      }
+    }
+  }
+];
+
+export default _createClass(FRTimeUnitAgoFormatParser, items);

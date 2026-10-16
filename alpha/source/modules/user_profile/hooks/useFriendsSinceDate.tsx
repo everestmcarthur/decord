@@ -1,12 +1,12 @@
-// Module ID: 10616
-// Function ID: 10617
+// Module ID: 10864
+// Function ID: 10865
 // Name: useFriendsSinceDate
-// Dependencies: [2129, 4760, 1085, 558, 576, 573, 6876, 2]
+// Dependencies: [2132, 4819, 1087, 558, 576, 573, 7097, 2]
 
-// Module 10616 (useFriendsSinceDate)
-import Constants from "Constants" /* 1085 */;
-import LocaleStore from "LocaleStore" /* 2129 */;
-import RelationshipStore from "RelationshipStore" /* 4760 */;
+// Module 10864 (useFriendsSinceDate)
+import Constants from "Constants" /* 1087 */;
+import LocaleStore from "LocaleStore" /* 2132 */;
+import RelationshipStore from "RelationshipStore" /* 4819 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -96,7 +96,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFriends
     }
     return createdAtDate;
   }
-  const tmpResult4 = tmp(6876);
+  const tmpResult4 = tmp(7097);
   createdAtDate = tmpResult4.getCreatedAtDate(stateFromStores1, stateFromStores);
   cResult[6] = stateFromStores1;
   cResult[7] = stateFromStores;

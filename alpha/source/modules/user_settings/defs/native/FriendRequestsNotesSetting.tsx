@@ -1,14 +1,14 @@
-// Module ID: 16628
-// Function ID: 16629
+// Module ID: 16939
+// Function ID: 16940
 // Name: FriendRequestsNotesSetting
-// Dependencies: [7993, 10663, 1126, 13754, 2041, 2]
+// Dependencies: [8213, 11006, 1128, 14119, 2044, 2]
 
-// Module 16628 (FriendRequestsNotesSetting)
-import intl2 from "intl" /* 1126 */;
-import UserSettings from "UserSettings" /* 2041 */;
-import SettingsConstants from "SettingsConstants" /* 7993 */;
-import HideFriendRequestNotesUtils from "HideFriendRequestNotesUtils" /* 13754 */;
-import SettingBuilders from "SettingBuilders" /* 10663 */;
+// Module 16939 (FriendRequestsNotesSetting)
+import intl2 from "intl" /* 1128 */;
+import UserSettings from "UserSettings" /* 2044 */;
+import SettingsConstants from "SettingsConstants" /* 8213 */;
+import HideFriendRequestNotesUtils from "HideFriendRequestNotesUtils" /* 14119 */;
+import SettingBuilders from "SettingBuilders" /* 11006 */;
 import size from "module_2" /* 2 */;
 
 const MobileUserSettings = SettingsConstants.MobileUserSettings;

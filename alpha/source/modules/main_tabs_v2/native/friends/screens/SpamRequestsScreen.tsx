@@ -1,16 +1,16 @@
-// Module ID: 17544
-// Function ID: 17545
+// Module ID: 17852
+// Function ID: 17853
 // Name: SpamRequestsScreen
-// Dependencies: [19, 4760, 1390, 10217, 1085, 21, 558, 576, 6852, 6879, 17543, 504, 1273, 8972, 8304, 10223, 2]
+// Dependencies: [19, 4819, 1392, 10456, 1087, 21, 558, 576, 7075, 7100, 17851, 504, 1275, 9202, 8530, 10462, 2]
 
-// Module 17544 (SpamRequestsScreen)
+// Module 17852 (SpamRequestsScreen)
 import Fragment from "Fragment" /* 21 */;
-import Constants from "Constants" /* 1085 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8304 */;
-import UserRowConstants from "UserRowConstants" /* 10217 */;
+import Constants from "Constants" /* 1087 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8530 */;
+import UserRowConstants from "UserRowConstants" /* 10456 */;
 import react from "react" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4760 */;
-import UserStore from "UserStore" /* 1390 */;
+import RelationshipStore from "RelationshipStore" /* 4819 */;
+import UserStore from "UserStore" /* 1392 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -82,8 +82,8 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function SpamRequests
   if (cResult[4] !== stateFromStoresArray) {
     class N {
       constructor() {
-        mapped = closure_1.map(() => { /* body not rendered: F150672 */ });
-        return mapped.filter(() => { /* body not rendered: F150673 */ });
+        mapped = closure_1.map(() => { /* body not rendered: F151958 */ });
+        return mapped.filter(() => { /* body not rendered: F151959 */ });
       }
     }
     const items2 = [stateFromStoresArray];
@@ -101,8 +101,8 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function SpamRequests
   } else {
     class N {
       constructor() {
-        mapped = closure_1.map(() => { /* body not rendered: F150672 */ });
-        return mapped.filter(() => { /* body not rendered: F150673 */ });
+        mapped = closure_1.map(() => { /* body not rendered: F151958 */ });
+        return mapped.filter(() => { /* body not rendered: F151959 */ });
       }
     }
     tmp15 = cResult[6];

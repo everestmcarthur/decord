@@ -1,26 +1,26 @@
-// Module ID: 15313
-// Function ID: 15314
+// Module ID: 15679
+// Function ID: 15680
 // Name: AccountAgeGroupSetting
-// Dependencies: [17, 7993, 1085, 21, 5092, 587, 558, 576, 9625, 15314, 15321, 2049, 6180, 10663, 1126, 15322, 15282, 15323, 2]
+// Dependencies: [17, 8213, 1087, 21, 5153, 587, 558, 576, 9859, 15680, 15687, 2052, 6402, 11006, 1128, 15688, 15648, 15689, 2]
 
-// Module 15313 (AccountAgeGroupSetting)
+// Module 15679 (AccountAgeGroupSetting)
 import react_native from "react-native" /* 17 */;
 import react from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Constants from "Constants" /* 1085 */;
-import intl2 from "intl" /* 1126 */;
-import dismissible_content from "dismissible_content" /* 2049 */;
-import TableRow from "TableRow" /* 6180 */;
-import SettingsConstants from "SettingsConstants" /* 7993 */;
-import useAgeGroupPresentation from "useAgeGroupPresentation" /* 9625 */;
-import TinyBroncoSettingsPredicate from "TinyBroncoSettingsPredicate" /* 15282 */;
-import TinyBroncoLazy from "TinyBroncoLazy" /* 15314 */;
-import DismissiblePremiumNewBadgeDefault from "DismissiblePremiumNewBadge" /* 15321 */;
+import Constants from "Constants" /* 1087 */;
+import intl2 from "intl" /* 1128 */;
+import dismissible_content from "dismissible_content" /* 2052 */;
+import TableRow from "TableRow" /* 6402 */;
+import SettingsConstants from "SettingsConstants" /* 8213 */;
+import useAgeGroupPresentation from "useAgeGroupPresentation" /* 9859 */;
+import TinyBroncoSettingsPredicate from "TinyBroncoSettingsPredicate" /* 15648 */;
+import TinyBroncoLazy from "TinyBroncoLazy" /* 15680 */;
+import DismissiblePremiumNewBadgeDefault from "DismissiblePremiumNewBadge" /* 15687 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 5092 */;
+import createStyles from "createStyles" /* 5153 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 10663 */;
-import DismissibleBadgeUtils from "DismissibleBadgeUtils" /* 15322 */;
+import SettingBuilders from "SettingBuilders" /* 11006 */;
+import DismissibleBadgeUtils from "DismissibleBadgeUtils" /* 15688 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -34,7 +34,7 @@ const MobileUserSettings = SettingsConstants.MobileUserSettings;
 const UserSettingsSections = Constants.UserSettingsSections;
 ({ jsx: closure_4, jsxs: hasOwnProperty } = Fragment);
 let obj = { trailing: { flexDirection: "row", alignItems: "center", flexShrink: 1 }, badge: obj2 };
-obj2 = { marginLeft: 0, backgroundColor: nativeDefault.colors.BADGE_BACKGROUND_BRAND, marginRight: nativeDefault.space.PX_4, marginBottom: 0 };
+obj2 = { marginLeft: 0, backgroundColor: nativeDefault.colors.BADGE_PRIMARY_BACKGROUND, marginRight: nativeDefault.space.PX_4, marginBottom: 0 };
 let closure_6 = createStyles.createStyles(obj);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAccountAgeGroupTrailing() {
   let items;

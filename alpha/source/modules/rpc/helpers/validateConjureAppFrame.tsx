@@ -1,21 +1,21 @@
-// Module ID: 15037
-// Function ID: 15038
+// Module ID: 15404
+// Function ID: 15405
 // Name: validateConjureAppFrame
-// Dependencies: [5440, 10652, 2065, 1085, 9235, 8611, 15038, 10936, 2]
+// Dependencies: [5502, 10900, 2068, 1087, 9471, 7261, 15405, 11250, 2]
 // Exports: default, isConjureApplication, isUserScopedConjureApplication, isVoiceChannelInFrameGuild
 
-// Module 15037 (validateConjureAppFrame)
-import Constants from "Constants" /* 1085 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8611 */;
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9235 */;
-import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 15038 */;
-import ApplicationStore from "ApplicationStore" /* 5440 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 10652 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
+// Module 15404 (validateConjureAppFrame)
+import Constants from "Constants" /* 1087 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 7261 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9471 */;
+import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 15405 */;
+import ApplicationStore from "ApplicationStore" /* 5502 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 10900 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
 import size from "module_2" /* 2 */;
 
 let tmp;
-const RPCErrorDefault = tmp(10936);
+const RPCErrorDefault = tmp(11250);
 const RPCErrors = Constants.RPCErrors;
 let result = size.fileFinishedImporting("modules/rpc/helpers/validateConjureAppFrame.tsx");
 
@@ -23,11 +23,11 @@ export default function validateConjureAppFrame(arg0) {
   const tmp3 = validateEmbeddedAppFrameDefault(arg0);
   const applicationId = tmp3.frame.applicationId;
   const application = ApplicationStore.getApplication(applicationId);
-  let prop;
+  let conjureProjectId;
   if (application != null) {
-    prop = application.vibegrationsProjectId;
+    conjureProjectId = application.conjureProjectId;
   }
-  const result = null != prop || ConjureProjectStore.isConjureProjectApplication(applicationId);
+  const result = null != conjureProjectId || ConjureProjectStore.isConjureProjectApplication(applicationId);
   if (result) {
     return tmp3;
   } else {
@@ -40,11 +40,11 @@ export default function validateConjureAppFrame(arg0) {
 };
 export const isConjureApplication = function isConjureApplication(applicationId) {
   const application = ApplicationStore.getApplication(applicationId);
-  let prop;
+  let conjureProjectId;
   if (application != null) {
-    prop = application.vibegrationsProjectId;
+    conjureProjectId = application.conjureProjectId;
   }
-  const result = null != prop || ConjureProjectStore.isConjureProjectApplication(applicationId);
+  const result = null != conjureProjectId || ConjureProjectStore.isConjureProjectApplication(applicationId);
   return result;
 };
 export const isUserScopedConjureApplication = function isUserScopedConjureApplication(applicationId) {

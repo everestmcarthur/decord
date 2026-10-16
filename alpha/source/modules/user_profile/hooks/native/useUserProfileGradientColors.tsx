@@ -1,16 +1,16 @@
-// Module ID: 8366
-// Function ID: 8367
+// Module ID: 8592
+// Function ID: 8593
 // Name: useUserProfileGradientColors
-// Dependencies: [19, 5081, 558, 576, 504, 4827, 6881, 8356, 2]
+// Dependencies: [19, 5143, 558, 576, 504, 4886, 7102, 8582, 2]
 
-// Module 8366 (useUserProfileGradientColors)
+// Module 8592 (useUserProfileGradientColors)
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
-import native from "native" /* 4827 */;
-import useProfileThemeValues from "useProfileThemeValues" /* 6881 */;
-import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8356 */;
+import native from "native" /* 4886 */;
+import useProfileThemeValues from "useProfileThemeValues" /* 7102 */;
+import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8582 */;
 import react_mod from "react" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5081 */;
+import AccessibilityStore from "AccessibilityStore" /* 5143 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

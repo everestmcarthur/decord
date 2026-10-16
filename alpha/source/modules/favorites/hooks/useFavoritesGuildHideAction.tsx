@@ -1,16 +1,16 @@
-// Module ID: 16880
-// Function ID: 16881
+// Module ID: 17190
+// Function ID: 17191
 // Name: useFavoritesGuildHideAction
-// Dependencies: [19, 4939, 1085, 558, 576, 10313, 10312, 2090, 1112, 1126, 3442, 2]
+// Dependencies: [19, 4998, 1087, 558, 576, 10561, 10560, 2093, 1114, 1128, 3447, 2]
 
-// Module 16880 (useFavoritesGuildHideAction)
-import Constants from "Constants" /* 1085 */;
-import router_utils from "router_utils" /* 1112 */;
-import FavoritesUtils from "FavoritesUtils" /* 2090 */;
-import _modDef3442 from "module_3442" /* 3442 */;
-import FavoritesActionCreators from "FavoritesActionCreators" /* 10312 */;
+// Module 17190 (useFavoritesGuildHideAction)
+import Constants from "Constants" /* 1087 */;
+import router_utils from "router_utils" /* 1114 */;
+import FavoritesUtils from "FavoritesUtils" /* 2093 */;
+import _modDef3447 from "module_3447" /* 3447 */;
+import FavoritesActionCreators from "FavoritesActionCreators" /* 10560 */;
 import react from "react" /* 19 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4939 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4998 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -23,7 +23,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFavorit
   let tmp = hasAccess;
   let obj = hasAccess(576);
   const cResult = obj.c(11);
-  let obj2 = hasAccess(10313);
+  let obj2 = hasAccess(10561);
   hasAccess = obj2.useFavoritesAccess().hasAccess;
   if (cResult[0] !== hasAccess) {
     const fn = function s() {
@@ -46,12 +46,12 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFavorit
   }
   if (cResult[2] !== hasAccess) {
     let ojM1xJ;
-    const intl = tmp(1126).intl;
+    const intl = tmp(1128).intl;
     const string = intl.string;
     if (hasAccess) {
-      ojM1xJ = _modDef3442["8FO0y9"];
+      ojM1xJ = _modDef3447["8FO0y9"];
     } else {
-      ojM1xJ = tmp(1126).t.ojM1xJ;
+      ojM1xJ = tmp(1128).t.ojM1xJ;
     }
     const stringResult = string(ojM1xJ);
     cResult[2] = hasAccess;
@@ -63,8 +63,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFavorit
   if (cResult[4] !== hasAccess) {
     let stringResult1;
     if (hasAccess) {
-      const intl2 = tmp(1126).intl;
-      stringResult1 = intl2.string(_modDef3442.FaHxWl);
+      const intl2 = tmp(1128).intl;
+      stringResult1 = intl2.string(_modDef3447.FaHxWl);
     }
     cResult[4] = hasAccess;
     cResult[5] = stringResult1;
@@ -97,7 +97,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFavorit
   let string;
   let stringResult;
   let tmp = hasAccess;
-  let obj = hasAccess(10313);
+  let obj = hasAccess(10561);
   hasAccess = obj.useFavoritesAccess().hasAccess;
   const items = [hasAccess];
   let obj2 = { isPreview: !hasAccess, label: string(ojM1xJ), subLabel: stringResult, perform: callback };
@@ -113,17 +113,17 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFavorit
       obj3.transitionTo(Routes.ME);
     }
   }, items);
-  const intl = hasAccess(1126).intl;
+  const intl = hasAccess(1128).intl;
   string = intl.string;
   if (hasAccess) {
-    ojM1xJ = _modDef3442["8FO0y9"];
+    ojM1xJ = _modDef3447["8FO0y9"];
   } else {
-    ojM1xJ = tmp(1126).t.ojM1xJ;
+    ojM1xJ = tmp(1128).t.ojM1xJ;
   }
   stringResult = undefined;
   if (hasAccess) {
-    const intl2 = tmp(1126).intl;
-    stringResult = intl2.string(_modDef3442.FaHxWl);
+    const intl2 = tmp(1128).intl;
+    stringResult = intl2.string(_modDef3447.FaHxWl);
   }
   return obj2;
 });

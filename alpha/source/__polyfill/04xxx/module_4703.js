@@ -1,276 +1,73 @@
 // Module ID: 4703
 // Function ID: 4704
-// Dependencies: [4702]
+// Dependencies: [2142, 2143]
 
 // Module 4703
-import _mod4702 from "module_4702" /* 4702 */;
+import buildMatchFn from "buildMatchFn" /* 2142 */;
+import buildMatchPatternFn from "buildMatchPatternFn" /* 2143 */;
 
-const fn = function t(moment) {
-  let split;
-  let split2;
-  function translate(arg0, arg1, arg2, arg3) {
-    const text = `${arg0} `;
-    switch (arg2) {
-      case "s":
-      {
-        let str20;
-        if (arg1) {
-          str20 = "p\u00E1r sekund";
-        } else {
-          str20 = "p\u00E1r sekundami";
-        }
-        return str20;
-      }
-      case "ss":
-      {
-        if (!arg1) {
-          let text1;
-          if (!arg3) {
-            text1 = `${tmp}sekundami`;
-          }
-          return text1;
-        }
-        let str19 = "sekund";
-        const tmp13 = arg0 > 1 && arg0 < 5 && 1 !== ~(~arg0 / 10);
-        if (tmp13) {
-          str19 = "sekundy";
-        }
-        text1 = text + str19;
-        break;
-      }
-      case "m":
-      {
-        let str16 = "minuta";
-        if (!arg1) {
-          let str17 = "minutou";
-          if (arg3) {
-            str17 = "minutu";
-          }
-          str16 = str17;
-        }
-        return str16;
-      }
-      case "mm":
-      {
-        if (!arg1) {
-          let text2;
-          if (!arg3) {
-            text2 = `${tmp}minutami`;
-          }
-          return text2;
-        }
-        let str15 = "minut";
-        const tmp11 = arg0 > 1 && arg0 < 5 && 1 !== ~(~arg0 / 10);
-        if (tmp11) {
-          str15 = "minuty";
-        }
-        text2 = text + str15;
-        break;
-      }
-      case "h":
-      {
-        let str12 = "hodina";
-        if (!arg1) {
-          let str13 = "hodinou";
-          if (arg3) {
-            str13 = "hodinu";
-          }
-          str12 = str13;
-        }
-        return str12;
-      }
-      case "hh":
-      {
-        if (!arg1) {
-          let text3;
-          if (!arg3) {
-            text3 = `${tmp}hodinami`;
-          }
-          return text3;
-        }
-        let str11 = "hodin";
-        const tmp9 = arg0 > 1 && arg0 < 5 && 1 !== ~(~arg0 / 10);
-        if (tmp9) {
-          str11 = "hodiny";
-        }
-        text3 = text + str11;
-        break;
-      }
-      case "d":
-      {
-        let str9;
-        if (arg1) {
-          str9 = "den";
-        } else {
-          str9 = "dnem";
-        }
-        return str9;
-      }
-      case "dd":
-      {
-        if (!arg1) {
-          let text4;
-          if (!arg3) {
-            text4 = `${tmp}dny`;
-          }
-          return text4;
-        }
-        let str8 = "dn\u00ED";
-        const tmp7 = arg0 > 1 && arg0 < 5 && 1 !== ~(~arg0 / 10);
-        if (tmp7) {
-          str8 = "dny";
-        }
-        text4 = text + str8;
-        break;
-      }
-      case "M":
-      {
-        let str6;
-        if (arg1) {
-          str6 = "m\u011Bs\u00EDc";
-        } else {
-          str6 = "m\u011Bs\u00EDcem";
-        }
-        return str6;
-      }
-      case "MM":
-      {
-        if (!arg1) {
-          let text5;
-          if (!arg3) {
-            text5 = `${tmp}měsíci`;
-          }
-          return text5;
-        }
-        let str5 = "m\u011Bs\u00EDc\u016F";
-        const tmp5 = arg0 > 1 && arg0 < 5 && 1 !== ~(~arg0 / 10);
-        if (tmp5) {
-          str5 = "m\u011Bs\u00EDce";
-        }
-        text5 = text + str5;
-        break;
-      }
-      case "y":
-      {
-        let str3;
-        if (arg1) {
-          str3 = "rok";
-        } else {
-          str3 = "rokem";
-        }
-        return str3;
-      }
-      case "yy":
-      {
-        if (!arg1) {
-          let text6;
-          if (!arg3) {
-            text6 = `${tmp}lety`;
-          }
-          return text6;
-        }
-        let str2 = "let";
-        const tmp3 = arg0 > 1 && arg0 < 5 && 1 !== ~(~arg0 / 10);
-        if (tmp3) {
-          str2 = "roky";
-        }
-        text6 = text + str2;
-        break;
-      }
-      default:
-      {
-        break;
-      }
-    }
+let items;
+let items1;
+let items2;
+let items3;
+let items4;
+let items5;
+let obj;
+let obj10;
+let obj11;
+let obj12;
+let obj13;
+let obj14;
+let obj15;
+let obj3;
+let obj5;
+let obj6;
+let obj7;
+let obj8;
+let obj9;
+if (!buildMatchFn) {
+  obj = { default: buildMatchFn };
+  const obj2 = { default: buildMatchFn };
+} else {
+  obj = buildMatchFn;
+}
+if (!buildMatchPatternFn) {
+  obj3 = { default: buildMatchPatternFn };
+  const obj4 = { default: buildMatchPatternFn };
+} else {
+  obj3 = buildMatchPatternFn;
+}
+const date = { ordinalNumber: obj3.default(obj5), era: obj.default(obj6), quarter: obj.default(obj8), month: obj.default(obj10), day: obj.default(obj12), dayPeriod: obj.default(obj14) };
+obj6 = { matchPatterns: { narrow: /^((до )?н\.?\s?е\.?)/i, abbreviated: /^((до )?н\.?\s?е\.?)/i, wide: /^(до нашої ери|нашої ери|наша ера)/i }, defaultMatchWidth: "wide", parsePatterns: obj7, defaultParseWidth: "any" };
+obj7 = { any: items };
+items = [/^д/i, /^н/i];
+obj8 = {
+  matchPatterns: { narrow: /^[1234]/i, abbreviated: /^[1234](-?[иі]?й?)? кв.?/i, wide: /^[1234](-?[иі]?й?)? квартал/i },
+  defaultMatchWidth: "wide",
+  parsePatterns: obj9,
+  defaultParseWidth: "any",
+  valueCallback(arg0) {
+    return arg0 + 1;
   }
-  const items = [/^led/i, /^úno/i, /^bře/i, /^dub/i, /^kvě/i, /^(čvn|červen$|června)/i, /^(čvc|červenec|července)/i, /^srp/i, /^zář/i, /^říj/i, /^lis/i, /^pro/i];
-  const tmp = /^(leden|únor|březen|duben|květen|červenec|července|červen|června|srpen|září|říjen|listopad|prosinec|led|úno|bře|dub|kvě|čvn|čvc|srp|zář|říj|lis|pro)/i;
-  ({ split, split: split2 } = "ne_po_\u00FAt_st_\u010Dt_p\u00E1_so");
-  const obj = { standalone: "leden_\u00FAnor_b\u0159ezen_duben_kv\u011Bten_\u010Derven_\u010Dervenec_srpen_z\u00E1\u0159\u00ED_\u0159\u00EDjen_listopad_prosinec".split("_"), format: "ledna_\u00FAnora_b\u0159ezna_dubna_kv\u011Btna_\u010Dervna_\u010Dervence_srpna_z\u00E1\u0159\u00ED_\u0159\u00EDjna_listopadu_prosince".split("_"), isFormat: /DD?[o.]?(\[[^\[\]]*\]|\s)+MMMM/ };
-  const obj2 = {
-    months: obj,
-    monthsShort: "led_\u00FAno_b\u0159e_dub_kv\u011B_\u010Dvn_\u010Dvc_srp_z\u00E1\u0159_\u0159\u00EDj_lis_pro".split("_"),
-    monthsRegex: tmp,
-    monthsShortRegex: tmp,
-    monthsStrictRegex: /^(leden|ledna|února|únor|březen|března|duben|dubna|květen|května|červenec|července|červen|června|srpen|srpna|září|říjen|října|listopadu|listopad|prosinec|prosince)/i,
-    monthsShortStrictRegex: /^(led|úno|bře|dub|kvě|čvn|čvc|srp|zář|říj|lis|pro)/i,
-    monthsParse: items,
-    longMonthsParse: items,
-    shortMonthsParse: items,
-    weekdays: "ned\u011Ble_pond\u011Bl\u00ED_\u00FAter\u00FD_st\u0159eda_\u010Dtvrtek_p\u00E1tek_sobota".split("_"),
-    weekdaysShort: "ne_po_\u00FAt_st_\u010Dt_p\u00E1_so".split("_"),
-    weekdaysMin: "ne_po_\u00FAt_st_\u010Dt_p\u00E1_so".split("_"),
-    longDateFormat: { LT: "H:mm", LTS: "H:mm:ss", L: "DD.MM.YYYY", LL: "D. MMMM YYYY", LLL: "D. MMMM YYYY H:mm", LLLL: "dddd D. MMMM YYYY H:mm", l: "D. M. YYYY" },
-    calendar: {
-      sameDay: "[dnes v] LT",
-      nextDay: "[z\u00EDtra v] LT",
-      nextWeek() {
-        const dayResult = this.day();
-        if (0 === dayResult) {
-          return "[v ned\u011Bli v] LT";
-        } else {
-          if (1 !== dayResult) {
-            if (2 !== dayResult) {
-              if (3 === dayResult) {
-                return "[ve st\u0159edu v] LT";
-              } else if (4 === dayResult) {
-                return "[ve \u010Dtvrtek v] LT";
-              } else if (5 === dayResult) {
-                return "[v p\u00E1tek v] LT";
-              } else if (6 === dayResult) {
-                return "[v sobotu v] LT";
-              }
-            }
-          }
-          return "[v] dddd [v] LT";
-        }
-      },
-      lastDay: "[v\u010Dera v] LT",
-      lastWeek() {
-        const dayResult = this.day();
-        if (0 === dayResult) {
-          return "[minulou ned\u011Bli v] LT";
-        } else {
-          if (1 !== dayResult) {
-            if (2 !== dayResult) {
-              if (3 === dayResult) {
-                return "[minulou st\u0159edu v] LT";
-              } else {
-                if (4 !== dayResult) {
-                  if (5 !== dayResult) {
-                    if (6 === dayResult) {
-                      return "[minulou sobotu v] LT";
-                    }
-                  }
-                }
-                return "[minul\u00FD] dddd [v] LT";
-              }
-            }
-          }
-          return "[minul\u00E9] dddd [v] LT";
-        }
-      },
-      sameElse: "L"
-    },
-    relativeTime: { future: "za %s", past: "p\u0159ed %s", s: translate, ss: translate, m: translate, mm: translate, h: translate, hh: translate, d: translate, dd: translate, M: translate, MM: translate, y: translate, yy: translate },
-    dayOfMonthOrdinalParse: /\d{1,2}\./,
-    ordinal: "%d.",
-    week: { dow: 1, doy: 4 }
-  };
-  return moment.defineLocale("cs", obj2);
 };
-if (typeof exports === "object") {
-  if (undefined !== module) {
-    let tmp = require;
-    if (typeof require === "function") {
-      fn(_mod4702);
-    }
+obj9 = { any: items1 };
+items1 = [/1/i, /2/i, /3/i, /4/i];
+obj10 = { matchPatterns: { narrow: /^[слбктчвжг]/i, abbreviated: /^(січ|лют|бер(ез)?|квіт|трав|черв|лип|серп|вер(ес)?|жовт|лис(топ)?|груд)\.?/i, wide: /^(січень|січня|лютий|лютого|березень|березня|квітень|квітня|травень|травня|червня|червень|липень|липня|серпень|серпня|вересень|вересня|жовтень|жовтня|листопад[а]?|грудень|грудня)/i }, defaultMatchWidth: "wide", parsePatterns: obj11, defaultParseWidth: "any" };
+obj11 = { narrow: items2, any: items3 };
+items2 = [/^с/i, /^л/i, /^б/i, /^к/i, /^т/i, /^ч/i, /^л/i, /^с/i, /^в/i, /^ж/i, /^л/i, /^г/i];
+items3 = [/^сі/i, /^лю/i, /^б/i, /^к/i, /^т/i, /^ч/i, /^лип/i, /^се/i, /^в/i, /^ж/i, /^лис/i, /^г/i];
+obj12 = { matchPatterns: { narrow: /^[нпвсч]/i, short: /^(нд|пн|вт|ср|чт|пт|сб)\.?/i, abbreviated: /^(нед|пон|вів|сер|че?тв|птн?|суб)\.?/i, wide: /^(неділ[яі]|понеділ[ок][ка]|вівтор[ок][ка]|серед[аи]|четвер(га)?|п\W*?ятниц[яі]|субот[аи])/i }, defaultMatchWidth: "wide", parsePatterns: obj13, defaultParseWidth: "any" };
+obj13 = { narrow: items4, any: items5 };
+items4 = [/^н/i, /^п/i, /^в/i, /^с/i, /^ч/i, /^п/i, /^с/i];
+items5 = [/^н/i, /^п[он]/i, /^в/i, /^с[ер]/i, /^ч/i, /^п\W*?[ят]/i, /^с[уб]/i];
+obj14 = { matchPatterns: { narrow: /^([дп]п|півн\.?|пол\.?|ранок|ранку|день|дня|веч\.?|ніч|ночі)/i, abbreviated: /^([дп]п|півн\.?|пол\.?|ранок|ранку|день|дня|веч\.?|ніч|ночі)/i, wide: /^([дп]п|північ|полудень|ранок|ранку|день|дня|вечір|вечора|ніч|ночі)/i }, defaultMatchWidth: "wide", parsePatterns: obj15, defaultParseWidth: "any" };
+obj15 = { any: { am: /^дп/i, pm: /^пп/i, midnight: /^півн/i, noon: /^пол/i, morning: /^р/i, afternoon: /^д[ен]/i, evening: /^в/i, night: /^н/i } };
+obj5 = {
+  matchPattern: /^(\d+)(-?(е|й|є|а|я))?/i,
+  parsePattern: /\d+/i,
+  valueCallback(match) {
+    return parseInt(match, 10);
   }
-}
-if (typeof globalThis.define === "function") {
-  const define2 = globalThis.define;
-  if (globalThis.define.amd) {
-    globalThis.define(["../moment"], fn);
-  }
-}
-fn(this.moment);
+};
+
+export default date;

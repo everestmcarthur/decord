@@ -1,14 +1,14 @@
-// Module ID: 7265
-// Function ID: 7266
+// Module ID: 7483
+// Function ID: 7484
 // Name: CollectiblesCategoryRecord
-// Dependencies: [7266, 7273, 1993, 7275, 7276, 2]
+// Dependencies: [7484, 7491, 1995, 7493, 7494, 2]
 
-// Module 7265 (CollectiblesCategoryRecord)
-import CollectiblesItemType from "CollectiblesItemType" /* 1993 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7275 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7276 */;
-import CollectiblesProductRecord from "CollectiblesProductRecord" /* 7266 */;
-import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord" /* 7273 */;
+// Module 7483 (CollectiblesCategoryRecord)
+import CollectiblesItemType from "CollectiblesItemType" /* 1995 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7493 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7494 */;
+import CollectiblesProductRecord from "CollectiblesProductRecord" /* 7484 */;
+import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord" /* 7491 */;
 import size from "module_2" /* 2 */;
 
 class CollectiblesCategoryRecord extends CollectiblesStoreListingRecord {
@@ -102,7 +102,7 @@ class CollectiblesCategoryRecord extends CollectiblesStoreListingRecord {
       skuId: id.id,
       name: id.name,
       summary: id.description,
-      unpublishedAt: id.unpublishedAt,
+      unpublishedAt: id.willUnpublishAt,
       isOrbsExclusive: id.isOrbsExclusive,
       styles: id.styles,
       products: products.reduce((arr, item) => {

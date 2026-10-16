@@ -1,10 +1,10 @@
-// Module ID: 11351
-// Function ID: 11352
+// Module ID: 11610
+// Function ID: 11611
 // Name: ConjureDesignFeedback
 // Dependencies: [2]
 // Exports: conjureDesignAnchorFor, describeConjureDesignTarget, formatConjureDesignFeedback, formatConjureDesignRemark, hitTestConjureDesignTargets, isConjureDesignCommentUsable, parseConjureDesignFeedback, parseConjureDesignRemark
 
-// Module 11351 (ConjureDesignFeedback)
+// Module 11610 (ConjureDesignFeedback)
 import size from "module_2" /* 2 */;
 
 function labelConjureDesignTarget(target) {
@@ -296,7 +296,7 @@ function targetLine(target) {
 }
 const frozen = Object.freeze({ x: 0.5, y: 0.5 });
 let c1 = 1000;
-let c4 = "[vibegrations:selected] ";
+let c4 = "[conjure:selected] ";
 const re5 = /^My design feedback: (\d+) comments? on the app\.$/;
 const re6 = /^(\d+)\. (.+)$/;
 const re7 = /^ {3}Feedback: ?(.*)$/;
@@ -391,7 +391,7 @@ export const parseConjureDesignRemark = function parseConjureDesignRemark(conten
     if (-1 !== index) {
       str3 = content.slice(index + 1);
     }
-    const substr1 = substr.slice(24);
+    const substr1 = substr.slice(19);
     const index1 = substr1.indexOf(" \u2014 ");
     let str5 = substr1;
     if (-1 !== index1) {

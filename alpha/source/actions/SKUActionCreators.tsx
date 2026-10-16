@@ -1,21 +1,21 @@
-// Module ID: 10170
-// Function ID: 10171
+// Module ID: 10409
+// Function ID: 10410
 // Name: SKUActionCreators
-// Dependencies: [5, 8991, 6088, 1085, 584, 5644, 1295, 4792, 9065, 7309, 5635, 4791, 4784, 5724, 5742, 1388, 2]
+// Dependencies: [5, 9221, 6312, 1087, 584, 5862, 1297, 4851, 9295, 7527, 5853, 4850, 4843, 5942, 5960, 1388, 2]
 // Exports: clearPurchaseError, fetchPublishedSKU, fetchSKU, fetchTestSKUsForApplication, grantChannelBranchEntitlement, orderSKU, previewPurchaseSku, purchaseSKU, resendPaymentVerificationEmail, showPurchaseConfirmationStep, updateSKUPaymentIsGift
 
-// Module 10170 (SKUActionCreators)
+// Module 10409 (SKUActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import HTTPUtils from "HTTPUtils" /* 1295 */;
-import BillingUtils from "BillingUtils" /* 4784 */;
-import StoreUtils from "StoreUtils" /* 5644 */;
-import PurchaseTokenUtils from "PurchaseTokenUtils" /* 5742 */;
-import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7309 */;
-import TestModeUtils from "TestModeUtils" /* 9065 */;
+import HTTPUtils from "HTTPUtils" /* 1297 */;
+import BillingUtils from "BillingUtils" /* 4843 */;
+import StoreUtils from "StoreUtils" /* 5862 */;
+import PurchaseTokenUtils from "PurchaseTokenUtils" /* 5960 */;
+import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7527 */;
+import TestModeUtils from "TestModeUtils" /* 9295 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import StorefrontPromotionOverrideStore from "StorefrontPromotionOverrideStore" /* 8991 */;
-import SKUStore from "SKUStore" /* 6088 */;
-import Constants from "Constants" /* 1085 */;
+import StorefrontPromotionOverrideStore from "StorefrontPromotionOverrideStore" /* 9221 */;
+import SKUStore from "SKUStore" /* 6312 */;
+import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 
 let _false, closure_6, closure_7, closure_8, country_code, expected_amount, gift_info_options, load_id, quantity;
@@ -276,7 +276,7 @@ obj = function _fetchTestSKUsForApplication() {
             body = undefined;
             c4 = 1;
             c5 = 1;
-            return { value: "Set", done: true };
+            return { value: "test", done: true };
           }
         } else if (1 === c4) {
           if (arg0 === 1) {
@@ -387,7 +387,7 @@ obj = function _previewPurchaseSku() {
             billingError = undefined;
             apply_wallet_balance = 1;
             previous_total = 1;
-            return { value: "Set", done: true };
+            return { value: "test", done: true };
           }
         } else if (1 === apply_wallet_balance) {
           if (arg0 === 1) {
@@ -607,8 +607,8 @@ obj = function _orderSKU() {
               const tmp40 = closure_4;
               if (closure_3) {
                 const obj8 = { is_gift: true, gift_customization: obj10 };
-                obj10 = { recipient_id: null, gift_style: null, emoji_id: null, emoji_name: null, sound_id: null, reward_sku_ids: null, custom_message_contents: null };
-                ({ recipient_id: obj7.recipient_id, gift_style: obj7.gift_style, emoji_id: obj7.emoji_id, emoji_name: obj7.emoji_name, sound_id: obj7.sound_id, reward_sku_ids: obj7.reward_sku_ids, custom_message: obj7.custom_message_contents } = tmp40);
+                obj10 = { is_recurring: null, recipient_id: null, gift_style: null, emoji_id: null, emoji_name: null, sound_id: null, reward_sku_ids: null, custom_message_contents: null };
+                ({ is_recurring: obj7.is_recurring, recipient_id: obj7.recipient_id, gift_style: obj7.gift_style, emoji_id: obj7.emoji_id, emoji_name: obj7.emoji_name, sound_id: obj7.sound_id, reward_sku_ids: obj7.reward_sku_ids, custom_message: obj7.custom_message_contents } = tmp40);
                 result.gifting_facet = obj8;
               }
               const HTTP = HTTPUtils.HTTP;

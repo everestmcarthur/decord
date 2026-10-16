@@ -1,15 +1,15 @@
-// Module ID: 17236
-// Function ID: 17237
+// Module ID: 17544
+// Function ID: 17545
 // Name: GuildDiscoveryCategoryActionCreators
-// Dependencies: [5, 2129, 17237, 1085, 1295, 584, 2]
+// Dependencies: [5, 2132, 17545, 1087, 1297, 584, 2]
 // Exports: addGuildCategory, deleteGuildCategory, fetchMetadataForGuild, fetchSlugForGuild, maybeFetchGuildDiscoveryCategories, saveGuildMetadata, updateGuildDiscoveryMetadataAbout, updateGuildDiscoveryMetadataIsPublished, updateGuildDiscoveryMetadataReasonsToJoin, updateGuildDiscoveryMetadataSocialLinks, updateGuildEmojiDiscoverabilityEnabled, updateGuildKeywords, updateGuildPrimaryCategory
 
-// Module 17236 (GuildDiscoveryCategoryActionCreators)
+// Module 17544 (GuildDiscoveryCategoryActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import Constants from "Constants" /* 1085 */;
+import Constants from "Constants" /* 1087 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import LocaleStore from "LocaleStore" /* 2129 */;
-import GuildDiscoveryCategoryStore from "GuildDiscoveryCategoryStore" /* 17237 */;
+import LocaleStore from "LocaleStore" /* 2132 */;
+import GuildDiscoveryCategoryStore from "GuildDiscoveryCategoryStore" /* 17545 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -247,7 +247,7 @@ obj = function _saveGuildMetadata() {
               about = undefined;
               partner_application_timestamp = 1;
               is_published = 1;
-              return { value: "Set", done: true };
+              return { value: "test", done: true };
             }
           } else if (1 === partner_application_timestamp) {
             if (arg0 === 1) {

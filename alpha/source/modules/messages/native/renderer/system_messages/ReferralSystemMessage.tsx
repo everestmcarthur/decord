@@ -1,18 +1,18 @@
-// Module ID: 8082
-// Function ID: 8083
+// Module ID: 8304
+// Function ID: 8305
 // Name: ReferralSystemMessage
-// Dependencies: [7175, 502, 5092, 587, 8083, 7983, 7891, 8081, 8096, 2]
+// Dependencies: [7393, 502, 5153, 587, 8305, 8203, 8111, 8303, 8318, 2]
 // Exports: createReferralSystemMessage
 
-// Module 8082 (ReferralSystemMessage)
+// Module 8304 (ReferralSystemMessage)
 import nativeDefault from "native" /* 587 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7983 */;
-import AssetRegistryDefault from "AssetRegistry" /* 8081 */;
-import ReferralTrialEmbedRedesign from "ReferralTrialEmbedRedesign" /* 8083 */;
-import ReferralTrialEmbed from "ReferralTrialEmbed" /* 8096 */;
-import ReferralTrialStore from "ReferralTrialStore" /* 7175 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8203 */;
+import AssetRegistryDefault from "AssetRegistry" /* 8303 */;
+import ReferralTrialEmbedRedesign from "ReferralTrialEmbedRedesign" /* 8305 */;
+import ReferralTrialEmbed from "ReferralTrialEmbed" /* 8318 */;
+import ReferralTrialStore from "ReferralTrialStore" /* 7393 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import createStyles from "createStyles" /* 5092 */;
+import createStyles from "createStyles" /* 5153 */;
 import size from "module_2" /* 2 */;
 
 let obj = { iconTintColor: nativeDefault.colors.ICON_STRONG, iconDividerColor: nativeDefault.colors.ICON_STRONG };
@@ -45,7 +45,7 @@ export const createReferralSystemMessage = function createReferralSystemMessage(
         const tmp17 = closure_5(theme);
         const merged = Object.assign(createCommonMessageDefault(message));
         ({ iconTintColor: obj4.iconTintColor, iconDividerColor: obj4.iconDividerColor } = tmp17);
-        tmp8Result = tmp8(7891);
+        tmp8Result = tmp8(8111);
         return obj2;
       }
     } else {
@@ -59,7 +59,7 @@ export const createReferralSystemMessage = function createReferralSystemMessage(
         const tmp4 = closure_5(theme);
         const merged1 = Object.assign(createCommonMessageDefault(message));
         ({ iconTintColor: obj.iconTintColor, iconDividerColor: obj.iconDividerColor } = tmp4);
-        tmp23Result = tmp23(7891);
+        tmp23Result = tmp23(8111);
         return obj;
       }
     }

@@ -1,18 +1,18 @@
-// Module ID: 6117
-// Function ID: 6118
+// Module ID: 6341
+// Function ID: 6342
 // Name: GuildJoinRequestActionCreators
-// Dependencies: [5, 2069, 6118, 4940, 1085, 4942, 584, 1295, 6119, 5299, 1126, 5889, 2]
+// Dependencies: [5, 2072, 6342, 4999, 1087, 5001, 584, 1297, 6343, 5361, 1128, 6107, 2]
 
-// Module 6117 (GuildJoinRequestActionCreators)
+// Module 6341 (GuildJoinRequestActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import HTTPUtils from "HTTPUtils" /* 1295 */;
-import ChannelRecord from "ChannelRecord" /* 2069 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4940 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4942 */;
-import GuildJoinRequestAnalyticUtils from "GuildJoinRequestAnalyticUtils" /* 6119 */;
+import HTTPUtils from "HTTPUtils" /* 1297 */;
+import ChannelRecord from "ChannelRecord" /* 2072 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4999 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 5001 */;
+import GuildJoinRequestAnalyticUtils from "GuildJoinRequestAnalyticUtils" /* 6343 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import GuildJoinRequestStore from "GuildJoinRequestStore" /* 6118 */;
-import Constants from "Constants" /* 1085 */;
+import GuildJoinRequestStore from "GuildJoinRequestStore" /* 6342 */;
+import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 
 let after, before, joinRequest, requests;
@@ -80,7 +80,7 @@ let obj = function _fetchGuildJoinRequests() {
               requests = undefined;
               c6 = 1;
               c7 = 1;
-              return { value: "Set", done: true };
+              return { value: "test", done: true };
             }
           } else if (1 === c6) {
             if (arg0 === 1) {
@@ -387,7 +387,7 @@ obj = function _updateGuildJoinRequest() {
               tmp = undefined;
               c7 = 1;
               c8 = 1;
-              return { value: "Set", done: true };
+              return { value: "test", done: true };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -614,7 +614,6 @@ obj = function _fetchJoinRequestForInterview() {
 obj = function _createOrEnterJoinRequestInterview() {
   obj = _asyncToGenerator(async (arg0, value) => {
     let obj11;
-    let tmp;
     let closure_0 = arg0;
     let closure_1 = value;
     if (c5 === 2) {
@@ -654,7 +653,7 @@ obj = function _createOrEnterJoinRequestInterview() {
             channel = undefined;
             c4 = 1;
             c5 = 1;
-            return { value: "Set", done: true };
+            return { value: "test", done: true };
           }
         } else if (1 === c4) {
           if (arg0 === 1) {

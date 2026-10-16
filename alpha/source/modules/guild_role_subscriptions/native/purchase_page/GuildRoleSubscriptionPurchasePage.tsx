@@ -1,26 +1,26 @@
-// Module ID: 17305
-// Function ID: 17306
+// Module ID: 17613
+// Function ID: 17614
 // Name: GuildRoleSubscriptionPurchasePage
-// Dependencies: [19, 17, 1205, 2065, 2087, 1085, 21, 5092, 587, 558, 576, 5088, 1126, 1200, 11018, 6663, 15818, 15820, 15821, 573, 17306, 5421, 17308, 17309, 17310, 8159, 6157, 6159, 17311, 9561, 17313, 17314, 4806, 17315, 2]
+// Dependencies: [19, 17, 1207, 2068, 2090, 1087, 21, 5153, 587, 558, 576, 5149, 1128, 1202, 11336, 6885, 16184, 16186, 16187, 573, 17614, 5483, 17616, 17617, 17618, 8384, 5091, 6381, 17619, 9796, 17621, 17622, 4865, 17623, 2]
 
-// Module 17305 (GuildRoleSubscriptionPurchasePage)
+// Module 17613 (GuildRoleSubscriptionPurchasePage)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import intl6 from "intl" /* 1126 */;
-import native from "native" /* 1200 */;
-import LinkingDefault from "Linking" /* 4806 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8159 */;
-import AssetRegistryDefault from "AssetRegistry" /* 11018 */;
-import GuildRoleSubscriptionPurchasePreviewCardDefault from "GuildRoleSubscriptionPurchasePreviewCard" /* 17315 */;
+import intl6 from "intl" /* 1128 */;
+import native from "native" /* 1202 */;
+import LinkingDefault from "Linking" /* 4865 */;
+import Text_Text from "Text/Text" /* 5149 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8384 */;
+import AssetRegistryDefault from "AssetRegistry" /* 11336 */;
+import GuildRoleSubscriptionPurchasePreviewCardDefault from "GuildRoleSubscriptionPurchasePreviewCard" /* 17623 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import ThemeStore from "ThemeStore" /* 1205 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import GuildStore from "GuildStore" /* 2087 */;
-import Constants from "Constants" /* 1085 */;
+import ThemeStore from "ThemeStore" /* 1207 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import GuildStore from "GuildStore" /* 2090 */;
+import Constants from "Constants" /* 1087 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 5092 */;
+import createStyles_mod from "createStyles" /* 5153 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -89,8 +89,8 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function LegalD
   const cResult = obj.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { variant: "text-xs/normal", color: "text-muted", children: intl.format(intl6.t.FSPTDI, obj5) };
-    const Text = tmp(5088).Text;
-    intl = tmp(1126).intl;
+    const Text = tmp(5149).Text;
+    intl = tmp(1128).intl;
     obj5 = { termsURL: null, paidURL: null };
     ({ TERMS: obj3.termsURL, PAID_TERMS: obj3.paidURL } = map1);
     const tmp7 = syncedClientThemes(Text, obj2);
@@ -173,7 +173,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Social
     let tmp12 = tmp5;
     if (tmp12) {
       const obj4 = { source: AssetRegistryDefault, style: tmp4.socialBadgeArrow };
-      const Icon = tmp(1200).Icon;
+      const Icon = tmp(1202).Icon;
       tmp12 = syncedClientThemes(Icon, obj4);
     }
     cResult[5] = null != onPress;

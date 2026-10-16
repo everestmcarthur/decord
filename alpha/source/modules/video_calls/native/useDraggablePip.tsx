@@ -1,16 +1,16 @@
-// Module ID: 10839
-// Function ID: 10840
+// Module ID: 11159
+// Function ID: 11160
 // Name: useDraggablePip
-// Dependencies: [32, 10354, 10826, 558, 576, 4850, 5093, 1200, 9580, 6335, 5378, 2]
+// Dependencies: [32, 10602, 11146, 558, 576, 4909, 5154, 1202, 9815, 6557, 5440, 2]
 
-// Module 10839 (useDraggablePip)
-import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
-import timing from "timing" /* 5093 */;
-import spring from "spring" /* 5378 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9580 */;
-import ChannelCallStore from "ChannelCallStore" /* 10354 */;
+// Module 11159 (useDraggablePip)
+import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
+import timing from "timing" /* 5154 */;
+import spring from "spring" /* 5440 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9815 */;
+import ChannelCallStore from "ChannelCallStore" /* 10602 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
-import Constants from "Constants" /* 10826 */;
+import Constants from "Constants" /* 11146 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -19,7 +19,7 @@ let set, set2;
 let closure_4;
 let hasOwnProperty;
 let tmp;
-const native = tmp(1200);
+const native = tmp(1202);
 const useChannelCallStore = ChannelCallStore.useChannelCallStore;
 ({ PIP_FOCUS_SCALE: closure_4, PIP_GESTURE_ACTIVE_OFFSET: hasOwnProperty } = Constants);
 let closure_6 = { mass: 1, stiffness: 250, overshootClamping: true, restSpeedThreshold: 0.001, restDisplacementThreshold: 0.001, damping: 20 };

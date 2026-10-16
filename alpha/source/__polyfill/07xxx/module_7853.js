@@ -1,34 +1,11 @@
 // Module ID: 7853
 // Function ID: 7854
-// Dependencies: []
-// Exports: getCalculatedGpsValue, getEncodedString, getStringValue
+// Dependencies: [65]
 
 // Module 7853
-const f97514 = (item) => String.fromCharCode(item);
+import module_65 from "module_65" /* 65 */;
 
-export const getStringValue = function getStringValue(value) {
-  const mapped = value.map(f97514);
-  return mapped.join("");
-};
-export const getEncodedString = function getEncodedString(arr) {
-  if (arr.length >= 8) {
-    const substr = arr.slice(0, 8);
-    const mapped = substr.map(f97514);
-    const joined = mapped.join("");
-    if ("ASCII\0\0\0" === joined) {
-      const substr1 = arr.slice(8);
-      const mapped1 = substr1.map(f97514);
-      return mapped1.join("");
-    } else if ("JIS\0\0\0\0\0" === joined) {
-      return "[JIS encoded text]";
-    } else if ("UNICODE\0" === joined) {
-      return "[Unicode encoded text]";
-    } else if ("\0\0\0\0\0\0\0\0" === joined) {
-      return "[Undefined encoding]";
-    }
-  }
-  return "Undefined";
-};
-export const getCalculatedGpsValue = function getCalculatedGpsValue(value) {
-  return value[0][0] / value[0][1] + value[1][0] / value[1][1] / 60 + value[2][0] / value[2][1] / 3600;
-};
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGFeMerge", validAttributes: { x: true, y: true, width: true, height: true, result: true, nodes: true } };
+
+export default module_65.get("RNSVGFeMerge", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

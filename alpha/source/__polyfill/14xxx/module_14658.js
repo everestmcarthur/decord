@@ -1,12 +1,19 @@
 // Module ID: 14658
 // Function ID: 14659
-// Dependencies: [14647]
+// Dependencies: []
 
 // Module 14658
-import _mod14647 from "module_14647" /* 14647 */;
-
-
-export default (arg0, arg1) => {
-  const tmp = new _mod14647(arg0, arg1);
-  return tmp.minor;
-};
+let num = 0;
+let num2 = 0;
+let tmp2 = num;
+do {
+  let tmp5;
+  do {
+    let tmp3 = tmp2 >>> 1;
+    tmp5 = 1 & tmp2 ? 3988292384 ^ tmp3 : tmp3;
+    num2 = num2 + 1;
+    tmp2 = tmp5;
+  } while (num2 < 8);
+  tmp[num] = tmp5;
+  num = num + 1;
+} while (num < 256);

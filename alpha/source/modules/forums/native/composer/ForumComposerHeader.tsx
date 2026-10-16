@@ -1,22 +1,22 @@
-// Module ID: 9720
-// Function ID: 9721
+// Module ID: 9954
+// Function ID: 9955
 // Name: ForumComposerHeader
-// Dependencies: [19, 17, 21, 5092, 587, 558, 576, 5421, 1126, 6208, 6185, 8216, 5088, 8203, 2]
+// Dependencies: [19, 17, 21, 5153, 587, 558, 576, 5483, 1128, 6430, 6407, 8441, 5149, 8428, 2]
 
-// Module 9720 (ForumComposerHeader)
+// Module 9954 (ForumComposerHeader)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import intl4 from "intl" /* 1126 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import useChannelNameDefault from "useChannelName" /* 5421 */;
-import Pressables from "Pressables" /* 6185 */;
-import XSmallIcon from "XSmallIcon" /* 6208 */;
-import BookCheckIcon from "BookCheckIcon" /* 8203 */;
-import ForumIcon from "ForumIcon" /* 8216 */;
+import intl4 from "intl" /* 1128 */;
+import Text_Text from "Text/Text" /* 5149 */;
+import useChannelNameDefault from "useChannelName" /* 5483 */;
+import Pressables from "Pressables" /* 6407 */;
+import XSmallIcon from "XSmallIcon" /* 6430 */;
+import BookCheckIcon from "BookCheckIcon" /* 8428 */;
+import ForumIcon from "ForumIcon" /* 8441 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 5092 */;
+import createStyles from "createStyles" /* 5153 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -59,7 +59,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForumCompose
   const tmp5 = useChannelNameDefault(channel);
   ({ headerBar, button } = tmp4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = tmp(1126).intl;
+    const intl = tmp(1128).intl;
     const stringResult = intl.string(intl4.t.cpT0Cq);
     cResult[0] = stringResult;
     first = stringResult;
@@ -104,8 +104,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForumCompose
       if (cResult[9] !== title) {
         let stringResult1 = title;
         if ("" === title) {
-          const intl2 = tmp(1126).intl;
-          stringResult1 = intl2.string(tmp(1126).t["7EjFCk"]);
+          const intl2 = tmp(1128).intl;
+          stringResult1 = intl2.string(tmp(1128).t["7EjFCk"]);
         }
         cResult[9] = title;
         cResult[10] = stringResult1;
@@ -195,8 +195,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForumCompose
             let tmp38 = null;
             if (length1 > 0) {
               const obj6 = { accessibilityRole: "button", accessibilityLabel: intl3.string(intl4.t.yR6HwZ), style: tmp4.button, onPress: onGuidelinesPress, children: hasOwnProperty(BookCheckIcon.BookCheckIcon, {}) };
-              const PressableOpacity = tmp(6185).PressableOpacity;
-              intl3 = tmp(1126).intl;
+              const PressableOpacity = tmp(6407).PressableOpacity;
+              intl3 = tmp(1128).intl;
               tmp38 = hasOwnProperty(PressableOpacity, obj6);
             }
             let length2;
@@ -268,8 +268,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForumCompose
   const obj4 = { style: tmp.headerBarText, children: items2 };
   const Text = Text_Text.Text;
   if ("" === title) {
-    const intl2 = tmp7(1126).intl;
-    title = intl2.string(tmp7(1126).t["7EjFCk"]);
+    const intl2 = tmp7(1128).intl;
+    title = intl2.string(tmp7(1128).t["7EjFCk"]);
   }
   items2 = [hasOwnProperty(Text, { lineClamp: 1, ellipsizeMode: "tail", variant: "text-md/semibold", color: "mobile-text-heading-primary", children: title }), hasOwnProperty(Text_Text.Text, { variant: "text-xs/medium", color: "text-default", children: tmp3 })];
   items1[1] = metroRequire(React3, obj4);
@@ -281,8 +281,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForumCompose
   let tmp6Result = null;
   if (length > 0) {
     const obj5 = { accessibilityRole: "button", accessibilityLabel: intl3.string(intl4.t.yR6HwZ), style: tmp.button, onPress: onGuidelinesPress, children: hasOwnProperty(BookCheckIcon.BookCheckIcon, {}) };
-    const PressableOpacity2 = tmp7(6185).PressableOpacity;
-    intl3 = tmp7(1126).intl;
+    const PressableOpacity2 = tmp7(6407).PressableOpacity;
+    intl3 = tmp7(1128).intl;
     tmp6Result = tmp6(PressableOpacity2, obj5);
   }
   items[2] = tmp6Result;

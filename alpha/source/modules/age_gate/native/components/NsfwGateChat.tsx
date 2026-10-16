@@ -1,19 +1,19 @@
-// Module ID: 12901
-// Function ID: 12902
+// Module ID: 13258
+// Function ID: 13259
 // Name: NsfwGateChat
-// Dependencies: [19, 17, 21, 5092, 587, 558, 576, 6157, 12902, 1126, 5088, 2]
+// Dependencies: [19, 17, 21, 5153, 587, 558, 576, 5091, 13259, 1128, 5149, 2]
 
-// Module 12901 (NsfwGateChat)
+// Module 13258 (NsfwGateChat)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import intl2 from "intl" /* 1126 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import FastImageDefault from "FastImage" /* 6157 */;
-import AssetRegistryDefault from "AssetRegistry" /* 12902 */;
+import intl2 from "intl" /* 1128 */;
+import FastImageDefault from "FastImage" /* 5091 */;
+import Text_Text from "Text/Text" /* 5149 */;
+import AssetRegistryDefault from "AssetRegistry" /* 13259 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 5092 */;
+import createStyles_mod from "createStyles" /* 5153 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -63,7 +63,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function NsfwGateCh
   }
   const description = tmp4.description;
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = tmp(1126).intl;
+    const intl = tmp(1128).intl;
     const stringResult = intl.string(intl2.t.W4Qyxr);
     cResult[3] = stringResult;
     tmp14 = stringResult;

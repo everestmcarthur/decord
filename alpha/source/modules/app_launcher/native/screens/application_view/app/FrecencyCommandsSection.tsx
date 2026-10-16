@@ -1,19 +1,19 @@
-// Module ID: 11640
-// Function ID: 11641
+// Module ID: 11899
+// Function ID: 11900
 // Name: FrecencyCommandsSection
-// Dependencies: [19, 17, 1085, 21, 5092, 11622, 558, 576, 11641, 5107, 10623, 5088, 1126, 7247, 2]
+// Dependencies: [19, 17, 1087, 21, 5153, 11881, 558, 576, 11900, 5168, 10871, 5149, 1128, 7465, 2]
 
-// Module 11640 (FrecencyCommandsSection)
+// Module 11899 (FrecencyCommandsSection)
 import react_native from "react-native" /* 17 */;
-import Constants from "Constants" /* 1085 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5107 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7247 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 10623 */;
-import AppDetailContent from "AppDetailContent" /* 11622 */;
-import useFilterAndSortToOnlyFrecentCommandsDefault from "useFilterAndSortToOnlyFrecentCommands" /* 11641 */;
+import Constants from "Constants" /* 1087 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5168 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7465 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 10871 */;
+import AppDetailContent from "AppDetailContent" /* 11881 */;
+import useFilterAndSortToOnlyFrecentCommandsDefault from "useFilterAndSortToOnlyFrecentCommands" /* 11900 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 5092 */;
+import createStyles from "createStyles" /* 5153 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -239,9 +239,9 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function FrecencyComm
   if (0 !== arr.length) {
     let obj = { style: tmp.container, children: items1 };
     const obj2 = { style: tmp.header, children: arr(Heading, obj3) };
-    obj3 = { variant: "text-md/medium", color: "text-default", children: intl.string(context(1126).t.acSE0h) };
-    Heading = context(5088).Heading;
-    intl = context(1126).intl;
+    obj3 = { variant: "text-md/medium", color: "text-default", children: intl.string(context(1128).t.acSE0h) };
+    Heading = context(5149).Heading;
+    intl = context(1128).intl;
     items1 = [
       arr(View, obj2),
       arr.map((command, index) => {

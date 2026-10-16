@@ -1,28 +1,28 @@
-// Module ID: 10825
-// Function ID: 10826
+// Module ID: 11145
+// Function ID: 11146
 // Name: ChannelCallModal
-// Dependencies: [32, 19, 6036, 2065, 10354, 10355, 10826, 1085, 21, 558, 576, 10358, 10827, 4976, 10830, 10967, 10361, 10968, 4850, 4985, 11192, 504, 1497, 10828, 11193, 6852, 6879, 12135, 7482, 6335, 10360, 2]
+// Dependencies: [32, 19, 6254, 2068, 10602, 10603, 11146, 1087, 21, 558, 576, 10606, 11147, 5035, 11150, 11285, 10609, 11286, 4909, 5044, 11506, 504, 1499, 11148, 11507, 7075, 7100, 12427, 7701, 6557, 10608, 2]
 
-// Module 10825 (ChannelCallModal)
+// Module 11145 (ChannelCallModal)
 import react2 from "react" /* 576 */;
-import Constants2 from "Constants" /* 1085 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4976 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7482 */;
-import ChannelCallConstants from "ChannelCallConstants" /* 10355 */;
-import VoiceChatHooks from "VoiceChatHooks" /* 10358 */;
-import RevealProvider from "RevealProvider" /* 10827 */;
-import CameraPreviewDefault from "CameraPreview" /* 10830 */;
-import ChannelCallModalManagerDefault from "ChannelCallModalManager" /* 10967 */;
-import ChannelCallNavigatorDefault from "ChannelCallNavigator" /* 10968 */;
-import PanGestureAnimations from "PanGestureAnimations" /* 11192 */;
-import RouteManagerUtils from "RouteManagerUtils" /* 11193 */;
+import Constants2 from "Constants" /* 1087 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5035 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7701 */;
+import ChannelCallConstants from "ChannelCallConstants" /* 10603 */;
+import VoiceChatHooks from "VoiceChatHooks" /* 10606 */;
+import RevealProvider from "RevealProvider" /* 11147 */;
+import CameraPreviewDefault from "CameraPreview" /* 11150 */;
+import ChannelCallModalManagerDefault from "ChannelCallModalManager" /* 11285 */;
+import ChannelCallNavigatorDefault from "ChannelCallNavigator" /* 11286 */;
+import PanGestureAnimations from "PanGestureAnimations" /* 11506 */;
+import RouteManagerUtils from "RouteManagerUtils" /* 11507 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6036 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import ChannelCallStore from "ChannelCallStore" /* 10354 */;
-import Constants from "Constants" /* 10826 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6254 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import ChannelCallStore from "ChannelCallStore" /* 10602 */;
+import Constants from "Constants" /* 11146 */;
 import Fragment from "Fragment" /* 21 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
@@ -89,7 +89,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelCallC
   let tmp13 = null;
   if (isConnectedToVoiceChannel) {
     const obj3 = { value: revealProviderValue, children: authStore3(CameraPreviewDefault, obj4) };
-    const Provider = tmp(10827).RevealContext.Provider;
+    const Provider = tmp(11147).RevealContext.Provider;
     obj4 = { channel, participantScreenIsFocused: !tmp4, isChannelCallModalOpen: tmp9 };
     tmp13 = authStore3(Provider, obj3);
   }
@@ -233,19 +233,19 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSwi
   fn.__closure = { width };
   fn.__workletHash = 15383459308604;
   fn.__initData = __initData;
-  const obj2 = width(4850);
+  const obj2 = width(4909);
   const derivedValue = obj2.useDerivedValue(fn);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn2 = function l() {
       const obj = width(dependencyMap[18]);
       obj.runOnJS(width(dependencyMap[19]).dismissKeyboard)();
     };
-    fn2.__closure = { runOnJS: width(4850).runOnJS, dismissKeyboard: width(4985).dismissKeyboard };
+    fn2.__closure = { runOnJS: width(4909).runOnJS, dismissKeyboard: width(5044).dismissKeyboard };
     fn2.__workletHash = 4086900686382;
     fn2.__initData = __initData2;
     cResult[0] = fn2;
     first = fn2;
-    const obj3 = { runOnJS: width(4850).runOnJS, dismissKeyboard: width(4985).dismissKeyboard };
+    const obj3 = { runOnJS: width(4909).runOnJS, dismissKeyboard: width(5044).dismissKeyboard };
   } else {
     first = cResult[0];
   }
@@ -289,7 +289,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSwi
   let translateX;
   width = width.width;
   ({ translateX, enabled, isGestureInProgress } = width);
-  let obj = width(4850);
+  let obj = width(4909);
   const fn = function u() {
     const items = [0, -width];
     return items;
@@ -301,7 +301,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSwi
     const obj = width(dependencyMap[18]);
     obj.runOnJS(width(dependencyMap[19]).dismissKeyboard)();
   };
-  const obj2 = { runOnJS: width(4850).runOnJS, dismissKeyboard: width(4985).dismissKeyboard };
+  const obj2 = { runOnJS: width(4909).runOnJS, dismissKeyboard: width(5044).dismissKeyboard };
   const derivedValue = obj.useDerivedValue(fn);
   const useCallback = react.useCallback;
   fn2.__closure = obj2;

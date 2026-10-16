@@ -1,21 +1,21 @@
-// Module ID: 15417
-// Function ID: 15418
+// Module ID: 15783
+// Function ID: 15784
 // Name: useParentalControlSettings
-// Dependencies: [5, 19, 7262, 7020, 558, 576, 7741, 15418, 15421, 1209, 7000, 6684, 7739, 504, 7261, 7026, 2]
+// Dependencies: [5, 19, 7480, 7241, 558, 576, 7960, 15784, 15787, 1211, 7222, 6906, 7958, 504, 7479, 7247, 2]
 // Exports: useIsParentallyControlled
 
-// Module 15417 (useParentalControlSettings)
+// Module 15783 (useParentalControlSettings)
 import react2 from "react" /* 576 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1209 */;
-import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 7000 */;
-import Constants from "Constants" /* 7020 */;
-import useUserLinks from "useUserLinks" /* 7739 */;
-import useSelectedTeen from "useSelectedTeen" /* 7741 */;
-import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 15418 */;
-import FamilyCenterControlledSettingsUtils from "FamilyCenterControlledSettingsUtils" /* 15421 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1211 */;
+import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 7222 */;
+import Constants from "Constants" /* 7241 */;
+import useUserLinks from "useUserLinks" /* 7958 */;
+import useSelectedTeen from "useSelectedTeen" /* 7960 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 15784 */;
+import FamilyCenterControlledSettingsUtils from "FamilyCenterControlledSettingsUtils" /* 15787 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import react from "react" /* 19 */;
-import FamilyCenterControlledSettingsStore from "FamilyCenterControlledSettingsStore" /* 7262 */;
+import FamilyCenterControlledSettingsStore from "FamilyCenterControlledSettingsStore" /* 7480 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -23,7 +23,7 @@ const require = globalThis.__r;
 let _require, c2, c5;
 
 let tmp;
-const UserSettingsUtils = tmp(6684);
+const UserSettingsUtils = tmp(6906);
 const SafetyToastType = Constants.SafetyToastType;
 let ReactCompilerGating = ReactCompilerGating_mod;
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useParentalControlledExplicitContentSettings() {
@@ -314,9 +314,9 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAllowFr
   return tmp7.mutualGuilds && !tmp7.all;
 }) : (function useAllowFriendsFromMutualGuildsOnlyForTeen() {
   let controlledSetting;
-  let obj = controlledSetting(7741);
+  let obj = controlledSetting(7960);
   const selectedTeen = obj.useSelectedTeen();
-  const ParentalControlledFriendSourceFlags = controlledSetting(15418).ParentalControlledFriendSourceFlags;
+  const ParentalControlledFriendSourceFlags = controlledSetting(15784).ParentalControlledFriendSourceFlags;
   let id;
   const useControlledSetting = ParentalControlledFriendSourceFlags.useControlledSetting;
   if (selectedTeen != null) {

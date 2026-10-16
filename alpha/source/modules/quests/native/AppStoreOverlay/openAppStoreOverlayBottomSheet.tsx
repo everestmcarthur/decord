@@ -1,14 +1,14 @@
-// Module ID: 13439
-// Function ID: 13440
+// Module ID: 13800
+// Function ID: 13801
 // Name: openAppStoreOverlayBottomSheet
-// Dependencies: [1085, 5056, 13440, 2000, 7407, 1121, 13436, 2]
+// Dependencies: [1087, 5118, 13801, 2002, 7625, 1123, 13797, 2]
 // Exports: openAppStoreOverlayBottomSheet
 
-// Module 13439 (openAppStoreOverlayBottomSheet)
-import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
-import AnalyticsActions from "AnalyticsActions" /* 7407 */;
-import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 13436 */;
-import Constants from "Constants" /* 1085 */;
+// Module 13800 (openAppStoreOverlayBottomSheet)
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1123 */;
+import AnalyticsActions from "AnalyticsActions" /* 7625 */;
+import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 13797 */;
+import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

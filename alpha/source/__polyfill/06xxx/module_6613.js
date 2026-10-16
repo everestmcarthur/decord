@@ -1,206 +1,148 @@
 // Module ID: 6613
 // Function ID: 6614
-// Dependencies: [32, 19, 21, 6614, 1656, 6312, 6335, 6615]
+// Dependencies: [32, 19, 6614, 6625, 6616, 6629, 6600]
+// Exports: useJSResponderHandler
 
 // Module 6613
-import Fragment from "Fragment" /* 21 */;
-import _mod1656 from "module_1656" /* 1656 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6335 */;
-import react_native from "react-native" /* 6615 */;
+import SHARED_VALUE_OFFSET from "SHARED_VALUE_OFFSET" /* 6614 */;
+import ComposedGestureName from "ComposedGestureName" /* 6616 */;
+import maybeExtractNativeEvent from "maybeExtractNativeEvent" /* 6625 */;
+import _mod6629 from "module_6629" /* 6629 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
-import react_mod from "react" /* 19 */;
+import react from "react" /* 19 */;
 
+const require = globalThis.__r;
+let _require, closure_3, dependencyMap;
+
+let c3;
 let closure_4;
 let hasOwnProperty;
-let memo;
-let metroImportAll;
 let metroImportDefault;
 let metroRequire;
-let react = react_mod;
-({ useCallback: closure_4, useEffect: hasOwnProperty, useMemo: metroRequire, useRef: metroImportDefault, useState: metroImportAll, memo } = react);
-react = react_mod;
-const jsx = Fragment.jsx;
-let closure_10 = { code: "function pnpm_BottomSheetBackdropTsx1(){const{runOnJS,handleOnPress}=this.__closure;runOnJS(handleOnPress)();}" };
-let __initData = { code: "function pnpm_BottomSheetBackdropTsx2(){const{interpolate,animatedIndex,disappearsOnIndex,appearsOnIndex,opacity,Extrapolation}=this.__closure;return{opacity:interpolate(animatedIndex.value,[-1,disappearsOnIndex,appearsOnIndex],[0,0,opacity],Extrapolation.CLAMP)};}" };
-let __initData2 = { code: "function pnpm_BottomSheetBackdropTsx3(){const{animatedIndex,disappearsOnIndex}=this.__closure;return Math.round(animatedIndex.value)<=disappearsOnIndex;}" };
-let closure_13 = { code: "function pnpm_BottomSheetBackdropTsx4(shouldDisableTouchability,previous){const{runOnJS,handleContainerTouchability}=this.__closure;if(shouldDisableTouchability===previous){return;}runOnJS(handleContainerTouchability)(shouldDisableTouchability);}" };
-const memoResult = memo((animatedIndex) => {
-  let ViewComponent;
-  let appearsOnIndex;
-  let children;
-  let closure_12;
-  let disappearsOnIndex;
-  let enableTouchThrough;
-  let handleOnPress;
-  let onPress;
-  let opacity;
-  let pressBehavior;
-  animatedIndex = animatedIndex.animatedIndex;
-  ({ opacity, appearsOnIndex, disappearsOnIndex, enableTouchThrough, pressBehavior } = animatedIndex);
-  if (pressBehavior === undefined) {
-    const tmp = animatedIndex;
-    let tmp2 = onPress;
-    pressBehavior = animatedIndex(onPress[3]).DEFAULT_PRESS_BEHAVIOR;
-  }
-  onPress = animatedIndex.onPress;
-  const style = animatedIndex.style;
-  ({ ViewComponent, children } = animatedIndex);
-  if (ViewComponent === undefined) {
-    ViewComponent = pressBehavior(onPress[4]).View;
-  }
-  let DEFAULT_ACCESSIBLE = animatedIndex.accessible;
-  if (DEFAULT_ACCESSIBLE === undefined) {
-    DEFAULT_ACCESSIBLE = animatedIndex(onPress[3]).DEFAULT_ACCESSIBLE;
-  }
-  let DEFAULT_ACCESSIBILITY_ROLE = animatedIndex.accessibilityRole;
-  if (DEFAULT_ACCESSIBILITY_ROLE === undefined) {
-    DEFAULT_ACCESSIBILITY_ROLE = animatedIndex(onPress[3]).DEFAULT_ACCESSIBILITY_ROLE;
-  }
-  let DEFAULT_ACCESSIBILITY_LABEL = animatedIndex.accessibilityLabel;
-  if (DEFAULT_ACCESSIBILITY_LABEL === undefined) {
-    DEFAULT_ACCESSIBILITY_LABEL = animatedIndex(onPress[3]).DEFAULT_ACCESSIBILITY_LABEL;
-  }
-  let DEFAULT_ACCESSIBILITY_HINT = animatedIndex.accessibilityHint;
-  if (DEFAULT_ACCESSIBILITY_HINT === undefined) {
-    DEFAULT_ACCESSIBILITY_HINT = animatedIndex(onPress[3]).DEFAULT_ACCESSIBILITY_HINT;
-  }
-  opacity = undefined;
-  appearsOnIndex = undefined;
-  disappearsOnIndex = undefined;
-  __initData = undefined;
-  __initData2 = undefined;
-  let animatedStyle;
-  let obj = animatedIndex(onPress[5]);
-  const bottomSheet = obj.useBottomSheet();
-  const snapToIndex = bottomSheet.snapToIndex;
-  const close = bottomSheet.close;
-  const ref = opacity(false);
-  if (opacity == null) {
-    opacity = tmp13(tmp14[3]).DEFAULT_OPACITY;
-  }
-  if (appearsOnIndex == null) {
-    appearsOnIndex = tmp13(tmp14[3]).DEFAULT_APPEARS_ON_INDEX;
-  }
-  if (disappearsOnIndex == null) {
-    disappearsOnIndex = tmp13(tmp14[3]).DEFAULT_DISAPPEARS_ON_INDEX;
-  }
-  if (enableTouchThrough == null) {
-    enableTouchThrough = tmp13(tmp14[3]).DEFAULT_ENABLE_TOUCH_THROUGH;
-  }
-  let str = "auto";
-  const tmp16 = appearsOnIndex;
-  if (enableTouchThrough) {
-    str = "none";
-  }
-  const tmp17 = style(tmp16(str), 2);
-  let items = [snapToIndex, close, disappearsOnIndex, pressBehavior, onPress];
-  const first = tmp17[0];
-  const tmp19 = snapToIndex(() => {
-    if (onPress != null) {
-      tmp();
+function isSupportedGesture(gestures) {
+  const obj = maybeExtractNativeEvent;
+  if (obj.isComposedGesture(gestures)) {
+    gestures = gestures.gestures;
+    return gestures.some(isSupportedGesture);
+  } else {
+    const type = gestures.type;
+    if (ComposedGestureName.SingleGestureName.Tap !== type) {
+      if (ComposedGestureName.SingleGestureName.LongPress !== type) {
+        if (ComposedGestureName.SingleGestureName.Fling !== type) {
+          if (ComposedGestureName.SingleGestureName.Native !== type) {
+            if (ComposedGestureName.SingleGestureName.Hover !== type) {
+              return false;
+            }
+          }
+        }
+      }
     }
-    if ("close" === pressBehavior) {
-      close();
-    } else if ("collapse" === pressBehavior) {
-      snapToIndex(disappearsOnIndex);
-    } else if (typeof pressBehavior === "number") {
-      snapToIndex(pressBehavior);
+    return true;
+  }
+}
+({ use: c3, useCallback: closure_4, useEffect: hasOwnProperty, useRef: metroRequire, useState: metroImportDefault } = react);
+let closure_8 = SHARED_VALUE_OFFSET.SHARED_VALUE_OFFSET + 0.5;
+let closure_10 = { code: "function pnpm_useJSResponderHandlerTs1(sharedValues,id,notify){const{runOnJS}=this.__closure;const listener=runOnJS(notify);for(const sharedValue of sharedValues){sharedValue.addListener(id,listener);}}" };
+let closure_11 = { code: "function pnpm_useJSResponderHandlerTs2(sharedValues,id){for(const sharedValue of sharedValues){sharedValue.removeListener(id);}}" };
+
+export const useJSResponderHandler = function useJSResponderHandler(gesture) {
+  let closure_1;
+  let closure_2;
+  let first;
+  _require = gesture;
+  let tmp = closure_3(require("module_6629").JSResponderContext);
+  dependencyMap = tmp;
+  [first, _slicedToArray] = closure_7(0);
+  const tmp4 = closure_6(null);
+  closure_3 = tmp4;
+  if (null === tmp4.current) {
+    closure_8 = tmp6 + 1;
+    tmp4.current = +closure_8;
+  }
+  const items = [gesture];
+  closure_5(() => {
+    let runOnJS;
+    const Reanimated = gesture(closure_1[6]).Reanimated;
+    const obj = gesture(closure_1[2]);
+    const enabledSharedValues = obj.getEnabledSharedValues(Reanimated);
+    if (undefined !== Reanimated) {
+      if (0 !== enabledSharedValues.length) {
+        let tmp = runOnJS;
+        const current = runOnJS.current;
+        if (null !== current) {
+          runOnJS = Reanimated.runOnJS;
+          const fn = function o(arg0, arg1, arg2) {
+            const tmp = runOnJS(arg2);
+            const iter = arg0[Symbol.iterator]();
+            const nextResult = iter.next();
+            while (iter !== undefined) {
+              let addListenerResult = nextResult.addListener(arg1, tmp);
+              continue;
+            }
+          };
+          const obj2 = { runOnJS };
+          fn.__closure = obj2;
+          fn.__workletHash = 3030529712101;
+          fn.__initData = __initData;
+          const fn2 = function l(arg0, arg1) {
+            const iter = arg0[Symbol.iterator]();
+            const nextResult = iter.next();
+            while (iter !== undefined) {
+              let removeListenerResult = nextResult.removeListener(arg1);
+              continue;
+            }
+          };
+          fn2.__closure = {};
+          fn2.__workletHash = 3663767498079;
+          fn2.__initData = __initData2;
+          Reanimated.runOnUI(fn)(enabledSharedValues, current, () => {
+            current((arg0) => arg0 + 1);
+          });
+          return () => {
+            Reanimated.runOnUI(fn2)(enabledSharedValues, current);
+          };
+        }
+      }
     }
   }, items);
-  __initData = tmp19;
-  const tmp20 = snapToIndex((arg0) => {
-    if (ref.current) {
-      let str = "auto";
-      const tmp2 = __initData;
-      if (arg0) {
-        str = "none";
+  const items1 = [first, gesture];
+  const tmp8 = closure_4(() => {
+    const obj = maybeExtractNativeEvent;
+    let isGestureEnabledResult = obj.isGestureEnabled(gesture);
+    if (isGestureEnabledResult) {
+      let flag;
+      const tmpResult = maybeExtractNativeEvent;
+      if (tmpResult.isComposedGesture(gesture)) {
+        const gestures = tmp3.gestures;
+        flag = gestures.some(isSupportedGesture);
+      } else {
+        const type = tmp3.type;
+        if (ComposedGestureName.SingleGestureName.Tap !== type) {
+          if (ComposedGestureName.SingleGestureName.LongPress !== type) {
+            if (ComposedGestureName.SingleGestureName.Fling !== type) {
+              if (ComposedGestureName.SingleGestureName.Native !== type) {
+                flag = false;
+              }
+            }
+          }
+        }
+        flag = true;
       }
-      tmp2(str);
+      isGestureEnabledResult = flag;
     }
-  }, []);
-  __initData2 = tmp20;
-  let items1 = [tmp19];
-  const tmp21 = ref(() => {
-    const Gesture = LegacyBaseButton.Gesture;
-    const fn = function n() {
-      const obj = animatedIndex(onPress[4]);
-      obj.runOnJS(handleOnPress)();
-    };
-    const TapResult = Gesture.Tap();
-    let obj = { runOnJS: _mod1656.runOnJS, handleOnPress };
-    fn.__closure = obj;
-    fn.__workletHash = 10704059633145;
-    fn.__initData = __initData;
-    return TapResult.onEnd(fn);
+    return isGestureEnabledResult;
   }, items1);
-  const tmp13Result = animatedIndex(onPress[4]);
-  class P {
-    constructor() {
-      let items;
-      let items1;
-      let obj2;
-      const obj = { opacity: obj2.interpolate(animatedIndex.value, items, items1, _mod1656.Extrapolation.CLAMP) };
-      items = [-1, disappearsOnIndex, appearsOnIndex];
-      items1 = [0, 0, opacity];
-      obj2 = _mod1656;
-      return obj;
+  closure_4 = tmp8;
+  const items2 = [tmp, tmp8];
+  let handleStartShouldSetResponder = closure_4(() => {
+    if (closure_4()) {
+      const obj = _mod6629;
+      const result = obj.updateResponderEventValue(closure_1, true);
     }
+    return false;
+  }, items2);
+  if (null == tmp) {
+    handleStartShouldSetResponder = () => false;
   }
-  let obj2 = { interpolate: tmp13(tmp14[4]).interpolate, animatedIndex, disappearsOnIndex, appearsOnIndex, opacity, Extrapolation: tmp13(tmp14[4]).Extrapolation };
-  P.__closure = obj2;
-  P.__workletHash = 7085425846204;
-  P.__initData = __initData;
-  const items2 = [animatedIndex, appearsOnIndex, disappearsOnIndex, opacity];
-  animatedStyle = tmp13Result.useAnimatedStyle(P, items2);
-  const items3 = [style, animatedStyle];
-  const tmp23 = ref(() => {
-    const items = [react_native.styles.backdrop, style, animatedStyle];
-    return items;
-  }, items3);
-  const tmp13Result2 = animatedIndex(onPress[4]);
-  class H {
-    constructor() {
-      return Math.round(animatedIndex.value) <= disappearsOnIndex;
-    }
-  }
-  H.__closure = { animatedIndex, disappearsOnIndex };
-  H.__workletHash = 17177056692744;
-  H.__initData = __initData2;
-  let fn = function k(arg0, arg1) {
-    if (arg0 !== arg1) {
-      const obj = _mod1656;
-      obj.runOnJS(closure_12)(arg0);
-    }
-  };
-  fn.__closure = { runOnJS: animatedIndex(onPress[4]).runOnJS, handleContainerTouchability: tmp20 };
-  fn.__workletHash = 17426135168622;
-  fn.__initData = animatedStyle;
-  const items4 = [disappearsOnIndex];
-  ({ runOnJS: animatedIndex(onPress[4]).runOnJS, handleContainerTouchability: tmp20 });
-  const animatedReaction = tmp13Result2.useAnimatedReaction(H, fn, items4);
-  close(() => {
-    ref.current = true;
-    return () => {
-      ref.current = false;
-    };
-  }, []);
-  const obj4 = { style: tmp23, pointerEvents: first, accessible: DEFAULT_ACCESSIBLE, accessibilityRole: DEFAULT_ACCESSIBILITY_ROLE, accessibilityLabel: DEFAULT_ACCESSIBILITY_LABEL, accessibilityHint: DEFAULT_ACCESSIBILITY_HINT, children };
-  if (!DEFAULT_ACCESSIBILITY_HINT) {
-    let str2 = "move";
-    if (typeof pressBehavior === "string") {
-      str2 = pressBehavior;
-    }
-    const _HermesInternal = HermesInternal;
-    DEFAULT_ACCESSIBILITY_HINT = "Tap to " + str2 + " the Bottom Sheet";
-  }
-  const tmp26Result = disappearsOnIndex(ViewComponent, obj4);
-  let tmp26Result2 = tmp26Result;
-  if ("none" !== pressBehavior) {
-    const obj5 = { gesture: tmp21, children: tmp26Result };
-    tmp26Result2 = tmp26(tmp13(tmp14[6]).GestureDetector, obj5);
-  }
-  return tmp26Result2;
-});
-memoResult.displayName = "BottomSheetBackdrop";
-
-export const BottomSheetBackdrop = memoResult;
+  return { handleStartShouldSetResponder };
+};

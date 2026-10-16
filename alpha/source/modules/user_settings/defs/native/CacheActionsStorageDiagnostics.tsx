@@ -1,12 +1,12 @@
-// Module ID: 16188
-// Function ID: 16189
+// Module ID: 16554
+// Function ID: 16555
 // Name: CacheActionsStorageDiagnostics
-// Dependencies: [5, 32, 19, 21, 4809, 5046, 16186, 1126, 5377, 5088, 5379, 2]
+// Dependencies: [5, 32, 19, 21, 4868, 5108, 16552, 1128, 5439, 5149, 5441, 2]
 // Exports: default
 
-// Module 16188 (CacheActionsStorageDiagnostics)
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4809 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5046 */;
+// Module 16554 (CacheActionsStorageDiagnostics)
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4868 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5108 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
@@ -144,22 +144,22 @@ export default function CacheActionsStorageDiagnostics(onBusyChange) {
   [tmp2, c1] = tmp;
   dependencyMap = react.useRef(false);
   obj = { children: items };
-  const Stack = onBusyChange(5377).Stack;
-  let obj2 = { variant: "text-sm/normal", color: "text-subtle", children: intl.string(onBusyChange(1126).t.Fzi4HX) };
-  const Text = onBusyChange(5088).Text;
-  intl = onBusyChange(1126).intl;
+  const Stack = onBusyChange(5439).Stack;
+  let obj2 = { variant: "text-sm/normal", color: "text-subtle", children: intl.string(onBusyChange(1128).t.Fzi4HX) };
+  const Text = onBusyChange(5149).Text;
+  intl = onBusyChange(1128).intl;
   items = [closure_6(Text, obj2), ];
   let obj3 = {
     variant: "secondary",
-    text: intl2.string(onBusyChange(1126).t.VSunuT),
+    text: intl2.string(onBusyChange(1128).t.VSunuT),
     loading: tmp2,
     disabled: tmp2,
     onPress: function handleUpload() {
       return obj(...arguments);
     }
   };
-  const Button = onBusyChange(5379).Button;
-  intl2 = onBusyChange(1126).intl;
+  const Button = onBusyChange(5441).Button;
+  intl2 = onBusyChange(1128).intl;
   items[1] = closure_6(Button, obj3);
   return closure_7(Stack, obj);
 };

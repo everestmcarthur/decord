@@ -1,27 +1,27 @@
-// Module ID: 15835
-// Function ID: 15836
+// Module ID: 16201
+// Function ID: 16202
 // Name: GuildRoleSubscriptionListingEditStateUtils
-// Dependencies: [5, 32, 19, 5987, 4743, 15836, 15813, 1085, 1392, 558, 576, 504, 6170, 5644, 15837, 15838, 1103, 4741, 15839, 15820, 15840, 1272, 38, 6098, 6958, 12, 9547, 15841, 1279, 2]
+// Dependencies: [5, 32, 19, 6205, 4802, 16202, 16179, 1087, 1394, 558, 576, 504, 6392, 5862, 16203, 16204, 1105, 4800, 16205, 16186, 16206, 1274, 38, 6322, 7178, 12, 9782, 16207, 1281, 2]
 // Exports: useCreateOrUpdateListingFromEditState
 
-// Module 15835 (GuildRoleSubscriptionListingEditStateUtils)
+// Module 16201 (GuildRoleSubscriptionListingEditStateUtils)
 import react2 from "react" /* 576 */;
-import v1 from "v1" /* 1279 */;
-import PremiumConstants from "PremiumConstants" /* 1392 */;
-import RolePermissionUtils from "RolePermissionUtils" /* 4741 */;
-import StoreUtils from "StoreUtils" /* 5644 */;
-import useInitialValueDefault from "useInitialValue" /* 6170 */;
-import GuildRoleSubscriptionsConstants from "GuildRoleSubscriptionsConstants" /* 15813 */;
-import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 15820 */;
-import useSubscriptionRoleDefault from "useSubscriptionRole" /* 15837 */;
-import useTrialIntervalOptionsDefault from "useTrialIntervalOptions" /* 15840 */;
+import v1 from "v1" /* 1281 */;
+import PremiumConstants from "PremiumConstants" /* 1394 */;
+import RolePermissionUtils from "RolePermissionUtils" /* 4800 */;
+import StoreUtils from "StoreUtils" /* 5862 */;
+import useInitialValueDefault from "useInitialValue" /* 6392 */;
+import GuildRoleSubscriptionsConstants from "GuildRoleSubscriptionsConstants" /* 16179 */;
+import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 16186 */;
+import useSubscriptionRoleDefault from "useSubscriptionRole" /* 16203 */;
+import useTrialIntervalOptionsDefault from "useTrialIntervalOptions" /* 16206 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import EmojiStore from "EmojiStore" /* 5987 */;
-import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4743 */;
-import GuildRoleSubscriptionEditStore from "GuildRoleSubscriptionEditStore" /* 15836 */;
-import Constants from "Constants" /* 1085 */;
+import EmojiStore from "EmojiStore" /* 6205 */;
+import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4802 */;
+import GuildRoleSubscriptionEditStore from "GuildRoleSubscriptionEditStore" /* 16202 */;
+import Constants from "Constants" /* 1087 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -33,10 +33,10 @@ let c9;
 let closure_12;
 let map1;
 let tmp;
-const utils_ColorUtils = tmp(1103);
-const Contants = tmp(15838);
-const f123277 = (id) => id.id;
-const f147877 = () => {
+const utils_ColorUtils = tmp(1105);
+const Contants = tmp(16204);
+const f124723 = (id) => id.id;
+const f149288 = () => {
   state.setState((listings) => {
     let obj2;
     obj = { listings: obj2 };
@@ -58,14 +58,14 @@ function getRoleEmojis(arr, arg1) {
     const _Set = Set;
     const self = this;
     const self2 = this;
-    set = new Set(found.map(f123277));
+    set = new Set(found.map(f124723));
     return set;
   }
 }
 function clearEditState(NEW_LISTING_EDIT_STATE_ID) {
   _require = NEW_LISTING_EDIT_STATE_ID;
   obj = require("react-native");
-  obj.batchUpdates(f147877);
+  obj.batchUpdates(f149288);
 }
 let obj = function _updateListingPeripheralsFromEditState() {
   obj = _asyncToGenerator(async (arg0, value) => {
@@ -135,7 +135,7 @@ let obj = function _updateListingPeripheralsFromEditState() {
             closure_16 = undefined;
             c3 = 1;
             c4 = 1;
-            return { value: "Set", done: true };
+            return { value: "test", done: true };
           }
         } else {
           if (1 === tmp5) {
@@ -353,7 +353,7 @@ obj = function _createListingFromEditState() {
               analyticsContext = undefined;
               c6 = 1;
               c7 = 1;
-              return { value: "Set", done: true };
+              return { value: "test", done: true };
             }
           } else {
             if (1 === c6) {
@@ -591,7 +591,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useClearEdit
       return () => {
         closure_0 = closure_1_0;
         obj = closure_0(dependencyMap[21]);
-        obj.batchUpdates(f147877);
+        obj.batchUpdates(f149288);
       };
     };
     const items = [arg0];
@@ -612,7 +612,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useClearEdit
     let state;
     closure_0 = closure_1_0;
     obj = closure_0(dependencyMap[21]);
-    obj.batchUpdates(f147877);
+    obj.batchUpdates(f149288);
   }, items);
 });
 ReactCompilerGating = ReactCompilerGating_mod;
@@ -1207,7 +1207,7 @@ const tmp18 = ReactCompilerGating.isReactCompilerEnabled() ? (function useTierEm
       const _Set = Set;
       const self = this;
       const self2 = this;
-      set = new Set(found.map(f123277));
+      set = new Set(found.map(f124723));
     }
     cResult[4] = stateFromStoresArray;
     cResult[5] = tmp4.id;
@@ -1240,7 +1240,7 @@ const tmp18 = ReactCompilerGating.isReactCompilerEnabled() ? (function useTierEm
         const _Set = Set;
         const self = this;
         const self2 = this;
-        set = new Set(found.map(f123277));
+        set = new Set(found.map(f124723));
       }
     }
     return set;
@@ -1538,7 +1538,7 @@ const tmp24 = ReactCompilerGating.isReactCompilerEnabled() ? (function useEditSt
   } else {
     tmp4 = cResult[1];
   }
-  const tmpResult = tmp(15820);
+  const tmpResult = tmp(16186);
   const subscriptionListingsForGroup = tmpResult.useSubscriptionListingsForGroup(arg0, tmp4);
   if (cResult[2] !== arg1) {
     const fn = function s(arg0) {
@@ -1947,7 +1947,7 @@ export const useCreateOrUpdateListingFromEditState = function useCreateOrUpdateL
               id = undefined;
               c5 = 1;
               c6 = 1;
-              return { value: "Set", done: true };
+              return { value: "test", done: true };
             }
           } else if (1 === c5) {
             if (arg0 === 1) {

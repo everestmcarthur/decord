@@ -1,41 +1,41 @@
-// Module ID: 13571
-// Function ID: 13572
+// Module ID: 13937
+// Function ID: 13938
 // Name: UserProfileOverflowMenu
-// Dependencies: [32, 19, 17, 6036, 2065, 4760, 2116, 6905, 1085, 5115, 10415, 21, 504, 13572, 13578, 13579, 8315, 6852, 6879, 8311, 8341, 8342, 13580, 13581, 13582, 7027, 6885, 8304, 1126, 7015, 5056, 5934, 13588, 2000, 7018, 10417, 1273, 7026, 10416, 13589, 13589, 7722, 1382, 12873, 1265, 7017, 2041, 6886, 4962, 4808, 2029, 8611, 9247, 11625, 6892, 13590, 4850, 9363, 13586, 7574, 9242, 587, 13591, 2]
+// Dependencies: [32, 19, 17, 6254, 2068, 4819, 2119, 7126, 1087, 5176, 10663, 21, 504, 13938, 13944, 13945, 8541, 7075, 7100, 8537, 8567, 8568, 13946, 13947, 13948, 7248, 7106, 8530, 1128, 7236, 5118, 6152, 13954, 2002, 7239, 10665, 1275, 7247, 10664, 13955, 13955, 7941, 1384, 13230, 1267, 7238, 2044, 7107, 5021, 4867, 2032, 7261, 9483, 11884, 7113, 13956, 4909, 9599, 13952, 7793, 9478, 587, 13957, 2]
 // Exports: default
 
-// Module 13571 (UserProfileOverflowMenu)
+// Module 13937 (UserProfileOverflowMenu)
 import react_native from "react-native" /* 17 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import asyncRequire from "asyncRequire" /* 2000 */;
-import ToastUtils from "ToastUtils" /* 4808 */;
-import UserUtilsDefault from "UserUtils" /* 4962 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
-import CallConstants from "CallConstants" /* 5115 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5934 */;
-import ClipboardUtils from "ClipboardUtils" /* 6886 */;
-import Constants2 from "Constants" /* 6905 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7015 */;
-import CallActionCreatorsDefault from "CallActionCreators" /* 7017 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7018 */;
-import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 7026 */;
-import ReportModals from "ReportModals" /* 7722 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8304 */;
-import getApplicationInstallURL2 from "getApplicationInstallURL" /* 11625 */;
-import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12873 */;
-import GuildInviteUtils from "GuildInviteUtils" /* 13572 */;
-import openShopThisLookActionSheet from "openShopThisLookActionSheet" /* 13582 */;
-import ShopThisLookAnalyticsUtils from "ShopThisLookAnalyticsUtils" /* 13586 */;
-import BotReportChooser from "BotReportChooser" /* 13589 */;
-import openUserContextMenuCommandsDefault from "openUserContextMenuCommands" /* 13590 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
+import asyncRequire from "asyncRequire" /* 2002 */;
+import ToastUtils from "ToastUtils" /* 4867 */;
+import UserUtilsDefault from "UserUtils" /* 5021 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5118 */;
+import CallConstants from "CallConstants" /* 5176 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6152 */;
+import ClipboardUtils from "ClipboardUtils" /* 7107 */;
+import Constants2 from "Constants" /* 7126 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7236 */;
+import CallActionCreatorsDefault from "CallActionCreators" /* 7238 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7239 */;
+import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 7247 */;
+import ReportModals from "ReportModals" /* 7941 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8530 */;
+import getApplicationInstallURL2 from "getApplicationInstallURL" /* 11884 */;
+import UserProfileAlertUtils from "UserProfileAlertUtils" /* 13230 */;
+import GuildInviteUtils from "GuildInviteUtils" /* 13938 */;
+import openShopThisLookActionSheet from "openShopThisLookActionSheet" /* 13948 */;
+import ShopThisLookAnalyticsUtils from "ShopThisLookAnalyticsUtils" /* 13952 */;
+import BotReportChooser from "BotReportChooser" /* 13955 */;
+import openUserContextMenuCommandsDefault from "openUserContextMenuCommands" /* 13956 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6036 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import RelationshipStore from "RelationshipStore" /* 4760 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
-import Constants from "Constants" /* 1085 */;
-import RestrictionConfirmationConstants from "RestrictionConfirmationConstants" /* 10415 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6254 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import RelationshipStore from "RelationshipStore" /* 4819 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2119 */;
+import Constants from "Constants" /* 1087 */;
+import RestrictionConfirmationConstants from "RestrictionConfirmationConstants" /* 10663 */;
 import Fragment from "Fragment" /* 21 */;
 import size from "module_2" /* 2 */;
 
@@ -49,7 +49,7 @@ let closure_20;
 let map1;
 let tmp3;
 let unpackModuleId;
-const discord_common_AnalyticsUtils = tmp3(1273);
+const discord_common_AnalyticsUtils = tmp3(1275);
 let View = react_native.View;
 const UserProfileThemeTypes = Constants2.UserProfileThemeTypes;
 ({ AnalyticEvents: unpackModuleId, AVATAR_MAX_SIZE: closure_12, ChannelTypesSets: map1, NOOP: closure_14, RelationshipTypes: closure_15 } = Constants);
@@ -298,7 +298,7 @@ export default function UserProfileOverflowMenu(user) {
               trackUserProfileAction(obj);
               const obj2 = ModalActionCreatorsDefault;
               const obj3 = { userId: id2, showUserProfile };
-              obj2.pushLazy(asyncRequire(13588, dependencyMap.paths), obj3);
+              obj2.pushLazy(asyncRequire(13954, dependencyMap.paths), obj3);
               const obj4 = ActionSheetActionCreatorsDefault;
               obj4.hideActionSheet();
             }
@@ -358,7 +358,7 @@ export default function UserProfileOverflowMenu(user) {
                   unblockUser(id2, obj2, id);
                   showUserProfile();
                   let id1;
-                  const showUnblockSuccessToast = tmp2(7026).showUnblockSuccessToast;
+                  const showUnblockSuccessToast = tmp2(7247).showUnblockSuccessToast;
                   SafetyToastsActionCreatorsDefault;
                   if (channel != null) {
                     id1 = tmp6.id;
@@ -391,8 +391,8 @@ export default function UserProfileOverflowMenu(user) {
                     impressionName: discord_common_AnalyticsUtils.ImpressionNames.BLOCK_USER_CONFIRMATION
                   };
                   id = undefined;
-                  const tmp4 = asyncRequire(10416, dependencyMap.paths);
-                  const tmp5 = closure_17;
+                  const tmp4 = asyncRequire(10664, dependencyMap.paths);
+                  const tmp5 = trackedExposureExperiments;
                   if (channel != null) {
                     id = channel.id;
                   }
@@ -416,7 +416,7 @@ export default function UserProfileOverflowMenu(user) {
                       trackUserProfileAction(obj);
                       if (user.bot) {
                         const openLazy = ActionSheetActionCreatorsDefault.openLazy;
-                        const tmp19 = asyncRequire(13589, dependencyMap.paths);
+                        const tmp19 = asyncRequire(13955, dependencyMap.paths);
                         const BOT_REPORT_CHOOSER_KEY = BotReportChooser.BOT_REPORT_CHOOSER_KEY;
                         const obj4 = { user, entrypoint: "UserProfileOverflowMenu", contextualGuildId: tmp3, contextualChannelId: id };
                         id = undefined;
@@ -494,7 +494,7 @@ export default function UserProfileOverflowMenu(user) {
                 impressionName: discord_common_AnalyticsUtils.ImpressionNames.IGNORE_USER_CONFIRMATION
               };
               id = undefined;
-              const tmp4 = asyncRequire(10417, dependencyMap.paths);
+              const tmp4 = asyncRequire(10665, dependencyMap.paths);
               const tmp5 = authStore5;
               if (channel != null) {
                 id = channel.id;

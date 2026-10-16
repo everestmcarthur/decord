@@ -1,11 +1,11 @@
-// Module ID: 12288
-// Function ID: 12289
+// Module ID: 12582
+// Function ID: 12583
 // Name: useAgeSpecificText
-// Dependencies: [558, 7740, 2]
+// Dependencies: [558, 7959, 2]
 // Exports: useAgeSpecificText
 
-// Module 12288 (useAgeSpecificText)
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 7740 */;
+// Module 12582 (useAgeSpecificText)
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 7959 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

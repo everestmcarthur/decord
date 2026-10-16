@@ -1,30 +1,30 @@
-// Module ID: 18586
-// Function ID: 18587
+// Module ID: 18903
+// Function ID: 18904
 // Name: GuildRoleSubscriptionBenefitPreview
-// Dependencies: [19, 17, 15813, 21, 5092, 558, 576, 15848, 1200, 11018, 5088, 4764, 15841, 5421, 8159, 1126, 2]
+// Dependencies: [19, 17, 16179, 21, 5153, 558, 576, 16214, 1202, 11336, 5149, 4823, 16207, 5483, 8384, 1128, 2]
 
-// Module 18586 (GuildRoleSubscriptionBenefitPreview)
+// Module 18903 (GuildRoleSubscriptionBenefitPreview)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
-import intl2 from "intl" /* 1126 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4764 */;
-import useChannelNameDefault from "useChannelName" /* 5421 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8159 */;
-import AssetRegistryDefault from "AssetRegistry" /* 11018 */;
-import GuildRoleSubscriptionsConstants from "GuildRoleSubscriptionsConstants" /* 15813 */;
-import GuildRoleSubscriptionTierTemplatesUtils from "GuildRoleSubscriptionTierTemplatesUtils" /* 15841 */;
-import EmojiIconDefault from "EmojiIcon" /* 15848 */;
+import intl2 from "intl" /* 1128 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4823 */;
+import useChannelNameDefault from "useChannelName" /* 5483 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8384 */;
+import AssetRegistryDefault from "AssetRegistry" /* 11336 */;
+import GuildRoleSubscriptionsConstants from "GuildRoleSubscriptionsConstants" /* 16179 */;
+import GuildRoleSubscriptionTierTemplatesUtils from "GuildRoleSubscriptionTierTemplatesUtils" /* 16207 */;
+import EmojiIconDefault from "EmojiIcon" /* 16214 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 5092 */;
+import createStyles from "createStyles" /* 5153 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 let hasOwnProperty;
 let metroRequire;
 let tmp;
-const native = tmp(1200);
-const Text_Text = tmp(5088);
+const native = tmp(1202);
+const Text_Text = tmp(5149);
 const View = react_native.View;
 const constants = GuildRoleSubscriptionsConstants.GuildRoleSubscriptionBenefitTypes;
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = Fragment);
@@ -279,8 +279,8 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
     const _Symbol = Symbol;
     if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
       const obj3 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: "[" + intl.string(intl2.t.bz1PZX) + "]" };
-      const Text = tmp(5088).Text;
-      intl = tmp(1126).intl;
+      const Text = tmp(5149).Text;
+      intl = tmp(1128).intl;
       const _HermesInternal = HermesInternal;
       const tmp26 = hasOwnProperty(Text, obj3);
       cResult[2] = tmp26;
@@ -340,7 +340,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
       tmp15 = tmp18;
     }
     const obj7 = { style: tmp4.channelIcon, size: native.Icon.Sizes.CUSTOM, source: tmp7 };
-    const Icon = tmp(1200).Icon;
+    const Icon = tmp(1202).Icon;
     const tmp11 = hasOwnProperty(Icon, obj7);
     cResult[3] = tmp7;
     cResult[4] = tmp4.channelIcon;
@@ -368,15 +368,15 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
   }
   if (null == channelWithTemplateFallback) {
     const obj2 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: "[" + intl.string(intl2.t.bz1PZX) + "]" };
-    const Text = tmp2(5088).Text;
-    intl = tmp2(1126).intl;
+    const Text = tmp2(5149).Text;
+    intl = tmp2(1128).intl;
     const _HermesInternal = HermesInternal;
     tmp9 = hasOwnProperty(Text, obj2);
   } else {
     const obj3 = { benefit, guildId, isInteractive, children: metroRequire(View, obj4) };
     obj4 = { style: tmp.channelRow, children: items };
     const obj5 = { style: tmp.channelIcon, size: native.Icon.Sizes.CUSTOM, source: channelIcon };
-    const Icon = tmp2(1200).Icon;
+    const Icon = tmp2(1202).Icon;
     items = [hasOwnProperty(Icon, obj5), ];
     const obj6 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: tmp5 };
     items[1] = hasOwnProperty(Text_Text.Text, obj6);

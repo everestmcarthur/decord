@@ -1,21 +1,23 @@
-// Module ID: 15124
-// Function ID: 15125
+// Module ID: 15494
+// Function ID: 15495
 // Name: FramesManager
-// Dependencies: [10807, 1085, 6808, 15048, 10821, 8611, 15125, 1265, 2]
+// Dependencies: [2072, 10950, 1087, 7030, 15417, 10963, 7261, 15495, 1267, 2]
 
-// Module 15124 (FramesManager)
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8611 */;
-import leaveFrame from "leaveFrame" /* 10821 */;
-import ActivitySessionAnalytics from "ActivitySessionAnalytics" /* 15048 */;
-import isPostMessageDisconnectDefault from "isPostMessageDisconnect" /* 15125 */;
-import FramesStore from "FramesStore" /* 10807 */;
-import Constants from "Constants" /* 1085 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6808 */;
+// Module 15494 (FramesManager)
+import ChannelRecord from "ChannelRecord" /* 2072 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 7261 */;
+import leaveFrame from "leaveFrame" /* 10963 */;
+import ActivitySessionAnalytics from "ActivitySessionAnalytics" /* 15417 */;
+import isPostMessageDisconnectDefault from "isPostMessageDisconnect" /* 15495 */;
+import FramesStore from "FramesStore" /* 10950 */;
+import Constants from "Constants" /* 1087 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7030 */;
 import size from "module_2" /* 2 */;
 
-let closure_4;
 let hasOwnProperty;
-({ AnalyticEvents: closure_4, RPCCloseCodes: hasOwnProperty } = Constants);
+let metroRequire;
+const isPrivate = ChannelRecord.isPrivate;
+({ AnalyticEvents: hasOwnProperty, RPCCloseCodes: metroRequire } = Constants);
 class FramesManager extends AutomaticLifecycleManager {
   constructor() {
     const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
@@ -65,13 +67,13 @@ class FramesManager extends AutomaticLifecycleManager {
             let tmp7 = dependencyMap;
             let tmp8 = item10014.surface.type !== EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN;
             if (tmp8) {
-              tmp8 = tmp5.surface.type !== tmp6(tmp7[5]).EmbeddedSurfaceType.OVERLAY;
+              tmp8 = tmp5.surface.type !== tmp6(tmp7[6]).EmbeddedSurfaceType.OVERLAY;
             }
             if (tmp8) {
               tmp8 = tmp5.surface.guildId === guild.id;
             }
             if (tmp8) {
-              let tmp6Result = tmp6(tmp7[4]);
+              let tmp6Result = tmp6(tmp7[5]);
               let leaveFrameResult = tmp6Result.leaveFrame(tmp5.id);
             }
             continue;
@@ -82,13 +84,22 @@ class FramesManager extends AutomaticLifecycleManager {
         channels = channels.channels;
         for (const item10008 of channels) {
           let tmp = item10008;
-          let framesForChannel = FramesStore.getFramesForChannel(item10008.id);
-          for (const item10018 of framesForChannel) {
-            if (item10018.applicationId !== tmp.application_id) {
-              let obj = leaveFrame;
-              let leaveFrameResult = obj.leaveFrame(tmp6.id);
+          if (!isPrivate(item10008.type)) {
+            let framesForChannel = FramesStore.getFramesForChannel(tmp.id);
+            for (const item10022 of framesForChannel) {
+              let tmp8 = item10022;
+              let tmp9 = require;
+              let tmp10 = dependencyMap;
+              let tmp11 = item10022.surface.type !== EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN;
+              if (tmp11) {
+                tmp11 = tmp8.applicationId !== tmp.application_id;
+              }
+              if (tmp11) {
+                let tmp9Result = tmp9(tmp10[5]);
+                let leaveFrameResult = tmp9Result.leaveFrame(tmp8.id);
+              }
+              continue;
             }
-            continue;
           }
           continue;
         }
@@ -118,11 +129,11 @@ class FramesManager extends AutomaticLifecycleManager {
           if (null != frameByEmbeddedContext) {
             const obj3 = leaveFrame;
             obj3.leaveFrame(frameByEmbeddedContext.id);
-            if (reason.code !== hasOwnProperty.CLOSE_NORMAL) {
+            if (reason.code !== metroRequire.CLOSE_NORMAL) {
               const obj = { rpc_close_code: null, rpc_message: null, application_id: frameByEmbeddedContext.applicationId };
               ({ code: obj2.rpc_close_code, message: obj2.rpc_message } = reason);
-              const tmp7Result = tmp7(1265);
-              tmp7Result.track(constants.ACTIVITY_CLOSED_RPC_ERROR, obj);
+              const tmp7Result = tmp7(1267);
+              tmp7Result.track(hasOwnProperty.ACTIVITY_CLOSED_RPC_ERROR, obj);
               const result = require.showRPCDisconnectErrorUI(reason);
             }
           }

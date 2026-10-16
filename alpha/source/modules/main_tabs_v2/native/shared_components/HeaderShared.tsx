@@ -1,27 +1,27 @@
-// Module ID: 9298
-// Function ID: 9299
+// Module ID: 9534
+// Function ID: 9535
 // Name: HeaderShared
-// Dependencies: [109, 19, 17, 9299, 21, 5092, 587, 5088, 558, 576, 4818, 6202, 6210, 9300, 1382, 9305, 1631, 1504, 9307, 6667, 568, 9310, 13346, 1200, 6185, 2]
+// Dependencies: [109, 19, 17, 9535, 21, 5153, 587, 5149, 558, 576, 4877, 6424, 6432, 9536, 1384, 9541, 1633, 1506, 9543, 6889, 568, 9546, 13707, 1202, 6407, 2]
 // Exports: getDefaultChannelStackHeaderProps, getDefaultStackHeaderProps, getRenderBackImage, getRenderHeaderTextButton, getRenderModalBackImage, getRenderModalCloseImage, renderHeader
 
-// Module 9298 (HeaderShared)
+// Module 9534 (HeaderShared)
 import shallowEqualDefault from "shallowEqual" /* 568 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1200 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
-import useToken2 from "useToken" /* 4818 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import Pressables from "Pressables" /* 6185 */;
-import react_native from "react-native" /* 9299 */;
-import PressableNavigatorModalIconDefault from "PressableNavigatorModalIcon" /* 9305 */;
-import ChannelActionsDefault from "ChannelActions" /* 9310 */;
-import ChannelHeaderDefault from "ChannelHeader" /* 13346 */;
+import native from "native" /* 1202 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
+import useToken2 from "useToken" /* 4877 */;
+import Text_Text from "Text/Text" /* 5149 */;
+import Pressables from "Pressables" /* 6407 */;
+import react_native from "react-native" /* 9535 */;
+import PressableNavigatorModalIconDefault from "PressableNavigatorModalIcon" /* 9541 */;
+import ChannelActionsDefault from "ChannelActions" /* 9546 */;
+import ChannelHeaderDefault from "ChannelHeader" /* 13707 */;
 import _objectWithoutProperties_mod from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import react_native2 from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 5092 */;
+import createStyles_mod from "createStyles" /* 5153 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -38,8 +38,8 @@ let obj4;
 let obj5;
 let tmp;
 let tmp6;
-const HeaderDebugOverlayDefault = tmp6(6202);
-const _mod6210 = tmp(6210);
+const HeaderDebugOverlayDefault = tmp6(6424);
+const _mod6432 = tmp(6432);
 function renderGenericTitle(children) {
   const obj = { title: children.children };
   return React4(closure_12, obj);
@@ -278,7 +278,7 @@ tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function GenericHeaderTit
   }
   const tmp6 = closure_11();
   closure_5 = tmp6;
-  const tmp7 = tmp5(6202)("os-drawn");
+  const tmp7 = tmp5(6424)("os-drawn");
   if (null == subtitle) {
     let renderTitleContainerResult;
     if (null == tmp7) {
@@ -343,7 +343,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function HeaderTextBu
     }
     const obj3 = { labelStyle: tmp10, displayMode: "default", backImage: tmp12, truncatedLabel: null, accessibilityLabel: null };
     ({ label: obj2.truncatedLabel, label: obj2.accessibilityLabel } = tmp5);
-    const HeaderBackButton = _mod6210.HeaderBackButton;
+    const HeaderBackButton = _mod6432.HeaderBackButton;
     const merged = Object.assign(tmp5);
     const tmp18 = React4(HeaderBackButton, obj3);
     cResult[7] = tmp5;
@@ -371,7 +371,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function HeaderTextBu
   };
   items = [closure_11().backButtonLabel, labelStyle];
   closure_11();
-  const HeaderBackButton = _mod6210.HeaderBackButton;
+  const HeaderBackButton = _mod6432.HeaderBackButton;
   const merged1 = Object.assign(merged);
   return React4(HeaderBackButton, obj);
 });
@@ -405,9 +405,9 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fu
       return closure_2_9(PressableNavigatorBackIcon, obj);
     };
   }
-  const tmpResult = navigation(1504);
+  const tmpResult = navigation(1506);
   const text = tmpResult.useTheme().colors.text;
-  const tmpResult2 = navigation(9307);
+  const tmpResult2 = navigation(9543);
   const gradientTop = tmpResult2.useGradientTop();
   const sum = num + MIN_HEADER_HEIGHT;
   if (cResult[0] === num) {

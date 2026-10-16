@@ -1,34 +1,34 @@
-// Module ID: 13936
-// Function ID: 13937
+// Module ID: 14302
+// Function ID: 14303
 // Name: VoiceMemberList
-// Dependencies: [32, 109, 5, 19, 17, 2064, 1404, 5897, 4750, 1390, 5116, 1085, 1204, 6841, 1096, 21, 5092, 558, 576, 13932, 11016, 504, 13937, 1126, 10332, 8580, 10748, 8683, 5088, 9539, 6852, 1894, 5889, 10822, 7482, 13938, 13939, 1497, 13946, 4976, 12, 5056, 8304, 13947, 6761, 4827, 2]
+// Dependencies: [32, 109, 5, 19, 17, 2067, 1406, 6115, 4809, 1392, 5177, 1087, 1206, 7064, 1098, 21, 5153, 558, 576, 14298, 11334, 504, 14303, 1128, 10580, 8808, 11086, 8908, 5149, 9774, 7075, 1896, 6107, 11142, 7701, 14304, 14305, 1499, 14312, 5035, 12, 5118, 8530, 14313, 6983, 4886, 2]
 
-// Module 13936 (VoiceMemberList)
+// Module 14302 (VoiceMemberList)
 import react2 from "react" /* 576 */;
-import Constants2 from "Constants" /* 1096 */;
-import FormConstants from "FormConstants" /* 1204 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
-import ActionSheetConstants from "ActionSheetConstants" /* 6841 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8304 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8683 */;
-import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 10748 */;
-import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 11016 */;
-import GuildEventVoiceBannerDefault from "GuildEventVoiceBanner" /* 13932 */;
-import VoiceMemberUser from "VoiceMemberUser" /* 13939 */;
+import Constants2 from "Constants" /* 1098 */;
+import FormConstants from "FormConstants" /* 1206 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5118 */;
+import ActionSheetConstants from "ActionSheetConstants" /* 7064 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8530 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8908 */;
+import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11086 */;
+import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 11334 */;
+import GuildEventVoiceBannerDefault from "GuildEventVoiceBanner" /* 14298 */;
+import VoiceMemberUser from "VoiceMemberUser" /* 14305 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
-import UserRecord from "UserRecord" /* 1404 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 5897 */;
-import PermissionStore from "PermissionStore" /* 4750 */;
-import UserStore from "UserStore" /* 1390 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5116 */;
-import Constants from "Constants" /* 1085 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2067 */;
+import UserRecord from "UserRecord" /* 1406 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6115 */;
+import PermissionStore from "PermissionStore" /* 4809 */;
+import UserStore from "UserStore" /* 1392 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5177 */;
+import Constants from "Constants" /* 1087 */;
 import Fragment_mod from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 5092 */;
+import createStyles from "createStyles" /* 5153 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -46,15 +46,15 @@ let closure_24;
 let closure_25;
 let tmp;
 let tmp4;
-const Text_Text = tmp(5088);
-const Form = tmp(8580);
-const AssetRegistryDefault = tmp4(10332);
+const Text_Text = tmp(5149);
+const Form = tmp(8808);
+const AssetRegistryDefault = tmp4(10580);
 function renderSectionHeader(section) {
   const title = section.section.title;
   let tmp = null;
   if (null != title) {
     const obj = { title };
-    tmp = closure_23(closure_30, obj);
+    tmp = isAppBarToggleOpen(closure_30, obj);
   }
   return tmp;
 }
@@ -90,7 +90,7 @@ let closure_27 = memo(ReactCompilerGating.isReactCompilerEnabled() ? (function H
   channel = channel.channel;
   if (cResult[0] !== channel) {
     const obj2 = { channel };
-    const tmp6 = closure_23(GuildEventVoiceBannerDefault, obj2);
+    const tmp6 = isAppBarToggleOpen(GuildEventVoiceBannerDefault, obj2);
     cResult[0] = channel;
     cResult[1] = tmp6;
     tmp3 = tmp6;
@@ -99,7 +99,7 @@ let closure_27 = memo(ReactCompilerGating.isReactCompilerEnabled() ? (function H
   }
   return tmp3;
 }) : (function Header(channel) {
-  return closure_23(GuildEventVoiceBannerDefault, { channel: channel.channel });
+  return isAppBarToggleOpen(GuildEventVoiceBannerDefault, { channel: channel.channel });
 }));
 const memo2 = react.memo;
 ReactCompilerGating = ReactCompilerGating_mod;
@@ -147,12 +147,12 @@ let closure_28 = memo2(ReactCompilerGating.isReactCompilerEnabled() ? (function 
       }
       const _Symbol2 = Symbol;
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-        let obj2 = { accessibilityLabel: intl.string(tmp(1126).t["6Qgrev"]), accessibilityHidden: true, source: AssetRegistryDefault, size: tmp(13937).CircularIconButton.Sizes.MEDIUM_32 };
-        const CircularIconButton = tmp(13937).CircularIconButton;
-        intl = tmp(1126).intl;
+        let obj2 = { accessibilityLabel: intl.string(tmp(1128).t["6Qgrev"]), accessibilityHidden: true, source: AssetRegistryDefault, size: tmp(14303).CircularIconButton.Sizes.MEDIUM_32 };
+        const CircularIconButton = tmp(14303).CircularIconButton;
+        intl = tmp(1128).intl;
         const tmp20 = closure_23(CircularIconButton, obj2);
-        const intl2 = tmp(1126).intl;
-        const stringResult = intl2.string(tmp(1126).t["6Qgrev"]);
+        const intl2 = tmp(1128).intl;
+        const stringResult = intl2.string(tmp(1128).t["6Qgrev"]);
         cResult[5] = tmp20;
         cResult[6] = stringResult;
         tmp18 = stringResult;
@@ -178,7 +178,7 @@ let closure_28 = memo2(ReactCompilerGating.isReactCompilerEnabled() ? (function 
                   }
                 }
         };
-        items2[1] = closure_23(tmp(8580).FormRow, obj4);
+        items2[1] = closure_23(tmp(8808).FormRow, obj4);
         const tmp26 = closure_24(Fragment, obj3);
         cResult[7] = channel;
         cResult[8] = tmp26;
@@ -210,7 +210,7 @@ let closure_28 = memo2(ReactCompilerGating.isReactCompilerEnabled() ? (function 
       items = [closure_23(closure_29, {}), ];
       let obj2 = {
         leading: closure_23(CircularIconButton, obj3),
-        label: intl2.string(tmp4(1126).t["6Qgrev"]),
+        label: intl2.string(tmp4(1128).t["6Qgrev"]),
         onPress() {
               if (channel.isPrivate()) {
                 openGroupDMAddMembersDefault(channel.id, constants.CHANNEL_CALL);
@@ -221,11 +221,11 @@ let closure_28 = memo2(ReactCompilerGating.isReactCompilerEnabled() ? (function 
               }
             }
       };
-      const FormRow = tmp4(8580).FormRow;
-      obj3 = { accessibilityLabel: intl.string(channel(1126).t["6Qgrev"]), accessibilityHidden: true, source: AssetRegistryDefault, size: channel(13937).CircularIconButton.Sizes.MEDIUM_32 };
-      CircularIconButton = tmp4(13937).CircularIconButton;
-      intl = tmp4(1126).intl;
-      intl2 = tmp4(1126).intl;
+      const FormRow = tmp4(8808).FormRow;
+      obj3 = { accessibilityLabel: intl.string(channel(1128).t["6Qgrev"]), accessibilityHidden: true, source: AssetRegistryDefault, size: channel(14303).CircularIconButton.Sizes.MEDIUM_32 };
+      CircularIconButton = tmp4(14303).CircularIconButton;
+      intl = tmp4(1128).intl;
+      intl2 = tmp4(1128).intl;
       items[1] = closure_23(FormRow, obj2);
       tmp7 = closure_24(Fragment, obj);
     }
@@ -240,7 +240,7 @@ const ItemSeparatorComponent = ReactCompilerGating.isReactCompilerEnabled() ? (f
   const tmp4 = closure_26();
   if (cResult[0] !== tmp4.rowFormDivider) {
     const obj2 = { style: tmp4.rowFormDivider };
-    const tmp7 = closure_23(Form.FormDivider, obj2);
+    const tmp7 = isAppBarToggleOpen(Form.FormDivider, obj2);
     cResult[0] = tmp4.rowFormDivider;
     cResult[1] = tmp7;
     tmp5 = tmp7;
@@ -250,7 +250,7 @@ const ItemSeparatorComponent = ReactCompilerGating.isReactCompilerEnabled() ? (f
   return tmp5;
 }) : (function ItemSeparator() {
   const obj = { style: closure_26().rowFormDivider };
-  return closure_23(Form.FormDivider, obj);
+  return isAppBarToggleOpen(Form.FormDivider, obj);
 });
 ReactCompilerGating = ReactCompilerGating_mod;
 let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceMemberListSectionHeader(title) {
@@ -282,13 +282,13 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceM
       return tmp9;
     }
     const obj2 = { style: sectionContainer, children: tmp7 };
-    const tmp12 = closure_23(authStore, obj2);
+    const tmp12 = isAppBarToggleOpen(authStore, obj2);
     cResult[5] = tmp4.sectionContainer;
     cResult[6] = tmp7;
     cResult[7] = tmp12;
     tmp9 = tmp12;
   }
-  const tmp8 = closure_23(Text_Text.Text, { style: sectionTitle, variant: "text-xs/bold", color: "text-default", children: tmp5 });
+  const tmp8 = isAppBarToggleOpen(Text_Text.Text, { style: sectionTitle, variant: "text-xs/bold", color: "text-default", children: tmp5 });
   cResult[2] = tmp4.sectionTitle;
   cResult[3] = tmp5;
   cResult[4] = tmp8;
@@ -298,10 +298,10 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceM
   let obj2;
   const str = title.title;
   const tmp = closure_26();
-  const obj = { style: tmp.sectionContainer, children: closure_23(Text, obj2) };
+  const obj = { style: tmp.sectionContainer, children: isAppBarToggleOpen(Text, obj2) };
   obj2 = { style: tmp.sectionTitle, variant: "text-xs/bold", color: "text-default", children: str.toUpperCase() };
   Text = Text_Text.Text;
-  return closure_23(authStore, obj);
+  return isAppBarToggleOpen(authStore, obj);
 });
 const constants4 = { VOICE: 0, [0]: "VOICE", SPECTATING: 1, [1]: "SPECTATING", DISCONNECTED: 2, [2]: "DISCONNECTED" };
 ReactCompilerGating = ReactCompilerGating_mod;
@@ -314,10 +314,10 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceS
   let obj = isActionSheet(576);
   const cResult = obj.c(13);
   ({ item, channelId, onPressUser, isActionSheet } = arg0);
-  const obj2 = isActionSheet(9539);
+  const obj2 = isActionSheet(9774);
   const analyticsContext = obj2.useAnalyticsContext();
   const tmp4 = analyticsContext;
-  let analyticsLocations = analyticsContext(6852)().analyticsLocations;
+  let analyticsLocations = analyticsContext(7075)().analyticsLocations;
   const tmp5 = undefined !== item.url && undefined !== item.applicationId;
   if (tmp5) {
     if (cResult[0] === analyticsContext) {
@@ -338,7 +338,7 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceS
           }
         }
         let obj3 = { embeddedActivity: item, channelId, onItemPress: tmp13, isActionSheet };
-        const tmp17 = closure_23(tmp4(13938), obj3);
+        const tmp17 = closure_23(tmp4(14304), obj3);
         cResult[4] = channelId;
         cResult[5] = isActionSheet;
         cResult[6] = tmp13;
@@ -431,7 +431,7 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceS
       }
     }
     let obj4 = { onPress: onPressUser, isActionSheet };
-    const tmp4Result = tmp4(13939);
+    const tmp4Result = tmp4(14305);
     const merged = Object.assign(item);
     let tmp12 = closure_23(tmp4Result, obj4);
     cResult[9] = isActionSheet;
@@ -847,7 +847,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceMemberL
   let ownerId;
   let reduced;
   let tmp25Result2;
-  const f118058 = (user) => stateFromStoresArray.includes(user.user.id);
+  const f119478 = (user) => stateFromStoresArray.includes(user.user.id);
   channel = channel.channel;
   let flag = channel.isActionSheet;
   if (flag === undefined) {
@@ -921,8 +921,8 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceMemberL
           str = "";
         }
         const tmp3Result = flag(tmp4[40]);
-        [arr10, arr11] = _slicedToArray(tmp3Result.partition(stateFromStores, f118058), 2);
-        const tmp15 = _slicedToArray(tmp3Result.partition(stateFromStores, f118058), 2);
+        [arr10, arr11] = _slicedToArray(tmp3Result.partition(stateFromStores, f119478), 2);
+        const tmp15 = _slicedToArray(tmp3Result.partition(stateFromStores, f119478), 2);
         if (arr10.length > 0) {
           const push = items5.push;
           const obj5 = { type: constants4.SPECTATING, title: intl.formatToPlainString(channel(tmp4[23]).t.Fb0eT9, obj6), data: arr10 };
@@ -959,17 +959,17 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceMemberL
           let tmp18 = null;
           if (!(item instanceof UserRecord)) {
             const obj2 = { item, channelId: channel.id, onPressUser: onPress, isActionSheet: flag };
-            tmp18 = closure_23(closure_34, obj2);
+            tmp18 = isAppBarToggleOpen(closure_34, obj2);
           }
           return tmp18;
         } else if (constants.SPECTATING === type) {
           const obj3 = { onPress, isSpectating: true, isActionSheet: true };
           const tmp11 = VoiceMemberUserDefault;
           const merged = Object.assign(item);
-          return closure_23(tmp11, obj3);
+          return isAppBarToggleOpen(tmp11, obj3);
         } else if (constants.DISCONNECTED === type) {
           const obj = { user: item, channel, isActionSheet: flag, onPress };
-          return closure_23(VoiceMemberUser.DisconnectedUserRow, obj);
+          return isAppBarToggleOpen(VoiceMemberUser.DisconnectedUserRow, obj);
         }
       }, items7);
       if (flag) {
@@ -992,7 +992,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceMemberL
                     const obj2 = { children: items };
                     items = [callback1(obj), ];
                     const obj3 = { style: rowFormDivider.rowFormDivider };
-                    items[1] = closure_23(Form.FormDivider, obj3);
+                    items[1] = isAppBarToggleOpen(Form.FormDivider, obj3);
                     return closure_24(closure_25, obj2);
                   }
                 },
@@ -1011,7 +1011,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceMemberL
                       let result;
                       const tmp = undefined !== items5[arg0].data[arg1].url && undefined !== items5[arg0].data[arg1].applicationId;
                       if (tmp) {
-                        const tmp9Result = tmp9(13938);
+                        const tmp9Result = tmp9(14304);
                         result = tmp9Result.calculateActivityRowHeight(tmp8);
                       } else {
                         const voiceState = tmp7.voiceState;

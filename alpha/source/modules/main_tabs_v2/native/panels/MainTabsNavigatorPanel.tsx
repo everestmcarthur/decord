@@ -1,23 +1,23 @@
-// Module ID: 16738
-// Function ID: 16739
+// Module ID: 17049
+// Function ID: 17050
 // Name: MainTabsNavigatorPanel
-// Dependencies: [32, 19, 17, 1085, 21, 3, 5092, 587, 558, 576, 1504, 4979, 10679, 10678, 16739, 4985, 16740, 4977, 5103, 1121, 16741, 7015, 16744, 4850, 6203, 9309, 16745, 16746, 16753, 17290, 17291, 17292, 17505, 16961, 6335, 11381, 2]
+// Dependencies: [32, 19, 17, 1087, 21, 3, 5153, 587, 558, 576, 1506, 5038, 11022, 11021, 17050, 5044, 17051, 5036, 5164, 1123, 17052, 7236, 17055, 4909, 6425, 9545, 17056, 17057, 17064, 17598, 17599, 17600, 17813, 17271, 6557, 11637, 2]
 
-// Module 16738 (MainTabsNavigatorPanel)
+// Module 17049 (MainTabsNavigatorPanel)
 import LoggerDefault from "Logger" /* 3 */;
 import nativeDefault from "native" /* 587 */;
-import RootNavigationRef from "RootNavigationRef" /* 4977 */;
-import ChatInputUtils from "ChatInputUtils" /* 4985 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7015 */;
-import PanelsNavigationUtils from "PanelsNavigationUtils" /* 16739 */;
-import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 16740 */;
-import ChannelScreenAnimatedFrameDefault from "ChannelScreenAnimatedFrame" /* 16744 */;
+import RootNavigationRef from "RootNavigationRef" /* 5036 */;
+import ChatInputUtils from "ChatInputUtils" /* 5044 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7236 */;
+import PanelsNavigationUtils from "PanelsNavigationUtils" /* 17050 */;
+import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 17051 */;
+import ChannelScreenAnimatedFrameDefault from "ChannelScreenAnimatedFrame" /* 17055 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import Constants from "Constants" /* 1085 */;
+import Constants from "Constants" /* 1087 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 5092 */;
+import createStyles from "createStyles" /* 5153 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -504,7 +504,7 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fu
           }
           if ("modal" !== name) {
             tmp3.current = true;
-            const tmp15Result = tmp15(5103);
+            const tmp15Result = tmp15(5164);
             tmp15Result.transitionToChannel(tmp6.current.channelId);
           }
         }
@@ -546,7 +546,7 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fu
   let tmp61;
   let tmp65;
   let type1;
-  const f125969 = () => first4;
+  const f127278 = () => first4;
   let tmp = closure_13();
   const tmp3 = drawerWidth;
   let obj = navigation(drawerWidth[10]);
@@ -623,9 +623,9 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fu
     const obj = useChannelScreensFromNavigation;
     return obj.isActiveTabsGuilds(navigation.getState());
   });
-  [tmp23, closure_13] = react.useState(f125969);
+  [tmp23, closure_13] = react.useState(f127278);
   const items3 = [navigation];
-  _slicedToArray(react.useState(f125969), 2);
+  _slicedToArray(react.useState(f127278), 2);
   const effect1 = obj3.useEffect(() => {
     function handleStateChange(data) {
       const obj = navigation(drawerWidth[16]);
@@ -672,7 +672,7 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fu
           }
           if ("modal" !== name) {
             tmp3.current = true;
-            const tmp15Result = tmp15(5103);
+            const tmp15Result = tmp15(5164);
             tmp15Result.transitionToChannel(tmp6.current.channelId);
           }
         }
@@ -766,7 +766,7 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fu
           movePanel(true, false, 0, true);
         }
       } else if (movePanel(false, false, 0, false)) {
-        const tmp4Result = tmp4(4985);
+        const tmp4Result = tmp4(5044);
         tmp4Result.dismissKeyboard();
       }
     }

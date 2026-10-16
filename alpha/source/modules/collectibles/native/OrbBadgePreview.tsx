@@ -1,18 +1,18 @@
-// Module ID: 13777
-// Function ID: 13778
+// Module ID: 14142
+// Function ID: 14143
 // Name: OrbBadgePreview
-// Dependencies: [19, 17, 21, 5092, 558, 576, 8303, 9059, 1126, 10512, 2]
+// Dependencies: [19, 17, 21, 5153, 558, 576, 8529, 9289, 1128, 10760, 2]
 
-// Module 13777 (OrbBadgePreview)
+// Module 14142 (OrbBadgePreview)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import intl2 from "intl" /* 1126 */;
-import useCurrentUser from "useCurrentUser" /* 8303 */;
-import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 9059 */;
-import UserProfilePreviewDefault from "UserProfilePreview" /* 10512 */;
+import intl2 from "intl" /* 1128 */;
+import useCurrentUser from "useCurrentUser" /* 8529 */;
+import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 9289 */;
+import UserProfilePreviewDefault from "UserProfilePreview" /* 10760 */;
 import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 5092 */;
+import createStyles from "createStyles" /* 5153 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -33,7 +33,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function OrbBadgePr
     const items = [];
     const tmpResult = collectibles_CollectiblesUtils;
     items[0] = tmpResult.createOrbProfileBadge();
-    const intl = tmp(1126).intl;
+    const intl = tmp(1128).intl;
     const stringResult = intl.string(intl2.t.bxcI6Y);
     cResult[0] = items;
     cResult[1] = stringResult;

@@ -1,15 +1,15 @@
-// Module ID: 11836
-// Function ID: 11837
+// Module ID: 12105
+// Function ID: 12106
 // Name: ConjureAttachmentPills
-// Dependencies: [19, 17, 21, 5092, 587, 558, 576, 11285, 4806, 6182, 1126, 3849, 5088, 2]
+// Dependencies: [19, 17, 21, 5153, 587, 558, 576, 11540, 4865, 6404, 1128, 3865, 5149, 2]
 
-// Module 11836 (ConjureAttachmentPills)
+// Module 12105 (ConjureAttachmentPills)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import nativeDefault from "native" /* 587 */;
-import conjureAttachmentRequests from "conjureAttachmentRequests" /* 11285 */;
+import conjureAttachmentRequests from "conjureAttachmentRequests" /* 11540 */;
 import react from "react" /* 19 */;
-import createStyles_mod from "createStyles" /* 5092 */;
+import createStyles_mod from "createStyles" /* 5153 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

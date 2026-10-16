@@ -1,9 +1,9 @@
-// Module ID: 15036
-// Function ID: 15037
+// Module ID: 11644
+// Function ID: 11645
 // Name: FrameVisibilityStore
 // Dependencies: [2]
 
-// Module 15036 (FrameVisibilityStore)
+// Module 11644 (FrameVisibilityStore)
 import size from "module_2" /* 2 */;
 
 class FrameVisibilityStore {
@@ -33,12 +33,12 @@ class FrameVisibilityStore {
       listeners.delete(closure_0);
     };
   }
-  setFrameVisible(arg0, arg1) {
+  setFrameVisible(id, arg1) {
     const self = this;
     const visibility = this.visibility;
-    if (visibility.get(arg0) !== arg1) {
+    if (visibility.get(id) !== arg1) {
       const visibility2 = self.visibility;
-      const result = visibility2.set(arg0, arg1);
+      const result = visibility2.set(id, arg1);
       self.emit();
     }
   }

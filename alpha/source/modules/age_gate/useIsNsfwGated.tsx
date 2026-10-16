@@ -1,11 +1,11 @@
-// Module ID: 9326
-// Function ID: 9327
+// Module ID: 9562
+// Function ID: 9563
 // Name: useIsNsfwGated
-// Dependencies: [5925, 1390, 558, 576, 504, 2]
+// Dependencies: [6143, 1392, 558, 576, 504, 2]
 
-// Module 9326 (useIsNsfwGated)
-import GuildNSFWAgreeStore from "GuildNSFWAgreeStore" /* 5925 */;
-import UserStore from "UserStore" /* 1390 */;
+// Module 9562 (useIsNsfwGated)
+import GuildNSFWAgreeStore from "GuildNSFWAgreeStore" /* 6143 */;
+import UserStore from "UserStore" /* 1392 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

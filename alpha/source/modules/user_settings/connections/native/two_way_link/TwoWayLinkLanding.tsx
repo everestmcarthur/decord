@@ -1,19 +1,19 @@
-// Module ID: 9214
-// Function ID: 9215
+// Module ID: 9451
+// Function ID: 9452
 // Name: TwoWayLinkLanding
-// Dependencies: [19, 17, 5761, 21, 5092, 558, 576, 9215, 504, 6157, 5088, 6180, 1126, 5379, 5377, 6814, 2]
+// Dependencies: [19, 17, 5979, 21, 5153, 558, 576, 9452, 504, 5091, 5149, 6402, 1128, 5441, 5439, 7037, 2]
 
-// Module 9214 (TwoWayLinkLanding)
+// Module 9451 (TwoWayLinkLanding)
 import get_initialized from "get initialized" /* 504 */;
-import intl3 from "intl" /* 1126 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import TableRow2 from "TableRow" /* 6180 */;
-import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9215 */;
+import intl3 from "intl" /* 1128 */;
+import Text_Text from "Text/Text" /* 5149 */;
+import TableRow2 from "TableRow" /* 6402 */;
+import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9452 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5761 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5979 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 5092 */;
+import createStyles from "createStyles" /* 5153 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -44,7 +44,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function TwoWayLink
   ({ img, imgStyle, headerConnect, headerReconnect, body, valueProps } = platformType);
   ({ learnMoreLink, onNext } = platformType);
   const tmp4 = closure_8();
-  const obj2 = platformType(9215);
+  const obj2 = platformType(9452);
   const twoWayLinkStyles = obj2.useTwoWayLinkStyles();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ConnectedAccountsStore];
@@ -190,21 +190,21 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function TwoWayLink
           const tmp28 = closure_6(closure_3, obj4);
         }
         const obj5 = { variant: "text-md/medium", color: "text-default", style: twoWayLinkStyles.body, children: body };
-        const tmp21 = closure_6(platformType(5088).Text, obj5);
+        const tmp21 = closure_6(platformType(5149).Text, obj5);
         cResult[12] = body;
         cResult[13] = twoWayLinkStyles.body;
         cResult[14] = tmp21;
         tmp19 = tmp21;
       }
       const obj6 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, accessibilityRole: "header", children: tmp15 };
-      const tmp18 = closure_6(platformType(5088).Text, obj6);
+      const tmp18 = closure_6(platformType(5149).Text, obj6);
       cResult[9] = twoWayLinkStyles.title;
       cResult[10] = tmp15;
       cResult[11] = tmp18;
       tmp16 = tmp18;
     }
     const obj7 = { source: img, style: tmp10 };
-    const tmp14 = closure_6(valueProps(6157), obj7);
+    const tmp14 = closure_6(valueProps(5091), obj7);
     cResult[6] = img;
     cResult[7] = tmp10;
     cResult[8] = tmp14;
@@ -255,7 +255,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function TwoWayLink
   });
   const obj5 = { source: img, style: items1 };
   items1 = [tmp.image, ];
-  const tmp10 = valueProps(6157);
+  const tmp10 = valueProps(5091);
   const tmp8 = closure_4;
   if (imgStyle == null) {
     imgStyle = false;
@@ -264,7 +264,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function TwoWayLink
   items2 = [closure_6(tmp10, obj5), , , ];
   const obj6 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, accessibilityRole: "header", children: tmp11 };
   tmp11 = headerConnect;
-  const Text = tmp2(5088).Text;
+  const Text = tmp2(5149).Text;
   if (stateFromStores) {
     tmp11 = headerConnect;
     if (null != headerReconnect) {
@@ -291,20 +291,20 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function TwoWayLink
   let tmp9Result = null;
   if (null != learnMoreLink) {
     const obj9 = { variant: "text-md/normal", color: "text-default", style: twoWayLinkStyles.body, children: intl.format(intl3.t["/l3n+1"], obj10) };
-    const Text2 = tmp2(5088).Text;
-    intl = tmp2(1126).intl;
+    const Text2 = tmp2(5149).Text;
+    intl = tmp2(1128).intl;
     obj10 = { helpCenterLink: learnMoreLink };
     tmp9Result = tmp9(Text2, obj9);
   }
   items3[1] = tmp9Result;
   items4 = [closure_7(tmp8, { alwaysBounceVertical: false, children: items3 }), ];
   const obj11 = { bottom: true, style: twoWayLinkStyles.footerContainer, children: closure_6(Stack, obj12) };
-  const SafeAreaPaddingView = tmp2(6814).SafeAreaPaddingView;
+  const SafeAreaPaddingView = tmp2(7037).SafeAreaPaddingView;
   obj12 = { spacing: 8, direction: "vertical", style: twoWayLinkStyles.footerButton, children: closure_6(Button, obj13) };
-  Stack = tmp2(5377).Stack;
+  Stack = tmp2(5439).Stack;
   obj13 = { variant: "primary", size: "lg", text: intl2.string(intl3.t.LhlgY9), onPress: onNext };
-  Button = tmp2(5379).Button;
-  intl2 = tmp2(1126).intl;
+  Button = tmp2(5441).Button;
+  intl2 = tmp2(1128).intl;
   items4[1] = closure_6(SafeAreaPaddingView, obj11);
   return closure_7(closure_3, obj3);
 });

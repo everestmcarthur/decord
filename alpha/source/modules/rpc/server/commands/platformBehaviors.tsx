@@ -1,17 +1,22 @@
-// Module ID: 15090
-// Function ID: 15091
+// Module ID: 15460
+// Function ID: 15461
 // Name: platformBehaviors
-// Dependencies: [1096, 2]
+// Dependencies: [1098, 15422, 2]
 
-// Module 15090 (platformBehaviors)
-import Constants from "Constants" /* 1096 */;
+// Module 15460 (platformBehaviors)
+import Constants from "Constants" /* 1098 */;
+import CONTEXT_MENU_ICON_NAMES from "CONTEXT_MENU_ICON_NAMES" /* 15422 */;
 import size from "module_2" /* 2 */;
 
-const obj = {
+const RPCCommands = Constants.RPCCommands;
+const obj = {};
+const GET_PLATFORM_BEHAVIORS = RPCCommands.GET_PLATFORM_BEHAVIORS;
+const obj2 = {
   handler() {
     return { iosKeyboardResizesView: true };
   }
 };
+obj[GET_PLATFORM_BEHAVIORS] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_PLATFORM_BEHAVIORS, obj2);
 const result = size.fileFinishedImporting("modules/rpc/server/commands/platformBehaviors.tsx");
 
-export default { [Constants.RPCCommands.GET_PLATFORM_BEHAVIORS]: obj };
+export default obj;

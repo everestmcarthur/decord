@@ -1,14 +1,14 @@
-// Module ID: 17477
-// Function ID: 17478
+// Module ID: 17785
+// Function ID: 17786
 // Name: LinksScreen
-// Dependencies: [19, 9313, 21, 558, 576, 17461, 17468, 17476, 17395, 17469, 17470, 12552, 17474, 17402, 2]
+// Dependencies: [19, 9549, 21, 558, 576, 17769, 17776, 17784, 17703, 17777, 17778, 12907, 17782, 17710, 2]
 
-// Module 17477 (LinksScreen)
+// Module 17785 (LinksScreen)
 import Fragment from "Fragment" /* 21 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 12552 */;
-import BaseMessagesScreen from "BaseMessagesScreen" /* 17470 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 12907 */;
+import BaseMessagesScreen from "BaseMessagesScreen" /* 17778 */;
 import react from "react" /* 19 */;
-import SearchConstants from "SearchConstants" /* 9313 */;
+import SearchConstants from "SearchConstants" /* 9549 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

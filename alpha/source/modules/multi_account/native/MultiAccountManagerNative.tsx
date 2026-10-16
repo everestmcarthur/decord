@@ -1,21 +1,21 @@
-// Module ID: 18178
-// Function ID: 18179
+// Module ID: 18495
+// Function ID: 18496
 // Name: MultiAccountManagerNative
-// Dependencies: [12644, 1085, 3, 1102, 5934, 18179, 2000, 4977, 1121, 18180, 15, 12647, 1112, 4982, 4976, 4809, 1126, 18181, 2]
+// Dependencies: [12999, 1087, 3, 1104, 6152, 18496, 2002, 5036, 1123, 18497, 15, 13002, 1114, 5041, 5035, 4868, 1128, 18498, 2]
 
-// Module 18178 (MultiAccountManagerNative)
+// Module 18495 (MultiAccountManagerNative)
 import LoggerDefault from "Logger" /* 3 */;
 import fast_connect from "fast_connect" /* 15 */;
-import DurationsDefault from "Durations" /* 1102 */;
-import intl2 from "intl" /* 1126 */;
-import asyncRequire from "asyncRequire" /* 2000 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4809 */;
-import RootNavigationRef from "RootNavigationRef" /* 4977 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5934 */;
-import Constants2 from "Constants" /* 12644 */;
-import ArrowsLeftRightIcon from "ArrowsLeftRightIcon" /* 18181 */;
-import Constants from "Constants" /* 1085 */;
-import MultiAccountManager from "MultiAccountManager" /* 18180 */;
+import DurationsDefault from "Durations" /* 1104 */;
+import intl2 from "intl" /* 1128 */;
+import asyncRequire from "asyncRequire" /* 2002 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4868 */;
+import RootNavigationRef from "RootNavigationRef" /* 5036 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6152 */;
+import Constants2 from "Constants" /* 12999 */;
+import ArrowsLeftRightIcon from "ArrowsLeftRightIcon" /* 18498 */;
+import Constants from "Constants" /* 1087 */;
+import MultiAccountManager from "MultiAccountManager" /* 18497 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -24,10 +24,10 @@ let _require;
 let closure_4;
 let hasOwnProperty;
 let tmp;
-const ComponentDispatchUtils = tmp(1121);
+const ComponentDispatchUtils = tmp(1123);
 function push() {
   obj = ModalActionCreatorsDefault;
-  obj.pushLazy(asyncRequire(18179, dependencyMap.paths), {}, c7);
+  obj.pushLazy(asyncRequire(18496, dependencyMap.paths), {}, c7);
   const tmp3 = c7;
   if (obj.cancelled) {
     const tmpResult = ModalActionCreatorsDefault;
@@ -105,7 +105,7 @@ class MultiAccountManagerNative extends MultiAccountManager {
       const MobileHomeDrawerExperiment = require("HomeDrawerExperiment").MobileHomeDrawerExperiment;
       const tmp2 = _require;
       if (MobileHomeDrawerExperiment.getConfig({ location: "multi-account" }).enableHome) {
-        const tmp2Result = tmp2(4976);
+        const tmp2Result = tmp2(5035);
         tmp2Result.setHomeDrawerState(false);
       }
     }

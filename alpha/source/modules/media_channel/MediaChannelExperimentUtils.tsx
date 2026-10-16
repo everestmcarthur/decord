@@ -1,11 +1,11 @@
-// Module ID: 8599
-// Function ID: 8600
+// Module ID: 8826
+// Function ID: 8827
 // Name: MediaChannelExperimentUtils
-// Dependencies: [1085, 2]
+// Dependencies: [1087, 2]
 // Exports: useGuildEligibleForMediaChannels
 
-// Module 8599 (MediaChannelExperimentUtils)
-import Constants from "Constants" /* 1085 */;
+// Module 8826 (MediaChannelExperimentUtils)
+import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 
 const GuildFeatures = Constants.GuildFeatures;

@@ -1,23 +1,23 @@
-// Module ID: 12389
-// Function ID: 12390
+// Module ID: 12744
+// Function ID: 12745
 // Name: CustomTypingIndicatorUtils
-// Dependencies: [5987, 8285, 2065, 5963, 1390, 1085, 1393, 1398, 3851, 4764, 4768, 1411, 1097, 4755, 558, 576, 504, 2]
+// Dependencies: [6205, 8511, 2068, 6181, 1392, 1087, 1395, 1400, 3867, 4823, 4827, 1413, 1099, 4814, 558, 576, 504, 2]
 // Exports: getCustomTypingIndicatorSuggestionMessage, getCustomTypingIndicatorSuggestionPresets, getCustomTypingIndicatorSuggestionWithNameMessage, getRandomCustomTypingIndicatorAnimation, getRandomCustomTypingIndicatorSuggestion, getSurpriseMeEmojiPool, getViewableCustomTypingIndicatorConfig, pickRandomCustomTypingIndicatorEmojis
 
-// Module 12389 (CustomTypingIndicatorUtils)
-import Constants from "Constants" /* 1085 */;
-import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
-import EmojiConstants from "EmojiConstants" /* 1393 */;
-import user2 from "user" /* 1398 */;
-import CustomTypingIndicatorTypes from "CustomTypingIndicatorTypes" /* 1411 */;
-import _modDef3851 from "module_3851" /* 3851 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4755 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4764 */;
-import EmojiStore from "EmojiStore" /* 5987 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8285 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import SortedGuildStore from "SortedGuildStore" /* 5963 */;
-import UserStore from "UserStore" /* 1390 */;
+// Module 12744 (CustomTypingIndicatorUtils)
+import Constants from "Constants" /* 1087 */;
+import BigFlagUtilsAll from "BigFlagUtils" /* 1099 */;
+import EmojiConstants from "EmojiConstants" /* 1395 */;
+import user2 from "user" /* 1400 */;
+import CustomTypingIndicatorTypes from "CustomTypingIndicatorTypes" /* 1413 */;
+import _modDef3867 from "module_3867" /* 3867 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4814 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4823 */;
+import EmojiStore from "EmojiStore" /* 6205 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8511 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import SortedGuildStore from "SortedGuildStore" /* 6181 */;
+import UserStore from "UserStore" /* 1392 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -27,23 +27,23 @@ let _require, set, usableGuildEmoji;
 const Permissions = Constants.Permissions;
 const EmojiIntention = EmojiConstants.EmojiIntention;
 let obj = {};
-obj[user2.TypingSuggestion.UNSPECIFIED] = _modDef3851["6Cdy4a"];
-obj[user2.TypingSuggestion.YAPPING] = _modDef3851.E5VRaj;
-obj[user2.TypingSuggestion.VENTING] = _modDef3851.xmxdPC;
-obj[user2.TypingSuggestion.OVERSHARING] = _modDef3851["qGaH/9"];
-obj[user2.TypingSuggestion.BARKING] = _modDef3851.M282uk;
-obj[user2.TypingSuggestion.BABBLING] = _modDef3851.myNZDT;
-obj[user2.TypingSuggestion.DAYDREAMING] = _modDef3851.F7RLTP;
-obj[user2.TypingSuggestion.MEOWING] = _modDef3851.EfxyQI;
+obj[user2.TypingSuggestion.UNSPECIFIED] = _modDef3867["6Cdy4a"];
+obj[user2.TypingSuggestion.YAPPING] = _modDef3867.E5VRaj;
+obj[user2.TypingSuggestion.VENTING] = _modDef3867.xmxdPC;
+obj[user2.TypingSuggestion.OVERSHARING] = _modDef3867["qGaH/9"];
+obj[user2.TypingSuggestion.BARKING] = _modDef3867.M282uk;
+obj[user2.TypingSuggestion.BABBLING] = _modDef3867.myNZDT;
+obj[user2.TypingSuggestion.DAYDREAMING] = _modDef3867.F7RLTP;
+obj[user2.TypingSuggestion.MEOWING] = _modDef3867.EfxyQI;
 let obj2 = {};
-obj2[user2.TypingSuggestion.UNSPECIFIED] = _modDef3851.kh4K4F;
-obj2[user2.TypingSuggestion.YAPPING] = _modDef3851.m9AeqG;
-obj2[user2.TypingSuggestion.VENTING] = _modDef3851["SZ0/Qu"];
-obj2[user2.TypingSuggestion.OVERSHARING] = _modDef3851.N8cWE8;
-obj2[user2.TypingSuggestion.BARKING] = _modDef3851.L5aWEN;
-obj2[user2.TypingSuggestion.BABBLING] = _modDef3851.AoBaEw;
-obj2[user2.TypingSuggestion.DAYDREAMING] = _modDef3851["3hOLod"];
-obj2[user2.TypingSuggestion.MEOWING] = _modDef3851["0Z9/o9"];
+obj2[user2.TypingSuggestion.UNSPECIFIED] = _modDef3867.kh4K4F;
+obj2[user2.TypingSuggestion.YAPPING] = _modDef3867.m9AeqG;
+obj2[user2.TypingSuggestion.VENTING] = _modDef3867["SZ0/Qu"];
+obj2[user2.TypingSuggestion.OVERSHARING] = _modDef3867.N8cWE8;
+obj2[user2.TypingSuggestion.BARKING] = _modDef3867.L5aWEN;
+obj2[user2.TypingSuggestion.BABBLING] = _modDef3867.AoBaEw;
+obj2[user2.TypingSuggestion.DAYDREAMING] = _modDef3867["3hOLod"];
+obj2[user2.TypingSuggestion.MEOWING] = _modDef3867["0Z9/o9"];
 let items = [user2.TypingSuggestion.UNSPECIFIED, user2.TypingSuggestion.YAPPING, user2.TypingSuggestion.VENTING, user2.TypingSuggestion.OVERSHARING, user2.TypingSuggestion.BARKING, user2.TypingSuggestion.BABBLING, user2.TypingSuggestion.DAYDREAMING, user2.TypingSuggestion.MEOWING];
 let items1 = [user2.TypingIndicatorAnimation.PULSE, user2.TypingIndicatorAnimation.RING, user2.TypingIndicatorAnimation.WAVE];
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCurrentCustomTypingIndicatorConfig(arg0) {
@@ -163,7 +163,7 @@ export const getSurpriseMeEmojiPool = function getSurpriseMeEmojiPool() {
   HermesBuiltin.arraySpread(items, flattenedGuildIds.flatMap((item) => {
     usableGuildEmoji = usableGuildEmoji.getUsableGuildEmoji(item);
     const found = usableGuildEmoji.filter((emoji) => {
-      obj2 = { emoji, channel: null, guildId: "Array", intention: constants.TYPING_INDICATOR, bypassPremiumEmojiEntitlement: null };
+      obj2 = { emoji, channel: null, guildId: "Array", intention: constants.TYPING_INDICATOR, bypassPremiumEmojiEntitlement: "/assets/.cache/intl/bW9kdWxlcy9nb19saXZl" };
       obj = closure_1_1(closure_1_3[10]);
       return null == obj.getEmojiUnavailableReason(obj2);
     });
