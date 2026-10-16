@@ -1,24 +1,24 @@
-// Module ID: 18382
-// Function ID: 18383
+// Module ID: 18386
+// Function ID: 18387
 // Name: GuildSettingsModalServerTag
-// Dependencies: [5, 32, 19, 17, 8617, 2087, 8639, 1085, 7888, 21, 5092, 587, 1503, 8641, 504, 8618, 8290, 8619, 8638, 4808, 1126, 12217, 5011, 6201, 7089, 1504, 5300, 1200, 6727, 13020, 5088, 6265, 6896, 6180, 5377, 14143, 8580, 14141, 18383, 2]
+// Dependencies: [5, 32, 19, 17, 8612, 2087, 8634, 1085, 7883, 21, 5092, 587, 1503, 8636, 504, 8613, 8285, 8614, 8633, 4808, 1126, 12222, 5011, 6201, 7089, 1504, 5300, 1200, 6727, 13025, 5088, 6265, 6896, 6180, 5377, 14148, 8575, 14146, 18387, 2]
 // Exports: default
 
-// Module 18382 (GuildSettingsModalServerTag)
+// Module 18386 (GuildSettingsModalServerTag)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import Powerups from "Powerups" /* 5011 */;
-import GuildProfileStore from "GuildProfileStore" /* 8617 */;
-import GuildProfileActionCreators from "GuildProfileActionCreators" /* 8619 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8638 */;
-import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 12217 */;
+import GuildProfileStore from "GuildProfileStore" /* 8612 */;
+import GuildProfileActionCreators from "GuildProfileActionCreators" /* 8614 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8633 */;
+import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 12222 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import GuildStore from "GuildStore" /* 2087 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 8639 */;
-import GuildTagConstants from "GuildTagConstants" /* 7888 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 8634 */;
+import GuildTagConstants from "GuildTagConstants" /* 7883 */;
 import Fragment from "Fragment" /* 21 */;
 import createStyles_mod from "createStyles" /* 5092 */;
 import size_mod from "module_2" /* 2 */;
@@ -80,14 +80,14 @@ export default function GuildSettingsModalServerTag(guildId) {
   let tmp3 = dependencyMap;
   let obj = guildId(1503);
   navigation = obj.useNavigation();
-  let obj2 = guildId(8641);
+  let obj2 = guildId(8636);
   const result = obj2.canUseMobileServerTagSettings(guildId);
   dependencyMap = result;
   const obj3 = guildId(504);
   const items = [result1];
   const items1 = [guildId];
   const stateFromStores = obj3.useStateFromStores(items, () => GuildStore.getGuild(guildId), items1);
-  let obj4 = guildId(8618);
+  let obj4 = guildId(8613);
   const guildProfile1 = obj4.useGuildProfile(guildId);
   ({ guildProfile, fetchStatus } = guildProfile1);
   let obj5 = guildId(504);
@@ -101,7 +101,7 @@ export default function GuildSettingsModalServerTag(guildId) {
   let closure_6 = tmp10[1];
   let guildSupportsTagsResult = null != stateFromStores;
   if (guildSupportsTagsResult) {
-    const tmp2Result = tmp2(8290);
+    const tmp2Result = tmp2(8285);
     guildSupportsTagsResult = tmp2Result.guildSupportsTags(stateFromStores);
   }
   GuildProfileFetchStatus = guildSupportsTagsResult;
@@ -109,7 +109,7 @@ export default function GuildSettingsModalServerTag(guildId) {
   if (stateFromStores1 != null) {
     tag = stateFromStores1.tag;
   }
-  const tmp2Result3 = tmp2(8641);
+  const tmp2Result3 = tmp2(8636);
   result1 = tmp2Result3.isServerTagDraftDirty(stateFromStores1, stateFromStores2);
   let tmp16 = null != stateFromStores1;
   if (tmp16) {
@@ -383,7 +383,7 @@ export default function GuildSettingsModalServerTag(guildId) {
                   return obj.getGuildProfile(guildId, true);
                 }
         };
-        return closure_13(navigation(13020), obj8);
+        return closure_13(navigation(13025), obj8);
       } else if (null == stateFromStores1) {
         return closure_13(tmp2(6727).SceneLoadingIndicator, {});
       } else {
@@ -426,7 +426,7 @@ export default function GuildSettingsModalServerTag(guildId) {
           if (tmp33Result) {
             size = { badge: null, primaryTintColor: badgeColorPrimary, secondaryTintColor: badgeColorSecondary, width: null, height: null };
             ({ badge: obj15.badge, badgeColorPrimary } = stateFromStores1);
-            const GuildBadge = tmp2(14143).GuildBadge;
+            const GuildBadge = tmp2(14148).GuildBadge;
             badgeColorSecondary = stateFromStores1.badgeColorSecondary;
             ({ SIZE_16: obj15.width, SIZE_16: obj15.height } = closure_12);
             tmp33Result = tmp33(GuildBadge, size);
@@ -438,7 +438,7 @@ export default function GuildSettingsModalServerTag(guildId) {
         const tmp32Result2 = closure_14(TableRowGroup, obj10);
         const obj14 = { style: tmp.container, contentContainerStyle: items13, children: closure_14(Stack2, tmp41) };
         items13 = [tmp.containerContent, contentContainerStyle];
-        const Form = tmp2(8580).Form;
+        const Form = tmp2(8575).Form;
         const obj16 = { spacing: navigation(587).space.PX_16, children: null };
         Stack2 = tmp2(5377).Stack;
         if (guildSupportsTagsResult) {
@@ -452,12 +452,12 @@ export default function GuildSettingsModalServerTag(guildId) {
           items14[2] = closure_13(Text2, obj18);
           const obj19 = { guildId, tag: null, badge: null, primaryColor: null, secondaryColor: null, isDirty: result1 };
           ({ tag: obj21.tag, badge: obj21.badge, badgeColorPrimary: obj21.primaryColor, badgeColorSecondary: obj21.secondaryColor } = stateFromStores1);
-          items14[3] = closure_13(navigation(14141), obj19);
+          items14[3] = closure_13(navigation(14146), obj19);
           obj16.children = items14;
           tmp41 = obj16;
         } else {
           const obj20 = { guildId, onUnlockPress: callback2 };
-          const items15 = [tmp33(tmp40(18383), obj20), tmp32Result2];
+          const items15 = [tmp33(tmp40(18387), obj20), tmp32Result2];
           obj16.children = items15;
           tmp41 = obj16;
         }

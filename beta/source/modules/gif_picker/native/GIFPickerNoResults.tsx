@@ -1,18 +1,18 @@
-// Module ID: 9748
-// Function ID: 9749
+// Module ID: 9744
+// Function ID: 9745
 // Name: GIFPickerNoResults
-// Dependencies: [19, 17, 1085, 21, 5092, 587, 558, 576, 9732, 9524, 1126, 9528, 6307, 1200, 2]
+// Dependencies: [19, 17, 1085, 21, 5092, 587, 558, 576, 9728, 9520, 1126, 9524, 6307, 1200, 2]
 
-// Module 9748 (GIFPickerNoResults)
+// Module 9744 (GIFPickerNoResults)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import native from "native" /* 1200 */;
-import SearchEmpty from "SearchEmpty" /* 9524 */;
-import useModalDismissGuardRefreshControl from "useModalDismissGuardRefreshControl" /* 9528 */;
-import useExpressionPickerInsetsDefault from "useExpressionPickerInsets" /* 9732 */;
+import SearchEmpty from "SearchEmpty" /* 9520 */;
+import useModalDismissGuardRefreshControl from "useModalDismissGuardRefreshControl" /* 9524 */;
+import useExpressionPickerInsetsDefault from "useExpressionPickerInsets" /* 9728 */;
 import react from "react" /* 19 */;
 import createStyles_mod from "createStyles" /* 5092 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

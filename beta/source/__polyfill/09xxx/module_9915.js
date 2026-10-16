@@ -1,19 +1,16 @@
 // Module ID: 9915
 // Function ID: 9916
-// Dependencies: [41, 42, 93, 95, 98, 9820, 9914, 9847, 9827]
+// Dependencies: [41, 42, 93, 95, 96, 98, 9830]
 
 // Module 9915
-import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 9820 */;
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 9827 */;
-import _mod9914 from "module_9914" /* 9914 */;
+import AbstractTimeExpressionParser from "AbstractTimeExpressionParser" /* 9830 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
+import map from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _get from "_get" /* 96 */;
 import _inherits from "_inherits" /* 98 */;
 
-let tmp2;
-const _mod9847 = tmp2(9847);
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,15 +26,14 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const regExp = new RegExp("(?:(?:\\,|\\(|\\\uFF08)\\s*)?(?:op\\s*?)?(?:(deze|vorige|volgende)\\s*(?:week\\s*)?)?(" + repeatedTimeunitPattern.matchAnyPattern(_mod9914.WEEKDAY_DICTIONARY) + ")(?=\\W|$)", "i");
-class NLWeekdayParser {
+class NLTimeExpressionParser {
   constructor() {
     let constructResult;
     const self = this;
-    _classCallCheck(this, NLWeekdayParser);
-    const obj = _getPrototypeOf(NLWeekdayParser);
+    _classCallCheck(this, NLTimeExpressionParser);
+    const obj = _getPrototypeOf(NLTimeExpressionParser);
     const tmp2 = _getPrototypeOf;
-    const tmp3 = c3;
+    const tmp3 = map;
     if (_isNativeReflectConstruct()) {
       const _Reflect = Reflect;
       constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
@@ -47,42 +43,44 @@ class NLWeekdayParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(NLWeekdayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(NLTimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
 const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    return regExp;
+  key: "primaryPrefix",
+  value: function primaryPrefix() {
+    return "(?:(?:om)\\s*)?";
   }
 };
-const items = [
+let items = [
   entry,
   {
-    key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      const str = arg1[2];
-      const formatted = str.toLowerCase();
-      let str2 = arg1[1];
-      const tmp4 = _mod9914.WEEKDAY_DICTIONARY[formatted];
-      if (!str2) {
-        str2 = arg1[3];
-      }
-      if (!str2) {
-        str2 = "";
-      }
-      const formatted1 = str2.toLowerCase();
-      let str3 = "last";
-      if ("vorige" != formatted1) {
-        str3 = "next";
-        if ("volgende" != formatted1) {
-          str3 = null;
-          if ("deze" == formatted1) {
-            str3 = "this";
-          }
+    key: "followingPhase",
+    value: function followingPhase() {
+      return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|om|\\?)\\s*";
+    }
+  },
+  {
+    key: "primarySuffix",
+    value: function primarySuffix() {
+      return "(?:\\s*(?:uur))?(?!/)(?=\\W|$)";
+    }
+  },
+  {
+    key: "extractPrimaryTimeComponents",
+    value: function extractPrimaryTimeComponents(arg0, arg1) {
+      let fnResult = null;
+      const str = arg1[0];
+      if (!str.match(/^\s*\d{4}\s*$/)) {
+        const self = this;
+        let fn = _get(_getPrototypeOf(NLTimeExpressionParser.prototype), "extractPrimaryTimeComponents", this);
+        if (typeof fn === "function") {
+          fn = (items) => fn.apply(self, items);
         }
+        const items = [arg0, arg1];
+        fnResult = fn(items);
       }
-      return _mod9847.createParsingComponentsAtWeekday(reference.reference, tmp4, str3);
+      return fnResult;
     }
   }
 ];
 
-export default _createClass(NLWeekdayParser, items);
+export default _createClass(NLTimeExpressionParser, items);

@@ -1,16 +1,16 @@
-// Module ID: 13214
-// Function ID: 13215
+// Module ID: 13219
+// Function ID: 13220
 // Name: UserProfileWidgetsBoardEditNotice
-// Dependencies: [19, 17, 2062, 21, 5092, 587, 558, 576, 8368, 2049, 10013, 5046, 5088, 1126, 6185, 6208, 2]
+// Dependencies: [19, 17, 2062, 21, 5092, 587, 558, 576, 8363, 2049, 10009, 5046, 5088, 1126, 6185, 6208, 2]
 
-// Module 13214 (UserProfileWidgetsBoardEditNotice)
+// Module 13219 (UserProfileWidgetsBoardEditNotice)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import intl3 from "intl" /* 1126 */;
 import dismissible_content from "dismissible_content" /* 2049 */;
 import DismissibleContentConstants from "DismissibleContentConstants" /* 2062 */;
 import XSmallIcon from "XSmallIcon" /* 6208 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8368 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8363 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
 import createStyles from "createStyles" /* 5092 */;
@@ -24,7 +24,7 @@ let hasOwnProperty;
 let metroRequire;
 let obj2;
 let tmp5;
-const SelectedDismissibleContentDefault = tmp5(10013);
+const SelectedDismissibleContentDefault = tmp5(10009);
 const View = react_native.View;
 const ContentDismissActionType = DismissibleContentConstants.ContentDismissActionType;
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = Fragment);

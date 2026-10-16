@@ -1,11 +1,10 @@
 // Module ID: 9873
 // Function ID: 9874
-// Dependencies: [41, 42, 93, 95, 98, 9866, 9820, 9822, 9823, 9827]
+// Dependencies: [41, 42, 93, 95, 98, 9821, 9823]
 
 // Module 9873
-import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 9820 */;
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 9827 */;
-import _mod9866 from "module_9866" /* 9866 */;
+import Meridiem from "Meridiem" /* 9821 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 9823 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
@@ -27,65 +26,64 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class DETimeUnitAgoFormatParser {
+class FRCasualTimeParser {
   constructor() {
     let constructResult;
     const self = this;
-    _classCallCheck(this, DETimeUnitAgoFormatParser);
-    const obj = _getPrototypeOf(DETimeUnitAgoFormatParser);
+    _classCallCheck(this, FRCasualTimeParser);
+    const obj = _getPrototypeOf(FRCasualTimeParser);
     const tmp2 = _getPrototypeOf;
     const tmp3 = c3;
     if (_isNativeReflectConstruct()) {
       const _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, undefined);
+      constructResult = obj(...arguments);
     }
     return tmp3(self, constructResult);
   }
 }
-_inherits(DETimeUnitAgoFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(FRCasualTimeParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
-  value: function innerPattern() {
-    const NUMBER_PATTERN = _mod9866.NUMBER_PATTERN;
-    const regExp = new RegExp("(?:\\s*((?:n\u00E4chste|kommende|folgende|letzte|vergangene|vorige|vor(?:her|an)gegangene)(?:s|n|m|r)?|vor|in)\\s*)?(" + NUMBER_PATTERN + ")?(?:\\s*(n\u00E4chste|kommende|folgende|letzte|vergangene|vorige|vor(?:her|an)gegangene)(?:s|n|m|r)?)?\\s*(" + repeatedTimeunitPattern.matchAnyPattern(_mod9866.TIME_UNIT_DICTIONARY) + ")", "i");
-    return regExp;
+  value: function innerPattern(arg0) {
+    return /(cet?)?\s*(matin|soir|après-midi|aprem|a midi|à minuit)(?=\W|$)/i;
   }
 };
 const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      let num = 1;
-      if (arg1[2]) {
-        num = _mod9866.parseNumberPattern(arg1[2]);
+    value: function innerExtract(createParsingComponents, arg1) {
+      const str = arg1[2];
+      const formatted = str.toLowerCase();
+      const parsingComponents = createParsingComponents.createParsingComponents();
+      if ("apr\u00E8s-midi" !== formatted) {
+        if ("aprem" !== formatted) {
+          if ("soir" === formatted) {
+            parsingComponents.imply("hour", 18);
+            parsingComponents.imply("minute", 0);
+            parsingComponents.imply("meridiem", Meridiem.Meridiem.PM);
+          } else if ("matin" === formatted) {
+            parsingComponents.imply("hour", 8);
+            parsingComponents.imply("minute", 0);
+            parsingComponents.imply("meridiem", Meridiem.Meridiem.AM);
+          } else if ("a midi" === formatted) {
+            parsingComponents.imply("hour", 12);
+            parsingComponents.imply("minute", 0);
+            parsingComponents.imply("meridiem", Meridiem.Meridiem.AM);
+          } else if ("\u00E0 minuit" === formatted) {
+            parsingComponents.imply("hour", 0);
+            parsingComponents.imply("meridiem", Meridiem.Meridiem.AM);
+          }
+        }
+        return parsingComponents;
       }
-      const obj = {};
-      obj[_mod9866.TIME_UNIT_DICTIONARY[arg1[4].toLowerCase(arg1[4])]] = num;
-      const str2 = arg1[1] || arg1[3] || "";
-      const formatted = str2.toLowerCase();
-      if (formatted) {
-        const obj2 = /vor/;
-        let isMatch = obj2.test(formatted);
-        if (!isMatch) {
-          const obj3 = /letzte/;
-          isMatch = obj3.test(formatted);
-        }
-        if (!isMatch) {
-          const obj4 = /vergangen/;
-          isMatch = obj4.test(formatted);
-        }
-        let reverseDurationResult = obj;
-        if (isMatch) {
-          reverseDurationResult = tmp3(9822).reverseDuration(obj);
-        }
-        const ParsingComponents = tmp3(9823).ParsingComponents;
-        return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
-      }
+      parsingComponents.imply("hour", 14);
+      parsingComponents.imply("minute", 0);
+      parsingComponents.imply("meridiem", Meridiem.Meridiem.PM);
     }
   }
 ];
 
-export default _createClass(DETimeUnitAgoFormatParser, items);
+export default _createClass(FRCasualTimeParser, items);

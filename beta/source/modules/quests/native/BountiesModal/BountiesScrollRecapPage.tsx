@@ -1,9 +1,9 @@
-// Module ID: 15330
-// Function ID: 15331
+// Module ID: 15335
+// Function ID: 15336
 // Name: BountiesScrollRecapPage
-// Dependencies: [19, 17, 5081, 21, 587, 5092, 1382, 558, 576, 9012, 15331, 15332, 8426, 6663, 1631, 504, 15333, 1126, 5088, 9040, 5379, 2]
+// Dependencies: [19, 17, 5081, 21, 587, 5092, 1382, 558, 576, 9007, 15336, 15337, 8421, 6663, 1631, 504, 15338, 1126, 5088, 9035, 5379, 2]
 
-// Module 15330 (BountiesScrollRecapPage)
+// Module 15335 (BountiesScrollRecapPage)
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -13,11 +13,11 @@ import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import components_Button_Button from "components/Button/Button" /* 5379 */;
 import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6663 */;
-import common_Video from "common/Video" /* 8426 */;
-import OrbsIcon from "OrbsIcon" /* 9040 */;
-import _modDef15331 from "module_15331" /* 15331 */;
-import _modDef15332 from "module_15332" /* 15332 */;
-import _modDef15333 from "module_15333" /* 15333 */;
+import common_Video from "common/Video" /* 8421 */;
+import OrbsIcon from "OrbsIcon" /* 9035 */;
+import _modDef15336 from "module_15336" /* 15336 */;
+import _modDef15337 from "module_15337" /* 15337 */;
+import _modDef15338 from "module_15338" /* 15338 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import AccessibilityStore from "AccessibilityStore" /* 5081 */;
@@ -60,8 +60,8 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Bounti
   if (obj2.isAndroid()) {
     let tmp11;
     if (cResult[0] !== !reducedMotion) {
-      const obj3 = { url: _modDef15331, style: _false.absoluteFillObject, autoplay: !reducedMotion };
-      const APNGPlayer = tmp(9012).APNGPlayer;
+      const obj3 = { url: _modDef15336, style: _false.absoluteFillObject, autoplay: !reducedMotion };
+      const APNGPlayer = tmp(9007).APNGPlayer;
       const tmp15 = metroRequire(APNGPlayer, obj3);
       cResult[0] = !reducedMotion;
       cResult[1] = tmp15;
@@ -86,7 +86,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Bounti
     let tmp5;
     const _Symbol = Symbol;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj5 = { uri: _modDef15332 };
+      const obj5 = { uri: _modDef15337 };
       cResult[5] = obj5;
       tmp5 = obj5;
     } else {
@@ -117,13 +117,13 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Bounti
   const obj = PlatformUtils;
   if (obj.isAndroid()) {
     const obj2 = { style, needsOffscreenAlphaCompositing: true, renderToHardwareTextureAndroid: true, pointerEvents: "none", children: metroRequire(APNGPlayer, obj3) };
-    obj3 = { url: _modDef15331, style: _false.absoluteFillObject, autoplay: !reducedMotion };
-    APNGPlayer = tmp(9012).APNGPlayer;
+    obj3 = { url: _modDef15336, style: _false.absoluteFillObject, autoplay: !reducedMotion };
+    APNGPlayer = tmp(9007).APNGPlayer;
     tmp3Result = tmp3(React3, obj2);
   } else {
     const obj4 = { source: obj5, style, resizeMode: "contain", paused: reducedMotion, disableFocus: true, preventsDisplaySleepDuringVideoPlayback: false, importantForAccessibility: "no-hide-descendants" };
-    obj5 = { uri: _modDef15332 };
-    const VideoComponent = tmp(8426).VideoComponent;
+    obj5 = { uri: _modDef15337 };
+    const VideoComponent = tmp(8421).VideoComponent;
     tmp3Result = tmp3(VideoComponent, obj4);
   }
   return tmp3Result;
@@ -172,7 +172,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function BountiesScro
     }
     const _Symbol = Symbol;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj3 = { uri: _modDef15333 };
+      const obj3 = { uri: _modDef15338 };
       cResult[5] = obj3;
       tmp13 = obj3;
     } else {
@@ -447,7 +447,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function BountiesScro
   items1 = [tmp.root, style];
   const obj4 = { style: _false.absoluteFillObject, pointerEvents: "none", children: items2 };
   const obj5 = { source: obj6, style: _false.absoluteFillObject, resizeMode: "cover", paused: stateFromStores, disableFocus: true, preventsDisplaySleepDuringVideoPlayback: false, importantForAccessibility: "no-hide-descendants" };
-  obj6 = { uri: _modDef15333 };
+  obj6 = { uri: _modDef15338 };
   const VideoComponent = common_Video.VideoComponent;
   items2 = [metroRequire(VideoComponent, obj5), ];
   const obj7 = { style: tmp.orbsBackground, reducedMotion: stateFromStores };

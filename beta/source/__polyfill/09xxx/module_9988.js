@@ -1,11 +1,12 @@
 // Module ID: 9988
 // Function ID: 9989
-// Dependencies: [41, 42, 93, 95, 98, 9989, 9823, 9827]
+// Dependencies: [41, 42, 93, 95, 98, 9816, 9985, 9817, 9823]
 
 // Module 9988
-import ReferenceWithTimezone from "ReferenceWithTimezone" /* 9823 */;
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 9827 */;
-import _mod9989 from "module_9989" /* 9989 */;
+import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 9816 */;
+import findMostLikelyADYear from "findMostLikelyADYear" /* 9817 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 9823 */;
+import _mod9985 from "module_9985" /* 9985 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
@@ -27,14 +28,14 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const regExp = new RegExp("(?:within|in|for)\\s*(?:(?:pi\u00F9 o meno|intorno|approssimativamente|verso|verso le)\\s*(?:~\\s*)?)?(" + _mod9989.TIME_UNITS_PATTERN + ")(?=\\W|$)", "i");
-const regExp1 = new RegExp("(?:(?:pi\u00F9 o meno|intorno|approssimativamente|verso|verso le)\\s*(?:~\\s*)?)?(" + _mod9989.TIME_UNITS_PATTERN + ")(?=\\W|$)", "i");
-class ENTimeUnitWithinFormatParser {
+const matchAnyPatternResult = repeatedTimeunitPattern.matchAnyPattern(_mod9985.MONTH_DICTIONARY);
+const regExp = new RegExp("((?:in)\\s*)?(" + matchAnyPatternResult + ")\\s*(?:[,-]?\\s*(" + _mod9985.YEAR_PATTERN + ")?)?(?=[^\\s\\w]|\\s+[^0-9]|\\s+$|$)", "i");
+class ENMonthNameParser {
   constructor() {
     let constructResult;
     const self = this;
-    _classCallCheck(this, ENTimeUnitWithinFormatParser);
-    const obj = _getPrototypeOf(ENTimeUnitWithinFormatParser);
+    _classCallCheck(this, ENMonthNameParser);
+    const obj = _getPrototypeOf(ENMonthNameParser);
     const tmp2 = _getPrototypeOf;
     const tmp3 = c3;
     if (_isNativeReflectConstruct()) {
@@ -46,23 +47,47 @@ class ENTimeUnitWithinFormatParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(ENTimeUnitWithinFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(ENMonthNameParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
-  value: function innerPattern(option) {
-    return option.option.forwardDate ? regExp1 : regExp;
+  value: function innerPattern() {
+    return regExp;
   }
 };
 const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      const parseDurationResult = _mod9989.parseDuration(arg1[1]);
-      const ParsingComponents = ReferenceWithTimezone.ParsingComponents;
-      return ParsingComponents.createRelativeFromReference(reference.reference, parseDurationResult);
+    value: function innerExtract(createParsingResult, index) {
+      const str = index[2];
+      const formatted = str.toLowerCase();
+      if (index[0].length <= 3) {
+        if (!_mod9985.FULL_MONTH_NAME_DICTIONARY[formatted]) {
+          return null;
+        }
+      }
+      let str2 = index[1];
+      index = index.index;
+      createParsingResult = createParsingResult.createParsingResult;
+      if (!str2) {
+        str2 = "";
+      }
+      const parsingResult = createParsingResult(index + str2.length, index.index + index[0].length);
+      const start = parsingResult.start;
+      start.imply("day", 1);
+      const tmp9 = _mod9985.MONTH_DICTIONARY[formatted];
+      const start2 = parsingResult.start;
+      start2.assign("month", tmp9);
+      if (index[3]) {
+        const start4 = parsingResult.start;
+        start4.assign("year", _mod9985.parseYear(index[3]));
+      } else {
+        const start3 = parsingResult.start;
+        start3.imply("year", findMostLikelyADYear.findYearClosestToRef(createParsingResult.refDate, 1, tmp9));
+      }
+      return parsingResult;
     }
   }
 ];
 
-export default _createClass(ENTimeUnitWithinFormatParser, items);
+export default _createClass(ENMonthNameParser, items);

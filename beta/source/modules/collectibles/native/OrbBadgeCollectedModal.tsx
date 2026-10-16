@@ -1,14 +1,14 @@
-// Module ID: 13458
-// Function ID: 13459
+// Module ID: 13463
+// Function ID: 13464
 // Name: OrbBadgeCollectedModal
-// Dependencies: [19, 17, 5081, 21, 5092, 587, 6201, 5934, 558, 576, 9061, 12778, 504, 6157, 12991, 8426, 12992, 9048, 1126, 5088, 5379, 6814, 8292, 9059, 6688, 2]
+// Dependencies: [19, 17, 5081, 21, 5092, 587, 6201, 5934, 558, 576, 9056, 12783, 504, 6157, 12996, 8421, 12997, 9043, 1126, 5088, 5379, 6814, 8287, 9054, 6688, 2]
 
-// Module 13458 (OrbBadgeCollectedModal)
+// Module 13463 (OrbBadgeCollectedModal)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5934 */;
 import NavigatorHeader from "NavigatorHeader" /* 6201 */;
-import _mod9061 from "module_9061" /* 9061 */;
+import _mod9056 from "module_9056" /* 9056 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import AccessibilityStore from "AccessibilityStore" /* 5081 */;
@@ -27,7 +27,7 @@ let obj4;
 let obj5;
 let obj6;
 let tmp;
-const BalanceWidgetPill = tmp(12778);
+const BalanceWidgetPill = tmp(12783);
 ({ View: closure_4, StyleSheet } = react_native);
 ({ jsx: metroRequire, jsxs: metroImportDefault } = Fragment);
 let createStyles = createStyles_mod;
@@ -44,7 +44,7 @@ let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function HeaderRight(initialRenderedBalance) {
   const obj = react2;
   const cResult = obj.c(3);
-  const obj2 = _mod9061;
+  const obj2 = _mod9056;
   const balance = obj2.useFetchVirtualCurrencyBalance().balance;
   if (cResult[0] === balance) {
     let tmp4;
@@ -60,7 +60,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function HeaderR
   cResult[2] = tmp5;
   tmp4 = tmp5;
 }) : (function HeaderRight(initialRenderedBalance) {
-  const obj = _mod9061;
+  const obj = _mod9056;
   const obj2 = { initialRenderedBalance, balance: obj.useFetchVirtualCurrencyBalance().balance };
   return metroRequire(BalanceWidgetPill.BalanceWidgetPill, obj2);
 });
@@ -140,7 +140,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function OrbBad
           obj.popWithKey(modalKey);
         }
       }
-      tmp17[0] = onPressViewBadge(9048);
+      tmp17[0] = onPressViewBadge(9043);
       cResult[9] = tmp17;
       tmp16 = tmp17;
     } else {
@@ -272,7 +272,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function OrbBad
       }
     }
     const obj6 = { source: obj8, style: tmp4.background };
-    obj8 = { uri: onPressViewBadge(12991) };
+    obj8 = { uri: onPressViewBadge(12996) };
     const tmp15 = onPressViewBadge(6157);
     tmp11Result = tmp11(tmp15, obj6);
   } else {
@@ -282,10 +282,10 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function OrbBad
         obj.popWithKey(modalKey);
       }
     }
-    const obj10 = { uri: onPressViewBadge(12992) };
-    const VideoComponent = tmp(8426).VideoComponent;
+    const obj10 = { uri: onPressViewBadge(12997) };
+    const VideoComponent = tmp(8421).VideoComponent;
     tmp12[0] = obj10;
-    tmp12[1] = onPressViewBadge(12991);
+    tmp12[1] = onPressViewBadge(12996);
     tmp12[2] = tmp4.background;
     tmp11Result = tmp11(VideoComponent, tmp12);
   }
@@ -328,15 +328,15 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function OrbBad
   }, items2);
   if (stateFromStores) {
     const obj3 = { source: obj4, style: tmp.background };
-    obj4 = { uri: onPressViewBadge(12991) };
+    obj4 = { uri: onPressViewBadge(12996) };
     const tmp15 = onPressViewBadge(6157);
     tmp9Result = tmp9(tmp15, obj3);
     tmp12 = onPressViewBadge;
     tmp13 = tmp9;
   } else {
-    const obj5 = { source: obj6, poster: onPressViewBadge(12991), style: tmp.background, resizeMode: "contain", muted: true, pauseWhileAppInactive: true, paused: false };
-    obj6 = { uri: onPressViewBadge(12992) };
-    const VideoComponent = tmp2(8426).VideoComponent;
+    const obj5 = { source: obj6, poster: onPressViewBadge(12996), style: tmp.background, resizeMode: "contain", muted: true, pauseWhileAppInactive: true, paused: false };
+    obj6 = { uri: onPressViewBadge(12997) };
+    const VideoComponent = tmp2(8421).VideoComponent;
     tmp9Result = tmp9(VideoComponent, obj5);
     tmp12 = onPressViewBadge;
     tmp13 = tmp9;
@@ -346,7 +346,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function OrbBad
   obj7 = { style: tmp.body, children: items4 };
   const SafeAreaPaddingView = tmp2(6814).SafeAreaPaddingView;
   const obj8 = { source: obj9, style: tmp.orbBadge };
-  obj9 = { uri: tmp12(9048) };
+  obj9 = { uri: tmp12(9043) };
   const tmp12Result = tmp12(6157);
   items4 = [tmp13(tmp12Result, obj8), ];
   const obj10 = { style: tmp.bottomContainer, children: items6 };

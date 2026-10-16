@@ -1,9 +1,9 @@
-// Module ID: 18298
-// Function ID: 18299
+// Module ID: 18302
+// Function ID: 18303
 // Name: GuildSettingsModalModeration
-// Dependencies: [19, 4750, 8639, 1085, 21, 5092, 587, 558, 576, 7738, 8638, 1126, 2128, 6896, 6265, 4827, 6201, 7089, 6263, 15116, 6262, 5088, 8580, 5377, 6728, 1503, 504, 2]
+// Dependencies: [19, 4750, 8634, 1085, 21, 5092, 587, 558, 576, 7733, 8633, 1126, 2128, 6896, 6265, 4827, 6201, 7089, 6263, 15121, 6262, 5088, 8575, 5377, 6728, 1503, 504, 2]
 
-// Module 18298 (GuildSettingsModalModeration)
+// Module 18302 (GuildSettingsModalModeration)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl4 from "intl" /* 1126 */;
@@ -14,12 +14,12 @@ import TableRadioRow2 from "TableRadioRow" /* 6262 */;
 import TableRowGroup2 from "TableRowGroup" /* 6265 */;
 import TableSwitchRow2 from "TableSwitchRow" /* 6896 */;
 import HeaderActionButton2 from "HeaderActionButton" /* 7089 */;
-import useUserIsTeen from "useUserIsTeen" /* 7738 */;
-import Form2 from "Form" /* 8580 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8638 */;
+import useUserIsTeen from "useUserIsTeen" /* 7733 */;
+import Form2 from "Form" /* 8575 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8633 */;
 import react from "react" /* 19 */;
 import PermissionStore from "PermissionStore" /* 4750 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 8639 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 8634 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
 import createStyles from "createStyles" /* 5092 */;
@@ -271,7 +271,7 @@ class GuildSettingsModalModeration extends PureComponent {
     const TableRadioGroup = self(6263).TableRadioGroup;
     intl = self(1126).intl;
     intl2 = self(1126).intl;
-    let obj2 = self(15116);
+    let obj2 = self(15121);
     const features = guild.features;
     verificationLevelOptions = obj2.generateVerificationLevelOptions(features.has(constants.COMMUNITY));
     return closure_10(TableRadioGroup, obj, "level-section");
@@ -319,7 +319,7 @@ class GuildSettingsModalModeration extends PureComponent {
     BI4ukC = self(1126).t.BI4ukC;
     const features = guild.features;
     obj3 = HelpdeskUtilsDefault;
-    const obj4 = self(15116);
+    const obj4 = self(15121);
     contentFilterOptions = obj4.generateContentFilterOptions(features.has(constants.COMMUNITY));
     return closure_10(TableRadioGroup, obj, "filter-section");
   }

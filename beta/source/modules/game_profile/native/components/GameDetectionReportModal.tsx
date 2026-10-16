@@ -1,9 +1,9 @@
-// Module ID: 9116
-// Function ID: 9117
+// Module ID: 9111
+// Function ID: 9112
 // Name: GameDetectionReportModal
-// Dependencies: [32, 19, 17, 21, 5092, 587, 558, 576, 1503, 8879, 9117, 8710, 8707, 5934, 1126, 7089, 6208, 6201, 5088, 6263, 6262, 6286, 5379, 6774, 6688, 2]
+// Dependencies: [32, 19, 17, 21, 5092, 587, 558, 576, 1503, 8874, 9112, 8705, 8702, 5934, 1126, 7089, 6208, 6201, 5088, 6263, 6262, 6286, 5379, 6774, 6688, 2]
 
-// Module 9116 (GameDetectionReportModal)
+// Module 9111 (GameDetectionReportModal)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl10 from "intl" /* 1126 */;
@@ -14,7 +14,7 @@ import TableRadioRow3 from "TableRadioRow" /* 6262 */;
 import TableRadioGroup3 from "TableRadioGroup" /* 6263 */;
 import TextInput_TextInput from "TextInput/TextInput" /* 6286 */;
 import TextArea2 from "TextArea" /* 6774 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8879 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8874 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
@@ -193,8 +193,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Report
         tmp13 = closure_0;
         tmp14 = closure_2;
         obj1.title = intl2.string(closure_0(closure_2[14]).t["6tnjbD"]);
-        obj1.headerLeft = function headerLeft() { /* body not rendered: F141885 */ };
-        obj1.headerRight = function headerRight() { /* body not rendered: F141886 */ };
+        obj1.headerLeft = function headerLeft() { /* body not rendered: F141911 */ };
+        obj1.headerRight = function headerRight() { /* body not rendered: F141912 */ };
         setOptions2Result = setOptions2(obj1);
       } else {
         str = "game_search";
@@ -211,8 +211,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Report
           tmp7 = closure_0;
           tmp8 = closure_2;
           obj2 = closure_0(closure_2[17]);
-          obj.headerLeft = obj2.getHeaderBackButton(() => { /* body not rendered: F141887 */ });
-          obj.headerRight = function headerRight() { /* body not rendered: F141888 */ };
+          obj.headerLeft = obj2.getHeaderBackButton(() => { /* body not rendered: F141913 */ });
+          obj.headerRight = function headerRight() { /* body not rendered: F141914 */ };
           setOptionsResult = setOptions(obj);
         } else {
           tmp16 = closure_2;
@@ -227,8 +227,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Report
           tmp21 = closure_0;
           tmp22 = closure_2;
           obj5 = closure_0(closure_2[17]);
-          obj6.headerLeft = obj5.getHeaderBackButton(() => { /* body not rendered: F141889 */ });
-          obj6.headerRight = function headerRight() { /* body not rendered: F141890 */ };
+          obj6.headerLeft = obj5.getHeaderBackButton(() => { /* body not rendered: F141915 */ });
+          obj6.headerRight = function headerRight() { /* body not rendered: F141916 */ };
           setOptions3Result = setOptions3(obj6);
         }
       }

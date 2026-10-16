@@ -1,16 +1,16 @@
-// Module ID: 12733
-// Function ID: 12734
+// Module ID: 12738
+// Function ID: 12739
 // Name: SocialLayerStorefrontWishlistItemCard
-// Dependencies: [109, 19, 5440, 12731, 21, 5092, 587, 558, 576, 504, 9029, 6157, 8977, 2]
+// Dependencies: [109, 19, 5440, 12736, 21, 5092, 587, 558, 576, 504, 9024, 6157, 8972, 2]
 
-// Module 12733 (SocialLayerStorefrontWishlistItemCard)
+// Module 12738 (SocialLayerStorefrontWishlistItemCard)
 import nativeDefault from "native" /* 587 */;
-import WishlistItemCardBaseDefault from "WishlistItemCardBase" /* 8977 */;
-import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 9029 */;
+import WishlistItemCardBaseDefault from "WishlistItemCardBase" /* 8972 */;
+import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 9024 */;
 import _objectWithoutProperties_mod from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 5440 */;
-import SentGiftsStore from "SentGiftsStore" /* 12731 */;
+import SentGiftsStore from "SentGiftsStore" /* 12736 */;
 import Fragment from "Fragment" /* 21 */;
 import createStyles_mod from "createStyles" /* 5092 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
@@ -201,7 +201,7 @@ tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function SocialLayerStore
               cResult[30] = tmp36;
               tmp29 = tmp36;
             }
-            OWNED = tmp(8977).WishlistItemCardOverlay.OWNED;
+            OWNED = tmp(8972).WishlistItemCardOverlay.OWNED;
           }
         }
       }

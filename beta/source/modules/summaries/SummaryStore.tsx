@@ -1,21 +1,21 @@
-// Module ID: 9615
-// Function ID: 9616
+// Module ID: 9611
+// Function ID: 9612
 // Name: SummaryStore
-// Dependencies: [32, 5016, 8699, 2065, 2087, 6035, 2116, 5966, 1390, 9616, 8700, 504, 11, 1102, 9617, 584, 9618, 12, 2]
+// Dependencies: [32, 5016, 8694, 2065, 2087, 6035, 2116, 5966, 1390, 9612, 8695, 504, 11, 1102, 9613, 584, 9614, 12, 2]
 
-// Module 9615 (SummaryStore)
+// Module 9611 (SummaryStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import _mod8700 from "module_8700" /* 8700 */;
-import SummaryConstants from "SummaryConstants" /* 9616 */;
-import ChannelSummariesExperiment from "ChannelSummariesExperiment" /* 9617 */;
-import Summary from "Summary" /* 9618 */;
+import _mod8695 from "module_8695" /* 8695 */;
+import SummaryConstants from "SummaryConstants" /* 9612 */;
+import ChannelSummariesExperiment from "ChannelSummariesExperiment" /* 9613 */;
+import Summary from "Summary" /* 9614 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import ExperimentStore from "ExperimentStore" /* 5016 */;
-import QuickSwitcherStore from "QuickSwitcherStore" /* 8699 */;
+import QuickSwitcherStore from "QuickSwitcherStore" /* 8694 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import GuildStore from "GuildStore" /* 2087 */;
 import ReadStateStore from "ReadStateStore" /* 6035 */;
@@ -30,7 +30,7 @@ let closure_18, dependencyMap, findIndexResult, flag, startId;
 function handleQuickSwitcherUpdate() {
   const results = QuickSwitcherStore.getProps().results;
   const found = results.filter((type) => {
-    const tmp = type.type === _mod8700.AutocompleterResultTypes.TEXT_CHANNEL && 0 === type.record.type;
+    const tmp = type.type === _mod8695.AutocompleterResultTypes.TEXT_CHANNEL && 0 === type.record.type;
     return tmp;
   });
   closure_24 = found.map((record) => record.record.id);

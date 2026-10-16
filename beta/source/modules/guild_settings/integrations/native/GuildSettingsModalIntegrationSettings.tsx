@@ -1,9 +1,9 @@
-// Module ID: 18392
-// Function ID: 18393
+// Module ID: 18396
+// Function ID: 18397
 // Name: GuildSettingsModalIntegrationSettings
-// Dependencies: [19, 17, 2119, 8639, 21, 18393, 1126, 5092, 587, 558, 576, 6262, 6180, 18394, 6185, 6265, 6896, 4827, 5088, 5763, 6157, 1415, 4969, 8580, 5377, 4702, 6263, 18395, 6728, 8638, 504, 5031, 18357, 2]
+// Dependencies: [19, 17, 2119, 8634, 21, 18397, 1126, 5092, 587, 558, 576, 6262, 6180, 18398, 6185, 6265, 6896, 4827, 5088, 5763, 6157, 1415, 4969, 8575, 5377, 4702, 6263, 18399, 6728, 8633, 504, 5031, 18361, 2]
 
-// Module 18392 (GuildSettingsModalIntegrationSettings)
+// Module 18396 (GuildSettingsModalIntegrationSettings)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -14,11 +14,11 @@ import TableRow4 from "TableRow" /* 6180 */;
 import Pressables from "Pressables" /* 6185 */;
 import TableRowGroup4 from "TableRowGroup" /* 6265 */;
 import TableSwitchRow2 from "TableSwitchRow" /* 6896 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8638 */;
-import AssetRegistryDefault from "AssetRegistry" /* 18394 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8633 */;
+import AssetRegistryDefault from "AssetRegistry" /* 18398 */;
 import react from "react" /* 19 */;
 import GuildRoleStore from "GuildRoleStore" /* 2119 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 8639 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 8634 */;
 import Fragment from "Fragment" /* 21 */;
 import createStyles from "createStyles" /* 5092 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
@@ -331,7 +331,7 @@ class GuildSettingsModalIntegrationSettings extends PureComponent {
       tmp15Result2 = tmp15(4969);
       tmp19Result = closure_6(tmp16Result, obj5);
     }
-    const values = Object.values(tmp12(18393).IntegrationExpireGracePeriodTypes);
+    const values = Object.values(tmp12(18397).IntegrationExpireGracePeriodTypes);
     const found = values.filter(function isInteger(item) {
       return Number.isInteger(item);
     });
@@ -343,7 +343,7 @@ class GuildSettingsModalIntegrationSettings extends PureComponent {
     });
     const obj6 = { style: { flex: 1 }, contentContainerStyle: items, children: closure_7(Stack, obj7) };
     items = [{ paddingTop: 16 }, self.props.contentContainerStyle];
-    const Form = tmp15(8580).Form;
+    const Form = tmp15(8575).Form;
     obj7 = { style: iter.stackPadding, spacing: self(587).space.PX_24, children: items1 };
     Stack = tmp15(5377).Stack;
     const TableRowGroup = tmp15(6265).TableRowGroup;
@@ -383,11 +383,11 @@ class GuildSettingsModalIntegrationSettings extends PureComponent {
     items1[1] = closure_7(TableRowGroup2, obj9);
     const obj15 = { title: stringResult, value: integration.expire_behavior, onChange: self.handleExpireBehaviorChange, hasIcons: false, children: items3 };
     const TableRadioGroup = tmp15(6263).TableRadioGroup;
-    const obj16 = { value: tmp15(18395).IntegrationExpireBehaviorTypes.REMOVE_ROLE, label: intl6.string(tmp15(1126).t["6kpw4i"]) };
+    const obj16 = { value: tmp15(18399).IntegrationExpireBehaviorTypes.REMOVE_ROLE, label: intl6.string(tmp15(1126).t["6kpw4i"]) };
     const TableRadioRow = tmp15(6262).TableRadioRow;
     intl6 = tmp15(1126).intl;
     items3 = [closure_6(TableRadioRow, obj16), ];
-    const obj17 = { value: tmp15(18395).IntegrationExpireBehaviorTypes.KICK, label: intl7.string(tmp15(1126).t.fQUQIJ) };
+    const obj17 = { value: tmp15(18399).IntegrationExpireBehaviorTypes.KICK, label: intl7.string(tmp15(1126).t.fQUQIJ) };
     const TableRadioRow2 = tmp15(6262).TableRadioRow;
     intl7 = tmp15(1126).intl;
     items3[1] = closure_6(TableRadioRow2, obj17);

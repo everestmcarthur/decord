@@ -1,9 +1,9 @@
-// Module ID: 16627
-// Function ID: 16628
+// Module ID: 16632
+// Function ID: 16633
 // Name: GameClaimCardStack
-// Dependencies: [19, 17, 21, 587, 683, 5092, 558, 576, 6157, 9082, 2]
+// Dependencies: [19, 17, 21, 587, 683, 5092, 558, 576, 6157, 9077, 2]
 
-// Module 16627 (GameClaimCardStack)
+// Module 16632 (GameClaimCardStack)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -24,7 +24,7 @@ let size;
 let size1;
 let size2;
 let tmp;
-const PlusSmallIcon = tmp(9082);
+const PlusSmallIcon = tmp(9077);
 const View = react_native.View;
 ({ jsx: closure_4, jsxs: hasOwnProperty } = Fragment);
 const sum = nativeDefault.space.PX_12 + nativeDefault.space.PX_8 + 96;

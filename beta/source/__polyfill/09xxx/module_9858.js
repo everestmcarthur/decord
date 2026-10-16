@@ -1,61 +1,86 @@
 // Module ID: 9858
 // Function ID: 9859
-// Dependencies: [41, 42]
+// Dependencies: [41, 42, 93, 95, 98, 9835]
 
 // Module 9858
+import _mod9835 from "module_9835" /* 9835 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import map from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
-let start;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {
 
-const regExp = new RegExp("^\\s*(?:\\(?(?:GMT|UTC)\\s?)?([+-])(\\d{1,2})(?::?(\\d{2}))?\\)?", "i");
-class ExtractTimezoneOffsetRefiner {
-  constructor() {
-    _classCallCheck(this, ExtractTimezoneOffsetRefiner);
+    }));
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
 }
+class MergeWeekdayComponentRefiner {
+  constructor() {
+    let constructResult;
+    const self = this;
+    _classCallCheck(this, MergeWeekdayComponentRefiner);
+    const obj = _getPrototypeOf(MergeWeekdayComponentRefiner);
+    const tmp2 = _getPrototypeOf;
+    const tmp3 = map;
+    if (_isNativeReflectConstruct()) {
+      const _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(MergeWeekdayComponentRefiner, _mod9835.MergingRefiner);
 const entry = {
-  key: "refine",
-  value: function refine(arg0, arr) {
-    let text = arg0;
-    const item = arr.forEach((start) => {
-      text = start;
-      start = start.start;
-      if (!start.isCertain("timezoneOffset")) {
-        const str = text.text;
-        const match = regExp.exec(str.substring(start.index + start.text.length));
-        const obj = text;
-        if (match) {
-          obj.debug(() => {
-            console.log("Extracting timezone: '" + match[0] + "' into : " + closure_0);
-          });
-          const _parseInt = parseInt;
-          let str2 = match[3];
-          const result = 60 * parseInt(match[2]);
-          const _parseInt2 = parseInt;
-          if (!str2) {
-            str2 = "0";
-          }
-          const sum = result + _parseInt2(str2);
-          if (sum <= 840) {
-            let tmp7 = sum;
-            if ("-" === match[1]) {
-              tmp7 = -sum;
-            }
-            if (null != start.end) {
-              const end = start.end;
-              end.assign("timezoneOffset", tmp7);
-            }
-            const start2 = start.start;
-            start2.assign("timezoneOffset", tmp7);
-            start.text = start.text + match[0];
-          }
-        }
-      }
-    });
-    return arr;
+  key: "mergeResults",
+  value: function mergeResults(arg0, index, clone) {
+    const cloneResult = clone.clone();
+    cloneResult.index = index.index;
+    cloneResult.text = index.text + arg0 + cloneResult.text;
+    const start = cloneResult.start;
+    const start2 = index.start;
+    start.assign("weekday", start2.get("weekday"));
+    if (cloneResult.end) {
+      const end = cloneResult.end;
+      const start3 = index.start;
+      end.assign("weekday", start3.get("weekday"));
+    }
+    return cloneResult;
   }
 };
-const items = [entry];
+const items = [
+  entry,
+  {
+    key: "shouldMergeResults",
+    value: function shouldMergeResults(str, start, start2) {
+      start = start.start;
+      let result = start.isOnlyWeekdayComponent();
+      if (result) {
+        start2 = start.start;
+        result = !start2.isCertain("hour");
+      }
+      if (result) {
+        const start3 = start2.start;
+        result = start3.isCertain("day");
+      }
+      if (result) {
+        result = null != str.match(/^,?\s*$/);
+      }
+      return result;
+    }
+  }
+];
 
-export default _createClass(ExtractTimezoneOffsetRefiner, items);
+export default _createClass(MergeWeekdayComponentRefiner, items);

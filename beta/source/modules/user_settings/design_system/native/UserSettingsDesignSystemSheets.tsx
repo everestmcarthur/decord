@@ -1,9 +1,9 @@
-// Module ID: 16180
-// Function ID: 16181
+// Module ID: 16185
+// Function ID: 16186
 // Name: UserSettingsDesignSystemSheets
-// Dependencies: [32, 19, 17, 1085, 21, 5092, 558, 576, 8563, 6894, 6839, 6286, 5377, 6895, 6899, 5056, 5379, 1126, 10324, 16181, 5088, 6182, 2]
+// Dependencies: [32, 19, 17, 1085, 21, 5092, 558, 576, 8558, 6894, 6839, 6286, 5377, 6895, 6899, 5056, 5379, 1126, 10325, 16186, 5088, 6182, 2]
 
-// Module 16180 (UserSettingsDesignSystemSheets)
+// Module 16185 (UserSettingsDesignSystemSheets)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import Constants from "Constants" /* 1085 */;
@@ -17,8 +17,8 @@ import TextInput_TextInput from "TextInput/TextInput" /* 6286 */;
 import BottomSheetTitleHeader2 from "BottomSheetTitleHeader" /* 6839 */;
 import ActionSheetRow from "ActionSheetRow" /* 6895 */;
 import ActionSheet2 from "ActionSheet" /* 6899 */;
-import PromoSheet2 from "PromoSheet" /* 10324 */;
-import _modDef16181 from "module_16181" /* 16181 */;
+import PromoSheet2 from "PromoSheet" /* 10325 */;
+import _modDef16186 from "module_16186" /* 16186 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
@@ -225,7 +225,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function DemoAc
       }
     }
     const obj12 = { onPress: NOOP, label: tmp17 };
-    tmp21 = metroImportDefault(tmp(8563).ActionSheetHeaderPressableText, obj12);
+    tmp21 = metroImportDefault(tmp(8558).ActionSheetHeaderPressableText, obj12);
   }
   cResult[0] = tmp17;
   cResult[1] = first;
@@ -270,7 +270,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function DemoAc
   tmp16Result = first;
   if (tmp16Result) {
     const obj2 = { onPress: NOOP, label: tmp14 };
-    tmp16Result = tmp16(tmp17(8563).ActionSheetHeaderPressableText, obj2);
+    tmp16Result = tmp16(tmp17(8558).ActionSheetHeaderPressableText, obj2);
   }
   tmp16Result2 = tmp2;
   if (tmp16Result2) {
@@ -341,8 +341,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function DemoPr
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const obj3 = { graphic: obj4, gradientColor: "purple", title: "Here's a Promo Sheet", description: "You can use this to promote new features, products, or anything else you'd like!", actions: first };
     obj4 = { type: "image", src: obj5, aspectRatio: "16/9" };
-    obj5 = { uri: _modDef16181 };
-    const PromoSheet = tmp(10324).PromoSheet;
+    obj5 = { uri: _modDef16186 };
+    const PromoSheet = tmp(10325).PromoSheet;
     const tmp10 = metroImportDefault(PromoSheet, obj3);
     cResult[1] = tmp10;
     tmp7 = tmp10;
@@ -367,7 +367,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function DemoPr
   intl = intl2.intl;
   const obj2 = { graphic: obj3, gradientColor: "purple", title: "Here's a Promo Sheet", description: "You can use this to promote new features, products, or anything else you'd like!", actions: tmp };
   obj3 = { type: "image", src: obj4, aspectRatio: "16/9" };
-  obj4 = { uri: _modDef16181 };
+  obj4 = { uri: _modDef16186 };
   tmp = metroImportDefault(Button, obj);
   const PromoSheet = PromoSheet2.PromoSheet;
   return metroImportDefault(PromoSheet, obj2);

@@ -1,11 +1,11 @@
 // Module ID: 10001
 // Function ID: 10002
-// Dependencies: [41, 42, 93, 95, 98, 9814, 9826, 9827]
+// Dependencies: [41, 42, 93, 95, 98, 9985, 9818, 9819, 9835]
 
 // Module 10001
-import en from "en" /* 9814 */;
-import assignSimilarDate from "assignSimilarDate" /* 9826 */;
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 9827 */;
+import ReferenceWithTimezone2 from "ReferenceWithTimezone" /* 9819 */;
+import _mod9835 from "module_9835" /* 9835 */;
+import _mod9985 from "module_9985" /* 9985 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
@@ -27,13 +27,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const re6 = /(?:questo|questa)?\s{0,3}(mattina|pomeriggio|sera|notte|mezzanotte|mezzogiorno)(?=\W|$)/i;
-class ITCasualTimeParser {
+class ENMergeRelativeDateRefiner {
   constructor() {
     let constructResult;
     const self = this;
-    _classCallCheck(this, ITCasualTimeParser);
-    const obj = _getPrototypeOf(ITCasualTimeParser);
+    _classCallCheck(this, ENMergeRelativeDateRefiner);
+    const obj = _getPrototypeOf(ENMergeRelativeDateRefiner);
     const tmp2 = _getPrototypeOf;
     const tmp3 = c3;
     if (_isNativeReflectConstruct()) {
@@ -45,54 +44,65 @@ class ITCasualTimeParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(ITCasualTimeParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(ENMergeRelativeDateRefiner, _mod9835.MergingRefiner);
 const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    return re6;
+  key: "patternBetween",
+  value: function patternBetween() {
+    return /^\s*$/i;
   }
 };
 const items = [
   entry,
   {
-    key: "innerExtract",
-    value: function innerExtract(refDate, arg1) {
-      refDate = refDate.refDate;
-      const parsingComponents = refDate.createParsingComponents();
-      const str = arg1[1];
-      const formatted = str.toLowerCase();
-      if ("pomeriggio" === formatted) {
-        parsingComponents.imply("meridiem", en.Meridiem.PM);
-        parsingComponents.imply("hour", 15);
-      } else {
-        if ("sera" !== formatted) {
-          if ("notte" !== formatted) {
-            if ("mezzanotte" === formatted) {
-              const _Date = Date;
-              const self = this;
-              const self2 = this;
-              const date = new Date(refDate.getTime());
-              date.setDate(date.getDate() + 1);
-              assignSimilarDate.assignSimilarDate(parsingComponents, date);
-              assignSimilarDate.implySimilarTime(parsingComponents, date);
-              parsingComponents.imply("hour", 0);
-              parsingComponents.imply("minute", 0);
-              parsingComponents.imply("second", 0);
-            } else if ("mattina" === formatted) {
-              parsingComponents.imply("meridiem", en.Meridiem.AM);
-              parsingComponents.imply("hour", 6);
-            } else if ("mezzogiorno" === formatted) {
-              parsingComponents.imply("meridiem", en.Meridiem.AM);
-              parsingComponents.imply("hour", 12);
-            }
-          }
+    key: "shouldMergeResults",
+    value: function shouldMergeResults(str, text, start) {
+      let match = str.match(this.patternBetween());
+      if (match) {
+        let tmp5 = null == str.match(/\s+(prima|dal)$/i);
+        null != text.text.match(/\s+(prima|dal)$/i);
+        if (tmp5) {
+          const str2 = text.text;
+          tmp5 = null == str2.match(/\s+(dopo|dal|fino)$/i);
         }
-        parsingComponents.imply("meridiem", en.Meridiem.PM);
-        parsingComponents.imply("hour", 20);
+        let tmp6 = !tmp5;
+        if (tmp6) {
+          start = start.start;
+          let value = start.get("day");
+          if (value) {
+            const start2 = start.start;
+            value = start2.get("month");
+          }
+          if (value) {
+            const start3 = start.start;
+            value = start3.get("year");
+          }
+          tmp6 = value;
+        }
+        match = tmp6;
       }
-      return parsingComponents;
+      return match;
+    }
+  },
+  {
+    key: "mergeResults",
+    value: function mergeResults(arg0, text, start) {
+      const parseDurationResult = _mod9985.parseDuration(text.text);
+      let reverseDurationResult = parseDurationResult;
+      const str = text.text;
+      if (null != str.match(/\s+(prima|dal)$/i)) {
+        reverseDurationResult = tmp(9818).reverseDuration(parseDurationResult);
+      }
+      const ParsingComponents = tmp(9819).ParsingComponents;
+      const createRelativeFromReference = ParsingComponents.createRelativeFromReference;
+      const ReferenceWithTimezone = tmp(9819).ReferenceWithTimezone;
+      start = start.start;
+      const relativeFromReference = createRelativeFromReference(ReferenceWithTimezone.fromDate(start.date()), reverseDurationResult);
+      const reference = start.reference;
+      const index = text.index;
+      const parsingResult = new ReferenceWithTimezone2.ParsingResult(reference, index, "" + text.text + arg0 + start.text, relativeFromReference);
+      return parsingResult;
     }
   }
 ];
 
-export default _createClass(ITCasualTimeParser, items);
+export default _createClass(ENMergeRelativeDateRefiner, items);

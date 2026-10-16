@@ -1,10 +1,10 @@
-// Module ID: 15105
-// Function ID: 15106
+// Module ID: 15110
+// Function ID: 15111
 // Name: ExplicitMediaRedactionNativeUtils
-// Dependencies: [1390, 6993, 9313, 1209, 1126, 8243, 7498, 5918, 5056, 15106, 2000, 6990, 6996, 2]
+// Dependencies: [1390, 6993, 9308, 1209, 1126, 8238, 7493, 5918, 5056, 15111, 2000, 6990, 6996, 2]
 // Exports: handleSensitiveMediaFilterPress, shouldAgeVerifyForSearchMedia
 
-// Module 15105 (ExplicitMediaRedactionNativeUtils)
+// Module 15110 (ExplicitMediaRedactionNativeUtils)
 import intl4 from "intl" /* 1126 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1209 */;
 import asyncRequire from "asyncRequire" /* 2000 */;
@@ -13,9 +13,9 @@ import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 591
 import ObscuredMediaUtils from "ObscuredMediaUtils" /* 6990 */;
 import ExplicitMediaRedactionConstants from "ExplicitMediaRedactionConstants" /* 6993 */;
 import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 6996 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7498 */;
-import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 8243 */;
-import SearchConstants from "SearchConstants" /* 9313 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7493 */;
+import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 8238 */;
+import SearchConstants from "SearchConstants" /* 9308 */;
 import UserStore from "UserStore" /* 1390 */;
 import size from "module_2" /* 2 */;
 
@@ -99,7 +99,7 @@ export const handleSensitiveMediaFilterPress = function handleSensitiveMediaFilt
     push3(obj3);
   }
   const obj4 = ActionSheetActionCreatorsDefault;
-  obj4.openLazy(asyncRequire(15106, dependencyMap.paths), closure_4, { title, subtitle, options: items, currentValue });
+  obj4.openLazy(asyncRequire(15111, dependencyMap.paths), closure_4, { title, subtitle, options: items, currentValue });
 };
 export const shouldAgeVerifyForSearchMedia = function shouldAgeVerifyForSearchMedia(media, found) {
   if (null == found) {

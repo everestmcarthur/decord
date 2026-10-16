@@ -1,11 +1,11 @@
 // Module ID: 9959
 // Function ID: 9960
-// Dependencies: [41, 42, 93, 95, 98, 9820, 9949, 9847, 9951]
+// Dependencies: [41, 42, 93, 95, 98, 9816, 9960, 9843, 9823]
 
 // Module 9959
-import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 9820 */;
-import REGEX_PARTS from "REGEX_PARTS" /* 9949 */;
-import AbstractParserWithLeftBoundaryChecking from "AbstractParserWithLeftBoundaryChecking" /* 9951 */;
+import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 9816 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 9823 */;
+import _mod9960 from "module_9960" /* 9960 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
@@ -13,7 +13,7 @@ import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
 let tmp2;
-const _mod9847 = tmp2(9847);
+const _mod9843 = tmp2(9843);
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,12 +29,13 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class RUWeekdayParser {
+const regExp = new RegExp("(?:(?:\\,|\\(|\\\uFF08)\\s*)?(?:(este|esta|pasado|pr[o\u00F3]ximo)\\s*)?(" + repeatedTimeunitPattern.matchAnyPattern(_mod9960.WEEKDAY_DICTIONARY) + ")(?:\\s*(?:\\,|\\)|\\\uFF09))?(?:\\s*(este|esta|pasado|pr[\u00F3o]ximo)\\s*semana)?(?=\\W|\\d|$)", "i");
+class ESWeekdayParser {
   constructor() {
     let constructResult;
     const self = this;
-    _classCallCheck(this, RUWeekdayParser);
-    const obj = _getPrototypeOf(RUWeekdayParser);
+    _classCallCheck(this, ESWeekdayParser);
+    const obj = _getPrototypeOf(ESWeekdayParser);
     const tmp2 = _getPrototypeOf;
     const tmp3 = c3;
     if (_isNativeReflectConstruct()) {
@@ -46,11 +47,11 @@ class RUWeekdayParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(RUWeekdayParser, AbstractParserWithLeftBoundaryChecking.AbstractParserWithLeftRightBoundaryChecking);
+_inherits(ESWeekdayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "innerPatternString",
-  value: function innerPatternString(arg0) {
-    return "(?:(?:,|\\(|\uFF08)\\s*)?(?:\u0432\\s*?)?(?:(\u044D\u0442\u0443|\u044D\u0442\u043E\u0442|\u043F\u0440\u043E\u0448\u043B\u044B\u0439|\u043F\u0440\u043E\u0448\u043B\u0443\u044E|\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0438\u0439|\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0443\u044E|\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0435\u0433\u043E)\\s*)?(" + repeatedTimeunitPattern.matchAnyPattern(REGEX_PARTS.WEEKDAY_DICTIONARY) + ")(?:\\s*(?:,|\\)|\uFF09))?(?:\\s*\u043D\u0430\\s*(\u044D\u0442\u043E\u0439|\u043F\u0440\u043E\u0448\u043B\u043E\u0439|\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0435\u0439)\\s*\u043D\u0435\u0434\u0435\u043B\u0435)?";
+  key: "innerPattern",
+  value: function innerPattern() {
+    return regExp;
   }
 };
 const items = [
@@ -60,44 +61,29 @@ const items = [
     value: function innerExtract(reference, arg1) {
       const str = arg1[2];
       const formatted = str.toLowerCase();
-      let str2 = arg1[1];
-      const tmp4 = REGEX_PARTS.WEEKDAY_DICTIONARY[formatted];
-      if (!str2) {
-        str2 = arg1[3];
-      }
-      if (!str2) {
-        str2 = "";
-      }
-      const formatted1 = str2.toLowerCase();
-      let str3 = "last";
-      if ("\u043F\u0440\u043E\u0448\u043B\u044B\u0439" != formatted1) {
-        str3 = "last";
-        if ("\u043F\u0440\u043E\u0448\u043B\u0443\u044E" != formatted1) {
-          str3 = "last";
-          if ("\u043F\u0440\u043E\u0448\u043B\u043E\u0439" != formatted1) {
-            str3 = "next";
-            if ("\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0438\u0439" != formatted1) {
-              str3 = "next";
-              if ("\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0443\u044E" != formatted1) {
-                str3 = "next";
-                if ("\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0435\u0439" != formatted1) {
-                  str3 = "next";
-                  if ("\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0435\u0433\u043E" != formatted1) {
-                    str3 = null;
-                    const tmp6 = "\u044D\u0442\u043E\u0442" != formatted1 && "\u044D\u0442\u0443" != formatted1 && "\u044D\u0442\u043E\u0439" != formatted1;
-                    if (!tmp6) {
-                      str3 = "this";
-                    }
-                  }
-                }
+      const tmp4 = _mod9960.WEEKDAY_DICTIONARY[formatted];
+      if (undefined === tmp4) {
+        return null;
+      } else {
+        const str2 = arg1[1] || arg1[3] || "";
+        const formatted1 = str2.toLowerCase();
+        let str5 = "this";
+        if ("pasado" != formatted1) {
+          str5 = "next";
+          if ("pr\u00F3ximo" != formatted1) {
+            str5 = "next";
+            if ("proximo" != formatted1) {
+              str5 = null;
+              if ("este" == formatted1) {
+                str5 = "this";
               }
             }
           }
         }
+        return _mod9843.createParsingComponentsAtWeekday(reference.reference, tmp4, str5);
       }
-      return _mod9847.createParsingComponentsAtWeekday(reference.reference, tmp4, str3);
     }
   }
 ];
 
-export default _createClass(RUWeekdayParser, items);
+export default _createClass(ESWeekdayParser, items);

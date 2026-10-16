@@ -96,7 +96,7 @@ let fn = function n(userConfig, callback) {
       initialVelocity: 0,
       current: "enabled",
       lastTimestamp: null,
-      startTimestamp: "SAFETY_HUB_RESET_AGE_CHECK_STATUS",
+      startTimestamp: "-1",
       reduceMotion: tmp4Result.getReduceMotionForAnimation(obj.reduceMotion)
     };
     num = obj.velocity;

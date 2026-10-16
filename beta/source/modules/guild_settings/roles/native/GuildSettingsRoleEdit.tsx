@@ -1,9 +1,9 @@
-// Module ID: 18419
-// Function ID: 18420
+// Module ID: 18423
+// Function ID: 18424
 // Name: GuildSettingsRoleEdit
-// Dependencies: [109, 5, 19, 17, 2120, 502, 2125, 2119, 2087, 8639, 18406, 18401, 1085, 18408, 21, 5092, 587, 4827, 6201, 7089, 1126, 5107, 18410, 12, 1265, 8603, 18420, 4809, 6098, 10728, 5299, 1200, 6265, 6180, 7568, 18421, 18430, 18432, 18433, 5377, 8580, 558, 576, 1503, 4755, 504, 6728, 2]
+// Dependencies: [109, 5, 19, 17, 2120, 502, 2125, 2119, 2087, 8634, 18410, 18405, 1085, 18412, 21, 5092, 587, 4827, 6201, 7089, 1126, 5107, 18414, 12, 1265, 8598, 18424, 4809, 6098, 10729, 5299, 1200, 6265, 6180, 7563, 18425, 18434, 18436, 18437, 5377, 8575, 558, 576, 1503, 4755, 504, 6728, 2]
 
-// Module 18419 (GuildSettingsRoleEdit)
+// Module 18423 (GuildSettingsRoleEdit)
 import _modDef12 from "module_12" /* 12 */;
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
@@ -21,18 +21,18 @@ import TableRow4 from "TableRow" /* 6180 */;
 import NavigatorHeader2 from "NavigatorHeader" /* 6201 */;
 import TableRowGroup2 from "TableRowGroup" /* 6265 */;
 import HeaderActionButton2 from "HeaderActionButton" /* 7089 */;
-import InlineNotice2 from "InlineNotice" /* 7568 */;
-import ChannelPermissionsUtils from "ChannelPermissionsUtils" /* 8603 */;
-import ConnectionsRoleActionCreators from "ConnectionsRoleActionCreators" /* 10728 */;
-import GuildSettingsConstants from "GuildSettingsConstants" /* 18401 */;
-import GuildSettingsRolesStore2 from "GuildSettingsRolesStore" /* 18406 */;
-import EnhancedRoleColorConstants from "EnhancedRoleColorConstants" /* 18408 */;
-import GuildSettingsRolesUtils from "GuildSettingsRolesUtils" /* 18410 */;
-import GuildSettingsRolesActionCreators from "GuildSettingsRolesActionCreators" /* 18420 */;
-import GuildSettingsRoleEditDisplayDefault from "GuildSettingsRoleEditDisplay" /* 18421 */;
-import GuildSettingsRoleEditPermissionsDefault from "GuildSettingsRoleEditPermissions" /* 18430 */;
-import GuildSettingsRoleMembersDefault from "GuildSettingsRoleMembers" /* 18432 */;
-import GuildSettingsRoleEditConnectionsControlsDefault from "GuildSettingsRoleEditConnectionsControls" /* 18433 */;
+import InlineNotice2 from "InlineNotice" /* 7563 */;
+import ChannelPermissionsUtils from "ChannelPermissionsUtils" /* 8598 */;
+import ConnectionsRoleActionCreators from "ConnectionsRoleActionCreators" /* 10729 */;
+import GuildSettingsConstants from "GuildSettingsConstants" /* 18405 */;
+import GuildSettingsRolesStore2 from "GuildSettingsRolesStore" /* 18410 */;
+import EnhancedRoleColorConstants from "EnhancedRoleColorConstants" /* 18412 */;
+import GuildSettingsRolesUtils from "GuildSettingsRolesUtils" /* 18414 */;
+import GuildSettingsRolesActionCreators from "GuildSettingsRolesActionCreators" /* 18424 */;
+import GuildSettingsRoleEditDisplayDefault from "GuildSettingsRoleEditDisplay" /* 18425 */;
+import GuildSettingsRoleEditPermissionsDefault from "GuildSettingsRoleEditPermissions" /* 18434 */;
+import GuildSettingsRoleMembersDefault from "GuildSettingsRoleMembers" /* 18436 */;
+import GuildSettingsRoleEditConnectionsControlsDefault from "GuildSettingsRoleEditConnectionsControls" /* 18437 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import react from "react" /* 19 */;
@@ -40,7 +40,7 @@ import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildMemberStore from "GuildMemberStore" /* 2125 */;
 import GuildRoleStore from "GuildRoleStore" /* 2119 */;
 import GuildStore from "GuildStore" /* 2087 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 8639 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 8634 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
 import createStyles from "createStyles" /* 5092 */;
@@ -631,7 +631,7 @@ class GuildSettingsRoleEdit extends PureComponent {
       tmp22Result = tmp22(Stack2, obj7);
     } else {
       const obj9 = { contentContainerStyle: tmp.form, children: tmp26(Stack, obj17) };
-      const Form = tmp24(8580).Form;
+      const Form = tmp24(8575).Form;
       obj17 = { spacing: nativeDefault.space.PX_24, children: items };
       Stack = tmp24(5377).Stack;
       let result = null;

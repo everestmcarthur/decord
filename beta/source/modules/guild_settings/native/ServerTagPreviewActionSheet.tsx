@@ -1,15 +1,15 @@
-// Module ID: 14140
-// Function ID: 14141
+// Module ID: 14145
+// Function ID: 14146
 // Name: ServerTagPreviewActionSheet
-// Dependencies: [19, 17, 8617, 21, 5092, 587, 558, 576, 8618, 8619, 5056, 14141, 5088, 1126, 5379, 6727, 6839, 6899, 2]
+// Dependencies: [19, 17, 8612, 21, 5092, 587, 558, 576, 8613, 8614, 5056, 14146, 5088, 1126, 5379, 6727, 6839, 6899, 2]
 
-// Module 14140 (ServerTagPreviewActionSheet)
+// Module 14145 (ServerTagPreviewActionSheet)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
-import GuildProfileStore from "GuildProfileStore" /* 8617 */;
-import GuildProfileActionCreators from "GuildProfileActionCreators" /* 8619 */;
-import GuildSettingsServerTagPreviewDefault from "GuildSettingsServerTagPreview" /* 14141 */;
+import GuildProfileStore from "GuildProfileStore" /* 8612 */;
+import GuildProfileActionCreators from "GuildProfileActionCreators" /* 8614 */;
+import GuildSettingsServerTagPreviewDefault from "GuildSettingsServerTagPreview" /* 14146 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
 import createStyles from "createStyles" /* 5092 */;
@@ -41,7 +41,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ServerTagP
   const cResult = obj.c(21);
   guildId = guildId.guildId;
   const tmp4 = closure_8();
-  const obj2 = guildId(8618);
+  const obj2 = guildId(8613);
   const guildProfile1 = obj2.useGuildProfile(guildId);
   ({ guildProfile, fetchStatus } = guildProfile1);
   if (cResult[0] !== guildId) {
@@ -192,7 +192,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ServerTagP
   let tmp8;
   guildId = guildId.guildId;
   const tmp = closure_8();
-  let obj = guildId(8618);
+  let obj = guildId(8613);
   const guildProfile1 = obj.useGuildProfile(guildId);
   let guildProfile = guildProfile1.guildProfile;
   const items = [guildId];

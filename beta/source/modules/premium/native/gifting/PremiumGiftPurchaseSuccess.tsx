@@ -1,9 +1,9 @@
-// Module ID: 12769
-// Function ID: 12770
+// Module ID: 12774
+// Function ID: 12775
 // Name: PremiumGiftPurchaseSuccess
-// Dependencies: [19, 17, 6088, 1392, 1085, 21, 5092, 587, 558, 576, 10055, 1503, 10096, 5633, 10052, 8482, 1126, 5379, 4769, 6886, 4808, 10187, 5088, 8542, 5043, 2]
+// Dependencies: [19, 17, 6088, 1392, 1085, 21, 5092, 587, 558, 576, 10051, 1503, 10097, 5633, 10048, 8477, 1126, 5379, 4769, 6886, 4808, 10188, 5088, 8537, 5043, 2]
 
-// Module 12769 (PremiumGiftPurchaseSuccess)
+// Module 12774 (PremiumGiftPurchaseSuccess)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
@@ -13,8 +13,8 @@ import ToastUtils from "ToastUtils" /* 4808 */;
 import AssetRegistryDefault from "AssetRegistry" /* 5043 */;
 import GiftCodeUtils from "GiftCodeUtils" /* 5633 */;
 import ClipboardUtils from "ClipboardUtils" /* 6886 */;
-import showShareActionSheet from "showShareActionSheet" /* 8482 */;
-import PremiumGiftModal from "PremiumGiftModal" /* 10052 */;
+import showShareActionSheet from "showShareActionSheet" /* 8477 */;
+import PremiumGiftModal from "PremiumGiftModal" /* 10048 */;
 import react from "react" /* 19 */;
 import SKUStore from "SKUStore" /* 6088 */;
 import Fragment from "Fragment" /* 21 */;
@@ -33,7 +33,7 @@ let obj4;
 let obj5;
 let obj6;
 let tmp14;
-const PremiumGiftBackgroundAnimationDefault = tmp14(10187);
+const PremiumGiftBackgroundAnimationDefault = tmp14(10188);
 const View = react_native.View;
 const SubscriptionIntervalTypes = PremiumConstants.SubscriptionIntervalTypes;
 const AnalyticsSections = Constants.AnalyticsSections;
@@ -272,7 +272,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumGif
   const cResult = obj.c(48);
   giftCodeRecord = giftCodeRecord.giftCodeRecord;
   const tmp4 = closure_11();
-  let obj2 = giftCodeRecord(10055);
+  let obj2 = giftCodeRecord(10051);
   const nativeGiftContext = obj2.useNativeGiftContext();
   ({ premiumType, planInterval, giftStyle } = nativeGiftContext);
   if (cResult[0] !== giftCodeRecord.code) {
@@ -415,7 +415,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumGif
                       tmp44 = tmp47;
                     }
                     const obj8 = { text: tmp6, icon: AssetRegistryDefault, iconPosition: "end", onPress: tmp9 };
-                    const InputButton = tmp(8542).InputButton;
+                    const InputButton = tmp(8537).InputButton;
                     const tmp43 = closure_8(InputButton, obj8);
                     cResult[32] = tmp6;
                     cResult[33] = tmp9;
@@ -568,7 +568,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumGif
   let subscriptionPlanId;
   giftCodeRecord = giftCodeRecord.giftCodeRecord;
   let tmp = closure_11();
-  let obj = giftCodeRecord(10055);
+  let obj = giftCodeRecord(10051);
   const nativeGiftContext = obj.useNativeGiftContext();
   ({ giftStyle, premiumType, planInterval } = nativeGiftContext);
   let obj2 = giftCodeRecord(5633);
@@ -588,7 +588,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumGif
   const obj5 = giftCodeURL(4769);
   const intervalType = obj5.getInterval(subscriptionPlanId).intervalType;
   const YEAR = SubscriptionIntervalTypes.YEAR;
-  let obj3 = { children: closure_8(giftCodeURL(10187), { giftStyle }) };
+  let obj3 = { children: closure_8(giftCodeURL(10188), { giftStyle }) };
   const callback = react.useCallback(() => {
     const value = SKUStore.get(giftCodeRecord.skuId);
     const tmp = giftCodeRecord;
@@ -626,7 +626,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumGif
   intl3 = tmp2(1126).intl;
   items2 = [closure_8(Text3, obj10), ];
   const obj11 = { text: giftCodeURL, icon: tmp6(5043), iconPosition: "end", onPress: callback };
-  const InputButton = tmp2(8542).InputButton;
+  const InputButton = tmp2(8537).InputButton;
   items2[1] = closure_8(InputButton, obj11);
   items1[3] = closure_10(tmp12, obj9);
   const obj12 = { style: tmp.disclaimer, variant: "text-xs/normal", children: intl4.string(giftCodeRecord(1126).t.As9eLl) };

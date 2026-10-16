@@ -1,9 +1,9 @@
-// Module ID: 12423
-// Function ID: 12424
+// Module ID: 12428
+// Function ID: 12429
 // Name: ContactSyncSuggestions
-// Dependencies: [32, 19, 17, 1085, 12424, 21, 5092, 587, 6259, 558, 5386, 576, 5088, 4962, 1415, 1200, 1126, 6177, 4818, 4967, 11, 1265, 8580, 8625, 5391, 1105, 5379, 2]
+// Dependencies: [32, 19, 17, 1085, 12429, 21, 5092, 587, 6259, 558, 5386, 576, 5088, 4962, 1415, 1200, 1126, 6177, 4818, 4967, 11, 1265, 8575, 8620, 5391, 1105, 5379, 2]
 
-// Module 12423 (ContactSyncSuggestions)
+// Module 12428 (ContactSyncSuggestions)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
@@ -16,8 +16,8 @@ import UserUtils from "UserUtils" /* 4962 */;
 import useFontScale from "useFontScale" /* 5386 */;
 import TableCheckboxRow2 from "TableCheckboxRow" /* 6177 */;
 import NavigatorConstants from "NavigatorConstants" /* 6259 */;
-import Form from "Form" /* 8580 */;
-import FriendsScreenConstants from "FriendsScreenConstants" /* 12424 */;
+import Form from "Form" /* 8575 */;
+import FriendsScreenConstants from "FriendsScreenConstants" /* 12429 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
 import Fragment_mod from "Fragment" /* 21 */;
@@ -618,7 +618,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ContactSyncS
   }, items3);
   let obj6 = { contentContainerStyle: obj7, data: memo, renderItem: callback1 };
   obj7 = { paddingHorizontal: onSubmit(587).space.PX_16, paddingBottom: tmp6 };
-  const FlashList = friendSuggestions(8625).FlashList;
+  const FlashList = friendSuggestions(8620).FlashList;
   items5 = [closure_8(FlashList, obj6), , ];
   let obj8 = { style: tmp.linearGradient, start: friendSuggestions(1105).VerticalGradient.START, end: friendSuggestions(1105).VerticalGradient.END, pointerEvents: "none", colors: items };
   const tmp11 = onSubmit(5391);

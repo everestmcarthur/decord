@@ -1,83 +1,94 @@
 // Module ID: 9857
 // Function ID: 9858
-// Dependencies: [41, 42, 9824]
+// Dependencies: [41, 42, 93, 95, 98, 9823]
 
 // Module 9857
-import TIMEZONE_ABBR_MAP from "TIMEZONE_ABBR_MAP" /* 9824 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 9823 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import map from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
-const regExp = new RegExp("^\\s*,?\\s*\\(?([A-Z]{2,4})\\)?(?=\\W|$)", "i");
-class ExtractTimezoneAbbrRefiner {
-  constructor(timezoneOverrides) {
-    _classCallCheck(this, ExtractTimezoneAbbrRefiner);
-    this.timezoneOverrides = timezoneOverrides;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {
+
+    }));
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
 }
-const entry = {
-  key: "refine",
-  value: function refine(option, arr) {
-    let self = this;
-    let timezones = option.option.timezones;
-    if (null === timezones) {
-      timezones = {};
+const regExp = new RegExp("([0-9]{4})\\-([0-9]{1,2})\\-([0-9]{1,2})(?:T([0-9]{1,2}):([0-9]{1,2})(?::([0-9]{1,2})(?:\\.(\\d{1,4}))?)?(Z|([+-]\\d{2}):?(\\d{2})?)?)?(?=\\W|$)", "i");
+class ISOFormatParser {
+  constructor() {
+    let constructResult;
+    const self = this;
+    _classCallCheck(this, ISOFormatParser);
+    const obj = _getPrototypeOf(ISOFormatParser);
+    const tmp2 = _getPrototypeOf;
+    const tmp3 = map;
+    if (_isNativeReflectConstruct()) {
+      const _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      constructResult = obj(...arguments);
     }
-    const item = arr.forEach(function(item) {
-      let closure_0 = item;
-      const str = option.text;
-      const match = regExp.exec(str.substring(item.index + item.text.length));
-      const obj = option;
-      if (match) {
-        const str2 = match[1];
-        const formatted = str2.toUpperCase();
-        const start = item.start;
-        let refDate = start.date() ?? item.refDate;
-        if (null === refDate) {
-          const _Date = Date;
-          self = this;
-          const self2 = this;
-          refDate = new Date();
-        }
-        const _Object = Object;
-        const _Object2 = Object;
-        const merged = Object.assign(Object.assign({}, self.timezoneOverrides), timezones);
-        const toTimezoneOffsetResult = TIMEZONE_ABBR_MAP.toTimezoneOffset(formatted, refDate, merged);
-        if (null != toTimezoneOffsetResult) {
-          obj.debug(() => {
-            console.log("Extracting timezone: '" + formatted + "' into: " + toTimezoneOffsetResult + " for: " + start.start);
-          });
-          const start6 = item.start;
-          const value = start6.get("timezoneOffset");
-          if (null !== value) {
-            if (toTimezoneOffsetResult != value) {
-              const start2 = item.start;
-            }
-          }
-          const start3 = item.start;
-          const tmp12 = start3.isOnlyDate() && formatted != match[1];
-          if (!tmp12) {
-            item.text = item.text + match[0];
-            const start4 = item.start;
-            if (!start4.isCertain("timezoneOffset")) {
-              const start5 = item.start;
-              start5.assign("timezoneOffset", toTimezoneOffsetResult);
-            }
-            let isCertainResult = null == item.end;
-            if (!isCertainResult) {
-              const end = item.end;
-              isCertainResult = end.isCertain("timezoneOffset");
-            }
-            if (!isCertainResult) {
-              const end2 = item.end;
-              end2.assign("timezoneOffset", toTimezoneOffsetResult);
-            }
-          }
-        }
-      }
-    });
-    return arr;
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(ISOFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+const entry = {
+  key: "innerPattern",
+  value: function innerPattern() {
+    return regExp;
   }
 };
-const items = [entry];
+const items = [
+  entry,
+  {
+    key: "innerExtract",
+    value: function innerExtract(createParsingComponents, arg1) {
+      const date = { year: parseInt(arg1[1]), month: parseInt(arg1[2]), day: parseInt(arg1[3]) };
+      const parsingComponents = createParsingComponents.createParsingComponents(date);
+      if (null != arg1[4]) {
+        const _parseInt5 = parseInt;
+        parsingComponents.assign("hour", parseInt(arg1[4]));
+        const _parseInt6 = parseInt;
+        parsingComponents.assign("minute", parseInt(arg1[5]));
+        if (null != arg1[6]) {
+          const _parseInt = parseInt;
+          parsingComponents.assign("second", parseInt(arg1[6]));
+        }
+        if (null != arg1[7]) {
+          const _parseInt2 = parseInt;
+          parsingComponents.assign("millisecond", parseInt(arg1[7]));
+        }
+        if (null != arg1[8]) {
+          let num2 = 0;
+          if (arg1[9]) {
+            const _parseInt3 = parseInt;
+            let num3 = 0;
+            const parsed = parseInt(arg1[9]);
+            if (null != arg1[10]) {
+              const _parseInt4 = parseInt;
+              num3 = parseInt(arg1[10]);
+            }
+            const result = 60 * parsed;
+            num2 = result < 0 ? result - num3 : result + num3;
+          }
+          parsingComponents.assign("timezoneOffset", num2);
+        }
+      }
+      return parsingComponents.addTag("parser/ISOFormatParser");
+    }
+  }
+];
 
-export default _createClass(ExtractTimezoneAbbrRefiner, items);
+export default _createClass(ISOFormatParser, items);

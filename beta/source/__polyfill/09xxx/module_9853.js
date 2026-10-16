@@ -1,63 +1,83 @@
 // Module ID: 9853
 // Function ID: 9854
-// Dependencies: [41, 42]
+// Dependencies: [41, 42, 9820]
 
 // Module 9853
+import TIMEZONE_ABBR_MAP from "TIMEZONE_ABBR_MAP" /* 9820 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 
-class OverlapRemovalRefiner {
-  constructor() {
-    _classCallCheck(this, OverlapRemovalRefiner);
+const regExp = new RegExp("^\\s*,?\\s*\\(?([A-Z]{2,4})\\)?(?=\\W|$)", "i");
+class ExtractTimezoneAbbrRefiner {
+  constructor(timezoneOverrides) {
+    _classCallCheck(this, ExtractTimezoneAbbrRefiner);
+    this.timezoneOverrides = timezoneOverrides;
   }
 }
 const entry = {
   key: "refine",
-  value: function refine(debug, arg1) {
-    const self = this;
-    if (arg1.length < 2) {
-      return arg1;
-    } else {
-      const items = [];
-      let first = arg1[0];
-      let num = 1;
-      let num2 = 1;
-      let tmp8 = first;
-      if (1 < arg1.length) {
-        do {
-          let tmp4;
-          let tmp = arg1[num];
-          if (tmp.index >= first.index + first.text.length) {
-            let arr = items.push(first);
-            tmp4 = tmp;
-          } else {
-            first = null;
-            let closure_1 = null;
-            if (tmp.text.length > first.text.length) {
-              first = tmp;
-              closure_1 = first;
-              tmp4 = tmp;
-            } else {
-              closure_1 = tmp;
-              tmp4 = first;
-            }
-            let debugResult = debug.debug(() => {
-              console.log("" + self.constructor.name + " remove " + closure_1 + " by " + first);
-            });
-          }
-          num = num2 + 1;
-          first = tmp4;
-          tmp8 = tmp4;
-          num2 = num;
-        } while (num < arg1.length);
-      }
-      if (null != tmp8) {
-        items.push(tmp8);
-      }
-      return items;
+  value: function refine(option, arr) {
+    let self = this;
+    let timezones = option.option.timezones;
+    if (null === timezones) {
+      timezones = {};
     }
+    const item = arr.forEach(function(item) {
+      let closure_0 = item;
+      const str = option.text;
+      const match = regExp.exec(str.substring(item.index + item.text.length));
+      const obj = option;
+      if (match) {
+        const str2 = match[1];
+        const formatted = str2.toUpperCase();
+        const start = item.start;
+        let refDate = start.date() ?? item.refDate;
+        if (null === refDate) {
+          const _Date = Date;
+          self = this;
+          const self2 = this;
+          refDate = new Date();
+        }
+        const _Object = Object;
+        const _Object2 = Object;
+        const merged = Object.assign(Object.assign({}, self.timezoneOverrides), timezones);
+        const toTimezoneOffsetResult = TIMEZONE_ABBR_MAP.toTimezoneOffset(formatted, refDate, merged);
+        if (null != toTimezoneOffsetResult) {
+          obj.debug(() => {
+            console.log("Extracting timezone: '" + formatted + "' into: " + toTimezoneOffsetResult + " for: " + start.start);
+          });
+          const start6 = item.start;
+          const value = start6.get("timezoneOffset");
+          if (null !== value) {
+            if (toTimezoneOffsetResult != value) {
+              const start2 = item.start;
+            }
+          }
+          const start3 = item.start;
+          const tmp12 = start3.isOnlyDate() && formatted != match[1];
+          if (!tmp12) {
+            item.text = item.text + match[0];
+            const start4 = item.start;
+            if (!start4.isCertain("timezoneOffset")) {
+              const start5 = item.start;
+              start5.assign("timezoneOffset", toTimezoneOffsetResult);
+            }
+            let isCertainResult = null == item.end;
+            if (!isCertainResult) {
+              const end = item.end;
+              isCertainResult = end.isCertain("timezoneOffset");
+            }
+            if (!isCertainResult) {
+              const end2 = item.end;
+              end2.assign("timezoneOffset", toTimezoneOffsetResult);
+            }
+          }
+        }
+      }
+    });
+    return arr;
   }
 };
-let items = [entry];
+const items = [entry];
 
-export default _createClass(OverlapRemovalRefiner, items);
+export default _createClass(ExtractTimezoneAbbrRefiner, items);

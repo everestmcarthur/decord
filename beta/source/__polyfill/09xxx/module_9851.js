@@ -1,14 +1,12 @@
 // Module ID: 9851
 // Function ID: 9852
-// Dependencies: [41, 42, 93, 95, 98, 9819, 9822, 9823, 9839]
+// Dependencies: [41, 42, 93, 95, 98, 9835]
 
 // Module 9851
-import _mod9819 from "module_9819" /* 9819 */;
-import ReferenceWithTimezone2 from "ReferenceWithTimezone" /* 9823 */;
-import _mod9839 from "module_9839" /* 9839 */;
+import _mod9835 from "module_9835" /* 9835 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
+import map from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
@@ -27,63 +25,63 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class ENMergeRelativeAfterDateRefiner {
+class ENUnlikelyFormatFilter {
   constructor() {
     let constructResult;
     const self = this;
-    _classCallCheck(this, ENMergeRelativeAfterDateRefiner);
-    const obj = _getPrototypeOf(ENMergeRelativeAfterDateRefiner);
+    _classCallCheck(this, ENUnlikelyFormatFilter);
+    const obj = _getPrototypeOf(ENUnlikelyFormatFilter);
     const tmp2 = _getPrototypeOf;
-    const tmp3 = c3;
+    const tmp3 = map;
     if (_isNativeReflectConstruct()) {
       const _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
     } else {
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, undefined);
     }
     return tmp3(self, constructResult);
   }
 }
-_inherits(ENMergeRelativeAfterDateRefiner, _mod9839.MergingRefiner);
+_inherits(ENUnlikelyFormatFilter, _mod9835.Filter);
 const entry = {
-  key: "shouldMergeResults",
-  value: function shouldMergeResults(str, arg1, text) {
-    let match = str.match(/^\s*$/i);
-    if (match) {
-      str = text.text;
-      let tmp4 = null != str.match(/^[+-]/i);
-      if (!tmp4) {
-        const str2 = text.text;
-        tmp4 = null != str2.match(/^-/i);
+  key: "isValid",
+  value: function isValid(text, text2) {
+    let closure_0 = text2;
+    const str = text2.text;
+    const str2 = str.trim();
+    const str3 = text.text;
+    if (str2 === str3.trim()) {
+      return true;
+    } else {
+      if ("may" === str2.toLowerCase()) {
+        const str4 = text.text;
+        const str5 = str4.substring(0, text2.index);
+        const str6 = str5.trim();
+        if (!str6.match(/\b(in)$/i)) {
+          text.debug(() => {
+            console.log("Removing unlikely result: " + text2);
+          });
+          return false;
+        }
       }
-      match = tmp4;
+      const formatted = str2.toLowerCase();
+      const endsWithResult = formatted.endsWith("the second");
+      let flag2 = !endsWithResult;
+      if (endsWithResult) {
+        flag2 = false;
+        const str8 = text.text;
+        const str9 = str8.substring(text2.index + text2.text.length);
+        if (str9.trim().length > 0) {
+          text.debug(() => {
+            console.log("Removing unlikely result: " + text2);
+          });
+          flag2 = false;
+        }
+      }
+      return flag2;
     }
-    return match;
   }
 };
-const items = [
-  entry,
-  {
-    key: "mergeResults",
-    value: function mergeResults(arg0, start, text, arg3) {
-      let index;
-      let reference;
-      const parseDurationResult = _mod9819.parseDuration(text.text);
-      let reverseDurationResult = parseDurationResult;
-      const str = text.text;
-      if (null != str.match(/^-/i)) {
-        reverseDurationResult = tmp(9822).reverseDuration(parseDurationResult);
-      }
-      const ParsingComponents = tmp(9823).ParsingComponents;
-      const createRelativeFromReference = ParsingComponents.createRelativeFromReference;
-      const ReferenceWithTimezone = tmp(9823).ReferenceWithTimezone;
-      start = start.start;
-      const relativeFromReference = createRelativeFromReference(ReferenceWithTimezone.fromDate(start.date()), reverseDurationResult);
-      ({ reference, index } = start);
-      const parsingResult = new ReferenceWithTimezone2.ParsingResult(reference, index, "" + start.text + arg0 + text.text, relativeFromReference);
-      return parsingResult;
-    }
-  }
-];
+const items = [entry];
 
-export default _createClass(ENMergeRelativeAfterDateRefiner, items);
+export default _createClass(ENUnlikelyFormatFilter, items);

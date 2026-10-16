@@ -1,9 +1,9 @@
-// Module ID: 16193
-// Function ID: 16194
+// Module ID: 16198
+// Function ID: 16199
 // Name: UserProfileTryItOutEditForm
-// Dependencies: [109, 19, 17, 8285, 21, 558, 576, 6852, 6879, 14841, 1126, 14854, 8368, 14856, 14860, 14908, 1631, 14951, 504, 8311, 10513, 8294, 8369, 8354, 8365, 587, 14863, 10514, 10532, 5379, 9037, 14930, 10531, 11189, 16194, 4827, 2]
+// Dependencies: [109, 19, 17, 8280, 21, 558, 576, 6852, 6879, 14846, 1126, 14859, 8363, 14861, 14865, 14913, 1631, 14956, 504, 8306, 10514, 8289, 8364, 8349, 8360, 587, 14868, 10515, 10533, 5379, 9032, 14935, 10532, 11191, 16199, 4827, 2]
 
-// Module 16193 (UserProfileTryItOutEditForm)
+// Module 16198 (UserProfileTryItOutEditForm)
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -12,29 +12,29 @@ import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
 import native from "native" /* 4827 */;
 import useAnalyticsLocations from "useAnalyticsLocations" /* 6852 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 6879 */;
-import RecentAvatarUtils from "RecentAvatarUtils" /* 8294 */;
-import useDisplayProfileDefault from "useDisplayProfile" /* 8311 */;
-import useProfileThemeDefault from "useProfileTheme" /* 8354 */;
-import useUserProfileColors from "useUserProfileColors" /* 8365 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8368 */;
-import useBadgesDefault from "useBadges" /* 8369 */;
-import userSettingToActivity from "userSettingToActivity" /* 10513 */;
-import UserProfileCustomStatusBubbleDefault from "UserProfileCustomStatusBubble" /* 10514 */;
-import UserProfileGradientContainerDefault from "UserProfileGradientContainer" /* 10531 */;
-import UserProfilePrimaryInfoDefault from "UserProfilePrimaryInfo" /* 10532 */;
-import useOpenChangeBannerActionSheetDefault from "useOpenChangeBannerActionSheet" /* 14841 */;
-import UserProfileEditBannerButtonDefault from "UserProfileEditBannerButton" /* 14854 */;
-import UserProfileEditFormSharedStylesDefault from "UserProfileEditFormSharedStyles" /* 14856 */;
-import UserProfilePremiumTryItOutMobileRefreshExperiment from "UserProfilePremiumTryItOutMobileRefreshExperiment" /* 14860 */;
-import EditUserProfileAvatarDefault from "EditUserProfileAvatar" /* 14863 */;
-import usePremiumTryItOutPresetShuffleDefault from "usePremiumTryItOutPresetShuffle" /* 14908 */;
-import UserProfileTryItOutFieldsDefault from "UserProfileTryItOutFields" /* 14930 */;
-import UserProfileFloatingUpsell from "UserProfileFloatingUpsell" /* 14951 */;
-import UserProfileTryItOutGetPremiumUpsellDefault from "UserProfileTryItOutGetPremiumUpsell" /* 16194 */;
+import RecentAvatarUtils from "RecentAvatarUtils" /* 8289 */;
+import useDisplayProfileDefault from "useDisplayProfile" /* 8306 */;
+import useProfileThemeDefault from "useProfileTheme" /* 8349 */;
+import useUserProfileColors from "useUserProfileColors" /* 8360 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8363 */;
+import useBadgesDefault from "useBadges" /* 8364 */;
+import userSettingToActivity from "userSettingToActivity" /* 10514 */;
+import UserProfileCustomStatusBubbleDefault from "UserProfileCustomStatusBubble" /* 10515 */;
+import UserProfileGradientContainerDefault from "UserProfileGradientContainer" /* 10532 */;
+import UserProfilePrimaryInfoDefault from "UserProfilePrimaryInfo" /* 10533 */;
+import useOpenChangeBannerActionSheetDefault from "useOpenChangeBannerActionSheet" /* 14846 */;
+import UserProfileEditBannerButtonDefault from "UserProfileEditBannerButton" /* 14859 */;
+import UserProfileEditFormSharedStylesDefault from "UserProfileEditFormSharedStyles" /* 14861 */;
+import UserProfilePremiumTryItOutMobileRefreshExperiment from "UserProfilePremiumTryItOutMobileRefreshExperiment" /* 14865 */;
+import EditUserProfileAvatarDefault from "EditUserProfileAvatar" /* 14868 */;
+import usePremiumTryItOutPresetShuffleDefault from "usePremiumTryItOutPresetShuffle" /* 14913 */;
+import UserProfileTryItOutFieldsDefault from "UserProfileTryItOutFields" /* 14935 */;
+import UserProfileFloatingUpsell from "UserProfileFloatingUpsell" /* 14956 */;
+import UserProfileTryItOutGetPremiumUpsellDefault from "UserProfileTryItOutGetPremiumUpsell" /* 16199 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8285 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8280 */;
 import Fragment from "Fragment" /* 21 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -398,7 +398,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileT
                                                                                         }
                                                                                         if (cResult[95] !== onLayout) {
                                                                                           const obj10 = { children: metroImportAll(UserProfileTryItOutGetPremiumUpsellDefault, obj11) };
-                                                                                          const DisableCustomTheme = tmp(11189).DisableCustomTheme;
+                                                                                          const DisableCustomTheme = tmp(11191).DisableCustomTheme;
                                                                                           obj11 = { onLayout };
                                                                                           const tmp83 = metroImportAll(DisableCustomTheme, obj10);
                                                                                           cResult[95] = onLayout;
@@ -515,7 +515,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileT
                                                         const obj21 = { icon: metroImportAll(DiceIcon, obj22), text: intl.string(intl2.t.VzqqFC), variant: "secondary", onPress: tmp7 };
                                                         const Button = tmp(5379).Button;
                                                         obj22 = { size: "sm", color: nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT };
-                                                        DiceIcon = tmp(9037).DiceIcon;
+                                                        DiceIcon = tmp(9032).DiceIcon;
                                                         intl = tmp(1126).intl;
                                                         tmp58 = metroImportAll(Button, obj21);
                                                       }
@@ -744,7 +744,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileT
     const obj14 = { icon: metroImportAll(DiceIcon, obj15), text: intl.string(intl2.t.VzqqFC), variant: "secondary", onPress: tmp6 };
     const Button = tmp5(5379).Button;
     obj15 = { size: "sm", color: nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT };
-    DiceIcon = tmp5(9037).DiceIcon;
+    DiceIcon = tmp5(9032).DiceIcon;
     intl = tmp5(1126).intl;
     tmp19Result = tmp19(Button, obj14);
   }
@@ -757,7 +757,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileT
   items2[1] = React4(tmpResult, obj9);
   items10 = [React4(tmp22, obj16), ];
   const obj18 = { children: metroImportAll(UserProfileTryItOutGetPremiumUpsellDefault, { onLayout }) };
-  const DisableCustomTheme = tmp5(11189).DisableCustomTheme;
+  const DisableCustomTheme = tmp5(11191).DisableCustomTheme;
   items10[1] = metroImportAll(DisableCustomTheme, obj18);
   return metroImportAll(ThemeContextProvider, obj6);
 });

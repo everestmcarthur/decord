@@ -1,20 +1,20 @@
-// Module ID: 11682
-// Function ID: 11683
+// Module ID: 11684
+// Function ID: 11685
 // Name: ForumPostGridBody
-// Dependencies: [32, 19, 17, 21, 5092, 587, 558, 576, 1200, 11683, 11684, 11685, 5088, 1497, 1388, 11686, 6977, 8479, 11690, 2]
+// Dependencies: [32, 19, 17, 21, 5092, 587, 558, 576, 1200, 11685, 11686, 11687, 5088, 1497, 1388, 11688, 6977, 8474, 11692, 2]
 
-// Module 11682 (ForumPostGridBody)
+// Module 11684 (ForumPostGridBody)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1200 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
 import Text_Text from "Text/Text" /* 5088 */;
-import ForumPostMediaUtils from "ForumPostMediaUtils" /* 8479 */;
-import AssetRegistryDefault from "AssetRegistry" /* 11683 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 11684 */;
-import AssetRegistryDefault3 from "AssetRegistry" /* 11685 */;
-import ForumPostMedia from "ForumPostMedia" /* 11686 */;
+import ForumPostMediaUtils from "ForumPostMediaUtils" /* 8474 */;
+import AssetRegistryDefault from "AssetRegistry" /* 11685 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 11686 */;
+import AssetRegistryDefault3 from "AssetRegistry" /* 11687 */;
+import ForumPostMedia from "ForumPostMedia" /* 11688 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import Fragment_mod from "Fragment" /* 21 */;
@@ -436,7 +436,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPostGri
   const arr2 = closure_15(tmp8, tmp11);
   let wideAspectRatioGrid = tmp11;
   if (cResult[4] !== media) {
-    const tmpResult = tmp(8479);
+    const tmpResult = tmp(8474);
     const result = tmpResult.messageContainsGifOrVideo(media);
     cResult[4] = media;
     cResult[5] = result;
@@ -784,7 +784,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPostGri
   items3[1] = tmp15;
   items4 = [closure_6(View, obj3), , , ];
   if (tmp14Result) {
-    const obj4 = { style: tmp.footerLeftContainer, children: closure_6(tmp2(11690).ForumPostAppliedTagPills, obj5) };
+    const obj4 = { style: tmp.footerLeftContainer, children: closure_6(tmp2(11692).ForumPostAppliedTagPills, obj5) };
     obj5 = { appliedTags: first, additionalTagsCount: tmp5, hasUnreads };
     tmp14Result = tmp14(tmp12, obj4);
   }

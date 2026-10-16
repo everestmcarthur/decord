@@ -1,14 +1,15 @@
 // Module ID: 9919
 // Function ID: 9920
-// Dependencies: [41, 42, 93, 95, 96, 98, 9834]
+// Dependencies: [41, 42, 93, 95, 98, 9816, 9910, 9819, 9823]
 
 // Module 9919
-import AbstractTimeExpressionParser from "AbstractTimeExpressionParser" /* 9834 */;
+import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 9816 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 9823 */;
+import _mod9910 from "module_9910" /* 9910 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import map from "_possibleConstructorReturn" /* 93 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _get from "_get" /* 96 */;
 import _inherits from "_inherits" /* 98 */;
 
 function _isNativeReflectConstruct() {
@@ -26,14 +27,15 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class NLTimeExpressionParser {
+const regExp = new RegExp("(dit|deze|(?:aan)?komend|volgend|afgelopen|vorig)e?\\s*(" + repeatedTimeunitPattern.matchAnyPattern(_mod9910.TIME_UNIT_DICTIONARY) + ")(?=\\s*)(?=\\W|$)", "i");
+class NLRelativeDateFormatParser {
   constructor() {
     let constructResult;
     const self = this;
-    _classCallCheck(this, NLTimeExpressionParser);
-    const obj = _getPrototypeOf(NLTimeExpressionParser);
+    _classCallCheck(this, NLRelativeDateFormatParser);
+    const obj = _getPrototypeOf(NLRelativeDateFormatParser);
     const tmp2 = _getPrototypeOf;
-    const tmp3 = map;
+    const tmp3 = c3;
     if (_isNativeReflectConstruct()) {
       const _Reflect = Reflect;
       constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
@@ -43,44 +45,67 @@ class NLTimeExpressionParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(NLTimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
+_inherits(NLRelativeDateFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "primaryPrefix",
-  value: function primaryPrefix() {
-    return "(?:(?:om)\\s*)?";
+  key: "innerPattern",
+  value: function innerPattern() {
+    return regExp;
   }
 };
-let items = [
+const items = [
   entry,
   {
-    key: "followingPhase",
-    value: function followingPhase() {
-      return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|om|\\?)\\s*";
-    }
-  },
-  {
-    key: "primarySuffix",
-    value: function primarySuffix() {
-      return "(?:\\s*(?:uur))?(?!/)(?=\\W|$)";
-    }
-  },
-  {
-    key: "extractPrimaryTimeComponents",
-    value: function extractPrimaryTimeComponents(arg0, arg1) {
-      let fnResult = null;
-      const str = arg1[0];
-      if (!str.match(/^\s*\d{4}\s*$/)) {
-        const self = this;
-        let fn = _get(_getPrototypeOf(NLTimeExpressionParser.prototype), "extractPrimaryTimeComponents", this);
-        if (typeof fn === "function") {
-          fn = (items) => fn.apply(self, items);
+    key: "innerExtract",
+    value: function innerExtract(createParsingComponents, arg1) {
+      const str = arg1[1];
+      const formatted = str.toLowerCase();
+      const str2 = arg1[2];
+      const str3 = str2.toLowerCase();
+      const tmp4 = _mod9910.TIME_UNIT_DICTIONARY[str3];
+      if ("volgend" != formatted) {
+        if ("komend" != formatted) {
+          if ("aankomend" != formatted) {
+            if ("afgelopen" != formatted) {
+              if ("vorig" != formatted) {
+                const parsingComponents = createParsingComponents.createParsingComponents();
+                const _Date = Date;
+                const instant = createParsingComponents.reference.instant;
+                const self = this;
+                const self2 = this;
+                const date = new Date(instant.getTime());
+                if (str3.match(/week/i)) {
+                  const setDate = date.setDate;
+                  const date1 = date.getDate();
+                  setDate(date1 - date.getDay());
+                  parsingComponents.imply("day", date.getDate());
+                  parsingComponents.imply("month", date.getMonth() + 1);
+                  parsingComponents.imply("year", date.getFullYear());
+                } else if (str3.match(/maand/i)) {
+                  date.setDate(1);
+                  parsingComponents.imply("day", date.getDate());
+                  parsingComponents.assign("year", date.getFullYear());
+                  parsingComponents.assign("month", date.getMonth() + 1);
+                } else if (str3.match(/jaar/i)) {
+                  date.setDate(1);
+                  date.setMonth(0);
+                  parsingComponents.imply("day", date.getDate());
+                  parsingComponents.imply("month", date.getMonth() + 1);
+                  parsingComponents.assign("year", date.getFullYear());
+                }
+                return parsingComponents;
+              }
+            }
+            const obj = {};
+            obj[tmp4] = -1;
+            const ParsingComponents = tmp2(9819).ParsingComponents;
+            return ParsingComponents.createRelativeFromReference(createParsingComponents.reference, obj);
+          }
         }
-        const items = [arg0, arg1];
-        fnResult = fn(items);
       }
-      return fnResult;
+      const ParsingComponents2 = tmp2(9819).ParsingComponents;
+      return ParsingComponents2.createRelativeFromReference(createParsingComponents.reference, { [tmp4]: 1 });
     }
   }
 ];
 
-export default _createClass(NLTimeExpressionParser, items);
+export default _createClass(NLRelativeDateFormatParser, items);

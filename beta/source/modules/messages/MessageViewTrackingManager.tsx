@@ -1,9 +1,9 @@
-// Module ID: 9606
-// Function ID: 9607
+// Module ID: 9602
+// Function ID: 9603
 // Name: MessageViewTrackingManager
 // Dependencies: [1085, 1273, 6879, 1388, 6808, 1457, 1265, 2]
 
-// Module 9606 (MessageViewTrackingManager)
+// Module 9602 (MessageViewTrackingManager)
 import Constants from "Constants" /* 1085 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1273 */;

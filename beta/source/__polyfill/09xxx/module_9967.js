@@ -1,12 +1,14 @@
 // Module ID: 9967
 // Function ID: 9968
-// Dependencies: [41, 42, 93, 95, 98, 9838]
+// Dependencies: [41, 42, 93, 95, 98, 9960, 9819, 9823]
 
 // Module 9967
-import _mod9838 from "module_9838" /* 9838 */;
+import ReferenceWithTimezone from "ReferenceWithTimezone" /* 9819 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 9823 */;
+import _mod9960 from "module_9960" /* 9960 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import map from "_possibleConstructorReturn" /* 93 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
@@ -25,31 +27,14 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-let fn = this;
-if (this) {
-  fn = this.__importDefault;
-}
-if (!fn) {
-  fn = (__esModule) => {
-    let tmp2;
-    const tmp = __esModule;
-    if (!tmp) {
-      tmp2 = { default: __esModule };
-      const obj = { default: __esModule };
-    } else {
-      tmp2 = __esModule;
-    }
-    return tmp2;
-  };
-}
-class ESMergeDateRangeRefiner {
+class ESTimeUnitWithinFormatParser {
   constructor() {
     let constructResult;
     const self = this;
-    _classCallCheck(this, ESMergeDateRangeRefiner);
-    const obj = _getPrototypeOf(ESMergeDateRangeRefiner);
+    _classCallCheck(this, ESTimeUnitWithinFormatParser);
+    const obj = _getPrototypeOf(ESTimeUnitWithinFormatParser);
     const tmp2 = _getPrototypeOf;
-    const tmp3 = map;
+    const tmp3 = c3;
     if (_isNativeReflectConstruct()) {
       const _Reflect = Reflect;
       constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
@@ -59,13 +44,24 @@ class ESMergeDateRangeRefiner {
     return tmp3(self, constructResult);
   }
 }
-_inherits(ESMergeDateRangeRefiner, fn(_mod9838).default);
+_inherits(ESTimeUnitWithinFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "patternBetween",
-  value: function patternBetween() {
-    return /^\s*(?:-)\s*$/i;
+  key: "innerPattern",
+  value: function innerPattern() {
+    const regExp = new RegExp("(?:en|por|durante|de|dentro de)\\s*(" + _mod9960.TIME_UNITS_PATTERN + ")(?=\\W|$)", "i");
+    return regExp;
   }
 };
-const items = [entry];
+const items = [
+  entry,
+  {
+    key: "innerExtract",
+    value: function innerExtract(reference, arg1) {
+      const parseDurationResult = _mod9960.parseDuration(arg1[1]);
+      const ParsingComponents = ReferenceWithTimezone.ParsingComponents;
+      return ParsingComponents.createRelativeFromReference(reference.reference, parseDurationResult);
+    }
+  }
+];
 
-export default _createClass(ESMergeDateRangeRefiner, items);
+export default _createClass(ESTimeUnitWithinFormatParser, items);

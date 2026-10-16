@@ -1,69 +1,68 @@
 // Module ID: 9885
 // Function ID: 9886
-// Dependencies: [41, 42, 93, 95, 98, 9882, 9822, 9823, 9827]
+// Dependencies: [41, 42, 9886, 9817]
 
 // Module 9885
-import EmptyDuration from "EmptyDuration" /* 9822 */;
-import ReferenceWithTimezone from "ReferenceWithTimezone" /* 9823 */;
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 9827 */;
-import _mod9882 from "module_9882" /* 9882 */;
+import findMostLikelyADYear from "findMostLikelyADYear" /* 9817 */;
+import NUMBER from "NUMBER" /* 9886 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
 
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {
-
-    }));
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
-  }
-}
-class FRTimeUnitAgoFormatParser {
+const re3 = /(?:(?:([同今本])|((昭和|平成|令和)?([0-9０-９]{1,4}|元)))年\s*)?([0-9０-９]{1,2})月\s*([0-9０-９]{1,2})日/i;
+class JPStandardParser {
   constructor() {
-    let constructResult;
-    const self = this;
-    _classCallCheck(this, FRTimeUnitAgoFormatParser);
-    const obj = _getPrototypeOf(FRTimeUnitAgoFormatParser);
-    const tmp2 = _getPrototypeOf;
-    const tmp3 = c3;
-    if (_isNativeReflectConstruct()) {
-      const _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, undefined);
-    }
-    return tmp3(self, constructResult);
+    _classCallCheck(this, JPStandardParser);
   }
 }
-_inherits(FRTimeUnitAgoFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    const regExp = new RegExp("il y a\\s*(" + _mod9882.TIME_UNITS_PATTERN + ")(?=(?:\\W|$))", "i");
-    return regExp;
+  key: "pattern",
+  value: function pattern() {
+    return re3;
   }
 };
 const items = [
   entry,
   {
-    key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      const parseDurationResult = _mod9882.parseDuration(arg1[1]);
-      const reverseDurationResult = EmptyDuration.reverseDuration(parseDurationResult);
-      const ParsingComponents = ReferenceWithTimezone.ParsingComponents;
-      return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
+    key: "extract",
+    value: function extract(createParsingComponents, arg1) {
+      const parsed = parseInt(NUMBER.toHankaku(arg1[5]));
+      const parsed1 = parseInt(NUMBER.toHankaku(arg1[6]));
+      const parsingComponents = createParsingComponents.createParsingComponents({ day: parsed1, month: parsed });
+      let match = arg1[1];
+      if (match) {
+        const str = arg1[1];
+        match = str.match("\u540C|\u4ECA|\u672C");
+      }
+      if (match) {
+        const reference = createParsingComponents.reference;
+        const assign = parsingComponents.assign;
+        const dateWithAdjustedTimezone = reference.getDateWithAdjustedTimezone();
+        assign("year", dateWithAdjustedTimezone.getFullYear());
+      }
+      if (arg1[2]) {
+        let sum;
+        let num = 1;
+        if ("\u5143" != arg1[4]) {
+          const _parseInt = parseInt;
+          num = parseInt(tmp(9886).toHankaku(tmp8));
+        }
+        if ("\u4EE4\u548C" == arg1[3]) {
+          sum = num + 2018;
+        } else if ("\u5E73\u6210" == arg1[3]) {
+          sum = num + 1988;
+        } else {
+          sum = num;
+          if ("\u662D\u548C" == arg1[3]) {
+            sum = num + 1925;
+          }
+        }
+        parsingComponents.assign("year", sum);
+      } else {
+        parsingComponents.imply("year", findMostLikelyADYear.findYearClosestToRef(createParsingComponents.refDate, parsed1, parsed));
+      }
+      return parsingComponents;
     }
   }
 ];
 
-export default _createClass(FRTimeUnitAgoFormatParser, items);
+export default _createClass(JPStandardParser, items);

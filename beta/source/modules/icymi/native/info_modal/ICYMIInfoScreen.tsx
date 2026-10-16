@@ -1,10 +1,10 @@
-// Module ID: 16932
-// Function ID: 16933
+// Module ID: 16936
+// Function ID: 16937
 // Name: ICYMIInfoScreen
-// Dependencies: [32, 5, 19, 17, 1096, 21, 5092, 587, 6259, 1631, 5031, 1503, 14655, 16933, 5934, 9298, 9306, 1126, 6157, 16935, 16936, 16937, 16938, 5088, 9244, 13134, 6868, 5056, 16939, 2000, 5379, 2]
+// Dependencies: [32, 5, 19, 17, 1096, 21, 5092, 587, 6259, 1631, 5031, 1503, 14660, 16937, 5934, 9293, 9301, 1126, 6157, 16939, 16940, 16941, 16942, 5088, 9239, 13139, 6868, 5056, 16943, 2000, 5379, 2]
 // Exports: default
 
-// Module 16932 (ICYMIInfoScreen)
+// Module 16936 (ICYMIInfoScreen)
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1096 */;
 import NavigatorConstants from "NavigatorConstants" /* 6259 */;
@@ -167,7 +167,7 @@ export default function ICYMIInfoScreen(extendedOnboarding) {
   let obj2 = { style: items2, children: closure_9(HeaderIconButton, obj3) };
   items2 = [{ marginTop: top }, tmp.closeIcon];
   obj3 = {
-    source: navigation(9306),
+    source: navigation(9301),
     onPress() {
       const arr = navigation(closure_2[14]);
       return arr.pop();
@@ -175,13 +175,13 @@ export default function ICYMIInfoScreen(extendedOnboarding) {
     accessibilityLabel: intl.string(extendedOnboarding(1126).t.cpT0Cq),
     color: tmp.closeIconColor.backgroundColor
   };
-  HeaderIconButton = extendedOnboarding(9298).HeaderIconButton;
+  HeaderIconButton = extendedOnboarding(9293).HeaderIconButton;
   intl = extendedOnboarding(1126).intl;
   const items3 = [closure_9(closure_6, obj2), , ];
   let obj4 = { style: items4, children: items5 };
   items4 = [tmp.container, { marginBottom: bottom }];
   let obj5 = { source: obj6, style: tmp.bgImage };
-  obj6 = { uri: navigation(16935) };
+  obj6 = { uri: navigation(16939) };
   const tmp17 = navigation(6157);
   items5 = [closure_9(tmp17, obj5), ];
   const obj7 = { style: items6, children: items8 };
@@ -192,14 +192,14 @@ export default function ICYMIInfoScreen(extendedOnboarding) {
   const tmp16 = closure_7;
   const tmp18 = navigation(6157);
   if (tmp5 === ThemeTypes.LIGHT) {
-    tmp2Result = tmp2(16936);
+    tmp2Result = tmp2(16940);
   } else {
-    tmp2Result = tmp2(16937);
+    tmp2Result = tmp2(16941);
   }
   items7 = [, , , ];
   const obj10 = { source: { uri: tmp2Result }, style: tmp.headerImg };
   items7[0] = closure_9(tmp18, obj10);
-  const obj11 = { source: navigation(16938), style: tmp.flashIcon };
+  const obj11 = { source: navigation(16942), style: tmp.flashIcon };
   const tmp2Result2 = navigation(6157);
   items7[1] = closure_9(tmp2Result2, obj11);
   const obj12 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: intl2.string(extendedOnboarding(1126).t["jnXV/V"]) };
@@ -215,7 +215,7 @@ export default function ICYMIInfoScreen(extendedOnboarding) {
   items9 = [, ];
   const obj14 = { children: items13 };
   const obj15 = { style: tmp.body, children: items10 };
-  const obj17 = { style: tmp.infoIcon, children: closure_9(extendedOnboarding(9244).ServerIcon, { size: "sm", color: "interactive-text-active" }) };
+  const obj17 = { style: tmp.infoIcon, children: closure_9(extendedOnboarding(9239).ServerIcon, { size: "sm", color: "interactive-text-active" }) };
   items9[0] = closure_9(closure_6, obj17);
   const obj18 = { variant: "text-md/medium", color: "mobile-text-heading-primary", style: tmp.infoText, children: intl4.string(extendedOnboarding(1126).t.knxfqR) };
   const Text3 = tmp6(5088).Text;
@@ -226,7 +226,7 @@ export default function ICYMIInfoScreen(extendedOnboarding) {
   items10[1] = closure_9(closure_6, obj19);
   const obj20 = { style: tmp.infoRow, children: items11 };
   items11 = [, ];
-  const obj21 = { style: tmp.infoIcon, children: closure_9(extendedOnboarding(13134).NewUserIcon, { size: "sm", color: "interactive-text-active" }) };
+  const obj21 = { style: tmp.infoIcon, children: closure_9(extendedOnboarding(13139).NewUserIcon, { size: "sm", color: "interactive-text-active" }) };
   items11[0] = closure_9(closure_6, obj21);
   const obj22 = { variant: "text-md/medium", color: "mobile-text-heading-primary", style: tmp.infoText, children: intl5.string(extendedOnboarding(1126).t.BnUXZi) };
   const Text4 = tmp6(5088).Text;

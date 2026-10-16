@@ -1,12 +1,14 @@
 // Module ID: 9903
 // Function ID: 9904
-// Dependencies: [41, 42, 93, 95, 98, 9841]
+// Dependencies: [41, 42, 93, 95, 98, 9821, 9822, 9823]
 
 // Module 9903
-import _mod9841 from "module_9841" /* 9841 */;
+import Meridiem from "Meridiem" /* 9821 */;
+import assignSimilarDate from "assignSimilarDate" /* 9822 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 9823 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import map from "_possibleConstructorReturn" /* 93 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
@@ -25,31 +27,14 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-let fn = this;
-if (this) {
-  fn = this.__importDefault;
-}
-if (!fn) {
-  fn = (__esModule) => {
-    let tmp2;
-    const tmp = __esModule;
-    if (!tmp) {
-      tmp2 = { default: __esModule };
-      const obj = { default: __esModule };
-    } else {
-      tmp2 = __esModule;
-    }
-    return tmp2;
-  };
-}
-class PTMergeDateTimeRefiner {
+class PTCasualTimeParser {
   constructor() {
     let constructResult;
     const self = this;
-    _classCallCheck(this, PTMergeDateTimeRefiner);
-    const obj = _getPrototypeOf(PTMergeDateTimeRefiner);
+    _classCallCheck(this, PTCasualTimeParser);
+    const obj = _getPrototypeOf(PTCasualTimeParser);
     const tmp2 = _getPrototypeOf;
-    const tmp3 = map;
+    const tmp3 = c3;
     if (_isNativeReflectConstruct()) {
       const _Reflect = Reflect;
       constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
@@ -59,14 +44,54 @@ class PTMergeDateTimeRefiner {
     return tmp3(self, constructResult);
   }
 }
-_inherits(PTMergeDateTimeRefiner, fn(_mod9841).default);
+_inherits(PTCasualTimeParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "patternBetween",
-  value: function patternBetween() {
-    const regExp = new RegExp("^\\s*(?:,|\u00E0)?\\s*$");
-    return regExp;
+  key: "innerPattern",
+  value: function innerPattern() {
+    return /(?:esta\s*)?(manha|manhã|tarde|meia-noite|meio-dia|noite)(?=\W|$)/i;
   }
 };
-const items = [entry];
+const items = [
+  entry,
+  {
+    key: "innerExtract",
+    value: function innerExtract(refDate, arg1) {
+      refDate = refDate.refDate;
+      const parsingComponents = refDate.createParsingComponents();
+      const str = arg1[1];
+      const formatted = str.toLowerCase();
+      if ("tarde" === formatted) {
+        parsingComponents.imply("meridiem", Meridiem.Meridiem.PM);
+        parsingComponents.imply("hour", 15);
+      } else if ("noite" === formatted) {
+        parsingComponents.imply("meridiem", Meridiem.Meridiem.PM);
+        parsingComponents.imply("hour", 22);
+      } else {
+        if ("manha" !== formatted) {
+          if ("manh\u00E3" !== formatted) {
+            if ("meia-noite" === formatted) {
+              const _Date = Date;
+              const self = this;
+              const self2 = this;
+              const date = new Date(refDate.getTime());
+              date.setDate(date.getDate() + 1);
+              assignSimilarDate.assignSimilarDate(parsingComponents, date);
+              assignSimilarDate.implySimilarTime(parsingComponents, date);
+              parsingComponents.imply("hour", 0);
+              parsingComponents.imply("minute", 0);
+              parsingComponents.imply("second", 0);
+            } else if ("meio-dia" === formatted) {
+              parsingComponents.imply("meridiem", Meridiem.Meridiem.AM);
+              parsingComponents.imply("hour", 12);
+            }
+          }
+        }
+        parsingComponents.imply("meridiem", Meridiem.Meridiem.AM);
+        parsingComponents.imply("hour", 6);
+      }
+      return parsingComponents;
+    }
+  }
+];
 
-export default _createClass(PTMergeDateTimeRefiner, items);
+export default _createClass(PTCasualTimeParser, items);

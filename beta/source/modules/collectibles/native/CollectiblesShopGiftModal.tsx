@@ -1,27 +1,27 @@
-// Module ID: 12705
-// Function ID: 12706
+// Module ID: 12710
+// Function ID: 12711
 // Name: CollectiblesShopGiftModal
-// Dependencies: [19, 7264, 1085, 1096, 21, 558, 576, 9398, 1382, 4782, 12706, 12704, 12707, 12710, 10183, 10176, 10163, 10096, 8322, 8309, 504, 6879, 6852, 2031, 7263, 1126, 10179, 2]
+// Dependencies: [19, 7259, 1085, 1096, 21, 558, 576, 9393, 1382, 4782, 12711, 12709, 12712, 12715, 10184, 10177, 10164, 10097, 8317, 8304, 504, 6879, 6852, 2031, 7258, 1126, 10180, 2]
 
-// Module 12705 (CollectiblesShopGiftModal)
+// Module 12710 (CollectiblesShopGiftModal)
 import Fragment from "Fragment" /* 21 */;
 import Constants from "Constants" /* 1085 */;
 import Constants2 from "Constants" /* 1096 */;
 import StringUtils from "StringUtils" /* 2031 */;
-import BadgeId from "BadgeId" /* 8309 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8322 */;
-import openGiftModal from "openGiftModal" /* 12704 */;
-import CollectiblesShopCheckoutDetailsDefault from "CollectiblesShopCheckoutDetails" /* 12707 */;
-import CollectiblesShopGiftPurchaseSectionDefault from "CollectiblesShopGiftPurchaseSection" /* 12710 */;
+import BadgeId from "BadgeId" /* 8304 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8317 */;
+import openGiftModal from "openGiftModal" /* 12709 */;
+import CollectiblesShopCheckoutDetailsDefault from "CollectiblesShopCheckoutDetails" /* 12712 */;
+import CollectiblesShopGiftPurchaseSectionDefault from "CollectiblesShopGiftPurchaseSection" /* 12715 */;
 import react from "react" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7264 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7259 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 let _Promise, dependencyMap, flag, resolved;
 
 let tmp;
-const CollectiblesActionCreators = tmp(7263);
+const CollectiblesActionCreators = tmp(7258);
 const application_id = Constants.COLLECTIBLES_APPLICATION_ID;
 const PaymentGateways = Constants2.PaymentGateways;
 const jsx = Fragment.jsx;
@@ -232,7 +232,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function Collectibl
   } else {
     first = cResult[0];
   }
-  const GiftingBadgeExperiment = tmp2(10096).GiftingBadgeExperiment;
+  const GiftingBadgeExperiment = tmp2(10097).GiftingBadgeExperiment;
   const enabled = GiftingBadgeExperiment.useConfig(first).enabled;
   if (cResult[1] !== enabled) {
     class O {
@@ -562,7 +562,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function Collectibl
             return resolved;
           }
         }
-        const tmp27 = jsx(tmp20(10179), { onDismiss: onGiftModalDismiss, title: tmp24 });
+        const tmp27 = jsx(tmp20(10180), { onDismiss: onGiftModalDismiss, title: tmp24 });
         cResult[13] = onGiftModalDismiss;
         cResult[14] = tmp27;
         tmp26 = tmp27;

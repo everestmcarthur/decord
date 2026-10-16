@@ -1,18 +1,18 @@
-// Module ID: 16256
-// Function ID: 16257
+// Module ID: 16261
+// Function ID: 16262
 // Name: CollectiblesShopViewAllCategoryItemsHeader
-// Dependencies: [19, 17, 21, 5092, 558, 576, 1503, 13751, 1126, 9298, 9301, 6157, 2]
+// Dependencies: [19, 17, 21, 5092, 558, 576, 1503, 13756, 1126, 9293, 9296, 6157, 2]
 // Exports: default
 
-// Module 16256 (CollectiblesShopViewAllCategoryItemsHeader)
+// Module 16261 (CollectiblesShopViewAllCategoryItemsHeader)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import intl4 from "intl" /* 1126 */;
 import useNavigation from "useNavigation" /* 1503 */;
 import FastImageDefault from "FastImage" /* 6157 */;
-import HeaderShared from "HeaderShared" /* 9298 */;
-import AssetRegistryDefault from "AssetRegistry" /* 9301 */;
-import useYouBarSettingsSafeArea from "useYouBarSettingsSafeArea" /* 13751 */;
+import HeaderShared from "HeaderShared" /* 9293 */;
+import AssetRegistryDefault from "AssetRegistry" /* 9296 */;
+import useYouBarSettingsSafeArea from "useYouBarSettingsSafeArea" /* 13756 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
 import createStyles from "createStyles" /* 5092 */;
@@ -148,7 +148,7 @@ export default function CollectiblesShopViewAllCategoryItemsHeader(arg0) {
         const tmp36 = React3(View, obj5);
       }
       const obj6 = { source: AssetRegistryDefault, color: buttonColor2, accessibilityLabel: tmp26, onPress: tmp28 };
-      const HeaderIconButton2 = tmp15(9298).HeaderIconButton;
+      const HeaderIconButton2 = tmp15(9293).HeaderIconButton;
       cResult[6] = buttonColor2;
       cResult[7] = tmp28;
       cResult[8] = React3(HeaderIconButton2, obj6);

@@ -1,19 +1,19 @@
-// Module ID: 18365
-// Function ID: 18366
+// Module ID: 18369
+// Function ID: 18370
 // Name: HeaderRow
-// Dependencies: [11939, 5, 32, 19, 17, 18359, 1085, 1393, 21, 5092, 587, 8573, 9547, 1265, 1126, 1279, 7769, 5379, 5088, 558, 576, 504, 2]
+// Dependencies: [11941, 5, 32, 19, 17, 18363, 1085, 1393, 21, 5092, 587, 8568, 9543, 1265, 1126, 1279, 7764, 5379, 5088, 558, 576, 504, 2]
 
-// Module 18365 (HeaderRow)
+// Module 18369 (HeaderRow)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import EmojiConstants from "EmojiConstants" /* 1393 */;
 import Text_Text from "Text/Text" /* 5088 */;
-import _objectDestructuringEmpty from "_objectDestructuringEmpty" /* 11939 */;
+import _objectDestructuringEmpty from "_objectDestructuringEmpty" /* 11941 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import GuildSettingsEmojiStore from "GuildSettingsEmojiStore" /* 18359 */;
+import GuildSettingsEmojiStore from "GuildSettingsEmojiStore" /* 18363 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
 import createStyles_mod from "createStyles" /* 5092 */;
@@ -235,7 +235,7 @@ function HeaderRow(guild) {
   [c6, c7] = tmp6;
   let tmp7 = guild;
   let tmp8 = dependencyMap;
-  obj = guild(8573);
+  obj = guild(8568);
   let canCreateExpressions = obj.useManageResourcePermissions(guild).canCreateExpressions;
   let intl = guild(1126).intl;
   let obj2 = { id: "GUILD_SETTINGS_EMOJI_UPLOAD_REQUIREMENTS_" + 1, text: stringResult };

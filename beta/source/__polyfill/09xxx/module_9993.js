@@ -1,11 +1,11 @@
 // Module ID: 9993
 // Function ID: 9994
-// Dependencies: [41, 42, 93, 95, 98, 9820, 9989, 9827]
+// Dependencies: [41, 42, 93, 95, 98, 9985, 9819, 9823]
 
 // Module 9993
-import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 9820 */;
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 9827 */;
-import _mod9989 from "module_9989" /* 9989 */;
+import ReferenceWithTimezone from "ReferenceWithTimezone" /* 9819 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 9823 */;
+import _mod9985 from "module_9985" /* 9985 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
@@ -27,56 +27,44 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const regExp = new RegExp("([0-9]{4})[\\.\\/\\s](?:(" + repeatedTimeunitPattern.matchAnyPattern(_mod9989.MONTH_DICTIONARY) + ")|([0-9]{1,2}))[\\.\\/\\s]([0-9]{1,2})(?=\\W|$)", "i");
-class ENCasualYearMonthDayParser {
-  constructor() {
+const regExp = new RegExp("(" + _mod9985.TIME_UNITS_PATTERN + ")\\s{0,5}(?:dopo|pi\u00F9 tardi|da adesso|avanti|oltre|a seguire)(?=(?:\\W|$))", "i");
+const regExp1 = new RegExp("(" + _mod9985.TIME_UNITS_PATTERN + ")(dopo|pi\u00F9 tardi)(?=(?:\\W|$))", "i");
+class ENTimeUnitLaterFormatParser {
+  constructor(strictMode) {
     let constructResult;
     const self = this;
-    _classCallCheck(this, ENCasualYearMonthDayParser);
-    const obj = _getPrototypeOf(ENCasualYearMonthDayParser);
+    _classCallCheck(this, ENTimeUnitLaterFormatParser);
+    const obj = _getPrototypeOf(ENTimeUnitLaterFormatParser);
     const tmp2 = _getPrototypeOf;
     const tmp3 = c3;
     if (_isNativeReflectConstruct()) {
       const _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
     } else {
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, undefined);
     }
-    return tmp3(self, constructResult);
+    const tmp3Result = tmp3(self, constructResult);
+    tmp3Result.strictMode = strictMode;
+    return tmp3Result;
   }
 }
-_inherits(ENCasualYearMonthDayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(ENTimeUnitLaterFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
   value: function innerPattern() {
-    return regExp;
+    return this.strictMode ? regExp1 : regExp;
   }
 };
 const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(arg0, arg1) {
-      let parsed;
-      let parsed1;
-      if (arg1[3]) {
-        const _parseInt = parseInt;
-        parsed = parseInt(arg1[3]);
-      } else {
-        parsed = _mod9989.MONTH_DICTIONARY[str.toLowerCase(str)];
-      }
-      if (parsed >= 1) {
-        if (parsed <= 12) {
-          const _parseInt2 = parseInt;
-          const _parseInt3 = parseInt;
-          const date = { day: parseInt(arg1[4]), month: parsed, year: parsed1 };
-          parsed1 = parseInt(arg1[1]);
-          return date;
-        }
-      }
-      return null;
+    value: function innerExtract(reference, arg1) {
+      const parseDurationResult = _mod9985.parseDuration(arg1[1]);
+      const ParsingComponents = ReferenceWithTimezone.ParsingComponents;
+      return ParsingComponents.createRelativeFromReference(reference.reference, parseDurationResult);
     }
   }
 ];
 
-export default _createClass(ENCasualYearMonthDayParser, items);
+export default _createClass(ENTimeUnitLaterFormatParser, items);

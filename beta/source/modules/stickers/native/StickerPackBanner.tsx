@@ -1,9 +1,9 @@
-// Module ID: 9772
-// Function ID: 9773
+// Module ID: 9768
+// Function ID: 9769
 // Name: StickerPackBanner
 // Dependencies: [19, 17, 21, 558, 576, 5749, 6157, 2]
 
-// Module 9772 (StickerPackBanner)
+// Module 9768 (StickerPackBanner)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;

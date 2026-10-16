@@ -1,9 +1,9 @@
-// Module ID: 17837
-// Function ID: 17838
+// Module ID: 17841
+// Function ID: 17842
 // Name: SoundboardSoundPickerCategories
-// Dependencies: [109, 19, 17, 17819, 1390, 1085, 21, 5092, 587, 558, 576, 7049, 6159, 1126, 9763, 5051, 17835, 8926, 1200, 8223, 6185, 5057, 5058, 4769, 504, 9462, 1631, 6335, 8372, 4992, 2]
+// Dependencies: [109, 19, 17, 17823, 1390, 1085, 21, 5092, 587, 558, 576, 7049, 6159, 1126, 9759, 5051, 17839, 8921, 1200, 8218, 6185, 5057, 5058, 4769, 504, 9457, 1631, 6335, 8367, 4992, 2]
 
-// Module 17837 (SoundboardSoundPickerCategories)
+// Module 17841 (SoundboardSoundPickerCategories)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl6 from "intl" /* 1126 */;
@@ -13,12 +13,12 @@ import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 
 import GuildIconDefault from "GuildIcon" /* 6159 */;
 import Pressables from "Pressables" /* 6185 */;
 import SoundboardTypes from "SoundboardTypes" /* 7049 */;
-import LockIcon from "LockIcon" /* 8223 */;
-import TrophyIcon from "TrophyIcon" /* 8926 */;
-import PremiumFeatureUpsellUtils from "PremiumFeatureUpsellUtils" /* 9462 */;
-import AssetRegistryDefault from "AssetRegistry" /* 9763 */;
-import ExpressionPickerStore from "ExpressionPickerStore" /* 17819 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 17835 */;
+import LockIcon from "LockIcon" /* 8218 */;
+import TrophyIcon from "TrophyIcon" /* 8921 */;
+import PremiumFeatureUpsellUtils from "PremiumFeatureUpsellUtils" /* 9457 */;
+import AssetRegistryDefault from "AssetRegistry" /* 9759 */;
+import ExpressionPickerStore from "ExpressionPickerStore" /* 17823 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 17839 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react_mod from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
@@ -364,7 +364,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function SoundC
       const obj3 = { guildName: category.categoryInfo.guild.name };
       name = intl5.formatToPlainString(tmp2(1126).t.GXs41w, obj3);
       const obj4 = { style: tmp.keyboardItem };
-      tmp7 = authStore2(tmp2(8926).TrophyIcon, obj4);
+      tmp7 = authStore2(tmp2(8921).TrophyIcon, obj4);
       tmp6 = null;
       tmp14Result = null;
     }

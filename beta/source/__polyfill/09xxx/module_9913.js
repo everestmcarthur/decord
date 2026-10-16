@@ -1,11 +1,12 @@
 // Module ID: 9913
 // Function ID: 9914
-// Dependencies: [41, 42, 93, 95, 98, 9914, 9823, 9827]
+// Dependencies: [41, 42, 93, 95, 98, 9816, 9910, 9817, 9823]
 
 // Module 9913
-import ReferenceWithTimezone from "ReferenceWithTimezone" /* 9823 */;
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 9827 */;
-import _mod9914 from "module_9914" /* 9914 */;
+import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 9816 */;
+import findMostLikelyADYear from "findMostLikelyADYear" /* 9817 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 9823 */;
+import _mod9910 from "module_9910" /* 9910 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
@@ -27,12 +28,14 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class NLTimeUnitWithinFormatParser {
+const matchAnyPatternResult = repeatedTimeunitPattern.matchAnyPattern(_mod9910.MONTH_DICTIONARY);
+const regExp = new RegExp("(" + matchAnyPatternResult + ")\\s*(?:[,-]?\\s*(" + _mod9910.YEAR_PATTERN + ")?)?(?=[^\\s\\w]|\\s+[^0-9]|\\s+$|$)", "i");
+class NLMonthNameParser {
   constructor() {
     let constructResult;
     const self = this;
-    _classCallCheck(this, NLTimeUnitWithinFormatParser);
-    const obj = _getPrototypeOf(NLTimeUnitWithinFormatParser);
+    _classCallCheck(this, NLMonthNameParser);
+    const obj = _getPrototypeOf(NLMonthNameParser);
     const tmp2 = _getPrototypeOf;
     const tmp3 = c3;
     if (_isNativeReflectConstruct()) {
@@ -44,11 +47,10 @@ class NLTimeUnitWithinFormatParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(NLTimeUnitWithinFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(NLMonthNameParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
   value: function innerPattern() {
-    const regExp = new RegExp("(?:binnen|in|binnen de|voor)\\s*(" + _mod9914.TIME_UNITS_PATTERN + ")(?=\\W|$)", "i");
     return regExp;
   }
 };
@@ -56,12 +58,19 @@ const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      const parseDurationResult = _mod9914.parseDuration(arg1[1]);
-      const ParsingComponents = ReferenceWithTimezone.ParsingComponents;
-      return ParsingComponents.createRelativeFromReference(reference.reference, parseDurationResult);
+    value: function innerExtract(createParsingComponents, arg1) {
+      const parsingComponents = createParsingComponents.createParsingComponents();
+      parsingComponents.imply("day", 1);
+      const tmp4 = _mod9910.MONTH_DICTIONARY[arg1[1].toLowerCase(arg1[1])];
+      parsingComponents.assign("month", tmp4);
+      if (arg1[2]) {
+        parsingComponents.assign("year", _mod9910.parseYear(arg1[2]));
+      } else {
+        parsingComponents.imply("year", findMostLikelyADYear.findYearClosestToRef(createParsingComponents.refDate, 1, tmp4));
+      }
+      return parsingComponents;
     }
   }
 ];
 
-export default _createClass(NLTimeUnitWithinFormatParser, items);
+export default _createClass(NLMonthNameParser, items);

@@ -1,9 +1,9 @@
-// Module ID: 18447
-// Function ID: 18448
+// Module ID: 18451
+// Function ID: 18452
 // Name: GuildSettingsModalTemplate
-// Dependencies: [5, 32, 19, 17, 21, 5092, 587, 558, 576, 18448, 5088, 1126, 8580, 6727, 1503, 5305, 11346, 5635, 6201, 7089, 6286, 6774, 5379, 5377, 6728, 6182, 6868, 6296, 18449, 6886, 4808, 5042, 6287, 8542, 2]
+// Dependencies: [5, 32, 19, 17, 21, 5092, 587, 558, 576, 18452, 5088, 1126, 8575, 6727, 1503, 5305, 11348, 5635, 6201, 7089, 6286, 6774, 5379, 5377, 6728, 6182, 6868, 6296, 18453, 6886, 4808, 5042, 6287, 8537, 2]
 
-// Module 18447 (GuildSettingsModalTemplate)
+// Module 18451 (GuildSettingsModalTemplate)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -18,10 +18,10 @@ import Input2 from "Input" /* 6287 */;
 import SceneLoadingIndicator from "SceneLoadingIndicator" /* 6727 */;
 import ClipboardUtils from "ClipboardUtils" /* 6886 */;
 import HeaderActionButton2 from "HeaderActionButton" /* 7089 */;
-import native from "native" /* 8542 */;
-import Form3 from "Form" /* 8580 */;
-import guild_templates_GuildTemplateActionCreatorsDefault from "guild_templates/GuildTemplateActionCreators" /* 11346 */;
-import GuildTemplateSettingsUtils from "GuildTemplateSettingsUtils" /* 18448 */;
+import native from "native" /* 8537 */;
+import Form3 from "Form" /* 8575 */;
+import guild_templates_GuildTemplateActionCreatorsDefault from "guild_templates/GuildTemplateActionCreators" /* 11348 */;
+import GuildTemplateSettingsUtils from "GuildTemplateSettingsUtils" /* 18452 */;
 import _asyncToGenerator_mod from "_asyncToGenerator" /* 5 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
@@ -204,7 +204,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSetting
     if (null != loadError) {
       const obj2 = { style: tmp.container, contentContainerStyle: items, children: metroImportDefault(Text_Text.Text, obj3) };
       items = [tmp.containerContent, contentContainerStyle];
-      const Form2 = tmp2(8580).Form;
+      const Form2 = tmp2(8575).Form;
       obj3 = { variant: "text-sm/normal", color: "text-feedback-critical", children: loadError.message };
       tmp12Result = metroImportDefault(Form2, obj2);
     } else if (tmp8) {
@@ -217,7 +217,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSetting
   } else {
     const obj5 = { style: tmp.container, contentContainerStyle: items1, children: metroImportDefault(Text, obj6) };
     items1 = [tmp.containerContent, contentContainerStyle];
-    const Form = tmp2(8580).Form;
+    const Form = tmp2(8575).Form;
     obj6 = { variant: "text-sm/normal", color: "text-muted", children: intl.string(intl9.t.f0IPAG) };
     Text = tmp2(5088).Text;
     intl = tmp2(1126).intl;
@@ -2178,7 +2178,7 @@ let closure_16 = memo2(ReactCompilerGating.isReactCompilerEnabled() ? (function 
   };
   [first, _slicedToArray] = react.useState(false);
   const tmp3 = dependencyMap;
-  const tmp4 = guildTemplate(18449)(guildTemplate.code);
+  const tmp4 = guildTemplate(18453)(guildTemplate.code);
   react = tmp4;
   obj = { spacing: guildTemplate(587).space.PX_12, children: items };
   const Stack = Stack_Stack.Stack;

@@ -1,16 +1,16 @@
-// Module ID: 11081
-// Function ID: 11082
+// Module ID: 11083
+// Function ID: 11084
 // Name: VolumeSlider
-// Dependencies: [109, 19, 17, 5117, 21, 1382, 5092, 558, 576, 587, 4818, 11082, 5251, 1126, 8405, 8229, 2]
+// Dependencies: [109, 19, 17, 5117, 21, 1382, 5092, 558, 576, 587, 4818, 11084, 5251, 1126, 8400, 8224, 2]
 
-// Module 11081 (VolumeSlider)
+// Module 11083 (VolumeSlider)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import useToken2 from "useToken" /* 4818 */;
 import Constants from "Constants" /* 5117 */;
 import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 5251 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 8229 */;
-import VoiceXIcon from "VoiceXIcon" /* 11082 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 8224 */;
+import VoiceXIcon from "VoiceXIcon" /* 11084 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
@@ -25,7 +25,7 @@ let _require;
 let metroImportAll;
 let metroImportDefault;
 let tmp17;
-const _modDef8405 = tmp17(8405);
+const _modDef8400 = tmp17(8400);
 let closure_3 = ["style", "maxTrackTintColor", "value", "maxVolume", "onValueChange", "onResponderGrant", "accessibilityLabel"];
 const View = react_native.View;
 let closure_6 = Constants.MAX_EMBEDDED_VOLUME_PERCEPTUAL;
@@ -196,8 +196,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function VolumeSlider
     cResult[27] = tmp24;
     cResult[28] = tmp26;
     cResult[29] = tmp27;
-    cResult[30] = closure_7(_modDef8405, obj3);
-    const tmp32 = closure_7(_modDef8405, obj3);
+    cResult[30] = closure_7(_modDef8400, obj3);
+    const tmp32 = closure_7(_modDef8400, obj3);
   }
   const items = [tmp15.volumerSlider, tmp8];
   cResult[9] = tmp8;
@@ -249,7 +249,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function VolumeSlider
     },
     onResponderGrant
   };
-  const tmp8Result = _modDef8405;
+  const tmp8Result = _modDef8400;
   const tmp10 = View;
   tmp5Result = PerceptualVolumeUtils;
   const tmp9 = closure_8;

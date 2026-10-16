@@ -1,16 +1,16 @@
-// Module ID: 11476
-// Function ID: 11477
+// Module ID: 11478
+// Function ID: 11479
 // Name: AutomatedUnderageAppealModalActionCreators
-// Dependencies: [5, 7513, 5917, 21, 11474, 584, 5056, 11477, 2000, 7512, 7536, 5918, 7542, 7498, 5934, 7549, 7702, 2]
+// Dependencies: [5, 7508, 5917, 21, 11476, 584, 5056, 11479, 2000, 7507, 7531, 5918, 7537, 7493, 5934, 7544, 7697, 2]
 
-// Module 11476 (AutomatedUnderageAppealModalActionCreators)
+// Module 11478 (AutomatedUnderageAppealModalActionCreators)
 import Fragment from "Fragment" /* 21 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import asyncRequire from "asyncRequire" /* 2000 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
 import AgeVerificationConstants from "AgeVerificationConstants" /* 5917 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import SafetyHubConstants from "SafetyHubConstants" /* 7513 */;
+import SafetyHubConstants from "SafetyHubConstants" /* 7508 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -29,7 +29,7 @@ let obj = {
     obj.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN" });
     const obj2 = ActionSheetActionCreatorsDefault;
     const obj3 = { classificationId, onClose };
-    obj2.openLazy(asyncRequire(11477, dependencyMap.paths), React3, obj3);
+    obj2.openLazy(asyncRequire(11479, dependencyMap.paths), React3, obj3);
   },
   openV2(classificationId, onClose) {
     _require = classificationId;
@@ -41,7 +41,7 @@ let obj = {
     let tmp4 = _require;
     let obj2 = require("SafetyHubUtils");
     if (obj2.isCurrentUserSuspended()) {
-      const tmp4Result = tmp4(7536);
+      const tmp4Result = tmp4(7531);
       if (tmp4Result.isExpressiveModalV2Enabled(tmp4(5918).AgeVerificationModalEntryPoint.AUTOMATED_UNDERAGE_APPEALS)) {
         let tmp6 = globalThis;
         const _Math = Math;

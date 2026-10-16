@@ -1,19 +1,19 @@
-// Module ID: 11030
-// Function ID: 11031
+// Module ID: 11032
+// Function ID: 11033
 // Name: GlobalStageChannelStatus
-// Dependencies: [5, 32, 19, 17, 4802, 2070, 1085, 21, 1126, 5092, 587, 558, 576, 5421, 504, 11031, 5396, 7720, 11020, 5949, 7498, 5918, 7488, 7484, 1200, 5088, 5380, 5379, 11022, 10849, 5031, 4825, 10361, 8159, 2]
+// Dependencies: [5, 32, 19, 17, 4802, 2070, 1085, 21, 1126, 5092, 587, 558, 576, 5421, 504, 11033, 5396, 7715, 11022, 5949, 7493, 5918, 7483, 7479, 1200, 5088, 5380, 5379, 11024, 10850, 5031, 4825, 10362, 8154, 2]
 
-// Module 11030 (GlobalStageChannelStatus)
+// Module 11032 (GlobalStageChannelStatus)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import intl8 from "intl" /* 1126 */;
 import useChannelNameDefault from "useChannelName" /* 5421 */;
-import StageChannelActionCreators from "StageChannelActionCreators" /* 7488 */;
-import StatusBarDefault from "StatusBar" /* 10361 */;
-import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 10849 */;
-import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 11022 */;
-import PushNotificationDefault from "PushNotification" /* 11031 */;
+import StageChannelActionCreators from "StageChannelActionCreators" /* 7483 */;
+import StatusBarDefault from "StatusBar" /* 10362 */;
+import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 10850 */;
+import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 11024 */;
+import PushNotificationDefault from "PushNotification" /* 11033 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
@@ -134,8 +134,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function StageChannel
     useMountEffectDefault(fn);
     [r10071, dependencyMap] = _slicedToArray(react.useState(false), 2);
     const tmp17 = _slicedToArray(react.useState(false), 2);
-    const useStageBlockedUsersCount = tmp(7720).useStageBlockedUsersCount;
-    tmp(7720);
+    const useStageBlockedUsersCount = tmp(7715).useStageBlockedUsersCount;
+    tmp(7715);
     if (channel != null) {
       class S {
         constructor() {
@@ -145,8 +145,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function StageChannel
     }
     const stageBlockedUsersCount = useStageBlockedUsersCount(tmp19);
     let tmp22;
-    const useStageIgnoredUsersCount = tmp(7720).useStageIgnoredUsersCount;
-    tmp(7720);
+    const useStageIgnoredUsersCount = tmp(7715).useStageIgnoredUsersCount;
+    tmp(7715);
     if (channel != null) {
       class S {
         constructor() {
@@ -156,8 +156,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function StageChannel
     }
     const stageIgnoredUsersCount = useStageIgnoredUsersCount(tmp22);
     let tmp25;
-    const useGetStageRTCPanelHeight = tmp(11020).useGetStageRTCPanelHeight;
-    tmp(11020);
+    const useGetStageRTCPanelHeight = tmp(11022).useGetStageRTCPanelHeight;
+    tmp(11022);
     if (channel != null) {
       class S {
         constructor() {
@@ -567,20 +567,20 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function StageChannel
   [tmp10, c3] = _slicedToArray(react.useState(false), 2);
   const tmp9 = _slicedToArray(react.useState(false), 2);
   let id1;
-  const useStageBlockedUsersCount = channel(7720).useStageBlockedUsersCount;
-  const tmp11 = channel(7720);
+  const useStageBlockedUsersCount = channel(7715).useStageBlockedUsersCount;
+  const tmp11 = channel(7715);
   if (channel != null) {
     id1 = channel.id;
   }
   const stageBlockedUsersCount = useStageBlockedUsersCount(id1);
   let id2;
-  const useStageIgnoredUsersCount = tmp6(7720).useStageIgnoredUsersCount;
-  channel(7720);
+  const useStageIgnoredUsersCount = tmp6(7715).useStageIgnoredUsersCount;
+  channel(7715);
   if (channel != null) {
     id2 = channel.id;
   }
   const stageIgnoredUsersCount = useStageIgnoredUsersCount(id2);
-  channel(11020);
+  channel(11022);
   if (channel != null) {
     let id = channel.id;
   }
@@ -880,7 +880,7 @@ tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function GlobalStageChann
             cResult[13] = tmp24;
             tmp22 = tmp24;
           }
-          const tmpResult4 = id(8159);
+          const tmpResult4 = id(8154);
           const channelIconWithGuild = tmpResult4.getChannelIconWithGuild(channel, guild);
           cResult[8] = channel;
           cResult[9] = guild;
@@ -911,7 +911,7 @@ tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function GlobalStageChann
     stringResult = intl.string(id(1126).t["/YzI63"]);
   }
   const tmp7 = useIsInvitedToSpeakDefault();
-  let invitedHeaderText = tmp3(10849)(id);
+  let invitedHeaderText = tmp3(10850)(id);
   const items = [StageInstanceStore];
   const items1 = [id];
   const obj = id(504);
@@ -949,7 +949,7 @@ tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function GlobalStageChann
           items2 = [closure_10(StatusBarDefault, obj4), , ];
           const obj5 = { style: activeSpeakerIcon, size: id(1200).Icon.Sizes.REFRESH_SMALL_16, source: tmp8Result2.getChannelIconWithGuild(channel, guild) };
           const Icon = tmp8(1200).Icon;
-          tmp8Result2 = id(8159);
+          tmp8Result2 = id(8154);
           items2[1] = closure_10(Icon, obj5);
           let tmp13Result = "" !== str2;
           const LegacyText = tmp8(1200).LegacyText;

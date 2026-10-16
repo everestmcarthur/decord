@@ -1,18 +1,17 @@
 // Module ID: 9854
 // Function ID: 9855
-// Dependencies: [41, 42, 9819]
+// Dependencies: [41, 42]
 
 // Module 9854
-import _mod9819 from "module_9819" /* 9819 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 
 let start;
 
-const regExp = new RegExp("^\\s*(" + _mod9819.YEAR_PATTERN + ")", "i");
-class ENExtractYearSuffixRefiner {
+const regExp = new RegExp("^\\s*(?:\\(?(?:GMT|UTC)\\s?)?([+-])(\\d{1,2})(?::?(\\d{2}))?\\)?", "i");
+class ExtractTimezoneOffsetRefiner {
   constructor() {
-    _classCallCheck(this, ENExtractYearSuffixRefiner);
+    _classCallCheck(this, ExtractTimezoneOffsetRefiner);
   }
 }
 const entry = {
@@ -22,23 +21,33 @@ const entry = {
     const item = arr.forEach((start) => {
       text = start;
       start = start.start;
-      if (start.isDateWithUnknownYear()) {
+      if (!start.isCertain("timezoneOffset")) {
         const str = text.text;
         const match = regExp.exec(str.substring(start.index + start.text.length));
         const obj = text;
         if (match) {
-          const str2 = match[0];
-          if (str2.trim().length > 3) {
-            obj.debug(() => {
-              console.log("Extracting year: '" + match[0] + "' into : " + closure_0);
-            });
-            const parseYearResult = _mod9819.parseYear(match[1]);
+          obj.debug(() => {
+            console.log("Extracting timezone: '" + match[0] + "' into : " + closure_0);
+          });
+          const _parseInt = parseInt;
+          let str2 = match[3];
+          const result = 60 * parseInt(match[2]);
+          const _parseInt2 = parseInt;
+          if (!str2) {
+            str2 = "0";
+          }
+          const sum = result + _parseInt2(str2);
+          if (sum <= 840) {
+            let tmp7 = sum;
+            if ("-" === match[1]) {
+              tmp7 = -sum;
+            }
             if (null != start.end) {
               const end = start.end;
-              end.assign("year", parseYearResult);
+              end.assign("timezoneOffset", tmp7);
             }
             const start2 = start.start;
-            start2.assign("year", parseYearResult);
+            start2.assign("timezoneOffset", tmp7);
             start.text = start.text + match[0];
           }
         }
@@ -49,4 +58,4 @@ const entry = {
 };
 const items = [entry];
 
-export default _createClass(ENExtractYearSuffixRefiner, items);
+export default _createClass(ExtractTimezoneOffsetRefiner, items);

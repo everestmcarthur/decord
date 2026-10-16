@@ -1,19 +1,19 @@
-// Module ID: 10022
-// Function ID: 10023
+// Module ID: 10018
+// Function ID: 10019
 // Name: UploadPreviewActionSheet
-// Dependencies: [32, 19, 17, 7244, 1085, 6841, 21, 5092, 587, 558, 576, 38, 7759, 1497, 1631, 5396, 5056, 9263, 7770, 10023, 1265, 4809, 7769, 12809, 12810, 5088, 1382, 8426, 10041, 6265, 6180, 11882, 12811, 1126, 6177, 12813, 8215, 12815, 5379, 5049, 5377, 6307, 6840, 2]
+// Dependencies: [32, 19, 17, 7239, 1085, 6841, 21, 5092, 587, 558, 576, 38, 7754, 1497, 1631, 5396, 5056, 9258, 7765, 10019, 1265, 4809, 7764, 12814, 12815, 5088, 1382, 8421, 10037, 6265, 6180, 11884, 12816, 1126, 6177, 12818, 8210, 12820, 5379, 5049, 5377, 6307, 6840, 2]
 
-// Module 10022 (UploadPreviewActionSheet)
+// Module 10018 (UploadPreviewActionSheet)
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
 import ActionSheetConstants from "ActionSheetConstants" /* 6841 */;
-import DraftStore from "DraftStore" /* 7244 */;
-import utils_UploadUtils from "utils/UploadUtils" /* 7769 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9263 */;
-import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10023 */;
-import AddImageDescriptionModalActionCreatorsDefault from "AddImageDescriptionModalActionCreators" /* 12811 */;
+import DraftStore from "DraftStore" /* 7239 */;
+import utils_UploadUtils from "utils/UploadUtils" /* 7764 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9258 */;
+import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10019 */;
+import AddImageDescriptionModalActionCreatorsDefault from "AddImageDescriptionModalActionCreators" /* 12816 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;

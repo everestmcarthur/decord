@@ -1,9 +1,9 @@
-// Module ID: 17641
-// Function ID: 17642
+// Module ID: 17645
+// Function ID: 17646
 // Name: useMessageRequestTimestampText
-// Dependencies: [6035, 11, 558, 576, 12335, 504, 4702, 7923, 2]
+// Dependencies: [6035, 11, 558, 576, 12340, 504, 4702, 7918, 2]
 
-// Module 17641 (useMessageRequestTimestampText)
+// Module 17645 (useMessageRequestTimestampText)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef4702 from "module_4702" /* 4702 */;
 import ReadStateStore from "ReadStateStore" /* 6035 */;
@@ -214,7 +214,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useMessage
     }
     let str = "";
     if (null != extractTimestampResult) {
-      const tmpResult = tmp(7923);
+      const tmpResult = tmp(7918);
       str = tmpResult.getTimestampString(extractTimestampResult);
     }
     return str;

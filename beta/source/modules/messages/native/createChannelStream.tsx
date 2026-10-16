@@ -1,19 +1,19 @@
-// Module ID: 11622
-// Function ID: 11623
+// Module ID: 11624
+// Function ID: 11625
 // Name: createChannelStream
-// Dependencies: [10490, 7369, 7887, 7748, 1085, 11, 11623, 9613, 11625, 1126, 4793, 7994, 10782, 6972, 2]
+// Dependencies: [10491, 7364, 7882, 7743, 1085, 11, 11625, 9609, 11627, 1126, 4793, 7989, 10783, 6972, 2]
 // Exports: default
 
-// Module 11622 (createChannelStream)
+// Module 11624 (createChannelStream)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import Constants from "Constants" /* 1085 */;
-import isNewMessageGroupDefault from "isNewMessageGroup" /* 9613 */;
-import createConversationHeader from "createConversationHeader" /* 11623 */;
-import tryInjectMessage from "tryInjectMessage" /* 11625 */;
-import PushFeedbackStore_mod from "PushFeedbackStore" /* 10490 */;
-import EditMessageStore from "EditMessageStore" /* 7369 */;
-import UploadStore from "UploadStore" /* 7887 */;
-import RowGeneratorConstants from "RowGeneratorConstants" /* 7748 */;
+import isNewMessageGroupDefault from "isNewMessageGroup" /* 9609 */;
+import createConversationHeader from "createConversationHeader" /* 11625 */;
+import tryInjectMessage from "tryInjectMessage" /* 11627 */;
+import PushFeedbackStore_mod from "PushFeedbackStore" /* 10491 */;
+import EditMessageStore from "EditMessageStore" /* 7364 */;
+import UploadStore from "UploadStore" /* 7882 */;
+import RowGeneratorConstants from "RowGeneratorConstants" /* 7743 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

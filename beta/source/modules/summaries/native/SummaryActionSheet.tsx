@@ -1,10 +1,10 @@
-// Module ID: 10776
-// Function ID: 10777
+// Module ID: 10777
+// Function ID: 10778
 // Name: SummaryActionSheet
-// Dependencies: [19, 17, 2065, 5432, 9615, 1085, 21, 5056, 10776, 2000, 5092, 587, 6972, 9650, 4808, 1126, 5414, 8482, 7902, 7919, 4976, 11, 1112, 6840, 6814, 10777, 5088, 10779, 8726, 10780, 7894, 2]
+// Dependencies: [19, 17, 2065, 5432, 9611, 1085, 21, 5056, 10777, 2000, 5092, 587, 6972, 9646, 4808, 1126, 5414, 8477, 7897, 7914, 4976, 11, 1112, 6840, 6814, 10778, 5088, 10780, 8721, 10781, 7889, 2]
 // Exports: default, openSummaryDividerActionSheet
 
-// Module 10776 (SummaryActionSheet)
+// Module 10777 (SummaryActionSheet)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
@@ -15,13 +15,13 @@ import ToastUtils from "ToastUtils" /* 4808 */;
 import NavigationRouteUtils from "NavigationRouteUtils" /* 4976 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
 import ChannelUtils from "ChannelUtils" /* 5414 */;
-import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 7902 */;
-import DraftActionCreatorsDefault from "DraftActionCreators" /* 7919 */;
-import showShareActionSheet from "showShareActionSheet" /* 8482 */;
+import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 7897 */;
+import DraftActionCreatorsDefault from "DraftActionCreators" /* 7914 */;
+import showShareActionSheet from "showShareActionSheet" /* 8477 */;
 import react from "react" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import MessageStore from "MessageStore" /* 5432 */;
-import SummaryStore from "SummaryStore" /* 9615 */;
+import SummaryStore from "SummaryStore" /* 9611 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
 import createStyles_mod from "createStyles" /* 5092 */;
@@ -99,7 +99,7 @@ export default function SummaryActionSheet(summary) {
       const openLazy = tmp(5056).openLazy;
       let guild_id1;
       ActionSheetActionCreatorsDefault;
-      const tmp8 = asyncRequire(9650, tmp2.paths);
+      const tmp8 = asyncRequire(9646, tmp2.paths);
       if (channel != null) {
         guild_id1 = tmp4.guild_id;
       }
@@ -224,7 +224,7 @@ export const openSummaryDividerActionSheet = function openSummaryDividerActionSh
     const _HermesInternal = HermesInternal;
     ActionSheetActionCreatorsDefault;
     const obj = { summary: findSummaryResult };
-    const tmp6 = asyncRequire(10776, dependencyMap.paths);
+    const tmp6 = asyncRequire(10777, dependencyMap.paths);
     openLazy(tmp6, "SummaryDivider" + summaryId, obj);
   }
 };

@@ -1,9 +1,9 @@
-// Module ID: 16735
-// Function ID: 16736
+// Module ID: 16740
+// Function ID: 16741
 // Name: FavoritesGuildSidebarHeader
-// Dependencies: [19, 17, 16638, 21, 5092, 587, 10313, 12692, 5056, 10317, 2000, 10316, 5088, 1126, 3442, 558, 576, 8208, 8229, 8199, 5377, 2]
+// Dependencies: [19, 17, 16643, 21, 5092, 587, 10314, 12697, 5056, 10318, 2000, 10317, 5088, 1126, 3442, 558, 576, 8203, 8224, 8194, 5377, 2]
 
-// Module 16735 (FavoritesGuildSidebarHeader)
+// Module 16740 (FavoritesGuildSidebarHeader)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -13,13 +13,13 @@ import _modDef3442 from "module_3442" /* 3442 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import Stack_Stack from "Stack/Stack" /* 5377 */;
-import ChatIcon2 from "ChatIcon" /* 8199 */;
-import TextIcon2 from "TextIcon" /* 8208 */;
-import VoiceNormalIcon2 from "VoiceNormalIcon" /* 8229 */;
-import FavoritesHooks from "FavoritesHooks" /* 10313 */;
-import openFavoritesGuildLimitUpsell from "openFavoritesGuildLimitUpsell" /* 10316 */;
-import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 12692 */;
-import FavoritesGuildSuggestionsStore from "FavoritesGuildSuggestionsStore" /* 16638 */;
+import ChatIcon2 from "ChatIcon" /* 8194 */;
+import TextIcon2 from "TextIcon" /* 8203 */;
+import VoiceNormalIcon2 from "VoiceNormalIcon" /* 8224 */;
+import FavoritesHooks from "FavoritesHooks" /* 10314 */;
+import openFavoritesGuildLimitUpsell from "openFavoritesGuildLimitUpsell" /* 10317 */;
+import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 12697 */;
+import FavoritesGuildSuggestionsStore from "FavoritesGuildSuggestionsStore" /* 16643 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
 import createStyles_mod from "createStyles" /* 5092 */;
@@ -84,7 +84,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Placeh
   const tmp4 = closure_10();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { size: "sm", color: nativeDefault.colors.ICON_MUTED };
-    const TextIcon = tmp(8208).TextIcon;
+    const TextIcon = tmp(8203).TextIcon;
     const tmp8 = metroRequire(TextIcon, obj2);
     cResult[0] = tmp8;
     first = tmp8;
@@ -105,7 +105,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Placeh
       const _Symbol = Symbol;
       if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
         const obj3 = { size: "sm", color: nativeDefault.colors.ICON_MUTED };
-        const VoiceNormalIcon = tmp(8229).VoiceNormalIcon;
+        const VoiceNormalIcon = tmp(8224).VoiceNormalIcon;
         const tmp18 = metroRequire(VoiceNormalIcon, obj3);
         cResult[7] = tmp18;
         tmp15 = tmp18;
@@ -126,7 +126,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Placeh
           const _Symbol2 = Symbol;
           if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
             const obj4 = { size: "sm", color: nativeDefault.colors.ICON_MUTED };
-            const ChatIcon = tmp(8199).ChatIcon;
+            const ChatIcon = tmp(8194).ChatIcon;
             const tmp30 = metroRequire(ChatIcon, obj4);
             cResult[14] = tmp30;
             tmp27 = tmp30;

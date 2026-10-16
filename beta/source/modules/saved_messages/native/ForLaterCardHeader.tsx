@@ -1,15 +1,15 @@
-// Module ID: 12671
-// Function ID: 12672
+// Module ID: 12676
+// Function ID: 12677
 // Name: ForLaterCardHeader
-// Dependencies: [17, 2087, 21, 5092, 587, 558, 576, 6906, 504, 6159, 10280, 1200, 8199, 5421, 8159, 1126, 5088, 2]
+// Dependencies: [17, 2087, 21, 5092, 587, 558, 576, 6906, 504, 6159, 10281, 1200, 8194, 5421, 8154, 1126, 5088, 2]
 
-// Module 12671 (ForLaterCardHeader)
+// Module 12676 (ForLaterCardHeader)
 import react_native from "react-native" /* 17 */;
 import react from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useChannelNameDefault from "useChannelName" /* 5421 */;
 import GuildIconDefault from "GuildIcon" /* 6159 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 10280 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10281 */;
 import GuildStore from "GuildStore" /* 2087 */;
 import Fragment from "Fragment" /* 21 */;
 import createStyles from "createStyles" /* 5092 */;
@@ -180,7 +180,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function HeaderI
       let tmp10;
       const _Symbol = Symbol;
       if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp12 = closure_5(channel(8199).ChatIcon, { size: "xxs" });
+        const tmp12 = closure_5(channel(8194).ChatIcon, { size: "xxs" });
         cResult[7] = tmp12;
         tmp10 = tmp12;
       } else {
@@ -219,7 +219,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function HeaderI
       const tmp10 = GroupDMAvatarDefault;
       tmp6Result = tmp6(tmp10, obj3);
     } else {
-      const obj4 = { style: tmp.dmIcon, children: closure_5(channel(8199).ChatIcon, { size: "xxs" }) };
+      const obj4 = { style: tmp.dmIcon, children: closure_5(channel(8194).ChatIcon, { size: "xxs" }) };
       tmp6Result = tmp6(View, obj4);
     }
   }
@@ -334,7 +334,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channel
     cResult[8] = isPrivateResult;
     tmp12 = isPrivateResult;
   }
-  const tmpResult2 = channel(8159);
+  const tmpResult2 = channel(8154);
   const channelIconComponentWithGuild = tmpResult2.getChannelIconComponentWithGuild(channel, stateFromStores);
   cResult[3] = channel;
   cResult[4] = stateFromStores;
@@ -348,7 +348,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channel
   const obj = channel(504);
   const stateFromStores = obj.useStateFromStores(items, () => GuildStore.getGuild(channel.guild_id));
   const tmp5 = useChannelNameDefault(channel, false);
-  const obj2 = channel(8159);
+  const obj2 = channel(8154);
   const channelIconComponentWithGuild = obj2.getChannelIconComponentWithGuild(channel, stateFromStores);
   let formatToPlainStringResult = tmp5;
   const isPrivateResult = channel.isPrivate() || null == channelIconComponentWithGuild;

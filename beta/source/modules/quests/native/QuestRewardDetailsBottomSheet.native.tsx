@@ -1,9 +1,9 @@
-// Module ID: 9170
-// Function ID: 9171
+// Module ID: 9165
+// Function ID: 9166
 // Name: QuestRewardDetailsBottomSheet
-// Dependencies: [19, 17, 1390, 21, 5092, 587, 558, 576, 9168, 5056, 9171, 9190, 7396, 1126, 504, 12975, 5088, 5377, 6840, 2]
+// Dependencies: [19, 17, 1390, 21, 5092, 587, 558, 576, 9163, 5056, 9166, 9185, 7391, 1126, 504, 12980, 5088, 5377, 6840, 2]
 
-// Module 9170 (QuestRewardDetailsBottomSheet)
+// Module 9165 (QuestRewardDetailsBottomSheet)
 import react_native from "react-native" /* 17 */;
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
@@ -11,10 +11,10 @@ import nativeDefault from "native" /* 587 */;
 import intl3 from "intl" /* 1126 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
 import Text_Text from "Text/Text" /* 5088 */;
-import QuestRewardTypes from "QuestRewardTypes" /* 7396 */;
-import QuestUtils from "QuestUtils" /* 9168 */;
-import QuestRewardUtils from "QuestRewardUtils" /* 9190 */;
-import QuestRewardTileDefault from "QuestRewardTile" /* 12975 */;
+import QuestRewardTypes from "QuestRewardTypes" /* 7391 */;
+import QuestUtils from "QuestUtils" /* 9163 */;
+import QuestRewardUtils from "QuestRewardUtils" /* 9185 */;
+import QuestRewardTileDefault from "QuestRewardTile" /* 12980 */;
 import react from "react" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;
 import Fragment from "Fragment" /* 21 */;
@@ -30,7 +30,7 @@ let metroRequire;
 let obj2;
 let obj3;
 let tmp;
-const hooks_QuestHooks = tmp(9171);
+const hooks_QuestHooks = tmp(9166);
 const View = react_native.View;
 ({ jsx: metroRequire, jsxs: metroImportDefault, Fragment: metroImportAll } = Fragment);
 let createStyles = createStyles_mod;
@@ -345,14 +345,14 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestR
   let obj = quest(504);
   const items2 = [UserStore];
   const stateFromStores = obj.useStateFromStores(items2, () => currentUser.getCurrentUser());
-  const obj2 = quest(9190);
+  const obj2 = quest(9185);
   const defaultRewardName = obj2.getDefaultRewardName(quest.config, stateFromStores);
   BottomSheet = quest(6840).BottomSheet;
   const obj3 = { direction: "vertical", spacing: memo(587).space.PX_16, style: tmp.wrapper, children: items5 };
   const Stack = quest(5377).Stack;
   const obj4 = { align: "center", direction: "horizontal", spacing: memo(587).space.PX_16, children: items3 };
   const Stack2 = quest(5377).Stack;
-  items3 = [closure_6(memo(12975), { quest, height: 56, width: 56, withAnimation: true }), ];
+  items3 = [closure_6(memo(12980), { quest, height: 56, width: 56, withAnimation: true }), ];
   const obj5 = { direction: "vertical", spacing: memo(587).space.PX_4, style: tmp.rewardDetailsCopy, children: items4 };
   const Stack3 = quest(5377).Stack;
   const obj6 = { variant: "eyebrow", color: "text-subtle", children: intl.string(quest(1126).t["jyYgZ+"]) };

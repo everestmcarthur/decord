@@ -1,16 +1,15 @@
 // Module ID: 9829
 // Function ID: 9830
-// Dependencies: [41, 42, 93, 95, 98, 9820, 9819, 9821, 9827]
+// Dependencies: [41, 42, 93, 95, 96, 98, 9821, 9830]
 
 // Module 9829
-import _mod9819 from "module_9819" /* 9819 */;
-import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 9820 */;
-import findMostLikelyADYear from "findMostLikelyADYear" /* 9821 */;
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 9827 */;
+import Meridiem from "Meridiem" /* 9821 */;
+import AbstractTimeExpressionParser from "AbstractTimeExpressionParser" /* 9830 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _get from "_get" /* 96 */;
 import _inherits from "_inherits" /* 98 */;
 
 function _isNativeReflectConstruct() {
@@ -28,78 +27,109 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const matchAnyPatternResult = repeatedTimeunitPattern.matchAnyPattern(_mod9819.MONTH_DICTIONARY);
-const ORDINAL_NUMBER_PATTERN = _mod9819.ORDINAL_NUMBER_PATTERN;
-const regExp = new RegExp("(" + matchAnyPatternResult + ")(?:-|/|\\s*,?\\s*)(" + ORDINAL_NUMBER_PATTERN + ")(?!\\s*(?:am|pm))\\s*(?:(?:to|\\-)\\s*(" + _mod9819.ORDINAL_NUMBER_PATTERN + ")\\s*)?(?:(?:-|/|\\s*,\\s*|\\s+)(" + _mod9819.YEAR_PATTERN + "))?(?=\\W|$)(?!\\:\\d)", "i");
-class ENMonthNameMiddleEndianParser {
-  constructor(shouldSkipYearLikeDate) {
+class ENTimeExpressionParser {
+  constructor(arg0) {
     let constructResult;
     const self = this;
-    _classCallCheck(this, ENMonthNameMiddleEndianParser);
-    const obj = _getPrototypeOf(ENMonthNameMiddleEndianParser);
+    _classCallCheck(this, ENTimeExpressionParser);
+    const items = [arg0];
+    const obj = _getPrototypeOf(ENTimeExpressionParser);
     const tmp2 = _getPrototypeOf;
     const tmp3 = c3;
     if (_isNativeReflectConstruct()) {
       const _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, undefined);
+      constructResult = obj.apply(self, items);
     }
-    const tmp3Result = tmp3(self, constructResult);
-    tmp3Result.shouldSkipYearLikeDate = shouldSkipYearLikeDate;
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-_inherits(ENMonthNameMiddleEndianParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(ENTimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
 const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    return regExp;
+  key: "followingPhase",
+  value: function followingPhase() {
+    return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|to|until|through|till|\\?)\\s*";
   }
 };
-const items = [
+let items = [
   entry,
   {
-    key: "innerExtract",
-    value: function innerExtract(createParsingComponents, index) {
-      const tmp3 = _mod9819.MONTH_DICTIONARY[index[1].toLowerCase(index[1])];
-      const result = _mod9819.parseOrdinalNumberPattern(index[2]);
-      if (result > 31) {
-        return null;
-      } else {
-        const self = this;
-        if (this.shouldSkipYearLikeDate) {
-          if (!index[3]) {
-            if (!index[4]) {
-              const str2 = index[2];
-              if (str2.match(/^2[0-5]$/)) {
-                return null;
-              }
+    key: "primaryPrefix",
+    value: function primaryPrefix() {
+      return "(?:(?:at|from)\\s*)??";
+    }
+  },
+  {
+    key: "primarySuffix",
+    value: function primarySuffix() {
+      return "(?:\\s*(?:o\\W*clock|at\\s*night|in\\s*the\\s*(?:morning|afternoon)))?(?!/)(?=\\W|$)";
+    }
+  },
+  {
+    key: "extractPrimaryTimeComponents",
+    value: function extractPrimaryTimeComponents(arg0, arg1) {
+      const self = this;
+      const tmp = _get(_getPrototypeOf(ENTimeExpressionParser.prototype), "extractPrimaryTimeComponents", this);
+      let closure_1 = tmp;
+      let fn = tmp;
+      if (typeof tmp === "function") {
+        fn = (items) => fn.apply(self, items);
+      }
+      const items = [arg0, arg1];
+      const fnResult = fn(items);
+      if (fnResult) {
+        const first = arg1[0];
+        if (first.endsWith("night")) {
+          const value = fnResult.get("hour");
+          if (value >= 6) {
+            if (value < 12) {
+              fnResult.assign("hour", fnResult.get("hour") + 12);
+              fnResult.assign("meridiem", Meridiem.Meridiem.PM);
             }
           }
+          if (value < 6) {
+            fnResult.assign("meridiem", Meridiem.Meridiem.AM);
+          }
         }
-        const date = { day: result, month: tmp3 };
-        const parsingComponents = createParsingComponents.createParsingComponents(date);
-        const addTagResult = parsingComponents.addTag("parser/ENMonthNameMiddleEndianParser");
-        if (index[4]) {
-          addTagResult.assign("year", _mod9819.parseYear(index[4]));
-        } else {
-          addTagResult.imply("year", findMostLikelyADYear.findYearClosestToRef(createParsingComponents.refDate, result, tmp3));
+        const first1 = arg1[0];
+        if (first1.endsWith("afternoon")) {
+          fnResult.assign("meridiem", Meridiem.Meridiem.PM);
+          const value2 = fnResult.get("hour");
+          const tmp14 = value2 >= 0 && value2 <= 6;
+          if (tmp14) {
+            fnResult.assign("hour", fnResult.get("hour") + 12);
+          }
         }
-        if (index[3]) {
-          const result1 = tmp(9819).parseOrdinalNumberPattern(index[3]);
-          const parsingResult = createParsingComponents.createParsingResult(index.index, index[0]);
-          parsingResult.start = addTagResult;
-          parsingResult.end = addTagResult.clone();
-          const end = parsingResult.end;
-          end.assign("day", result1);
-          return parsingResult;
-        } else {
-          return addTagResult;
+        const first2 = arg1[0];
+        if (first2.endsWith("morning")) {
+          fnResult.assign("meridiem", Meridiem.Meridiem.AM);
+          if (fnResult.get("hour") < 12) {
+            fnResult.assign("hour", fnResult.get("hour"));
+          }
         }
+        return fnResult.addTag("parser/ENTimeExpressionParser");
+      } else {
+        return fnResult;
       }
+    }
+  },
+  {
+    key: "extractFollowingTimeComponents",
+    value: function extractFollowingTimeComponents(arg0, arg1, arg2) {
+      const self = this;
+      let fn = _get(_getPrototypeOf(ENTimeExpressionParser.prototype), "extractFollowingTimeComponents", this);
+      if (typeof fn === "function") {
+        fn = (items) => fn.apply(self, items);
+      }
+      const items = [arg0, arg1, arg2];
+      const fnResult = fn(items);
+      if (fnResult) {
+        fnResult.addTag("parser/ENTimeExpressionParser");
+      }
+      return fnResult;
     }
   }
 ];
 
-export default _createClass(ENMonthNameMiddleEndianParser, items);
+export default _createClass(ENTimeExpressionParser, items);
