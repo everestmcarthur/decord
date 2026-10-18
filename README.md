@@ -1,12 +1,3 @@
-# ⚠️ ARCHIVED REPOSITORY — NO LONGER IN DEVELOPMENT
-
-> [!WARNING]
-> **THIS REPOSITORY HAS BEEN OFFICIALLY ARCHIVED AND IS NO LONGER IN ACTIVE DEVELOPMENT ON GITHUB.**
-> 
-> All code in this repository is preserved for historical reference only. No further updates, issues, or pull requests will be accepted or maintained here.
-
----
-
 <div align="center">
     <h1> Decord</h1>
 </div>
@@ -18,3 +9,4 @@ For a closer look at what's scraped, take a look at the [data](https://github.co
 ## Credits
 
 - [hermes-decomp](https://github.com/SymbioticSec/hermes-decomp) — tool for decompiling hermes React Native bytecode
+- [Livie's Version](https://github.com/lvwmwm/decord) — Original, mine just fixes the colors/icons
